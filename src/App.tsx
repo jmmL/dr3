@@ -4,7 +4,7 @@ import { hexData, getHex } from './data/mapData'
 import { createInitialState, getUnitsAtHex, getCastleAtHex } from './engine/state/initialState'
 import { GameState } from './engine/state/GameState'
 import { fromHexKey } from './types'
-import { MAP_IMAGE_URL, MAP_CALIBRATION } from './config/mapCalibration'
+import { MAP_IMAGE_URL, MAP_CALIBRATION, MAP_IMAGE_DIMENSIONS } from './config/mapCalibration'
 import './App.css'
 
 // Create a demo game for testing
@@ -48,6 +48,7 @@ function App() {
           selectedHex={selectedHex}
           onHexSelect={setSelectedHex}
           mapImageUrl={MAP_IMAGE_URL ?? undefined}
+          mapImageDimensions={MAP_IMAGE_URL ? MAP_IMAGE_DIMENSIONS : undefined}
           calibration={MAP_CALIBRATION}
         />
       </main>

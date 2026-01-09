@@ -11,6 +11,11 @@ interface HexGridProps {
   onHexSelect: (hexKey: string | null) => void
   /** URL to the map image background. When provided, hexes render as transparent overlay */
   mapImageUrl?: string
+  /** Dimensions of the map image for proper scaling */
+  mapImageDimensions?: {
+    width: number
+    height: number
+  }
   /** Calibration settings for aligning hex grid to map image */
   calibration?: {
     /** X offset to shift the entire grid */
@@ -201,10 +206,15 @@ function SingleHex({ hex, units, isSelected, onClick, overlayMode, hexScale }: S
 // Default calibration - no offset, no scale
 const DEFAULT_CALIBRATION = { offsetX: 0, offsetY: 0, hexScale: 1 }
 
-export default function HexGrid({ hexes, units, selectedHex, onHexSelect, mapImageUrl, calibration = DEFAULT_CALIBRATION }: HexGridProps) {
+export default function HexGrid({ hexes, units, selectedHex, onHexSelect, mapImageUrl, mapImageDimensions, calibration = DEFAULT_CALIBRATION }: HexGridProps) {
   const svgRef = useRef<SVGSVGElement>(null)
-  const [viewBox, setViewBox] = useState({ x: 0, y: 0, width: GRID_WIDTH, height: GRID_HEIGHT })
   const overlayMode = !!mapImageUrl
+
+  // Use image dimensions when available, otherwise use calculated grid dimensions
+  const viewportWidth = mapImageDimensions?.width ?? GRID_WIDTH
+  const viewportHeight = mapImageDimensions?.height ?? GRID_HEIGHT
+
+  const [viewBox, setViewBox] = useState({ x: 0, y: 0, width: viewportWidth, height: viewportHeight })
   const [isPanning, setIsPanning] = useState(false)
   const [startPan, setStartPan] = useState({ x: 0, y: 0 })
   const [scale, setScale] = useState(1)
@@ -338,9 +348,9 @@ export default function HexGrid({ hexes, units, selectedHex, onHexSelect, mapIma
 
   // Reset view button
   const resetView = useCallback(() => {
-    setViewBox({ x: 0, y: 0, width: GRID_WIDTH, height: GRID_HEIGHT })
+    setViewBox({ x: 0, y: 0, width: viewportWidth, height: viewportHeight })
     setScale(1)
-  }, [])
+  }, [viewportWidth, viewportHeight])
 
   // Add global mouse up listener
   useEffect(() => {
@@ -380,42 +390,52 @@ export default function HexGrid({ hexes, units, selectedHex, onHexSelect, mapIma
           className="hex-background"
           x={-100}
           y={-100}
-          width={GRID_WIDTH + 200}
-          height={GRID_HEIGHT + 200}
+          width={viewportWidth + 200}
+          height={viewportHeight + 200}
           fill="#1a1a2e"
         />
 
         {/* Map image background when provided */}
-        {mapImageUrl && (
+        {mapImageUrl && mapImageDimensions && (
           <image
             href={mapImageUrl}
             x={0}
             y={0}
-            width={GRID_WIDTH}
-            height={GRID_HEIGHT}
-            preserveAspectRatio="xMidYMid meet"
+            width={mapImageDimensions.width}
+            height={mapImageDimensions.height}
             className="map-image"
           />
         )}
 
-        {/* Hex overlay group with calibration offset */}
-        <g transform={`translate(${calibration.offsetX}, ${calibration.offsetY})`}>
-          {/* Render all hexes */}
-          {hexArray.map(hex => {
-            const hexKey = toHexKey(hex.col, hex.row)
-            return (
-              <SingleHex
-                key={hexKey}
-                hex={hex}
-                units={unitsByHex.get(hexKey) || []}
-                isSelected={selectedHex === hexKey}
-                onClick={() => handleHexClick(hexKey)}
-                overlayMode={overlayMode}
-                hexScale={calibration.hexScale}
-              />
-            )
-          })}
-        </g>
+        {/* Hex overlay group with calibration offset and scale */}
+        {(() => {
+          // Calculate scale factor to match hex grid to image dimensions
+          const gridScaleX = mapImageDimensions ? mapImageDimensions.width / GRID_WIDTH : 1
+          const gridScaleY = mapImageDimensions ? mapImageDimensions.height / GRID_HEIGHT : 1
+          // Use average scale for uniform scaling
+          const gridScale = mapImageDimensions ? (gridScaleX + gridScaleY) / 2 : 1
+          const combinedScale = gridScale * calibration.hexScale
+
+          return (
+            <g transform={`translate(${calibration.offsetX}, ${calibration.offsetY}) scale(${combinedScale})`}>
+              {/* Render all hexes */}
+              {hexArray.map(hex => {
+                const hexKey = toHexKey(hex.col, hex.row)
+                return (
+                  <SingleHex
+                    key={hexKey}
+                    hex={hex}
+                    units={unitsByHex.get(hexKey) || []}
+                    isSelected={selectedHex === hexKey}
+                    onClick={() => handleHexClick(hexKey)}
+                    overlayMode={overlayMode}
+                    hexScale={1} // Scale is applied at group level now
+                  />
+                )
+              })}
+            </g>
+          )
+        })()}
       </svg>
     </div>
   )

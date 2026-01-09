@@ -892,12 +892,19 @@ npm run preview
 
 ## 12. Implementation Phases
 
-### Phase 1: Foundation (MVP Core)
-1. Project setup (Vite, React, TypeScript, PWA)
-2. Hex grid rendering (empty map)
-3. Map data structure and terrain display
-4. Unit display on map
-5. Basic state management
+### Phase 1: Foundation (MVP Core) ✅ COMPLETE
+1. ✅ Project setup (Vite, React, TypeScript, PWA)
+2. ✅ Hex grid rendering (flat-top hexes, proper tessellation)
+3. ✅ Map data structure and terrain display
+4. ✅ Unit display on map (with kingdom colors, movement state)
+5. ✅ Basic state management (GameState with validation)
+6. ✅ Map image overlay support (calibration infrastructure ready)
+7. ✅ Unit testing (Vitest) and E2E setup (Playwright)
+8. ✅ GitHub Pages deployment workflow
+
+**Note**: Currently using 25th Anniversary Edition map image which has correct
+geography but slightly different kingdom colors than the true 3rd Edition.
+TODO: Find/obtain authentic Divine Right 3rd Edition map image for final release.
 
 ### Phase 2: Game Flow
 6. Turn phase system
@@ -1077,5 +1084,5 @@ The Minaria map will be stored as JSON:
 
 ---
 
-*Last updated: 2025-01-09*
-*Version: 1.0.0*
+*Last updated: 2026-01-09*
+*Version: 1.1.0 - Phase 1 Complete*
