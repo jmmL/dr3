@@ -27,28 +27,28 @@ interface HexGridProps {
   }
 }
 
-// Hex geometry constants (flat-top hexagon - matching the DR board game)
+// Hex geometry constants (pointy-top hexagon - matching the DR board game)
 const HEX_SIZE = 20 // Distance from center to vertex
-const HEX_WIDTH = 2 * HEX_SIZE // Flat-top: point to point horizontally
-const HEX_HEIGHT = Math.sqrt(3) * HEX_SIZE // Flat-top: flat edge to flat edge vertically
+const HEX_WIDTH = Math.sqrt(3) * HEX_SIZE // Pointy-top: flat edge to flat edge horizontally
+const HEX_HEIGHT = 2 * HEX_SIZE // Pointy-top: point to point vertically
 
 // Map dimensions
 const MAP_COLS = 35
 const MAP_ROWS = 31
 
 // Calculate SVG viewBox dimensions
-// Flat-top: columns interlock horizontally (3/4 width spacing)
-const GRID_WIDTH = MAP_COLS * HEX_WIDTH * 0.75 + HEX_WIDTH * 0.25
-const GRID_HEIGHT = MAP_ROWS * HEX_HEIGHT + HEX_HEIGHT * 0.5
+// Pointy-top: rows interlock vertically (3/4 height spacing)
+const GRID_WIDTH = MAP_COLS * HEX_WIDTH + HEX_WIDTH * 0.5
+const GRID_HEIGHT = MAP_ROWS * HEX_HEIGHT * 0.75 + HEX_HEIGHT * 0.25
 
 /**
- * Generate SVG points string for a flat-top hexagon centered at origin
+ * Generate SVG points string for a pointy-top hexagon centered at origin
  */
 function hexPoints(size: number): string {
   const points: string[] = []
   for (let i = 0; i < 6; i++) {
-    // Flat-top: start at 0 degrees (point to the right)
-    const angle = (Math.PI / 180) * (60 * i)
+    // Pointy-top: start at -90 degrees (point at top)
+    const angle = (Math.PI / 180) * (60 * i - 90)
     const x = size * Math.cos(angle)
     const y = size * Math.sin(angle)
     points.push(`${x.toFixed(2)},${y.toFixed(2)}`)
@@ -58,16 +58,16 @@ function hexPoints(size: number): string {
 
 /**
  * Convert offset coordinates (col, row) to pixel position (center of hex)
- * Using odd-q offset (odd columns are shifted down)
+ * Using odd-r offset (odd rows are shifted right)
  *
- * For flat-top hexes:
- * - Horizontal spacing = HEX_WIDTH * 3/4 (hexes interlock)
- * - Vertical spacing = HEX_HEIGHT
- * - Odd columns offset down by HEX_HEIGHT / 2
+ * For pointy-top hexes:
+ * - Horizontal spacing = HEX_WIDTH
+ * - Vertical spacing = HEX_HEIGHT * 3/4 (hexes interlock)
+ * - Odd rows offset right by HEX_WIDTH / 2
  */
 function hexToPixel(col: number, row: number): { x: number; y: number } {
-  const x = col * HEX_WIDTH * 0.75 + HEX_SIZE
-  const y = row * HEX_HEIGHT + HEX_HEIGHT / 2 + (col % 2 === 1 ? HEX_HEIGHT / 2 : 0)
+  const x = col * HEX_WIDTH + HEX_WIDTH / 2 + (row % 2 === 1 ? HEX_WIDTH / 2 : 0)
+  const y = row * HEX_HEIGHT * 0.75 + HEX_SIZE
   return { x, y }
 }
 

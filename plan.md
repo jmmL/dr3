@@ -906,6 +906,12 @@ npm run preview
 geography but slightly different kingdom colors than the true 3rd Edition.
 TODO: Find/obtain authentic Divine Right 3rd Edition map image for final release.
 
+**Known Discrepancies (25th Ann. vs DR3)**:
+- Sea of Zett: Larger in DR3 than in 25th Anniversary Edition hex data
+- Kingdom colors: May differ slightly between editions
+- The hex data was generated from dr25hexdata.py (25th Anniversary source)
+- Visual verification needed for: castle positions, terrain boundaries, named locations
+
 ### Phase 2: Game Flow
 6. Turn phase system
 7. Player order determination
