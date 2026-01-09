@@ -1,0 +1,115 @@
+.hex-grid-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  background: #1a1a2e;
+  touch-action: none; /* Prevent browser handling of touch events */
+}
+
+.hex-grid-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.reset-view-btn {
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.reset-view-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.zoom-level {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  min-width: 40px;
+}
+
+.hex-grid {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+}
+
+.hex-grid:active {
+  cursor: grabbing;
+}
+
+.hex {
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.hex:hover .hex-polygon {
+  opacity: 0.85;
+  filter: brightness(1.1);
+}
+
+.hex-polygon {
+  transition: opacity 0.15s, filter 0.15s;
+}
+
+.hex-selected .hex-polygon {
+  filter: brightness(1.2);
+}
+
+.hex-selection {
+  pointer-events: none;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.hex-icon {
+  pointer-events: none;
+  user-select: none;
+}
+
+.hex-name {
+  pointer-events: none;
+  user-select: none;
+  font-family: sans-serif;
+}
+
+.hex-background {
+  pointer-events: all;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hex-grid-controls {
+    top: 5px;
+    right: 5px;
+  }
+
+  .reset-view-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .zoom-level {
+    font-size: 10px;
+  }
+}
