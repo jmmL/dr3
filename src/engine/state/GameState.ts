@@ -3,6 +3,10 @@
  * Core entities and state structure for the game engine
  */
 
+// Import and re-export KingdomId from canonical source to avoid duplication
+import { type KingdomId as KingdomIdType } from '../../types'
+export type KingdomId = KingdomIdType
+
 // === COORDINATES ===
 export interface HexCoord {
   col: number  // offset coordinate (0-34)
@@ -29,21 +33,6 @@ export type TerrainType =
   | 'coast'
   | 'sea'
   | 'lake'
-
-// === KINGDOMS ===
-export type KingdomId =
-  | 'hothior'
-  | 'mivior'
-  | 'muetar'
-  | 'shucassam'
-  | 'immer'
-  | 'pon'
-  | 'rombune'
-  | 'neuth'  // elves
-  | 'zorn'   // goblins
-  | 'ghem'   // dwarves
-  | 'trolls'
-  | null
 
 export interface Kingdom {
   id: KingdomId
@@ -187,6 +176,7 @@ export type GamePhase =
   | 'game_over'
 
 // === GAME STATE ===
+// Using Record<> instead of Map<> for JSON serialization compatibility
 export interface GameState {
   // Meta
   gameId: string
@@ -199,17 +189,17 @@ export interface GameState {
   mapCols: number
   mapRows: number
 
-  // Units
-  units: Map<string, Unit>
+  // Units - keyed by unit ID
+  units: Record<string, Unit>
 
   // Players
   players: Player[]
 
-  // Kingdoms
-  kingdoms: Map<KingdomId, Kingdom>
+  // Kingdoms - keyed by kingdom ID
+  kingdoms: Record<string, Kingdom>
 
-  // Castles
-  castles: Map<string, Castle>
+  // Castles - keyed by castle ID
+  castles: Record<string, Castle>
 
   // Cards
   diplomacyDeck: DiplomacyCard[]
@@ -222,8 +212,8 @@ export interface GameState {
   // Sieges
   activeSieges: Siege[]
 
-  // Tracking
-  diplomaticPenalties: Map<string, KingdomId[]>  // playerId -> kingdoms violated
+  // Tracking - playerId -> kingdoms violated
+  diplomaticPenalties: Record<string, KingdomId[]>
   banishments: Banishment[]
 
   // Random state

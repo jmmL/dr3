@@ -6,7 +6,7 @@ import './HexGrid.css'
 
 interface HexGridProps {
   hexes: Map<string, HexData>
-  units?: Map<string, Unit>
+  units?: Record<string, Unit>
   selectedHex: string | null
   onHexSelect: (hexKey: string | null) => void
 }
@@ -178,7 +178,7 @@ export default function HexGrid({ hexes, units, selectedHex, onHexSelect }: HexG
   const unitsByHex = useMemo(() => {
     const map = new Map<string, Unit[]>()
     if (units) {
-      for (const unit of units.values()) {
+      for (const unit of Object.values(units)) {
         const key = toHexKey(unit.position.col, unit.position.row)
         const existing = map.get(key) || []
         existing.push(unit)
