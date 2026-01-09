@@ -1,9 +1,12 @@
 import { useMemo, useCallback, useState, useRef, useEffect } from 'react'
 import { HexData, TerrainFlags, TerrainColors, KingdomColors, getPrimaryTerrain, hasTerrain, toHexKey } from '../types'
+import { Unit } from '../engine/state/GameState'
+import UnitMarker from './UnitMarker'
 import './HexGrid.css'
 
 interface HexGridProps {
   hexes: Map<string, HexData>
+  units?: Map<string, Unit>
   selectedHex: string | null
   onHexSelect: (hexKey: string | null) => void
 }
@@ -87,11 +90,12 @@ function getHexIcon(hex: HexData): string | null {
 
 interface SingleHexProps {
   hex: HexData
+  units: Unit[]
   isSelected: boolean
   onClick: () => void
 }
 
-function SingleHex({ hex, isSelected, onClick }: SingleHexProps) {
+function SingleHex({ hex, units, isSelected, onClick }: SingleHexProps) {
   const { x, y } = hexToPixel(hex.col, hex.row)
   const fillColor = getHexColor(hex)
   const kingdomBorder = getKingdomBorderColor(hex)
@@ -113,6 +117,9 @@ function SingleHex({ hex, isSelected, onClick }: SingleHexProps) {
         strokeWidth={kingdomBorder ? 2 : 0.5}
         className="hex-polygon"
       />
+
+      {/* Units on this hex */}
+      {units.length > 0 && <UnitMarker units={units} hexSize={HEX_SIZE} />}
 
       {/* Selection highlight */}
       {isSelected && (
@@ -157,7 +164,7 @@ function SingleHex({ hex, isSelected, onClick }: SingleHexProps) {
   )
 }
 
-export default function HexGrid({ hexes, selectedHex, onHexSelect }: HexGridProps) {
+export default function HexGrid({ hexes, units, selectedHex, onHexSelect }: HexGridProps) {
   const svgRef = useRef<SVGSVGElement>(null)
   const [viewBox, setViewBox] = useState({ x: 0, y: 0, width: GRID_WIDTH, height: GRID_HEIGHT })
   const [isPanning, setIsPanning] = useState(false)
@@ -166,6 +173,20 @@ export default function HexGrid({ hexes, selectedHex, onHexSelect }: HexGridProp
 
   // Convert hex Map to array for rendering
   const hexArray = useMemo(() => Array.from(hexes.values()), [hexes])
+
+  // Group units by hex position for efficient lookup
+  const unitsByHex = useMemo(() => {
+    const map = new Map<string, Unit[]>()
+    if (units) {
+      for (const unit of units.values()) {
+        const key = toHexKey(unit.position.col, unit.position.row)
+        const existing = map.get(key) || []
+        existing.push(unit)
+        map.set(key, existing)
+      }
+    }
+    return map
+  }, [units])
 
   // Handle hex click
   const handleHexClick = useCallback((hexKey: string) => {
@@ -327,14 +348,18 @@ export default function HexGrid({ hexes, selectedHex, onHexSelect }: HexGridProp
         />
 
         {/* Render all hexes */}
-        {hexArray.map(hex => (
-          <SingleHex
-            key={toHexKey(hex.col, hex.row)}
-            hex={hex}
-            isSelected={selectedHex === toHexKey(hex.col, hex.row)}
-            onClick={() => handleHexClick(toHexKey(hex.col, hex.row))}
-          />
-        ))}
+        {hexArray.map(hex => {
+          const hexKey = toHexKey(hex.col, hex.row)
+          return (
+            <SingleHex
+              key={hexKey}
+              hex={hex}
+              units={unitsByHex.get(hexKey) || []}
+              isSelected={selectedHex === hexKey}
+              onClick={() => handleHexClick(hexKey)}
+            />
+          )
+        })}
       </svg>
     </div>
   )
