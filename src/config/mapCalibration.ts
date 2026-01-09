@@ -29,8 +29,9 @@ export interface MapImageDimensions {
 /**
  * URL to the map image. Set to null to use rendered hex terrain.
  * When set, hexes become transparent overlays for selection.
+ * Uses import.meta.env.BASE_URL to work correctly on GitHub Pages.
  */
-export const MAP_IMAGE_URL: string | null = '/assets/minaria-map.png'
+export const MAP_IMAGE_URL: string | null = `${import.meta.env.BASE_URL}assets/minaria-map.png`
 
 /**
  * Actual dimensions of the map image file.
