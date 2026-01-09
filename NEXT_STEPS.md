@@ -33,4 +33,4 @@ This document outlines the roadmap for implementing the "Basic Game" of Divine R
 ## Phase 6: Persistence & Polish
 - [ ] **Save/Load**: Implement `localStorage` persistence.
 - [ ] **UI Polish**: Improve visual feedback and accessibility.
-- [ ] **Testing**: Add unit tests for core rules.
+- [x] **Testing**: Add unit tests for core rules. (Infrastructure set up, specific tests needed for new features)
