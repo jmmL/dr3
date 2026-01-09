@@ -52,7 +52,7 @@ export const MAP_IMAGE_DIMENSIONS: MapImageDimensions = {
  * - hexScale: increase to make hexes larger, decrease to make smaller
  */
 export const MAP_CALIBRATION: MapCalibration = {
-  offsetX: 8,
-  offsetY: 5,
-  hexScale: 0.87,
+  offsetX: 15,
+  offsetY: 12,
+  hexScale: 0.95,
 }
