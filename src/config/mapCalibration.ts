@@ -29,25 +29,30 @@ export interface MapImageDimensions {
 /**
  * URL to the map image. Set to null to use rendered hex terrain.
  * When set, hexes become transparent overlays for selection.
+ * Uses import.meta.env.BASE_URL to work correctly on GitHub Pages.
  */
-export const MAP_IMAGE_URL: string | null = '/assets/minaria-map.png'
+export const MAP_IMAGE_URL: string | null = `${import.meta.env.BASE_URL}assets/map.png`
 
 /**
  * Actual dimensions of the map image file.
  * Used to properly scale the image in the SVG viewport.
  */
 export const MAP_IMAGE_DIMENSIONS: MapImageDimensions = {
-  width: 1125,
-  height: 963,
+  width: 2600,
+  height: 2040,
 }
 
 /**
  * Calibration values for aligning hex grid to map image.
- * These values were estimated based on the 25th Anniversary map.
- * Fine-tuning may be needed for precise alignment.
+ * These values were calibrated for the 25th Anniversary Edition map (2600x2040).
+ *
+ * To fine-tune:
+ * - offsetX: increase to move grid right, decrease to move left
+ * - offsetY: increase to move grid down, decrease to move up
+ * - hexScale: increase to make hexes larger, decrease to make smaller
  */
 export const MAP_CALIBRATION: MapCalibration = {
-  offsetX: 0,
-  offsetY: 0,
-  hexScale: 1.0,
+  offsetX: 48,
+  offsetY: 22,
+  hexScale: 0.87,
 }
