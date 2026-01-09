@@ -27,19 +27,21 @@ const TerrainColors: Record<string, string> = {
   battlefield: '#8B4513',
 }
 
-// Hex geometry
+// Hex geometry (flat-top hexagon - matching the DR board game)
 const HEX_SIZE = 12
-const HEX_WIDTH = Math.sqrt(3) * HEX_SIZE
-const HEX_HEIGHT = 2 * HEX_SIZE
+const HEX_WIDTH = 2 * HEX_SIZE // Flat-top: point to point horizontally
+const HEX_HEIGHT = Math.sqrt(3) * HEX_SIZE // Flat-top: flat edge to flat edge vertically
 const MAP_COLS = 35
 const MAP_ROWS = 31
-const GRID_WIDTH = MAP_COLS * HEX_WIDTH + HEX_WIDTH / 2
-const GRID_HEIGHT = MAP_ROWS * HEX_HEIGHT * 0.75 + HEX_HEIGHT * 0.25
+// Flat-top: columns interlock horizontally (3/4 width spacing)
+const GRID_WIDTH = MAP_COLS * HEX_WIDTH * 0.75 + HEX_WIDTH * 0.25
+const GRID_HEIGHT = MAP_ROWS * HEX_HEIGHT + HEX_HEIGHT * 0.5
 
 function hexPoints(size: number): string {
   const points: string[] = []
   for (let i = 0; i < 6; i++) {
-    const angle = (Math.PI / 180) * (60 * i - 30)
+    // Flat-top: start at 0 degrees (point to the right)
+    const angle = (Math.PI / 180) * (60 * i)
     const x = size * Math.cos(angle)
     const y = size * Math.sin(angle)
     points.push(`${x.toFixed(2)},${y.toFixed(2)}`)
@@ -48,8 +50,8 @@ function hexPoints(size: number): string {
 }
 
 function hexToPixel(col: number, row: number): { x: number; y: number } {
-  const x = col * HEX_WIDTH * 0.75 * (4 / 3) + HEX_WIDTH / 2
-  const y = row * HEX_HEIGHT * 0.75 + HEX_HEIGHT / 2 + (col % 2 === 1 ? HEX_HEIGHT * 0.375 : 0)
+  const x = col * HEX_WIDTH * 0.75 + HEX_SIZE
+  const y = row * HEX_HEIGHT + HEX_HEIGHT / 2 + (col % 2 === 1 ? HEX_HEIGHT / 2 : 0)
   return { x, y }
 }
 
