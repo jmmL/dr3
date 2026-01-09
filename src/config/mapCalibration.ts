@@ -31,15 +31,15 @@ export interface MapImageDimensions {
  * When set, hexes become transparent overlays for selection.
  * Uses import.meta.env.BASE_URL to work correctly on GitHub Pages.
  */
-export const MAP_IMAGE_URL: string | null = `${import.meta.env.BASE_URL}assets/minaria-map.png`
+export const MAP_IMAGE_URL: string | null = `${import.meta.env.BASE_URL}assets/map.png`
 
 /**
  * Actual dimensions of the map image file.
  * Used to properly scale the image in the SVG viewport.
  */
 export const MAP_IMAGE_DIMENSIONS: MapImageDimensions = {
-  width: 1125,
-  height: 963,
+  width: 2600,
+  height: 2040,
 }
 
 /**
