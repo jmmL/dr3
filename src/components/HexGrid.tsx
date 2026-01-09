@@ -9,28 +9,46 @@ interface HexGridProps {
   units?: Record<string, Unit>
   selectedHex: string | null
   onHexSelect: (hexKey: string | null) => void
+  /** URL to the map image background. When provided, hexes render as transparent overlay */
+  mapImageUrl?: string
+  /** Dimensions of the map image for proper scaling */
+  mapImageDimensions?: {
+    width: number
+    height: number
+  }
+  /** Calibration settings for aligning hex grid to map image */
+  calibration?: {
+    /** X offset to shift the entire grid */
+    offsetX: number
+    /** Y offset to shift the entire grid */
+    offsetY: number
+    /** Scale factor for hex size adjustment */
+    hexScale: number
+  }
 }
 
-// Hex geometry constants (pointy-top hexagon)
+// Hex geometry constants (flat-top hexagon - matching the DR board game)
 const HEX_SIZE = 20 // Distance from center to vertex
-const HEX_WIDTH = Math.sqrt(3) * HEX_SIZE
-const HEX_HEIGHT = 2 * HEX_SIZE
+const HEX_WIDTH = 2 * HEX_SIZE // Flat-top: point to point horizontally
+const HEX_HEIGHT = Math.sqrt(3) * HEX_SIZE // Flat-top: flat edge to flat edge vertically
 
 // Map dimensions
 const MAP_COLS = 35
 const MAP_ROWS = 31
 
 // Calculate SVG viewBox dimensions
-const GRID_WIDTH = MAP_COLS * HEX_WIDTH + HEX_WIDTH / 2
-const GRID_HEIGHT = MAP_ROWS * HEX_HEIGHT * 0.75 + HEX_HEIGHT * 0.25
+// Flat-top: columns interlock horizontally (3/4 width spacing)
+const GRID_WIDTH = MAP_COLS * HEX_WIDTH * 0.75 + HEX_WIDTH * 0.25
+const GRID_HEIGHT = MAP_ROWS * HEX_HEIGHT + HEX_HEIGHT * 0.5
 
 /**
- * Generate SVG points string for a pointy-top hexagon centered at origin
+ * Generate SVG points string for a flat-top hexagon centered at origin
  */
 function hexPoints(size: number): string {
   const points: string[] = []
   for (let i = 0; i < 6; i++) {
-    const angle = (Math.PI / 180) * (60 * i - 30)
+    // Flat-top: start at 0 degrees (point to the right)
+    const angle = (Math.PI / 180) * (60 * i)
     const x = size * Math.cos(angle)
     const y = size * Math.sin(angle)
     points.push(`${x.toFixed(2)},${y.toFixed(2)}`)
@@ -41,10 +59,15 @@ function hexPoints(size: number): string {
 /**
  * Convert offset coordinates (col, row) to pixel position (center of hex)
  * Using odd-q offset (odd columns are shifted down)
+ *
+ * For flat-top hexes:
+ * - Horizontal spacing = HEX_WIDTH * 3/4 (hexes interlock)
+ * - Vertical spacing = HEX_HEIGHT
+ * - Odd columns offset down by HEX_HEIGHT / 2
  */
 function hexToPixel(col: number, row: number): { x: number; y: number } {
-  const x = col * HEX_WIDTH * 0.75 * (4 / 3) + HEX_WIDTH / 2
-  const y = row * HEX_HEIGHT * 0.75 + HEX_HEIGHT / 2 + (col % 2 === 1 ? HEX_HEIGHT * 0.375 : 0)
+  const x = col * HEX_WIDTH * 0.75 + HEX_SIZE
+  const y = row * HEX_HEIGHT + HEX_HEIGHT / 2 + (col % 2 === 1 ? HEX_HEIGHT / 2 : 0)
   return { x, y }
 }
 
@@ -93,38 +116,54 @@ interface SingleHexProps {
   units: Unit[]
   isSelected: boolean
   onClick: () => void
+  /** When true, hex is transparent (for map image overlay mode) */
+  overlayMode: boolean
+  /** Scale factor for hex size */
+  hexScale: number
 }
 
-function SingleHex({ hex, units, isSelected, onClick }: SingleHexProps) {
+function SingleHex({ hex, units, isSelected, onClick, overlayMode, hexScale }: SingleHexProps) {
   const { x, y } = hexToPixel(hex.col, hex.row)
   const fillColor = getHexColor(hex)
   const kingdomBorder = getKingdomBorderColor(hex)
   const icon = getHexIcon(hex)
   const hexKey = toHexKey(hex.col, hex.row)
+  const scaledSize = HEX_SIZE * hexScale
 
   return (
     <g
-      className={`hex ${isSelected ? 'hex-selected' : ''}`}
+      className={`hex ${isSelected ? 'hex-selected' : ''} ${overlayMode ? 'hex-overlay' : ''}`}
       transform={`translate(${x}, ${y})`}
       onClick={onClick}
       data-hex={hexKey}
     >
-      {/* Main hex shape */}
+      {/* Main hex shape - transparent in overlay mode */}
       <polygon
-        points={hexPoints(HEX_SIZE)}
-        fill={fillColor}
-        stroke={kingdomBorder || '#333'}
-        strokeWidth={kingdomBorder ? 2 : 0.5}
+        points={hexPoints(scaledSize)}
+        fill={overlayMode ? 'transparent' : fillColor}
+        stroke={overlayMode ? 'transparent' : (kingdomBorder || '#333')}
+        strokeWidth={overlayMode ? 0 : (kingdomBorder ? 2 : 0.5)}
         className="hex-polygon"
       />
 
+      {/* Hover outline for overlay mode */}
+      {overlayMode && (
+        <polygon
+          points={hexPoints(scaledSize)}
+          fill="transparent"
+          stroke="transparent"
+          strokeWidth={1.5}
+          className="hex-hover-outline"
+        />
+      )}
+
       {/* Units on this hex */}
-      {units.length > 0 && <UnitMarker units={units} hexSize={HEX_SIZE} />}
+      {units.length > 0 && <UnitMarker units={units} hexSize={scaledSize} />}
 
       {/* Selection highlight */}
       {isSelected && (
         <polygon
-          points={hexPoints(HEX_SIZE - 2)}
+          points={hexPoints(scaledSize - 2)}
           fill="none"
           stroke="#fff"
           strokeWidth={2}
@@ -132,22 +171,22 @@ function SingleHex({ hex, units, isSelected, onClick }: SingleHexProps) {
         />
       )}
 
-      {/* Icon for special features */}
-      {icon && (
+      {/* Icon for special features - only show in non-overlay mode */}
+      {!overlayMode && icon && (
         <text
           x={0}
           y={0}
           textAnchor="middle"
           dominantBaseline="central"
-          fontSize={HEX_SIZE * 0.8}
+          fontSize={scaledSize * 0.8}
           className="hex-icon"
         >
           {icon}
         </text>
       )}
 
-      {/* Hex name (for named locations) */}
-      {hex.name && !icon && (
+      {/* Hex name (for named locations) - only show in non-overlay mode */}
+      {!overlayMode && hex.name && !icon && (
         <text
           x={0}
           y={0}
@@ -164,9 +203,18 @@ function SingleHex({ hex, units, isSelected, onClick }: SingleHexProps) {
   )
 }
 
-export default function HexGrid({ hexes, units, selectedHex, onHexSelect }: HexGridProps) {
+// Default calibration - no offset, no scale
+const DEFAULT_CALIBRATION = { offsetX: 0, offsetY: 0, hexScale: 1 }
+
+export default function HexGrid({ hexes, units, selectedHex, onHexSelect, mapImageUrl, mapImageDimensions, calibration = DEFAULT_CALIBRATION }: HexGridProps) {
   const svgRef = useRef<SVGSVGElement>(null)
-  const [viewBox, setViewBox] = useState({ x: 0, y: 0, width: GRID_WIDTH, height: GRID_HEIGHT })
+  const overlayMode = !!mapImageUrl
+
+  // Use image dimensions when available, otherwise use calculated grid dimensions
+  const viewportWidth = mapImageDimensions?.width ?? GRID_WIDTH
+  const viewportHeight = mapImageDimensions?.height ?? GRID_HEIGHT
+
+  const [viewBox, setViewBox] = useState({ x: 0, y: 0, width: viewportWidth, height: viewportHeight })
   const [isPanning, setIsPanning] = useState(false)
   const [startPan, setStartPan] = useState({ x: 0, y: 0 })
   const [scale, setScale] = useState(1)
@@ -300,9 +348,9 @@ export default function HexGrid({ hexes, units, selectedHex, onHexSelect }: HexG
 
   // Reset view button
   const resetView = useCallback(() => {
-    setViewBox({ x: 0, y: 0, width: GRID_WIDTH, height: GRID_HEIGHT })
+    setViewBox({ x: 0, y: 0, width: viewportWidth, height: viewportHeight })
     setScale(1)
-  }, [])
+  }, [viewportWidth, viewportHeight])
 
   // Add global mouse up listener
   useEffect(() => {
@@ -337,29 +385,57 @@ export default function HexGrid({ hexes, units, selectedHex, onHexSelect }: HexG
         onTouchEnd={handleTouchEnd}
         onWheel={handleWheel}
       >
-        {/* Background */}
+        {/* Background - either solid color or map image */}
         <rect
           className="hex-background"
           x={-100}
           y={-100}
-          width={GRID_WIDTH + 200}
-          height={GRID_HEIGHT + 200}
+          width={viewportWidth + 200}
+          height={viewportHeight + 200}
           fill="#1a1a2e"
         />
 
-        {/* Render all hexes */}
-        {hexArray.map(hex => {
-          const hexKey = toHexKey(hex.col, hex.row)
+        {/* Map image background when provided */}
+        {mapImageUrl && mapImageDimensions && (
+          <image
+            href={mapImageUrl}
+            x={0}
+            y={0}
+            width={mapImageDimensions.width}
+            height={mapImageDimensions.height}
+            className="map-image"
+          />
+        )}
+
+        {/* Hex overlay group with calibration offset and scale */}
+        {(() => {
+          // Calculate scale factor to match hex grid to image dimensions
+          const gridScaleX = mapImageDimensions ? mapImageDimensions.width / GRID_WIDTH : 1
+          const gridScaleY = mapImageDimensions ? mapImageDimensions.height / GRID_HEIGHT : 1
+          // Use average scale for uniform scaling
+          const gridScale = mapImageDimensions ? (gridScaleX + gridScaleY) / 2 : 1
+          const combinedScale = gridScale * calibration.hexScale
+
           return (
-            <SingleHex
-              key={hexKey}
-              hex={hex}
-              units={unitsByHex.get(hexKey) || []}
-              isSelected={selectedHex === hexKey}
-              onClick={() => handleHexClick(hexKey)}
-            />
+            <g transform={`translate(${calibration.offsetX}, ${calibration.offsetY}) scale(${combinedScale})`}>
+              {/* Render all hexes */}
+              {hexArray.map(hex => {
+                const hexKey = toHexKey(hex.col, hex.row)
+                return (
+                  <SingleHex
+                    key={hexKey}
+                    hex={hex}
+                    units={unitsByHex.get(hexKey) || []}
+                    isSelected={selectedHex === hexKey}
+                    onClick={() => handleHexClick(hexKey)}
+                    overlayMode={overlayMode}
+                    hexScale={1} // Scale is applied at group level now
+                  />
+                )
+              })}
+            </g>
           )
-        })}
+        })()}
       </svg>
     </div>
   )

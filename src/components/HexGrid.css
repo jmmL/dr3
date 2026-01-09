@@ -97,6 +97,30 @@
   pointer-events: all;
 }
 
+/* Map image background */
+.map-image {
+  pointer-events: none;
+}
+
+/* Overlay mode: transparent hexes that show on hover */
+.hex-overlay .hex-polygon {
+  fill: transparent !important;
+  stroke: transparent !important;
+  transition: fill 0.15s, stroke 0.15s;
+}
+
+.hex-overlay .hex-hover-outline {
+  transition: stroke 0.15s;
+}
+
+.hex-overlay:hover .hex-hover-outline {
+  stroke: rgba(255, 255, 255, 0.6);
+}
+
+.hex-overlay.hex-selected .hex-hover-outline {
+  stroke: rgba(255, 255, 255, 0.9);
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .hex-grid-controls {
