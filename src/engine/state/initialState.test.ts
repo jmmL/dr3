@@ -143,4 +143,41 @@ describe('PLAYER_KINGDOMS', () => {
       }
     }
   })
+
+  it('generates reproducible gameId with same seed', () => {
+    const options = {
+      humanPlayerId: 'human',
+      humanKingdomId: 'hothior' as const,
+      aiPlayerId: 'ai',
+      aiKingdomId: 'mivior' as const,
+      seed: 42,
+    }
+
+    const state1 = createInitialState(options)
+    const state2 = createInitialState(options)
+
+    expect(state1.gameId).toBe(state2.gameId)
+    expect(state1.rngSeed).toBe(42)
+    expect(state2.rngSeed).toBe(42)
+  })
+
+  it('generates different gameIds with different seeds', () => {
+    const state1 = createInitialState({
+      humanPlayerId: 'human',
+      humanKingdomId: 'hothior',
+      aiPlayerId: 'ai',
+      aiKingdomId: 'mivior',
+      seed: 111,
+    })
+
+    const state2 = createInitialState({
+      humanPlayerId: 'human',
+      humanKingdomId: 'hothior',
+      aiPlayerId: 'ai',
+      aiKingdomId: 'mivior',
+      seed: 222,
+    })
+
+    expect(state1.gameId).not.toBe(state2.gameId)
+  })
 })

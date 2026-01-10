@@ -15,6 +15,7 @@ import {
 } from './GameState'
 import { getCastles, getRoyalCastles, MAP_COLS, MAP_ROWS } from '../../data/mapData'
 import { KingdomColors, TerrainFlags, hasTerrain } from '../../types'
+import { SeededRNG } from '../utils/random'
 
 /**
  * Normalize a castle name to an ID
@@ -50,9 +51,8 @@ export const PLAYER_KINGDOMS: KingdomId[] = [
   'hothior', 'mivior', 'muetar', 'shucassam', 'immer', 'pon', 'rombune'
 ]
 
-function generateId(): string {
-  return Math.random().toString(36).substring(2, 9)
-}
+// Note: generateId now requires a SeededRNG instance for reproducibility
+// See createInitialState for usage
 
 /**
  * Create castles from map data with normalized IDs
@@ -209,6 +209,10 @@ function validateKingdom(
 export function createInitialState(options: CreateGameOptions): GameState {
   const { humanPlayerId, humanKingdomId, aiPlayerId, aiKingdomId, seed } = options
 
+  // Initialize seeded RNG for reproducible game setup
+  const rngSeed = seed ?? Date.now()
+  const rng = new SeededRNG(rngSeed)
+
   // Create kingdoms and castles
   const kingdoms = createKingdoms()
   const castles = createCastlesFromMapData()
@@ -283,7 +287,7 @@ export function createInitialState(options: CreateGameOptions): GameState {
 
   // Initial game state
   return {
-    gameId: generateId(),
+    gameId: rng.randomId(),
     turn: 1,
     phase: 'setup',
     playerOrder: [humanPlayerId, aiPlayerId],
@@ -306,7 +310,7 @@ export function createInitialState(options: CreateGameOptions): GameState {
     diplomaticPenalties: {},
     banishments: [],
 
-    rngSeed: seed ?? Date.now(),
+    rngSeed,
     actionLog: [],
   }
 }
