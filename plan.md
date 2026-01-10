@@ -902,9 +902,23 @@ npm run preview
 7. ✅ Unit testing (Vitest) and E2E setup (Playwright)
 8. ✅ GitHub Pages deployment workflow
 
+**Phase 1 Code Review Improvements** (added post-completion):
+- ✅ CI/CD runs on Pull Requests (not just main)
+- ✅ Eliminated duplicate build in CI pipeline
+- ✅ Added ESLint with React/TypeScript rules
+- ✅ Increased test coverage (23 → 98 tests)
+- ✅ Seeded RNG for reproducible game state
+- ✅ Fixed faction capitals and added comprehensive faction data (`src/engine/data/factions.ts`)
+- ✅ All 11 factions with cities, coordinates, and starting unit counts
+
 **Note**: Currently using 25th Anniversary Edition map image which has correct
 geography but slightly different kingdom colors than the true 3rd Edition.
 TODO: Find/obtain authentic Divine Right 3rd Edition map image for final release.
+
+**Edition Naming Differences** (DR25 hex data vs DR3 rulebook):
+- DR3 "Stone Face" = DR25 "The Face"
+- DR3 "The Gathering" = DR25 "The Digs"
+- DR3 "Khuzdul" = DR25 "Kuzdol"
 
 **Known Discrepancies (25th Ann. vs DR3)**:
 - Sea of Zett: Larger in DR3 than in 25th Anniversary Edition hex data
@@ -913,6 +927,14 @@ TODO: Find/obtain authentic Divine Right 3rd Edition map image for final release
 - Visual verification needed for: castle positions, terrain boundaries, named locations
 
 ### Phase 2: Game Flow
+
+**Infrastructure Prerequisites** (from Phase 1 code review):
+- [ ] State management refactor (Zustand or useReducer with action dispatch)
+- [ ] Error boundaries for graceful crash recovery
+- [ ] HexGrid performance optimization (virtualization for 1000+ hexes)
+- [ ] Cross-browser E2E testing (Safari/iOS - primary test platform)
+
+**Game Flow Implementation**:
 6. Turn phase system
 7. Player order determination
 8. Random events table
@@ -1091,4 +1113,4 @@ The Minaria map will be stored as JSON:
 ---
 
 *Last updated: 2026-01-09*
-*Version: 1.1.0 - Phase 1 Complete*
+*Version: 1.2.0 - Phase 1 Complete + Code Review Improvements*
