@@ -39,6 +39,7 @@ describe('createInitialState', () => {
   it('throws GameSetupError for invalid kingdom', () => {
     expect(() => createInitialState({
       humanPlayerId: 'human',
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any -- Testing invalid input
       humanKingdomId: 'invalid_kingdom' as any,
       aiPlayerId: 'ai',
       aiKingdomId: 'mivior',
@@ -84,7 +85,7 @@ describe('createInitialState', () => {
     const ambassadors = hothiorUnits.filter(u => u.type === 'ambassador')
 
     expect(monarchs).toHaveLength(1)
-    expect(armies).toHaveLength(6) // Hothior has 6 armies
+    expect(armies).toHaveLength(7) // Hothior has 7 armies (2+1+2+2 across cities)
     expect(ambassadors).toHaveLength(1)
   })
 
@@ -141,5 +142,42 @@ describe('PLAYER_KINGDOMS', () => {
         })).not.toThrow()
       }
     }
+  })
+
+  it('generates reproducible gameId with same seed', () => {
+    const options = {
+      humanPlayerId: 'human',
+      humanKingdomId: 'hothior' as const,
+      aiPlayerId: 'ai',
+      aiKingdomId: 'mivior' as const,
+      seed: 42,
+    }
+
+    const state1 = createInitialState(options)
+    const state2 = createInitialState(options)
+
+    expect(state1.gameId).toBe(state2.gameId)
+    expect(state1.rngSeed).toBe(42)
+    expect(state2.rngSeed).toBe(42)
+  })
+
+  it('generates different gameIds with different seeds', () => {
+    const state1 = createInitialState({
+      humanPlayerId: 'human',
+      humanKingdomId: 'hothior',
+      aiPlayerId: 'ai',
+      aiKingdomId: 'mivior',
+      seed: 111,
+    })
+
+    const state2 = createInitialState({
+      humanPlayerId: 'human',
+      humanKingdomId: 'hothior',
+      aiPlayerId: 'ai',
+      aiKingdomId: 'mivior',
+      seed: 222,
+    })
+
+    expect(state1.gameId).not.toBe(state2.gameId)
   })
 })
