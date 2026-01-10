@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest",
+        "--browser",
+        "chromium",
+        "--init-page",
+        "http://localhost:4173/dr3/",
+        "--allow-unrestricted-file-access",
+        "--user-data-dir",
+        ".mcp/playwright-profile"
+      ],
+      "description": "Playwright MCP server for Divine Right 3 e2e testing",
+      "env": {
+        "PLAYWRIGHT_BROWSERS_PATH": "0"
+      }
+    }
+  },
+  "metadata": {
+    "project": "Divine Right 3 Solo Play Webapp",
+    "description": "MCP configuration for e2e testing with Playwright",
+    "version": "1.0.0",
+    "created": "2026-01-10"
+  }
+}

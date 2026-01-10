@@ -1,0 +1,10 @@
+# Playwright MCP Server Data
+playwright-profile/
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Session data
+storage-state*.json

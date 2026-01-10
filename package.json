@@ -14,7 +14,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
-    "test:e2e:ui": "playwright test --ui"
+    "test:e2e:ui": "playwright test --ui",
+    "mcp:playwright": "npx @playwright/mcp@latest --browser chromium --init-page http://localhost:4173/dr3/ --allow-unrestricted-file-access --user-data-dir .mcp/playwright-profile"
   },
   "repository": {
     "type": "git",
