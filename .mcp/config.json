@@ -6,8 +6,6 @@
         "@playwright/mcp@latest",
         "--browser",
         "chromium",
-        "--init-page",
-        "http://localhost:4173/dr3/",
         "--allow-unrestricted-file-access",
         "--user-data-dir",
         ".mcp/playwright-profile"
