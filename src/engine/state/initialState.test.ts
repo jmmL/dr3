@@ -39,6 +39,7 @@ describe('createInitialState', () => {
   it('throws GameSetupError for invalid kingdom', () => {
     expect(() => createInitialState({
       humanPlayerId: 'human',
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any -- Testing invalid input
       humanKingdomId: 'invalid_kingdom' as any,
       aiPlayerId: 'ai',
       aiKingdomId: 'mivior',
