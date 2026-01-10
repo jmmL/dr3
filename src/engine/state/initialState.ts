@@ -16,6 +16,14 @@ import {
 import { getCastles, getRoyalCastles, MAP_COLS, MAP_ROWS } from '../../data/mapData'
 import { KingdomColors, TerrainFlags, hasTerrain } from '../../types'
 import { SeededRNG } from '../utils/random'
+import {
+  FACTIONS,
+  PLAYER_FACTION_IDS,
+  getFactionCapital,
+  getFactionTotalArmies,
+  getFactionTotalFleets,
+  type FactionCity,
+} from '../data/factions'
 
 /**
  * Normalize a castle name to an ID
@@ -29,30 +37,8 @@ function normalizeCastleId(name: string): string {
     .replace(/^_|_$/g, '')     // Trim leading/trailing underscores
 }
 
-// Kingdom definitions with starting armies
-// Only includes player-controllable kingdoms with verified royal castle IDs
-const KINGDOM_DEFINITIONS: Omit<Kingdom, 'color'>[] = [
-  { id: 'hothior', name: 'Hothior', royalCastleId: 'ider_bolis', coatOfArms: '🦅', armyCount: 6, fleetCount: 0, isPlayerKingdom: true },
-  { id: 'mivior', name: 'Mivior', royalCastleId: 'pennol', coatOfArms: '🦁', armyCount: 5, fleetCount: 2, isPlayerKingdom: true },
-  { id: 'muetar', name: 'Muetar', royalCastleId: 'castle_altarr', coatOfArms: '🐺', armyCount: 4, fleetCount: 0, isPlayerKingdom: true },
-  { id: 'shucassam', name: 'Shucassam', royalCastleId: 'marzarbol', coatOfArms: '🐍', armyCount: 5, fleetCount: 1, isPlayerKingdom: true },
-  { id: 'immer', name: 'Immer', royalCastleId: 'the_pits', coatOfArms: '🐉', armyCount: 3, fleetCount: 0, isPlayerKingdom: true },
-  { id: 'pon', name: 'Pon', royalCastleId: 'invisible_school', coatOfArms: '🦂', armyCount: 4, fleetCount: 1, isPlayerKingdom: true },
-  { id: 'rombune', name: 'Rombune', royalCastleId: 'tower_of_zards', coatOfArms: '🦇', armyCount: 3, fleetCount: 2, isPlayerKingdom: true },
-  // Non-player kingdoms (activated via diplomacy) - use representative locations
-  { id: 'neuth', name: 'Elfland (Neuth)', royalCastleId: 'the_haven', coatOfArms: '🧝', armyCount: 3, fleetCount: 0, isPlayerKingdom: false },
-  { id: 'zorn', name: 'Zorn (Goblins)', royalCastleId: 'mounds', coatOfArms: '👺', armyCount: 4, fleetCount: 0, isPlayerKingdom: false },
-  { id: 'ghem', name: 'Ghem (Dwarves)', royalCastleId: 'mines_of_rosengg', coatOfArms: '⛏️', armyCount: 3, fleetCount: 0, isPlayerKingdom: false },
-  { id: 'trolls', name: 'Troll Country', royalCastleId: 'the_crag', coatOfArms: '🧌', armyCount: 2, fleetCount: 0, isPlayerKingdom: false },
-]
-
-// Player kingdoms available for selection (excluding non-player kingdoms)
-export const PLAYER_KINGDOMS: KingdomId[] = [
-  'hothior', 'mivior', 'muetar', 'shucassam', 'immer', 'pon', 'rombune'
-]
-
-// Note: generateId now requires a SeededRNG instance for reproducibility
-// See createInitialState for usage
+// Player kingdoms available for selection (re-exported from factions)
+export const PLAYER_KINGDOMS: KingdomId[] = PLAYER_FACTION_IDS
 
 /**
  * Create castles from map data with normalized IDs
@@ -91,14 +77,21 @@ function createCastlesFromMapData(): Record<string, Castle> {
 function createKingdoms(): Record<string, Kingdom> {
   const kingdoms: Record<string, Kingdom> = {}
 
-  for (const def of KINGDOM_DEFINITIONS) {
+  for (const faction of FACTIONS) {
+    if (!faction.id) continue
+
+    const fleets = getFactionTotalFleets(faction.id)
     const kingdom: Kingdom = {
-      ...def,
-      color: KingdomColors[def.id as keyof typeof KingdomColors] || '#888888',
+      id: faction.id,
+      name: faction.name,
+      royalCastleId: faction.capitalId,
+      coatOfArms: faction.coatOfArms,
+      armyCount: getFactionTotalArmies(faction.id),
+      fleetCount: fleets.sea + fleets.river,
+      isPlayerKingdom: faction.isPlayerFaction,
+      color: KingdomColors[faction.id as keyof typeof KingdomColors] || '#888888',
     }
-    if (def.id) {
-      kingdoms[def.id] = kingdom
-    }
+    kingdoms[faction.id] = kingdom
   }
 
   return kingdoms
@@ -174,13 +167,12 @@ export class GameSetupError extends Error {
 }
 
 /**
- * Validate that a kingdom can be used for play
+ * Validate that a kingdom can be used for play and get its starting position
  */
 function validateKingdom(
   kingdomId: KingdomId,
-  kingdoms: Record<string, Kingdom>,
-  castles: Record<string, Castle>
-): { kingdom: Kingdom; royalCastle: Castle } {
+  kingdoms: Record<string, Kingdom>
+): { kingdom: Kingdom; capital: FactionCity } {
   if (!kingdomId) {
     throw new GameSetupError('Kingdom ID cannot be null')
   }
@@ -194,16 +186,13 @@ function validateKingdom(
     throw new GameSetupError(`Kingdom '${kingdomId}' is not a player-controllable kingdom`)
   }
 
-  const royalCastle = castles[kingdom.royalCastleId]
-  if (!royalCastle) {
-    const availableCastles = Object.keys(castles).slice(0, 10).join(', ')
-    throw new GameSetupError(
-      `Royal castle '${kingdom.royalCastleId}' not found for kingdom '${kingdomId}'. ` +
-      `Available castles include: ${availableCastles}...`
-    )
+  // Get capital from faction data (not castle list, as some capitals aren't flagged as castles)
+  const capital = getFactionCapital(kingdomId)
+  if (!capital) {
+    throw new GameSetupError(`Capital not found for kingdom '${kingdomId}'`)
   }
 
-  return { kingdom, royalCastle }
+  return { kingdom, capital }
 }
 
 export function createInitialState(options: CreateGameOptions): GameState {
@@ -217,9 +206,9 @@ export function createInitialState(options: CreateGameOptions): GameState {
   const kingdoms = createKingdoms()
   const castles = createCastlesFromMapData()
 
-  // Validate selected kingdoms and get their royal castles
-  const humanSetup = validateKingdom(humanKingdomId, kingdoms, castles)
-  const aiSetup = validateKingdom(aiKingdomId, kingdoms, castles)
+  // Validate selected kingdoms and get their capitals
+  const humanSetup = validateKingdom(humanKingdomId, kingdoms)
+  const aiSetup = validateKingdom(aiKingdomId, kingdoms)
 
   // Create players
   const humanPlayer: Player = {
@@ -231,7 +220,7 @@ export function createInitialState(options: CreateGameOptions): GameState {
       kingdomId: humanKingdomId,
       kingName: `King of ${humanSetup.kingdom.name}`,
       queenName: `Queen of ${humanSetup.kingdom.name}`,
-      royalCastleName: humanSetup.royalCastle.name,
+      royalCastleName: humanSetup.capital.name,
       armyCount: humanSetup.kingdom.armyCount,
       fleetCount: humanSetup.kingdom.fleetCount,
     },
@@ -250,7 +239,7 @@ export function createInitialState(options: CreateGameOptions): GameState {
       kingdomId: aiKingdomId,
       kingName: `King of ${aiSetup.kingdom.name}`,
       queenName: `Queen of ${aiSetup.kingdom.name}`,
-      royalCastleName: aiSetup.royalCastle.name,
+      royalCastleName: aiSetup.capital.name,
       armyCount: aiSetup.kingdom.armyCount,
       fleetCount: aiSetup.kingdom.fleetCount,
     },
@@ -260,13 +249,13 @@ export function createInitialState(options: CreateGameOptions): GameState {
     isEliminated: false,
   }
 
-  // Create units at royal castle locations
+  // Create units at capital locations
   const units: Record<string, Unit> = {}
 
   const humanUnits = createPlayerUnits(
     humanPlayerId,
     humanSetup.kingdom,
-    humanSetup.royalCastle.coord
+    { col: humanSetup.capital.col, row: humanSetup.capital.row }
   )
   for (const unit of humanUnits) {
     units[unit.id] = unit
@@ -275,15 +264,21 @@ export function createInitialState(options: CreateGameOptions): GameState {
   const aiUnits = createPlayerUnits(
     aiPlayerId,
     aiSetup.kingdom,
-    aiSetup.royalCastle.coord
+    { col: aiSetup.capital.col, row: aiSetup.capital.row }
   )
   for (const unit of aiUnits) {
     units[unit.id] = unit
   }
 
-  // Set castle controllers
-  humanSetup.royalCastle.controllerId = humanPlayerId
-  aiSetup.royalCastle.controllerId = aiPlayerId
+  // Set castle controllers for capitals that are in the castle list
+  const humanCastle = castles[humanSetup.kingdom.royalCastleId]
+  if (humanCastle) {
+    humanCastle.controllerId = humanPlayerId
+  }
+  const aiCastle = castles[aiSetup.kingdom.royalCastleId]
+  if (aiCastle) {
+    aiCastle.controllerId = aiPlayerId
+  }
 
   // Initial game state
   return {

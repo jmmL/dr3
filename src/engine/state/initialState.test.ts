@@ -85,7 +85,7 @@ describe('createInitialState', () => {
     const ambassadors = hothiorUnits.filter(u => u.type === 'ambassador')
 
     expect(monarchs).toHaveLength(1)
-    expect(armies).toHaveLength(6) // Hothior has 6 armies
+    expect(armies).toHaveLength(7) // Hothior has 7 armies (2+1+2+2 across cities)
     expect(ambassadors).toHaveLength(1)
   })
 
