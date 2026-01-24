@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "refs_derived/hexmap.schema.json",
+  "type": "object",
+  "required": ["version", "mode", "generated_at", "source", "map"],
+  "properties": {
+    "version": {"type": ["string", "null"]},
+    "mode": {"type": "string", "enum": ["basic", "advanced"]},
+    "generated_at": {"type": "string"},
+    "source": {"type": "object"},
+    "map": {
+      "type": "object",
+      "required": ["cols", "rows", "hexes"],
+      "properties": {
+        "cols": {"type": "integer"},
+        "rows": {"type": "integer"},
+        "hexes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "col", "row", "terrain"],
+            "properties": {
+              "id": {"type": "string"},
+              "col": {"type": "integer"},
+              "row": {"type": "integer"},
+              "terrain": {"type": "object"},
+              "name": {"type": "string"},
+              "name_id": {"type": "string"},
+              "city_id": {"type": "string"},
+              "faction_id": {"type": "string"},
+              "intrinsic_defense": {"type": "integer"}
+            }
+          }
+        }
+      }
+    }
+  }
+}

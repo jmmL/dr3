@@ -1,0 +1,78 @@
+{
+  "version": "1.0.0",
+  "mode": "advanced",
+  "generated_at": "2026-01-24T19:46:08.577728+00:00",
+  "source": {
+    "file": "docs/refs/starting_units.json"
+  },
+  "starting_units": [
+    {
+      "faction_id": "blackhand",
+      "faction_name": "The Black Hand",
+      "units": [
+        {
+          "id": "the_black_hand",
+          "name": "The Black Hand",
+          "type": "special",
+          "count": 1,
+          "start_hex": [
+            30,
+            3
+          ],
+          "movement_points": 10,
+          "movement_type": "standard",
+          "ability_ids": [
+            "mountaineer",
+            "forest_walking",
+            "flying"
+          ],
+          "ability_names": [
+            "Mountaineer",
+            "Forestwalking",
+            "Flying"
+          ],
+          "city_id": null,
+          "deployment": null
+        },
+        {
+          "id": "walking_dead",
+          "name": "Walking Dead",
+          "type": "special",
+          "count": 1,
+          "start_hex": [
+            30,
+            3
+          ],
+          "movement_points": 5,
+          "movement_type": "standard",
+          "ability_ids": [],
+          "ability_names": [],
+          "city_id": null,
+          "deployment": null
+        }
+      ]
+    },
+    {
+      "faction_id": "eaters",
+      "faction_name": "The Eaters of Wisdom",
+      "units": [
+        {
+          "id": "the_eaters_of_wisdom",
+          "name": "The Eaters of Wisdom",
+          "type": "special",
+          "count": 1,
+          "start_hex": [
+            12,
+            10
+          ],
+          "movement_points": 8,
+          "movement_type": "standard",
+          "ability_ids": [],
+          "ability_names": [],
+          "city_id": null,
+          "deployment": null
+        }
+      ]
+    }
+  ]
+}

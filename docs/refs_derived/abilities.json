@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-01-24T19:46:08.577728+00:00",
+  "abilities": [
+    {
+      "id": "diplomatic",
+      "name": "Diplomatic",
+      "rule_refs": [
+        "12_diplomacy"
+      ]
+    },
+    {
+      "id": "flying",
+      "name": "Flying",
+      "rule_refs": []
+    },
+    {
+      "id": "forest_walking",
+      "name": "Forestwalking",
+      "rule_refs": [
+        "6.1_tree_symbol"
+      ]
+    },
+    {
+      "id": "mountaineer",
+      "name": "Mountaineer",
+      "rule_refs": [
+        "6.2_mountain_symbol"
+      ]
+    }
+  ]
+}

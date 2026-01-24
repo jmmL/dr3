@@ -1,0 +1,605 @@
+{
+  "version": "1.0.0",
+  "mode": "basic",
+  "generated_at": "2026-01-24T19:46:08.577728+00:00",
+  "source": {
+    "file": "docs/refs/factions.json",
+    "exportDate": "2026-01-24T12:10:39.975Z"
+  },
+  "factions": [
+    {
+      "id": "hothior",
+      "name": "Hothior",
+      "race": "Human",
+      "race_id": "human",
+      "coat_of_arms": "🦅",
+      "color": "#FE0000",
+      "capital_name": "Port Lork",
+      "capital_id": "port_lork",
+      "cities": [
+        {
+          "id": "port_lork",
+          "name": "Port Lork",
+          "coords": {
+            "col": 9,
+            "row": 17
+          },
+          "armies": 2,
+          "sea_fleet": 1,
+          "is_capital": true
+        },
+        {
+          "id": "farnot",
+          "name": "Farnot",
+          "coords": {
+            "col": 10,
+            "row": 19
+          },
+          "armies": 1,
+          "sea_fleet": 0,
+          "is_capital": false
+        },
+        {
+          "id": "castle_lapspell",
+          "name": "Castle Lapspell",
+          "coords": {
+            "col": 13,
+            "row": 18
+          },
+          "armies": 2,
+          "sea_fleet": 1,
+          "is_capital": false
+        },
+        {
+          "id": "tadafat",
+          "name": "Tadafat",
+          "coords": {
+            "col": 10,
+            "row": 14
+          },
+          "armies": 2,
+          "sea_fleet": 0,
+          "is_capital": false
+        }
+      ],
+      "total_armies": 7,
+      "total_sea_fleets": 2,
+      "notes": null
+    },
+    {
+      "id": "mivior",
+      "name": "Mivior",
+      "race": "Human",
+      "race_id": "human",
+      "coat_of_arms": "🦁",
+      "color": "#F8A0D2",
+      "capital_name": "Colist",
+      "capital_id": "colist",
+      "cities": [
+        {
+          "id": "colist",
+          "name": "Colist",
+          "coords": {
+            "col": 4,
+            "row": 21
+          },
+          "armies": 3,
+          "sea_fleet": 1,
+          "is_capital": true
+        },
+        {
+          "id": "addat",
+          "name": "Addat",
+          "coords": {
+            "col": 3,
+            "row": 12
+          },
+          "armies": 3,
+          "sea_fleet": 1,
+          "is_capital": false
+        },
+        {
+          "id": "boliske",
+          "name": "Boliske",
+          "coords": {
+            "col": 3,
+            "row": 18
+          },
+          "armies": 2,
+          "sea_fleet": 1,
+          "is_capital": false
+        },
+        {
+          "id": "boran",
+          "name": "Boran",
+          "coords": {
+            "col": 5,
+            "row": 16
+          },
+          "armies": 1,
+          "sea_fleet": 1,
+          "is_capital": false
+        }
+      ],
+      "total_armies": 9,
+      "total_sea_fleets": 4,
+      "notes": null
+    },
+    {
+      "id": "muetar",
+      "name": "Muetar",
+      "race": "Human",
+      "race_id": "human",
+      "coat_of_arms": "🐺",
+      "color": "#FFFF19",
+      "capital_name": "Pennol",
+      "capital_id": "pennol",
+      "cities": [
+        {
+          "id": "pennol",
+          "name": "Pennol",
+          "coords": {
+            "col": 19,
+            "row": 11
+          },
+          "armies": 3,
+          "sea_fleet": 0,
+          "is_capital": true
+        },
+        {
+          "id": "plibba",
+          "name": "Plibba",
+          "coords": {
+            "col": 17,
+            "row": 14
+          },
+          "armies": 2,
+          "sea_fleet": 0,
+          "is_capital": false
+        },
+        {
+          "id": "beolon",
+          "name": "Beolon",
+          "coords": {
+            "col": 21,
+            "row": 16
+          },
+          "armies": 2,
+          "sea_fleet": 0,
+          "is_capital": false
+        },
+        {
+          "id": "basimar",
+          "name": "Basimar",
+          "coords": {
+            "col": 24,
+            "row": 9
+          },
+          "armies": 3,
+          "sea_fleet": 0,
+          "is_capital": false
+        },
+        {
+          "id": "groat",
+          "name": "Groat",
+          "coords": {
+            "col": 23,
+            "row": 15
+          },
+          "armies": 2,
+          "sea_fleet": 0,
+          "is_capital": false
+        },
+        {
+          "id": "yando",
+          "name": "Yando",
+          "coords": {
+            "col": 19,
+            "row": 16
+          },
+          "armies": 1,
+          "sea_fleet": 0,
+          "is_capital": false
+        }
+      ],
+      "total_armies": 13,
+      "total_sea_fleets": 0,
+      "notes": null
+    },
+    {
+      "id": "shucassam",
+      "name": "Shucassam",
+      "race": "Human",
+      "race_id": "human",
+      "coat_of_arms": "🐍",
+      "color": "#F4AC48",
+      "capital_name": "Adeese",
+      "capital_id": "adeese",
+      "cities": [
+        {
+          "id": "adeese",
+          "name": "Adeese",
+          "coords": {
+            "col": 24,
+            "row": 23
+          },
+          "armies": 4,
+          "sea_fleet": 1,
+          "is_capital": true
+        },
+        {
+          "id": "kuzdol",
+          "name": "Kuzdol",
+          "coords": {
+            "col": 19,
+            "row": 23
+          },
+          "armies": 3,
+          "sea_fleet": 0,
+          "is_capital": false
+        },
+        {
+          "id": "lepers",
+          "name": "Lepers",
+          "coords": {
+            "col": 27,
+            "row": 25
+          },
+          "armies": 1,
+          "sea_fleet": 0,
+          "is_capital": false
+        },
+        {
+          "id": "zefnar",
+          "name": "Zefnar",
+          "coords": {
+            "col": 11,
+            "row": 22
+          },
+          "armies": 3,
+          "sea_fleet": 2,
+          "is_capital": false
+        }
+      ],
+      "total_armies": 11,
+      "total_sea_fleets": 3,
+      "notes": null
+    },
+    {
+      "id": "immer",
+      "name": "Immer",
+      "race": "Human",
+      "race_id": "human",
+      "coat_of_arms": "🐉",
+      "color": "#BD9FF7",
+      "capital_name": "Castle Altarr",
+      "capital_id": "castle_altarr",
+      "cities": [
+        {
+          "id": "castle_altarr",
+          "name": "Castle Altarr",
+          "coords": {
+            "col": 14,
+            "row": 6
+          },
+          "armies": 3,
+          "sea_fleet": 0,
+          "is_capital": true
+        },
+        {
+          "id": "gap_castle",
+          "name": "Gap Castle",
+          "coords": {
+            "col": 18,
+            "row": 5
+          },
+          "armies": 1,
+          "sea_fleet": 0,
+          "is_capital": false
+        },
+        {
+          "id": "gorpin",
+          "name": "Gorpin",
+          "coords": {
+            "col": 15,
+            "row": 3
+          },
+          "armies": 1,
+          "sea_fleet": 0,
+          "is_capital": false
+        },
+        {
+          "id": "muscaster",
+          "name": "Muscaster",
+          "coords": {
+            "col": 15,
+            "row": 8
+          },
+          "armies": 2,
+          "sea_fleet": 0,
+          "is_capital": false
+        },
+        {
+          "id": "wirzor",
+          "name": "Wirzor",
+          "coords": {
+            "col": 12,
+            "row": 3
+          },
+          "armies": 2,
+          "sea_fleet": 0,
+          "is_capital": false
+        }
+      ],
+      "total_armies": 9,
+      "total_sea_fleets": 0,
+      "notes": null
+    },
+    {
+      "id": "pon",
+      "name": "Pon",
+      "race": "Human",
+      "race_id": "human",
+      "coat_of_arms": "🦂",
+      "color": "#1EA5FF",
+      "capital_name": "Marzarbol",
+      "capital_id": "marzarbol",
+      "cities": [
+        {
+          "id": "marzarbol",
+          "name": "Marzarbol",
+          "coords": {
+            "col": 28,
+            "row": 17
+          },
+          "armies": 3,
+          "sea_fleet": 0,
+          "is_capital": true
+        },
+        {
+          "id": "crow_s_nest",
+          "name": "Crow's Nest",
+          "coords": {
+            "col": 26,
+            "row": 13
+          },
+          "armies": 2,
+          "sea_fleet": 0,
+          "is_capital": false
+        },
+        {
+          "id": "grugongi",
+          "name": "Grugongi",
+          "coords": {
+            "col": 30,
+            "row": 20
+          },
+          "armies": 2,
+          "sea_fleet": 1,
+          "is_capital": false
+        }
+      ],
+      "total_armies": 7,
+      "total_sea_fleets": 1,
+      "notes": null
+    },
+    {
+      "id": "rombune",
+      "name": "Rombune",
+      "race": "Human",
+      "race_id": "human",
+      "coat_of_arms": "🦇",
+      "color": "#E52E96",
+      "capital_name": "The Golkus",
+      "capital_id": "the_golkus",
+      "cities": [
+        {
+          "id": "the_golkus",
+          "name": "The Golkus",
+          "coords": {
+            "col": 5,
+            "row": 27
+          },
+          "armies": 2,
+          "sea_fleet": 1,
+          "is_capital": true
+        },
+        {
+          "id": "parros",
+          "name": "Parros",
+          "coords": {
+            "col": 11,
+            "row": 28
+          },
+          "armies": 2,
+          "sea_fleet": 1,
+          "is_capital": false
+        },
+        {
+          "id": "thores",
+          "name": "Thores",
+          "coords": {
+            "col": 2,
+            "row": 29
+          },
+          "armies": 1,
+          "sea_fleet": 1,
+          "is_capital": false
+        },
+        {
+          "id": "jipols",
+          "name": "Jipols",
+          "coords": {
+            "col": 19,
+            "row": 28
+          },
+          "armies": 1,
+          "sea_fleet": 1,
+          "is_capital": false
+        }
+      ],
+      "total_armies": 6,
+      "total_sea_fleets": 4,
+      "notes": null
+    },
+    {
+      "id": "neuth",
+      "name": "Neuth",
+      "race": "Elves",
+      "race_id": "elves",
+      "coat_of_arms": "🧝",
+      "color": "#30C44C",
+      "capital_name": "Ider Bolis",
+      "capital_id": "ider_bolis",
+      "cities": [
+        {
+          "id": "ider_bolis",
+          "name": "Ider Bolis",
+          "coords": {
+            "col": 4,
+            "row": 5
+          },
+          "armies": 6,
+          "sea_fleet": 0,
+          "is_capital": true
+        }
+      ],
+      "total_armies": 6,
+      "total_sea_fleets": 0,
+      "notes": null
+    },
+    {
+      "id": "zorn",
+      "name": "Zorn",
+      "race": "Goblins",
+      "race_id": "goblins",
+      "coat_of_arms": "👺",
+      "color": "#7AB5A1",
+      "capital_name": "The Pits",
+      "capital_id": "the_pits",
+      "cities": [
+        {
+          "id": "the_pits",
+          "name": "The Pits",
+          "coords": {
+            "col": 23,
+            "row": 2
+          },
+          "armies": 3,
+          "sea_fleet": 0,
+          "is_capital": true
+        }
+      ],
+      "total_armies": 11,
+      "total_sea_fleets": 0,
+      "notes": "Total includes 8 Nithmere Mountain units deployed separately per rule 30.2"
+    },
+    {
+      "id": "ghem",
+      "name": "Ghem",
+      "race": "Dwarves",
+      "race_id": "dwarves",
+      "coat_of_arms": "⛏️",
+      "color": "#ACACAC",
+      "capital_name": "Mines of Rosengg",
+      "capital_id": "mines_of_rosengg",
+      "cities": [
+        {
+          "id": "mines_of_rosengg",
+          "name": "Mines of Rosengg",
+          "coords": {
+            "col": 32,
+            "row": 9
+          },
+          "armies": 3,
+          "sea_fleet": 0,
+          "is_capital": true
+        },
+        {
+          "id": "aws_noir",
+          "name": "Aws Noir",
+          "coords": {
+            "col": 2,
+            "row": 1
+          },
+          "armies": 3,
+          "sea_fleet": 0,
+          "is_capital": false
+        },
+        {
+          "id": "alzak",
+          "name": "Alzak",
+          "coords": {
+            "col": 33,
+            "row": 14
+          },
+          "armies": 2,
+          "sea_fleet": 0,
+          "is_capital": false
+        }
+      ],
+      "total_armies": 8,
+      "total_sea_fleets": 0,
+      "notes": null
+    },
+    {
+      "id": "trolls",
+      "name": "Trolls",
+      "race": "Trolls",
+      "race_id": "trolls",
+      "coat_of_arms": "🧌",
+      "color": "#A86051",
+      "capital_name": "Stone Face",
+      "capital_id": "stone_face",
+      "cities": [
+        {
+          "id": "stone_face",
+          "name": "Stone Face",
+          "coords": {
+            "col": 6,
+            "row": 13
+          },
+          "armies": 2,
+          "sea_fleet": 0,
+          "is_capital": true
+        },
+        {
+          "id": "the_gathering",
+          "name": "The Gathering",
+          "coords": {
+            "col": 33,
+            "row": 21
+          },
+          "armies": 2,
+          "sea_fleet": 0,
+          "is_capital": false
+        },
+        {
+          "id": "the_crag",
+          "name": "The Crag",
+          "coords": {
+            "col": 27,
+            "row": 2
+          },
+          "armies": 2,
+          "sea_fleet": 0,
+          "is_capital": false
+        },
+        {
+          "id": "the_shunned_vale",
+          "name": "The Shunned Vale",
+          "coords": {
+            "col": 17,
+            "row": 28
+          },
+          "armies": 2,
+          "sea_fleet": 0,
+          "is_capital": false
+        }
+      ],
+      "total_armies": 8,
+      "total_sea_fleets": 0,
+      "notes": "Trolls have no castles; their locations are open terrain. See rule 30.1 for special rules."
+    }
+  ]
+}

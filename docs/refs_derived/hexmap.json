@@ -1,0 +1,9503 @@
+{
+  "version": "1.0.0",
+  "mode": "basic",
+  "generated_at": "2026-01-24T19:46:08.577728+00:00",
+  "source": {
+    "file": "docs/refs/hexmap.json",
+    "exportDate": "2026-01-24T12:10:39.974Z"
+  },
+  "map": {
+    "cols": 35,
+    "rows": 31,
+    "hexes": [
+      {
+        "id": "hex_0_0",
+        "col": 0,
+        "row": 0,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_0_1",
+        "col": 0,
+        "row": 1,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_0_2",
+        "col": 0,
+        "row": 2,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_0_3",
+        "col": 0,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_0_4",
+        "col": 0,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_0_5",
+        "col": 0,
+        "row": 5,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_0_6",
+        "col": 0,
+        "row": 6,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_0_7",
+        "col": 0,
+        "row": 7,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_0_8",
+        "col": 0,
+        "row": 8,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_0_9",
+        "col": 0,
+        "row": 9,
+        "terrain": {
+          "scenic": true
+        },
+        "name": "Stump Hole",
+        "name_id": "stump_hole"
+      },
+      {
+        "id": "hex_0_10",
+        "col": 0,
+        "row": 10,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_0_11",
+        "col": 0,
+        "row": 11,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_0_12",
+        "col": 0,
+        "row": 12,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "id": "hex_0_13",
+        "col": 0,
+        "row": 13,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_0_14",
+        "col": 0,
+        "row": 14,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_0_15",
+        "col": 0,
+        "row": 15,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_0_16",
+        "col": 0,
+        "row": 16,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_0_17",
+        "col": 0,
+        "row": 17,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_0_18",
+        "col": 0,
+        "row": 18,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_0_19",
+        "col": 0,
+        "row": 19,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_0_20",
+        "col": 0,
+        "row": 20,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_0_21",
+        "col": 0,
+        "row": 21,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_0_22",
+        "col": 0,
+        "row": 22,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_0_23",
+        "col": 0,
+        "row": 23,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_0_24",
+        "col": 0,
+        "row": 24,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_0_25",
+        "col": 0,
+        "row": 25,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_0_26",
+        "col": 0,
+        "row": 26,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_0_27",
+        "col": 0,
+        "row": 27,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_0_28",
+        "col": 0,
+        "row": 28,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_0_29",
+        "col": 0,
+        "row": 29,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_0_30",
+        "col": 0,
+        "row": 30,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_1_0",
+        "col": 1,
+        "row": 0,
+        "terrain": {
+          "forest": true,
+          "scenic": true
+        },
+        "name": "The Haven",
+        "name_id": "the_haven",
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_1_1",
+        "col": 1,
+        "row": 1,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_1_2",
+        "col": 1,
+        "row": 2,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_1_3",
+        "col": 1,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_1_4",
+        "col": 1,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_1_5",
+        "col": 1,
+        "row": 5,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_1_6",
+        "col": 1,
+        "row": 6,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_1_7",
+        "col": 1,
+        "row": 7,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_1_8",
+        "col": 1,
+        "row": 8,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_1_9",
+        "col": 1,
+        "row": 9,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_1_10",
+        "col": 1,
+        "row": 10,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_1_11",
+        "col": 1,
+        "row": 11,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_1_12",
+        "col": 1,
+        "row": 12,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "id": "hex_1_13",
+        "col": 1,
+        "row": 13,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_1_14",
+        "col": 1,
+        "row": 14,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_1_15",
+        "col": 1,
+        "row": 15,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_1_16",
+        "col": 1,
+        "row": 16,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_1_17",
+        "col": 1,
+        "row": 17,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_1_18",
+        "col": 1,
+        "row": 18,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_1_19",
+        "col": 1,
+        "row": 19,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_1_20",
+        "col": 1,
+        "row": 20,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_1_21",
+        "col": 1,
+        "row": 21,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_1_22",
+        "col": 1,
+        "row": 22,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_1_23",
+        "col": 1,
+        "row": 23,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_1_24",
+        "col": 1,
+        "row": 24,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_1_25",
+        "col": 1,
+        "row": 25,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_1_26",
+        "col": 1,
+        "row": 26,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_1_27",
+        "col": 1,
+        "row": 27,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_1_28",
+        "col": 1,
+        "row": 28,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_1_29",
+        "col": 1,
+        "row": 29,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_1_30",
+        "col": 1,
+        "row": 30,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_2_0",
+        "col": 2,
+        "row": 0,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_2_1",
+        "col": 2,
+        "row": 1,
+        "terrain": {
+          "castle": true
+        },
+        "name": "Aws Noir",
+        "name_id": "aws_noir",
+        "city_id": "aws_noir",
+        "faction_id": "ghem",
+        "intrinsic_defense": 4
+      },
+      {
+        "id": "hex_2_2",
+        "col": 2,
+        "row": 2,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "ghem"
+      },
+      {
+        "id": "hex_2_3",
+        "col": 2,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_2_4",
+        "col": 2,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_2_5",
+        "col": 2,
+        "row": 5,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_2_6",
+        "col": 2,
+        "row": 6,
+        "terrain": {
+          "forest": true,
+          "lakeshore": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_2_7",
+        "col": 2,
+        "row": 7,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_2_8",
+        "col": 2,
+        "row": 8,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_2_9",
+        "col": 2,
+        "row": 9,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_2_10",
+        "col": 2,
+        "row": 10,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_2_11",
+        "col": 2,
+        "row": 11,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_2_12",
+        "col": 2,
+        "row": 12,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "mivior"
+      },
+      {
+        "id": "hex_2_13",
+        "col": 2,
+        "row": 13,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_2_14",
+        "col": 2,
+        "row": 14,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_2_15",
+        "col": 2,
+        "row": 15,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_2_16",
+        "col": 2,
+        "row": 16,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_2_17",
+        "col": 2,
+        "row": 17,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_2_18",
+        "col": 2,
+        "row": 18,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_2_19",
+        "col": 2,
+        "row": 19,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_2_20",
+        "col": 2,
+        "row": 20,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_2_21",
+        "col": 2,
+        "row": 21,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_2_22",
+        "col": 2,
+        "row": 22,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_2_23",
+        "col": 2,
+        "row": 23,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_2_24",
+        "col": 2,
+        "row": 24,
+        "terrain": {
+          "clear": true
+        },
+        "name": "Isle of Fright",
+        "name_id": "isle_of_fright"
+      },
+      {
+        "id": "hex_2_25",
+        "col": 2,
+        "row": 25,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_2_26",
+        "col": 2,
+        "row": 26,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_2_27",
+        "col": 2,
+        "row": 27,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_2_28",
+        "col": 2,
+        "row": 28,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_2_29",
+        "col": 2,
+        "row": 29,
+        "terrain": {
+          "port": true
+        },
+        "name": "Thores",
+        "name_id": "thores",
+        "city_id": "thores",
+        "faction_id": "rombune",
+        "intrinsic_defense": 3
+      },
+      {
+        "id": "hex_2_30",
+        "col": 2,
+        "row": 30,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_3_0",
+        "col": 3,
+        "row": 0,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "ghem"
+      },
+      {
+        "id": "hex_3_1",
+        "col": 3,
+        "row": 1,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "ghem"
+      },
+      {
+        "id": "hex_3_2",
+        "col": 3,
+        "row": 2,
+        "terrain": {
+          "forest": true,
+          "minor_river": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_3_3",
+        "col": 3,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_3_4",
+        "col": 3,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_3_5",
+        "col": 3,
+        "row": 5,
+        "terrain": {
+          "forest": true,
+          "lakeshore": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_3_6",
+        "col": 3,
+        "row": 6,
+        "terrain": {
+          "forest": true,
+          "lakeshore": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_3_7",
+        "col": 3,
+        "row": 7,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_3_8",
+        "col": 3,
+        "row": 8,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_3_9",
+        "col": 3,
+        "row": 9,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_3_10",
+        "col": 3,
+        "row": 10,
+        "terrain": {
+          "hill": true,
+          "minor_river": true
+        }
+      },
+      {
+        "id": "hex_3_11",
+        "col": 3,
+        "row": 11,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_3_12",
+        "col": 3,
+        "row": 12,
+        "terrain": {
+          "port": true
+        },
+        "name": "Addat",
+        "name_id": "addat",
+        "city_id": "addat",
+        "faction_id": "mivior",
+        "intrinsic_defense": 3
+      },
+      {
+        "id": "hex_3_13",
+        "col": 3,
+        "row": 13,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "mivior"
+      },
+      {
+        "id": "hex_3_14",
+        "col": 3,
+        "row": 14,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_3_15",
+        "col": 3,
+        "row": 15,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_3_16",
+        "col": 3,
+        "row": 16,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_3_17",
+        "col": 3,
+        "row": 17,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_3_18",
+        "col": 3,
+        "row": 18,
+        "terrain": {
+          "port": true
+        },
+        "name": "Boliske",
+        "name_id": "boliske",
+        "city_id": "boliske",
+        "faction_id": "mivior",
+        "intrinsic_defense": 2
+      },
+      {
+        "id": "hex_3_19",
+        "col": 3,
+        "row": 19,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_3_20",
+        "col": 3,
+        "row": 20,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_3_21",
+        "col": 3,
+        "row": 21,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "mivior"
+      },
+      {
+        "id": "hex_3_22",
+        "col": 3,
+        "row": 22,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_3_23",
+        "col": 3,
+        "row": 23,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_3_24",
+        "col": 3,
+        "row": 24,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_3_25",
+        "col": 3,
+        "row": 25,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_3_26",
+        "col": 3,
+        "row": 26,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_3_27",
+        "col": 3,
+        "row": 27,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_3_28",
+        "col": 3,
+        "row": 28,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_3_29",
+        "col": 3,
+        "row": 29,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_3_30",
+        "col": 3,
+        "row": 30,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_4_0",
+        "col": 4,
+        "row": 0,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_4_1",
+        "col": 4,
+        "row": 1,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_4_2",
+        "col": 4,
+        "row": 2,
+        "terrain": {
+          "forest": true,
+          "minor_river": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_4_3",
+        "col": 4,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_4_4",
+        "col": 4,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_4_5",
+        "col": 4,
+        "row": 5,
+        "terrain": {
+          "castle": true,
+          "royal": true
+        },
+        "name": "Ider Bolis",
+        "name_id": "ider_bolis",
+        "city_id": "ider_bolis",
+        "faction_id": "neuth",
+        "intrinsic_defense": 5
+      },
+      {
+        "id": "hex_4_6",
+        "col": 4,
+        "row": 6,
+        "terrain": {
+          "forest": true,
+          "lakeshore": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_4_7",
+        "col": 4,
+        "row": 7,
+        "terrain": {
+          "forest": true,
+          "lakeshore": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_4_8",
+        "col": 4,
+        "row": 8,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_4_9",
+        "col": 4,
+        "row": 9,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_4_10",
+        "col": 4,
+        "row": 10,
+        "terrain": {
+          "hill": true,
+          "minor_river": true
+        }
+      },
+      {
+        "id": "hex_4_11",
+        "col": 4,
+        "row": 11,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "mivior"
+      },
+      {
+        "id": "hex_4_12",
+        "col": 4,
+        "row": 12,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "mivior"
+      },
+      {
+        "id": "hex_4_13",
+        "col": 4,
+        "row": 13,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "mivior"
+      },
+      {
+        "id": "hex_4_14",
+        "col": 4,
+        "row": 14,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "mivior"
+      },
+      {
+        "id": "hex_4_15",
+        "col": 4,
+        "row": 15,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "mivior"
+      },
+      {
+        "id": "hex_4_16",
+        "col": 4,
+        "row": 16,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_4_17",
+        "col": 4,
+        "row": 17,
+        "terrain": {
+          "forest": true,
+          "seashore": true
+        },
+        "faction_id": "mivior"
+      },
+      {
+        "id": "hex_4_18",
+        "col": 4,
+        "row": 18,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_4_19",
+        "col": 4,
+        "row": 19,
+        "terrain": {
+          "forest": true,
+          "seashore": true
+        },
+        "faction_id": "mivior"
+      },
+      {
+        "id": "hex_4_20",
+        "col": 4,
+        "row": 20,
+        "terrain": {
+          "forest": true,
+          "seashore": true
+        },
+        "faction_id": "mivior"
+      },
+      {
+        "id": "hex_4_21",
+        "col": 4,
+        "row": 21,
+        "terrain": {
+          "port": true,
+          "royal": true
+        },
+        "name": "Colist",
+        "name_id": "colist",
+        "city_id": "colist",
+        "faction_id": "mivior",
+        "intrinsic_defense": 4
+      },
+      {
+        "id": "hex_4_22",
+        "col": 4,
+        "row": 22,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "mivior"
+      },
+      {
+        "id": "hex_4_23",
+        "col": 4,
+        "row": 23,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_4_24",
+        "col": 4,
+        "row": 24,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_4_25",
+        "col": 4,
+        "row": 25,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_4_26",
+        "col": 4,
+        "row": 26,
+        "terrain": {
+          "forest": true,
+          "seashore": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_4_27",
+        "col": 4,
+        "row": 27,
+        "terrain": {
+          "forest": true,
+          "mountain": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_4_28",
+        "col": 4,
+        "row": 28,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_4_29",
+        "col": 4,
+        "row": 29,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_4_30",
+        "col": 4,
+        "row": 30,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_5_0",
+        "col": 5,
+        "row": 0,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_5_1",
+        "col": 5,
+        "row": 1,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_5_2",
+        "col": 5,
+        "row": 2,
+        "terrain": {
+          "forest": true,
+          "minor_river": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_5_3",
+        "col": 5,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_5_4",
+        "col": 5,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_5_5",
+        "col": 5,
+        "row": 5,
+        "terrain": {
+          "forest": true,
+          "minor_river": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_5_6",
+        "col": 5,
+        "row": 6,
+        "terrain": {
+          "lake": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_5_7",
+        "col": 5,
+        "row": 7,
+        "terrain": {
+          "forest": true,
+          "lakeshore": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_5_8",
+        "col": 5,
+        "row": 8,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_5_9",
+        "col": 5,
+        "row": 9,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_5_10",
+        "col": 5,
+        "row": 10,
+        "terrain": {
+          "swamp": true,
+          "minor_river": true
+        }
+      },
+      {
+        "id": "hex_5_11",
+        "col": 5,
+        "row": 11,
+        "terrain": {
+          "minor_river": true
+        }
+      },
+      {
+        "id": "hex_5_12",
+        "col": 5,
+        "row": 12,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "mivior"
+      },
+      {
+        "id": "hex_5_13",
+        "col": 5,
+        "row": 13,
+        "terrain": {
+          "forest": true,
+          "seashore": true
+        }
+      },
+      {
+        "id": "hex_5_14",
+        "col": 5,
+        "row": 14,
+        "terrain": {
+          "sea": true,
+          "scenic": true
+        },
+        "name": "Serpent Bay",
+        "name_id": "serpent_bay"
+      },
+      {
+        "id": "hex_5_15",
+        "col": 5,
+        "row": 15,
+        "terrain": {
+          "mountain": true,
+          "seashore": true
+        },
+        "faction_id": "mivior"
+      },
+      {
+        "id": "hex_5_16",
+        "col": 5,
+        "row": 16,
+        "terrain": {
+          "port": true
+        },
+        "name": "Boran",
+        "name_id": "boran",
+        "city_id": "boran",
+        "faction_id": "mivior",
+        "intrinsic_defense": 2
+      },
+      {
+        "id": "hex_5_17",
+        "col": 5,
+        "row": 17,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "mivior"
+      },
+      {
+        "id": "hex_5_18",
+        "col": 5,
+        "row": 18,
+        "terrain": {
+          "mountain": true,
+          "seashore": true
+        },
+        "faction_id": "mivior"
+      },
+      {
+        "id": "hex_5_19",
+        "col": 5,
+        "row": 19,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "mivior"
+      },
+      {
+        "id": "hex_5_20",
+        "col": 5,
+        "row": 20,
+        "terrain": {
+          "mountain": true,
+          "seashore": true
+        },
+        "faction_id": "mivior"
+      },
+      {
+        "id": "hex_5_21",
+        "col": 5,
+        "row": 21,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_5_22",
+        "col": 5,
+        "row": 22,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "mivior"
+      },
+      {
+        "id": "hex_5_23",
+        "col": 5,
+        "row": 23,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_5_24",
+        "col": 5,
+        "row": 24,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_5_25",
+        "col": 5,
+        "row": 25,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_5_26",
+        "col": 5,
+        "row": 26,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_5_27",
+        "col": 5,
+        "row": 27,
+        "terrain": {
+          "port": true,
+          "royal": true
+        },
+        "name": "The Golkus",
+        "name_id": "the_golkus",
+        "city_id": "the_golkus",
+        "faction_id": "rombune",
+        "intrinsic_defense": 3
+      },
+      {
+        "id": "hex_5_28",
+        "col": 5,
+        "row": 28,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_5_29",
+        "col": 5,
+        "row": 29,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_5_30",
+        "col": 5,
+        "row": 30,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_6_0",
+        "col": 6,
+        "row": 0,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_6_1",
+        "col": 6,
+        "row": 1,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_6_2",
+        "col": 6,
+        "row": 2,
+        "terrain": {
+          "forest": true,
+          "minor_river": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_6_3",
+        "col": 6,
+        "row": 3,
+        "terrain": {
+          "forest": true,
+          "minor_river": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_6_4",
+        "col": 6,
+        "row": 4,
+        "terrain": {
+          "swamp": true,
+          "scenic": true
+        },
+        "name": "Ruins of Letho",
+        "name_id": "ruins_of_letho",
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_6_5",
+        "col": 6,
+        "row": 5,
+        "terrain": {
+          "forest": true,
+          "minor_river": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_6_6",
+        "col": 6,
+        "row": 6,
+        "terrain": {
+          "forest": true,
+          "lakeshore": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_6_7",
+        "col": 6,
+        "row": 7,
+        "terrain": {
+          "forest": true,
+          "lakeshore": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_6_8",
+        "col": 6,
+        "row": 8,
+        "terrain": {
+          "forest": true,
+          "minor_river": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_6_9",
+        "col": 6,
+        "row": 9,
+        "terrain": {
+          "swamp": true,
+          "minor_river": true
+        }
+      },
+      {
+        "id": "hex_6_10",
+        "col": 6,
+        "row": 10,
+        "terrain": {
+          "swamp": true,
+          "minor_river": true
+        }
+      },
+      {
+        "id": "hex_6_11",
+        "col": 6,
+        "row": 11,
+        "terrain": {
+          "swamp": true
+        }
+      },
+      {
+        "id": "hex_6_12",
+        "col": 6,
+        "row": 12,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_6_13",
+        "col": 6,
+        "row": 13,
+        "terrain": {
+          "clear": true
+        },
+        "name": "Stone Face",
+        "name_id": "stone_face",
+        "city_id": "stone_face",
+        "faction_id": "trolls"
+      },
+      {
+        "id": "hex_6_14",
+        "col": 6,
+        "row": 14,
+        "terrain": {
+          "mountain": true,
+          "seashore": true
+        }
+      },
+      {
+        "id": "hex_6_15",
+        "col": 6,
+        "row": 15,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "mivior"
+      },
+      {
+        "id": "hex_6_16",
+        "col": 6,
+        "row": 16,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "mivior"
+      },
+      {
+        "id": "hex_6_17",
+        "col": 6,
+        "row": 17,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "mivior"
+      },
+      {
+        "id": "hex_6_18",
+        "col": 6,
+        "row": 18,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "mivior"
+      },
+      {
+        "id": "hex_6_19",
+        "col": 6,
+        "row": 19,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "mivior"
+      },
+      {
+        "id": "hex_6_20",
+        "col": 6,
+        "row": 20,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "mivior"
+      },
+      {
+        "id": "hex_6_21",
+        "col": 6,
+        "row": 21,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_6_22",
+        "col": 6,
+        "row": 22,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_6_23",
+        "col": 6,
+        "row": 23,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_6_24",
+        "col": 6,
+        "row": 24,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_6_25",
+        "col": 6,
+        "row": 25,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_6_26",
+        "col": 6,
+        "row": 26,
+        "terrain": {
+          "forest": true,
+          "seashore": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_6_27",
+        "col": 6,
+        "row": 27,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_6_28",
+        "col": 6,
+        "row": 28,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_6_29",
+        "col": 6,
+        "row": 29,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_6_30",
+        "col": 6,
+        "row": 30,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_7_0",
+        "col": 7,
+        "row": 0,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_7_1",
+        "col": 7,
+        "row": 1,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_7_2",
+        "col": 7,
+        "row": 2,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_7_3",
+        "col": 7,
+        "row": 3,
+        "terrain": {
+          "forest": true,
+          "minor_river": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_7_4",
+        "col": 7,
+        "row": 4,
+        "terrain": {
+          "forest": true,
+          "minor_river": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_7_5",
+        "col": 7,
+        "row": 5,
+        "terrain": {
+          "forest": true,
+          "minor_river": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_7_6",
+        "col": 7,
+        "row": 6,
+        "terrain": {
+          "forest": true,
+          "lakeshore": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_7_7",
+        "col": 7,
+        "row": 7,
+        "terrain": {
+          "forest": true,
+          "lakeshore": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_7_8",
+        "col": 7,
+        "row": 8,
+        "terrain": {
+          "forest": true,
+          "minor_river": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_7_9",
+        "col": 7,
+        "row": 9,
+        "terrain": {
+          "forest": true,
+          "minor_river": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_7_10",
+        "col": 7,
+        "row": 10,
+        "terrain": {
+          "swamp": true
+        }
+      },
+      {
+        "id": "hex_7_11",
+        "col": 7,
+        "row": 11,
+        "terrain": {
+          "swamp": true
+        }
+      },
+      {
+        "id": "hex_7_12",
+        "col": 7,
+        "row": 12,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_7_13",
+        "col": 7,
+        "row": 13,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_7_14",
+        "col": 7,
+        "row": 14,
+        "terrain": {
+          "mountain_pass": true
+        },
+        "name": "Mace Pass",
+        "name_id": "mace_pass"
+      },
+      {
+        "id": "hex_7_15",
+        "col": 7,
+        "row": 15,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_7_16",
+        "col": 7,
+        "row": 16,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_7_17",
+        "col": 7,
+        "row": 17,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_7_18",
+        "col": 7,
+        "row": 18,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "mivior"
+      },
+      {
+        "id": "hex_7_19",
+        "col": 7,
+        "row": 19,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "mivior"
+      },
+      {
+        "id": "hex_7_20",
+        "col": 7,
+        "row": 20,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "mivior"
+      },
+      {
+        "id": "hex_7_21",
+        "col": 7,
+        "row": 21,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_7_22",
+        "col": 7,
+        "row": 22,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_7_23",
+        "col": 7,
+        "row": 23,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_7_24",
+        "col": 7,
+        "row": 24,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_7_25",
+        "col": 7,
+        "row": 25,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_7_26",
+        "col": 7,
+        "row": 26,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_7_27",
+        "col": 7,
+        "row": 27,
+        "terrain": {
+          "seashore": true,
+          "scenic": true
+        },
+        "name": "Point Lookout",
+        "name_id": "point_lookout",
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_7_28",
+        "col": 7,
+        "row": 28,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_7_29",
+        "col": 7,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_7_30",
+        "col": 7,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_8_0",
+        "col": 8,
+        "row": 0,
+        "terrain": {
+          "scenic": true
+        },
+        "name": "Standing Stones",
+        "name_id": "standing_stones"
+      },
+      {
+        "id": "hex_8_1",
+        "col": 8,
+        "row": 1,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_8_2",
+        "col": 8,
+        "row": 2,
+        "terrain": {
+          "forest": true,
+          "minor_river": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_8_3",
+        "col": 8,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_8_4",
+        "col": 8,
+        "row": 4,
+        "terrain": {
+          "forest": true,
+          "minor_river": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_8_5",
+        "col": 8,
+        "row": 5,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_8_6",
+        "col": 8,
+        "row": 6,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_8_7",
+        "col": 8,
+        "row": 7,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_8_8",
+        "col": 8,
+        "row": 8,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_8_9",
+        "col": 8,
+        "row": 9,
+        "terrain": {
+          "forest": true,
+          "minor_river": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_8_10",
+        "col": 8,
+        "row": 10,
+        "terrain": {
+          "swamp": true
+        }
+      },
+      {
+        "id": "hex_8_11",
+        "col": 8,
+        "row": 11,
+        "terrain": {
+          "swamp": true,
+          "scenic": true
+        },
+        "name": "Willowik",
+        "name_id": "willowik"
+      },
+      {
+        "id": "hex_8_12",
+        "col": 8,
+        "row": 12,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_8_13",
+        "col": 8,
+        "row": 13,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "id": "hex_8_14",
+        "col": 8,
+        "row": 14,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "id": "hex_8_15",
+        "col": 8,
+        "row": 15,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_8_16",
+        "col": 8,
+        "row": 16,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_8_17",
+        "col": 8,
+        "row": 17,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_8_18",
+        "col": 8,
+        "row": 18,
+        "terrain": {
+          "forest": true,
+          "seashore": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_8_19",
+        "col": 8,
+        "row": 19,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_8_20",
+        "col": 8,
+        "row": 20,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_8_21",
+        "col": 8,
+        "row": 21,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_8_22",
+        "col": 8,
+        "row": 22,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_8_23",
+        "col": 8,
+        "row": 23,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_8_24",
+        "col": 8,
+        "row": 24,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_8_25",
+        "col": 8,
+        "row": 25,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_8_26",
+        "col": 8,
+        "row": 26,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_8_27",
+        "col": 8,
+        "row": 27,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_8_28",
+        "col": 8,
+        "row": 28,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_8_29",
+        "col": 8,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_8_30",
+        "col": 8,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_9_0",
+        "col": 9,
+        "row": 0,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_9_1",
+        "col": 9,
+        "row": 1,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_9_2",
+        "col": 9,
+        "row": 2,
+        "terrain": {
+          "forest": true,
+          "minor_river": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_9_3",
+        "col": 9,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_9_4",
+        "col": 9,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_9_5",
+        "col": 9,
+        "row": 5,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_9_6",
+        "col": 9,
+        "row": 6,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_9_7",
+        "col": 9,
+        "row": 7,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_9_8",
+        "col": 9,
+        "row": 8,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_9_9",
+        "col": 9,
+        "row": 9,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_9_10",
+        "col": 9,
+        "row": 10,
+        "terrain": {
+          "swamp": true,
+          "minor_river": true
+        }
+      },
+      {
+        "id": "hex_9_11",
+        "col": 9,
+        "row": 11,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_9_12",
+        "col": 9,
+        "row": 12,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_9_13",
+        "col": 9,
+        "row": 13,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_9_14",
+        "col": 9,
+        "row": 14,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_9_15",
+        "col": 9,
+        "row": 15,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_9_16",
+        "col": 9,
+        "row": 16,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_9_17",
+        "col": 9,
+        "row": 17,
+        "terrain": {
+          "port": true,
+          "royal": true
+        },
+        "name": "Port Lork",
+        "name_id": "port_lork",
+        "city_id": "port_lork",
+        "faction_id": "hothior",
+        "intrinsic_defense": 3
+      },
+      {
+        "id": "hex_9_18",
+        "col": 9,
+        "row": 18,
+        "terrain": {
+          "seashore": true,
+          "scenic": true
+        },
+        "name": "The Boom",
+        "name_id": "the_boom",
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_9_19",
+        "col": 9,
+        "row": 19,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_9_20",
+        "col": 9,
+        "row": 20,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_9_21",
+        "col": 9,
+        "row": 21,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_9_22",
+        "col": 9,
+        "row": 22,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_9_23",
+        "col": 9,
+        "row": 23,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_9_24",
+        "col": 9,
+        "row": 24,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_9_25",
+        "col": 9,
+        "row": 25,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_9_26",
+        "col": 9,
+        "row": 26,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_9_27",
+        "col": 9,
+        "row": 27,
+        "terrain": {
+          "forest": true,
+          "seashore": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_9_28",
+        "col": 9,
+        "row": 28,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_9_29",
+        "col": 9,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_9_30",
+        "col": 9,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_10_0",
+        "col": 10,
+        "row": 0,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_10_1",
+        "col": 10,
+        "row": 1,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_10_2",
+        "col": 10,
+        "row": 2,
+        "terrain": {
+          "forest": true,
+          "minor_river": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_10_3",
+        "col": 10,
+        "row": 3,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_10_4",
+        "col": 10,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_10_5",
+        "col": 10,
+        "row": 5,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_10_6",
+        "col": 10,
+        "row": 6,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "neuth"
+      },
+      {
+        "id": "hex_10_7",
+        "col": 10,
+        "row": 7,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_10_8",
+        "col": 10,
+        "row": 8,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_10_9",
+        "col": 10,
+        "row": 9,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_10_10",
+        "col": 10,
+        "row": 10,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_10_11",
+        "col": 10,
+        "row": 11,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "id": "hex_10_12",
+        "col": 10,
+        "row": 12,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_10_13",
+        "col": 10,
+        "row": 13,
+        "terrain": {
+          "hill": true,
+          "minor_river": true
+        }
+      },
+      {
+        "id": "hex_10_14",
+        "col": 10,
+        "row": 14,
+        "terrain": {
+          "castle": true
+        },
+        "name": "Tadafat",
+        "name_id": "tadafat",
+        "city_id": "tadafat",
+        "faction_id": "hothior",
+        "intrinsic_defense": 2
+      },
+      {
+        "id": "hex_10_15",
+        "col": 10,
+        "row": 15,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_10_16",
+        "col": 10,
+        "row": 16,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_10_17",
+        "col": 10,
+        "row": 17,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_10_18",
+        "col": 10,
+        "row": 18,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_10_19",
+        "col": 10,
+        "row": 19,
+        "terrain": {
+          "seashore": true,
+          "scenic": true
+        },
+        "name": "Farnot",
+        "name_id": "farnot",
+        "city_id": "farnot",
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_10_20",
+        "col": 10,
+        "row": 20,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_10_21",
+        "col": 10,
+        "row": 21,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_10_22",
+        "col": 10,
+        "row": 22,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_10_23",
+        "col": 10,
+        "row": 23,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_10_24",
+        "col": 10,
+        "row": 24,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_10_25",
+        "col": 10,
+        "row": 25,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "id": "hex_10_26",
+        "col": 10,
+        "row": 26,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "id": "hex_10_27",
+        "col": 10,
+        "row": 27,
+        "terrain": {
+          "forest": true,
+          "seashore": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_10_28",
+        "col": 10,
+        "row": 28,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_10_29",
+        "col": 10,
+        "row": 29,
+        "terrain": {
+          "hill": true,
+          "seashore": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_10_30",
+        "col": 10,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_11_0",
+        "col": 11,
+        "row": 0,
+        "terrain": {
+          "minor_river": true
+        }
+      },
+      {
+        "id": "hex_11_1",
+        "col": 11,
+        "row": 1,
+        "terrain": {
+          "minor_river": true
+        }
+      },
+      {
+        "id": "hex_11_2",
+        "col": 11,
+        "row": 2,
+        "terrain": {
+          "minor_river": true
+        }
+      },
+      {
+        "id": "hex_11_3",
+        "col": 11,
+        "row": 3,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_11_4",
+        "col": 11,
+        "row": 4,
+        "terrain": {
+          "ancient_battlefield": true
+        },
+        "name": "The Unknown Army",
+        "name_id": "the_unknown_army"
+      },
+      {
+        "id": "hex_11_5",
+        "col": 11,
+        "row": 5,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_11_6",
+        "col": 11,
+        "row": 6,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_11_7",
+        "col": 11,
+        "row": 7,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_11_8",
+        "col": 11,
+        "row": 8,
+        "terrain": {
+          "swamp": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_11_9",
+        "col": 11,
+        "row": 9,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_11_10",
+        "col": 11,
+        "row": 10,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_11_11",
+        "col": 11,
+        "row": 11,
+        "terrain": {
+          "mountain": true,
+          "minor_river": true
+        }
+      },
+      {
+        "id": "hex_11_12",
+        "col": 11,
+        "row": 12,
+        "terrain": {
+          "hill": true,
+          "minor_river": true
+        }
+      },
+      {
+        "id": "hex_11_13",
+        "col": 11,
+        "row": 13,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_11_14",
+        "col": 11,
+        "row": 14,
+        "terrain": {
+          "hill": true,
+          "minor_river": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_11_15",
+        "col": 11,
+        "row": 15,
+        "terrain": {
+          "hill": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_11_16",
+        "col": 11,
+        "row": 16,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_11_17",
+        "col": 11,
+        "row": 17,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_11_18",
+        "col": 11,
+        "row": 18,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_11_19",
+        "col": 11,
+        "row": 19,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_11_20",
+        "col": 11,
+        "row": 20,
+        "terrain": {
+          "forest": true,
+          "seashore": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_11_21",
+        "col": 11,
+        "row": 21,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_11_22",
+        "col": 11,
+        "row": 22,
+        "terrain": {
+          "port": true
+        },
+        "name": "Zefnar",
+        "name_id": "zefnar",
+        "city_id": "zefnar",
+        "faction_id": "shucassam",
+        "intrinsic_defense": 3
+      },
+      {
+        "id": "hex_11_23",
+        "col": 11,
+        "row": 23,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_11_24",
+        "col": 11,
+        "row": 24,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "id": "hex_11_25",
+        "col": 11,
+        "row": 25,
+        "terrain": {
+          "scenic": true
+        },
+        "name": "Tombs of Olde",
+        "name_id": "tombs_of_olde"
+      },
+      {
+        "id": "hex_11_26",
+        "col": 11,
+        "row": 26,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "id": "hex_11_27",
+        "col": 11,
+        "row": 27,
+        "terrain": {
+          "hill": true,
+          "seashore": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_11_28",
+        "col": 11,
+        "row": 28,
+        "terrain": {
+          "port": true
+        },
+        "name": "Parros",
+        "name_id": "parros",
+        "city_id": "parros",
+        "faction_id": "rombune",
+        "intrinsic_defense": 3
+      },
+      {
+        "id": "hex_11_29",
+        "col": 11,
+        "row": 29,
+        "terrain": {
+          "hill": true,
+          "seashore": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_11_30",
+        "col": 11,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_12_0",
+        "col": 12,
+        "row": 0,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_12_1",
+        "col": 12,
+        "row": 1,
+        "terrain": {
+          "minor_river": true
+        }
+      },
+      {
+        "id": "hex_12_2",
+        "col": 12,
+        "row": 2,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_12_3",
+        "col": 12,
+        "row": 3,
+        "terrain": {
+          "castle": true
+        },
+        "name": "Wirzor",
+        "name_id": "wirzor",
+        "city_id": "wirzor",
+        "faction_id": "immer",
+        "intrinsic_defense": 2
+      },
+      {
+        "id": "hex_12_4",
+        "col": 12,
+        "row": 4,
+        "terrain": {
+          "hill": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_12_5",
+        "col": 12,
+        "row": 5,
+        "terrain": {
+          "hill": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_12_6",
+        "col": 12,
+        "row": 6,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_12_7",
+        "col": 12,
+        "row": 7,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_12_8",
+        "col": 12,
+        "row": 8,
+        "terrain": {
+          "swamp": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_12_9",
+        "col": 12,
+        "row": 9,
+        "terrain": {
+          "hill": true,
+          "lakeshore": true
+        }
+      },
+      {
+        "id": "hex_12_10",
+        "col": 12,
+        "row": 10,
+        "terrain": {
+          "castle": true,
+          "royal": true
+        },
+        "name": "Invisible School",
+        "name_id": "invisible_school",
+        "intrinsic_defense": 5
+      },
+      {
+        "id": "hex_12_11",
+        "col": 12,
+        "row": 11,
+        "terrain": {
+          "forest": true,
+          "lakeshore": true
+        }
+      },
+      {
+        "id": "hex_12_12",
+        "col": 12,
+        "row": 12,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_12_13",
+        "col": 12,
+        "row": 13,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_12_14",
+        "col": 12,
+        "row": 14,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_12_15",
+        "col": 12,
+        "row": 15,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_12_16",
+        "col": 12,
+        "row": 16,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_12_17",
+        "col": 12,
+        "row": 17,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_12_18",
+        "col": 12,
+        "row": 18,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_12_19",
+        "col": 12,
+        "row": 19,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_12_20",
+        "col": 12,
+        "row": 20,
+        "terrain": {
+          "forest": true,
+          "seashore": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_12_21",
+        "col": 12,
+        "row": 21,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_12_22",
+        "col": 12,
+        "row": 22,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_12_23",
+        "col": 12,
+        "row": 23,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_12_24",
+        "col": 12,
+        "row": 24,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_12_25",
+        "col": 12,
+        "row": 25,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_12_26",
+        "col": 12,
+        "row": 26,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_12_27",
+        "col": 12,
+        "row": 27,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_12_28",
+        "col": 12,
+        "row": 28,
+        "terrain": {
+          "hill": true,
+          "seashore": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_12_29",
+        "col": 12,
+        "row": 29,
+        "terrain": {
+          "hill": true,
+          "scenic": true
+        },
+        "name": "The Crater",
+        "name_id": "the_crater",
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_12_30",
+        "col": 12,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_13_0",
+        "col": 13,
+        "row": 0,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_13_1",
+        "col": 13,
+        "row": 1,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_13_2",
+        "col": 13,
+        "row": 2,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_13_3",
+        "col": 13,
+        "row": 3,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_13_4",
+        "col": 13,
+        "row": 4,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_13_5",
+        "col": 13,
+        "row": 5,
+        "terrain": {
+          "hill": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_13_6",
+        "col": 13,
+        "row": 6,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_13_7",
+        "col": 13,
+        "row": 7,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_13_8",
+        "col": 13,
+        "row": 8,
+        "terrain": {
+          "swamp": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_13_9",
+        "col": 13,
+        "row": 9,
+        "terrain": {
+          "hill": true,
+          "lakeshore": true
+        }
+      },
+      {
+        "id": "hex_13_10",
+        "col": 13,
+        "row": 10,
+        "terrain": {
+          "lake": true
+        }
+      },
+      {
+        "id": "hex_13_11",
+        "col": 13,
+        "row": 11,
+        "terrain": {
+          "forest": true,
+          "minor_river": true,
+          "lakeshore": true
+        }
+      },
+      {
+        "id": "hex_13_12",
+        "col": 13,
+        "row": 12,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_13_13",
+        "col": 13,
+        "row": 13,
+        "terrain": {
+          "forest": true,
+          "minor_river": true
+        }
+      },
+      {
+        "id": "hex_13_14",
+        "col": 13,
+        "row": 14,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_13_15",
+        "col": 13,
+        "row": 15,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_13_16",
+        "col": 13,
+        "row": 16,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_13_17",
+        "col": 13,
+        "row": 17,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_13_18",
+        "col": 13,
+        "row": 18,
+        "terrain": {
+          "port": true
+        },
+        "name": "Castle Lapspell",
+        "name_id": "castle_lapspell",
+        "city_id": "castle_lapspell",
+        "faction_id": "hothior",
+        "intrinsic_defense": 3
+      },
+      {
+        "id": "hex_13_19",
+        "col": 13,
+        "row": 19,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "id": "hex_13_20",
+        "col": 13,
+        "row": 20,
+        "terrain": {},
+        "name": "Freeport",
+        "name_id": "freeport"
+      },
+      {
+        "id": "hex_13_21",
+        "col": 13,
+        "row": 21,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_13_22",
+        "col": 13,
+        "row": 22,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_13_23",
+        "col": 13,
+        "row": 23,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_13_24",
+        "col": 13,
+        "row": 24,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_13_25",
+        "col": 13,
+        "row": 25,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_13_26",
+        "col": 13,
+        "row": 26,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_13_27",
+        "col": 13,
+        "row": 27,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_13_28",
+        "col": 13,
+        "row": 28,
+        "terrain": {
+          "hill": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_13_29",
+        "col": 13,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_13_30",
+        "col": 13,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_14_0",
+        "col": 14,
+        "row": 0,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_14_1",
+        "col": 14,
+        "row": 1,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_14_2",
+        "col": 14,
+        "row": 2,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_14_3",
+        "col": 14,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_14_4",
+        "col": 14,
+        "row": 4,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_14_5",
+        "col": 14,
+        "row": 5,
+        "terrain": {
+          "hill": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_14_6",
+        "col": 14,
+        "row": 6,
+        "terrain": {
+          "castle": true,
+          "royal": true
+        },
+        "name": "Castle Altarr",
+        "name_id": "castle_altarr",
+        "city_id": "castle_altarr",
+        "faction_id": "immer",
+        "intrinsic_defense": 3
+      },
+      {
+        "id": "hex_14_7",
+        "col": 14,
+        "row": 7,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_14_8",
+        "col": 14,
+        "row": 8,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_14_9",
+        "col": 14,
+        "row": 9,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_14_10",
+        "col": 14,
+        "row": 10,
+        "terrain": {
+          "swamp": true,
+          "lakeshore": true
+        }
+      },
+      {
+        "id": "hex_14_11",
+        "col": 14,
+        "row": 11,
+        "terrain": {
+          "forest": true,
+          "scenic": true
+        },
+        "name": "Camptown",
+        "name_id": "camptown"
+      },
+      {
+        "id": "hex_14_12",
+        "col": 14,
+        "row": 12,
+        "terrain": {
+          "forest": true,
+          "minor_river": true
+        }
+      },
+      {
+        "id": "hex_14_13",
+        "col": 14,
+        "row": 13,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_14_14",
+        "col": 14,
+        "row": 14,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_14_15",
+        "col": 14,
+        "row": 15,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_14_16",
+        "col": 14,
+        "row": 16,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_14_17",
+        "col": 14,
+        "row": 17,
+        "terrain": {
+          "swamp": true,
+          "major_river": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_14_18",
+        "col": 14,
+        "row": 18,
+        "terrain": {
+          "major_river": true
+        },
+        "faction_id": "hothior"
+      },
+      {
+        "id": "hex_14_19",
+        "col": 14,
+        "row": 19,
+        "terrain": {
+          "hill": true,
+          "major_river": true
+        }
+      },
+      {
+        "id": "hex_14_20",
+        "col": 14,
+        "row": 20,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_14_21",
+        "col": 14,
+        "row": 21,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_14_22",
+        "col": 14,
+        "row": 22,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_14_23",
+        "col": 14,
+        "row": 23,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_14_24",
+        "col": 14,
+        "row": 24,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_14_25",
+        "col": 14,
+        "row": 25,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_14_26",
+        "col": 14,
+        "row": 26,
+        "terrain": {
+          "ancient_battlefield": true
+        },
+        "name": "Plain of Bones",
+        "name_id": "plain_of_bones"
+      },
+      {
+        "id": "hex_14_27",
+        "col": 14,
+        "row": 27,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_14_28",
+        "col": 14,
+        "row": 28,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_14_29",
+        "col": 14,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_14_30",
+        "col": 14,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_15_0",
+        "col": 15,
+        "row": 0,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "id": "hex_15_1",
+        "col": 15,
+        "row": 1,
+        "terrain": {
+          "mountain": true,
+          "minor_river": true
+        }
+      },
+      {
+        "id": "hex_15_2",
+        "col": 15,
+        "row": 2,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_15_3",
+        "col": 15,
+        "row": 3,
+        "terrain": {
+          "forest": true,
+          "scenic": true
+        },
+        "name": "Gorpin",
+        "name_id": "gorpin",
+        "city_id": "gorpin",
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_15_4",
+        "col": 15,
+        "row": 4,
+        "terrain": {
+          "hill": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_15_5",
+        "col": 15,
+        "row": 5,
+        "terrain": {
+          "hill": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_15_6",
+        "col": 15,
+        "row": 6,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_15_7",
+        "col": 15,
+        "row": 7,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_15_8",
+        "col": 15,
+        "row": 8,
+        "terrain": {
+          "castle": true
+        },
+        "name": "Muscaster",
+        "name_id": "muscaster",
+        "city_id": "muscaster",
+        "faction_id": "immer",
+        "intrinsic_defense": 3
+      },
+      {
+        "id": "hex_15_9",
+        "col": 15,
+        "row": 9,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_15_10",
+        "col": 15,
+        "row": 10,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_15_11",
+        "col": 15,
+        "row": 11,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_15_12",
+        "col": 15,
+        "row": 12,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_15_13",
+        "col": 15,
+        "row": 13,
+        "terrain": {
+          "hill": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_15_14",
+        "col": 15,
+        "row": 14,
+        "terrain": {
+          "hill": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_15_15",
+        "col": 15,
+        "row": 15,
+        "terrain": {
+          "hill": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_15_16",
+        "col": 15,
+        "row": 16,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_15_17",
+        "col": 15,
+        "row": 17,
+        "terrain": {
+          "swamp": true,
+          "major_river": true
+        }
+      },
+      {
+        "id": "hex_15_18",
+        "col": 15,
+        "row": 18,
+        "terrain": {
+          "major_river": true
+        }
+      },
+      {
+        "id": "hex_15_19",
+        "col": 15,
+        "row": 19,
+        "terrain": {
+          "scenic": true
+        },
+        "name": "Hubbleglum",
+        "name_id": "hubbleglum"
+      },
+      {
+        "id": "hex_15_20",
+        "col": 15,
+        "row": 20,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_15_21",
+        "col": 15,
+        "row": 21,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_15_22",
+        "col": 15,
+        "row": 22,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_15_23",
+        "col": 15,
+        "row": 23,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_15_24",
+        "col": 15,
+        "row": 24,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_15_25",
+        "col": 15,
+        "row": 25,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_15_26",
+        "col": 15,
+        "row": 26,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_15_27",
+        "col": 15,
+        "row": 27,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_15_28",
+        "col": 15,
+        "row": 28,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_15_29",
+        "col": 15,
+        "row": 29,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_15_30",
+        "col": 15,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_16_0",
+        "col": 16,
+        "row": 0,
+        "terrain": {
+          "mountain": true,
+          "minor_river": true
+        }
+      },
+      {
+        "id": "hex_16_1",
+        "col": 16,
+        "row": 1,
+        "terrain": {
+          "scenic": true
+        },
+        "name": "The Temple of Kings",
+        "name_id": "the_temple_of_kings"
+      },
+      {
+        "id": "hex_16_2",
+        "col": 16,
+        "row": 2,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_16_3",
+        "col": 16,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_16_4",
+        "col": 16,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_16_5",
+        "col": 16,
+        "row": 5,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_16_6",
+        "col": 16,
+        "row": 6,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_16_7",
+        "col": 16,
+        "row": 7,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_16_8",
+        "col": 16,
+        "row": 8,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_16_9",
+        "col": 16,
+        "row": 9,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_16_10",
+        "col": 16,
+        "row": 10,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_16_11",
+        "col": 16,
+        "row": 11,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_16_12",
+        "col": 16,
+        "row": 12,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_16_13",
+        "col": 16,
+        "row": 13,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_16_14",
+        "col": 16,
+        "row": 14,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_16_15",
+        "col": 16,
+        "row": 15,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_16_16",
+        "col": 16,
+        "row": 16,
+        "terrain": {
+          "swamp": true,
+          "major_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_16_17",
+        "col": 16,
+        "row": 17,
+        "terrain": {
+          "swamp": true,
+          "major_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_16_18",
+        "col": 16,
+        "row": 18,
+        "terrain": {
+          "major_river": true
+        }
+      },
+      {
+        "id": "hex_16_19",
+        "col": 16,
+        "row": 19,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_16_20",
+        "col": 16,
+        "row": 20,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_16_21",
+        "col": 16,
+        "row": 21,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_16_22",
+        "col": 16,
+        "row": 22,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_16_23",
+        "col": 16,
+        "row": 23,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_16_24",
+        "col": 16,
+        "row": 24,
+        "terrain": {
+          "scenic": true
+        },
+        "name": "Lost Caravan",
+        "name_id": "lost_caravan"
+      },
+      {
+        "id": "hex_16_25",
+        "col": 16,
+        "row": 25,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_16_26",
+        "col": 16,
+        "row": 26,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_16_27",
+        "col": 16,
+        "row": 27,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_16_28",
+        "col": 16,
+        "row": 28,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_16_29",
+        "col": 16,
+        "row": 29,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_16_30",
+        "col": 16,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_17_0",
+        "col": 17,
+        "row": 0,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "id": "hex_17_1",
+        "col": 17,
+        "row": 1,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "id": "hex_17_2",
+        "col": 17,
+        "row": 2,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "id": "hex_17_3",
+        "col": 17,
+        "row": 3,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_17_4",
+        "col": 17,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_17_5",
+        "col": 17,
+        "row": 5,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_17_6",
+        "col": 17,
+        "row": 6,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_17_7",
+        "col": 17,
+        "row": 7,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_17_8",
+        "col": 17,
+        "row": 8,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_17_9",
+        "col": 17,
+        "row": 9,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_17_10",
+        "col": 17,
+        "row": 10,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_17_11",
+        "col": 17,
+        "row": 11,
+        "terrain": {
+          "lakeshore": true
+        }
+      },
+      {
+        "id": "hex_17_12",
+        "col": 17,
+        "row": 12,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "id": "hex_17_13",
+        "col": 17,
+        "row": 13,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_17_14",
+        "col": 17,
+        "row": 14,
+        "terrain": {
+          "castle": true
+        },
+        "name": "Plibba",
+        "name_id": "plibba",
+        "city_id": "plibba",
+        "faction_id": "muetar",
+        "intrinsic_defense": 2
+      },
+      {
+        "id": "hex_17_15",
+        "col": 17,
+        "row": 15,
+        "terrain": {
+          "major_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_17_16",
+        "col": 17,
+        "row": 16,
+        "terrain": {
+          "swamp": true,
+          "major_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_17_17",
+        "col": 17,
+        "row": 17,
+        "terrain": {
+          "swamp": true,
+          "major_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_17_18",
+        "col": 17,
+        "row": 18,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_17_19",
+        "col": 17,
+        "row": 19,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_17_20",
+        "col": 17,
+        "row": 20,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_17_21",
+        "col": 17,
+        "row": 21,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_17_22",
+        "col": 17,
+        "row": 22,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_17_23",
+        "col": 17,
+        "row": 23,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_17_24",
+        "col": 17,
+        "row": 24,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_17_25",
+        "col": 17,
+        "row": 25,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_17_26",
+        "col": 17,
+        "row": 26,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_17_27",
+        "col": 17,
+        "row": 27,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "id": "hex_17_28",
+        "col": 17,
+        "row": 28,
+        "terrain": {
+          "clear": true
+        },
+        "name": "The Shunned Vale",
+        "name_id": "the_shunned_vale",
+        "city_id": "the_shunned_vale",
+        "faction_id": "trolls"
+      },
+      {
+        "id": "hex_17_29",
+        "col": 17,
+        "row": 29,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "id": "hex_17_30",
+        "col": 17,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_18_0",
+        "col": 18,
+        "row": 0,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_18_1",
+        "col": 18,
+        "row": 1,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_18_2",
+        "col": 18,
+        "row": 2,
+        "terrain": {
+          "mountain": true,
+          "scenic": true
+        },
+        "name": "Winter Rest",
+        "name_id": "winter_rest"
+      },
+      {
+        "id": "hex_18_3",
+        "col": 18,
+        "row": 3,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_18_4",
+        "col": 18,
+        "row": 4,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_18_5",
+        "col": 18,
+        "row": 5,
+        "terrain": {
+          "castle": true
+        },
+        "name": "Gap Castle",
+        "name_id": "gap_castle",
+        "city_id": "gap_castle",
+        "faction_id": "immer",
+        "intrinsic_defense": 2
+      },
+      {
+        "id": "hex_18_6",
+        "col": 18,
+        "row": 6,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_18_7",
+        "col": 18,
+        "row": 7,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_18_8",
+        "col": 18,
+        "row": 8,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "immer"
+      },
+      {
+        "id": "hex_18_9",
+        "col": 18,
+        "row": 9,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_18_10",
+        "col": 18,
+        "row": 10,
+        "terrain": {
+          "lakeshore": true
+        }
+      },
+      {
+        "id": "hex_18_11",
+        "col": 18,
+        "row": 11,
+        "terrain": {
+          "lakeshore": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_18_12",
+        "col": 18,
+        "row": 12,
+        "terrain": {
+          "lakeshore": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_18_13",
+        "col": 18,
+        "row": 13,
+        "terrain": {
+          "major_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_18_14",
+        "col": 18,
+        "row": 14,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_18_15",
+        "col": 18,
+        "row": 15,
+        "terrain": {
+          "major_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_18_16",
+        "col": 18,
+        "row": 16,
+        "terrain": {
+          "swamp": true,
+          "major_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_18_17",
+        "col": 18,
+        "row": 17,
+        "terrain": {
+          "swamp": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_18_18",
+        "col": 18,
+        "row": 18,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_18_19",
+        "col": 18,
+        "row": 19,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_18_20",
+        "col": 18,
+        "row": 20,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_18_21",
+        "col": 18,
+        "row": 21,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_18_22",
+        "col": 18,
+        "row": 22,
+        "terrain": {
+          "scenic": true
+        },
+        "name": "The Obelisk",
+        "name_id": "the_obelisk",
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_18_23",
+        "col": 18,
+        "row": 23,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_18_24",
+        "col": 18,
+        "row": 24,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_18_25",
+        "col": 18,
+        "row": 25,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_18_26",
+        "col": 18,
+        "row": 26,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_18_27",
+        "col": 18,
+        "row": 27,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "id": "hex_18_28",
+        "col": 18,
+        "row": 28,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "id": "hex_18_29",
+        "col": 18,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_18_30",
+        "col": 18,
+        "row": 30,
+        "terrain": {
+          "mountain_pass": true
+        },
+        "name": "Giant Pass",
+        "name_id": "giant_pass"
+      },
+      {
+        "id": "hex_19_0",
+        "col": 19,
+        "row": 0,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_19_1",
+        "col": 19,
+        "row": 1,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_19_2",
+        "col": 19,
+        "row": 2,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_19_3",
+        "col": 19,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_19_4",
+        "col": 19,
+        "row": 4,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_19_5",
+        "col": 19,
+        "row": 5,
+        "terrain": {
+          "mountain_pass": true
+        },
+        "name": "Snow Pass",
+        "name_id": "snow_pass",
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_19_6",
+        "col": 19,
+        "row": 6,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_19_7",
+        "col": 19,
+        "row": 7,
+        "terrain": {
+          "mountain": true,
+          "minor_river": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_19_8",
+        "col": 19,
+        "row": 8,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_19_9",
+        "col": 19,
+        "row": 9,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_19_10",
+        "col": 19,
+        "row": 10,
+        "terrain": {
+          "lakeshore": true
+        }
+      },
+      {
+        "id": "hex_19_11",
+        "col": 19,
+        "row": 11,
+        "terrain": {
+          "castle": true,
+          "royal": true
+        },
+        "name": "Pennol",
+        "name_id": "pennol",
+        "city_id": "pennol",
+        "faction_id": "muetar",
+        "intrinsic_defense": 4
+      },
+      {
+        "id": "hex_19_12",
+        "col": 19,
+        "row": 12,
+        "terrain": {
+          "lakeshore": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_19_13",
+        "col": 19,
+        "row": 13,
+        "terrain": {
+          "major_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_19_14",
+        "col": 19,
+        "row": 14,
+        "terrain": {
+          "major_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_19_15",
+        "col": 19,
+        "row": 15,
+        "terrain": {
+          "forest": true,
+          "major_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_19_16",
+        "col": 19,
+        "row": 16,
+        "terrain": {
+          "major_river": true
+        },
+        "name": "Yando",
+        "name_id": "yando",
+        "city_id": "yando",
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_19_17",
+        "col": 19,
+        "row": 17,
+        "terrain": {
+          "hill": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_19_18",
+        "col": 19,
+        "row": 18,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_19_19",
+        "col": 19,
+        "row": 19,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_19_20",
+        "col": 19,
+        "row": 20,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_19_21",
+        "col": 19,
+        "row": 21,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_19_22",
+        "col": 19,
+        "row": 22,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_19_23",
+        "col": 19,
+        "row": 23,
+        "terrain": {
+          "castle": true
+        },
+        "name": "Kuzdol",
+        "name_id": "kuzdol",
+        "city_id": "kuzdol",
+        "faction_id": "shucassam",
+        "intrinsic_defense": 3
+      },
+      {
+        "id": "hex_19_24",
+        "col": 19,
+        "row": 24,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_19_25",
+        "col": 19,
+        "row": 25,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_19_26",
+        "col": 19,
+        "row": 26,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_19_27",
+        "col": 19,
+        "row": 27,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_19_28",
+        "col": 19,
+        "row": 28,
+        "terrain": {
+          "port": true
+        },
+        "name": "Jipols",
+        "name_id": "jipols",
+        "city_id": "jipols",
+        "faction_id": "rombune",
+        "intrinsic_defense": 3
+      },
+      {
+        "id": "hex_19_29",
+        "col": 19,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_19_30",
+        "col": 19,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_20_0",
+        "col": 20,
+        "row": 0,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_20_1",
+        "col": 20,
+        "row": 1,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_20_2",
+        "col": 20,
+        "row": 2,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_20_3",
+        "col": 20,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_20_4",
+        "col": 20,
+        "row": 4,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_20_5",
+        "col": 20,
+        "row": 5,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_20_6",
+        "col": 20,
+        "row": 6,
+        "terrain": {
+          "mountain": true,
+          "minor_river": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_20_7",
+        "col": 20,
+        "row": 7,
+        "terrain": {
+          "mountain": true,
+          "minor_river": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_20_8",
+        "col": 20,
+        "row": 8,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_20_9",
+        "col": 20,
+        "row": 9,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_20_10",
+        "col": 20,
+        "row": 10,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_20_11",
+        "col": 20,
+        "row": 11,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_20_12",
+        "col": 20,
+        "row": 12,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_20_13",
+        "col": 20,
+        "row": 13,
+        "terrain": {
+          "forest": true,
+          "major_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_20_14",
+        "col": 20,
+        "row": 14,
+        "terrain": {
+          "major_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_20_15",
+        "col": 20,
+        "row": 15,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_20_16",
+        "col": 20,
+        "row": 16,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_20_17",
+        "col": 20,
+        "row": 17,
+        "terrain": {
+          "hill": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_20_18",
+        "col": 20,
+        "row": 18,
+        "terrain": {
+          "castle": true
+        },
+        "name": "The Keep",
+        "name_id": "the_keep"
+      },
+      {
+        "id": "hex_20_19",
+        "col": 20,
+        "row": 19,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_20_20",
+        "col": 20,
+        "row": 20,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_20_21",
+        "col": 20,
+        "row": 21,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_20_22",
+        "col": 20,
+        "row": 22,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_20_23",
+        "col": 20,
+        "row": 23,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_20_24",
+        "col": 20,
+        "row": 24,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_20_25",
+        "col": 20,
+        "row": 25,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_20_26",
+        "col": 20,
+        "row": 26,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_20_27",
+        "col": 20,
+        "row": 27,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "id": "hex_20_28",
+        "col": 20,
+        "row": 28,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "rombune"
+      },
+      {
+        "id": "hex_20_29",
+        "col": 20,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_20_30",
+        "col": 20,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_21_0",
+        "col": 21,
+        "row": 0,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_21_1",
+        "col": 21,
+        "row": 1,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_21_2",
+        "col": 21,
+        "row": 2,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_21_3",
+        "col": 21,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_21_4",
+        "col": 21,
+        "row": 4,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_21_5",
+        "col": 21,
+        "row": 5,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_21_6",
+        "col": 21,
+        "row": 6,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_21_7",
+        "col": 21,
+        "row": 7,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_21_8",
+        "col": 21,
+        "row": 8,
+        "terrain": {
+          "minor_river": true
+        }
+      },
+      {
+        "id": "hex_21_9",
+        "col": 21,
+        "row": 9,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_21_10",
+        "col": 21,
+        "row": 10,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_21_11",
+        "col": 21,
+        "row": 11,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_21_12",
+        "col": 21,
+        "row": 12,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_21_13",
+        "col": 21,
+        "row": 13,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_21_14",
+        "col": 21,
+        "row": 14,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_21_15",
+        "col": 21,
+        "row": 15,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_21_16",
+        "col": 21,
+        "row": 16,
+        "terrain": {
+          "castle": true
+        },
+        "name": "Beolon",
+        "name_id": "beolon",
+        "city_id": "beolon",
+        "faction_id": "muetar",
+        "intrinsic_defense": 2
+      },
+      {
+        "id": "hex_21_17",
+        "col": 21,
+        "row": 17,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_21_18",
+        "col": 21,
+        "row": 18,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_21_19",
+        "col": 21,
+        "row": 19,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_21_20",
+        "col": 21,
+        "row": 20,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_21_21",
+        "col": 21,
+        "row": 21,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_21_22",
+        "col": 21,
+        "row": 22,
+        "terrain": {
+          "hill": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_21_23",
+        "col": 21,
+        "row": 23,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_21_24",
+        "col": 21,
+        "row": 24,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_21_25",
+        "col": 21,
+        "row": 25,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_21_26",
+        "col": 21,
+        "row": 26,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_21_27",
+        "col": 21,
+        "row": 27,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "id": "hex_21_28",
+        "col": 21,
+        "row": 28,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "id": "hex_21_29",
+        "col": 21,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_21_30",
+        "col": 21,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_22_0",
+        "col": 22,
+        "row": 0,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_22_1",
+        "col": 22,
+        "row": 1,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_22_2",
+        "col": 22,
+        "row": 2,
+        "terrain": {
+          "swamp": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_22_3",
+        "col": 22,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_22_4",
+        "col": 22,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_22_5",
+        "col": 22,
+        "row": 5,
+        "terrain": {
+          "forest": true,
+          "mountain": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_22_6",
+        "col": 22,
+        "row": 6,
+        "terrain": {
+          "mountain": true,
+          "scenic": true
+        },
+        "name": "Ozerg",
+        "name_id": "ozerg"
+      },
+      {
+        "id": "hex_22_7",
+        "col": 22,
+        "row": 7,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_22_8",
+        "col": 22,
+        "row": 8,
+        "terrain": {
+          "minor_river": true
+        }
+      },
+      {
+        "id": "hex_22_9",
+        "col": 22,
+        "row": 9,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_22_10",
+        "col": 22,
+        "row": 10,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_22_11",
+        "col": 22,
+        "row": 11,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_22_12",
+        "col": 22,
+        "row": 12,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_22_13",
+        "col": 22,
+        "row": 13,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_22_14",
+        "col": 22,
+        "row": 14,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_22_15",
+        "col": 22,
+        "row": 15,
+        "terrain": {
+          "forest": true,
+          "minor_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_22_16",
+        "col": 22,
+        "row": 16,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_22_17",
+        "col": 22,
+        "row": 17,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_22_18",
+        "col": 22,
+        "row": 18,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_22_19",
+        "col": 22,
+        "row": 19,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_22_20",
+        "col": 22,
+        "row": 20,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_22_21",
+        "col": 22,
+        "row": 21,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_22_22",
+        "col": 22,
+        "row": 22,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_22_23",
+        "col": 22,
+        "row": 23,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_22_24",
+        "col": 22,
+        "row": 24,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_22_25",
+        "col": 22,
+        "row": 25,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_22_26",
+        "col": 22,
+        "row": 26,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "id": "hex_22_27",
+        "col": 22,
+        "row": 27,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_22_28",
+        "col": 22,
+        "row": 28,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_22_29",
+        "col": 22,
+        "row": 29,
+        "terrain": {
+          "scenic": true
+        },
+        "name": "Eerie Oasis",
+        "name_id": "eerie_oasis"
+      },
+      {
+        "id": "hex_22_30",
+        "col": 22,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_23_0",
+        "col": 23,
+        "row": 0,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_23_1",
+        "col": 23,
+        "row": 1,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_23_2",
+        "col": 23,
+        "row": 2,
+        "terrain": {
+          "castle": true,
+          "royal": true
+        },
+        "name": "The Pits",
+        "name_id": "the_pits",
+        "city_id": "the_pits",
+        "faction_id": "zorn",
+        "intrinsic_defense": 5
+      },
+      {
+        "id": "hex_23_3",
+        "col": 23,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_23_4",
+        "col": 23,
+        "row": 4,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_23_5",
+        "col": 23,
+        "row": 5,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_23_6",
+        "col": 23,
+        "row": 6,
+        "terrain": {
+          "forest": true,
+          "mountain": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_23_7",
+        "col": 23,
+        "row": 7,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_23_8",
+        "col": 23,
+        "row": 8,
+        "terrain": {
+          "minor_river": true
+        }
+      },
+      {
+        "id": "hex_23_9",
+        "col": 23,
+        "row": 9,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_23_10",
+        "col": 23,
+        "row": 10,
+        "terrain": {
+          "forest": true,
+          "minor_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_23_11",
+        "col": 23,
+        "row": 11,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_23_12",
+        "col": 23,
+        "row": 12,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_23_13",
+        "col": 23,
+        "row": 13,
+        "terrain": {
+          "hill": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_23_14",
+        "col": 23,
+        "row": 14,
+        "terrain": {
+          "swamp": true,
+          "minor_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_23_15",
+        "col": 23,
+        "row": 15,
+        "terrain": {
+          "castle": true
+        },
+        "name": "Groat",
+        "name_id": "groat",
+        "city_id": "groat",
+        "faction_id": "muetar",
+        "intrinsic_defense": 3
+      },
+      {
+        "id": "hex_23_16",
+        "col": 23,
+        "row": 16,
+        "terrain": {
+          "swamp": true,
+          "minor_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_23_17",
+        "col": 23,
+        "row": 17,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_23_18",
+        "col": 23,
+        "row": 18,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_23_19",
+        "col": 23,
+        "row": 19,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_23_20",
+        "col": 23,
+        "row": 20,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_23_21",
+        "col": 23,
+        "row": 21,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_23_22",
+        "col": 23,
+        "row": 22,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_23_23",
+        "col": 23,
+        "row": 23,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_23_24",
+        "col": 23,
+        "row": 24,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_23_25",
+        "col": 23,
+        "row": 25,
+        "terrain": {},
+        "name": "Bartertown",
+        "name_id": "bartertown"
+      },
+      {
+        "id": "hex_23_26",
+        "col": 23,
+        "row": 26,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "id": "hex_23_27",
+        "col": 23,
+        "row": 27,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_23_28",
+        "col": 23,
+        "row": 28,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_23_29",
+        "col": 23,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_23_30",
+        "col": 23,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_24_0",
+        "col": 24,
+        "row": 0,
+        "terrain": {
+          "hill": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_24_1",
+        "col": 24,
+        "row": 1,
+        "terrain": {
+          "hill": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_24_2",
+        "col": 24,
+        "row": 2,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_24_3",
+        "col": 24,
+        "row": 3,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_24_4",
+        "col": 24,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_24_5",
+        "col": 24,
+        "row": 5,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_24_6",
+        "col": 24,
+        "row": 6,
+        "terrain": {
+          "mountain_pass": true
+        },
+        "name": "Maw Pass",
+        "name_id": "maw_pass",
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_24_7",
+        "col": 24,
+        "row": 7,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "id": "hex_24_8",
+        "col": 24,
+        "row": 8,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_24_9",
+        "col": 24,
+        "row": 9,
+        "terrain": {
+          "castle": true
+        },
+        "name": "Basimar",
+        "name_id": "basimar",
+        "city_id": "basimar",
+        "faction_id": "muetar",
+        "intrinsic_defense": 3
+      },
+      {
+        "id": "hex_24_10",
+        "col": 24,
+        "row": 10,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_24_11",
+        "col": 24,
+        "row": 11,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_24_12",
+        "col": 24,
+        "row": 12,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_24_13",
+        "col": 24,
+        "row": 13,
+        "terrain": {
+          "hill": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_24_14",
+        "col": 24,
+        "row": 14,
+        "terrain": {
+          "swamp": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_24_15",
+        "col": 24,
+        "row": 15,
+        "terrain": {
+          "swamp": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_24_16",
+        "col": 24,
+        "row": 16,
+        "terrain": {
+          "swamp": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_24_17",
+        "col": 24,
+        "row": 17,
+        "terrain": {
+          "hill": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_24_18",
+        "col": 24,
+        "row": 18,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_24_19",
+        "col": 24,
+        "row": 19,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_24_20",
+        "col": 24,
+        "row": 20,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_24_21",
+        "col": 24,
+        "row": 21,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_24_22",
+        "col": 24,
+        "row": 22,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_24_23",
+        "col": 24,
+        "row": 23,
+        "terrain": {
+          "port": true,
+          "royal": true
+        },
+        "name": "Adeese",
+        "name_id": "adeese",
+        "city_id": "adeese",
+        "faction_id": "shucassam",
+        "intrinsic_defense": 4
+      },
+      {
+        "id": "hex_24_24",
+        "col": 24,
+        "row": 24,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_24_25",
+        "col": 24,
+        "row": 25,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "id": "hex_24_26",
+        "col": 24,
+        "row": 26,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_24_27",
+        "col": 24,
+        "row": 27,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_24_28",
+        "col": 24,
+        "row": 28,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_24_29",
+        "col": 24,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_24_30",
+        "col": 24,
+        "row": 30,
+        "terrain": {
+          "scenic": true
+        },
+        "name": "Trading Post",
+        "name_id": "trading_post"
+      },
+      {
+        "id": "hex_25_0",
+        "col": 25,
+        "row": 0,
+        "terrain": {
+          "hill": true,
+          "scenic": true
+        },
+        "name": "Mounds",
+        "name_id": "mounds",
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_25_1",
+        "col": 25,
+        "row": 1,
+        "terrain": {
+          "hill": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_25_2",
+        "col": 25,
+        "row": 2,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_25_3",
+        "col": 25,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_25_4",
+        "col": 25,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_25_5",
+        "col": 25,
+        "row": 5,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_25_6",
+        "col": 25,
+        "row": 6,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_25_7",
+        "col": 25,
+        "row": 7,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "id": "hex_25_8",
+        "col": 25,
+        "row": 8,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_25_9",
+        "col": 25,
+        "row": 9,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_25_10",
+        "col": 25,
+        "row": 10,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_25_11",
+        "col": 25,
+        "row": 11,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_25_12",
+        "col": 25,
+        "row": 12,
+        "terrain": {
+          "hill": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_25_13",
+        "col": 25,
+        "row": 13,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_25_14",
+        "col": 25,
+        "row": 14,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_25_15",
+        "col": 25,
+        "row": 15,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_25_16",
+        "col": 25,
+        "row": 16,
+        "terrain": {
+          "hill": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_25_17",
+        "col": 25,
+        "row": 17,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_25_18",
+        "col": 25,
+        "row": 18,
+        "terrain": {
+          "minor_river": true,
+          "scenic": true
+        },
+        "name": "The Falls of Xag",
+        "name_id": "the_falls_of_xag"
+      },
+      {
+        "id": "hex_25_19",
+        "col": 25,
+        "row": 19,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_25_20",
+        "col": 25,
+        "row": 20,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_25_21",
+        "col": 25,
+        "row": 21,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_25_22",
+        "col": 25,
+        "row": 22,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_25_23",
+        "col": 25,
+        "row": 23,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_25_24",
+        "col": 25,
+        "row": 24,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_25_25",
+        "col": 25,
+        "row": 25,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_25_26",
+        "col": 25,
+        "row": 26,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "id": "hex_25_27",
+        "col": 25,
+        "row": 27,
+        "terrain": {
+          "scenic": true
+        },
+        "name": "Hyyx",
+        "name_id": "hyyx"
+      },
+      {
+        "id": "hex_25_28",
+        "col": 25,
+        "row": 28,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_25_29",
+        "col": 25,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_25_30",
+        "col": 25,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_26_0",
+        "col": 26,
+        "row": 0,
+        "terrain": {
+          "hill": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_26_1",
+        "col": 26,
+        "row": 1,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_26_2",
+        "col": 26,
+        "row": 2,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_26_3",
+        "col": 26,
+        "row": 3,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_26_4",
+        "col": 26,
+        "row": 4,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_26_5",
+        "col": 26,
+        "row": 5,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_26_6",
+        "col": 26,
+        "row": 6,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_26_7",
+        "col": 26,
+        "row": 7,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_26_8",
+        "col": 26,
+        "row": 8,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_26_9",
+        "col": 26,
+        "row": 9,
+        "terrain": {
+          "swamp": true,
+          "minor_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_26_10",
+        "col": 26,
+        "row": 10,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_26_11",
+        "col": 26,
+        "row": 11,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_26_12",
+        "col": 26,
+        "row": 12,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_26_13",
+        "col": 26,
+        "row": 13,
+        "terrain": {
+          "castle": true
+        },
+        "name": "Crow's Nest",
+        "name_id": "crow_s_nest",
+        "city_id": "crow_s_nest",
+        "faction_id": "pon",
+        "intrinsic_defense": 4
+      },
+      {
+        "id": "hex_26_14",
+        "col": 26,
+        "row": 14,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_26_15",
+        "col": 26,
+        "row": 15,
+        "terrain": {
+          "hill": true,
+          "minor_river": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_26_16",
+        "col": 26,
+        "row": 16,
+        "terrain": {
+          "hill": true,
+          "minor_river": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_26_17",
+        "col": 26,
+        "row": 17,
+        "terrain": {
+          "forest": true,
+          "minor_river": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_26_18",
+        "col": 26,
+        "row": 18,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_26_19",
+        "col": 26,
+        "row": 19,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_26_20",
+        "col": 26,
+        "row": 20,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_26_21",
+        "col": 26,
+        "row": 21,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_26_22",
+        "col": 26,
+        "row": 22,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_26_23",
+        "col": 26,
+        "row": 23,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_26_24",
+        "col": 26,
+        "row": 24,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "id": "hex_26_25",
+        "col": 26,
+        "row": 25,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_26_26",
+        "col": 26,
+        "row": 26,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "id": "hex_26_27",
+        "col": 26,
+        "row": 27,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_26_28",
+        "col": 26,
+        "row": 28,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_26_29",
+        "col": 26,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_26_30",
+        "col": 26,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_27_0",
+        "col": 27,
+        "row": 0,
+        "terrain": {
+          "hill": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_27_1",
+        "col": 27,
+        "row": 1,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_27_2",
+        "col": 27,
+        "row": 2,
+        "terrain": {
+          "clear": true
+        },
+        "name": "The Crag",
+        "name_id": "the_crag",
+        "city_id": "the_crag",
+        "faction_id": "trolls"
+      },
+      {
+        "id": "hex_27_3",
+        "col": 27,
+        "row": 3,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_27_4",
+        "col": 27,
+        "row": 4,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "zorn"
+      },
+      {
+        "id": "hex_27_5",
+        "col": 27,
+        "row": 5,
+        "terrain": {
+          "forest": true,
+          "scenic": true
+        },
+        "name": "Wolf Den",
+        "name_id": "wolf_den"
+      },
+      {
+        "id": "hex_27_6",
+        "col": 27,
+        "row": 6,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_27_7",
+        "col": 27,
+        "row": 7,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_27_8",
+        "col": 27,
+        "row": 8,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_27_9",
+        "col": 27,
+        "row": 9,
+        "terrain": {
+          "swamp": true,
+          "minor_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_27_10",
+        "col": 27,
+        "row": 10,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_27_11",
+        "col": 27,
+        "row": 11,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_27_12",
+        "col": 27,
+        "row": 12,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_27_13",
+        "col": 27,
+        "row": 13,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_27_14",
+        "col": 27,
+        "row": 14,
+        "terrain": {
+          "forest": true,
+          "minor_river": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_27_15",
+        "col": 27,
+        "row": 15,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_27_16",
+        "col": 27,
+        "row": 16,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_27_17",
+        "col": 27,
+        "row": 17,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_27_18",
+        "col": 27,
+        "row": 18,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_27_19",
+        "col": 27,
+        "row": 19,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_27_20",
+        "col": 27,
+        "row": 20,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_27_21",
+        "col": 27,
+        "row": 21,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_27_22",
+        "col": 27,
+        "row": 22,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_27_23",
+        "col": 27,
+        "row": 23,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "id": "hex_27_24",
+        "col": 27,
+        "row": 24,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_27_25",
+        "col": 27,
+        "row": 25,
+        "terrain": {
+          "clear": true
+        },
+        "name": "Lepers",
+        "name_id": "lepers",
+        "city_id": "lepers",
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_27_26",
+        "col": 27,
+        "row": 26,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_27_27",
+        "col": 27,
+        "row": 27,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_27_28",
+        "col": 27,
+        "row": 28,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_27_29",
+        "col": 27,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_27_30",
+        "col": 27,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_28_0",
+        "col": 28,
+        "row": 0,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_28_1",
+        "col": 28,
+        "row": 1,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_28_2",
+        "col": 28,
+        "row": 2,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "id": "hex_28_3",
+        "col": 28,
+        "row": 3,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "id": "hex_28_4",
+        "col": 28,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_28_5",
+        "col": 28,
+        "row": 5,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_28_6",
+        "col": 28,
+        "row": 6,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_28_7",
+        "col": 28,
+        "row": 7,
+        "terrain": {
+          "hill": true,
+          "minor_river": true
+        }
+      },
+      {
+        "id": "hex_28_8",
+        "col": 28,
+        "row": 8,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_28_9",
+        "col": 28,
+        "row": 9,
+        "terrain": {
+          "clear": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_28_10",
+        "col": 28,
+        "row": 10,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_28_11",
+        "col": 28,
+        "row": 11,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_28_12",
+        "col": 28,
+        "row": 12,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_28_13",
+        "col": 28,
+        "row": 13,
+        "terrain": {
+          "mountain": true,
+          "minor_river": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_28_14",
+        "col": 28,
+        "row": 14,
+        "terrain": {
+          "mountain": true,
+          "minor_river": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_28_15",
+        "col": 28,
+        "row": 15,
+        "terrain": {
+          "mountain": true,
+          "minor_river": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_28_16",
+        "col": 28,
+        "row": 16,
+        "terrain": {
+          "mountain_pass": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_28_17",
+        "col": 28,
+        "row": 17,
+        "terrain": {
+          "castle": true,
+          "royal": true
+        },
+        "name": "Marzarbol",
+        "name_id": "marzarbol",
+        "city_id": "marzarbol",
+        "faction_id": "pon",
+        "intrinsic_defense": 4
+      },
+      {
+        "id": "hex_28_18",
+        "col": 28,
+        "row": 18,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_28_19",
+        "col": 28,
+        "row": 19,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_28_20",
+        "col": 28,
+        "row": 20,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "shucassam"
+      },
+      {
+        "id": "hex_28_21",
+        "col": 28,
+        "row": 21,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "id": "hex_28_22",
+        "col": 28,
+        "row": 22,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "id": "hex_28_23",
+        "col": 28,
+        "row": 23,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "id": "hex_28_24",
+        "col": 28,
+        "row": 24,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_28_25",
+        "col": 28,
+        "row": 25,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_28_26",
+        "col": 28,
+        "row": 26,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_28_27",
+        "col": 28,
+        "row": 27,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_28_28",
+        "col": 28,
+        "row": 28,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_28_29",
+        "col": 28,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_28_30",
+        "col": 28,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_29_0",
+        "col": 29,
+        "row": 0,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_29_1",
+        "col": 29,
+        "row": 1,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_29_2",
+        "col": 29,
+        "row": 2,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "id": "hex_29_3",
+        "col": 29,
+        "row": 3,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "id": "hex_29_4",
+        "col": 29,
+        "row": 4,
+        "terrain": {
+          "mountain": true,
+          "minor_river": true
+        }
+      },
+      {
+        "id": "hex_29_5",
+        "col": 29,
+        "row": 5,
+        "terrain": {
+          "hill": true,
+          "minor_river": true
+        }
+      },
+      {
+        "id": "hex_29_6",
+        "col": 29,
+        "row": 6,
+        "terrain": {
+          "minor_river": true
+        }
+      },
+      {
+        "id": "hex_29_7",
+        "col": 29,
+        "row": 7,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_29_8",
+        "col": 29,
+        "row": 8,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_29_9",
+        "col": 29,
+        "row": 9,
+        "terrain": {
+          "hill": true,
+          "minor_river": true
+        }
+      },
+      {
+        "id": "hex_29_10",
+        "col": 29,
+        "row": 10,
+        "terrain": {
+          "minor_river": true
+        },
+        "faction_id": "muetar"
+      },
+      {
+        "id": "hex_29_11",
+        "col": 29,
+        "row": 11,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "id": "hex_29_12",
+        "col": 29,
+        "row": 12,
+        "terrain": {
+          "forest": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_29_13",
+        "col": 29,
+        "row": 13,
+        "terrain": {
+          "mountain": true,
+          "minor_river": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_29_14",
+        "col": 29,
+        "row": 14,
+        "terrain": {
+          "mountain": true,
+          "minor_river": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_29_15",
+        "col": 29,
+        "row": 15,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_29_16",
+        "col": 29,
+        "row": 16,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_29_17",
+        "col": 29,
+        "row": 17,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_29_18",
+        "col": 29,
+        "row": 18,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_29_19",
+        "col": 29,
+        "row": 19,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_29_20",
+        "col": 29,
+        "row": 20,
+        "terrain": {
+          "mountain": true,
+          "seashore": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_29_21",
+        "col": 29,
+        "row": 21,
+        "terrain": {
+          "seashore": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_29_22",
+        "col": 29,
+        "row": 22,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_29_23",
+        "col": 29,
+        "row": 23,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_29_24",
+        "col": 29,
+        "row": 24,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_29_25",
+        "col": 29,
+        "row": 25,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_29_26",
+        "col": 29,
+        "row": 26,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_29_27",
+        "col": 29,
+        "row": 27,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_29_28",
+        "col": 29,
+        "row": 28,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_29_29",
+        "col": 29,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_29_30",
+        "col": 29,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_30_0",
+        "col": 30,
+        "row": 0,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_30_1",
+        "col": 30,
+        "row": 1,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_30_2",
+        "col": 30,
+        "row": 2,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "id": "hex_30_3",
+        "col": 30,
+        "row": 3,
+        "terrain": {
+          "castle": true,
+          "royal": true
+        },
+        "name": "Tower of Zards",
+        "name_id": "tower_of_zards",
+        "intrinsic_defense": 6
+      },
+      {
+        "id": "hex_30_4",
+        "col": 30,
+        "row": 4,
+        "terrain": {
+          "mountain": true,
+          "minor_river": true
+        }
+      },
+      {
+        "id": "hex_30_5",
+        "col": 30,
+        "row": 5,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_30_6",
+        "col": 30,
+        "row": 6,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_30_7",
+        "col": 30,
+        "row": 7,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_30_8",
+        "col": 30,
+        "row": 8,
+        "terrain": {
+          "lakeshore": true,
+          "scenic": true
+        },
+        "name": "Mystic Lake",
+        "name_id": "mystic_lake"
+      },
+      {
+        "id": "hex_30_9",
+        "col": 30,
+        "row": 9,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_30_10",
+        "col": 30,
+        "row": 10,
+        "terrain": {
+          "mountain": true,
+          "minor_river": true
+        }
+      },
+      {
+        "id": "hex_30_11",
+        "col": 30,
+        "row": 11,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "id": "hex_30_12",
+        "col": 30,
+        "row": 12,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "id": "hex_30_13",
+        "col": 30,
+        "row": 13,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_30_14",
+        "col": 30,
+        "row": 14,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_30_15",
+        "col": 30,
+        "row": 15,
+        "terrain": {
+          "forest": true
+        },
+        "name": "Ghost Wood",
+        "name_id": "ghost_wood"
+      },
+      {
+        "id": "hex_30_16",
+        "col": 30,
+        "row": 16,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_30_17",
+        "col": 30,
+        "row": 17,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_30_18",
+        "col": 30,
+        "row": 18,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_30_19",
+        "col": 30,
+        "row": 19,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_30_20",
+        "col": 30,
+        "row": 20,
+        "terrain": {
+          "port": true
+        },
+        "name": "Grugongi",
+        "name_id": "grugongi",
+        "city_id": "grugongi",
+        "faction_id": "pon",
+        "intrinsic_defense": 3
+      },
+      {
+        "id": "hex_30_21",
+        "col": 30,
+        "row": 21,
+        "terrain": {
+          "hill": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_30_22",
+        "col": 30,
+        "row": 22,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_30_23",
+        "col": 30,
+        "row": 23,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_30_24",
+        "col": 30,
+        "row": 24,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_30_25",
+        "col": 30,
+        "row": 25,
+        "terrain": {
+          "ancient_battlefield": true
+        },
+        "name": "Field of the Laughing Dead",
+        "name_id": "field_of_the_laughing_dead"
+      },
+      {
+        "id": "hex_30_26",
+        "col": 30,
+        "row": 26,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_30_27",
+        "col": 30,
+        "row": 27,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_30_28",
+        "col": 30,
+        "row": 28,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_30_29",
+        "col": 30,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_30_30",
+        "col": 30,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_31_0",
+        "col": 31,
+        "row": 0,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_31_1",
+        "col": 31,
+        "row": 1,
+        "terrain": {
+          "swamp": true
+        }
+      },
+      {
+        "id": "hex_31_2",
+        "col": 31,
+        "row": 2,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "id": "hex_31_3",
+        "col": 31,
+        "row": 3,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "id": "hex_31_4",
+        "col": 31,
+        "row": 4,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "id": "hex_31_5",
+        "col": 31,
+        "row": 5,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_31_6",
+        "col": 31,
+        "row": 6,
+        "terrain": {
+          "ancient_battlefield": true
+        },
+        "name": "The Wasted Dead",
+        "name_id": "the_wasted_dead"
+      },
+      {
+        "id": "hex_31_7",
+        "col": 31,
+        "row": 7,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_31_8",
+        "col": 31,
+        "row": 8,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_31_9",
+        "col": 31,
+        "row": 9,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "ghem"
+      },
+      {
+        "id": "hex_31_10",
+        "col": 31,
+        "row": 10,
+        "terrain": {
+          "mountain": true,
+          "minor_river": true
+        },
+        "faction_id": "ghem"
+      },
+      {
+        "id": "hex_31_11",
+        "col": 31,
+        "row": 11,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "ghem"
+      },
+      {
+        "id": "hex_31_12",
+        "col": 31,
+        "row": 12,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_31_13",
+        "col": 31,
+        "row": 13,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_31_14",
+        "col": 31,
+        "row": 14,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_31_15",
+        "col": 31,
+        "row": 15,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_31_16",
+        "col": 31,
+        "row": 16,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_31_17",
+        "col": 31,
+        "row": 17,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_31_18",
+        "col": 31,
+        "row": 18,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_31_19",
+        "col": 31,
+        "row": 19,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_31_20",
+        "col": 31,
+        "row": 20,
+        "terrain": {
+          "hill": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_31_21",
+        "col": 31,
+        "row": 21,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_31_22",
+        "col": 31,
+        "row": 22,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_31_23",
+        "col": 31,
+        "row": 23,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_31_24",
+        "col": 31,
+        "row": 24,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_31_25",
+        "col": 31,
+        "row": 25,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_31_26",
+        "col": 31,
+        "row": 26,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_31_27",
+        "col": 31,
+        "row": 27,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_31_28",
+        "col": 31,
+        "row": 28,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_31_29",
+        "col": 31,
+        "row": 29,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_31_30",
+        "col": 31,
+        "row": 30,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_32_0",
+        "col": 32,
+        "row": 0,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_32_1",
+        "col": 32,
+        "row": 1,
+        "terrain": {
+          "swamp": true
+        }
+      },
+      {
+        "id": "hex_32_2",
+        "col": 32,
+        "row": 2,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_32_3",
+        "col": 32,
+        "row": 3,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "id": "hex_32_4",
+        "col": 32,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_32_5",
+        "col": 32,
+        "row": 5,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_32_6",
+        "col": 32,
+        "row": 6,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_32_7",
+        "col": 32,
+        "row": 7,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_32_8",
+        "col": 32,
+        "row": 8,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "ghem"
+      },
+      {
+        "id": "hex_32_9",
+        "col": 32,
+        "row": 9,
+        "terrain": {
+          "castle": true,
+          "royal": true
+        },
+        "name": "Mines of Rosengg",
+        "name_id": "mines_of_rosengg",
+        "city_id": "mines_of_rosengg",
+        "faction_id": "ghem",
+        "intrinsic_defense": 5
+      },
+      {
+        "id": "hex_32_10",
+        "col": 32,
+        "row": 10,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "ghem"
+      },
+      {
+        "id": "hex_32_11",
+        "col": 32,
+        "row": 11,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "ghem"
+      },
+      {
+        "id": "hex_32_12",
+        "col": 32,
+        "row": 12,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_32_13",
+        "col": 32,
+        "row": 13,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "ghem"
+      },
+      {
+        "id": "hex_32_14",
+        "col": 32,
+        "row": 14,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "ghem"
+      },
+      {
+        "id": "hex_32_15",
+        "col": 32,
+        "row": 15,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "ghem"
+      },
+      {
+        "id": "hex_32_16",
+        "col": 32,
+        "row": 16,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_32_17",
+        "col": 32,
+        "row": 17,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_32_18",
+        "col": 32,
+        "row": 18,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_32_19",
+        "col": 32,
+        "row": 19,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_32_20",
+        "col": 32,
+        "row": 20,
+        "terrain": {
+          "hill": true
+        },
+        "faction_id": "pon"
+      },
+      {
+        "id": "hex_32_21",
+        "col": 32,
+        "row": 21,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_32_22",
+        "col": 32,
+        "row": 22,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_32_23",
+        "col": 32,
+        "row": 23,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_32_24",
+        "col": 32,
+        "row": 24,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_32_25",
+        "col": 32,
+        "row": 25,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_32_26",
+        "col": 32,
+        "row": 26,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_32_27",
+        "col": 32,
+        "row": 27,
+        "terrain": {
+          "scenic": true
+        },
+        "name": "Altars of Greystaff",
+        "name_id": "altars_of_greystaff"
+      },
+      {
+        "id": "hex_32_28",
+        "col": 32,
+        "row": 28,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_32_29",
+        "col": 32,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_32_30",
+        "col": 32,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_33_0",
+        "col": 33,
+        "row": 0,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_33_1",
+        "col": 33,
+        "row": 1,
+        "terrain": {
+          "swamp": true
+        }
+      },
+      {
+        "id": "hex_33_2",
+        "col": 33,
+        "row": 2,
+        "terrain": {
+          "swamp": true
+        }
+      },
+      {
+        "id": "hex_33_3",
+        "col": 33,
+        "row": 3,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_33_4",
+        "col": 33,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_33_5",
+        "col": 33,
+        "row": 5,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_33_6",
+        "col": 33,
+        "row": 6,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_33_7",
+        "col": 33,
+        "row": 7,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_33_8",
+        "col": 33,
+        "row": 8,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "ghem"
+      },
+      {
+        "id": "hex_33_9",
+        "col": 33,
+        "row": 9,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "ghem"
+      },
+      {
+        "id": "hex_33_10",
+        "col": 33,
+        "row": 10,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "ghem"
+      },
+      {
+        "id": "hex_33_11",
+        "col": 33,
+        "row": 11,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "ghem"
+      },
+      {
+        "id": "hex_33_12",
+        "col": 33,
+        "row": 12,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_33_13",
+        "col": 33,
+        "row": 13,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "ghem"
+      },
+      {
+        "id": "hex_33_14",
+        "col": 33,
+        "row": 14,
+        "terrain": {
+          "castle": true
+        },
+        "name": "Alzak",
+        "name_id": "alzak",
+        "city_id": "alzak",
+        "faction_id": "ghem",
+        "intrinsic_defense": 4
+      },
+      {
+        "id": "hex_33_15",
+        "col": 33,
+        "row": 15,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_33_16",
+        "col": 33,
+        "row": 16,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "ghem"
+      },
+      {
+        "id": "hex_33_17",
+        "col": 33,
+        "row": 17,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_33_18",
+        "col": 33,
+        "row": 18,
+        "terrain": {
+          "scenic": true
+        },
+        "name": "City of Khos",
+        "name_id": "city_of_khos"
+      },
+      {
+        "id": "hex_33_19",
+        "col": 33,
+        "row": 19,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_33_20",
+        "col": 33,
+        "row": 20,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_33_21",
+        "col": 33,
+        "row": 21,
+        "terrain": {
+          "clear": true
+        },
+        "name": "The Gathering",
+        "name_id": "the_gathering",
+        "city_id": "the_gathering",
+        "faction_id": "trolls"
+      },
+      {
+        "id": "hex_33_22",
+        "col": 33,
+        "row": 22,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_33_23",
+        "col": 33,
+        "row": 23,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_33_24",
+        "col": 33,
+        "row": 24,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_33_25",
+        "col": 33,
+        "row": 25,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_33_26",
+        "col": 33,
+        "row": 26,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_33_27",
+        "col": 33,
+        "row": 27,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_33_28",
+        "col": 33,
+        "row": 28,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_33_29",
+        "col": 33,
+        "row": 29,
+        "terrain": {
+          "scenic": true
+        },
+        "name": "Wyrm's Lair",
+        "name_id": "wyrm_s_lair"
+      },
+      {
+        "id": "hex_33_30",
+        "col": 33,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_34_0",
+        "col": 34,
+        "row": 0,
+        "terrain": {
+          "clear": true
+        },
+        "name": "Witches' Kitchen",
+        "name_id": "witches_kitchen"
+      },
+      {
+        "id": "hex_34_2",
+        "col": 34,
+        "row": 2,
+        "terrain": {
+          "swamp": true
+        }
+      },
+      {
+        "id": "hex_34_4",
+        "col": 34,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "id": "hex_34_6",
+        "col": 34,
+        "row": 6,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_34_8",
+        "col": 34,
+        "row": 8,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_34_10",
+        "col": 34,
+        "row": 10,
+        "terrain": {
+          "mountain": true
+        },
+        "faction_id": "ghem"
+      },
+      {
+        "id": "hex_34_12",
+        "col": 34,
+        "row": 12,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_34_14",
+        "col": 34,
+        "row": 14,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_34_16",
+        "col": 34,
+        "row": 16,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_34_18",
+        "col": 34,
+        "row": 18,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_34_20",
+        "col": 34,
+        "row": 20,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_34_22",
+        "col": 34,
+        "row": 22,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "id": "hex_34_24",
+        "col": 34,
+        "row": 24,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_34_26",
+        "col": 34,
+        "row": 26,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_34_28",
+        "col": 34,
+        "row": 28,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "id": "hex_34_30",
+        "col": 34,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      }
+    ]
+  }
+}

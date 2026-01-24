@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "refs_derived/starting_units.schema.json",
+  "type": "object",
+  "required": ["version", "mode", "generated_at", "source", "starting_units"],
+  "properties": {
+    "version": {"type": "string"},
+    "mode": {"type": "string", "enum": ["basic", "advanced"]},
+    "generated_at": {"type": "string"},
+    "source": {"type": "object"},
+    "starting_units": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["faction_id", "faction_name", "units"],
+        "properties": {
+          "faction_id": {"type": "string"},
+          "faction_name": {"type": "string"},
+          "units": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id", "name", "type", "count", "movement_points", "movement_type"],
+              "properties": {
+                "id": {"type": "string"},
+                "name": {"type": "string"},
+                "type": {"type": "string"},
+                "count": {"type": "integer"},
+                "start_hex": {
+                  "type": ["array", "null"],
+                  "items": {"type": "integer"},
+                  "minItems": 2,
+                  "maxItems": 2
+                },
+                "movement_points": {"type": "number"},
+                "movement_type": {"type": "string"},
+                "ability_ids": {
+                  "type": "array",
+                  "items": {"type": "string"}
+                },
+                "ability_names": {
+                  "type": "array",
+                  "items": {"type": "string"}
+                },
+                "city_id": {"type": ["string", "null"]},
+                "deployment": {"type": ["object", "null"]}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

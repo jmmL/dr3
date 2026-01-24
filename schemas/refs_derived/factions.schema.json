@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "refs_derived/factions.schema.json",
+  "type": "object",
+  "required": ["version", "mode", "generated_at", "source", "factions"],
+  "properties": {
+    "version": {"type": ["string", "null"]},
+    "mode": {"type": "string", "enum": ["basic", "advanced"]},
+    "generated_at": {"type": "string"},
+    "source": {"type": "object"},
+    "factions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "race", "race_id", "capital_name", "capital_id", "cities"],
+        "properties": {
+          "id": {"type": "string"},
+          "name": {"type": "string"},
+          "race": {"type": "string"},
+          "race_id": {"type": "string"},
+          "coat_of_arms": {"type": ["string", "null"]},
+          "color": {"type": ["string", "null"]},
+          "capital_name": {"type": "string"},
+          "capital_id": {"type": "string"},
+          "cities": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id", "name", "coords"],
+              "properties": {
+                "id": {"type": "string"},
+                "name": {"type": "string"},
+                "coords": {
+                  "type": "object",
+                  "required": ["col", "row"],
+                  "properties": {
+                    "col": {"type": "integer"},
+                    "row": {"type": "integer"}
+                  }
+                },
+                "armies": {"type": ["integer", "null"]},
+                "sea_fleet": {"type": ["integer", "null"]},
+                "is_capital": {"type": "boolean"},
+                "intrinsic_defense": {"type": ["integer", "null"]},
+                "terrain": {"type": ["object", "null"]}
+              }
+            }
+          },
+          "total_armies": {"type": ["integer", "null"]},
+          "total_sea_fleets": {"type": ["integer", "null"]},
+          "notes": {"type": ["string", "null"]}
+        }
+      }
+    }
+  }
+}
