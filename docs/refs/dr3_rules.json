@@ -448,8 +448,8 @@
     "17.2_cooperation_rule": "Different players may not combine strengths; separate sieges on same castle possible",
     "17.3_zone_of_siege": {
       "17.3.1_extends": "One hex around castle in either direction from adjacent combat unit",
-      "17.3.2_fleet_restriction": "Only extends to all-sea or coastal hexes",
-      "17.3.3_land_unit_restriction": "Only extends to all-land and coastal hexes",
+      "17.3.2_fleet_restriction": "Only extends to all-sea or seashore hexes",
+      "17.3.3_land_unit_restriction": "Only extends to all-land and seashore hexes",
       "17.3.4_not_negated_by": "Friendly units to besieged castle"
     },
     "17.4_units_inside_outside": {
@@ -631,13 +631,13 @@
     "19.7_lakeshore": {
       "19.7.1_movement_cost": 1,
       "19.7.2_restriction": "Cannot cross all-lake hexsides",
-      "19.7.3_coast_crossing_exception": "A land unit does not cross the coast if it moves from one lakeshore hex to another lakeshore hex, and both lakeshore hexes have a mutual neighbour that is neither a sea, major river or a lake"
+      "19.7.3_lakeshore_crossing_exception": "A land unit does not cross the lakeshore if it moves from one lakeshore hex to another lakeshore hex, and both lakeshore hexes have a mutual neighbour that is neither a sea, major river or a lake"
     },
-    "19.8_coast": {
+    "19.8_seashore": {
       "19.8.1_movement_cost": 1,
       "19.8.2_fleet_restriction": "Cannot cross all-land hexsides",
       "19.8.3_land_restriction": "Cannot cross all-sea hexsides",
-      "19.8.4_coast_crossing_exception": "A land unit does not cross the coast if it moves from one coast hex to another coast hex, and both coastal hexes have a mutual neighbour that is neither a sea, major river or a lake"
+      "19.8.4_seashore_crossing_exception": "A land unit does not cross the seashore if it moves from one seashore hex to another seashore hex, and both seashore hexes have a mutual neighbour that is neither a sea, major river or a lake"
     },
     "19.9_open_sea": {
       "19.9.1_movement_cost": 1,
@@ -681,7 +681,7 @@
   },
 
   "20_ports": {
-    "20.1_definition": "Coastal hexes enterable by both vessels and land units",
+    "20.1_definition": "Seashore hexes enterable by both vessels and land units",
     "20.2_castle_ports": {
       "20.2.1_identifier": "Castle with anchor icon",
       "20.2.2_applies_rules": ["Castle rules", "Port rules"],
@@ -700,13 +700,13 @@
   },
 
   "21_fleet_movement": {
-    "21.1_terrain_types": ["All-sea", "Coast", "Friendly ports"],
+    "21.1_terrain_types": ["All-sea", "Seashore", "Friendly ports"],
     "21.2_cost": 1,
     "21.3_restrictions": {
       "21.3.1_enemy_fleet_hex": "Cannot enter",
       "21.3.2_allied_fleet_stacking": "Cannot end movement in same hex",
-      "21.3.3_coast_with_enemy_land": "May move through, cannot end there",
-      "21.3.4_lone_monarch_coast": "No leader fate die roll when passing through"
+      "21.3.3_seashore_with_enemy_land": "May move through, cannot end there",
+      "21.3.4_lone_monarch_seashore": "No leader fate die roll when passing through"
     }
   },
 
@@ -718,7 +718,7 @@
     },
     "22.2_embark_cost": 0,
     "22.3_debark_cost": 0,
-    "22.4_debark_locations": ["Friendly port", "Coastal hex without mountains"],
+    "22.4_debark_locations": ["Friendly port", "Seashore hex without mountains"],
     "22.5_transported_unit_movement": "Cannot otherwise move that turn",
     "22.6_fleet_continuation": "May continue moving, embarking, debarking until MP spent"
   },
@@ -999,28 +999,47 @@
 
   "30_special_kingdom_rules": {
     "30.1_trolls": {
-      "30.1.1_setup": "Four separate locations",
-      "30.1.2_regeneration": {
-        "30.1.2.1_timing": "Beginning of each turn",
-        "30.1.2.2_effect": "Replace one eliminated regular unit",
-        "30.1.2.3_in_addition_to": "Random Events replacements",
-        "30.1.2.4_placement_blocked": "If hex enemy occupied, cannot regenerate that turn",
-        "30.1.2.5_same_turn_loss": "Regular lost through Random Events cannot regenerate same turn"
+      "30.1.1_setup": "Four separate locations: Stone Face (capital), The Gathering, The Crag, The Shunned Vale",
+      "30.1.2_no_castles": "Troll locations are cities without castles. They have no intrinsic defense strength and cannot be besieged in the traditional sense. Enemy units may freely enter Troll locations.",
+      "30.1.3_monarch_start": "The Troll monarch starts at Stone Face (col 6, row 13)",
+      "30.1.4_regeneration": {
+        "30.1.4.1_timing": "Beginning of each turn",
+        "30.1.4.2_effect": "Replace one eliminated regular unit",
+        "30.1.4.3_in_addition_to": "Random Events replacements",
+        "30.1.4.4_placement_blocked": "If hex enemy occupied, cannot regenerate that turn",
+        "30.1.4.5_same_turn_loss": "Regular lost through Random Events cannot regenerate same turn"
       }
     },
     "30.2_goblins": {
       "30.2.1_nithmere_mountains_deployment": {
         "30.2.1.1_units": "Goblins labeled 'Nithmere Mts.'",
-        "30.2.1.2_location": "Mountain and pass hexes of kingdom",
+        "30.2.1.2_location": "Mountain and pass hexes of Zorn territory",
         "30.2.1.3_limit": "One per hex",
         "30.2.1.4_adjacency": "No two may be adjacent",
-        "30.2.1.5_applies_to": ["Setup", "Replacements"]
+        "30.2.1.5_applies_to": ["Setup", "Replacements"],
+        "30.2.1.6_total_units": 8,
+        "30.2.1.7_example_deployment": {
+          "30.2.1.7.1_note": "This is one valid deployment; other configurations meeting the rules are permitted",
+          "30.2.1.7.2_hexes": [[21, 7], [20, 6], [21, 5], [20, 4], [18, 4], [18, 7], [18, 0], [19, 1]]
+        }
       }
     },
     "30.3_dwarves": {
       "30.3.1_setup": "Three separate locations",
       "30.3.2_locations": ["Aws Noir", "Alzak", "Rosengg"],
       "30.3.3_unity": "All related, fight for common cause"
+    }
+  },
+
+  "31_cities_vs_castles": {
+    "31.1_distinction": "Not all faction cities are castles. Units always deploy from cities, but only cities with castle markers provide intrinsic defense.",
+    "31.2_cities_without_castles": {
+      "31.2.1_examples": ["Farnot (Hothior)", "Yando (Muetar)", "Lepers (Shucassam)", "Gorpin (Immer)", "All Troll locations"],
+      "31.2.2_effect": "These locations serve as deployment hexes but have no intrinsic defense and cannot be besieged"
+    },
+    "31.3_castle_locations": {
+      "31.3.1_identification": "Hexes with 'castle: true' terrain marker in hexmap",
+      "31.3.2_defense": "Provide intrinsic defense strength for siege rules"
     }
   }
 }

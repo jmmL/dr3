@@ -10,6 +10,13 @@
         "abilities": ["Mountaineer"]
       },
       {
+        "name": "Ghem Ambassador",
+        "count": 1,
+        "start_hex": [32, 9],
+        "movement_points": "teleport",
+        "abilities": ["Diplomatic"]
+      },
+      {
         "name": "Rosengg Unit",
         "count": 3,
         "start_hex": [32, 9],
@@ -43,6 +50,13 @@
         "abilities": ["Forestwalking"]
       },
       {
+        "name": "Neuth Ambassador",
+        "count": 1,
+        "start_hex": [4, 5],
+        "movement_points": "teleport",
+        "abilities": ["Diplomatic"]
+      },
+      {
         "name": "Ider Bolis Unit",
         "count": 6,
         "start_hex": [4, 5],
@@ -62,6 +76,13 @@
         "abilities": ["Mountaineer", "Forestwalking"]
       },
       {
+        "name": "Zorn Ambassador",
+        "count": 1,
+        "start_hex": [23, 2],
+        "movement_points": "teleport",
+        "abilities": ["Diplomatic"]
+      },
+      {
         "name": "The Pits Unit",
         "count": 3,
         "start_hex": [23, 2],
@@ -70,59 +91,15 @@
       },
       {
         "name": "Nithmere Unit",
-        "count": 1,
-        "start_hex": [21, 7],
+        "count": 8,
         "movement_points": 6,
-        "abilities": ["Mountaineer", "Forestwalking"]
-      },
-      {
-        "name": "Nithmere Unit",
-        "count": 1,
-        "start_hex": [20, 6],
-        "movement_points": 6,
-        "abilities": ["Mountaineer", "Forestwalking"]
-      },
-      {
-        "name": "Nithmere Unit",
-        "count": 1,
-        "start_hex": [21, 5],
-        "movement_points": 6,
-        "abilities": ["Mountaineer", "Forestwalking"]
-      },
-      {
-        "name": "Nithmere Unit",
-        "count": 1,
-        "start_hex": [20, 4],
-        "movement_points": 6,
-        "abilities": ["Mountaineer", "Forestwalking"]
-      },
-      {
-        "name": "Nithmere Unit",
-        "count": 1,
-        "start_hex": [18, 4],
-        "movement_points": 6,
-        "abilities": ["Mountaineer", "Forestwalking"]
-      },
-      {
-        "name": "Nithmere Unit",
-        "count": 1,
-        "start_hex": [18, 7],
-        "movement_points": 6,
-        "abilities": ["Mountaineer", "Forestwalking"]
-      },
-      {
-        "name": "Nithmere Unit",
-        "count": 1,
-        "start_hex": [18, 0],
-        "movement_points": 6,
-        "abilities": ["Mountaineer", "Forestwalking"]
-      },
-      {
-        "name": "Nithmere Unit",
-        "count": 1,
-        "start_hex": [19, 1],
-        "movement_points": 6,
-        "abilities": ["Mountaineer", "Forestwalking"]
+        "abilities": ["Mountaineer", "Forestwalking"],
+        "deployment": {
+          "type": "scattered",
+          "rules": "One per mountain or pass hex within Zorn territory, no two adjacent. Player chooses valid deployment.",
+          "example_start_hexes": [[21, 7], [20, 6], [21, 5], [20, 4], [18, 4], [18, 7], [18, 0], [19, 1]],
+          "note": "The example deployment is one valid option; other configurations meeting the adjacency rules are permitted"
+        }
       }
     ]
   },
@@ -135,6 +112,13 @@
         "start_hex": [9, 17],
         "movement_points": 7,
         "abilities": []
+      },
+      {
+        "name": "Hothior Ambassador",
+        "count": 1,
+        "start_hex": [9, 17],
+        "movement_points": "teleport",
+        "abilities": ["Diplomatic"]
       },
       {
         "name": "Port Lork Unit",
@@ -191,6 +175,13 @@
         "abilities": []
       },
       {
+        "name": "Immer Ambassador",
+        "count": 1,
+        "start_hex": [14, 6],
+        "movement_points": "teleport",
+        "abilities": ["Diplomatic"]
+      },
+      {
         "name": "Altarr Unit",
         "count": 3,
         "start_hex": [14, 6],
@@ -236,6 +227,13 @@
         "start_hex": [4, 21],
         "movement_points": 7,
         "abilities": []
+      },
+      {
+        "name": "Mivior Ambassador",
+        "count": 1,
+        "start_hex": [4, 21],
+        "movement_points": "teleport",
+        "abilities": ["Diplomatic"]
       },
       {
         "name": "Colist Unit",
@@ -306,6 +304,13 @@
         "abilities": []
       },
       {
+        "name": "Muetar Ambassador",
+        "count": 1,
+        "start_hex": [19, 11],
+        "movement_points": "teleport",
+        "abilities": ["Diplomatic"]
+      },
+      {
         "name": "Basimar Unit",
         "count": 3,
         "start_hex": [24, 9],
@@ -360,6 +365,13 @@
         "abilities": []
       },
       {
+        "name": "Pon Ambassador",
+        "count": 1,
+        "start_hex": [28, 17],
+        "movement_points": "teleport",
+        "abilities": ["Diplomatic"]
+      },
+      {
         "name": "Marzarbol Unit",
         "count": 3,
         "start_hex": [28, 17],
@@ -398,6 +410,13 @@
         "start_hex": [5, 27],
         "movement_points": 7,
         "abilities": []
+      },
+      {
+        "name": "Rombune Ambassador",
+        "count": 1,
+        "start_hex": [5, 27],
+        "movement_points": "teleport",
+        "abilities": ["Diplomatic"]
       },
       {
         "name": "Golkus Unit",
@@ -468,6 +487,13 @@
         "abilities": []
       },
       {
+        "name": "Shucassam Ambassador",
+        "count": 1,
+        "start_hex": [24, 23],
+        "movement_points": "teleport",
+        "abilities": ["Diplomatic"]
+      },
+      {
         "name": "Adeese Unit",
         "count": 4,
         "start_hex": [24, 23],
@@ -522,6 +548,13 @@
         "abilities": ["Mountaineer", "Forestwalking"]
       },
       {
+        "name": "Trolls Ambassador",
+        "count": 1,
+        "start_hex": [6, 13],
+        "movement_points": "teleport",
+        "abilities": ["Diplomatic"]
+      },
+      {
         "name": "The Crag Unit",
         "count": 2,
         "start_hex": [27, 2],
@@ -536,14 +569,14 @@
         "abilities": ["Mountaineer", "Forestwalking"]
       },
       {
-        "name": "The Face Unit",
+        "name": "Stone Face Unit",
         "count": 2,
         "start_hex": [6, 13],
         "movement_points": 4,
         "abilities": ["Mountaineer", "Forestwalking"]
       },
       {
-        "name": "The Digs Unit",
+        "name": "The Gathering Unit",
         "count": 2,
         "start_hex": [33, 21],
         "movement_points": 4,
