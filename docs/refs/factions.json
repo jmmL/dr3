@@ -36,11 +36,11 @@
           "name": "Tadafat",
           "col": 10,
           "row": 14,
-          "armies": 2,
+          "armies": 2
         }
       ],
       "totalArmies": 7,
-      "totalSeaFleets": 2,
+      "totalSeaFleets": 2
     },
     {
       "id": "mivior",
@@ -64,7 +64,7 @@
           "col": 3,
           "row": 12,
           "armies": 3,
-          "seaFleet": 1,
+          "seaFleet": 1
         },
         {
           "name": "Boliske",
@@ -82,7 +82,7 @@
         }
       ],
       "totalArmies": 9,
-      "totalSeaFleets": 4,
+      "totalSeaFleets": 4
     },
     {
       "id": "muetar",
@@ -114,8 +114,8 @@
         },
         {
           "name": "Basimar",
-          "col": 25,
-          "row": 8,
+          "col": 24,
+          "row": 9,
           "armies": 3
         },
         {
@@ -128,11 +128,11 @@
           "name": "Yando",
           "col": 19,
           "row": 16,
-          "armies": 1,
+          "armies": 1
         }
       ],
       "totalArmies": 13,
-      "totalSeaFleets": 0,
+      "totalSeaFleets": 0
     },
     {
       "id": "shucassam",
@@ -172,7 +172,7 @@
         }
       ],
       "totalArmies": 11,
-      "totalSeaFleets": 3,
+      "totalSeaFleets": 3
     },
     {
       "id": "immer",
@@ -216,7 +216,7 @@
         }
       ],
       "totalArmies": 9,
-      "totalSeaFleets": 0,
+      "totalSeaFleets": 0
     },
     {
       "id": "pon",
@@ -249,7 +249,7 @@
         }
       ],
       "totalArmies": 7,
-      "totalSeaFleets": 1,
+      "totalSeaFleets": 1
     },
     {
       "id": "rombune",
@@ -291,7 +291,7 @@
         }
       ],
       "totalArmies": 6,
-      "totalSeaFleets": 4,
+      "totalSeaFleets": 4
     },
     {
       "id": "neuth",
@@ -311,7 +311,7 @@
         }
       ],
       "totalArmies": 6,
-      "totalSeaFleets": 0,
+      "totalSeaFleets": 0
     },
     {
       "id": "zorn",
@@ -330,8 +330,9 @@
           "isCapital": true
         }
       ],
-      "totalArmies": 3,
+      "totalArmies": 11,
       "totalSeaFleets": 0,
+      "notes": "Total includes 8 Nithmere Mountain units deployed separately per rule 30.2"
     },
     {
       "id": "ghem",
@@ -346,24 +347,24 @@
           "name": "Mines of Rosengg",
           "col": 32,
           "row": 9,
-          "armies": 2,
+          "armies": 3,
           "isCapital": true
         },
         {
           "name": "Aws Noir",
           "col": 2,
           "row": 1,
-          "armies": 2,
+          "armies": 3
         },
         {
           "name": "Alzak",
           "col": 33,
           "row": 14,
-          "armies": 1
+          "armies": 2
         }
       ],
-      "totalArmies": 5,
-      "totalSeaFleets": 0,
+      "totalArmies": 8,
+      "totalSeaFleets": 0
     },
     {
       "id": "trolls",
@@ -373,6 +374,11 @@
       "capitalName": "Stone Face",
       "capitalId": "stone_face",
       "color": "#A86051",
+      "monarchStartLocation": {
+        "name": "Stone Face",
+        "col": 6,
+        "row": 13
+      },
       "cities": [
         {
           "name": "Stone Face",
@@ -402,6 +408,7 @@
       ],
       "totalArmies": 8,
       "totalSeaFleets": 0,
+      "notes": "Trolls have no castles; their locations are open terrain. See rule 30.1 for special rules."
     }
   ]
 }

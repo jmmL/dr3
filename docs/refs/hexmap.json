@@ -1557,7 +1557,7 @@
       {
         "col": 6,
         "row": 13,
-        "name": "The Face",
+        "name": "Stone Face",
         "terrain": {
           "clear": true
         },
@@ -4998,8 +4998,7 @@
         "name": "The Keep",
         "terrain": {
           "castle": true
-        },
-        "intrinsic": 2
+        }
       },
       {
         "col": 20,
@@ -6419,7 +6418,7 @@
       {
         "col": 26,
         "row": 13,
-        "name": "Crow\\'s Nest",
+        "name": "Crow's Nest",
         "terrain": {
           "castle": true
         },
@@ -8119,7 +8118,7 @@
       {
         "col": 33,
         "row": 21,
-        "name": "The Digs",
+        "name": "The Gathering",
         "terrain": {
           "clear": true
         },
@@ -8177,7 +8176,7 @@
       {
         "col": 33,
         "row": 29,
-        "name": "Wyrm\\'s Lair",
+        "name": "Wyrm's Lair",
         "terrain": {
           "scenic": true
         }
@@ -8192,7 +8191,7 @@
       {
         "col": 34,
         "row": 0,
-        "name": "Witches\\' Kitchen",
+        "name": "Witches' Kitchen",
         "terrain": {
           "clear": true
         }
