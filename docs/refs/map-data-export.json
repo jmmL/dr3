@@ -1,0 +1,8308 @@
+{
+  "version": "1.0.0",
+  "exportDate": "2026-01-24T12:10:39.974Z",
+  "map": {
+    "cols": 35,
+    "rows": 31,
+    "hexes": [
+      {
+        "col": 0,
+        "row": 0,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 0,
+        "row": 1,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 0,
+        "row": 2,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 0,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 0,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 0,
+        "row": 5,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 0,
+        "row": 6,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 0,
+        "row": 7,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 0,
+        "row": 8,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 0,
+        "row": 9,
+        "name": "Stump Hole",
+        "terrain": {
+          "scenic": true
+        }
+      },
+      {
+        "col": 0,
+        "row": 10,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 0,
+        "row": 11,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 0,
+        "row": 12,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "col": 0,
+        "row": 13,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 0,
+        "row": 14,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 0,
+        "row": 15,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 0,
+        "row": 16,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 0,
+        "row": 17,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 0,
+        "row": 18,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 0,
+        "row": 19,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 0,
+        "row": 20,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 0,
+        "row": 21,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 0,
+        "row": 22,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 0,
+        "row": 23,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 0,
+        "row": 24,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 0,
+        "row": 25,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 0,
+        "row": 26,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 0,
+        "row": 27,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 0,
+        "row": 28,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 0,
+        "row": 29,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 0,
+        "row": 30,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 1,
+        "row": 0,
+        "name": "The Haven",
+        "terrain": {
+          "forest": true,
+          "scenic": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 1,
+        "row": 1,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 1,
+        "row": 2,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 1,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 1,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 1,
+        "row": 5,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 1,
+        "row": 6,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 1,
+        "row": 7,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 1,
+        "row": 8,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 1,
+        "row": 9,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 1,
+        "row": 10,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 1,
+        "row": 11,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 1,
+        "row": 12,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "col": 1,
+        "row": 13,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 1,
+        "row": 14,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 1,
+        "row": 15,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 1,
+        "row": 16,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 1,
+        "row": 17,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 1,
+        "row": 18,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 1,
+        "row": 19,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 1,
+        "row": 20,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 1,
+        "row": 21,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 1,
+        "row": 22,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 1,
+        "row": 23,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 1,
+        "row": 24,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 1,
+        "row": 25,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 1,
+        "row": 26,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 1,
+        "row": 27,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 1,
+        "row": 28,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 1,
+        "row": 29,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 1,
+        "row": 30,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 2,
+        "row": 0,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 2,
+        "row": 1,
+        "name": "Aws Noir",
+        "terrain": {
+          "castle": true
+        },
+        "kingdom": "ghem",
+        "intrinsic": 4
+      },
+      {
+        "col": 2,
+        "row": 2,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "ghem"
+      },
+      {
+        "col": 2,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 2,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 2,
+        "row": 5,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 2,
+        "row": 6,
+        "terrain": {
+          "forest": true,
+          "lakeshore": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 2,
+        "row": 7,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 2,
+        "row": 8,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 2,
+        "row": 9,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 2,
+        "row": 10,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 2,
+        "row": 11,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 2,
+        "row": 12,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "mivior"
+      },
+      {
+        "col": 2,
+        "row": 13,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 2,
+        "row": 14,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 2,
+        "row": 15,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 2,
+        "row": 16,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 2,
+        "row": 17,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 2,
+        "row": 18,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 2,
+        "row": 19,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 2,
+        "row": 20,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 2,
+        "row": 21,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 2,
+        "row": 22,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 2,
+        "row": 23,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 2,
+        "row": 24,
+        "name": "Isle of Fright",
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 2,
+        "row": 25,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 2,
+        "row": 26,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 2,
+        "row": 27,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 2,
+        "row": 28,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 2,
+        "row": 29,
+        "name": "Thores",
+        "terrain": {
+          "port": true
+        },
+        "kingdom": "rombune",
+        "intrinsic": 3
+      },
+      {
+        "col": 2,
+        "row": 30,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 3,
+        "row": 0,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "ghem"
+      },
+      {
+        "col": 3,
+        "row": 1,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "ghem"
+      },
+      {
+        "col": 3,
+        "row": 2,
+        "terrain": {
+          "forest": true,
+          "minorRiver": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 3,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 3,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 3,
+        "row": 5,
+        "terrain": {
+          "forest": true,
+          "lakeshore": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 3,
+        "row": 6,
+        "terrain": {
+          "forest": true,
+          "lakeshore": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 3,
+        "row": 7,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 3,
+        "row": 8,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 3,
+        "row": 9,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 3,
+        "row": 10,
+        "terrain": {
+          "hill": true,
+          "minorRiver": true
+        }
+      },
+      {
+        "col": 3,
+        "row": 11,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 3,
+        "row": 12,
+        "name": "Addat",
+        "terrain": {
+          "port": true
+        },
+        "kingdom": "mivior",
+        "intrinsic": 3
+      },
+      {
+        "col": 3,
+        "row": 13,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "mivior"
+      },
+      {
+        "col": 3,
+        "row": 14,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 3,
+        "row": 15,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 3,
+        "row": 16,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 3,
+        "row": 17,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 3,
+        "row": 18,
+        "name": "Boliske",
+        "terrain": {
+          "port": true
+        },
+        "kingdom": "mivior",
+        "intrinsic": 2
+      },
+      {
+        "col": 3,
+        "row": 19,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 3,
+        "row": 20,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 3,
+        "row": 21,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "mivior"
+      },
+      {
+        "col": 3,
+        "row": 22,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 3,
+        "row": 23,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 3,
+        "row": 24,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 3,
+        "row": 25,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 3,
+        "row": 26,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 3,
+        "row": 27,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 3,
+        "row": 28,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 3,
+        "row": 29,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 3,
+        "row": 30,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 4,
+        "row": 0,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 4,
+        "row": 1,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 4,
+        "row": 2,
+        "terrain": {
+          "forest": true,
+          "minorRiver": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 4,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 4,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 4,
+        "row": 5,
+        "name": "Ider Bolis",
+        "terrain": {
+          "castle": true,
+          "royal": true
+        },
+        "kingdom": "neuth",
+        "intrinsic": 5
+      },
+      {
+        "col": 4,
+        "row": 6,
+        "terrain": {
+          "forest": true,
+          "lakeshore": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 4,
+        "row": 7,
+        "terrain": {
+          "forest": true,
+          "lakeshore": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 4,
+        "row": 8,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 4,
+        "row": 9,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 4,
+        "row": 10,
+        "terrain": {
+          "hill": true,
+          "minorRiver": true
+        }
+      },
+      {
+        "col": 4,
+        "row": 11,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "mivior"
+      },
+      {
+        "col": 4,
+        "row": 12,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "mivior"
+      },
+      {
+        "col": 4,
+        "row": 13,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "mivior"
+      },
+      {
+        "col": 4,
+        "row": 14,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "mivior"
+      },
+      {
+        "col": 4,
+        "row": 15,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "mivior"
+      },
+      {
+        "col": 4,
+        "row": 16,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 4,
+        "row": 17,
+        "terrain": {
+          "forest": true,
+          "seashore": true
+        },
+        "kingdom": "mivior"
+      },
+      {
+        "col": 4,
+        "row": 18,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 4,
+        "row": 19,
+        "terrain": {
+          "forest": true,
+          "seashore": true
+        },
+        "kingdom": "mivior"
+      },
+      {
+        "col": 4,
+        "row": 20,
+        "terrain": {
+          "forest": true,
+          "seashore": true
+        },
+        "kingdom": "mivior"
+      },
+      {
+        "col": 4,
+        "row": 21,
+        "name": "Colist",
+        "terrain": {
+          "port": true,
+          "royal": true
+        },
+        "kingdom": "mivior",
+        "intrinsic": 4
+      },
+      {
+        "col": 4,
+        "row": 22,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "mivior"
+      },
+      {
+        "col": 4,
+        "row": 23,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 4,
+        "row": 24,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 4,
+        "row": 25,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 4,
+        "row": 26,
+        "terrain": {
+          "forest": true,
+          "seashore": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 4,
+        "row": 27,
+        "terrain": {
+          "forest": true,
+          "mountain": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 4,
+        "row": 28,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 4,
+        "row": 29,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 4,
+        "row": 30,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 5,
+        "row": 0,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 5,
+        "row": 1,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 5,
+        "row": 2,
+        "terrain": {
+          "forest": true,
+          "minorRiver": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 5,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 5,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 5,
+        "row": 5,
+        "terrain": {
+          "forest": true,
+          "minorRiver": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 5,
+        "row": 6,
+        "terrain": {
+          "lake": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 5,
+        "row": 7,
+        "terrain": {
+          "forest": true,
+          "lakeshore": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 5,
+        "row": 8,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 5,
+        "row": 9,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 5,
+        "row": 10,
+        "terrain": {
+          "swamp": true,
+          "minorRiver": true
+        }
+      },
+      {
+        "col": 5,
+        "row": 11,
+        "terrain": {
+          "minorRiver": true
+        }
+      },
+      {
+        "col": 5,
+        "row": 12,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "mivior"
+      },
+      {
+        "col": 5,
+        "row": 13,
+        "terrain": {
+          "forest": true,
+          "seashore": true
+        }
+      },
+      {
+        "col": 5,
+        "row": 14,
+        "name": "Serpent Bay",
+        "terrain": {
+          "sea": true,
+          "scenic": true
+        }
+      },
+      {
+        "col": 5,
+        "row": 15,
+        "terrain": {
+          "mountain": true,
+          "seashore": true
+        },
+        "kingdom": "mivior"
+      },
+      {
+        "col": 5,
+        "row": 16,
+        "name": "Boran",
+        "terrain": {
+          "port": true
+        },
+        "kingdom": "mivior",
+        "intrinsic": 2
+      },
+      {
+        "col": 5,
+        "row": 17,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "mivior"
+      },
+      {
+        "col": 5,
+        "row": 18,
+        "terrain": {
+          "mountain": true,
+          "seashore": true
+        },
+        "kingdom": "mivior"
+      },
+      {
+        "col": 5,
+        "row": 19,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "mivior"
+      },
+      {
+        "col": 5,
+        "row": 20,
+        "terrain": {
+          "mountain": true,
+          "seashore": true
+        },
+        "kingdom": "mivior"
+      },
+      {
+        "col": 5,
+        "row": 21,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 5,
+        "row": 22,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "mivior"
+      },
+      {
+        "col": 5,
+        "row": 23,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 5,
+        "row": 24,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 5,
+        "row": 25,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 5,
+        "row": 26,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 5,
+        "row": 27,
+        "name": "The Golkus",
+        "terrain": {
+          "port": true,
+          "royal": true
+        },
+        "kingdom": "rombune",
+        "intrinsic": 3
+      },
+      {
+        "col": 5,
+        "row": 28,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 5,
+        "row": 29,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 5,
+        "row": 30,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 6,
+        "row": 0,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 6,
+        "row": 1,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 6,
+        "row": 2,
+        "terrain": {
+          "forest": true,
+          "minorRiver": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 6,
+        "row": 3,
+        "terrain": {
+          "forest": true,
+          "minorRiver": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 6,
+        "row": 4,
+        "name": "Ruins of Letho",
+        "terrain": {
+          "swamp": true,
+          "scenic": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 6,
+        "row": 5,
+        "terrain": {
+          "forest": true,
+          "minorRiver": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 6,
+        "row": 6,
+        "terrain": {
+          "forest": true,
+          "lakeshore": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 6,
+        "row": 7,
+        "terrain": {
+          "forest": true,
+          "lakeshore": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 6,
+        "row": 8,
+        "terrain": {
+          "forest": true,
+          "minorRiver": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 6,
+        "row": 9,
+        "terrain": {
+          "swamp": true,
+          "minorRiver": true
+        }
+      },
+      {
+        "col": 6,
+        "row": 10,
+        "terrain": {
+          "swamp": true,
+          "minorRiver": true
+        }
+      },
+      {
+        "col": 6,
+        "row": 11,
+        "terrain": {
+          "swamp": true
+        }
+      },
+      {
+        "col": 6,
+        "row": 12,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 6,
+        "row": 13,
+        "name": "The Face",
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "trolls"
+      },
+      {
+        "col": 6,
+        "row": 14,
+        "terrain": {
+          "mountain": true,
+          "seashore": true
+        }
+      },
+      {
+        "col": 6,
+        "row": 15,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "mivior"
+      },
+      {
+        "col": 6,
+        "row": 16,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "mivior"
+      },
+      {
+        "col": 6,
+        "row": 17,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "mivior"
+      },
+      {
+        "col": 6,
+        "row": 18,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "mivior"
+      },
+      {
+        "col": 6,
+        "row": 19,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "mivior"
+      },
+      {
+        "col": 6,
+        "row": 20,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "mivior"
+      },
+      {
+        "col": 6,
+        "row": 21,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 6,
+        "row": 22,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 6,
+        "row": 23,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 6,
+        "row": 24,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 6,
+        "row": 25,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 6,
+        "row": 26,
+        "terrain": {
+          "forest": true,
+          "seashore": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 6,
+        "row": 27,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 6,
+        "row": 28,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 6,
+        "row": 29,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 6,
+        "row": 30,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 7,
+        "row": 0,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 7,
+        "row": 1,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 7,
+        "row": 2,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 7,
+        "row": 3,
+        "terrain": {
+          "forest": true,
+          "minorRiver": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 7,
+        "row": 4,
+        "terrain": {
+          "forest": true,
+          "minorRiver": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 7,
+        "row": 5,
+        "terrain": {
+          "forest": true,
+          "minorRiver": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 7,
+        "row": 6,
+        "terrain": {
+          "forest": true,
+          "lakeshore": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 7,
+        "row": 7,
+        "terrain": {
+          "forest": true,
+          "lakeshore": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 7,
+        "row": 8,
+        "terrain": {
+          "forest": true,
+          "minorRiver": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 7,
+        "row": 9,
+        "terrain": {
+          "forest": true,
+          "minorRiver": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 7,
+        "row": 10,
+        "terrain": {
+          "swamp": true
+        }
+      },
+      {
+        "col": 7,
+        "row": 11,
+        "terrain": {
+          "swamp": true
+        }
+      },
+      {
+        "col": 7,
+        "row": 12,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 7,
+        "row": 13,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 7,
+        "row": 14,
+        "name": "Mace Pass",
+        "terrain": {
+          "pass": true
+        }
+      },
+      {
+        "col": 7,
+        "row": 15,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 7,
+        "row": 16,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 7,
+        "row": 17,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 7,
+        "row": 18,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "mivior"
+      },
+      {
+        "col": 7,
+        "row": 19,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "mivior"
+      },
+      {
+        "col": 7,
+        "row": 20,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "mivior"
+      },
+      {
+        "col": 7,
+        "row": 21,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 7,
+        "row": 22,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 7,
+        "row": 23,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 7,
+        "row": 24,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 7,
+        "row": 25,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 7,
+        "row": 26,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 7,
+        "row": 27,
+        "name": "Point Lookout",
+        "terrain": {
+          "seashore": true,
+          "scenic": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 7,
+        "row": 28,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 7,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 7,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 8,
+        "row": 0,
+        "name": "Standing Stones",
+        "terrain": {
+          "scenic": true
+        }
+      },
+      {
+        "col": 8,
+        "row": 1,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 8,
+        "row": 2,
+        "terrain": {
+          "forest": true,
+          "minorRiver": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 8,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 8,
+        "row": 4,
+        "terrain": {
+          "forest": true,
+          "minorRiver": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 8,
+        "row": 5,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 8,
+        "row": 6,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 8,
+        "row": 7,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 8,
+        "row": 8,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 8,
+        "row": 9,
+        "terrain": {
+          "forest": true,
+          "minorRiver": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 8,
+        "row": 10,
+        "terrain": {
+          "swamp": true
+        }
+      },
+      {
+        "col": 8,
+        "row": 11,
+        "name": "Willowik",
+        "terrain": {
+          "swamp": true,
+          "scenic": true
+        }
+      },
+      {
+        "col": 8,
+        "row": 12,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 8,
+        "row": 13,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "col": 8,
+        "row": 14,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "col": 8,
+        "row": 15,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 8,
+        "row": 16,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 8,
+        "row": 17,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 8,
+        "row": 18,
+        "terrain": {
+          "forest": true,
+          "seashore": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 8,
+        "row": 19,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 8,
+        "row": 20,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 8,
+        "row": 21,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 8,
+        "row": 22,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 8,
+        "row": 23,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 8,
+        "row": 24,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 8,
+        "row": 25,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 8,
+        "row": 26,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 8,
+        "row": 27,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 8,
+        "row": 28,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 8,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 8,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 9,
+        "row": 0,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 9,
+        "row": 1,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 9,
+        "row": 2,
+        "terrain": {
+          "forest": true,
+          "minorRiver": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 9,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 9,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 9,
+        "row": 5,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 9,
+        "row": 6,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 9,
+        "row": 7,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 9,
+        "row": 8,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 9,
+        "row": 9,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 9,
+        "row": 10,
+        "terrain": {
+          "swamp": true,
+          "minorRiver": true
+        }
+      },
+      {
+        "col": 9,
+        "row": 11,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 9,
+        "row": 12,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 9,
+        "row": 13,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 9,
+        "row": 14,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 9,
+        "row": 15,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 9,
+        "row": 16,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 9,
+        "row": 17,
+        "name": "Port Lork",
+        "terrain": {
+          "port": true,
+          "royal": true
+        },
+        "kingdom": "hothior",
+        "intrinsic": 3
+      },
+      {
+        "col": 9,
+        "row": 18,
+        "name": "The Boom",
+        "terrain": {
+          "seashore": true,
+          "scenic": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 9,
+        "row": 19,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 9,
+        "row": 20,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 9,
+        "row": 21,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 9,
+        "row": 22,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 9,
+        "row": 23,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 9,
+        "row": 24,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 9,
+        "row": 25,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 9,
+        "row": 26,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 9,
+        "row": 27,
+        "terrain": {
+          "forest": true,
+          "seashore": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 9,
+        "row": 28,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 9,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 9,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 10,
+        "row": 0,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 10,
+        "row": 1,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 10,
+        "row": 2,
+        "terrain": {
+          "forest": true,
+          "minorRiver": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 10,
+        "row": 3,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 10,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 10,
+        "row": 5,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 10,
+        "row": 6,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "neuth"
+      },
+      {
+        "col": 10,
+        "row": 7,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 10,
+        "row": 8,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 10,
+        "row": 9,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 10,
+        "row": 10,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 10,
+        "row": 11,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "col": 10,
+        "row": 12,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 10,
+        "row": 13,
+        "terrain": {
+          "hill": true,
+          "minorRiver": true
+        }
+      },
+      {
+        "col": 10,
+        "row": 14,
+        "name": "Tadafat",
+        "terrain": {
+          "castle": true
+        },
+        "kingdom": "hothior",
+        "intrinsic": 2
+      },
+      {
+        "col": 10,
+        "row": 15,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 10,
+        "row": 16,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 10,
+        "row": 17,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 10,
+        "row": 18,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 10,
+        "row": 19,
+        "name": "Farnot",
+        "terrain": {
+          "seashore": true,
+          "scenic": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 10,
+        "row": 20,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 10,
+        "row": 21,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 10,
+        "row": 22,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 10,
+        "row": 23,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 10,
+        "row": 24,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 10,
+        "row": 25,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "col": 10,
+        "row": 26,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "col": 10,
+        "row": 27,
+        "terrain": {
+          "forest": true,
+          "seashore": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 10,
+        "row": 28,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 10,
+        "row": 29,
+        "terrain": {
+          "hill": true,
+          "seashore": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 10,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 11,
+        "row": 0,
+        "terrain": {
+          "minorRiver": true
+        }
+      },
+      {
+        "col": 11,
+        "row": 1,
+        "terrain": {
+          "minorRiver": true
+        }
+      },
+      {
+        "col": 11,
+        "row": 2,
+        "terrain": {
+          "minorRiver": true
+        }
+      },
+      {
+        "col": 11,
+        "row": 3,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 11,
+        "row": 4,
+        "name": "The Unknown Army",
+        "terrain": {
+          "ancientBattlefield": true
+        }
+      },
+      {
+        "col": 11,
+        "row": 5,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 11,
+        "row": 6,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 11,
+        "row": 7,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 11,
+        "row": 8,
+        "terrain": {
+          "swamp": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 11,
+        "row": 9,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 11,
+        "row": 10,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 11,
+        "row": 11,
+        "terrain": {
+          "mountain": true,
+          "minorRiver": true
+        }
+      },
+      {
+        "col": 11,
+        "row": 12,
+        "terrain": {
+          "hill": true,
+          "minorRiver": true
+        }
+      },
+      {
+        "col": 11,
+        "row": 13,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 11,
+        "row": 14,
+        "terrain": {
+          "hill": true,
+          "minorRiver": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 11,
+        "row": 15,
+        "terrain": {
+          "hill": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 11,
+        "row": 16,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 11,
+        "row": 17,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 11,
+        "row": 18,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 11,
+        "row": 19,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 11,
+        "row": 20,
+        "terrain": {
+          "forest": true,
+          "seashore": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 11,
+        "row": 21,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 11,
+        "row": 22,
+        "name": "Zefnar",
+        "terrain": {
+          "port": true
+        },
+        "kingdom": "shucassam",
+        "intrinsic": 3
+      },
+      {
+        "col": 11,
+        "row": 23,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 11,
+        "row": 24,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "col": 11,
+        "row": 25,
+        "name": "Tombs of Olde",
+        "terrain": {
+          "scenic": true
+        }
+      },
+      {
+        "col": 11,
+        "row": 26,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "col": 11,
+        "row": 27,
+        "terrain": {
+          "hill": true,
+          "seashore": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 11,
+        "row": 28,
+        "name": "Parros",
+        "terrain": {
+          "port": true
+        },
+        "kingdom": "rombune",
+        "intrinsic": 3
+      },
+      {
+        "col": 11,
+        "row": 29,
+        "terrain": {
+          "hill": true,
+          "seashore": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 11,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 12,
+        "row": 0,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 12,
+        "row": 1,
+        "terrain": {
+          "minorRiver": true
+        }
+      },
+      {
+        "col": 12,
+        "row": 2,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 12,
+        "row": 3,
+        "name": "Wirzor",
+        "terrain": {
+          "castle": true
+        },
+        "kingdom": "immer",
+        "intrinsic": 2
+      },
+      {
+        "col": 12,
+        "row": 4,
+        "terrain": {
+          "hill": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 12,
+        "row": 5,
+        "terrain": {
+          "hill": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 12,
+        "row": 6,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 12,
+        "row": 7,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 12,
+        "row": 8,
+        "terrain": {
+          "swamp": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 12,
+        "row": 9,
+        "terrain": {
+          "hill": true,
+          "lakeshore": true
+        }
+      },
+      {
+        "col": 12,
+        "row": 10,
+        "name": "Invisible School",
+        "terrain": {
+          "castle": true,
+          "royal": true
+        },
+        "kingdom": "eaters",
+        "intrinsic": 5
+      },
+      {
+        "col": 12,
+        "row": 11,
+        "terrain": {
+          "forest": true,
+          "lakeshore": true
+        }
+      },
+      {
+        "col": 12,
+        "row": 12,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 12,
+        "row": 13,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 12,
+        "row": 14,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 12,
+        "row": 15,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 12,
+        "row": 16,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 12,
+        "row": 17,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 12,
+        "row": 18,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 12,
+        "row": 19,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 12,
+        "row": 20,
+        "terrain": {
+          "forest": true,
+          "seashore": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 12,
+        "row": 21,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 12,
+        "row": 22,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 12,
+        "row": 23,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 12,
+        "row": 24,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 12,
+        "row": 25,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 12,
+        "row": 26,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 12,
+        "row": 27,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 12,
+        "row": 28,
+        "terrain": {
+          "hill": true,
+          "seashore": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 12,
+        "row": 29,
+        "name": "The Crater",
+        "terrain": {
+          "hill": true,
+          "scenic": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 12,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 13,
+        "row": 0,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 13,
+        "row": 1,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 13,
+        "row": 2,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 13,
+        "row": 3,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 13,
+        "row": 4,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 13,
+        "row": 5,
+        "terrain": {
+          "hill": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 13,
+        "row": 6,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 13,
+        "row": 7,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 13,
+        "row": 8,
+        "terrain": {
+          "swamp": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 13,
+        "row": 9,
+        "terrain": {
+          "hill": true,
+          "lakeshore": true
+        }
+      },
+      {
+        "col": 13,
+        "row": 10,
+        "terrain": {
+          "lake": true
+        }
+      },
+      {
+        "col": 13,
+        "row": 11,
+        "terrain": {
+          "forest": true,
+          "minorRiver": true,
+          "lakeshore": true
+        }
+      },
+      {
+        "col": 13,
+        "row": 12,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 13,
+        "row": 13,
+        "terrain": {
+          "forest": true,
+          "minorRiver": true
+        }
+      },
+      {
+        "col": 13,
+        "row": 14,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 13,
+        "row": 15,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 13,
+        "row": 16,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 13,
+        "row": 17,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 13,
+        "row": 18,
+        "name": "Castle Lapspell",
+        "terrain": {
+          "port": true
+        },
+        "kingdom": "hothior",
+        "intrinsic": 3
+      },
+      {
+        "col": 13,
+        "row": 19,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "col": 13,
+        "row": 20,
+        "name": "Freeport"
+      },
+      {
+        "col": 13,
+        "row": 21,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 13,
+        "row": 22,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 13,
+        "row": 23,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 13,
+        "row": 24,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 13,
+        "row": 25,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 13,
+        "row": 26,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 13,
+        "row": 27,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 13,
+        "row": 28,
+        "terrain": {
+          "hill": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 13,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 13,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 14,
+        "row": 0,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 14,
+        "row": 1,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 14,
+        "row": 2,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 14,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 14,
+        "row": 4,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 14,
+        "row": 5,
+        "terrain": {
+          "hill": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 14,
+        "row": 6,
+        "name": "Castle Altarr",
+        "terrain": {
+          "castle": true,
+          "royal": true
+        },
+        "kingdom": "immer",
+        "intrinsic": 3
+      },
+      {
+        "col": 14,
+        "row": 7,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 14,
+        "row": 8,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 14,
+        "row": 9,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 14,
+        "row": 10,
+        "terrain": {
+          "swamp": true,
+          "lakeshore": true
+        }
+      },
+      {
+        "col": 14,
+        "row": 11,
+        "name": "Camptown",
+        "terrain": {
+          "forest": true,
+          "scenic": true
+        }
+      },
+      {
+        "col": 14,
+        "row": 12,
+        "terrain": {
+          "forest": true,
+          "minorRiver": true
+        }
+      },
+      {
+        "col": 14,
+        "row": 13,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 14,
+        "row": 14,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 14,
+        "row": 15,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 14,
+        "row": 16,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 14,
+        "row": 17,
+        "terrain": {
+          "swamp": true,
+          "majorRiver": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 14,
+        "row": 18,
+        "terrain": {
+          "majorRiver": true
+        },
+        "kingdom": "hothior"
+      },
+      {
+        "col": 14,
+        "row": 19,
+        "terrain": {
+          "hill": true,
+          "majorRiver": true
+        }
+      },
+      {
+        "col": 14,
+        "row": 20,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 14,
+        "row": 21,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 14,
+        "row": 22,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 14,
+        "row": 23,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 14,
+        "row": 24,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 14,
+        "row": 25,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 14,
+        "row": 26,
+        "name": "Plain of Bones",
+        "terrain": {
+          "ancientBattlefield": true
+        }
+      },
+      {
+        "col": 14,
+        "row": 27,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 14,
+        "row": 28,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 14,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 14,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 15,
+        "row": 0,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "col": 15,
+        "row": 1,
+        "terrain": {
+          "mountain": true,
+          "minorRiver": true
+        }
+      },
+      {
+        "col": 15,
+        "row": 2,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 15,
+        "row": 3,
+        "name": "Gorpin",
+        "terrain": {
+          "forest": true,
+          "scenic": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 15,
+        "row": 4,
+        "terrain": {
+          "hill": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 15,
+        "row": 5,
+        "terrain": {
+          "hill": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 15,
+        "row": 6,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 15,
+        "row": 7,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 15,
+        "row": 8,
+        "name": "Muscaster",
+        "terrain": {
+          "castle": true
+        },
+        "kingdom": "immer",
+        "intrinsic": 3
+      },
+      {
+        "col": 15,
+        "row": 9,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 15,
+        "row": 10,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 15,
+        "row": 11,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 15,
+        "row": 12,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 15,
+        "row": 13,
+        "terrain": {
+          "hill": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 15,
+        "row": 14,
+        "terrain": {
+          "hill": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 15,
+        "row": 15,
+        "terrain": {
+          "hill": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 15,
+        "row": 16,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 15,
+        "row": 17,
+        "terrain": {
+          "swamp": true,
+          "majorRiver": true
+        }
+      },
+      {
+        "col": 15,
+        "row": 18,
+        "terrain": {
+          "majorRiver": true
+        }
+      },
+      {
+        "col": 15,
+        "row": 19,
+        "name": "Hubbleglum",
+        "terrain": {
+          "scenic": true
+        }
+      },
+      {
+        "col": 15,
+        "row": 20,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 15,
+        "row": 21,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 15,
+        "row": 22,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 15,
+        "row": 23,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 15,
+        "row": 24,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 15,
+        "row": 25,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 15,
+        "row": 26,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 15,
+        "row": 27,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 15,
+        "row": 28,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 15,
+        "row": 29,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 15,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 16,
+        "row": 0,
+        "terrain": {
+          "mountain": true,
+          "minorRiver": true
+        }
+      },
+      {
+        "col": 16,
+        "row": 1,
+        "name": "The Temple of Kings",
+        "terrain": {
+          "scenic": true
+        }
+      },
+      {
+        "col": 16,
+        "row": 2,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 16,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 16,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 16,
+        "row": 5,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 16,
+        "row": 6,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 16,
+        "row": 7,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 16,
+        "row": 8,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 16,
+        "row": 9,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 16,
+        "row": 10,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 16,
+        "row": 11,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 16,
+        "row": 12,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 16,
+        "row": 13,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 16,
+        "row": 14,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 16,
+        "row": 15,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 16,
+        "row": 16,
+        "terrain": {
+          "swamp": true,
+          "majorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 16,
+        "row": 17,
+        "terrain": {
+          "swamp": true,
+          "majorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 16,
+        "row": 18,
+        "terrain": {
+          "majorRiver": true
+        }
+      },
+      {
+        "col": 16,
+        "row": 19,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 16,
+        "row": 20,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 16,
+        "row": 21,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 16,
+        "row": 22,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 16,
+        "row": 23,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 16,
+        "row": 24,
+        "name": "Lost Caravan",
+        "terrain": {
+          "scenic": true
+        }
+      },
+      {
+        "col": 16,
+        "row": 25,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 16,
+        "row": 26,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 16,
+        "row": 27,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 16,
+        "row": 28,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 16,
+        "row": 29,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 16,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 17,
+        "row": 0,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "col": 17,
+        "row": 1,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "col": 17,
+        "row": 2,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "col": 17,
+        "row": 3,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 17,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 17,
+        "row": 5,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 17,
+        "row": 6,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 17,
+        "row": 7,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 17,
+        "row": 8,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 17,
+        "row": 9,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 17,
+        "row": 10,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 17,
+        "row": 11,
+        "terrain": {
+          "lakeshore": true
+        }
+      },
+      {
+        "col": 17,
+        "row": 12,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "col": 17,
+        "row": 13,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 17,
+        "row": 14,
+        "name": "Plibba",
+        "terrain": {
+          "castle": true
+        },
+        "kingdom": "muetar",
+        "intrinsic": 2
+      },
+      {
+        "col": 17,
+        "row": 15,
+        "terrain": {
+          "majorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 17,
+        "row": 16,
+        "terrain": {
+          "swamp": true,
+          "majorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 17,
+        "row": 17,
+        "terrain": {
+          "swamp": true,
+          "majorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 17,
+        "row": 18,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 17,
+        "row": 19,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 17,
+        "row": 20,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 17,
+        "row": 21,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 17,
+        "row": 22,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 17,
+        "row": 23,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 17,
+        "row": 24,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 17,
+        "row": 25,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 17,
+        "row": 26,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 17,
+        "row": 27,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "col": 17,
+        "row": 28,
+        "name": "The Shunned Vale",
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "trolls"
+      },
+      {
+        "col": 17,
+        "row": 29,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "col": 17,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 18,
+        "row": 0,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 18,
+        "row": 1,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 18,
+        "row": 2,
+        "name": "Winter Rest",
+        "terrain": {
+          "mountain": true,
+          "scenic": true
+        }
+      },
+      {
+        "col": 18,
+        "row": 3,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 18,
+        "row": 4,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 18,
+        "row": 5,
+        "name": "Gap Castle",
+        "terrain": {
+          "castle": true
+        },
+        "kingdom": "immer",
+        "intrinsic": 2
+      },
+      {
+        "col": 18,
+        "row": 6,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 18,
+        "row": 7,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 18,
+        "row": 8,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "immer"
+      },
+      {
+        "col": 18,
+        "row": 9,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 18,
+        "row": 10,
+        "terrain": {
+          "lakeshore": true
+        }
+      },
+      {
+        "col": 18,
+        "row": 11,
+        "terrain": {
+          "lakeshore": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 18,
+        "row": 12,
+        "terrain": {
+          "lakeshore": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 18,
+        "row": 13,
+        "terrain": {
+          "majorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 18,
+        "row": 14,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 18,
+        "row": 15,
+        "terrain": {
+          "majorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 18,
+        "row": 16,
+        "terrain": {
+          "swamp": true,
+          "majorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 18,
+        "row": 17,
+        "terrain": {
+          "swamp": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 18,
+        "row": 18,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 18,
+        "row": 19,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 18,
+        "row": 20,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 18,
+        "row": 21,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 18,
+        "row": 22,
+        "name": "The Obelisk",
+        "terrain": {
+          "scenic": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 18,
+        "row": 23,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 18,
+        "row": 24,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 18,
+        "row": 25,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 18,
+        "row": 26,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 18,
+        "row": 27,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "col": 18,
+        "row": 28,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "col": 18,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 18,
+        "row": 30,
+        "name": "Giant Pass",
+        "terrain": {
+          "pass": true
+        }
+      },
+      {
+        "col": 19,
+        "row": 0,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 19,
+        "row": 1,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 19,
+        "row": 2,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 19,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 19,
+        "row": 4,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 19,
+        "row": 5,
+        "name": "Snow Pass",
+        "terrain": {
+          "pass": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 19,
+        "row": 6,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 19,
+        "row": 7,
+        "terrain": {
+          "mountain": true,
+          "minorRiver": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 19,
+        "row": 8,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 19,
+        "row": 9,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 19,
+        "row": 10,
+        "terrain": {
+          "lakeshore": true
+        }
+      },
+      {
+        "col": 19,
+        "row": 11,
+        "name": "Pennol",
+        "terrain": {
+          "castle": true,
+          "royal": true
+        },
+        "kingdom": "muetar",
+        "intrinsic": 4
+      },
+      {
+        "col": 19,
+        "row": 12,
+        "terrain": {
+          "lakeshore": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 19,
+        "row": 13,
+        "terrain": {
+          "majorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 19,
+        "row": 14,
+        "terrain": {
+          "majorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 19,
+        "row": 15,
+        "terrain": {
+          "forest": true,
+          "majorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 19,
+        "row": 16,
+        "name": "Yando",
+        "terrain": {
+          "majorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 19,
+        "row": 17,
+        "terrain": {
+          "hill": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 19,
+        "row": 18,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 19,
+        "row": 19,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 19,
+        "row": 20,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 19,
+        "row": 21,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 19,
+        "row": 22,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 19,
+        "row": 23,
+        "name": "Kuzdol",
+        "terrain": {
+          "castle": true
+        },
+        "kingdom": "shucassam",
+        "intrinsic": 3
+      },
+      {
+        "col": 19,
+        "row": 24,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 19,
+        "row": 25,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 19,
+        "row": 26,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 19,
+        "row": 27,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 19,
+        "row": 28,
+        "name": "Jipols",
+        "terrain": {
+          "port": true
+        },
+        "kingdom": "rombune",
+        "intrinsic": 3
+      },
+      {
+        "col": 19,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 19,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 20,
+        "row": 0,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 20,
+        "row": 1,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 20,
+        "row": 2,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 20,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 20,
+        "row": 4,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 20,
+        "row": 5,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 20,
+        "row": 6,
+        "terrain": {
+          "mountain": true,
+          "minorRiver": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 20,
+        "row": 7,
+        "terrain": {
+          "mountain": true,
+          "minorRiver": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 20,
+        "row": 8,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 20,
+        "row": 9,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 20,
+        "row": 10,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 20,
+        "row": 11,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 20,
+        "row": 12,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 20,
+        "row": 13,
+        "terrain": {
+          "forest": true,
+          "majorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 20,
+        "row": 14,
+        "terrain": {
+          "majorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 20,
+        "row": 15,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 20,
+        "row": 16,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 20,
+        "row": 17,
+        "terrain": {
+          "hill": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 20,
+        "row": 18,
+        "name": "The Keep",
+        "terrain": {
+          "castle": true
+        },
+        "intrinsic": 2
+      },
+      {
+        "col": 20,
+        "row": 19,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 20,
+        "row": 20,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 20,
+        "row": 21,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 20,
+        "row": 22,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 20,
+        "row": 23,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 20,
+        "row": 24,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 20,
+        "row": 25,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 20,
+        "row": 26,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 20,
+        "row": 27,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "col": 20,
+        "row": 28,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "rombune"
+      },
+      {
+        "col": 20,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 20,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 21,
+        "row": 0,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 21,
+        "row": 1,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 21,
+        "row": 2,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 21,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 21,
+        "row": 4,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 21,
+        "row": 5,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 21,
+        "row": 6,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 21,
+        "row": 7,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 21,
+        "row": 8,
+        "terrain": {
+          "minorRiver": true
+        }
+      },
+      {
+        "col": 21,
+        "row": 9,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 21,
+        "row": 10,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 21,
+        "row": 11,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 21,
+        "row": 12,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 21,
+        "row": 13,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 21,
+        "row": 14,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 21,
+        "row": 15,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 21,
+        "row": 16,
+        "name": "Beolon",
+        "terrain": {
+          "castle": true
+        },
+        "kingdom": "muetar",
+        "intrinsic": 2
+      },
+      {
+        "col": 21,
+        "row": 17,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 21,
+        "row": 18,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 21,
+        "row": 19,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 21,
+        "row": 20,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 21,
+        "row": 21,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 21,
+        "row": 22,
+        "terrain": {
+          "hill": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 21,
+        "row": 23,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 21,
+        "row": 24,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 21,
+        "row": 25,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 21,
+        "row": 26,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 21,
+        "row": 27,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "col": 21,
+        "row": 28,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "col": 21,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 21,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 22,
+        "row": 0,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 22,
+        "row": 1,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 22,
+        "row": 2,
+        "terrain": {
+          "swamp": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 22,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 22,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 22,
+        "row": 5,
+        "terrain": {
+          "forest": true,
+          "mountain": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 22,
+        "row": 6,
+        "name": "Ozerg",
+        "terrain": {
+          "mountain": true,
+          "scenic": true
+        }
+      },
+      {
+        "col": 22,
+        "row": 7,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 22,
+        "row": 8,
+        "terrain": {
+          "minorRiver": true
+        }
+      },
+      {
+        "col": 22,
+        "row": 9,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 22,
+        "row": 10,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 22,
+        "row": 11,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 22,
+        "row": 12,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 22,
+        "row": 13,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 22,
+        "row": 14,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 22,
+        "row": 15,
+        "terrain": {
+          "forest": true,
+          "minorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 22,
+        "row": 16,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 22,
+        "row": 17,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 22,
+        "row": 18,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 22,
+        "row": 19,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 22,
+        "row": 20,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 22,
+        "row": 21,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 22,
+        "row": 22,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 22,
+        "row": 23,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 22,
+        "row": 24,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 22,
+        "row": 25,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 22,
+        "row": 26,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "col": 22,
+        "row": 27,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 22,
+        "row": 28,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 22,
+        "row": 29,
+        "name": "Eerie Oasis",
+        "terrain": {
+          "scenic": true
+        }
+      },
+      {
+        "col": 22,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 23,
+        "row": 0,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 23,
+        "row": 1,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 23,
+        "row": 2,
+        "name": "The Pits",
+        "terrain": {
+          "castle": true,
+          "royal": true
+        },
+        "kingdom": "zorn",
+        "intrinsic": 5
+      },
+      {
+        "col": 23,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 23,
+        "row": 4,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 23,
+        "row": 5,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 23,
+        "row": 6,
+        "terrain": {
+          "forest": true,
+          "mountain": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 23,
+        "row": 7,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 23,
+        "row": 8,
+        "terrain": {
+          "minorRiver": true
+        }
+      },
+      {
+        "col": 23,
+        "row": 9,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 23,
+        "row": 10,
+        "terrain": {
+          "forest": true,
+          "minorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 23,
+        "row": 11,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 23,
+        "row": 12,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 23,
+        "row": 13,
+        "terrain": {
+          "hill": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 23,
+        "row": 14,
+        "terrain": {
+          "swamp": true,
+          "minorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 23,
+        "row": 15,
+        "name": "Groat",
+        "terrain": {
+          "castle": true
+        },
+        "kingdom": "muetar",
+        "intrinsic": 3
+      },
+      {
+        "col": 23,
+        "row": 16,
+        "terrain": {
+          "swamp": true,
+          "minorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 23,
+        "row": 17,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 23,
+        "row": 18,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 23,
+        "row": 19,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 23,
+        "row": 20,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 23,
+        "row": 21,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 23,
+        "row": 22,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 23,
+        "row": 23,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 23,
+        "row": 24,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 23,
+        "row": 25,
+        "name": "Bartertown"
+      },
+      {
+        "col": 23,
+        "row": 26,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "col": 23,
+        "row": 27,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 23,
+        "row": 28,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 23,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 23,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 24,
+        "row": 0,
+        "terrain": {
+          "hill": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 24,
+        "row": 1,
+        "terrain": {
+          "hill": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 24,
+        "row": 2,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 24,
+        "row": 3,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 24,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 24,
+        "row": 5,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 24,
+        "row": 6,
+        "name": "Maw Pass",
+        "terrain": {
+          "pass": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 24,
+        "row": 7,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "col": 24,
+        "row": 8,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 24,
+        "row": 9,
+        "name": "Basimar",
+        "terrain": {
+          "castle": true
+        },
+        "kingdom": "muetar",
+        "intrinsic": 3
+      },
+      {
+        "col": 24,
+        "row": 10,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 24,
+        "row": 11,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 24,
+        "row": 12,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 24,
+        "row": 13,
+        "terrain": {
+          "hill": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 24,
+        "row": 14,
+        "terrain": {
+          "swamp": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 24,
+        "row": 15,
+        "terrain": {
+          "swamp": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 24,
+        "row": 16,
+        "terrain": {
+          "swamp": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 24,
+        "row": 17,
+        "terrain": {
+          "hill": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 24,
+        "row": 18,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 24,
+        "row": 19,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 24,
+        "row": 20,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 24,
+        "row": 21,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 24,
+        "row": 22,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 24,
+        "row": 23,
+        "name": "Adeese",
+        "terrain": {
+          "port": true,
+          "royal": true
+        },
+        "kingdom": "shucassam",
+        "intrinsic": 4
+      },
+      {
+        "col": 24,
+        "row": 24,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 24,
+        "row": 25,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "col": 24,
+        "row": 26,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 24,
+        "row": 27,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 24,
+        "row": 28,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 24,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 24,
+        "row": 30,
+        "name": "Trading Post",
+        "terrain": {
+          "scenic": true
+        }
+      },
+      {
+        "col": 25,
+        "row": 0,
+        "name": "Mounds",
+        "terrain": {
+          "hill": true,
+          "scenic": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 25,
+        "row": 1,
+        "terrain": {
+          "hill": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 25,
+        "row": 2,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 25,
+        "row": 3,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 25,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 25,
+        "row": 5,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 25,
+        "row": 6,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 25,
+        "row": 7,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "col": 25,
+        "row": 8,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 25,
+        "row": 9,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 25,
+        "row": 10,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 25,
+        "row": 11,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 25,
+        "row": 12,
+        "terrain": {
+          "hill": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 25,
+        "row": 13,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 25,
+        "row": 14,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 25,
+        "row": 15,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 25,
+        "row": 16,
+        "terrain": {
+          "hill": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 25,
+        "row": 17,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 25,
+        "row": 18,
+        "name": "The Falls of Xag",
+        "terrain": {
+          "minorRiver": true,
+          "scenic": true
+        }
+      },
+      {
+        "col": 25,
+        "row": 19,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 25,
+        "row": 20,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 25,
+        "row": 21,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 25,
+        "row": 22,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 25,
+        "row": 23,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 25,
+        "row": 24,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 25,
+        "row": 25,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 25,
+        "row": 26,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "col": 25,
+        "row": 27,
+        "name": "Hyyx",
+        "terrain": {
+          "scenic": true
+        }
+      },
+      {
+        "col": 25,
+        "row": 28,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 25,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 25,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 26,
+        "row": 0,
+        "terrain": {
+          "hill": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 26,
+        "row": 1,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 26,
+        "row": 2,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 26,
+        "row": 3,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 26,
+        "row": 4,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 26,
+        "row": 5,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 26,
+        "row": 6,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 26,
+        "row": 7,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 26,
+        "row": 8,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 26,
+        "row": 9,
+        "terrain": {
+          "swamp": true,
+          "minorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 26,
+        "row": 10,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 26,
+        "row": 11,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 26,
+        "row": 12,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 26,
+        "row": 13,
+        "name": "Crow\\'s Nest",
+        "terrain": {
+          "castle": true
+        },
+        "kingdom": "pon",
+        "intrinsic": 4
+      },
+      {
+        "col": 26,
+        "row": 14,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 26,
+        "row": 15,
+        "terrain": {
+          "hill": true,
+          "minorRiver": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 26,
+        "row": 16,
+        "terrain": {
+          "hill": true,
+          "minorRiver": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 26,
+        "row": 17,
+        "terrain": {
+          "forest": true,
+          "minorRiver": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 26,
+        "row": 18,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 26,
+        "row": 19,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 26,
+        "row": 20,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 26,
+        "row": 21,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 26,
+        "row": 22,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 26,
+        "row": 23,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 26,
+        "row": 24,
+        "terrain": {
+          "sea": true
+        }
+      },
+      {
+        "col": 26,
+        "row": 25,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 26,
+        "row": 26,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "col": 26,
+        "row": 27,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 26,
+        "row": 28,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 26,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 26,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 27,
+        "row": 0,
+        "terrain": {
+          "hill": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 27,
+        "row": 1,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 27,
+        "row": 2,
+        "name": "The Crag",
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "trolls"
+      },
+      {
+        "col": 27,
+        "row": 3,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 27,
+        "row": 4,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "zorn"
+      },
+      {
+        "col": 27,
+        "row": 5,
+        "name": "Wolf Den",
+        "terrain": {
+          "forest": true,
+          "scenic": true
+        }
+      },
+      {
+        "col": 27,
+        "row": 6,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 27,
+        "row": 7,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 27,
+        "row": 8,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 27,
+        "row": 9,
+        "terrain": {
+          "swamp": true,
+          "minorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 27,
+        "row": 10,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 27,
+        "row": 11,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 27,
+        "row": 12,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 27,
+        "row": 13,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 27,
+        "row": 14,
+        "terrain": {
+          "forest": true,
+          "minorRiver": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 27,
+        "row": 15,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 27,
+        "row": 16,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 27,
+        "row": 17,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 27,
+        "row": 18,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 27,
+        "row": 19,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 27,
+        "row": 20,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 27,
+        "row": 21,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 27,
+        "row": 22,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 27,
+        "row": 23,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "col": 27,
+        "row": 24,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 27,
+        "row": 25,
+        "name": "Lepers",
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 27,
+        "row": 26,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 27,
+        "row": 27,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 27,
+        "row": 28,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 27,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 27,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 28,
+        "row": 0,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 28,
+        "row": 1,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 28,
+        "row": 2,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "col": 28,
+        "row": 3,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "col": 28,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 28,
+        "row": 5,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 28,
+        "row": 6,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 28,
+        "row": 7,
+        "terrain": {
+          "hill": true,
+          "minorRiver": true
+        }
+      },
+      {
+        "col": 28,
+        "row": 8,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 28,
+        "row": 9,
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 28,
+        "row": 10,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 28,
+        "row": 11,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 28,
+        "row": 12,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 28,
+        "row": 13,
+        "terrain": {
+          "mountain": true,
+          "minorRiver": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 28,
+        "row": 14,
+        "terrain": {
+          "mountain": true,
+          "minorRiver": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 28,
+        "row": 15,
+        "terrain": {
+          "mountain": true,
+          "minorRiver": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 28,
+        "row": 16,
+        "terrain": {
+          "pass": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 28,
+        "row": 17,
+        "name": "Marzarbol",
+        "terrain": {
+          "castle": true,
+          "royal": true
+        },
+        "kingdom": "pon",
+        "intrinsic": 4
+      },
+      {
+        "col": 28,
+        "row": 18,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 28,
+        "row": 19,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 28,
+        "row": 20,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "shucassam"
+      },
+      {
+        "col": 28,
+        "row": 21,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "col": 28,
+        "row": 22,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "col": 28,
+        "row": 23,
+        "terrain": {
+          "seashore": true
+        }
+      },
+      {
+        "col": 28,
+        "row": 24,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 28,
+        "row": 25,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 28,
+        "row": 26,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 28,
+        "row": 27,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 28,
+        "row": 28,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 28,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 28,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 29,
+        "row": 0,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 29,
+        "row": 1,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 29,
+        "row": 2,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "col": 29,
+        "row": 3,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "col": 29,
+        "row": 4,
+        "terrain": {
+          "mountain": true,
+          "minorRiver": true
+        }
+      },
+      {
+        "col": 29,
+        "row": 5,
+        "terrain": {
+          "hill": true,
+          "minorRiver": true
+        }
+      },
+      {
+        "col": 29,
+        "row": 6,
+        "terrain": {
+          "minorRiver": true
+        }
+      },
+      {
+        "col": 29,
+        "row": 7,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 29,
+        "row": 8,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 29,
+        "row": 9,
+        "terrain": {
+          "hill": true,
+          "minorRiver": true
+        }
+      },
+      {
+        "col": 29,
+        "row": 10,
+        "terrain": {
+          "minorRiver": true
+        },
+        "kingdom": "muetar"
+      },
+      {
+        "col": 29,
+        "row": 11,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "col": 29,
+        "row": 12,
+        "terrain": {
+          "forest": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 29,
+        "row": 13,
+        "terrain": {
+          "mountain": true,
+          "minorRiver": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 29,
+        "row": 14,
+        "terrain": {
+          "mountain": true,
+          "minorRiver": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 29,
+        "row": 15,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 29,
+        "row": 16,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 29,
+        "row": 17,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 29,
+        "row": 18,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 29,
+        "row": 19,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 29,
+        "row": 20,
+        "terrain": {
+          "mountain": true,
+          "seashore": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 29,
+        "row": 21,
+        "terrain": {
+          "seashore": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 29,
+        "row": 22,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 29,
+        "row": 23,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 29,
+        "row": 24,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 29,
+        "row": 25,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 29,
+        "row": 26,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 29,
+        "row": 27,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 29,
+        "row": 28,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 29,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 29,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 30,
+        "row": 0,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 30,
+        "row": 1,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 30,
+        "row": 2,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "col": 30,
+        "row": 3,
+        "name": "Tower of Zards",
+        "terrain": {
+          "castle": true,
+          "royal": true
+        },
+        "kingdom": "blackhand",
+        "intrinsic": 6
+      },
+      {
+        "col": 30,
+        "row": 4,
+        "terrain": {
+          "mountain": true,
+          "minorRiver": true
+        }
+      },
+      {
+        "col": 30,
+        "row": 5,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 30,
+        "row": 6,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 30,
+        "row": 7,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 30,
+        "row": 8,
+        "name": "Mystic Lake",
+        "terrain": {
+          "lakeshore": true,
+          "scenic": true
+        }
+      },
+      {
+        "col": 30,
+        "row": 9,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 30,
+        "row": 10,
+        "terrain": {
+          "mountain": true,
+          "minorRiver": true
+        }
+      },
+      {
+        "col": 30,
+        "row": 11,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "col": 30,
+        "row": 12,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "col": 30,
+        "row": 13,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 30,
+        "row": 14,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 30,
+        "row": 15,
+        "name": "Ghost Wood",
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 30,
+        "row": 16,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 30,
+        "row": 17,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 30,
+        "row": 18,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 30,
+        "row": 19,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 30,
+        "row": 20,
+        "name": "Grugongi",
+        "terrain": {
+          "port": true
+        },
+        "kingdom": "pon",
+        "intrinsic": 3
+      },
+      {
+        "col": 30,
+        "row": 21,
+        "terrain": {
+          "hill": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 30,
+        "row": 22,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 30,
+        "row": 23,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 30,
+        "row": 24,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 30,
+        "row": 25,
+        "name": "Field of the Laughing Dead",
+        "terrain": {
+          "ancientBattlefield": true
+        }
+      },
+      {
+        "col": 30,
+        "row": 26,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 30,
+        "row": 27,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 30,
+        "row": 28,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 30,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 30,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 31,
+        "row": 0,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 31,
+        "row": 1,
+        "terrain": {
+          "swamp": true
+        }
+      },
+      {
+        "col": 31,
+        "row": 2,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "col": 31,
+        "row": 3,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "col": 31,
+        "row": 4,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "col": 31,
+        "row": 5,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 31,
+        "row": 6,
+        "name": "The Wasted Dead",
+        "terrain": {
+          "ancientBattlefield": true
+        }
+      },
+      {
+        "col": 31,
+        "row": 7,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 31,
+        "row": 8,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 31,
+        "row": 9,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "ghem"
+      },
+      {
+        "col": 31,
+        "row": 10,
+        "terrain": {
+          "mountain": true,
+          "minorRiver": true
+        },
+        "kingdom": "ghem"
+      },
+      {
+        "col": 31,
+        "row": 11,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "ghem"
+      },
+      {
+        "col": 31,
+        "row": 12,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 31,
+        "row": 13,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 31,
+        "row": 14,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 31,
+        "row": 15,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 31,
+        "row": 16,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 31,
+        "row": 17,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 31,
+        "row": 18,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 31,
+        "row": 19,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 31,
+        "row": 20,
+        "terrain": {
+          "hill": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 31,
+        "row": 21,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 31,
+        "row": 22,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 31,
+        "row": 23,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 31,
+        "row": 24,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 31,
+        "row": 25,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 31,
+        "row": 26,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 31,
+        "row": 27,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 31,
+        "row": 28,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 31,
+        "row": 29,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 31,
+        "row": 30,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 32,
+        "row": 0,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 32,
+        "row": 1,
+        "terrain": {
+          "swamp": true
+        }
+      },
+      {
+        "col": 32,
+        "row": 2,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 32,
+        "row": 3,
+        "terrain": {
+          "mountain": true
+        }
+      },
+      {
+        "col": 32,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 32,
+        "row": 5,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 32,
+        "row": 6,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 32,
+        "row": 7,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 32,
+        "row": 8,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "ghem"
+      },
+      {
+        "col": 32,
+        "row": 9,
+        "name": "Mines of Rosengg",
+        "terrain": {
+          "castle": true,
+          "royal": true
+        },
+        "kingdom": "ghem",
+        "intrinsic": 5
+      },
+      {
+        "col": 32,
+        "row": 10,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "ghem"
+      },
+      {
+        "col": 32,
+        "row": 11,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "ghem"
+      },
+      {
+        "col": 32,
+        "row": 12,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 32,
+        "row": 13,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "ghem"
+      },
+      {
+        "col": 32,
+        "row": 14,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "ghem"
+      },
+      {
+        "col": 32,
+        "row": 15,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "ghem"
+      },
+      {
+        "col": 32,
+        "row": 16,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 32,
+        "row": 17,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 32,
+        "row": 18,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 32,
+        "row": 19,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 32,
+        "row": 20,
+        "terrain": {
+          "hill": true
+        },
+        "kingdom": "pon"
+      },
+      {
+        "col": 32,
+        "row": 21,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 32,
+        "row": 22,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 32,
+        "row": 23,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 32,
+        "row": 24,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 32,
+        "row": 25,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 32,
+        "row": 26,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 32,
+        "row": 27,
+        "name": "Altars of Greystaff",
+        "terrain": {
+          "scenic": true
+        }
+      },
+      {
+        "col": 32,
+        "row": 28,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 32,
+        "row": 29,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 32,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 33,
+        "row": 0,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 33,
+        "row": 1,
+        "terrain": {
+          "swamp": true
+        }
+      },
+      {
+        "col": 33,
+        "row": 2,
+        "terrain": {
+          "swamp": true
+        }
+      },
+      {
+        "col": 33,
+        "row": 3,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 33,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 33,
+        "row": 5,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 33,
+        "row": 6,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 33,
+        "row": 7,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 33,
+        "row": 8,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "ghem"
+      },
+      {
+        "col": 33,
+        "row": 9,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "ghem"
+      },
+      {
+        "col": 33,
+        "row": 10,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "ghem"
+      },
+      {
+        "col": 33,
+        "row": 11,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "ghem"
+      },
+      {
+        "col": 33,
+        "row": 12,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 33,
+        "row": 13,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "ghem"
+      },
+      {
+        "col": 33,
+        "row": 14,
+        "name": "Alzak",
+        "terrain": {
+          "castle": true
+        },
+        "kingdom": "ghem",
+        "intrinsic": 4
+      },
+      {
+        "col": 33,
+        "row": 15,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 33,
+        "row": 16,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "ghem"
+      },
+      {
+        "col": 33,
+        "row": 17,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 33,
+        "row": 18,
+        "name": "City of Khos",
+        "terrain": {
+          "scenic": true
+        }
+      },
+      {
+        "col": 33,
+        "row": 19,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 33,
+        "row": 20,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 33,
+        "row": 21,
+        "name": "The Digs",
+        "terrain": {
+          "clear": true
+        },
+        "kingdom": "trolls"
+      },
+      {
+        "col": 33,
+        "row": 22,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 33,
+        "row": 23,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 33,
+        "row": 24,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 33,
+        "row": 25,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 33,
+        "row": 26,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 33,
+        "row": 27,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 33,
+        "row": 28,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 33,
+        "row": 29,
+        "name": "Wyrm\\'s Lair",
+        "terrain": {
+          "scenic": true
+        }
+      },
+      {
+        "col": 33,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 34,
+        "row": 0,
+        "name": "Witches\\' Kitchen",
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 34,
+        "row": 2,
+        "terrain": {
+          "swamp": true
+        }
+      },
+      {
+        "col": 34,
+        "row": 4,
+        "terrain": {
+          "forest": true
+        }
+      },
+      {
+        "col": 34,
+        "row": 6,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 34,
+        "row": 8,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 34,
+        "row": 10,
+        "terrain": {
+          "mountain": true
+        },
+        "kingdom": "ghem"
+      },
+      {
+        "col": 34,
+        "row": 12,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 34,
+        "row": 14,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 34,
+        "row": 16,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 34,
+        "row": 18,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 34,
+        "row": 20,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 34,
+        "row": 22,
+        "terrain": {
+          "hill": true
+        }
+      },
+      {
+        "col": 34,
+        "row": 24,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 34,
+        "row": 26,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 34,
+        "row": 28,
+        "terrain": {
+          "clear": true
+        }
+      },
+      {
+        "col": 34,
+        "row": 30,
+        "terrain": {
+          "clear": true
+        }
+      }
+    ]
+  }
+}

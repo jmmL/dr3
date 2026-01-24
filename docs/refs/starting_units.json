@@ -1,0 +1,585 @@
+[
+  {
+    "faction": "Ghem",
+    "units": [
+      {
+        "name": "Ghem Monarch",
+        "count": 1,
+        "start_hex": [32, 9],
+        "movement_points": 8,
+        "abilities": ["Mountaineer"]
+      },
+      {
+        "name": "Rosengg Unit",
+        "count": 3,
+        "start_hex": [32, 9],
+        "movement_points": 6,
+        "abilities": ["Mountaineer"]
+      },
+      {
+        "name": "Aws Noir Unit",
+        "count": 3,
+        "start_hex": [2, 1],
+        "movement_points": 6,
+        "abilities": ["Mountaineer"]
+      },
+      {
+        "name": "Alzak Unit",
+        "count": 2,
+        "start_hex": [33, 14],
+        "movement_points": 6,
+        "abilities": ["Mountaineer"]
+      }
+    ]
+  },
+  {
+    "faction": "Neuth",
+    "units": [
+      {
+        "name": "Neuth Monarch",
+        "count": 1,
+        "start_hex": [4, 5],
+        "movement_points": 8,
+        "abilities": ["Forestwalking"]
+      },
+      {
+        "name": "Ider Bolis Unit",
+        "count": 6,
+        "start_hex": [4, 5],
+        "movement_points": 6,
+        "abilities": ["Forestwalking"]
+      }
+    ]
+  },
+  {
+    "faction": "Zorn",
+    "units": [
+      {
+        "name": "Zorn Monarch",
+        "count": 1,
+        "start_hex": [23, 2],
+        "movement_points": 8,
+        "abilities": ["Mountaineer", "Forestwalking"]
+      },
+      {
+        "name": "The Pits Unit",
+        "count": 3,
+        "start_hex": [23, 2],
+        "movement_points": 6,
+        "abilities": ["Mountaineer", "Forestwalking"]
+      },
+      {
+        "name": "Nithmere Unit",
+        "count": 1,
+        "start_hex": [21, 7],
+        "movement_points": 6,
+        "abilities": ["Mountaineer", "Forestwalking"]
+      },
+      {
+        "name": "Nithmere Unit",
+        "count": 1,
+        "start_hex": [20, 6],
+        "movement_points": 6,
+        "abilities": ["Mountaineer", "Forestwalking"]
+      },
+      {
+        "name": "Nithmere Unit",
+        "count": 1,
+        "start_hex": [21, 5],
+        "movement_points": 6,
+        "abilities": ["Mountaineer", "Forestwalking"]
+      },
+      {
+        "name": "Nithmere Unit",
+        "count": 1,
+        "start_hex": [20, 4],
+        "movement_points": 6,
+        "abilities": ["Mountaineer", "Forestwalking"]
+      },
+      {
+        "name": "Nithmere Unit",
+        "count": 1,
+        "start_hex": [18, 4],
+        "movement_points": 6,
+        "abilities": ["Mountaineer", "Forestwalking"]
+      },
+      {
+        "name": "Nithmere Unit",
+        "count": 1,
+        "start_hex": [18, 7],
+        "movement_points": 6,
+        "abilities": ["Mountaineer", "Forestwalking"]
+      },
+      {
+        "name": "Nithmere Unit",
+        "count": 1,
+        "start_hex": [18, 0],
+        "movement_points": 6,
+        "abilities": ["Mountaineer", "Forestwalking"]
+      },
+      {
+        "name": "Nithmere Unit",
+        "count": 1,
+        "start_hex": [19, 1],
+        "movement_points": 6,
+        "abilities": ["Mountaineer", "Forestwalking"]
+      }
+    ]
+  },
+  {
+    "faction": "Hothior",
+    "units": [
+      {
+        "name": "Hothior Monarch",
+        "count": 1,
+        "start_hex": [9, 17],
+        "movement_points": 7,
+        "abilities": []
+      },
+      {
+        "name": "Port Lork Unit",
+        "count": 2,
+        "start_hex": [9, 17],
+        "movement_points": 5,
+        "abilities": []
+      },
+      {
+        "name": "Lapsell Unit",
+        "count": 2,
+        "start_hex": [13, 18],
+        "movement_points": 5,
+        "abilities": []
+      },
+      {
+        "name": "Tadafat Unit",
+        "count": 2,
+        "start_hex": [10, 14],
+        "movement_points": 5,
+        "abilities": []
+      },
+      {
+        "name": "Farnot Unit",
+        "count": 1,
+        "start_hex": [10, 19],
+        "movement_points": 5,
+        "abilities": []
+      },
+      {
+        "name": "Port Lork Fleet",
+        "count": 1,
+        "start_hex": [9, 17],
+        "movement_points": 8,
+        "abilities": []
+      },
+      {
+        "name": "Lapsell Fleet",
+        "count": 1,
+        "start_hex": [13, 18],
+        "movement_points": 8,
+        "abilities": []
+      }
+    ]
+  },
+  {
+    "faction": "Immer",
+    "units": [
+      {
+        "name": "Immer Monarch",
+        "count": 1,
+        "start_hex": [14, 6],
+        "movement_points": 7,
+        "abilities": []
+      },
+      {
+        "name": "Altarr Unit",
+        "count": 3,
+        "start_hex": [14, 6],
+        "movement_points": 5,
+        "abilities": []
+      },
+      {
+        "name": "Muscaster Unit",
+        "count": 2,
+        "start_hex": [15, 8],
+        "movement_points": 5,
+        "abilities": []
+      },
+      {
+        "name": "Wirzor Unit",
+        "count": 2,
+        "start_hex": [12, 3],
+        "movement_points": 5,
+        "abilities": []
+      },
+      {
+        "name": "Gap Unit",
+        "count": 1,
+        "start_hex": [18, 5],
+        "movement_points": 5,
+        "abilities": []
+      },
+      {
+        "name": "Gorpin Unit",
+        "count": 1,
+        "start_hex": [15, 3],
+        "movement_points": 5,
+        "abilities": ["Forestwalking"]
+      }
+    ]
+  },
+  {
+    "faction": "Mivior",
+    "units": [
+      {
+        "name": "Mivior Monarch",
+        "count": 1,
+        "start_hex": [4, 21],
+        "movement_points": 7,
+        "abilities": []
+      },
+      {
+        "name": "Colist Unit",
+        "count": 3,
+        "start_hex": [4, 21],
+        "movement_points": 5,
+        "abilities": []
+      },
+      {
+        "name": "Addat Unit",
+        "count": 3,
+        "start_hex": [3, 12],
+        "movement_points": 5,
+        "abilities": []
+      },
+      {
+        "name": "Boliske Unit",
+        "count": 2,
+        "start_hex": [3, 18],
+        "movement_points": 5,
+        "abilities": []
+      },
+      {
+        "name": "Boran Unit",
+        "count": 1,
+        "start_hex": [5, 16],
+        "movement_points": 5,
+        "abilities": []
+      },
+      {
+        "name": "Colist Fleet",
+        "count": 1,
+        "start_hex": [4, 21],
+        "movement_points": 8,
+        "abilities": []
+      },
+      {
+        "name": "Addat Fleet",
+        "count": 1,
+        "start_hex": [3, 12],
+        "movement_points": 8,
+        "abilities": []
+      },
+      {
+        "name": "Boliske Fleet",
+        "count": 1,
+        "start_hex": [3, 18],
+        "movement_points": 8,
+        "abilities": []
+      },
+      {
+        "name": "Boran Fleet",
+        "count": 1,
+        "start_hex": [5, 16],
+        "movement_points": 8,
+        "abilities": []
+      }
+    ]
+  },
+  {
+    "faction": "Muetar",
+    "units": [
+      {
+        "name": "Muetar Monarch",
+        "count": 1,
+        "start_hex": [19, 11],
+        "movement_points": 7,
+        "abilities": []
+      },
+      {
+        "name": "Basimar Unit",
+        "count": 3,
+        "start_hex": [24, 9],
+        "movement_points": 5,
+        "abilities": []
+      },
+      {
+        "name": "Pennol Unit",
+        "count": 3,
+        "start_hex": [19, 11],
+        "movement_points": 5,
+        "abilities": []
+      },
+      {
+        "name": "Groat Unit",
+        "count": 2,
+        "start_hex": [23, 15],
+        "movement_points": 5,
+        "abilities": []
+      },
+      {
+        "name": "Plibba Unit",
+        "count": 2,
+        "start_hex": [17, 14],
+        "movement_points": 5,
+        "abilities": []
+      },
+      {
+        "name": "Beolon Unit",
+        "count": 2,
+        "start_hex": [21, 16],
+        "movement_points": 5,
+        "abilities": []
+      },
+      {
+        "name": "Yando Unit",
+        "count": 1,
+        "start_hex": [19, 16],
+        "movement_points": 5,
+        "abilities": []
+      }
+    ]
+  },
+  {
+    "faction": "Pon",
+    "units": [
+      {
+        "name": "Pon Monarch",
+        "count": 1,
+        "start_hex": [28, 17],
+        "movement_points": 7,
+        "abilities": []
+      },
+      {
+        "name": "Marzarbol Unit",
+        "count": 3,
+        "start_hex": [28, 17],
+        "movement_points": 5,
+        "abilities": []
+      },
+      {
+        "name": "Grugongi Unit",
+        "count": 2,
+        "start_hex": [30, 20],
+        "movement_points": 5,
+        "abilities": ["Mountaineer"]
+      },
+      {
+        "name": "Grugongi Fleet",
+        "count": 1,
+        "start_hex": [30, 20],
+        "movement_points": 8,
+        "abilities": []
+      },
+      {
+        "name": "Crow's Nest Unit",
+        "count": 2,
+        "start_hex": [26, 13],
+        "movement_points": 5,
+        "abilities": ["Forestwalking"]
+      }
+    ]
+  },
+  {
+    "faction": "Rombune",
+    "units": [
+      {
+        "name": "Rombune Monarch",
+        "count": 1,
+        "start_hex": [5, 27],
+        "movement_points": 7,
+        "abilities": []
+      },
+      {
+        "name": "Golkus Unit",
+        "count": 2,
+        "start_hex": [5, 27],
+        "movement_points": 5,
+        "abilities": []
+      },
+      {
+        "name": "Parros Unit",
+        "count": 2,
+        "start_hex": [11, 28],
+        "movement_points": 5,
+        "abilities": []
+      },
+      {
+        "name": "Thores Unit",
+        "count": 1,
+        "start_hex": [2, 29],
+        "movement_points": 5,
+        "abilities": []
+      },
+      {
+        "name": "Jipols Unit",
+        "count": 1,
+        "start_hex": [19, 28],
+        "movement_points": 5,
+        "abilities": []
+      },
+      {
+        "name": "Golkus Fleet",
+        "count": 1,
+        "start_hex": [5, 27],
+        "movement_points": 8,
+        "abilities": []
+      },
+      {
+        "name": "Parros Fleet",
+        "count": 1,
+        "start_hex": [11, 28],
+        "movement_points": 8,
+        "abilities": []
+      },
+      {
+        "name": "Thores Fleet",
+        "count": 1,
+        "start_hex": [2, 29],
+        "movement_points": 8,
+        "abilities": []
+      },
+      {
+        "name": "Jipols Fleet",
+        "count": 1,
+        "start_hex": [19, 28],
+        "movement_points": 8,
+        "abilities": []
+      }
+    ]
+  },
+  {
+    "faction": "Shucassam",
+    "units": [
+      {
+        "name": "Shucassam Monarch",
+        "count": 1,
+        "start_hex": [24, 23],
+        "movement_points": 7,
+        "abilities": []
+      },
+      {
+        "name": "Adeese Unit",
+        "count": 4,
+        "start_hex": [24, 23],
+        "movement_points": 5,
+        "abilities": []
+      },
+      {
+        "name": "Kuzdol Unit",
+        "count": 3,
+        "start_hex": [19, 23],
+        "movement_points": 5,
+        "abilities": []
+      },
+      {
+        "name": "Zefnar Unit",
+        "count": 3,
+        "start_hex": [11, 22],
+        "movement_points": 5,
+        "abilities": []
+      },
+      {
+        "name": "Lepers Unit",
+        "count": 1,
+        "start_hex": [27, 25],
+        "movement_points": 5,
+        "abilities": []
+      },
+      {
+        "name": "Adeese Fleet",
+        "count": 1,
+        "start_hex": [24, 23],
+        "movement_points": 8,
+        "abilities": []
+      },
+      {
+        "name": "Zefnar Fleet",
+        "count": 2,
+        "start_hex": [11, 22],
+        "movement_points": 8,
+        "abilities": []
+      }
+    ]
+  },
+  {
+    "faction": "Trolls",
+    "units": [
+      {
+        "name": "Trolls Monarch",
+        "count": 1,
+        "start_hex": [6, 13],
+        "movement_points": 6,
+        "abilities": ["Mountaineer", "Forestwalking"]
+      },
+      {
+        "name": "The Crag Unit",
+        "count": 2,
+        "start_hex": [27, 2],
+        "movement_points": 4,
+        "abilities": ["Mountaineer", "Forestwalking"]
+      },
+      {
+        "name": "Shunned Vale Unit",
+        "count": 2,
+        "start_hex": [17, 28],
+        "movement_points": 4,
+        "abilities": ["Mountaineer", "Forestwalking"]
+      },
+      {
+        "name": "The Face Unit",
+        "count": 2,
+        "start_hex": [6, 13],
+        "movement_points": 4,
+        "abilities": ["Mountaineer", "Forestwalking"]
+      },
+      {
+        "name": "The Digs Unit",
+        "count": 2,
+        "start_hex": [33, 21],
+        "movement_points": 4,
+        "abilities": ["Mountaineer", "Forestwalking"]
+      }
+    ]
+  },
+  {
+    "faction": "The Black Hand",
+    "units": [
+      {
+        "name": "The Black Hand",
+        "count": 1,
+        "start_hex": [30, 3],
+        "movement_points": 10,
+        "abilities": ["Mountaineer", "Forestwalking", "Flying"]
+      },
+      {
+        "name": "Walking Dead",
+        "count": 1,
+        "start_hex": [30, 3],
+        "movement_points": 5,
+        "abilities": []
+      }
+    ]
+  },
+  {
+    "faction": "The Eaters of Wisdom",
+    "units": [
+      {
+        "name": "The Eaters of Wisdom",
+        "count": 1,
+        "start_hex": [12, 10],
+        "movement_points": 8,
+        "abilities": []
+      }
+    ]
+  }
+]
