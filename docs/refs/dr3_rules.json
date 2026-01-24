@@ -615,7 +615,8 @@
     },
     "19.4_major_river": {
       "19.4.1_crossing_requirement": "Must begin movement phase in hex",
-      "19.4.2_crossing_cost": 2
+      "19.4.2_crossing_cost": 2,
+      "19.4.3_crossing_definition": "A land unit crossing of a major river is defined as moving from one major river hex to another major river hex, without a common neighbour that is neither a major river, sea, or lake"
     },
     "19.5_hills": {
       "19.5.1_movement_cost": 2,
@@ -629,12 +630,14 @@
     },
     "19.7_lakeshore": {
       "19.7.1_movement_cost": 1,
-      "19.7.2_restriction": "Cannot cross all-lake hexsides"
+      "19.7.2_restriction": "Cannot cross all-lake hexsides",
+      "19.7.3_coast_crossing_exception": "A land unit does not cross the coast if it moves from one lakeshore hex to another lakeshore hex, and both lakeshore hexes have a mutual neighbour that is neither a sea, major river or a lake"
     },
     "19.8_coast": {
       "19.8.1_movement_cost": 1,
       "19.8.2_fleet_restriction": "Cannot cross all-land hexsides",
-      "19.8.3_land_restriction": "Cannot cross all-sea hexsides"
+      "19.8.3_land_restriction": "Cannot cross all-sea hexsides",
+      "19.8.4_coast_crossing_exception": "A land unit does not cross the coast if it moves from one coast hex to another coast hex, and both coastal hexes have a mutual neighbour that is neither a sea, major river or a lake"
     },
     "19.9_open_sea": {
       "19.9.1_movement_cost": 1,
