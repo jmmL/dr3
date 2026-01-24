@@ -1,617 +1,1430 @@
 [
   {
     "faction": "Ghem",
+    "factionId": "ghem",
     "units": [
       {
         "name": "Ghem Monarch",
         "count": 1,
-        "start_hex": [32, 9],
+        "start_hex": [
+          32,
+          9
+        ],
         "movement_points": 8,
-        "abilities": ["Mountaineer"]
+        "abilities": [
+          "Mountaineer"
+        ],
+        "unitId": "ghem_monarch",
+        "unitType": "monarch",
+        "factionId": "ghem",
+        "cityId": null,
+        "movement_type": "standard",
+        "abilityIds": [
+          "mountaineer"
+        ]
       },
       {
         "name": "Ghem Ambassador",
         "count": 1,
-        "start_hex": [32, 9],
-        "movement_points": "teleport",
-        "abilities": ["Diplomatic"]
+        "start_hex": [
+          32,
+          9
+        ],
+        "movement_points": 0,
+        "abilities": [
+          "Diplomatic"
+        ],
+        "unitId": "ghem_ambassador",
+        "unitType": "ambassador",
+        "factionId": "ghem",
+        "cityId": null,
+        "movement_type": "teleport",
+        "abilityIds": [
+          "diplomatic"
+        ]
       },
       {
         "name": "Rosengg Unit",
         "count": 3,
-        "start_hex": [32, 9],
+        "start_hex": [
+          32,
+          9
+        ],
         "movement_points": 6,
-        "abilities": ["Mountaineer"]
+        "abilities": [
+          "Mountaineer"
+        ],
+        "unitId": "rosengg_unit",
+        "unitType": "army",
+        "factionId": "ghem",
+        "cityId": "mines_of_rosengg",
+        "movement_type": "standard",
+        "abilityIds": [
+          "mountaineer"
+        ]
       },
       {
         "name": "Aws Noir Unit",
         "count": 3,
-        "start_hex": [2, 1],
+        "start_hex": [
+          2,
+          1
+        ],
         "movement_points": 6,
-        "abilities": ["Mountaineer"]
+        "abilities": [
+          "Mountaineer"
+        ],
+        "unitId": "aws_noir_unit",
+        "unitType": "army",
+        "factionId": "ghem",
+        "cityId": "aws_noir",
+        "movement_type": "standard",
+        "abilityIds": [
+          "mountaineer"
+        ]
       },
       {
         "name": "Alzak Unit",
         "count": 2,
-        "start_hex": [33, 14],
+        "start_hex": [
+          33,
+          14
+        ],
         "movement_points": 6,
-        "abilities": ["Mountaineer"]
+        "abilities": [
+          "Mountaineer"
+        ],
+        "unitId": "alzak_unit",
+        "unitType": "army",
+        "factionId": "ghem",
+        "cityId": "alzak",
+        "movement_type": "standard",
+        "abilityIds": [
+          "mountaineer"
+        ]
       }
     ]
   },
   {
     "faction": "Neuth",
+    "factionId": "neuth",
     "units": [
       {
         "name": "Neuth Monarch",
         "count": 1,
-        "start_hex": [4, 5],
+        "start_hex": [
+          4,
+          5
+        ],
         "movement_points": 8,
-        "abilities": ["Forestwalking"]
+        "abilities": [
+          "Forestwalking"
+        ],
+        "unitId": "neuth_monarch",
+        "unitType": "monarch",
+        "factionId": "neuth",
+        "cityId": null,
+        "movement_type": "standard",
+        "abilityIds": [
+          "forest_walking"
+        ]
       },
       {
         "name": "Neuth Ambassador",
         "count": 1,
-        "start_hex": [4, 5],
-        "movement_points": "teleport",
-        "abilities": ["Diplomatic"]
+        "start_hex": [
+          4,
+          5
+        ],
+        "movement_points": 0,
+        "abilities": [
+          "Diplomatic"
+        ],
+        "unitId": "neuth_ambassador",
+        "unitType": "ambassador",
+        "factionId": "neuth",
+        "cityId": null,
+        "movement_type": "teleport",
+        "abilityIds": [
+          "diplomatic"
+        ]
       },
       {
         "name": "Ider Bolis Unit",
         "count": 6,
-        "start_hex": [4, 5],
+        "start_hex": [
+          4,
+          5
+        ],
         "movement_points": 6,
-        "abilities": ["Forestwalking"]
+        "abilities": [
+          "Forestwalking"
+        ],
+        "unitId": "ider_bolis_unit",
+        "unitType": "army",
+        "factionId": "neuth",
+        "cityId": "ider_bolis",
+        "movement_type": "standard",
+        "abilityIds": [
+          "forest_walking"
+        ]
       }
     ]
   },
   {
     "faction": "Zorn",
+    "factionId": "zorn",
     "units": [
       {
         "name": "Zorn Monarch",
         "count": 1,
-        "start_hex": [23, 2],
+        "start_hex": [
+          23,
+          2
+        ],
         "movement_points": 8,
-        "abilities": ["Mountaineer", "Forestwalking"]
+        "abilities": [
+          "Mountaineer",
+          "Forestwalking"
+        ],
+        "unitId": "zorn_monarch",
+        "unitType": "monarch",
+        "factionId": "zorn",
+        "cityId": null,
+        "movement_type": "standard",
+        "abilityIds": [
+          "mountaineer",
+          "forest_walking"
+        ]
       },
       {
         "name": "Zorn Ambassador",
         "count": 1,
-        "start_hex": [23, 2],
-        "movement_points": "teleport",
-        "abilities": ["Diplomatic"]
+        "start_hex": [
+          23,
+          2
+        ],
+        "movement_points": 0,
+        "abilities": [
+          "Diplomatic"
+        ],
+        "unitId": "zorn_ambassador",
+        "unitType": "ambassador",
+        "factionId": "zorn",
+        "cityId": null,
+        "movement_type": "teleport",
+        "abilityIds": [
+          "diplomatic"
+        ]
       },
       {
         "name": "The Pits Unit",
         "count": 3,
-        "start_hex": [23, 2],
+        "start_hex": [
+          23,
+          2
+        ],
         "movement_points": 6,
-        "abilities": ["Mountaineer", "Forestwalking"]
+        "abilities": [
+          "Mountaineer",
+          "Forestwalking"
+        ],
+        "unitId": "the_pits_unit",
+        "unitType": "army",
+        "factionId": "zorn",
+        "cityId": "the_pits",
+        "movement_type": "standard",
+        "abilityIds": [
+          "mountaineer",
+          "forest_walking"
+        ]
       },
       {
         "name": "Nithmere Unit",
         "count": 8,
         "movement_points": 6,
-        "abilities": ["Mountaineer", "Forestwalking"],
+        "abilities": [
+          "Mountaineer",
+          "Forestwalking"
+        ],
         "deployment": {
           "type": "scattered",
           "rules": "One per mountain or pass hex within Zorn territory, no two adjacent. Player chooses valid deployment.",
-          "example_start_hexes": [[21, 7], [20, 6], [21, 5], [20, 4], [18, 4], [18, 7], [18, 0], [19, 1]],
+          "example_start_hexes": [
+            [
+              21,
+              7
+            ],
+            [
+              20,
+              6
+            ],
+            [
+              21,
+              5
+            ],
+            [
+              20,
+              4
+            ],
+            [
+              18,
+              4
+            ],
+            [
+              18,
+              7
+            ],
+            [
+              18,
+              0
+            ],
+            [
+              19,
+              1
+            ]
+          ],
           "note": "The example deployment is one valid option; other configurations meeting the adjacency rules are permitted"
-        }
+        },
+        "unitId": "nithmere_unit",
+        "unitType": "army",
+        "factionId": "zorn",
+        "cityId": null,
+        "movement_type": "standard",
+        "abilityIds": [
+          "mountaineer",
+          "forest_walking"
+        ]
       }
     ]
   },
   {
     "faction": "Hothior",
+    "factionId": "hothior",
     "units": [
       {
         "name": "Hothior Monarch",
         "count": 1,
-        "start_hex": [9, 17],
+        "start_hex": [
+          9,
+          17
+        ],
         "movement_points": 7,
-        "abilities": []
+        "abilities": [],
+        "unitId": "hothior_monarch",
+        "unitType": "monarch",
+        "factionId": "hothior",
+        "cityId": null,
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Hothior Ambassador",
         "count": 1,
-        "start_hex": [9, 17],
-        "movement_points": "teleport",
-        "abilities": ["Diplomatic"]
+        "start_hex": [
+          9,
+          17
+        ],
+        "movement_points": 0,
+        "abilities": [
+          "Diplomatic"
+        ],
+        "unitId": "hothior_ambassador",
+        "unitType": "ambassador",
+        "factionId": "hothior",
+        "cityId": null,
+        "movement_type": "teleport",
+        "abilityIds": [
+          "diplomatic"
+        ]
       },
       {
         "name": "Port Lork Unit",
         "count": 2,
-        "start_hex": [9, 17],
+        "start_hex": [
+          9,
+          17
+        ],
         "movement_points": 5,
-        "abilities": []
+        "abilities": [],
+        "unitId": "port_lork_unit",
+        "unitType": "army",
+        "factionId": "hothior",
+        "cityId": "port_lork",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Lapsell Unit",
         "count": 2,
-        "start_hex": [13, 18],
+        "start_hex": [
+          13,
+          18
+        ],
         "movement_points": 5,
-        "abilities": []
+        "abilities": [],
+        "unitId": "lapsell_unit",
+        "unitType": "army",
+        "factionId": "hothior",
+        "cityId": "castle_lapspell",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Tadafat Unit",
         "count": 2,
-        "start_hex": [10, 14],
+        "start_hex": [
+          10,
+          14
+        ],
         "movement_points": 5,
-        "abilities": []
+        "abilities": [],
+        "unitId": "tadafat_unit",
+        "unitType": "army",
+        "factionId": "hothior",
+        "cityId": "tadafat",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Farnot Unit",
         "count": 1,
-        "start_hex": [10, 19],
+        "start_hex": [
+          10,
+          19
+        ],
         "movement_points": 5,
-        "abilities": []
+        "abilities": [],
+        "unitId": "farnot_unit",
+        "unitType": "army",
+        "factionId": "hothior",
+        "cityId": "farnot",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Port Lork Fleet",
         "count": 1,
-        "start_hex": [9, 17],
+        "start_hex": [
+          9,
+          17
+        ],
         "movement_points": 8,
-        "abilities": []
+        "abilities": [],
+        "unitId": "port_lork_fleet",
+        "unitType": "fleet",
+        "factionId": "hothior",
+        "cityId": "port_lork",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Lapsell Fleet",
         "count": 1,
-        "start_hex": [13, 18],
+        "start_hex": [
+          13,
+          18
+        ],
         "movement_points": 8,
-        "abilities": []
+        "abilities": [],
+        "unitId": "lapsell_fleet",
+        "unitType": "fleet",
+        "factionId": "hothior",
+        "cityId": "castle_lapspell",
+        "movement_type": "standard",
+        "abilityIds": []
       }
     ]
   },
   {
     "faction": "Immer",
+    "factionId": "immer",
     "units": [
       {
         "name": "Immer Monarch",
         "count": 1,
-        "start_hex": [14, 6],
+        "start_hex": [
+          14,
+          6
+        ],
         "movement_points": 7,
-        "abilities": []
+        "abilities": [],
+        "unitId": "immer_monarch",
+        "unitType": "monarch",
+        "factionId": "immer",
+        "cityId": null,
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Immer Ambassador",
         "count": 1,
-        "start_hex": [14, 6],
-        "movement_points": "teleport",
-        "abilities": ["Diplomatic"]
+        "start_hex": [
+          14,
+          6
+        ],
+        "movement_points": 0,
+        "abilities": [
+          "Diplomatic"
+        ],
+        "unitId": "immer_ambassador",
+        "unitType": "ambassador",
+        "factionId": "immer",
+        "cityId": null,
+        "movement_type": "teleport",
+        "abilityIds": [
+          "diplomatic"
+        ]
       },
       {
         "name": "Altarr Unit",
         "count": 3,
-        "start_hex": [14, 6],
+        "start_hex": [
+          14,
+          6
+        ],
         "movement_points": 5,
-        "abilities": []
+        "abilities": [],
+        "unitId": "altarr_unit",
+        "unitType": "army",
+        "factionId": "immer",
+        "cityId": "castle_altarr",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Muscaster Unit",
         "count": 2,
-        "start_hex": [15, 8],
+        "start_hex": [
+          15,
+          8
+        ],
         "movement_points": 5,
-        "abilities": []
+        "abilities": [],
+        "unitId": "muscaster_unit",
+        "unitType": "army",
+        "factionId": "immer",
+        "cityId": "muscaster",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Wirzor Unit",
         "count": 2,
-        "start_hex": [12, 3],
+        "start_hex": [
+          12,
+          3
+        ],
         "movement_points": 5,
-        "abilities": []
+        "abilities": [],
+        "unitId": "wirzor_unit",
+        "unitType": "army",
+        "factionId": "immer",
+        "cityId": "wirzor",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Gap Unit",
         "count": 1,
-        "start_hex": [18, 5],
+        "start_hex": [
+          18,
+          5
+        ],
         "movement_points": 5,
-        "abilities": []
+        "abilities": [],
+        "unitId": "gap_unit",
+        "unitType": "army",
+        "factionId": "immer",
+        "cityId": "gap_castle",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Gorpin Unit",
         "count": 1,
-        "start_hex": [15, 3],
+        "start_hex": [
+          15,
+          3
+        ],
         "movement_points": 5,
-        "abilities": ["Forestwalking"]
+        "abilities": [
+          "Forestwalking"
+        ],
+        "unitId": "gorpin_unit",
+        "unitType": "army",
+        "factionId": "immer",
+        "cityId": "gorpin",
+        "movement_type": "standard",
+        "abilityIds": [
+          "forest_walking"
+        ]
       }
     ]
   },
   {
     "faction": "Mivior",
+    "factionId": "mivior",
     "units": [
       {
         "name": "Mivior Monarch",
         "count": 1,
-        "start_hex": [4, 21],
+        "start_hex": [
+          4,
+          21
+        ],
         "movement_points": 7,
-        "abilities": []
+        "abilities": [],
+        "unitId": "mivior_monarch",
+        "unitType": "monarch",
+        "factionId": "mivior",
+        "cityId": null,
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Mivior Ambassador",
         "count": 1,
-        "start_hex": [4, 21],
-        "movement_points": "teleport",
-        "abilities": ["Diplomatic"]
+        "start_hex": [
+          4,
+          21
+        ],
+        "movement_points": 0,
+        "abilities": [
+          "Diplomatic"
+        ],
+        "unitId": "mivior_ambassador",
+        "unitType": "ambassador",
+        "factionId": "mivior",
+        "cityId": null,
+        "movement_type": "teleport",
+        "abilityIds": [
+          "diplomatic"
+        ]
       },
       {
         "name": "Colist Unit",
         "count": 3,
-        "start_hex": [4, 21],
+        "start_hex": [
+          4,
+          21
+        ],
         "movement_points": 5,
-        "abilities": []
+        "abilities": [],
+        "unitId": "colist_unit",
+        "unitType": "army",
+        "factionId": "mivior",
+        "cityId": "colist",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Addat Unit",
         "count": 3,
-        "start_hex": [3, 12],
+        "start_hex": [
+          3,
+          12
+        ],
         "movement_points": 5,
-        "abilities": []
+        "abilities": [],
+        "unitId": "addat_unit",
+        "unitType": "army",
+        "factionId": "mivior",
+        "cityId": "addat",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Boliske Unit",
         "count": 2,
-        "start_hex": [3, 18],
+        "start_hex": [
+          3,
+          18
+        ],
         "movement_points": 5,
-        "abilities": []
+        "abilities": [],
+        "unitId": "boliske_unit",
+        "unitType": "army",
+        "factionId": "mivior",
+        "cityId": "boliske",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Boran Unit",
         "count": 1,
-        "start_hex": [5, 16],
+        "start_hex": [
+          5,
+          16
+        ],
         "movement_points": 5,
-        "abilities": []
+        "abilities": [],
+        "unitId": "boran_unit",
+        "unitType": "army",
+        "factionId": "mivior",
+        "cityId": "boran",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Colist Fleet",
         "count": 1,
-        "start_hex": [4, 21],
+        "start_hex": [
+          4,
+          21
+        ],
         "movement_points": 8,
-        "abilities": []
+        "abilities": [],
+        "unitId": "colist_fleet",
+        "unitType": "fleet",
+        "factionId": "mivior",
+        "cityId": "colist",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Addat Fleet",
         "count": 1,
-        "start_hex": [3, 12],
+        "start_hex": [
+          3,
+          12
+        ],
         "movement_points": 8,
-        "abilities": []
+        "abilities": [],
+        "unitId": "addat_fleet",
+        "unitType": "fleet",
+        "factionId": "mivior",
+        "cityId": "addat",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Boliske Fleet",
         "count": 1,
-        "start_hex": [3, 18],
+        "start_hex": [
+          3,
+          18
+        ],
         "movement_points": 8,
-        "abilities": []
+        "abilities": [],
+        "unitId": "boliske_fleet",
+        "unitType": "fleet",
+        "factionId": "mivior",
+        "cityId": "boliske",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Boran Fleet",
         "count": 1,
-        "start_hex": [5, 16],
+        "start_hex": [
+          5,
+          16
+        ],
         "movement_points": 8,
-        "abilities": []
+        "abilities": [],
+        "unitId": "boran_fleet",
+        "unitType": "fleet",
+        "factionId": "mivior",
+        "cityId": "boran",
+        "movement_type": "standard",
+        "abilityIds": []
       }
     ]
   },
   {
     "faction": "Muetar",
+    "factionId": "muetar",
     "units": [
       {
         "name": "Muetar Monarch",
         "count": 1,
-        "start_hex": [19, 11],
+        "start_hex": [
+          19,
+          11
+        ],
         "movement_points": 7,
-        "abilities": []
+        "abilities": [],
+        "unitId": "muetar_monarch",
+        "unitType": "monarch",
+        "factionId": "muetar",
+        "cityId": null,
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Muetar Ambassador",
         "count": 1,
-        "start_hex": [19, 11],
-        "movement_points": "teleport",
-        "abilities": ["Diplomatic"]
+        "start_hex": [
+          19,
+          11
+        ],
+        "movement_points": 0,
+        "abilities": [
+          "Diplomatic"
+        ],
+        "unitId": "muetar_ambassador",
+        "unitType": "ambassador",
+        "factionId": "muetar",
+        "cityId": null,
+        "movement_type": "teleport",
+        "abilityIds": [
+          "diplomatic"
+        ]
       },
       {
         "name": "Basimar Unit",
         "count": 3,
-        "start_hex": [24, 9],
+        "start_hex": [
+          24,
+          9
+        ],
         "movement_points": 5,
-        "abilities": []
+        "abilities": [],
+        "unitId": "basimar_unit",
+        "unitType": "army",
+        "factionId": "muetar",
+        "cityId": "basimar",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Pennol Unit",
         "count": 3,
-        "start_hex": [19, 11],
+        "start_hex": [
+          19,
+          11
+        ],
         "movement_points": 5,
-        "abilities": []
+        "abilities": [],
+        "unitId": "pennol_unit",
+        "unitType": "army",
+        "factionId": "muetar",
+        "cityId": "pennol",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Groat Unit",
         "count": 2,
-        "start_hex": [23, 15],
+        "start_hex": [
+          23,
+          15
+        ],
         "movement_points": 5,
-        "abilities": []
+        "abilities": [],
+        "unitId": "groat_unit",
+        "unitType": "army",
+        "factionId": "muetar",
+        "cityId": "groat",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Plibba Unit",
         "count": 2,
-        "start_hex": [17, 14],
+        "start_hex": [
+          17,
+          14
+        ],
         "movement_points": 5,
-        "abilities": []
+        "abilities": [],
+        "unitId": "plibba_unit",
+        "unitType": "army",
+        "factionId": "muetar",
+        "cityId": "plibba",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Beolon Unit",
         "count": 2,
-        "start_hex": [21, 16],
+        "start_hex": [
+          21,
+          16
+        ],
         "movement_points": 5,
-        "abilities": []
+        "abilities": [],
+        "unitId": "beolon_unit",
+        "unitType": "army",
+        "factionId": "muetar",
+        "cityId": "beolon",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Yando Unit",
         "count": 1,
-        "start_hex": [19, 16],
+        "start_hex": [
+          19,
+          16
+        ],
         "movement_points": 5,
-        "abilities": []
+        "abilities": [],
+        "unitId": "yando_unit",
+        "unitType": "army",
+        "factionId": "muetar",
+        "cityId": "yando",
+        "movement_type": "standard",
+        "abilityIds": []
       }
     ]
   },
   {
     "faction": "Pon",
+    "factionId": "pon",
     "units": [
       {
         "name": "Pon Monarch",
         "count": 1,
-        "start_hex": [28, 17],
+        "start_hex": [
+          28,
+          17
+        ],
         "movement_points": 7,
-        "abilities": []
+        "abilities": [],
+        "unitId": "pon_monarch",
+        "unitType": "monarch",
+        "factionId": "pon",
+        "cityId": null,
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Pon Ambassador",
         "count": 1,
-        "start_hex": [28, 17],
-        "movement_points": "teleport",
-        "abilities": ["Diplomatic"]
+        "start_hex": [
+          28,
+          17
+        ],
+        "movement_points": 0,
+        "abilities": [
+          "Diplomatic"
+        ],
+        "unitId": "pon_ambassador",
+        "unitType": "ambassador",
+        "factionId": "pon",
+        "cityId": null,
+        "movement_type": "teleport",
+        "abilityIds": [
+          "diplomatic"
+        ]
       },
       {
         "name": "Marzarbol Unit",
         "count": 3,
-        "start_hex": [28, 17],
+        "start_hex": [
+          28,
+          17
+        ],
         "movement_points": 5,
-        "abilities": []
+        "abilities": [],
+        "unitId": "marzarbol_unit",
+        "unitType": "army",
+        "factionId": "pon",
+        "cityId": "marzarbol",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Grugongi Unit",
         "count": 2,
-        "start_hex": [30, 20],
+        "start_hex": [
+          30,
+          20
+        ],
         "movement_points": 5,
-        "abilities": ["Mountaineer"]
+        "abilities": [
+          "Mountaineer"
+        ],
+        "unitId": "grugongi_unit",
+        "unitType": "army",
+        "factionId": "pon",
+        "cityId": "grugongi",
+        "movement_type": "standard",
+        "abilityIds": [
+          "mountaineer"
+        ]
       },
       {
         "name": "Grugongi Fleet",
         "count": 1,
-        "start_hex": [30, 20],
+        "start_hex": [
+          30,
+          20
+        ],
         "movement_points": 8,
-        "abilities": []
+        "abilities": [],
+        "unitId": "grugongi_fleet",
+        "unitType": "fleet",
+        "factionId": "pon",
+        "cityId": "grugongi",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Crow's Nest Unit",
         "count": 2,
-        "start_hex": [26, 13],
+        "start_hex": [
+          26,
+          13
+        ],
         "movement_points": 5,
-        "abilities": ["Forestwalking"]
+        "abilities": [
+          "Forestwalking"
+        ],
+        "unitId": "crow_s_nest_unit",
+        "unitType": "army",
+        "factionId": "pon",
+        "cityId": "crow_s_nest",
+        "movement_type": "standard",
+        "abilityIds": [
+          "forest_walking"
+        ]
       }
     ]
   },
   {
     "faction": "Rombune",
+    "factionId": "rombune",
     "units": [
       {
         "name": "Rombune Monarch",
         "count": 1,
-        "start_hex": [5, 27],
+        "start_hex": [
+          5,
+          27
+        ],
         "movement_points": 7,
-        "abilities": []
+        "abilities": [],
+        "unitId": "rombune_monarch",
+        "unitType": "monarch",
+        "factionId": "rombune",
+        "cityId": null,
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Rombune Ambassador",
         "count": 1,
-        "start_hex": [5, 27],
-        "movement_points": "teleport",
-        "abilities": ["Diplomatic"]
+        "start_hex": [
+          5,
+          27
+        ],
+        "movement_points": 0,
+        "abilities": [
+          "Diplomatic"
+        ],
+        "unitId": "rombune_ambassador",
+        "unitType": "ambassador",
+        "factionId": "rombune",
+        "cityId": null,
+        "movement_type": "teleport",
+        "abilityIds": [
+          "diplomatic"
+        ]
       },
       {
         "name": "Golkus Unit",
         "count": 2,
-        "start_hex": [5, 27],
+        "start_hex": [
+          5,
+          27
+        ],
         "movement_points": 5,
-        "abilities": []
+        "abilities": [],
+        "unitId": "golkus_unit",
+        "unitType": "army",
+        "factionId": "rombune",
+        "cityId": "the_golkus",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Parros Unit",
         "count": 2,
-        "start_hex": [11, 28],
+        "start_hex": [
+          11,
+          28
+        ],
         "movement_points": 5,
-        "abilities": []
+        "abilities": [],
+        "unitId": "parros_unit",
+        "unitType": "army",
+        "factionId": "rombune",
+        "cityId": "parros",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Thores Unit",
         "count": 1,
-        "start_hex": [2, 29],
+        "start_hex": [
+          2,
+          29
+        ],
         "movement_points": 5,
-        "abilities": []
+        "abilities": [],
+        "unitId": "thores_unit",
+        "unitType": "army",
+        "factionId": "rombune",
+        "cityId": "thores",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Jipols Unit",
         "count": 1,
-        "start_hex": [19, 28],
+        "start_hex": [
+          19,
+          28
+        ],
         "movement_points": 5,
-        "abilities": []
+        "abilities": [],
+        "unitId": "jipols_unit",
+        "unitType": "army",
+        "factionId": "rombune",
+        "cityId": "jipols",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Golkus Fleet",
         "count": 1,
-        "start_hex": [5, 27],
+        "start_hex": [
+          5,
+          27
+        ],
         "movement_points": 8,
-        "abilities": []
+        "abilities": [],
+        "unitId": "golkus_fleet",
+        "unitType": "fleet",
+        "factionId": "rombune",
+        "cityId": "the_golkus",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Parros Fleet",
         "count": 1,
-        "start_hex": [11, 28],
+        "start_hex": [
+          11,
+          28
+        ],
         "movement_points": 8,
-        "abilities": []
+        "abilities": [],
+        "unitId": "parros_fleet",
+        "unitType": "fleet",
+        "factionId": "rombune",
+        "cityId": "parros",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Thores Fleet",
         "count": 1,
-        "start_hex": [2, 29],
+        "start_hex": [
+          2,
+          29
+        ],
         "movement_points": 8,
-        "abilities": []
+        "abilities": [],
+        "unitId": "thores_fleet",
+        "unitType": "fleet",
+        "factionId": "rombune",
+        "cityId": "thores",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Jipols Fleet",
         "count": 1,
-        "start_hex": [19, 28],
+        "start_hex": [
+          19,
+          28
+        ],
         "movement_points": 8,
-        "abilities": []
+        "abilities": [],
+        "unitId": "jipols_fleet",
+        "unitType": "fleet",
+        "factionId": "rombune",
+        "cityId": "jipols",
+        "movement_type": "standard",
+        "abilityIds": []
       }
     ]
   },
   {
     "faction": "Shucassam",
+    "factionId": "shucassam",
     "units": [
       {
         "name": "Shucassam Monarch",
         "count": 1,
-        "start_hex": [24, 23],
+        "start_hex": [
+          24,
+          23
+        ],
         "movement_points": 7,
-        "abilities": []
+        "abilities": [],
+        "unitId": "shucassam_monarch",
+        "unitType": "monarch",
+        "factionId": "shucassam",
+        "cityId": null,
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Shucassam Ambassador",
         "count": 1,
-        "start_hex": [24, 23],
-        "movement_points": "teleport",
-        "abilities": ["Diplomatic"]
+        "start_hex": [
+          24,
+          23
+        ],
+        "movement_points": 0,
+        "abilities": [
+          "Diplomatic"
+        ],
+        "unitId": "shucassam_ambassador",
+        "unitType": "ambassador",
+        "factionId": "shucassam",
+        "cityId": null,
+        "movement_type": "teleport",
+        "abilityIds": [
+          "diplomatic"
+        ]
       },
       {
         "name": "Adeese Unit",
         "count": 4,
-        "start_hex": [24, 23],
+        "start_hex": [
+          24,
+          23
+        ],
         "movement_points": 5,
-        "abilities": []
+        "abilities": [],
+        "unitId": "adeese_unit",
+        "unitType": "army",
+        "factionId": "shucassam",
+        "cityId": "adeese",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Kuzdol Unit",
         "count": 3,
-        "start_hex": [19, 23],
+        "start_hex": [
+          19,
+          23
+        ],
         "movement_points": 5,
-        "abilities": []
+        "abilities": [],
+        "unitId": "kuzdol_unit",
+        "unitType": "army",
+        "factionId": "shucassam",
+        "cityId": "kuzdol",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Zefnar Unit",
         "count": 3,
-        "start_hex": [11, 22],
+        "start_hex": [
+          11,
+          22
+        ],
         "movement_points": 5,
-        "abilities": []
+        "abilities": [],
+        "unitId": "zefnar_unit",
+        "unitType": "army",
+        "factionId": "shucassam",
+        "cityId": "zefnar",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Lepers Unit",
         "count": 1,
-        "start_hex": [27, 25],
+        "start_hex": [
+          27,
+          25
+        ],
         "movement_points": 5,
-        "abilities": []
+        "abilities": [],
+        "unitId": "lepers_unit",
+        "unitType": "army",
+        "factionId": "shucassam",
+        "cityId": "lepers",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Adeese Fleet",
         "count": 1,
-        "start_hex": [24, 23],
+        "start_hex": [
+          24,
+          23
+        ],
         "movement_points": 8,
-        "abilities": []
+        "abilities": [],
+        "unitId": "adeese_fleet",
+        "unitType": "fleet",
+        "factionId": "shucassam",
+        "cityId": "adeese",
+        "movement_type": "standard",
+        "abilityIds": []
       },
       {
         "name": "Zefnar Fleet",
         "count": 2,
-        "start_hex": [11, 22],
+        "start_hex": [
+          11,
+          22
+        ],
         "movement_points": 8,
-        "abilities": []
+        "abilities": [],
+        "unitId": "zefnar_fleet",
+        "unitType": "fleet",
+        "factionId": "shucassam",
+        "cityId": "zefnar",
+        "movement_type": "standard",
+        "abilityIds": []
       }
     ]
   },
   {
     "faction": "Trolls",
+    "factionId": "trolls",
     "units": [
       {
         "name": "Trolls Monarch",
         "count": 1,
-        "start_hex": [6, 13],
+        "start_hex": [
+          6,
+          13
+        ],
         "movement_points": 6,
-        "abilities": ["Mountaineer", "Forestwalking"]
+        "abilities": [
+          "Mountaineer",
+          "Forestwalking"
+        ],
+        "unitId": "trolls_monarch",
+        "unitType": "monarch",
+        "factionId": "trolls",
+        "cityId": null,
+        "movement_type": "standard",
+        "abilityIds": [
+          "mountaineer",
+          "forest_walking"
+        ]
       },
       {
         "name": "Trolls Ambassador",
         "count": 1,
-        "start_hex": [6, 13],
-        "movement_points": "teleport",
-        "abilities": ["Diplomatic"]
+        "start_hex": [
+          6,
+          13
+        ],
+        "movement_points": 0,
+        "abilities": [
+          "Diplomatic"
+        ],
+        "unitId": "trolls_ambassador",
+        "unitType": "ambassador",
+        "factionId": "trolls",
+        "cityId": null,
+        "movement_type": "teleport",
+        "abilityIds": [
+          "diplomatic"
+        ]
       },
       {
         "name": "The Crag Unit",
         "count": 2,
-        "start_hex": [27, 2],
+        "start_hex": [
+          27,
+          2
+        ],
         "movement_points": 4,
-        "abilities": ["Mountaineer", "Forestwalking"]
+        "abilities": [
+          "Mountaineer",
+          "Forestwalking"
+        ],
+        "unitId": "the_crag_unit",
+        "unitType": "army",
+        "factionId": "trolls",
+        "cityId": "the_crag",
+        "movement_type": "standard",
+        "abilityIds": [
+          "mountaineer",
+          "forest_walking"
+        ]
       },
       {
         "name": "Shunned Vale Unit",
         "count": 2,
-        "start_hex": [17, 28],
+        "start_hex": [
+          17,
+          28
+        ],
         "movement_points": 4,
-        "abilities": ["Mountaineer", "Forestwalking"]
+        "abilities": [
+          "Mountaineer",
+          "Forestwalking"
+        ],
+        "unitId": "shunned_vale_unit",
+        "unitType": "army",
+        "factionId": "trolls",
+        "cityId": "the_shunned_vale",
+        "movement_type": "standard",
+        "abilityIds": [
+          "mountaineer",
+          "forest_walking"
+        ]
       },
       {
         "name": "Stone Face Unit",
         "count": 2,
-        "start_hex": [6, 13],
+        "start_hex": [
+          6,
+          13
+        ],
         "movement_points": 4,
-        "abilities": ["Mountaineer", "Forestwalking"]
+        "abilities": [
+          "Mountaineer",
+          "Forestwalking"
+        ],
+        "unitId": "stone_face_unit",
+        "unitType": "army",
+        "factionId": "trolls",
+        "cityId": "stone_face",
+        "movement_type": "standard",
+        "abilityIds": [
+          "mountaineer",
+          "forest_walking"
+        ]
       },
       {
         "name": "The Gathering Unit",
         "count": 2,
-        "start_hex": [33, 21],
+        "start_hex": [
+          33,
+          21
+        ],
         "movement_points": 4,
-        "abilities": ["Mountaineer", "Forestwalking"]
-      }
-    ]
-  },
-  {
-    "faction": "The Black Hand",
-    "units": [
-      {
-        "name": "The Black Hand",
-        "count": 1,
-        "start_hex": [30, 3],
-        "movement_points": 10,
-        "abilities": ["Mountaineer", "Forestwalking", "Flying"]
-      },
-      {
-        "name": "Walking Dead",
-        "count": 1,
-        "start_hex": [30, 3],
-        "movement_points": 5,
-        "abilities": []
-      }
-    ]
-  },
-  {
-    "faction": "The Eaters of Wisdom",
-    "units": [
-      {
-        "name": "The Eaters of Wisdom",
-        "count": 1,
-        "start_hex": [12, 10],
-        "movement_points": 8,
-        "abilities": []
+        "abilities": [
+          "Mountaineer",
+          "Forestwalking"
+        ],
+        "unitId": "the_gathering_unit",
+        "unitType": "army",
+        "factionId": "trolls",
+        "cityId": "the_gathering",
+        "movement_type": "standard",
+        "abilityIds": [
+          "mountaineer",
+          "forest_walking"
+        ]
       }
     ]
   }

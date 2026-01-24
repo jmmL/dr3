@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "exportDate": "2026-01-24T12:10:39.974Z",
+  "map": {
+    "cols": 35,
+    "rows": 31,
+    "hexes": [
+      {
+        "col": 12,
+        "row": 10,
+        "name": "Invisible School",
+        "terrain": {
+          "castle": true,
+          "royal": true
+        },
+        "kingdom": "eaters",
+        "intrinsic": 5,
+        "hexId": "hex_12_10",
+        "nameId": "invisible_school",
+        "factionId": "eaters"
+      },
+      {
+        "col": 30,
+        "row": 3,
+        "name": "Tower of Zards",
+        "terrain": {
+          "castle": true,
+          "royal": true
+        },
+        "kingdom": "blackhand",
+        "intrinsic": 6,
+        "hexId": "hex_30_3",
+        "nameId": "tower_of_zards",
+        "factionId": "blackhand"
+      }
+    ]
+  }
+}

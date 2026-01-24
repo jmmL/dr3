@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "docs/refs/schema_factions.json",
+  "type": "object",
+  "required": ["version", "exportDate", "factions"],
+  "properties": {
+    "version": {"type": "string"},
+    "exportDate": {"type": "string"},
+    "factions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "race", "raceId", "capitalName", "capitalId", "cities"],
+        "properties": {
+          "id": {"type": "string"},
+          "name": {"type": "string"},
+          "race": {"type": "string"},
+          "raceId": {"type": "string"},
+          "capitalName": {"type": "string"},
+          "capitalId": {"type": "string"},
+          "cities": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["name", "cityId", "col", "row"],
+              "properties": {
+                "name": {"type": "string"},
+                "cityId": {"type": "string"},
+                "col": {"type": "integer"},
+                "row": {"type": "integer"},
+                "armies": {"type": ["integer", "null"]},
+                "seaFleet": {"type": ["integer", "null"]},
+                "isCapital": {"type": "boolean"},
+                "intrinsic": {"type": ["integer", "null"]}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

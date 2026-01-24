@@ -1,13 +1,11 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "refs_derived/hexmap.schema.json",
+  "$id": "docs/refs/schema_hexmap.json",
   "type": "object",
-  "required": ["version", "mode", "generated_at", "source", "map"],
+  "required": ["version", "exportDate", "map"],
   "properties": {
-    "version": {"type": ["string", "null"]},
-    "mode": {"type": "string", "enum": ["basic", "advanced"]},
-    "generated_at": {"type": "string"},
-    "source": {"type": "object"},
+    "version": {"type": "string"},
+    "exportDate": {"type": "string"},
     "map": {
       "type": "object",
       "required": ["cols", "rows", "hexes"],
@@ -18,17 +16,18 @@
           "type": "array",
           "items": {
             "type": "object",
-            "required": ["id", "col", "row", "terrain"],
+            "required": ["col", "row", "terrain", "hexId"],
             "properties": {
-              "id": {"type": "string"},
               "col": {"type": "integer"},
               "row": {"type": "integer"},
+              "hexId": {"type": "string"},
               "terrain": {"type": "object"},
               "name": {"type": "string"},
-              "name_id": {"type": "string"},
-              "city_id": {"type": "string"},
-              "faction_id": {"type": "string"},
-              "intrinsic_defense": {"type": "integer"}
+              "nameId": {"type": "string"},
+              "cityId": {"type": "string"},
+              "kingdom": {"type": "string"},
+              "factionId": {"type": "string"},
+              "intrinsic": {"type": "integer"}
             }
           }
         }

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "docs/refs/schema_starting_units.json",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["faction", "factionId", "units"],
+    "properties": {
+      "faction": {"type": "string"},
+      "factionId": {"type": "string"},
+      "units": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["name", "unitId", "unitType", "count", "movement_points", "movement_type"],
+          "properties": {
+            "name": {"type": "string"},
+            "unitId": {"type": "string"},
+            "unitType": {"type": "string"},
+            "factionId": {"type": "string"},
+            "count": {"type": "integer"},
+            "start_hex": {
+              "type": ["array", "null"],
+              "items": {"type": "integer"},
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "movement_points": {"type": "number"},
+            "movement_type": {"type": "string"},
+            "abilities": {"type": "array", "items": {"type": "string"}},
+            "abilityIds": {"type": "array", "items": {"type": "string"}},
+            "cityId": {"type": ["string", "null"]},
+            "deployment": {"type": ["object", "null"]}
+          }
+        }
+      }
+    }
+  }
+}
