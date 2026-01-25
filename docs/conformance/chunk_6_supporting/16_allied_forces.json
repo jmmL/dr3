@@ -1,0 +1,84 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "16_allied_forces",
+  "tests": [
+    {
+      "id": "16.1_allied_forces_moved_by_owner",
+      "rule_ref": "16.1",
+      "description": "Allied forces are moved by their owning player monarch",
+      "input": {
+        "allied_force_owner": "player_a",
+        "active_player": "player_a"
+      },
+      "expected": {
+        "movement_control": "player_a"
+      }
+    },
+    {
+      "id": "16.2_allied_stacking_restricted",
+      "rule_ref": "16.2",
+      "description": "Allied forces may not stack with forces of any other kingdom",
+      "input": {
+        "allied_kingdom": "mivior",
+        "other_kingdom": "hothior",
+        "end_turn_same_hex": true
+      },
+      "expected": {
+        "stacking_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "16.3_allied_forces_coordinate_actions",
+      "rule_ref": "16.3",
+      "description": "Allied forces may move, attack, and siege in conjunction with friendly forces",
+      "input": {
+        "allied_forces_present": true,
+        "friendly_forces_present": true
+      },
+      "expected": {
+        "coordination_allowed": true
+      }
+    },
+    {
+      "id": "16.4_allied_castle_entry_allowed",
+      "rule_ref": "16.4",
+      "description": "Combat units may enter and defend allied castles if unoccupied by allied combat units",
+      "input": {
+        "castle_owner": "mivior",
+        "entering_force": "hothior",
+        "allied_combat_units_present": 0
+      },
+      "expected": {
+        "entry_allowed": true,
+        "defense_allowed": true
+      }
+    },
+    {
+      "id": "16.4_allied_castle_entry_blocked",
+      "rule_ref": "16.4",
+      "description": "Allied castle entry is blocked when allied combat units already occupy the castle",
+      "input": {
+        "castle_owner": "mivior",
+        "entering_force": "hothior",
+        "allied_combat_units_present": 2
+      },
+      "expected": {
+        "entry_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "16.5_mercenary_stacking_with_friendly",
+      "rule_ref": "16.5",
+      "description": "Mercenary units may stack with any friendly forces",
+      "input": {
+        "mercenary_unit": true,
+        "friendly_force": "allied_kingdom"
+      },
+      "expected": {
+        "stacking_allowed": true
+      }
+    }
+  ]
+}

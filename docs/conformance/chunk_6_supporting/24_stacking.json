@@ -1,0 +1,141 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "24_stacking",
+  "tests": [
+    {
+      "id": "24.1.1_same_kingdom_unlimited",
+      "rule_ref": "24.1.1",
+      "description": "Units of the same kingdom (plus mercenaries) may stack without limit",
+      "input": {
+        "kingdom": "hothior",
+        "unit_count": 12
+      },
+      "expected": {
+        "stack_limit": "unlimited"
+      }
+    },
+    {
+      "id": "24.1.2_same_kingdom_hex_sharing",
+      "rule_ref": "24.1.2",
+      "description": "Units of the same kingdom may occupy the same hex",
+      "input": {
+        "kingdom": "hothior",
+        "hex": [12, 6]
+      },
+      "expected": {
+        "hex_sharing_allowed": true
+      }
+    },
+    {
+      "id": "24.2.1_allied_pass_through",
+      "rule_ref": "24.2.1",
+      "description": "Allied kingdoms may pass through each other",
+      "input": {
+        "moving_kingdom": "hothior",
+        "hex_occupied_by": "mivior",
+        "passing_through": true
+      },
+      "expected": {
+        "pass_through_allowed": true
+      }
+    },
+    {
+      "id": "24.2.2_allied_end_turn_denied",
+      "rule_ref": "24.2.2",
+      "description": "Allied kingdoms may not end the turn in the same hex",
+      "input": {
+        "moving_kingdom": "hothior",
+        "hex_occupied_by": "mivior",
+        "ending_turn": true
+      },
+      "expected": {
+        "end_turn_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "24.3.1_mercenary_stack_with_friendly",
+      "rule_ref": "24.3.1",
+      "description": "Mercenaries may stack with any friendly units",
+      "input": {
+        "mercenary_unit": true,
+        "friendly_unit": "allied_kingdom"
+      },
+      "expected": {
+        "stacking_allowed": true
+      }
+    },
+    {
+      "id": "24.3.2_mercenary_move_between_stacks",
+      "rule_ref": "24.3.2",
+      "description": "Mercenaries may move between friendly stacks without penalty",
+      "input": {
+        "mercenary_unit": true,
+        "moving_between_stacks": true
+      },
+      "expected": {
+        "movement_penalty": 0
+      }
+    },
+    {
+      "id": "24.4.1_fleet_stacking_same_rules",
+      "rule_ref": "24.4.1",
+      "description": "Fleet stacking follows the same rules as land units",
+      "input": {
+        "fleet_units": true
+      },
+      "expected": {
+        "stacking_rules": "same_as_land"
+      }
+    },
+    {
+      "id": "24.5.1_allied_castle_entry_condition",
+      "rule_ref": "24.5.1",
+      "description": "Allied castle entry allowed only if no allied combat units occupy the castle",
+      "input": {
+        "allied_castle": true,
+        "allied_combat_units_present": 0
+      },
+      "expected": {
+        "entry_allowed": true
+      }
+    },
+    {
+      "id": "24.5.2_allied_castle_entry_defense",
+      "rule_ref": "24.5.2",
+      "description": "Units may enter and defend allied castles when allowed",
+      "input": {
+        "allied_castle": true,
+        "entry_allowed": true
+      },
+      "expected": {
+        "defense_allowed": true
+      }
+    },
+    {
+      "id": "24.5.3_allied_castle_no_stacking",
+      "rule_ref": "24.5.3",
+      "description": "Units may not stack with allied units inside allied castles",
+      "input": {
+        "allied_castle": true,
+        "allied_units_present": true
+      },
+      "expected": {
+        "stacking_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "24.6_stack_examination_allowed",
+      "rule_ref": "24.6",
+      "description": "Any player may examine opponent stacks at any time",
+      "input": {
+        "requesting_player": "player_a",
+        "target_player": "player_b"
+      },
+      "expected": {
+        "inspection_allowed": true
+      }
+    }
+  ]
+}

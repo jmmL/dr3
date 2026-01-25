@@ -1,0 +1,59 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "10_friendly_location",
+  "tests": [
+    {
+      "id": "10.1.1_friendly_location_own_kingdom",
+      "rule_ref": "10.1.1",
+      "description": "Castle or port inside the player monarch's kingdom is friendly",
+      "input": {
+        "location_type": "castle",
+        "location_kingdom": "hothior",
+        "player_kingdom": "hothior"
+      },
+      "expected": {
+        "friendly": true
+      }
+    },
+    {
+      "id": "10.1.2_friendly_location_allied_kingdom",
+      "rule_ref": "10.1.2",
+      "description": "Castle or port inside an allied kingdom is friendly",
+      "input": {
+        "location_type": "port",
+        "location_kingdom": "mivior",
+        "allied_kingdoms": ["mivior"]
+      },
+      "expected": {
+        "friendly": true
+      }
+    },
+    {
+      "id": "10.1.3_plundered_castle_with_friendly_unit",
+      "rule_ref": "10.1.3",
+      "description": "Plundered castle or port occupied by a friendly combat unit is friendly",
+      "input": {
+        "location_type": "castle",
+        "plundered": true,
+        "friendly_combat_units_present": 1
+      },
+      "expected": {
+        "friendly": true
+      }
+    },
+    {
+      "id": "10.1.3_plundered_castle_without_friendly_unit",
+      "rule_ref": "10.1.3",
+      "description": "Plundered castle or port without friendly combat units is not friendly",
+      "input": {
+        "location_type": "castle",
+        "plundered": true,
+        "friendly_combat_units_present": 0
+      },
+      "expected": {
+        "friendly": false
+      },
+      "tags": ["negative"]
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "22_sea_transport",
+  "tests": [
+    {
+      "id": "22.1.1_transport_capacity_combat",
+      "rule_ref": "22.1.1",
+      "description": "Each fleet may transport one combat unit",
+      "input": {
+        "fleet_count": 2
+      },
+      "expected": {
+        "combat_unit_capacity": 2
+      }
+    },
+    {
+      "id": "22.1.2_transport_capacity_leaders",
+      "rule_ref": "22.1.2",
+      "description": "Fleets may transport unlimited leaders",
+      "input": {
+        "fleet_count": 1,
+        "leaders": 3
+      },
+      "expected": {
+        "leader_capacity": "unlimited"
+      }
+    },
+    {
+      "id": "22.1.3_transport_capacity_devices",
+      "rule_ref": "22.1.3",
+      "description": "Fleets may transport unlimited devices",
+      "input": {
+        "fleet_count": 1,
+        "devices": 2
+      },
+      "expected": {
+        "device_capacity": "unlimited"
+      }
+    },
+    {
+      "id": "22.2_embark_cost_zero",
+      "rule_ref": "22.2",
+      "description": "Embarking on a fleet costs 0 movement points",
+      "input": {
+        "embark_action": true
+      },
+      "expected": {
+        "movement_cost": 0
+      }
+    },
+    {
+      "id": "22.3_debark_cost_zero",
+      "rule_ref": "22.3",
+      "description": "Debarking from a fleet costs 0 movement points",
+      "input": {
+        "debark_action": true
+      },
+      "expected": {
+        "movement_cost": 0
+      }
+    },
+    {
+      "id": "22.4_debark_friendly_port",
+      "rule_ref": "22.4",
+      "description": "Units may debark at a friendly port",
+      "input": {
+        "destination_type": "friendly_port"
+      },
+      "expected": {
+        "debark_allowed": true
+      }
+    },
+    {
+      "id": "22.4_debark_seashore_no_mountains",
+      "rule_ref": "22.4",
+      "description": "Units may debark at seashore hexes without mountains",
+      "input": {
+        "destination_type": "seashore",
+        "terrain_features": ["clear"]
+      },
+      "expected": {
+        "debark_allowed": true
+      }
+    },
+    {
+      "id": "22.4_debark_seashore_mountains_denied",
+      "rule_ref": "22.4",
+      "description": "Units may not debark at seashore hexes with mountains",
+      "input": {
+        "destination_type": "seashore",
+        "terrain_features": ["mountain"]
+      },
+      "expected": {
+        "debark_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "22.5_transported_units_no_other_move",
+      "rule_ref": "22.5",
+      "description": "Transported units cannot otherwise move that turn",
+      "input": {
+        "unit_transported": true
+      },
+      "expected": {
+        "other_movement_allowed": false
+      }
+    },
+    {
+      "id": "22.6_fleet_continue_moving",
+      "rule_ref": "22.6",
+      "description": "Fleets may continue moving and transporting until movement points are spent",
+      "input": {
+        "fleet_movement_points": 3,
+        "actions": ["move", "embark", "move", "debark"]
+      },
+      "expected": {
+        "movement_points_remaining": 1
+      }
+    }
+  ]
+}

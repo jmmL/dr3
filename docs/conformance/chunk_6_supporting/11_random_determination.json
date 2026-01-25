@@ -1,0 +1,47 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "11_random_determination",
+  "tests": [
+    {
+      "id": "11.1_random_die_faces_match_options",
+      "rule_ref": "11.1",
+      "description": "Random determination uses a die with faces equal to the number of options",
+      "input": {
+        "option_count": 4
+      },
+      "expected": {
+        "die_faces": 4
+      }
+    },
+    {
+      "id": "11.2.1_random_selection_three_allies",
+      "rule_ref": "11.2.1",
+      "description": "Selecting among three allies maps 1-2, 3-4, 5-6 on a d6",
+      "input": {
+        "options": ["ally_one", "ally_two", "ally_three"],
+        "die_type": "d6"
+      },
+      "expected": {
+        "roll_mapping": {
+          "1": "ally_one",
+          "2": "ally_one",
+          "3": "ally_two",
+          "4": "ally_two",
+          "5": "ally_three",
+          "6": "ally_three"
+        }
+      }
+    },
+    {
+      "id": "11.2.2_random_neutral_kingdoms",
+      "rule_ref": "11.2.2",
+      "description": "Randomly selecting from neutral kingdoms uses a die sized to the neutral count",
+      "input": {
+        "neutral_kingdom_count": 5
+      },
+      "expected": {
+        "die_faces": 5
+      }
+    }
+  ]
+}

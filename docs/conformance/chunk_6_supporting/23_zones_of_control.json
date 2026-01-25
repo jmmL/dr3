@@ -1,0 +1,40 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "23_zones_of_control",
+  "tests": [
+    {
+      "id": "23.1_zoc_not_used",
+      "rule_ref": "23.1",
+      "description": "Zones of control do not exist in the game",
+      "input": {
+        "unit_has_zoc": false
+      },
+      "expected": {
+        "zones_of_control": false
+      }
+    },
+    {
+      "id": "23.2_units_control_only_hex",
+      "rule_ref": "23.2",
+      "description": "Units control only the hex they occupy",
+      "input": {
+        "unit_hex": [10, 4]
+      },
+      "expected": {
+        "controlled_hexes": [[10, 4]]
+      }
+    },
+    {
+      "id": "23.3_adjacent_movement_no_penalty",
+      "rule_ref": "23.3",
+      "description": "Adjacent movement is not penalized by zones of control",
+      "input": {
+        "moving_adjacent_to_enemy": true
+      },
+      "expected": {
+        "movement_penalty": 0,
+        "movement_delay": false
+      }
+    }
+  ]
+}
