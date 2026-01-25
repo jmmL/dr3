@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "docs/refs/schema_hexmap.json",
+  "type": "object",
+  "required": ["version", "exportDate", "map"],
+  "properties": {
+    "version": {"type": "string"},
+    "exportDate": {"type": "string"},
+    "map": {
+      "type": "object",
+      "required": ["cols", "rows", "hexes"],
+      "properties": {
+        "cols": {"type": "integer"},
+        "rows": {"type": "integer"},
+        "hexes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["col", "row", "terrain", "hexId"],
+            "properties": {
+              "col": {"type": "integer"},
+              "row": {"type": "integer"},
+              "hexId": {"type": "string"},
+              "terrain": {"type": "object"},
+              "name": {"type": "string"},
+              "nameId": {"type": "string"},
+              "cityId": {"type": "string"},
+              "kingdom": {"type": "string"},
+              "factionId": {"type": "string"},
+              "intrinsic": {"type": "integer"}
+            }
+          }
+        }
+      }
+    }
+  }
+}

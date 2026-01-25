@@ -1,0 +1,48 @@
+{
+  "version": "1.0.0",
+  "exportDate": "2026-01-24T12:10:39.974Z",
+  "factions": [
+    {
+      "id": "eaters",
+      "name": "The Eaters of Wisdom",
+      "race": "Special",
+      "raceId": "special",
+      "capitalName": "Invisible School",
+      "capitalId": "invisible_school",
+      "cities": [
+        {
+          "name": "Invisible School",
+          "cityId": "invisible_school",
+          "col": 12,
+          "row": 10,
+          "armies": null,
+          "seaFleet": null,
+          "isCapital": true,
+          "intrinsic": 5
+        }
+      ],
+      "notes": "Advanced-only faction."
+    },
+    {
+      "id": "blackhand",
+      "name": "The Black Hand",
+      "race": "Special",
+      "raceId": "special",
+      "capitalName": "Tower of Zards",
+      "capitalId": "tower_of_zards",
+      "cities": [
+        {
+          "name": "Tower of Zards",
+          "cityId": "tower_of_zards",
+          "col": 30,
+          "row": 3,
+          "armies": null,
+          "seaFleet": null,
+          "isCapital": true,
+          "intrinsic": 6
+        }
+      ],
+      "notes": "Advanced-only faction."
+    }
+  ]
+}

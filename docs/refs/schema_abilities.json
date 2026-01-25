@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "docs/refs/schema_abilities.json",
+  "type": "object",
+  "required": ["version", "abilities"],
+  "properties": {
+    "version": {"type": "string"},
+    "abilities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["abilityId", "name", "ruleRefs"],
+        "properties": {
+          "abilityId": {"type": "string"},
+          "name": {"type": "string"},
+          "ruleRefs": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}

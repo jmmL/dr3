@@ -17,30 +17,35 @@
           "row": 17,
           "armies": 2,
           "seaFleet": 1,
-          "isCapital": true
+          "isCapital": true,
+          "cityId": "port_lork"
         },
         {
           "name": "Farnot",
           "col": 10,
           "row": 19,
-          "armies": 1
+          "armies": 1,
+          "cityId": "farnot"
         },
         {
           "name": "Castle Lapspell",
           "col": 13,
           "row": 18,
           "armies": 2,
-          "seaFleet": 1
+          "seaFleet": 1,
+          "cityId": "castle_lapspell"
         },
         {
           "name": "Tadafat",
           "col": 10,
           "row": 14,
-          "armies": 2
+          "armies": 2,
+          "cityId": "tadafat"
         }
       ],
       "totalArmies": 7,
-      "totalSeaFleets": 2
+      "totalSeaFleets": 2,
+      "raceId": "human"
     },
     {
       "id": "mivior",
@@ -57,32 +62,37 @@
           "row": 21,
           "armies": 3,
           "seaFleet": 1,
-          "isCapital": true
+          "isCapital": true,
+          "cityId": "colist"
         },
         {
           "name": "Addat",
           "col": 3,
           "row": 12,
           "armies": 3,
-          "seaFleet": 1
+          "seaFleet": 1,
+          "cityId": "addat"
         },
         {
           "name": "Boliske",
           "col": 3,
           "row": 18,
           "armies": 2,
-          "seaFleet": 1
+          "seaFleet": 1,
+          "cityId": "boliske"
         },
         {
           "name": "Boran",
           "col": 5,
           "row": 16,
           "armies": 1,
-          "seaFleet": 1
+          "seaFleet": 1,
+          "cityId": "boran"
         }
       ],
       "totalArmies": 9,
-      "totalSeaFleets": 4
+      "totalSeaFleets": 4,
+      "raceId": "human"
     },
     {
       "id": "muetar",
@@ -98,41 +108,48 @@
           "col": 19,
           "row": 11,
           "armies": 3,
-          "isCapital": true
+          "isCapital": true,
+          "cityId": "pennol"
         },
         {
           "name": "Plibba",
           "col": 17,
           "row": 14,
-          "armies": 2
+          "armies": 2,
+          "cityId": "plibba"
         },
         {
           "name": "Beolon",
           "col": 21,
           "row": 16,
-          "armies": 2
+          "armies": 2,
+          "cityId": "beolon"
         },
         {
           "name": "Basimar",
           "col": 24,
           "row": 9,
-          "armies": 3
+          "armies": 3,
+          "cityId": "basimar"
         },
         {
           "name": "Groat",
           "col": 23,
           "row": 15,
-          "armies": 2
+          "armies": 2,
+          "cityId": "groat"
         },
         {
           "name": "Yando",
           "col": 19,
           "row": 16,
-          "armies": 1
+          "armies": 1,
+          "cityId": "yando"
         }
       ],
       "totalArmies": 13,
-      "totalSeaFleets": 0
+      "totalSeaFleets": 0,
+      "raceId": "human"
     },
     {
       "id": "shucassam",
@@ -149,30 +166,35 @@
           "row": 23,
           "armies": 4,
           "seaFleet": 1,
-          "isCapital": true
+          "isCapital": true,
+          "cityId": "adeese"
         },
         {
           "name": "Kuzdol",
           "col": 19,
           "row": 23,
-          "armies": 3
+          "armies": 3,
+          "cityId": "kuzdol"
         },
         {
           "name": "Lepers",
           "col": 27,
           "row": 25,
-          "armies": 1
+          "armies": 1,
+          "cityId": "lepers"
         },
         {
           "name": "Zefnar",
           "col": 11,
           "row": 22,
           "armies": 3,
-          "seaFleet": 2
+          "seaFleet": 2,
+          "cityId": "zefnar"
         }
       ],
       "totalArmies": 11,
-      "totalSeaFleets": 3
+      "totalSeaFleets": 3,
+      "raceId": "human"
     },
     {
       "id": "immer",
@@ -188,35 +210,41 @@
           "col": 14,
           "row": 6,
           "armies": 3,
-          "isCapital": true
+          "isCapital": true,
+          "cityId": "castle_altarr"
         },
         {
           "name": "Gap Castle",
           "col": 18,
           "row": 5,
-          "armies": 1
+          "armies": 1,
+          "cityId": "gap_castle"
         },
         {
           "name": "Gorpin",
           "col": 15,
           "row": 3,
-          "armies": 1
+          "armies": 1,
+          "cityId": "gorpin"
         },
         {
           "name": "Muscaster",
           "col": 15,
           "row": 8,
-          "armies": 2
+          "armies": 2,
+          "cityId": "muscaster"
         },
         {
           "name": "Wirzor",
           "col": 12,
           "row": 3,
-          "armies": 2
+          "armies": 2,
+          "cityId": "wirzor"
         }
       ],
       "totalArmies": 9,
-      "totalSeaFleets": 0
+      "totalSeaFleets": 0,
+      "raceId": "human"
     },
     {
       "id": "pon",
@@ -232,24 +260,28 @@
           "col": 28,
           "row": 17,
           "armies": 3,
-          "isCapital": true
+          "isCapital": true,
+          "cityId": "marzarbol"
         },
         {
           "name": "Crow's Nest",
           "col": 26,
           "row": 13,
-          "armies": 2
+          "armies": 2,
+          "cityId": "crow_s_nest"
         },
         {
           "name": "Grugongi",
           "col": 30,
           "row": 20,
           "armies": 2,
-          "seaFleet": 1
+          "seaFleet": 1,
+          "cityId": "grugongi"
         }
       ],
       "totalArmies": 7,
-      "totalSeaFleets": 1
+      "totalSeaFleets": 1,
+      "raceId": "human"
     },
     {
       "id": "rombune",
@@ -266,32 +298,37 @@
           "row": 27,
           "armies": 2,
           "seaFleet": 1,
-          "isCapital": true
+          "isCapital": true,
+          "cityId": "the_golkus"
         },
         {
           "name": "Parros",
           "col": 11,
           "row": 28,
           "armies": 2,
-          "seaFleet": 1
+          "seaFleet": 1,
+          "cityId": "parros"
         },
         {
           "name": "Thores",
           "col": 2,
           "row": 29,
           "armies": 1,
-          "seaFleet": 1
+          "seaFleet": 1,
+          "cityId": "thores"
         },
         {
           "name": "Jipols",
           "col": 19,
           "row": 28,
           "armies": 1,
-          "seaFleet": 1
+          "seaFleet": 1,
+          "cityId": "jipols"
         }
       ],
       "totalArmies": 6,
-      "totalSeaFleets": 4
+      "totalSeaFleets": 4,
+      "raceId": "human"
     },
     {
       "id": "neuth",
@@ -307,11 +344,13 @@
           "col": 4,
           "row": 5,
           "armies": 6,
-          "isCapital": true
+          "isCapital": true,
+          "cityId": "ider_bolis"
         }
       ],
       "totalArmies": 6,
-      "totalSeaFleets": 0
+      "totalSeaFleets": 0,
+      "raceId": "elves"
     },
     {
       "id": "zorn",
@@ -327,12 +366,14 @@
           "col": 23,
           "row": 2,
           "armies": 3,
-          "isCapital": true
+          "isCapital": true,
+          "cityId": "the_pits"
         }
       ],
       "totalArmies": 11,
       "totalSeaFleets": 0,
-      "notes": "Total includes 8 Nithmere Mountain units deployed separately per rule 30.2"
+      "notes": "Total includes 8 Nithmere Mountain units deployed separately per rule 30.2",
+      "raceId": "goblins"
     },
     {
       "id": "ghem",
@@ -348,23 +389,27 @@
           "col": 32,
           "row": 9,
           "armies": 3,
-          "isCapital": true
+          "isCapital": true,
+          "cityId": "mines_of_rosengg"
         },
         {
           "name": "Aws Noir",
           "col": 2,
           "row": 1,
-          "armies": 3
+          "armies": 3,
+          "cityId": "aws_noir"
         },
         {
           "name": "Alzak",
           "col": 33,
           "row": 14,
-          "armies": 2
+          "armies": 2,
+          "cityId": "alzak"
         }
       ],
       "totalArmies": 8,
-      "totalSeaFleets": 0
+      "totalSeaFleets": 0,
+      "raceId": "dwarves"
     },
     {
       "id": "trolls",
@@ -385,30 +430,35 @@
           "col": 6,
           "row": 13,
           "armies": 2,
-          "isCapital": true
+          "isCapital": true,
+          "cityId": "stone_face"
         },
         {
           "name": "The Gathering",
           "col": 33,
           "row": 21,
-          "armies": 2
+          "armies": 2,
+          "cityId": "the_gathering"
         },
         {
           "name": "The Crag",
           "col": 27,
           "row": 2,
-          "armies": 2
+          "armies": 2,
+          "cityId": "the_crag"
         },
         {
           "name": "The Shunned Vale",
           "col": 17,
           "row": 28,
-          "armies": 2
+          "armies": 2,
+          "cityId": "the_shunned_vale"
         }
       ],
       "totalArmies": 8,
       "totalSeaFleets": 0,
-      "notes": "Trolls have no castles; their locations are open terrain. See rule 30.1 for special rules."
+      "notes": "Trolls have no castles; their locations are open terrain. See rule 30.1 for special rules.",
+      "raceId": "trolls"
     }
   ]
 }
