@@ -1,1 +1,42 @@
-{"v":"1.0.0","d":"2026-01-24T12:10:39.974Z","f":[{"id":"eaters","n":"The Eaters of Wisdom","r":"special","cities":[{"n":"Invisible School","id":"invisible_school","p":[12,10],"cap":true,"i":5}],"notes":"Advanced-only faction."},{"id":"blackhand","n":"The Black Hand","r":"special","cities":[{"n":"Tower of Zards","id":"tower_of_zards","p":[30,3],"cap":true,"i":6}],"notes":"Advanced-only faction."}]}
+{
+  "v": "1.0.0",
+  "d": "2026-01-24T12:10:39.974Z",
+  "f": [
+    {
+      "id": "eaters",
+      "n": "The Eaters of Wisdom",
+      "r": "special",
+      "cities": [
+        {
+          "n": "Invisible School",
+          "id": "invisible_school",
+          "p": [
+            12,
+            10
+          ],
+          "cap": true,
+          "i": 5
+        }
+      ],
+      "notes": "Advanced-only faction."
+    },
+    {
+      "id": "blackhand",
+      "n": "The Black Hand",
+      "r": "special",
+      "cities": [
+        {
+          "n": "Tower of Zards",
+          "id": "tower_of_zards",
+          "p": [
+            30,
+            3
+          ],
+          "cap": true,
+          "i": 6
+        }
+      ],
+      "notes": "Advanced-only faction."
+    }
+  ]
+}

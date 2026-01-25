@@ -1,1 +1,6474 @@
-{"version":"1.0.0","exportDate":"2026-01-24T12:10:39.974Z","map":{"cols":35,"rows":31,"hexes":[{"c":0,"r":0,"t":"forest","k":"neuth"},{"c":0,"r":1,"t":"forest","k":"neuth"},{"c":0,"r":2,"t":"forest","k":"neuth"},{"c":0,"r":3,"t":"forest","k":"neuth"},{"c":0,"r":4,"t":"forest","k":"neuth"},{"c":0,"r":5,"t":"forest","k":"neuth"},{"c":0,"r":6,"t":"forest","k":"neuth"},{"c":0,"r":7,"t":"forest","k":"neuth"},{"c":0,"r":8,"t":"forest","k":"neuth"},{"c":0,"r":9,"t":"scenic","n":"Stump Hole"},{"c":0,"r":10,"t":"hill"},{"c":0,"r":11,"t":"clear"},{"c":0,"r":12,"t":"seashore"},{"c":0,"r":13,"t":"sea"},{"c":0,"r":14,"t":"sea"},{"c":0,"r":15,"t":"sea"},{"c":0,"r":16,"t":"sea"},{"c":0,"r":17,"t":"sea"},{"c":0,"r":18,"t":"sea"},{"c":0,"r":19,"t":"sea"},{"c":0,"r":20,"t":"sea"},{"c":0,"r":21,"t":"sea"},{"c":0,"r":22,"t":"sea"},{"c":0,"r":23,"t":"sea"},{"c":0,"r":24,"t":"sea"},{"c":0,"r":25,"t":"sea"},{"c":0,"r":26,"t":"sea"},{"c":0,"r":27,"t":"sea"},{"c":0,"r":28,"t":"sea"},{"c":0,"r":29,"t":"sea"},{"c":0,"r":30,"t":"sea"},{"c":1,"r":0,"t":["forest","scenic"],"n":"The Haven","k":"neuth"},{"c":1,"r":1,"t":"forest","k":"neuth"},{"c":1,"r":2,"t":"forest","k":"neuth"},{"c":1,"r":3,"t":"forest","k":"neuth"},{"c":1,"r":4,"t":"forest","k":"neuth"},{"c":1,"r":5,"t":"forest","k":"neuth"},{"c":1,"r":6,"t":"forest","k":"neuth"},{"c":1,"r":7,"t":"forest","k":"neuth"},{"c":1,"r":8,"t":"forest","k":"neuth"},{"c":1,"r":9,"t":"forest","k":"neuth"},{"c":1,"r":10,"t":"hill"},{"c":1,"r":11,"t":"hill"},{"c":1,"r":12,"t":"seashore"},{"c":1,"r":13,"t":"sea"},{"c":1,"r":14,"t":"sea"},{"c":1,"r":15,"t":"sea"},{"c":1,"r":16,"t":"sea"},{"c":1,"r":17,"t":"sea"},{"c":1,"r":18,"t":"sea"},{"c":1,"r":19,"t":"sea"},{"c":1,"r":20,"t":"sea"},{"c":1,"r":21,"t":"sea"},{"c":1,"r":22,"t":"sea"},{"c":1,"r":23,"t":"sea"},{"c":1,"r":24,"t":"sea"},{"c":1,"r":25,"t":"sea"},{"c":1,"r":26,"t":"sea"},{"c":1,"r":27,"t":"sea"},{"c":1,"r":28,"t":"sea"},{"c":1,"r":29,"t":"sea"},{"c":1,"r":30,"t":"sea"},{"c":2,"r":0,"t":"forest","k":"neuth"},{"c":2,"r":1,"t":"castle","n":"Aws Noir","k":"ghem","i":4,"cid":"aws_noir"},{"c":2,"r":2,"t":"mountain","k":"ghem"},{"c":2,"r":3,"t":"forest","k":"neuth"},{"c":2,"r":4,"t":"forest","k":"neuth"},{"c":2,"r":5,"t":"forest","k":"neuth"},{"c":2,"r":6,"t":["forest","lakeshore"],"k":"neuth"},{"c":2,"r":7,"t":"forest","k":"neuth"},{"c":2,"r":8,"t":"forest","k":"neuth"},{"c":2,"r":9,"t":"forest","k":"neuth"},{"c":2,"r":10,"t":"hill"},{"c":2,"r":11,"t":"hill"},{"c":2,"r":12,"t":"seashore","k":"mivior"},{"c":2,"r":13,"t":"sea"},{"c":2,"r":14,"t":"sea"},{"c":2,"r":15,"t":"sea"},{"c":2,"r":16,"t":"sea"},{"c":2,"r":17,"t":"sea"},{"c":2,"r":18,"t":"sea"},{"c":2,"r":19,"t":"sea"},{"c":2,"r":20,"t":"sea"},{"c":2,"r":21,"t":"sea"},{"c":2,"r":22,"t":"sea"},{"c":2,"r":23,"t":"sea"},{"c":2,"r":24,"t":"clear","n":"Isle of Fright"},{"c":2,"r":25,"t":"sea"},{"c":2,"r":26,"t":"sea"},{"c":2,"r":27,"t":"sea"},{"c":2,"r":28,"t":"sea"},{"c":2,"r":29,"t":"port","n":"Thores","k":"rombune","i":3,"cid":"thores"},{"c":2,"r":30,"t":"sea"},{"c":3,"r":0,"t":"mountain","k":"ghem"},{"c":3,"r":1,"t":"mountain","k":"ghem"},{"c":3,"r":2,"t":["forest","minor_river"],"k":"neuth"},{"c":3,"r":3,"t":"forest","k":"neuth"},{"c":3,"r":4,"t":"forest","k":"neuth"},{"c":3,"r":5,"t":["forest","lakeshore"],"k":"neuth"},{"c":3,"r":6,"t":["forest","lakeshore"],"k":"neuth"},{"c":3,"r":7,"t":"forest","k":"neuth"},{"c":3,"r":8,"t":"forest","k":"neuth"},{"c":3,"r":9,"t":"forest","k":"neuth"},{"c":3,"r":10,"t":["hill","minor_river"]},{"c":3,"r":11,"t":"clear"},{"c":3,"r":12,"t":"port","n":"Addat","k":"mivior","i":3,"cid":"addat"},{"c":3,"r":13,"t":"seashore","k":"mivior"},{"c":3,"r":14,"t":"sea"},{"c":3,"r":15,"t":"sea"},{"c":3,"r":16,"t":"sea"},{"c":3,"r":17,"t":"sea"},{"c":3,"r":18,"t":"port","n":"Boliske","k":"mivior","i":2,"cid":"boliske"},{"c":3,"r":19,"t":"sea"},{"c":3,"r":20,"t":"sea"},{"c":3,"r":21,"t":"seashore","k":"mivior"},{"c":3,"r":22,"t":"sea"},{"c":3,"r":23,"t":"sea"},{"c":3,"r":24,"t":"sea"},{"c":3,"r":25,"t":"sea"},{"c":3,"r":26,"t":"sea"},{"c":3,"r":27,"t":"seashore","k":"rombune"},{"c":3,"r":28,"t":"sea"},{"c":3,"r":29,"t":"sea"},{"c":3,"r":30,"t":"sea"},{"c":4,"r":0,"t":"hill"},{"c":4,"r":1,"t":"forest","k":"neuth"},{"c":4,"r":2,"t":["forest","minor_river"],"k":"neuth"},{"c":4,"r":3,"t":"forest","k":"neuth"},{"c":4,"r":4,"t":"forest","k":"neuth"},{"c":4,"r":5,"t":["castle","royal"],"n":"Ider Bolis","k":"neuth","i":5,"cid":"ider_bolis"},{"c":4,"r":6,"t":["forest","lakeshore"],"k":"neuth"},{"c":4,"r":7,"t":["forest","lakeshore"],"k":"neuth"},{"c":4,"r":8,"t":"forest","k":"neuth"},{"c":4,"r":9,"t":"forest","k":"neuth"},{"c":4,"r":10,"t":["hill","minor_river"]},{"c":4,"r":11,"t":"minor_river","k":"mivior"},{"c":4,"r":12,"t":"minor_river","k":"mivior"},{"c":4,"r":13,"t":"seashore","k":"mivior"},{"c":4,"r":14,"t":"seashore","k":"mivior"},{"c":4,"r":15,"t":"seashore","k":"mivior"},{"c":4,"r":16,"t":"sea"},{"c":4,"r":17,"t":["forest","seashore"],"k":"mivior"},{"c":4,"r":18,"t":"sea"},{"c":4,"r":19,"t":["forest","seashore"],"k":"mivior"},{"c":4,"r":20,"t":["forest","seashore"],"k":"mivior"},{"c":4,"r":21,"t":["port","royal"],"n":"Colist","k":"mivior","i":4,"cid":"colist"},{"c":4,"r":22,"t":"seashore","k":"mivior"},{"c":4,"r":23,"t":"sea"},{"c":4,"r":24,"t":"sea"},{"c":4,"r":25,"t":"sea"},{"c":4,"r":26,"t":["forest","seashore"],"k":"rombune"},{"c":4,"r":27,"t":["forest","mountain"],"k":"rombune"},{"c":4,"r":28,"t":"seashore","k":"rombune"},{"c":4,"r":29,"t":"seashore","k":"rombune"},{"c":4,"r":30,"t":"sea"},{"c":5,"r":0,"t":"hill"},{"c":5,"r":1,"t":"forest","k":"neuth"},{"c":5,"r":2,"t":["forest","minor_river"],"k":"neuth"},{"c":5,"r":3,"t":"forest","k":"neuth"},{"c":5,"r":4,"t":"forest","k":"neuth"},{"c":5,"r":5,"t":["forest","minor_river"],"k":"neuth"},{"c":5,"r":6,"t":"lake","k":"neuth"},{"c":5,"r":7,"t":["forest","lakeshore"],"k":"neuth"},{"c":5,"r":8,"t":"forest","k":"neuth"},{"c":5,"r":9,"t":"forest","k":"neuth"},{"c":5,"r":10,"t":["swamp","minor_river"]},{"c":5,"r":11,"t":"minor_river"},{"c":5,"r":12,"t":"minor_river","k":"mivior"},{"c":5,"r":13,"t":["forest","seashore"]},{"c":5,"r":14,"t":["sea","scenic"],"n":"Serpent Bay"},{"c":5,"r":15,"t":["mountain","seashore"],"k":"mivior"},{"c":5,"r":16,"t":"port","n":"Boran","k":"mivior","i":2,"cid":"boran"},{"c":5,"r":17,"t":"mountain","k":"mivior"},{"c":5,"r":18,"t":["mountain","seashore"],"k":"mivior"},{"c":5,"r":19,"t":"mountain","k":"mivior"},{"c":5,"r":20,"t":["mountain","seashore"],"k":"mivior"},{"c":5,"r":21,"t":"sea"},{"c":5,"r":22,"t":"seashore","k":"mivior"},{"c":5,"r":23,"t":"sea"},{"c":5,"r":24,"t":"sea"},{"c":5,"r":25,"t":"sea"},{"c":5,"r":26,"t":"seashore","k":"rombune"},{"c":5,"r":27,"t":["port","royal"],"n":"The Golkus","k":"rombune","i":3,"cid":"the_golkus"},{"c":5,"r":28,"t":"mountain","k":"rombune"},{"c":5,"r":29,"t":"seashore","k":"rombune"},{"c":5,"r":30,"t":"seashore","k":"rombune"},{"c":6,"r":0,"t":"clear"},{"c":6,"r":1,"t":"forest","k":"neuth"},{"c":6,"r":2,"t":["forest","minor_river"],"k":"neuth"},{"c":6,"r":3,"t":["forest","minor_river"],"k":"neuth"},{"c":6,"r":4,"t":["swamp","scenic"],"n":"Ruins of Letho","k":"neuth"},{"c":6,"r":5,"t":["forest","minor_river"],"k":"neuth"},{"c":6,"r":6,"t":["forest","lakeshore"],"k":"neuth"},{"c":6,"r":7,"t":["forest","lakeshore"],"k":"neuth"},{"c":6,"r":8,"t":["forest","minor_river"],"k":"neuth"},{"c":6,"r":9,"t":["swamp","minor_river"]},{"c":6,"r":10,"t":["swamp","minor_river"]},{"c":6,"r":11,"t":"swamp"},{"c":6,"r":12,"t":"forest"},{"c":6,"r":13,"t":"clear","n":"Stone Face","k":"trolls","cid":"stone_face"},{"c":6,"r":14,"t":["mountain","seashore"]},{"c":6,"r":15,"t":"mountain","k":"mivior"},{"c":6,"r":16,"t":"mountain","k":"mivior"},{"c":6,"r":17,"t":"mountain","k":"mivior"},{"c":6,"r":18,"t":"clear","k":"mivior"},{"c":6,"r":19,"t":"clear","k":"mivior"},{"c":6,"r":20,"t":"seashore","k":"mivior"},{"c":6,"r":21,"t":"sea"},{"c":6,"r":22,"t":"sea"},{"c":6,"r":23,"t":"sea"},{"c":6,"r":24,"t":"sea"},{"c":6,"r":25,"t":"sea"},{"c":6,"r":26,"t":["forest","seashore"],"k":"rombune"},{"c":6,"r":27,"t":"sea"},{"c":6,"r":28,"t":"seashore","k":"rombune"},{"c":6,"r":29,"t":"seashore","k":"rombune"},{"c":6,"r":30,"t":"seashore","k":"rombune"},{"c":7,"r":0,"t":"clear"},{"c":7,"r":1,"t":"forest","k":"neuth"},{"c":7,"r":2,"t":"forest","k":"neuth"},{"c":7,"r":3,"t":["forest","minor_river"],"k":"neuth"},{"c":7,"r":4,"t":["forest","minor_river"],"k":"neuth"},{"c":7,"r":5,"t":["forest","minor_river"],"k":"neuth"},{"c":7,"r":6,"t":["forest","lakeshore"],"k":"neuth"},{"c":7,"r":7,"t":["forest","lakeshore"],"k":"neuth"},{"c":7,"r":8,"t":["forest","minor_river"],"k":"neuth"},{"c":7,"r":9,"t":["forest","minor_river"],"k":"neuth"},{"c":7,"r":10,"t":"swamp"},{"c":7,"r":11,"t":"swamp"},{"c":7,"r":12,"t":"forest"},{"c":7,"r":13,"t":"forest"},{"c":7,"r":14,"t":"mountain_pass","n":"Mace Pass"},{"c":7,"r":15,"t":"forest","k":"hothior"},{"c":7,"r":16,"t":"forest","k":"hothior"},{"c":7,"r":17,"t":"forest","k":"hothior"},{"c":7,"r":18,"t":"clear","k":"mivior"},{"c":7,"r":19,"t":"seashore","k":"mivior"},{"c":7,"r":20,"t":"seashore","k":"mivior"},{"c":7,"r":21,"t":"sea"},{"c":7,"r":22,"t":"sea"},{"c":7,"r":23,"t":"sea"},{"c":7,"r":24,"t":"sea"},{"c":7,"r":25,"t":"sea"},{"c":7,"r":26,"t":"sea"},{"c":7,"r":27,"t":["seashore","scenic"],"n":"Point Lookout","k":"rombune"},{"c":7,"r":28,"t":"seashore","k":"rombune"},{"c":7,"r":29,"t":"clear","k":"rombune"},{"c":7,"r":30,"t":"clear","k":"rombune"},{"c":8,"r":0,"t":"scenic","n":"Standing Stones"},{"c":8,"r":1,"t":"forest","k":"neuth"},{"c":8,"r":2,"t":["forest","minor_river"],"k":"neuth"},{"c":8,"r":3,"t":"forest","k":"neuth"},{"c":8,"r":4,"t":["forest","minor_river"],"k":"neuth"},{"c":8,"r":5,"t":"forest","k":"neuth"},{"c":8,"r":6,"t":"forest","k":"neuth"},{"c":8,"r":7,"t":"forest","k":"neuth"},{"c":8,"r":8,"t":"forest","k":"neuth"},{"c":8,"r":9,"t":["forest","minor_river"],"k":"neuth"},{"c":8,"r":10,"t":"swamp"},{"c":8,"r":11,"t":["swamp","scenic"],"n":"Willowik"},{"c":8,"r":12,"t":"forest"},{"c":8,"r":13,"t":"mountain"},{"c":8,"r":14,"t":"mountain"},{"c":8,"r":15,"t":"forest","k":"hothior"},{"c":8,"r":16,"t":"forest","k":"hothior"},{"c":8,"r":17,"t":"forest","k":"hothior"},{"c":8,"r":18,"t":["forest","seashore"],"k":"hothior"},{"c":8,"r":19,"t":"seashore","k":"hothior"},{"c":8,"r":20,"t":"seashore","k":"hothior"},{"c":8,"r":21,"t":"sea"},{"c":8,"r":22,"t":"sea"},{"c":8,"r":23,"t":"sea"},{"c":8,"r":24,"t":"sea"},{"c":8,"r":25,"t":"sea"},{"c":8,"r":26,"t":"sea"},{"c":8,"r":27,"t":"seashore","k":"rombune"},{"c":8,"r":28,"t":"clear","k":"rombune"},{"c":8,"r":29,"t":"clear","k":"rombune"},{"c":8,"r":30,"t":"clear","k":"rombune"},{"c":9,"r":0,"t":"clear"},{"c":9,"r":1,"t":"forest","k":"neuth"},{"c":9,"r":2,"t":["forest","minor_river"],"k":"neuth"},{"c":9,"r":3,"t":"forest","k":"neuth"},{"c":9,"r":4,"t":"forest","k":"neuth"},{"c":9,"r":5,"t":"forest","k":"neuth"},{"c":9,"r":6,"t":"forest","k":"neuth"},{"c":9,"r":7,"t":"forest","k":"neuth"},{"c":9,"r":8,"t":"forest","k":"neuth"},{"c":9,"r":9,"t":"forest","k":"neuth"},{"c":9,"r":10,"t":["swamp","minor_river"]},{"c":9,"r":11,"t":"hill"},{"c":9,"r":12,"t":"clear"},{"c":9,"r":13,"t":"hill"},{"c":9,"r":14,"t":"clear","k":"hothior"},{"c":9,"r":15,"t":"clear","k":"hothior"},{"c":9,"r":16,"t":"clear","k":"hothior"},{"c":9,"r":17,"t":["port","royal"],"n":"Port Lork","k":"hothior","i":3,"cid":"port_lork"},{"c":9,"r":18,"t":["seashore","scenic"],"n":"The Boom","k":"hothior"},{"c":9,"r":19,"t":"clear","k":"hothior"},{"c":9,"r":20,"t":"seashore","k":"hothior"},{"c":9,"r":21,"t":"sea"},{"c":9,"r":22,"t":"sea"},{"c":9,"r":23,"t":"sea"},{"c":9,"r":24,"t":"sea"},{"c":9,"r":25,"t":"sea"},{"c":9,"r":26,"t":"sea"},{"c":9,"r":27,"t":["forest","seashore"],"k":"rombune"},{"c":9,"r":28,"t":"forest","k":"rombune"},{"c":9,"r":29,"t":"clear","k":"rombune"},{"c":9,"r":30,"t":"clear","k":"rombune"},{"c":10,"r":0,"t":"clear"},{"c":10,"r":1,"t":"hill"},{"c":10,"r":2,"t":["forest","minor_river"],"k":"neuth"},{"c":10,"r":3,"t":"hill"},{"c":10,"r":4,"t":"forest","k":"neuth"},{"c":10,"r":5,"t":"forest","k":"neuth"},{"c":10,"r":6,"t":"forest","k":"neuth"},{"c":10,"r":7,"t":"clear"},{"c":10,"r":8,"t":"hill"},{"c":10,"r":9,"t":"hill"},{"c":10,"r":10,"t":"hill"},{"c":10,"r":11,"t":"mountain"},{"c":10,"r":12,"t":"hill"},{"c":10,"r":13,"t":["hill","minor_river"]},{"c":10,"r":14,"t":"castle","n":"Tadafat","k":"hothior","i":2,"cid":"tadafat"},{"c":10,"r":15,"t":"minor_river","k":"hothior"},{"c":10,"r":16,"t":"clear","k":"hothior"},{"c":10,"r":17,"t":"minor_river","k":"hothior"},{"c":10,"r":18,"t":"minor_river","k":"hothior"},{"c":10,"r":19,"t":["seashore","scenic"],"n":"Farnot","k":"hothior","cid":"farnot"},{"c":10,"r":20,"t":"seashore","k":"hothior"},{"c":10,"r":21,"t":"seashore","k":"shucassam"},{"c":10,"r":22,"t":"seashore","k":"shucassam"},{"c":10,"r":23,"t":"sea"},{"c":10,"r":24,"t":"sea"},{"c":10,"r":25,"t":"seashore"},{"c":10,"r":26,"t":"seashore"},{"c":10,"r":27,"t":["forest","seashore"],"k":"rombune"},{"c":10,"r":28,"t":"seashore","k":"rombune"},{"c":10,"r":29,"t":["hill","seashore"],"k":"rombune"},{"c":10,"r":30,"t":"clear","k":"rombune"},{"c":11,"r":0,"t":"minor_river"},{"c":11,"r":1,"t":"minor_river"},{"c":11,"r":2,"t":"minor_river"},{"c":11,"r":3,"t":"hill"},{"c":11,"r":4,"t":"ancient_battlefield","n":"The Unknown Army"},{"c":11,"r":5,"t":"clear"},{"c":11,"r":6,"t":"forest"},{"c":11,"r":7,"t":"clear","k":"immer"},{"c":11,"r":8,"t":"swamp","k":"immer"},{"c":11,"r":9,"t":"hill"},{"c":11,"r":10,"t":"clear"},{"c":11,"r":11,"t":["mountain","minor_river"]},{"c":11,"r":12,"t":["hill","minor_river"]},{"c":11,"r":13,"t":"clear","k":"hothior"},{"c":11,"r":14,"t":["hill","minor_river"],"k":"hothior"},{"c":11,"r":15,"t":"hill","k":"hothior"},{"c":11,"r":16,"t":"minor_river","k":"hothior"},{"c":11,"r":17,"t":"clear","k":"hothior"},{"c":11,"r":18,"t":"clear","k":"hothior"},{"c":11,"r":19,"t":"seashore","k":"hothior"},{"c":11,"r":20,"t":["forest","seashore"],"k":"shucassam"},{"c":11,"r":21,"t":"clear","k":"shucassam"},{"c":11,"r":22,"t":"port","n":"Zefnar","k":"shucassam","i":3,"cid":"zefnar"},{"c":11,"r":23,"t":"seashore","k":"shucassam"},{"c":11,"r":24,"t":"seashore"},{"c":11,"r":25,"t":"scenic","n":"Tombs of Olde"},{"c":11,"r":26,"t":"seashore"},{"c":11,"r":27,"t":["hill","seashore"],"k":"rombune"},{"c":11,"r":28,"t":"port","n":"Parros","k":"rombune","i":3,"cid":"parros"},{"c":11,"r":29,"t":["hill","seashore"],"k":"rombune"},{"c":11,"r":30,"t":"clear","k":"rombune"},{"c":12,"r":0,"t":"clear"},{"c":12,"r":1,"t":"minor_river"},{"c":12,"r":2,"t":"hill"},{"c":12,"r":3,"t":"castle","n":"Wirzor","k":"immer","i":2,"cid":"wirzor"},{"c":12,"r":4,"t":"hill","k":"immer"},{"c":12,"r":5,"t":"hill","k":"immer"},{"c":12,"r":6,"t":"clear","k":"immer"},{"c":12,"r":7,"t":"clear","k":"immer"},{"c":12,"r":8,"t":"swamp","k":"immer"},{"c":12,"r":9,"t":["hill","lakeshore"]},{"c":12,"r":10,"t":["castle","royal"],"n":"Invisible School","i":5},{"c":12,"r":11,"t":["forest","lakeshore"]},{"c":12,"r":12,"t":"clear"},{"c":12,"r":13,"t":"forest"},{"c":12,"r":14,"t":"clear","k":"hothior"},{"c":12,"r":15,"t":"minor_river","k":"hothior"},{"c":12,"r":16,"t":"minor_river","k":"hothior"},{"c":12,"r":17,"t":"clear","k":"hothior"},{"c":12,"r":18,"t":"seashore","k":"hothior"},{"c":12,"r":19,"t":"sea"},{"c":12,"r":20,"t":["forest","seashore"],"k":"shucassam"},{"c":12,"r":21,"t":"clear","k":"shucassam"},{"c":12,"r":22,"t":"clear","k":"shucassam"},{"c":12,"r":23,"t":"seashore","k":"shucassam"},{"c":12,"r":24,"t":"forest","k":"shucassam"},{"c":12,"r":25,"t":"clear"},{"c":12,"r":26,"t":"clear"},{"c":12,"r":27,"t":"forest","k":"rombune"},{"c":12,"r":28,"t":["hill","seashore"],"k":"rombune"},{"c":12,"r":29,"t":["hill","scenic"],"n":"The Crater","k":"rombune"},{"c":12,"r":30,"t":"clear","k":"rombune"},{"c":13,"r":0,"t":"clear"},{"c":13,"r":1,"t":"minor_river","k":"immer"},{"c":13,"r":2,"t":"minor_river","k":"immer"},{"c":13,"r":3,"t":"clear","k":"immer"},{"c":13,"r":4,"t":"clear","k":"immer"},{"c":13,"r":5,"t":"hill","k":"immer"},{"c":13,"r":6,"t":"clear","k":"immer"},{"c":13,"r":7,"t":"clear","k":"immer"},{"c":13,"r":8,"t":"swamp","k":"immer"},{"c":13,"r":9,"t":["hill","lakeshore"]},{"c":13,"r":10,"t":"lake"},{"c":13,"r":11,"t":["forest","minor_river","lakeshore"]},{"c":13,"r":12,"t":"forest"},{"c":13,"r":13,"t":["forest","minor_river"]},{"c":13,"r":14,"t":"minor_river","k":"hothior"},{"c":13,"r":15,"t":"clear","k":"hothior"},{"c":13,"r":16,"t":"forest","k":"hothior"},{"c":13,"r":17,"t":"clear","k":"hothior"},{"c":13,"r":18,"t":"port","n":"Castle Lapspell","k":"hothior","i":3,"cid":"castle_lapspell"},{"c":13,"r":19,"t":"seashore"},{"c":13,"r":20,"n":"Freeport"},{"c":13,"r":21,"t":"hill"},{"c":13,"r":22,"t":"clear","k":"shucassam"},{"c":13,"r":23,"t":"clear"},{"c":13,"r":24,"t":"clear"},{"c":13,"r":25,"t":"clear"},{"c":13,"r":26,"t":"clear"},{"c":13,"r":27,"t":"clear"},{"c":13,"r":28,"t":"hill","k":"rombune"},{"c":13,"r":29,"t":"clear","k":"rombune"},{"c":13,"r":30,"t":"clear","k":"rombune"},{"c":14,"r":0,"t":"clear"},{"c":14,"r":1,"t":"minor_river","k":"immer"},{"c":14,"r":2,"t":"forest","k":"immer"},{"c":14,"r":3,"t":"forest","k":"immer"},{"c":14,"r":4,"t":"clear","k":"immer"},{"c":14,"r":5,"t":"hill","k":"immer"},{"c":14,"r":6,"t":["castle","royal"],"n":"Castle Altarr","k":"immer","i":3,"cid":"castle_altarr"},{"c":14,"r":7,"t":"clear","k":"immer"},{"c":14,"r":8,"t":"clear","k":"immer"},{"c":14,"r":9,"t":"forest"},{"c":14,"r":10,"t":["swamp","lakeshore"]},{"c":14,"r":11,"t":["forest","scenic"],"n":"Camptown"},{"c":14,"r":12,"t":["forest","minor_river"]},{"c":14,"r":13,"t":"forest"},{"c":14,"r":14,"t":"clear"},{"c":14,"r":15,"t":"clear"},{"c":14,"r":16,"t":"clear","k":"hothior"},{"c":14,"r":17,"t":["swamp","major_river"],"k":"hothior"},{"c":14,"r":18,"t":"major_river","k":"hothior"},{"c":14,"r":19,"t":["hill","major_river"]},{"c":14,"r":20,"t":"hill"},{"c":14,"r":21,"t":"clear"},{"c":14,"r":22,"t":"clear","k":"shucassam"},{"c":14,"r":23,"t":"clear"},{"c":14,"r":24,"t":"clear"},{"c":14,"r":25,"t":"clear"},{"c":14,"r":26,"t":"ancient_battlefield","n":"Plain of Bones"},{"c":14,"r":27,"t":"clear"},{"c":14,"r":28,"t":"clear"},{"c":14,"r":29,"t":"clear"},{"c":14,"r":30,"t":"clear","k":"rombune"},{"c":15,"r":0,"t":"mountain"},{"c":15,"r":1,"t":["mountain","minor_river"]},{"c":15,"r":2,"t":"forest","k":"immer"},{"c":15,"r":3,"t":["forest","scenic"],"n":"Gorpin","k":"immer","cid":"gorpin"},{"c":15,"r":4,"t":"hill","k":"immer"},{"c":15,"r":5,"t":"hill","k":"immer"},{"c":15,"r":6,"t":"clear","k":"immer"},{"c":15,"r":7,"t":"clear","k":"immer"},{"c":15,"r":8,"t":"castle","n":"Muscaster","k":"immer","i":3,"cid":"muscaster"},{"c":15,"r":9,"t":"forest"},{"c":15,"r":10,"t":"forest"},{"c":15,"r":11,"t":"forest"},{"c":15,"r":12,"t":"forest"},{"c":15,"r":13,"t":"hill","k":"muetar"},{"c":15,"r":14,"t":"hill","k":"muetar"},{"c":15,"r":15,"t":"hill","k":"muetar"},{"c":15,"r":16,"t":"clear"},{"c":15,"r":17,"t":["swamp","major_river"]},{"c":15,"r":18,"t":"major_river"},{"c":15,"r":19,"t":"scenic","n":"Hubbleglum"},{"c":15,"r":20,"t":"hill"},{"c":15,"r":21,"t":"forest"},{"c":15,"r":22,"t":"clear","k":"shucassam"},{"c":15,"r":23,"t":"clear"},{"c":15,"r":24,"t":"clear"},{"c":15,"r":25,"t":"clear"},{"c":15,"r":26,"t":"clear"},{"c":15,"r":27,"t":"clear"},{"c":15,"r":28,"t":"clear"},{"c":15,"r":29,"t":"hill"},{"c":15,"r":30,"t":"clear"},{"c":16,"r":0,"t":["mountain","minor_river"]},{"c":16,"r":1,"t":"scenic","n":"The Temple of Kings"},{"c":16,"r":2,"t":"forest","k":"immer"},{"c":16,"r":3,"t":"forest","k":"immer"},{"c":16,"r":4,"t":"forest","k":"immer"},{"c":16,"r":5,"t":"clear","k":"immer"},{"c":16,"r":6,"t":"clear","k":"immer"},{"c":16,"r":7,"t":"clear","k":"immer"},{"c":16,"r":8,"t":"clear","k":"immer"},{"c":16,"r":9,"t":"clear","k":"immer"},{"c":16,"r":10,"t":"clear","k":"immer"},{"c":16,"r":11,"t":"clear","k":"immer"},{"c":16,"r":12,"t":"clear"},{"c":16,"r":13,"t":"clear","k":"muetar"},{"c":16,"r":14,"t":"clear","k":"muetar"},{"c":16,"r":15,"t":"clear","k":"muetar"},{"c":16,"r":16,"t":["swamp","major_river"],"k":"muetar"},{"c":16,"r":17,"t":["swamp","major_river"],"k":"muetar"},{"c":16,"r":18,"t":"major_river"},{"c":16,"r":19,"t":"clear"},{"c":16,"r":20,"t":"hill"},{"c":16,"r":21,"t":"clear"},{"c":16,"r":22,"t":"clear","k":"shucassam"},{"c":16,"r":23,"t":"clear"},{"c":16,"r":24,"t":"scenic","n":"Lost Caravan"},{"c":16,"r":25,"t":"clear"},{"c":16,"r":26,"t":"clear"},{"c":16,"r":27,"t":"forest"},{"c":16,"r":28,"t":"forest"},{"c":16,"r":29,"t":"hill"},{"c":16,"r":30,"t":"clear"},{"c":17,"r":0,"t":"mountain"},{"c":17,"r":1,"t":"mountain"},{"c":17,"r":2,"t":"mountain"},{"c":17,"r":3,"t":"mountain","k":"zorn"},{"c":17,"r":4,"t":"forest","k":"immer"},{"c":17,"r":5,"t":"forest","k":"immer"},{"c":17,"r":6,"t":"forest","k":"immer"},{"c":17,"r":7,"t":"clear","k":"immer"},{"c":17,"r":8,"t":"clear","k":"immer"},{"c":17,"r":9,"t":"clear","k":"immer"},{"c":17,"r":10,"t":"clear","k":"immer"},{"c":17,"r":11,"t":"lakeshore"},{"c":17,"r":12,"t":"seashore"},{"c":17,"r":13,"t":"clear","k":"muetar"},{"c":17,"r":14,"t":"castle","n":"Plibba","k":"muetar","i":2,"cid":"plibba"},{"c":17,"r":15,"t":"major_river","k":"muetar"},{"c":17,"r":16,"t":["swamp","major_river"],"k":"muetar"},{"c":17,"r":17,"t":["swamp","major_river"],"k":"muetar"},{"c":17,"r":18,"t":"clear"},{"c":17,"r":19,"t":"clear"},{"c":17,"r":20,"t":"clear"},{"c":17,"r":21,"t":"clear"},{"c":17,"r":22,"t":"clear","k":"shucassam"},{"c":17,"r":23,"t":"clear"},{"c":17,"r":24,"t":"clear"},{"c":17,"r":25,"t":"clear"},{"c":17,"r":26,"t":"clear"},{"c":17,"r":27,"t":"mountain"},{"c":17,"r":28,"t":"clear","n":"The Shunned Vale","k":"trolls","cid":"the_shunned_vale"},{"c":17,"r":29,"t":"mountain"},{"c":17,"r":30,"t":"clear"},{"c":18,"r":0,"t":"mountain","k":"zorn"},{"c":18,"r":1,"t":"mountain","k":"zorn"},{"c":18,"r":2,"t":["mountain","scenic"],"n":"Winter Rest"},{"c":18,"r":3,"t":"mountain","k":"zorn"},{"c":18,"r":4,"t":"mountain","k":"zorn"},{"c":18,"r":5,"t":"castle","n":"Gap Castle","k":"immer","i":2,"cid":"gap_castle"},{"c":18,"r":6,"t":"clear","k":"immer"},{"c":18,"r":7,"t":"mountain","k":"zorn"},{"c":18,"r":8,"t":"clear","k":"immer"},{"c":18,"r":9,"t":"forest"},{"c":18,"r":10,"t":"lakeshore"},{"c":18,"r":11,"t":"lakeshore","k":"muetar"},{"c":18,"r":12,"t":"lakeshore","k":"muetar"},{"c":18,"r":13,"t":"major_river","k":"muetar"},{"c":18,"r":14,"t":"clear","k":"muetar"},{"c":18,"r":15,"t":"major_river","k":"muetar"},{"c":18,"r":16,"t":["swamp","major_river"],"k":"muetar"},{"c":18,"r":17,"t":"swamp","k":"muetar"},{"c":18,"r":18,"t":"clear"},{"c":18,"r":19,"t":"clear"},{"c":18,"r":20,"t":"clear"},{"c":18,"r":21,"t":"clear"},{"c":18,"r":22,"t":"scenic","n":"The Obelisk","k":"shucassam"},{"c":18,"r":23,"t":"clear","k":"shucassam"},{"c":18,"r":24,"t":"clear"},{"c":18,"r":25,"t":"mountain","k":"shucassam"},{"c":18,"r":26,"t":"clear"},{"c":18,"r":27,"t":"mountain"},{"c":18,"r":28,"t":"mountain"},{"c":18,"r":29,"t":"clear","k":"rombune"},{"c":18,"r":30,"t":"mountain_pass","n":"Giant Pass"},{"c":19,"r":0,"t":"mountain","k":"zorn"},{"c":19,"r":1,"t":"mountain","k":"zorn"},{"c":19,"r":2,"t":"forest","k":"zorn"},{"c":19,"r":3,"t":"forest","k":"zorn"},{"c":19,"r":4,"t":"mountain","k":"zorn"},{"c":19,"r":5,"t":"mountain_pass","n":"Snow Pass","k":"zorn"},{"c":19,"r":6,"t":"mountain","k":"zorn"},{"c":19,"r":7,"t":["mountain","minor_river"],"k":"zorn"},{"c":19,"r":8,"t":"clear"},{"c":19,"r":9,"t":"forest"},{"c":19,"r":10,"t":"lakeshore"},{"c":19,"r":11,"t":["castle","royal"],"n":"Pennol","k":"muetar","i":4,"cid":"pennol"},{"c":19,"r":12,"t":"lakeshore","k":"muetar"},{"c":19,"r":13,"t":"major_river","k":"muetar"},{"c":19,"r":14,"t":"major_river","k":"muetar"},{"c":19,"r":15,"t":["forest","major_river"],"k":"muetar"},{"c":19,"r":16,"t":"major_river","n":"Yando","k":"muetar","cid":"yando"},{"c":19,"r":17,"t":"hill","k":"muetar"},{"c":19,"r":18,"t":"clear"},{"c":19,"r":19,"t":"clear"},{"c":19,"r":20,"t":"clear"},{"c":19,"r":21,"t":"clear","k":"shucassam"},{"c":19,"r":22,"t":"clear","k":"shucassam"},{"c":19,"r":23,"t":"castle","n":"Kuzdol","k":"shucassam","i":3,"cid":"kuzdol"},{"c":19,"r":24,"t":"clear","k":"shucassam"},{"c":19,"r":25,"t":"mountain","k":"shucassam"},{"c":19,"r":26,"t":"mountain","k":"shucassam"},{"c":19,"r":27,"t":"clear"},{"c":19,"r":28,"t":"port","n":"Jipols","k":"rombune","i":3,"cid":"jipols"},{"c":19,"r":29,"t":"clear","k":"rombune"},{"c":19,"r":30,"t":"clear"},{"c":20,"r":0,"t":"mountain","k":"zorn"},{"c":20,"r":1,"t":"clear","k":"zorn"},{"c":20,"r":2,"t":"forest","k":"zorn"},{"c":20,"r":3,"t":"forest","k":"zorn"},{"c":20,"r":4,"t":"mountain","k":"zorn"},{"c":20,"r":5,"t":"clear","k":"zorn"},{"c":20,"r":6,"t":["mountain","minor_river"],"k":"zorn"},{"c":20,"r":7,"t":["mountain","minor_river"],"k":"zorn"},{"c":20,"r":8,"t":"clear"},{"c":20,"r":9,"t":"clear"},{"c":20,"r":10,"t":"seashore","k":"muetar"},{"c":20,"r":11,"t":"clear","k":"muetar"},{"c":20,"r":12,"t":"clear","k":"muetar"},{"c":20,"r":13,"t":["forest","major_river"],"k":"muetar"},{"c":20,"r":14,"t":"major_river","k":"muetar"},{"c":20,"r":15,"t":"minor_river","k":"muetar"},{"c":20,"r":16,"t":"clear","k":"muetar"},{"c":20,"r":17,"t":"hill","k":"muetar"},{"c":20,"r":18,"t":"castle","n":"The Keep"},{"c":20,"r":19,"t":"forest"},{"c":20,"r":20,"t":"clear"},{"c":20,"r":21,"t":"clear","k":"shucassam"},{"c":20,"r":22,"t":"clear","k":"shucassam"},{"c":20,"r":23,"t":"mountain","k":"shucassam"},{"c":20,"r":24,"t":"mountain","k":"shucassam"},{"c":20,"r":25,"t":"clear","k":"shucassam"},{"c":20,"r":26,"t":"clear","k":"shucassam"},{"c":20,"r":27,"t":"seashore"},{"c":20,"r":28,"t":"seashore","k":"rombune"},{"c":20,"r":29,"t":"clear"},{"c":20,"r":30,"t":"clear"},{"c":21,"r":0,"t":"mountain","k":"zorn"},{"c":21,"r":1,"t":"clear","k":"zorn"},{"c":21,"r":2,"t":"forest","k":"zorn"},{"c":21,"r":3,"t":"forest","k":"zorn"},{"c":21,"r":4,"t":"clear","k":"zorn"},{"c":21,"r":5,"t":"mountain","k":"zorn"},{"c":21,"r":6,"t":"mountain","k":"zorn"},{"c":21,"r":7,"t":"mountain","k":"zorn"},{"c":21,"r":8,"t":"minor_river"},{"c":21,"r":9,"t":"minor_river","k":"muetar"},{"c":21,"r":10,"t":"minor_river","k":"muetar"},{"c":21,"r":11,"t":"clear","k":"muetar"},{"c":21,"r":12,"t":"clear","k":"muetar"},{"c":21,"r":13,"t":"clear","k":"muetar"},{"c":21,"r":14,"t":"clear","k":"muetar"},{"c":21,"r":15,"t":"minor_river","k":"muetar"},{"c":21,"r":16,"t":"castle","n":"Beolon","k":"muetar","i":2,"cid":"beolon"},{"c":21,"r":17,"t":"clear","k":"muetar"},{"c":21,"r":18,"t":"forest"},{"c":21,"r":19,"t":"forest"},{"c":21,"r":20,"t":"forest","k":"shucassam"},{"c":21,"r":21,"t":"clear","k":"shucassam"},{"c":21,"r":22,"t":"hill","k":"shucassam"},{"c":21,"r":23,"t":"clear","k":"shucassam"},{"c":21,"r":24,"t":"seashore","k":"shucassam"},{"c":21,"r":25,"t":"seashore","k":"shucassam"},{"c":21,"r":26,"t":"seashore","k":"shucassam"},{"c":21,"r":27,"t":"seashore"},{"c":21,"r":28,"t":"seashore"},{"c":21,"r":29,"t":"clear"},{"c":21,"r":30,"t":"clear"},{"c":22,"r":0,"t":"mountain","k":"zorn"},{"c":22,"r":1,"t":"clear","k":"zorn"},{"c":22,"r":2,"t":"swamp","k":"zorn"},{"c":22,"r":3,"t":"forest","k":"zorn"},{"c":22,"r":4,"t":"forest","k":"zorn"},{"c":22,"r":5,"t":["forest","mountain"],"k":"zorn"},{"c":22,"r":6,"t":["mountain","scenic"],"n":"Ozerg"},{"c":22,"r":7,"t":"forest"},{"c":22,"r":8,"t":"minor_river"},{"c":22,"r":9,"t":"minor_river","k":"muetar"},{"c":22,"r":10,"t":"minor_river","k":"muetar"},{"c":22,"r":11,"t":"forest","k":"muetar"},{"c":22,"r":12,"t":"clear","k":"muetar"},{"c":22,"r":13,"t":"clear","k":"muetar"},{"c":22,"r":14,"t":"clear","k":"muetar"},{"c":22,"r":15,"t":["forest","minor_river"],"k":"muetar"},{"c":22,"r":16,"t":"clear","k":"muetar"},{"c":22,"r":17,"t":"clear","k":"muetar"},{"c":22,"r":18,"t":"forest"},{"c":22,"r":19,"t":"clear","k":"shucassam"},{"c":22,"r":20,"t":"clear","k":"shucassam"},{"c":22,"r":21,"t":"clear","k":"shucassam"},{"c":22,"r":22,"t":"clear","k":"shucassam"},{"c":22,"r":23,"t":"clear","k":"shucassam"},{"c":22,"r":24,"t":"seashore","k":"shucassam"},{"c":22,"r":25,"t":"sea"},{"c":22,"r":26,"t":"seashore"},{"c":22,"r":27,"t":"clear"},{"c":22,"r":28,"t":"clear"},{"c":22,"r":29,"t":"scenic","n":"Eerie Oasis"},{"c":22,"r":30,"t":"clear"},{"c":23,"r":0,"t":"mountain","k":"zorn"},{"c":23,"r":1,"t":"forest","k":"zorn"},{"c":23,"r":2,"t":["castle","royal"],"n":"The Pits","k":"zorn","i":5,"cid":"the_pits"},{"c":23,"r":3,"t":"forest","k":"zorn"},{"c":23,"r":4,"t":"clear","k":"zorn"},{"c":23,"r":5,"t":"forest","k":"zorn"},{"c":23,"r":6,"t":["forest","mountain"],"k":"zorn"},{"c":23,"r":7,"t":"forest"},{"c":23,"r":8,"t":"minor_river"},{"c":23,"r":9,"t":"clear","k":"muetar"},{"c":23,"r":10,"t":["forest","minor_river"],"k":"muetar"},{"c":23,"r":11,"t":"forest","k":"muetar"},{"c":23,"r":12,"t":"clear","k":"muetar"},{"c":23,"r":13,"t":"hill","k":"muetar"},{"c":23,"r":14,"t":["swamp","minor_river"],"k":"muetar"},{"c":23,"r":15,"t":"castle","n":"Groat","k":"muetar","i":3,"cid":"groat"},{"c":23,"r":16,"t":["swamp","minor_river"],"k":"muetar"},{"c":23,"r":17,"t":"clear","k":"muetar"},{"c":23,"r":18,"t":"clear"},{"c":23,"r":19,"t":"clear","k":"shucassam"},{"c":23,"r":20,"t":"clear","k":"shucassam"},{"c":23,"r":21,"t":"clear","k":"shucassam"},{"c":23,"r":22,"t":"clear","k":"shucassam"},{"c":23,"r":23,"t":"clear","k":"shucassam"},{"c":23,"r":24,"t":"seashore","k":"shucassam"},{"c":23,"r":25,"n":"Bartertown"},{"c":23,"r":26,"t":"seashore"},{"c":23,"r":27,"t":"clear"},{"c":23,"r":28,"t":"clear"},{"c":23,"r":29,"t":"clear"},{"c":23,"r":30,"t":"clear"},{"c":24,"r":0,"t":"hill","k":"zorn"},{"c":24,"r":1,"t":"hill","k":"zorn"},{"c":24,"r":2,"t":"clear","k":"zorn"},{"c":24,"r":3,"t":"mountain","k":"zorn"},{"c":24,"r":4,"t":"forest","k":"zorn"},{"c":24,"r":5,"t":"clear","k":"zorn"},{"c":24,"r":6,"t":"mountain_pass","n":"Maw Pass","k":"zorn"},{"c":24,"r":7,"t":"mountain"},{"c":24,"r":8,"t":"minor_river","k":"muetar"},{"c":24,"r":9,"t":"castle","n":"Basimar","k":"muetar","i":3,"cid":"basimar"},{"c":24,"r":10,"t":"forest","k":"muetar"},{"c":24,"r":11,"t":"forest","k":"muetar"},{"c":24,"r":12,"t":"clear","k":"muetar"},{"c":24,"r":13,"t":"hill","k":"muetar"},{"c":24,"r":14,"t":"swamp","k":"muetar"},{"c":24,"r":15,"t":"swamp","k":"muetar"},{"c":24,"r":16,"t":"swamp","k":"muetar"},{"c":24,"r":17,"t":"hill","k":"muetar"},{"c":24,"r":18,"t":"clear"},{"c":24,"r":19,"t":"clear","k":"shucassam"},{"c":24,"r":20,"t":"clear","k":"shucassam"},{"c":24,"r":21,"t":"clear","k":"shucassam"},{"c":24,"r":22,"t":"clear","k":"shucassam"},{"c":24,"r":23,"t":["port","royal"],"n":"Adeese","k":"shucassam","i":4,"cid":"adeese"},{"c":24,"r":24,"t":"sea"},{"c":24,"r":25,"t":"seashore"},{"c":24,"r":26,"t":"clear"},{"c":24,"r":27,"t":"clear"},{"c":24,"r":28,"t":"clear"},{"c":24,"r":29,"t":"clear"},{"c":24,"r":30,"t":"scenic","n":"Trading Post"},{"c":25,"r":0,"t":["hill","scenic"],"n":"Mounds","k":"zorn"},{"c":25,"r":1,"t":"hill","k":"zorn"},{"c":25,"r":2,"t":"mountain","k":"zorn"},{"c":25,"r":3,"t":"forest","k":"zorn"},{"c":25,"r":4,"t":"forest","k":"zorn"},{"c":25,"r":5,"t":"mountain","k":"zorn"},{"c":25,"r":6,"t":"mountain","k":"zorn"},{"c":25,"r":7,"t":"mountain"},{"c":25,"r":8,"t":"minor_river","k":"muetar"},{"c":25,"r":9,"t":"clear","k":"muetar"},{"c":25,"r":10,"t":"clear","k":"muetar"},{"c":25,"r":11,"t":"clear","k":"muetar"},{"c":25,"r":12,"t":"hill","k":"muetar"},{"c":25,"r":13,"t":"forest","k":"pon"},{"c":25,"r":14,"t":"forest","k":"pon"},{"c":25,"r":15,"t":"clear","k":"muetar"},{"c":25,"r":16,"t":"hill","k":"muetar"},{"c":25,"r":17,"t":"minor_river","k":"pon"},{"c":25,"r":18,"t":["minor_river","scenic"],"n":"The Falls of Xag"},{"c":25,"r":19,"t":"minor_river","k":"shucassam"},{"c":25,"r":20,"t":"minor_river","k":"shucassam"},{"c":25,"r":21,"t":"minor_river","k":"shucassam"},{"c":25,"r":22,"t":"seashore","k":"shucassam"},{"c":25,"r":23,"t":"seashore","k":"shucassam"},{"c":25,"r":24,"t":"sea"},{"c":25,"r":25,"t":"sea"},{"c":25,"r":26,"t":"seashore"},{"c":25,"r":27,"t":"scenic","n":"Hyyx"},{"c":25,"r":28,"t":"clear"},{"c":25,"r":29,"t":"clear"},{"c":25,"r":30,"t":"clear"},{"c":26,"r":0,"t":"hill","k":"zorn"},{"c":26,"r":1,"t":"clear"},{"c":26,"r":2,"t":"mountain","k":"zorn"},{"c":26,"r":3,"t":"mountain","k":"zorn"},{"c":26,"r":4,"t":"mountain","k":"zorn"},{"c":26,"r":5,"t":"mountain","k":"zorn"},{"c":26,"r":6,"t":"forest"},{"c":26,"r":7,"t":"forest"},{"c":26,"r":8,"t":"minor_river","k":"muetar"},{"c":26,"r":9,"t":["swamp","minor_river"],"k":"muetar"},{"c":26,"r":10,"t":"clear","k":"muetar"},{"c":26,"r":11,"t":"forest","k":"pon"},{"c":26,"r":12,"t":"forest","k":"pon"},{"c":26,"r":13,"t":"castle","n":"Crow's Nest","k":"pon","i":4,"cid":"crow_s_nest"},{"c":26,"r":14,"t":"forest","k":"pon"},{"c":26,"r":15,"t":["hill","minor_river"],"k":"pon"},{"c":26,"r":16,"t":["hill","minor_river"],"k":"pon"},{"c":26,"r":17,"t":["forest","minor_river"],"k":"pon"},{"c":26,"r":18,"t":"forest","k":"pon"},{"c":26,"r":19,"t":"clear","k":"shucassam"},{"c":26,"r":20,"t":"clear","k":"shucassam"},{"c":26,"r":21,"t":"clear","k":"shucassam"},{"c":26,"r":22,"t":"seashore","k":"shucassam"},{"c":26,"r":23,"t":"sea"},{"c":26,"r":24,"t":"sea"},{"c":26,"r":25,"t":"seashore","k":"shucassam"},{"c":26,"r":26,"t":"seashore"},{"c":26,"r":27,"t":"clear"},{"c":26,"r":28,"t":"clear"},{"c":26,"r":29,"t":"clear"},{"c":26,"r":30,"t":"clear"},{"c":27,"r":0,"t":"hill","k":"zorn"},{"c":27,"r":1,"t":"clear"},{"c":27,"r":2,"t":"clear","n":"The Crag","k":"trolls","cid":"the_crag"},{"c":27,"r":3,"t":"clear"},{"c":27,"r":4,"t":"mountain","k":"zorn"},{"c":27,"r":5,"t":["forest","scenic"],"n":"Wolf Den"},{"c":27,"r":6,"t":"forest"},{"c":27,"r":7,"t":"minor_river","k":"muetar"},{"c":27,"r":8,"t":"minor_river","k":"muetar"},{"c":27,"r":9,"t":["swamp","minor_river"],"k":"muetar"},{"c":27,"r":10,"t":"clear","k":"muetar"},{"c":27,"r":11,"t":"forest","k":"pon"},{"c":27,"r":12,"t":"forest","k":"pon"},{"c":27,"r":13,"t":"forest","k":"pon"},{"c":27,"r":14,"t":["forest","minor_river"],"k":"pon"},{"c":27,"r":15,"t":"minor_river","k":"pon"},{"c":27,"r":16,"t":"clear","k":"pon"},{"c":27,"r":17,"t":"mountain","k":"pon"},{"c":27,"r":18,"t":"forest","k":"pon"},{"c":27,"r":19,"t":"forest","k":"pon"},{"c":27,"r":20,"t":"clear","k":"shucassam"},{"c":27,"r":21,"t":"seashore","k":"shucassam"},{"c":27,"r":22,"t":"seashore","k":"shucassam"},{"c":27,"r":23,"t":"seashore"},{"c":27,"r":24,"t":"seashore","k":"shucassam"},{"c":27,"r":25,"t":"clear","n":"Lepers","k":"shucassam","cid":"lepers"},{"c":27,"r":26,"t":"clear"},{"c":27,"r":27,"t":"clear"},{"c":27,"r":28,"t":"clear"},{"c":27,"r":29,"t":"clear"},{"c":27,"r":30,"t":"clear"},{"c":28,"r":0,"t":"clear"},{"c":28,"r":1,"t":"forest"},{"c":28,"r":2,"t":"mountain"},{"c":28,"r":3,"t":"mountain"},{"c":28,"r":4,"t":"forest"},{"c":28,"r":5,"t":"forest"},{"c":28,"r":6,"t":"forest"},{"c":28,"r":7,"t":["hill","minor_river"]},{"c":28,"r":8,"t":"minor_river","k":"muetar"},{"c":28,"r":9,"t":"clear","k":"muetar"},{"c":28,"r":10,"t":"minor_river","k":"muetar"},{"c":28,"r":11,"t":"forest","k":"pon"},{"c":28,"r":12,"t":"forest","k":"pon"},{"c":28,"r":13,"t":["mountain","minor_river"],"k":"pon"},{"c":28,"r":14,"t":["mountain","minor_river"],"k":"pon"},{"c":28,"r":15,"t":["mountain","minor_river"],"k":"pon"},{"c":28,"r":16,"t":"mountain_pass","k":"pon"},{"c":28,"r":17,"t":["castle","royal"],"n":"Marzarbol","k":"pon","i":4,"cid":"marzarbol"},{"c":28,"r":18,"t":"mountain","k":"pon"},{"c":28,"r":19,"t":"forest","k":"pon"},{"c":28,"r":20,"t":"seashore","k":"shucassam"},{"c":28,"r":21,"t":"seashore"},{"c":28,"r":22,"t":"seashore"},{"c":28,"r":23,"t":"seashore"},{"c":28,"r":24,"t":"clear"},{"c":28,"r":25,"t":"clear"},{"c":28,"r":26,"t":"clear"},{"c":28,"r":27,"t":"clear"},{"c":28,"r":28,"t":"clear"},{"c":28,"r":29,"t":"clear"},{"c":28,"r":30,"t":"clear"},{"c":29,"r":0,"t":"clear"},{"c":29,"r":1,"t":"forest"},{"c":29,"r":2,"t":"mountain"},{"c":29,"r":3,"t":"mountain"},{"c":29,"r":4,"t":["mountain","minor_river"]},{"c":29,"r":5,"t":["hill","minor_river"]},{"c":29,"r":6,"t":"minor_river"},{"c":29,"r":7,"t":"hill"},{"c":29,"r":8,"t":"forest"},{"c":29,"r":9,"t":["hill","minor_river"]},{"c":29,"r":10,"t":"minor_river","k":"muetar"},{"c":29,"r":11,"t":"mountain"},{"c":29,"r":12,"t":"forest","k":"pon"},{"c":29,"r":13,"t":["mountain","minor_river"],"k":"pon"},{"c":29,"r":14,"t":["mountain","minor_river"],"k":"pon"},{"c":29,"r":15,"t":"forest"},{"c":29,"r":16,"t":"mountain","k":"pon"},{"c":29,"r":17,"t":"mountain","k":"pon"},{"c":29,"r":18,"t":"mountain","k":"pon"},{"c":29,"r":19,"t":"mountain","k":"pon"},{"c":29,"r":20,"t":["mountain","seashore"],"k":"pon"},{"c":29,"r":21,"t":"seashore","k":"pon"},{"c":29,"r":22,"t":"clear"},{"c":29,"r":23,"t":"clear"},{"c":29,"r":24,"t":"clear"},{"c":29,"r":25,"t":"clear"},{"c":29,"r":26,"t":"clear"},{"c":29,"r":27,"t":"clear"},{"c":29,"r":28,"t":"clear"},{"c":29,"r":29,"t":"clear"},{"c":29,"r":30,"t":"clear"},{"c":30,"r":0,"t":"clear"},{"c":30,"r":1,"t":"clear"},{"c":30,"r":2,"t":"mountain"},{"c":30,"r":3,"t":["castle","royal"],"n":"Tower of Zards","i":6},{"c":30,"r":4,"t":["mountain","minor_river"]},{"c":30,"r":5,"t":"clear"},{"c":30,"r":6,"t":"clear"},{"c":30,"r":7,"t":"hill"},{"c":30,"r":8,"t":["lakeshore","scenic"],"n":"Mystic Lake"},{"c":30,"r":9,"t":"hill"},{"c":30,"r":10,"t":["mountain","minor_river"]},{"c":30,"r":11,"t":"mountain"},{"c":30,"r":12,"t":"mountain"},{"c":30,"r":13,"t":"clear"},{"c":30,"r":14,"t":"clear"},{"c":30,"r":15,"t":"forest","n":"Ghost Wood"},{"c":30,"r":16,"t":"mountain","k":"pon"},{"c":30,"r":17,"t":"hill"},{"c":30,"r":18,"t":"mountain","k":"pon"},{"c":30,"r":19,"t":"mountain","k":"pon"},{"c":30,"r":20,"t":"port","n":"Grugongi","k":"pon","i":3,"cid":"grugongi"},{"c":30,"r":21,"t":"hill","k":"pon"},{"c":30,"r":22,"t":"clear"},{"c":30,"r":23,"t":"clear"},{"c":30,"r":24,"t":"clear"},{"c":30,"r":25,"t":"ancient_battlefield","n":"Field of the Laughing Dead"},{"c":30,"r":26,"t":"clear"},{"c":30,"r":27,"t":"clear"},{"c":30,"r":28,"t":"clear"},{"c":30,"r":29,"t":"clear"},{"c":30,"r":30,"t":"clear"},{"c":31,"r":0,"t":"clear"},{"c":31,"r":1,"t":"swamp"},{"c":31,"r":2,"t":"mountain"},{"c":31,"r":3,"t":"mountain"},{"c":31,"r":4,"t":"mountain"},{"c":31,"r":5,"t":"clear"},{"c":31,"r":6,"t":"ancient_battlefield","n":"The Wasted Dead"},{"c":31,"r":7,"t":"hill"},{"c":31,"r":8,"t":"forest"},{"c":31,"r":9,"t":"mountain","k":"ghem"},{"c":31,"r":10,"t":["mountain","minor_river"],"k":"ghem"},{"c":31,"r":11,"t":"mountain","k":"ghem"},{"c":31,"r":12,"t":"clear"},{"c":31,"r":13,"t":"forest"},{"c":31,"r":14,"t":"clear"},{"c":31,"r":15,"t":"clear"},{"c":31,"r":16,"t":"clear"},{"c":31,"r":17,"t":"clear"},{"c":31,"r":18,"t":"clear"},{"c":31,"r":19,"t":"mountain","k":"pon"},{"c":31,"r":20,"t":"hill","k":"pon"},{"c":31,"r":21,"t":"clear"},{"c":31,"r":22,"t":"clear"},{"c":31,"r":23,"t":"clear"},{"c":31,"r":24,"t":"clear"},{"c":31,"r":25,"t":"clear"},{"c":31,"r":26,"t":"clear"},{"c":31,"r":27,"t":"clear"},{"c":31,"r":28,"t":"hill"},{"c":31,"r":29,"t":"hill"},{"c":31,"r":30,"t":"hill"},{"c":32,"r":0,"t":"clear"},{"c":32,"r":1,"t":"swamp"},{"c":32,"r":2,"t":"clear"},{"c":32,"r":3,"t":"mountain"},{"c":32,"r":4,"t":"forest"},{"c":32,"r":5,"t":"forest"},{"c":32,"r":6,"t":"clear"},{"c":32,"r":7,"t":"clear"},{"c":32,"r":8,"t":"mountain","k":"ghem"},{"c":32,"r":9,"t":["castle","royal"],"n":"Mines of Rosengg","k":"ghem","i":5,"cid":"mines_of_rosengg"},{"c":32,"r":10,"t":"mountain","k":"ghem"},{"c":32,"r":11,"t":"mountain","k":"ghem"},{"c":32,"r":12,"t":"hill"},{"c":32,"r":13,"t":"mountain","k":"ghem"},{"c":32,"r":14,"t":"mountain","k":"ghem"},{"c":32,"r":15,"t":"mountain","k":"ghem"},{"c":32,"r":16,"t":"clear"},{"c":32,"r":17,"t":"clear"},{"c":32,"r":18,"t":"clear"},{"c":32,"r":19,"t":"hill"},{"c":32,"r":20,"t":"hill","k":"pon"},{"c":32,"r":21,"t":"hill"},{"c":32,"r":22,"t":"forest"},{"c":32,"r":23,"t":"hill"},{"c":32,"r":24,"t":"clear"},{"c":32,"r":25,"t":"clear"},{"c":32,"r":26,"t":"forest"},{"c":32,"r":27,"t":"scenic","n":"Altars of Greystaff"},{"c":32,"r":28,"t":"hill"},{"c":32,"r":29,"t":"clear"},{"c":32,"r":30,"t":"clear"},{"c":33,"r":0,"t":"clear"},{"c":33,"r":1,"t":"swamp"},{"c":33,"r":2,"t":"swamp"},{"c":33,"r":3,"t":"hill"},{"c":33,"r":4,"t":"forest"},{"c":33,"r":5,"t":"forest"},{"c":33,"r":6,"t":"clear"},{"c":33,"r":7,"t":"clear"},{"c":33,"r":8,"t":"mountain","k":"ghem"},{"c":33,"r":9,"t":"mountain","k":"ghem"},{"c":33,"r":10,"t":"mountain","k":"ghem"},{"c":33,"r":11,"t":"mountain","k":"ghem"},{"c":33,"r":12,"t":"clear"},{"c":33,"r":13,"t":"mountain","k":"ghem"},{"c":33,"r":14,"t":"castle","n":"Alzak","k":"ghem","i":4,"cid":"alzak"},{"c":33,"r":15,"t":"hill"},{"c":33,"r":16,"t":"mountain","k":"ghem"},{"c":33,"r":17,"t":"hill"},{"c":33,"r":18,"t":"scenic","n":"City of Khos"},{"c":33,"r":19,"t":"clear"},{"c":33,"r":20,"t":"clear"},{"c":33,"r":21,"t":"clear","n":"The Gathering","k":"trolls","cid":"the_gathering"},{"c":33,"r":22,"t":"hill"},{"c":33,"r":23,"t":"clear"},{"c":33,"r":24,"t":"clear"},{"c":33,"r":25,"t":"clear"},{"c":33,"r":26,"t":"forest"},{"c":33,"r":27,"t":"hill"},{"c":33,"r":28,"t":"hill"},{"c":33,"r":29,"t":"scenic","n":"Wyrm's Lair"},{"c":33,"r":30,"t":"clear"},{"c":34,"r":0,"t":"clear","n":"Witches' Kitchen"},{"c":34,"r":2,"t":"swamp"},{"c":34,"r":4,"t":"forest"},{"c":34,"r":6,"t":"clear"},{"c":34,"r":8,"t":"hill"},{"c":34,"r":10,"t":"mountain","k":"ghem"},{"c":34,"r":12,"t":"clear"},{"c":34,"r":14,"t":"hill"},{"c":34,"r":16,"t":"clear"},{"c":34,"r":18,"t":"clear"},{"c":34,"r":20,"t":"clear"},{"c":34,"r":22,"t":"hill"},{"c":34,"r":24,"t":"clear"},{"c":34,"r":26,"t":"clear"},{"c":34,"r":28,"t":"clear"},{"c":34,"r":30,"t":"clear"}]}}
+{
+  "version": "1.0.0",
+  "exportDate": "2026-01-24T12:10:39.974Z",
+  "map": {
+    "cols": 35,
+    "rows": 31,
+    "hexes": [
+      {
+        "c": 0,
+        "r": 0,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 0,
+        "r": 1,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 0,
+        "r": 2,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 0,
+        "r": 3,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 0,
+        "r": 4,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 0,
+        "r": 5,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 0,
+        "r": 6,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 0,
+        "r": 7,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 0,
+        "r": 8,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 0,
+        "r": 9,
+        "t": "scenic",
+        "n": "Stump Hole"
+      },
+      {
+        "c": 0,
+        "r": 10,
+        "t": "hill"
+      },
+      {
+        "c": 0,
+        "r": 11,
+        "t": "clear"
+      },
+      {
+        "c": 0,
+        "r": 12,
+        "t": "seashore"
+      },
+      {
+        "c": 0,
+        "r": 13,
+        "t": "sea"
+      },
+      {
+        "c": 0,
+        "r": 14,
+        "t": "sea"
+      },
+      {
+        "c": 0,
+        "r": 15,
+        "t": "sea"
+      },
+      {
+        "c": 0,
+        "r": 16,
+        "t": "sea"
+      },
+      {
+        "c": 0,
+        "r": 17,
+        "t": "sea"
+      },
+      {
+        "c": 0,
+        "r": 18,
+        "t": "sea"
+      },
+      {
+        "c": 0,
+        "r": 19,
+        "t": "sea"
+      },
+      {
+        "c": 0,
+        "r": 20,
+        "t": "sea"
+      },
+      {
+        "c": 0,
+        "r": 21,
+        "t": "sea"
+      },
+      {
+        "c": 0,
+        "r": 22,
+        "t": "sea"
+      },
+      {
+        "c": 0,
+        "r": 23,
+        "t": "sea"
+      },
+      {
+        "c": 0,
+        "r": 24,
+        "t": "sea"
+      },
+      {
+        "c": 0,
+        "r": 25,
+        "t": "sea"
+      },
+      {
+        "c": 0,
+        "r": 26,
+        "t": "sea"
+      },
+      {
+        "c": 0,
+        "r": 27,
+        "t": "sea"
+      },
+      {
+        "c": 0,
+        "r": 28,
+        "t": "sea"
+      },
+      {
+        "c": 0,
+        "r": 29,
+        "t": "sea"
+      },
+      {
+        "c": 0,
+        "r": 30,
+        "t": "sea"
+      },
+      {
+        "c": 1,
+        "r": 0,
+        "t": [
+          "forest",
+          "scenic"
+        ],
+        "n": "The Haven",
+        "k": "neuth"
+      },
+      {
+        "c": 1,
+        "r": 1,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 1,
+        "r": 2,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 1,
+        "r": 3,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 1,
+        "r": 4,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 1,
+        "r": 5,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 1,
+        "r": 6,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 1,
+        "r": 7,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 1,
+        "r": 8,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 1,
+        "r": 9,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 1,
+        "r": 10,
+        "t": "hill"
+      },
+      {
+        "c": 1,
+        "r": 11,
+        "t": "hill"
+      },
+      {
+        "c": 1,
+        "r": 12,
+        "t": "seashore"
+      },
+      {
+        "c": 1,
+        "r": 13,
+        "t": "sea"
+      },
+      {
+        "c": 1,
+        "r": 14,
+        "t": "sea"
+      },
+      {
+        "c": 1,
+        "r": 15,
+        "t": "sea"
+      },
+      {
+        "c": 1,
+        "r": 16,
+        "t": "sea"
+      },
+      {
+        "c": 1,
+        "r": 17,
+        "t": "sea"
+      },
+      {
+        "c": 1,
+        "r": 18,
+        "t": "sea"
+      },
+      {
+        "c": 1,
+        "r": 19,
+        "t": "sea"
+      },
+      {
+        "c": 1,
+        "r": 20,
+        "t": "sea"
+      },
+      {
+        "c": 1,
+        "r": 21,
+        "t": "sea"
+      },
+      {
+        "c": 1,
+        "r": 22,
+        "t": "sea"
+      },
+      {
+        "c": 1,
+        "r": 23,
+        "t": "sea"
+      },
+      {
+        "c": 1,
+        "r": 24,
+        "t": "sea"
+      },
+      {
+        "c": 1,
+        "r": 25,
+        "t": "sea"
+      },
+      {
+        "c": 1,
+        "r": 26,
+        "t": "sea"
+      },
+      {
+        "c": 1,
+        "r": 27,
+        "t": "sea"
+      },
+      {
+        "c": 1,
+        "r": 28,
+        "t": "sea"
+      },
+      {
+        "c": 1,
+        "r": 29,
+        "t": "sea"
+      },
+      {
+        "c": 1,
+        "r": 30,
+        "t": "sea"
+      },
+      {
+        "c": 2,
+        "r": 0,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 2,
+        "r": 1,
+        "t": "castle",
+        "n": "Aws Noir",
+        "k": "ghem",
+        "i": 4,
+        "cid": "aws_noir"
+      },
+      {
+        "c": 2,
+        "r": 2,
+        "t": "mountain",
+        "k": "ghem"
+      },
+      {
+        "c": 2,
+        "r": 3,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 2,
+        "r": 4,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 2,
+        "r": 5,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 2,
+        "r": 6,
+        "t": [
+          "forest",
+          "lakeshore"
+        ],
+        "k": "neuth"
+      },
+      {
+        "c": 2,
+        "r": 7,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 2,
+        "r": 8,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 2,
+        "r": 9,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 2,
+        "r": 10,
+        "t": "hill"
+      },
+      {
+        "c": 2,
+        "r": 11,
+        "t": "hill"
+      },
+      {
+        "c": 2,
+        "r": 12,
+        "t": "seashore",
+        "k": "mivior"
+      },
+      {
+        "c": 2,
+        "r": 13,
+        "t": "sea"
+      },
+      {
+        "c": 2,
+        "r": 14,
+        "t": "sea"
+      },
+      {
+        "c": 2,
+        "r": 15,
+        "t": "sea"
+      },
+      {
+        "c": 2,
+        "r": 16,
+        "t": "sea"
+      },
+      {
+        "c": 2,
+        "r": 17,
+        "t": "sea"
+      },
+      {
+        "c": 2,
+        "r": 18,
+        "t": "sea"
+      },
+      {
+        "c": 2,
+        "r": 19,
+        "t": "sea"
+      },
+      {
+        "c": 2,
+        "r": 20,
+        "t": "sea"
+      },
+      {
+        "c": 2,
+        "r": 21,
+        "t": "sea"
+      },
+      {
+        "c": 2,
+        "r": 22,
+        "t": "sea"
+      },
+      {
+        "c": 2,
+        "r": 23,
+        "t": "sea"
+      },
+      {
+        "c": 2,
+        "r": 24,
+        "t": "clear",
+        "n": "Isle of Fright"
+      },
+      {
+        "c": 2,
+        "r": 25,
+        "t": "sea"
+      },
+      {
+        "c": 2,
+        "r": 26,
+        "t": "sea"
+      },
+      {
+        "c": 2,
+        "r": 27,
+        "t": "sea"
+      },
+      {
+        "c": 2,
+        "r": 28,
+        "t": "sea"
+      },
+      {
+        "c": 2,
+        "r": 29,
+        "t": "port",
+        "n": "Thores",
+        "k": "rombune",
+        "i": 3,
+        "cid": "thores"
+      },
+      {
+        "c": 2,
+        "r": 30,
+        "t": "sea"
+      },
+      {
+        "c": 3,
+        "r": 0,
+        "t": "mountain",
+        "k": "ghem"
+      },
+      {
+        "c": 3,
+        "r": 1,
+        "t": "mountain",
+        "k": "ghem"
+      },
+      {
+        "c": 3,
+        "r": 2,
+        "t": [
+          "forest",
+          "minor_river"
+        ],
+        "k": "neuth"
+      },
+      {
+        "c": 3,
+        "r": 3,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 3,
+        "r": 4,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 3,
+        "r": 5,
+        "t": [
+          "forest",
+          "lakeshore"
+        ],
+        "k": "neuth"
+      },
+      {
+        "c": 3,
+        "r": 6,
+        "t": [
+          "forest",
+          "lakeshore"
+        ],
+        "k": "neuth"
+      },
+      {
+        "c": 3,
+        "r": 7,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 3,
+        "r": 8,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 3,
+        "r": 9,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 3,
+        "r": 10,
+        "t": [
+          "hill",
+          "minor_river"
+        ]
+      },
+      {
+        "c": 3,
+        "r": 11,
+        "t": "clear"
+      },
+      {
+        "c": 3,
+        "r": 12,
+        "t": "port",
+        "n": "Addat",
+        "k": "mivior",
+        "i": 3,
+        "cid": "addat"
+      },
+      {
+        "c": 3,
+        "r": 13,
+        "t": "seashore",
+        "k": "mivior"
+      },
+      {
+        "c": 3,
+        "r": 14,
+        "t": "sea"
+      },
+      {
+        "c": 3,
+        "r": 15,
+        "t": "sea"
+      },
+      {
+        "c": 3,
+        "r": 16,
+        "t": "sea"
+      },
+      {
+        "c": 3,
+        "r": 17,
+        "t": "sea"
+      },
+      {
+        "c": 3,
+        "r": 18,
+        "t": "port",
+        "n": "Boliske",
+        "k": "mivior",
+        "i": 2,
+        "cid": "boliske"
+      },
+      {
+        "c": 3,
+        "r": 19,
+        "t": "sea"
+      },
+      {
+        "c": 3,
+        "r": 20,
+        "t": "sea"
+      },
+      {
+        "c": 3,
+        "r": 21,
+        "t": "seashore",
+        "k": "mivior"
+      },
+      {
+        "c": 3,
+        "r": 22,
+        "t": "sea"
+      },
+      {
+        "c": 3,
+        "r": 23,
+        "t": "sea"
+      },
+      {
+        "c": 3,
+        "r": 24,
+        "t": "sea"
+      },
+      {
+        "c": 3,
+        "r": 25,
+        "t": "sea"
+      },
+      {
+        "c": 3,
+        "r": 26,
+        "t": "sea"
+      },
+      {
+        "c": 3,
+        "r": 27,
+        "t": "seashore",
+        "k": "rombune"
+      },
+      {
+        "c": 3,
+        "r": 28,
+        "t": "sea"
+      },
+      {
+        "c": 3,
+        "r": 29,
+        "t": "sea"
+      },
+      {
+        "c": 3,
+        "r": 30,
+        "t": "sea"
+      },
+      {
+        "c": 4,
+        "r": 0,
+        "t": "hill"
+      },
+      {
+        "c": 4,
+        "r": 1,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 4,
+        "r": 2,
+        "t": [
+          "forest",
+          "minor_river"
+        ],
+        "k": "neuth"
+      },
+      {
+        "c": 4,
+        "r": 3,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 4,
+        "r": 4,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 4,
+        "r": 5,
+        "t": [
+          "castle",
+          "royal"
+        ],
+        "n": "Ider Bolis",
+        "k": "neuth",
+        "i": 5,
+        "cid": "ider_bolis"
+      },
+      {
+        "c": 4,
+        "r": 6,
+        "t": [
+          "forest",
+          "lakeshore"
+        ],
+        "k": "neuth"
+      },
+      {
+        "c": 4,
+        "r": 7,
+        "t": [
+          "forest",
+          "lakeshore"
+        ],
+        "k": "neuth"
+      },
+      {
+        "c": 4,
+        "r": 8,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 4,
+        "r": 9,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 4,
+        "r": 10,
+        "t": [
+          "hill",
+          "minor_river"
+        ]
+      },
+      {
+        "c": 4,
+        "r": 11,
+        "t": "minor_river",
+        "k": "mivior"
+      },
+      {
+        "c": 4,
+        "r": 12,
+        "t": "minor_river",
+        "k": "mivior"
+      },
+      {
+        "c": 4,
+        "r": 13,
+        "t": "seashore",
+        "k": "mivior"
+      },
+      {
+        "c": 4,
+        "r": 14,
+        "t": "seashore",
+        "k": "mivior"
+      },
+      {
+        "c": 4,
+        "r": 15,
+        "t": "seashore",
+        "k": "mivior"
+      },
+      {
+        "c": 4,
+        "r": 16,
+        "t": "sea"
+      },
+      {
+        "c": 4,
+        "r": 17,
+        "t": [
+          "forest",
+          "seashore"
+        ],
+        "k": "mivior"
+      },
+      {
+        "c": 4,
+        "r": 18,
+        "t": "sea"
+      },
+      {
+        "c": 4,
+        "r": 19,
+        "t": [
+          "forest",
+          "seashore"
+        ],
+        "k": "mivior"
+      },
+      {
+        "c": 4,
+        "r": 20,
+        "t": [
+          "forest",
+          "seashore"
+        ],
+        "k": "mivior"
+      },
+      {
+        "c": 4,
+        "r": 21,
+        "t": [
+          "port",
+          "royal"
+        ],
+        "n": "Colist",
+        "k": "mivior",
+        "i": 4,
+        "cid": "colist"
+      },
+      {
+        "c": 4,
+        "r": 22,
+        "t": "seashore",
+        "k": "mivior"
+      },
+      {
+        "c": 4,
+        "r": 23,
+        "t": "sea"
+      },
+      {
+        "c": 4,
+        "r": 24,
+        "t": "sea"
+      },
+      {
+        "c": 4,
+        "r": 25,
+        "t": "sea"
+      },
+      {
+        "c": 4,
+        "r": 26,
+        "t": [
+          "forest",
+          "seashore"
+        ],
+        "k": "rombune"
+      },
+      {
+        "c": 4,
+        "r": 27,
+        "t": [
+          "forest",
+          "mountain"
+        ],
+        "k": "rombune"
+      },
+      {
+        "c": 4,
+        "r": 28,
+        "t": "seashore",
+        "k": "rombune"
+      },
+      {
+        "c": 4,
+        "r": 29,
+        "t": "seashore",
+        "k": "rombune"
+      },
+      {
+        "c": 4,
+        "r": 30,
+        "t": "sea"
+      },
+      {
+        "c": 5,
+        "r": 0,
+        "t": "hill"
+      },
+      {
+        "c": 5,
+        "r": 1,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 5,
+        "r": 2,
+        "t": [
+          "forest",
+          "minor_river"
+        ],
+        "k": "neuth"
+      },
+      {
+        "c": 5,
+        "r": 3,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 5,
+        "r": 4,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 5,
+        "r": 5,
+        "t": [
+          "forest",
+          "minor_river"
+        ],
+        "k": "neuth"
+      },
+      {
+        "c": 5,
+        "r": 6,
+        "t": "lake",
+        "k": "neuth"
+      },
+      {
+        "c": 5,
+        "r": 7,
+        "t": [
+          "forest",
+          "lakeshore"
+        ],
+        "k": "neuth"
+      },
+      {
+        "c": 5,
+        "r": 8,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 5,
+        "r": 9,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 5,
+        "r": 10,
+        "t": [
+          "swamp",
+          "minor_river"
+        ]
+      },
+      {
+        "c": 5,
+        "r": 11,
+        "t": "minor_river"
+      },
+      {
+        "c": 5,
+        "r": 12,
+        "t": "minor_river",
+        "k": "mivior"
+      },
+      {
+        "c": 5,
+        "r": 13,
+        "t": [
+          "forest",
+          "seashore"
+        ]
+      },
+      {
+        "c": 5,
+        "r": 14,
+        "t": [
+          "sea",
+          "scenic"
+        ],
+        "n": "Serpent Bay"
+      },
+      {
+        "c": 5,
+        "r": 15,
+        "t": [
+          "mountain",
+          "seashore"
+        ],
+        "k": "mivior"
+      },
+      {
+        "c": 5,
+        "r": 16,
+        "t": "port",
+        "n": "Boran",
+        "k": "mivior",
+        "i": 2,
+        "cid": "boran"
+      },
+      {
+        "c": 5,
+        "r": 17,
+        "t": "mountain",
+        "k": "mivior"
+      },
+      {
+        "c": 5,
+        "r": 18,
+        "t": [
+          "mountain",
+          "seashore"
+        ],
+        "k": "mivior"
+      },
+      {
+        "c": 5,
+        "r": 19,
+        "t": "mountain",
+        "k": "mivior"
+      },
+      {
+        "c": 5,
+        "r": 20,
+        "t": [
+          "mountain",
+          "seashore"
+        ],
+        "k": "mivior"
+      },
+      {
+        "c": 5,
+        "r": 21,
+        "t": "sea"
+      },
+      {
+        "c": 5,
+        "r": 22,
+        "t": "seashore",
+        "k": "mivior"
+      },
+      {
+        "c": 5,
+        "r": 23,
+        "t": "sea"
+      },
+      {
+        "c": 5,
+        "r": 24,
+        "t": "sea"
+      },
+      {
+        "c": 5,
+        "r": 25,
+        "t": "sea"
+      },
+      {
+        "c": 5,
+        "r": 26,
+        "t": "seashore",
+        "k": "rombune"
+      },
+      {
+        "c": 5,
+        "r": 27,
+        "t": [
+          "port",
+          "royal"
+        ],
+        "n": "The Golkus",
+        "k": "rombune",
+        "i": 3,
+        "cid": "the_golkus"
+      },
+      {
+        "c": 5,
+        "r": 28,
+        "t": "mountain",
+        "k": "rombune"
+      },
+      {
+        "c": 5,
+        "r": 29,
+        "t": "seashore",
+        "k": "rombune"
+      },
+      {
+        "c": 5,
+        "r": 30,
+        "t": "seashore",
+        "k": "rombune"
+      },
+      {
+        "c": 6,
+        "r": 0,
+        "t": "clear"
+      },
+      {
+        "c": 6,
+        "r": 1,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 6,
+        "r": 2,
+        "t": [
+          "forest",
+          "minor_river"
+        ],
+        "k": "neuth"
+      },
+      {
+        "c": 6,
+        "r": 3,
+        "t": [
+          "forest",
+          "minor_river"
+        ],
+        "k": "neuth"
+      },
+      {
+        "c": 6,
+        "r": 4,
+        "t": [
+          "swamp",
+          "scenic"
+        ],
+        "n": "Ruins of Letho",
+        "k": "neuth"
+      },
+      {
+        "c": 6,
+        "r": 5,
+        "t": [
+          "forest",
+          "minor_river"
+        ],
+        "k": "neuth"
+      },
+      {
+        "c": 6,
+        "r": 6,
+        "t": [
+          "forest",
+          "lakeshore"
+        ],
+        "k": "neuth"
+      },
+      {
+        "c": 6,
+        "r": 7,
+        "t": [
+          "forest",
+          "lakeshore"
+        ],
+        "k": "neuth"
+      },
+      {
+        "c": 6,
+        "r": 8,
+        "t": [
+          "forest",
+          "minor_river"
+        ],
+        "k": "neuth"
+      },
+      {
+        "c": 6,
+        "r": 9,
+        "t": [
+          "swamp",
+          "minor_river"
+        ]
+      },
+      {
+        "c": 6,
+        "r": 10,
+        "t": [
+          "swamp",
+          "minor_river"
+        ]
+      },
+      {
+        "c": 6,
+        "r": 11,
+        "t": "swamp"
+      },
+      {
+        "c": 6,
+        "r": 12,
+        "t": "forest"
+      },
+      {
+        "c": 6,
+        "r": 13,
+        "t": "clear",
+        "n": "Stone Face",
+        "k": "trolls",
+        "cid": "stone_face"
+      },
+      {
+        "c": 6,
+        "r": 14,
+        "t": [
+          "mountain",
+          "seashore"
+        ]
+      },
+      {
+        "c": 6,
+        "r": 15,
+        "t": "mountain",
+        "k": "mivior"
+      },
+      {
+        "c": 6,
+        "r": 16,
+        "t": "mountain",
+        "k": "mivior"
+      },
+      {
+        "c": 6,
+        "r": 17,
+        "t": "mountain",
+        "k": "mivior"
+      },
+      {
+        "c": 6,
+        "r": 18,
+        "t": "clear",
+        "k": "mivior"
+      },
+      {
+        "c": 6,
+        "r": 19,
+        "t": "clear",
+        "k": "mivior"
+      },
+      {
+        "c": 6,
+        "r": 20,
+        "t": "seashore",
+        "k": "mivior"
+      },
+      {
+        "c": 6,
+        "r": 21,
+        "t": "sea"
+      },
+      {
+        "c": 6,
+        "r": 22,
+        "t": "sea"
+      },
+      {
+        "c": 6,
+        "r": 23,
+        "t": "sea"
+      },
+      {
+        "c": 6,
+        "r": 24,
+        "t": "sea"
+      },
+      {
+        "c": 6,
+        "r": 25,
+        "t": "sea"
+      },
+      {
+        "c": 6,
+        "r": 26,
+        "t": [
+          "forest",
+          "seashore"
+        ],
+        "k": "rombune"
+      },
+      {
+        "c": 6,
+        "r": 27,
+        "t": "sea"
+      },
+      {
+        "c": 6,
+        "r": 28,
+        "t": "seashore",
+        "k": "rombune"
+      },
+      {
+        "c": 6,
+        "r": 29,
+        "t": "seashore",
+        "k": "rombune"
+      },
+      {
+        "c": 6,
+        "r": 30,
+        "t": "seashore",
+        "k": "rombune"
+      },
+      {
+        "c": 7,
+        "r": 0,
+        "t": "clear"
+      },
+      {
+        "c": 7,
+        "r": 1,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 7,
+        "r": 2,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 7,
+        "r": 3,
+        "t": [
+          "forest",
+          "minor_river"
+        ],
+        "k": "neuth"
+      },
+      {
+        "c": 7,
+        "r": 4,
+        "t": [
+          "forest",
+          "minor_river"
+        ],
+        "k": "neuth"
+      },
+      {
+        "c": 7,
+        "r": 5,
+        "t": [
+          "forest",
+          "minor_river"
+        ],
+        "k": "neuth"
+      },
+      {
+        "c": 7,
+        "r": 6,
+        "t": [
+          "forest",
+          "lakeshore"
+        ],
+        "k": "neuth"
+      },
+      {
+        "c": 7,
+        "r": 7,
+        "t": [
+          "forest",
+          "lakeshore"
+        ],
+        "k": "neuth"
+      },
+      {
+        "c": 7,
+        "r": 8,
+        "t": [
+          "forest",
+          "minor_river"
+        ],
+        "k": "neuth"
+      },
+      {
+        "c": 7,
+        "r": 9,
+        "t": [
+          "forest",
+          "minor_river"
+        ],
+        "k": "neuth"
+      },
+      {
+        "c": 7,
+        "r": 10,
+        "t": "swamp"
+      },
+      {
+        "c": 7,
+        "r": 11,
+        "t": "swamp"
+      },
+      {
+        "c": 7,
+        "r": 12,
+        "t": "forest"
+      },
+      {
+        "c": 7,
+        "r": 13,
+        "t": "forest"
+      },
+      {
+        "c": 7,
+        "r": 14,
+        "t": "mountain_pass",
+        "n": "Mace Pass"
+      },
+      {
+        "c": 7,
+        "r": 15,
+        "t": "forest",
+        "k": "hothior"
+      },
+      {
+        "c": 7,
+        "r": 16,
+        "t": "forest",
+        "k": "hothior"
+      },
+      {
+        "c": 7,
+        "r": 17,
+        "t": "forest",
+        "k": "hothior"
+      },
+      {
+        "c": 7,
+        "r": 18,
+        "t": "clear",
+        "k": "mivior"
+      },
+      {
+        "c": 7,
+        "r": 19,
+        "t": "seashore",
+        "k": "mivior"
+      },
+      {
+        "c": 7,
+        "r": 20,
+        "t": "seashore",
+        "k": "mivior"
+      },
+      {
+        "c": 7,
+        "r": 21,
+        "t": "sea"
+      },
+      {
+        "c": 7,
+        "r": 22,
+        "t": "sea"
+      },
+      {
+        "c": 7,
+        "r": 23,
+        "t": "sea"
+      },
+      {
+        "c": 7,
+        "r": 24,
+        "t": "sea"
+      },
+      {
+        "c": 7,
+        "r": 25,
+        "t": "sea"
+      },
+      {
+        "c": 7,
+        "r": 26,
+        "t": "sea"
+      },
+      {
+        "c": 7,
+        "r": 27,
+        "t": [
+          "seashore",
+          "scenic"
+        ],
+        "n": "Point Lookout",
+        "k": "rombune"
+      },
+      {
+        "c": 7,
+        "r": 28,
+        "t": "seashore",
+        "k": "rombune"
+      },
+      {
+        "c": 7,
+        "r": 29,
+        "t": "clear",
+        "k": "rombune"
+      },
+      {
+        "c": 7,
+        "r": 30,
+        "t": "clear",
+        "k": "rombune"
+      },
+      {
+        "c": 8,
+        "r": 0,
+        "t": "scenic",
+        "n": "Standing Stones"
+      },
+      {
+        "c": 8,
+        "r": 1,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 8,
+        "r": 2,
+        "t": [
+          "forest",
+          "minor_river"
+        ],
+        "k": "neuth"
+      },
+      {
+        "c": 8,
+        "r": 3,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 8,
+        "r": 4,
+        "t": [
+          "forest",
+          "minor_river"
+        ],
+        "k": "neuth"
+      },
+      {
+        "c": 8,
+        "r": 5,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 8,
+        "r": 6,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 8,
+        "r": 7,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 8,
+        "r": 8,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 8,
+        "r": 9,
+        "t": [
+          "forest",
+          "minor_river"
+        ],
+        "k": "neuth"
+      },
+      {
+        "c": 8,
+        "r": 10,
+        "t": "swamp"
+      },
+      {
+        "c": 8,
+        "r": 11,
+        "t": [
+          "swamp",
+          "scenic"
+        ],
+        "n": "Willowik"
+      },
+      {
+        "c": 8,
+        "r": 12,
+        "t": "forest"
+      },
+      {
+        "c": 8,
+        "r": 13,
+        "t": "mountain"
+      },
+      {
+        "c": 8,
+        "r": 14,
+        "t": "mountain"
+      },
+      {
+        "c": 8,
+        "r": 15,
+        "t": "forest",
+        "k": "hothior"
+      },
+      {
+        "c": 8,
+        "r": 16,
+        "t": "forest",
+        "k": "hothior"
+      },
+      {
+        "c": 8,
+        "r": 17,
+        "t": "forest",
+        "k": "hothior"
+      },
+      {
+        "c": 8,
+        "r": 18,
+        "t": [
+          "forest",
+          "seashore"
+        ],
+        "k": "hothior"
+      },
+      {
+        "c": 8,
+        "r": 19,
+        "t": "seashore",
+        "k": "hothior"
+      },
+      {
+        "c": 8,
+        "r": 20,
+        "t": "seashore",
+        "k": "hothior"
+      },
+      {
+        "c": 8,
+        "r": 21,
+        "t": "sea"
+      },
+      {
+        "c": 8,
+        "r": 22,
+        "t": "sea"
+      },
+      {
+        "c": 8,
+        "r": 23,
+        "t": "sea"
+      },
+      {
+        "c": 8,
+        "r": 24,
+        "t": "sea"
+      },
+      {
+        "c": 8,
+        "r": 25,
+        "t": "sea"
+      },
+      {
+        "c": 8,
+        "r": 26,
+        "t": "sea"
+      },
+      {
+        "c": 8,
+        "r": 27,
+        "t": "seashore",
+        "k": "rombune"
+      },
+      {
+        "c": 8,
+        "r": 28,
+        "t": "clear",
+        "k": "rombune"
+      },
+      {
+        "c": 8,
+        "r": 29,
+        "t": "clear",
+        "k": "rombune"
+      },
+      {
+        "c": 8,
+        "r": 30,
+        "t": "clear",
+        "k": "rombune"
+      },
+      {
+        "c": 9,
+        "r": 0,
+        "t": "clear"
+      },
+      {
+        "c": 9,
+        "r": 1,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 9,
+        "r": 2,
+        "t": [
+          "forest",
+          "minor_river"
+        ],
+        "k": "neuth"
+      },
+      {
+        "c": 9,
+        "r": 3,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 9,
+        "r": 4,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 9,
+        "r": 5,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 9,
+        "r": 6,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 9,
+        "r": 7,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 9,
+        "r": 8,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 9,
+        "r": 9,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 9,
+        "r": 10,
+        "t": [
+          "swamp",
+          "minor_river"
+        ]
+      },
+      {
+        "c": 9,
+        "r": 11,
+        "t": "hill"
+      },
+      {
+        "c": 9,
+        "r": 12,
+        "t": "clear"
+      },
+      {
+        "c": 9,
+        "r": 13,
+        "t": "hill"
+      },
+      {
+        "c": 9,
+        "r": 14,
+        "t": "clear",
+        "k": "hothior"
+      },
+      {
+        "c": 9,
+        "r": 15,
+        "t": "clear",
+        "k": "hothior"
+      },
+      {
+        "c": 9,
+        "r": 16,
+        "t": "clear",
+        "k": "hothior"
+      },
+      {
+        "c": 9,
+        "r": 17,
+        "t": [
+          "port",
+          "royal"
+        ],
+        "n": "Port Lork",
+        "k": "hothior",
+        "i": 3,
+        "cid": "port_lork"
+      },
+      {
+        "c": 9,
+        "r": 18,
+        "t": [
+          "seashore",
+          "scenic"
+        ],
+        "n": "The Boom",
+        "k": "hothior"
+      },
+      {
+        "c": 9,
+        "r": 19,
+        "t": "clear",
+        "k": "hothior"
+      },
+      {
+        "c": 9,
+        "r": 20,
+        "t": "seashore",
+        "k": "hothior"
+      },
+      {
+        "c": 9,
+        "r": 21,
+        "t": "sea"
+      },
+      {
+        "c": 9,
+        "r": 22,
+        "t": "sea"
+      },
+      {
+        "c": 9,
+        "r": 23,
+        "t": "sea"
+      },
+      {
+        "c": 9,
+        "r": 24,
+        "t": "sea"
+      },
+      {
+        "c": 9,
+        "r": 25,
+        "t": "sea"
+      },
+      {
+        "c": 9,
+        "r": 26,
+        "t": "sea"
+      },
+      {
+        "c": 9,
+        "r": 27,
+        "t": [
+          "forest",
+          "seashore"
+        ],
+        "k": "rombune"
+      },
+      {
+        "c": 9,
+        "r": 28,
+        "t": "forest",
+        "k": "rombune"
+      },
+      {
+        "c": 9,
+        "r": 29,
+        "t": "clear",
+        "k": "rombune"
+      },
+      {
+        "c": 9,
+        "r": 30,
+        "t": "clear",
+        "k": "rombune"
+      },
+      {
+        "c": 10,
+        "r": 0,
+        "t": "clear"
+      },
+      {
+        "c": 10,
+        "r": 1,
+        "t": "hill"
+      },
+      {
+        "c": 10,
+        "r": 2,
+        "t": [
+          "forest",
+          "minor_river"
+        ],
+        "k": "neuth"
+      },
+      {
+        "c": 10,
+        "r": 3,
+        "t": "hill"
+      },
+      {
+        "c": 10,
+        "r": 4,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 10,
+        "r": 5,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 10,
+        "r": 6,
+        "t": "forest",
+        "k": "neuth"
+      },
+      {
+        "c": 10,
+        "r": 7,
+        "t": "clear"
+      },
+      {
+        "c": 10,
+        "r": 8,
+        "t": "hill"
+      },
+      {
+        "c": 10,
+        "r": 9,
+        "t": "hill"
+      },
+      {
+        "c": 10,
+        "r": 10,
+        "t": "hill"
+      },
+      {
+        "c": 10,
+        "r": 11,
+        "t": "mountain"
+      },
+      {
+        "c": 10,
+        "r": 12,
+        "t": "hill"
+      },
+      {
+        "c": 10,
+        "r": 13,
+        "t": [
+          "hill",
+          "minor_river"
+        ]
+      },
+      {
+        "c": 10,
+        "r": 14,
+        "t": "castle",
+        "n": "Tadafat",
+        "k": "hothior",
+        "i": 2,
+        "cid": "tadafat"
+      },
+      {
+        "c": 10,
+        "r": 15,
+        "t": "minor_river",
+        "k": "hothior"
+      },
+      {
+        "c": 10,
+        "r": 16,
+        "t": "clear",
+        "k": "hothior"
+      },
+      {
+        "c": 10,
+        "r": 17,
+        "t": "minor_river",
+        "k": "hothior"
+      },
+      {
+        "c": 10,
+        "r": 18,
+        "t": "minor_river",
+        "k": "hothior"
+      },
+      {
+        "c": 10,
+        "r": 19,
+        "t": [
+          "seashore",
+          "scenic"
+        ],
+        "n": "Farnot",
+        "k": "hothior",
+        "cid": "farnot"
+      },
+      {
+        "c": 10,
+        "r": 20,
+        "t": "seashore",
+        "k": "hothior"
+      },
+      {
+        "c": 10,
+        "r": 21,
+        "t": "seashore",
+        "k": "shucassam"
+      },
+      {
+        "c": 10,
+        "r": 22,
+        "t": "seashore",
+        "k": "shucassam"
+      },
+      {
+        "c": 10,
+        "r": 23,
+        "t": "sea"
+      },
+      {
+        "c": 10,
+        "r": 24,
+        "t": "sea"
+      },
+      {
+        "c": 10,
+        "r": 25,
+        "t": "seashore"
+      },
+      {
+        "c": 10,
+        "r": 26,
+        "t": "seashore"
+      },
+      {
+        "c": 10,
+        "r": 27,
+        "t": [
+          "forest",
+          "seashore"
+        ],
+        "k": "rombune"
+      },
+      {
+        "c": 10,
+        "r": 28,
+        "t": "seashore",
+        "k": "rombune"
+      },
+      {
+        "c": 10,
+        "r": 29,
+        "t": [
+          "hill",
+          "seashore"
+        ],
+        "k": "rombune"
+      },
+      {
+        "c": 10,
+        "r": 30,
+        "t": "clear",
+        "k": "rombune"
+      },
+      {
+        "c": 11,
+        "r": 0,
+        "t": "minor_river"
+      },
+      {
+        "c": 11,
+        "r": 1,
+        "t": "minor_river"
+      },
+      {
+        "c": 11,
+        "r": 2,
+        "t": "minor_river"
+      },
+      {
+        "c": 11,
+        "r": 3,
+        "t": "hill"
+      },
+      {
+        "c": 11,
+        "r": 4,
+        "t": "ancient_battlefield",
+        "n": "The Unknown Army"
+      },
+      {
+        "c": 11,
+        "r": 5,
+        "t": "clear"
+      },
+      {
+        "c": 11,
+        "r": 6,
+        "t": "forest"
+      },
+      {
+        "c": 11,
+        "r": 7,
+        "t": "clear",
+        "k": "immer"
+      },
+      {
+        "c": 11,
+        "r": 8,
+        "t": "swamp",
+        "k": "immer"
+      },
+      {
+        "c": 11,
+        "r": 9,
+        "t": "hill"
+      },
+      {
+        "c": 11,
+        "r": 10,
+        "t": "clear"
+      },
+      {
+        "c": 11,
+        "r": 11,
+        "t": [
+          "mountain",
+          "minor_river"
+        ]
+      },
+      {
+        "c": 11,
+        "r": 12,
+        "t": [
+          "hill",
+          "minor_river"
+        ]
+      },
+      {
+        "c": 11,
+        "r": 13,
+        "t": "clear",
+        "k": "hothior"
+      },
+      {
+        "c": 11,
+        "r": 14,
+        "t": [
+          "hill",
+          "minor_river"
+        ],
+        "k": "hothior"
+      },
+      {
+        "c": 11,
+        "r": 15,
+        "t": "hill",
+        "k": "hothior"
+      },
+      {
+        "c": 11,
+        "r": 16,
+        "t": "minor_river",
+        "k": "hothior"
+      },
+      {
+        "c": 11,
+        "r": 17,
+        "t": "clear",
+        "k": "hothior"
+      },
+      {
+        "c": 11,
+        "r": 18,
+        "t": "clear",
+        "k": "hothior"
+      },
+      {
+        "c": 11,
+        "r": 19,
+        "t": "seashore",
+        "k": "hothior"
+      },
+      {
+        "c": 11,
+        "r": 20,
+        "t": [
+          "forest",
+          "seashore"
+        ],
+        "k": "shucassam"
+      },
+      {
+        "c": 11,
+        "r": 21,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 11,
+        "r": 22,
+        "t": "port",
+        "n": "Zefnar",
+        "k": "shucassam",
+        "i": 3,
+        "cid": "zefnar"
+      },
+      {
+        "c": 11,
+        "r": 23,
+        "t": "seashore",
+        "k": "shucassam"
+      },
+      {
+        "c": 11,
+        "r": 24,
+        "t": "seashore"
+      },
+      {
+        "c": 11,
+        "r": 25,
+        "t": "scenic",
+        "n": "Tombs of Olde"
+      },
+      {
+        "c": 11,
+        "r": 26,
+        "t": "seashore"
+      },
+      {
+        "c": 11,
+        "r": 27,
+        "t": [
+          "hill",
+          "seashore"
+        ],
+        "k": "rombune"
+      },
+      {
+        "c": 11,
+        "r": 28,
+        "t": "port",
+        "n": "Parros",
+        "k": "rombune",
+        "i": 3,
+        "cid": "parros"
+      },
+      {
+        "c": 11,
+        "r": 29,
+        "t": [
+          "hill",
+          "seashore"
+        ],
+        "k": "rombune"
+      },
+      {
+        "c": 11,
+        "r": 30,
+        "t": "clear",
+        "k": "rombune"
+      },
+      {
+        "c": 12,
+        "r": 0,
+        "t": "clear"
+      },
+      {
+        "c": 12,
+        "r": 1,
+        "t": "minor_river"
+      },
+      {
+        "c": 12,
+        "r": 2,
+        "t": "hill"
+      },
+      {
+        "c": 12,
+        "r": 3,
+        "t": "castle",
+        "n": "Wirzor",
+        "k": "immer",
+        "i": 2,
+        "cid": "wirzor"
+      },
+      {
+        "c": 12,
+        "r": 4,
+        "t": "hill",
+        "k": "immer"
+      },
+      {
+        "c": 12,
+        "r": 5,
+        "t": "hill",
+        "k": "immer"
+      },
+      {
+        "c": 12,
+        "r": 6,
+        "t": "clear",
+        "k": "immer"
+      },
+      {
+        "c": 12,
+        "r": 7,
+        "t": "clear",
+        "k": "immer"
+      },
+      {
+        "c": 12,
+        "r": 8,
+        "t": "swamp",
+        "k": "immer"
+      },
+      {
+        "c": 12,
+        "r": 9,
+        "t": [
+          "hill",
+          "lakeshore"
+        ]
+      },
+      {
+        "c": 12,
+        "r": 10,
+        "t": [
+          "castle",
+          "royal"
+        ],
+        "n": "Invisible School",
+        "i": 5
+      },
+      {
+        "c": 12,
+        "r": 11,
+        "t": [
+          "forest",
+          "lakeshore"
+        ]
+      },
+      {
+        "c": 12,
+        "r": 12,
+        "t": "clear"
+      },
+      {
+        "c": 12,
+        "r": 13,
+        "t": "forest"
+      },
+      {
+        "c": 12,
+        "r": 14,
+        "t": "clear",
+        "k": "hothior"
+      },
+      {
+        "c": 12,
+        "r": 15,
+        "t": "minor_river",
+        "k": "hothior"
+      },
+      {
+        "c": 12,
+        "r": 16,
+        "t": "minor_river",
+        "k": "hothior"
+      },
+      {
+        "c": 12,
+        "r": 17,
+        "t": "clear",
+        "k": "hothior"
+      },
+      {
+        "c": 12,
+        "r": 18,
+        "t": "seashore",
+        "k": "hothior"
+      },
+      {
+        "c": 12,
+        "r": 19,
+        "t": "sea"
+      },
+      {
+        "c": 12,
+        "r": 20,
+        "t": [
+          "forest",
+          "seashore"
+        ],
+        "k": "shucassam"
+      },
+      {
+        "c": 12,
+        "r": 21,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 12,
+        "r": 22,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 12,
+        "r": 23,
+        "t": "seashore",
+        "k": "shucassam"
+      },
+      {
+        "c": 12,
+        "r": 24,
+        "t": "forest",
+        "k": "shucassam"
+      },
+      {
+        "c": 12,
+        "r": 25,
+        "t": "clear"
+      },
+      {
+        "c": 12,
+        "r": 26,
+        "t": "clear"
+      },
+      {
+        "c": 12,
+        "r": 27,
+        "t": "forest",
+        "k": "rombune"
+      },
+      {
+        "c": 12,
+        "r": 28,
+        "t": [
+          "hill",
+          "seashore"
+        ],
+        "k": "rombune"
+      },
+      {
+        "c": 12,
+        "r": 29,
+        "t": [
+          "hill",
+          "scenic"
+        ],
+        "n": "The Crater",
+        "k": "rombune"
+      },
+      {
+        "c": 12,
+        "r": 30,
+        "t": "clear",
+        "k": "rombune"
+      },
+      {
+        "c": 13,
+        "r": 0,
+        "t": "clear"
+      },
+      {
+        "c": 13,
+        "r": 1,
+        "t": "minor_river",
+        "k": "immer"
+      },
+      {
+        "c": 13,
+        "r": 2,
+        "t": "minor_river",
+        "k": "immer"
+      },
+      {
+        "c": 13,
+        "r": 3,
+        "t": "clear",
+        "k": "immer"
+      },
+      {
+        "c": 13,
+        "r": 4,
+        "t": "clear",
+        "k": "immer"
+      },
+      {
+        "c": 13,
+        "r": 5,
+        "t": "hill",
+        "k": "immer"
+      },
+      {
+        "c": 13,
+        "r": 6,
+        "t": "clear",
+        "k": "immer"
+      },
+      {
+        "c": 13,
+        "r": 7,
+        "t": "clear",
+        "k": "immer"
+      },
+      {
+        "c": 13,
+        "r": 8,
+        "t": "swamp",
+        "k": "immer"
+      },
+      {
+        "c": 13,
+        "r": 9,
+        "t": [
+          "hill",
+          "lakeshore"
+        ]
+      },
+      {
+        "c": 13,
+        "r": 10,
+        "t": "lake"
+      },
+      {
+        "c": 13,
+        "r": 11,
+        "t": [
+          "forest",
+          "minor_river",
+          "lakeshore"
+        ]
+      },
+      {
+        "c": 13,
+        "r": 12,
+        "t": "forest"
+      },
+      {
+        "c": 13,
+        "r": 13,
+        "t": [
+          "forest",
+          "minor_river"
+        ]
+      },
+      {
+        "c": 13,
+        "r": 14,
+        "t": "minor_river",
+        "k": "hothior"
+      },
+      {
+        "c": 13,
+        "r": 15,
+        "t": "clear",
+        "k": "hothior"
+      },
+      {
+        "c": 13,
+        "r": 16,
+        "t": "forest",
+        "k": "hothior"
+      },
+      {
+        "c": 13,
+        "r": 17,
+        "t": "clear",
+        "k": "hothior"
+      },
+      {
+        "c": 13,
+        "r": 18,
+        "t": "port",
+        "n": "Castle Lapspell",
+        "k": "hothior",
+        "i": 3,
+        "cid": "castle_lapspell"
+      },
+      {
+        "c": 13,
+        "r": 19,
+        "t": "seashore"
+      },
+      {
+        "c": 13,
+        "r": 20,
+        "n": "Freeport"
+      },
+      {
+        "c": 13,
+        "r": 21,
+        "t": "hill"
+      },
+      {
+        "c": 13,
+        "r": 22,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 13,
+        "r": 23,
+        "t": "clear"
+      },
+      {
+        "c": 13,
+        "r": 24,
+        "t": "clear"
+      },
+      {
+        "c": 13,
+        "r": 25,
+        "t": "clear"
+      },
+      {
+        "c": 13,
+        "r": 26,
+        "t": "clear"
+      },
+      {
+        "c": 13,
+        "r": 27,
+        "t": "clear"
+      },
+      {
+        "c": 13,
+        "r": 28,
+        "t": "hill",
+        "k": "rombune"
+      },
+      {
+        "c": 13,
+        "r": 29,
+        "t": "clear",
+        "k": "rombune"
+      },
+      {
+        "c": 13,
+        "r": 30,
+        "t": "clear",
+        "k": "rombune"
+      },
+      {
+        "c": 14,
+        "r": 0,
+        "t": "clear"
+      },
+      {
+        "c": 14,
+        "r": 1,
+        "t": "minor_river",
+        "k": "immer"
+      },
+      {
+        "c": 14,
+        "r": 2,
+        "t": "forest",
+        "k": "immer"
+      },
+      {
+        "c": 14,
+        "r": 3,
+        "t": "forest",
+        "k": "immer"
+      },
+      {
+        "c": 14,
+        "r": 4,
+        "t": "clear",
+        "k": "immer"
+      },
+      {
+        "c": 14,
+        "r": 5,
+        "t": "hill",
+        "k": "immer"
+      },
+      {
+        "c": 14,
+        "r": 6,
+        "t": [
+          "castle",
+          "royal"
+        ],
+        "n": "Castle Altarr",
+        "k": "immer",
+        "i": 3,
+        "cid": "castle_altarr"
+      },
+      {
+        "c": 14,
+        "r": 7,
+        "t": "clear",
+        "k": "immer"
+      },
+      {
+        "c": 14,
+        "r": 8,
+        "t": "clear",
+        "k": "immer"
+      },
+      {
+        "c": 14,
+        "r": 9,
+        "t": "forest"
+      },
+      {
+        "c": 14,
+        "r": 10,
+        "t": [
+          "swamp",
+          "lakeshore"
+        ]
+      },
+      {
+        "c": 14,
+        "r": 11,
+        "t": [
+          "forest",
+          "scenic"
+        ],
+        "n": "Camptown"
+      },
+      {
+        "c": 14,
+        "r": 12,
+        "t": [
+          "forest",
+          "minor_river"
+        ]
+      },
+      {
+        "c": 14,
+        "r": 13,
+        "t": "forest"
+      },
+      {
+        "c": 14,
+        "r": 14,
+        "t": "clear"
+      },
+      {
+        "c": 14,
+        "r": 15,
+        "t": "clear"
+      },
+      {
+        "c": 14,
+        "r": 16,
+        "t": "clear",
+        "k": "hothior"
+      },
+      {
+        "c": 14,
+        "r": 17,
+        "t": [
+          "swamp",
+          "major_river"
+        ],
+        "k": "hothior"
+      },
+      {
+        "c": 14,
+        "r": 18,
+        "t": "major_river",
+        "k": "hothior"
+      },
+      {
+        "c": 14,
+        "r": 19,
+        "t": [
+          "hill",
+          "major_river"
+        ]
+      },
+      {
+        "c": 14,
+        "r": 20,
+        "t": "hill"
+      },
+      {
+        "c": 14,
+        "r": 21,
+        "t": "clear"
+      },
+      {
+        "c": 14,
+        "r": 22,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 14,
+        "r": 23,
+        "t": "clear"
+      },
+      {
+        "c": 14,
+        "r": 24,
+        "t": "clear"
+      },
+      {
+        "c": 14,
+        "r": 25,
+        "t": "clear"
+      },
+      {
+        "c": 14,
+        "r": 26,
+        "t": "ancient_battlefield",
+        "n": "Plain of Bones"
+      },
+      {
+        "c": 14,
+        "r": 27,
+        "t": "clear"
+      },
+      {
+        "c": 14,
+        "r": 28,
+        "t": "clear"
+      },
+      {
+        "c": 14,
+        "r": 29,
+        "t": "clear"
+      },
+      {
+        "c": 14,
+        "r": 30,
+        "t": "clear",
+        "k": "rombune"
+      },
+      {
+        "c": 15,
+        "r": 0,
+        "t": "mountain"
+      },
+      {
+        "c": 15,
+        "r": 1,
+        "t": [
+          "mountain",
+          "minor_river"
+        ]
+      },
+      {
+        "c": 15,
+        "r": 2,
+        "t": "forest",
+        "k": "immer"
+      },
+      {
+        "c": 15,
+        "r": 3,
+        "t": [
+          "forest",
+          "scenic"
+        ],
+        "n": "Gorpin",
+        "k": "immer",
+        "cid": "gorpin"
+      },
+      {
+        "c": 15,
+        "r": 4,
+        "t": "hill",
+        "k": "immer"
+      },
+      {
+        "c": 15,
+        "r": 5,
+        "t": "hill",
+        "k": "immer"
+      },
+      {
+        "c": 15,
+        "r": 6,
+        "t": "clear",
+        "k": "immer"
+      },
+      {
+        "c": 15,
+        "r": 7,
+        "t": "clear",
+        "k": "immer"
+      },
+      {
+        "c": 15,
+        "r": 8,
+        "t": "castle",
+        "n": "Muscaster",
+        "k": "immer",
+        "i": 3,
+        "cid": "muscaster"
+      },
+      {
+        "c": 15,
+        "r": 9,
+        "t": "forest"
+      },
+      {
+        "c": 15,
+        "r": 10,
+        "t": "forest"
+      },
+      {
+        "c": 15,
+        "r": 11,
+        "t": "forest"
+      },
+      {
+        "c": 15,
+        "r": 12,
+        "t": "forest"
+      },
+      {
+        "c": 15,
+        "r": 13,
+        "t": "hill",
+        "k": "muetar"
+      },
+      {
+        "c": 15,
+        "r": 14,
+        "t": "hill",
+        "k": "muetar"
+      },
+      {
+        "c": 15,
+        "r": 15,
+        "t": "hill",
+        "k": "muetar"
+      },
+      {
+        "c": 15,
+        "r": 16,
+        "t": "clear"
+      },
+      {
+        "c": 15,
+        "r": 17,
+        "t": [
+          "swamp",
+          "major_river"
+        ]
+      },
+      {
+        "c": 15,
+        "r": 18,
+        "t": "major_river"
+      },
+      {
+        "c": 15,
+        "r": 19,
+        "t": "scenic",
+        "n": "Hubbleglum"
+      },
+      {
+        "c": 15,
+        "r": 20,
+        "t": "hill"
+      },
+      {
+        "c": 15,
+        "r": 21,
+        "t": "forest"
+      },
+      {
+        "c": 15,
+        "r": 22,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 15,
+        "r": 23,
+        "t": "clear"
+      },
+      {
+        "c": 15,
+        "r": 24,
+        "t": "clear"
+      },
+      {
+        "c": 15,
+        "r": 25,
+        "t": "clear"
+      },
+      {
+        "c": 15,
+        "r": 26,
+        "t": "clear"
+      },
+      {
+        "c": 15,
+        "r": 27,
+        "t": "clear"
+      },
+      {
+        "c": 15,
+        "r": 28,
+        "t": "clear"
+      },
+      {
+        "c": 15,
+        "r": 29,
+        "t": "hill"
+      },
+      {
+        "c": 15,
+        "r": 30,
+        "t": "clear"
+      },
+      {
+        "c": 16,
+        "r": 0,
+        "t": [
+          "mountain",
+          "minor_river"
+        ]
+      },
+      {
+        "c": 16,
+        "r": 1,
+        "t": "scenic",
+        "n": "The Temple of Kings"
+      },
+      {
+        "c": 16,
+        "r": 2,
+        "t": "forest",
+        "k": "immer"
+      },
+      {
+        "c": 16,
+        "r": 3,
+        "t": "forest",
+        "k": "immer"
+      },
+      {
+        "c": 16,
+        "r": 4,
+        "t": "forest",
+        "k": "immer"
+      },
+      {
+        "c": 16,
+        "r": 5,
+        "t": "clear",
+        "k": "immer"
+      },
+      {
+        "c": 16,
+        "r": 6,
+        "t": "clear",
+        "k": "immer"
+      },
+      {
+        "c": 16,
+        "r": 7,
+        "t": "clear",
+        "k": "immer"
+      },
+      {
+        "c": 16,
+        "r": 8,
+        "t": "clear",
+        "k": "immer"
+      },
+      {
+        "c": 16,
+        "r": 9,
+        "t": "clear",
+        "k": "immer"
+      },
+      {
+        "c": 16,
+        "r": 10,
+        "t": "clear",
+        "k": "immer"
+      },
+      {
+        "c": 16,
+        "r": 11,
+        "t": "clear",
+        "k": "immer"
+      },
+      {
+        "c": 16,
+        "r": 12,
+        "t": "clear"
+      },
+      {
+        "c": 16,
+        "r": 13,
+        "t": "clear",
+        "k": "muetar"
+      },
+      {
+        "c": 16,
+        "r": 14,
+        "t": "clear",
+        "k": "muetar"
+      },
+      {
+        "c": 16,
+        "r": 15,
+        "t": "clear",
+        "k": "muetar"
+      },
+      {
+        "c": 16,
+        "r": 16,
+        "t": [
+          "swamp",
+          "major_river"
+        ],
+        "k": "muetar"
+      },
+      {
+        "c": 16,
+        "r": 17,
+        "t": [
+          "swamp",
+          "major_river"
+        ],
+        "k": "muetar"
+      },
+      {
+        "c": 16,
+        "r": 18,
+        "t": "major_river"
+      },
+      {
+        "c": 16,
+        "r": 19,
+        "t": "clear"
+      },
+      {
+        "c": 16,
+        "r": 20,
+        "t": "hill"
+      },
+      {
+        "c": 16,
+        "r": 21,
+        "t": "clear"
+      },
+      {
+        "c": 16,
+        "r": 22,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 16,
+        "r": 23,
+        "t": "clear"
+      },
+      {
+        "c": 16,
+        "r": 24,
+        "t": "scenic",
+        "n": "Lost Caravan"
+      },
+      {
+        "c": 16,
+        "r": 25,
+        "t": "clear"
+      },
+      {
+        "c": 16,
+        "r": 26,
+        "t": "clear"
+      },
+      {
+        "c": 16,
+        "r": 27,
+        "t": "forest"
+      },
+      {
+        "c": 16,
+        "r": 28,
+        "t": "forest"
+      },
+      {
+        "c": 16,
+        "r": 29,
+        "t": "hill"
+      },
+      {
+        "c": 16,
+        "r": 30,
+        "t": "clear"
+      },
+      {
+        "c": 17,
+        "r": 0,
+        "t": "mountain"
+      },
+      {
+        "c": 17,
+        "r": 1,
+        "t": "mountain"
+      },
+      {
+        "c": 17,
+        "r": 2,
+        "t": "mountain"
+      },
+      {
+        "c": 17,
+        "r": 3,
+        "t": "mountain",
+        "k": "zorn"
+      },
+      {
+        "c": 17,
+        "r": 4,
+        "t": "forest",
+        "k": "immer"
+      },
+      {
+        "c": 17,
+        "r": 5,
+        "t": "forest",
+        "k": "immer"
+      },
+      {
+        "c": 17,
+        "r": 6,
+        "t": "forest",
+        "k": "immer"
+      },
+      {
+        "c": 17,
+        "r": 7,
+        "t": "clear",
+        "k": "immer"
+      },
+      {
+        "c": 17,
+        "r": 8,
+        "t": "clear",
+        "k": "immer"
+      },
+      {
+        "c": 17,
+        "r": 9,
+        "t": "clear",
+        "k": "immer"
+      },
+      {
+        "c": 17,
+        "r": 10,
+        "t": "clear",
+        "k": "immer"
+      },
+      {
+        "c": 17,
+        "r": 11,
+        "t": "lakeshore"
+      },
+      {
+        "c": 17,
+        "r": 12,
+        "t": "seashore"
+      },
+      {
+        "c": 17,
+        "r": 13,
+        "t": "clear",
+        "k": "muetar"
+      },
+      {
+        "c": 17,
+        "r": 14,
+        "t": "castle",
+        "n": "Plibba",
+        "k": "muetar",
+        "i": 2,
+        "cid": "plibba"
+      },
+      {
+        "c": 17,
+        "r": 15,
+        "t": "major_river",
+        "k": "muetar"
+      },
+      {
+        "c": 17,
+        "r": 16,
+        "t": [
+          "swamp",
+          "major_river"
+        ],
+        "k": "muetar"
+      },
+      {
+        "c": 17,
+        "r": 17,
+        "t": [
+          "swamp",
+          "major_river"
+        ],
+        "k": "muetar"
+      },
+      {
+        "c": 17,
+        "r": 18,
+        "t": "clear"
+      },
+      {
+        "c": 17,
+        "r": 19,
+        "t": "clear"
+      },
+      {
+        "c": 17,
+        "r": 20,
+        "t": "clear"
+      },
+      {
+        "c": 17,
+        "r": 21,
+        "t": "clear"
+      },
+      {
+        "c": 17,
+        "r": 22,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 17,
+        "r": 23,
+        "t": "clear"
+      },
+      {
+        "c": 17,
+        "r": 24,
+        "t": "clear"
+      },
+      {
+        "c": 17,
+        "r": 25,
+        "t": "clear"
+      },
+      {
+        "c": 17,
+        "r": 26,
+        "t": "clear"
+      },
+      {
+        "c": 17,
+        "r": 27,
+        "t": "mountain"
+      },
+      {
+        "c": 17,
+        "r": 28,
+        "t": "clear",
+        "n": "The Shunned Vale",
+        "k": "trolls",
+        "cid": "the_shunned_vale"
+      },
+      {
+        "c": 17,
+        "r": 29,
+        "t": "mountain"
+      },
+      {
+        "c": 17,
+        "r": 30,
+        "t": "clear"
+      },
+      {
+        "c": 18,
+        "r": 0,
+        "t": "mountain",
+        "k": "zorn"
+      },
+      {
+        "c": 18,
+        "r": 1,
+        "t": "mountain",
+        "k": "zorn"
+      },
+      {
+        "c": 18,
+        "r": 2,
+        "t": [
+          "mountain",
+          "scenic"
+        ],
+        "n": "Winter Rest"
+      },
+      {
+        "c": 18,
+        "r": 3,
+        "t": "mountain",
+        "k": "zorn"
+      },
+      {
+        "c": 18,
+        "r": 4,
+        "t": "mountain",
+        "k": "zorn"
+      },
+      {
+        "c": 18,
+        "r": 5,
+        "t": "castle",
+        "n": "Gap Castle",
+        "k": "immer",
+        "i": 2,
+        "cid": "gap_castle"
+      },
+      {
+        "c": 18,
+        "r": 6,
+        "t": "clear",
+        "k": "immer"
+      },
+      {
+        "c": 18,
+        "r": 7,
+        "t": "mountain",
+        "k": "zorn"
+      },
+      {
+        "c": 18,
+        "r": 8,
+        "t": "clear",
+        "k": "immer"
+      },
+      {
+        "c": 18,
+        "r": 9,
+        "t": "forest"
+      },
+      {
+        "c": 18,
+        "r": 10,
+        "t": "lakeshore"
+      },
+      {
+        "c": 18,
+        "r": 11,
+        "t": "lakeshore",
+        "k": "muetar"
+      },
+      {
+        "c": 18,
+        "r": 12,
+        "t": "lakeshore",
+        "k": "muetar"
+      },
+      {
+        "c": 18,
+        "r": 13,
+        "t": "major_river",
+        "k": "muetar"
+      },
+      {
+        "c": 18,
+        "r": 14,
+        "t": "clear",
+        "k": "muetar"
+      },
+      {
+        "c": 18,
+        "r": 15,
+        "t": "major_river",
+        "k": "muetar"
+      },
+      {
+        "c": 18,
+        "r": 16,
+        "t": [
+          "swamp",
+          "major_river"
+        ],
+        "k": "muetar"
+      },
+      {
+        "c": 18,
+        "r": 17,
+        "t": "swamp",
+        "k": "muetar"
+      },
+      {
+        "c": 18,
+        "r": 18,
+        "t": "clear"
+      },
+      {
+        "c": 18,
+        "r": 19,
+        "t": "clear"
+      },
+      {
+        "c": 18,
+        "r": 20,
+        "t": "clear"
+      },
+      {
+        "c": 18,
+        "r": 21,
+        "t": "clear"
+      },
+      {
+        "c": 18,
+        "r": 22,
+        "t": "scenic",
+        "n": "The Obelisk",
+        "k": "shucassam"
+      },
+      {
+        "c": 18,
+        "r": 23,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 18,
+        "r": 24,
+        "t": "clear"
+      },
+      {
+        "c": 18,
+        "r": 25,
+        "t": "mountain",
+        "k": "shucassam"
+      },
+      {
+        "c": 18,
+        "r": 26,
+        "t": "clear"
+      },
+      {
+        "c": 18,
+        "r": 27,
+        "t": "mountain"
+      },
+      {
+        "c": 18,
+        "r": 28,
+        "t": "mountain"
+      },
+      {
+        "c": 18,
+        "r": 29,
+        "t": "clear",
+        "k": "rombune"
+      },
+      {
+        "c": 18,
+        "r": 30,
+        "t": "mountain_pass",
+        "n": "Giant Pass"
+      },
+      {
+        "c": 19,
+        "r": 0,
+        "t": "mountain",
+        "k": "zorn"
+      },
+      {
+        "c": 19,
+        "r": 1,
+        "t": "mountain",
+        "k": "zorn"
+      },
+      {
+        "c": 19,
+        "r": 2,
+        "t": "forest",
+        "k": "zorn"
+      },
+      {
+        "c": 19,
+        "r": 3,
+        "t": "forest",
+        "k": "zorn"
+      },
+      {
+        "c": 19,
+        "r": 4,
+        "t": "mountain",
+        "k": "zorn"
+      },
+      {
+        "c": 19,
+        "r": 5,
+        "t": "mountain_pass",
+        "n": "Snow Pass",
+        "k": "zorn"
+      },
+      {
+        "c": 19,
+        "r": 6,
+        "t": "mountain",
+        "k": "zorn"
+      },
+      {
+        "c": 19,
+        "r": 7,
+        "t": [
+          "mountain",
+          "minor_river"
+        ],
+        "k": "zorn"
+      },
+      {
+        "c": 19,
+        "r": 8,
+        "t": "clear"
+      },
+      {
+        "c": 19,
+        "r": 9,
+        "t": "forest"
+      },
+      {
+        "c": 19,
+        "r": 10,
+        "t": "lakeshore"
+      },
+      {
+        "c": 19,
+        "r": 11,
+        "t": [
+          "castle",
+          "royal"
+        ],
+        "n": "Pennol",
+        "k": "muetar",
+        "i": 4,
+        "cid": "pennol"
+      },
+      {
+        "c": 19,
+        "r": 12,
+        "t": "lakeshore",
+        "k": "muetar"
+      },
+      {
+        "c": 19,
+        "r": 13,
+        "t": "major_river",
+        "k": "muetar"
+      },
+      {
+        "c": 19,
+        "r": 14,
+        "t": "major_river",
+        "k": "muetar"
+      },
+      {
+        "c": 19,
+        "r": 15,
+        "t": [
+          "forest",
+          "major_river"
+        ],
+        "k": "muetar"
+      },
+      {
+        "c": 19,
+        "r": 16,
+        "t": "major_river",
+        "n": "Yando",
+        "k": "muetar",
+        "cid": "yando"
+      },
+      {
+        "c": 19,
+        "r": 17,
+        "t": "hill",
+        "k": "muetar"
+      },
+      {
+        "c": 19,
+        "r": 18,
+        "t": "clear"
+      },
+      {
+        "c": 19,
+        "r": 19,
+        "t": "clear"
+      },
+      {
+        "c": 19,
+        "r": 20,
+        "t": "clear"
+      },
+      {
+        "c": 19,
+        "r": 21,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 19,
+        "r": 22,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 19,
+        "r": 23,
+        "t": "castle",
+        "n": "Kuzdol",
+        "k": "shucassam",
+        "i": 3,
+        "cid": "kuzdol"
+      },
+      {
+        "c": 19,
+        "r": 24,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 19,
+        "r": 25,
+        "t": "mountain",
+        "k": "shucassam"
+      },
+      {
+        "c": 19,
+        "r": 26,
+        "t": "mountain",
+        "k": "shucassam"
+      },
+      {
+        "c": 19,
+        "r": 27,
+        "t": "clear"
+      },
+      {
+        "c": 19,
+        "r": 28,
+        "t": "port",
+        "n": "Jipols",
+        "k": "rombune",
+        "i": 3,
+        "cid": "jipols"
+      },
+      {
+        "c": 19,
+        "r": 29,
+        "t": "clear",
+        "k": "rombune"
+      },
+      {
+        "c": 19,
+        "r": 30,
+        "t": "clear"
+      },
+      {
+        "c": 20,
+        "r": 0,
+        "t": "mountain",
+        "k": "zorn"
+      },
+      {
+        "c": 20,
+        "r": 1,
+        "t": "clear",
+        "k": "zorn"
+      },
+      {
+        "c": 20,
+        "r": 2,
+        "t": "forest",
+        "k": "zorn"
+      },
+      {
+        "c": 20,
+        "r": 3,
+        "t": "forest",
+        "k": "zorn"
+      },
+      {
+        "c": 20,
+        "r": 4,
+        "t": "mountain",
+        "k": "zorn"
+      },
+      {
+        "c": 20,
+        "r": 5,
+        "t": "clear",
+        "k": "zorn"
+      },
+      {
+        "c": 20,
+        "r": 6,
+        "t": [
+          "mountain",
+          "minor_river"
+        ],
+        "k": "zorn"
+      },
+      {
+        "c": 20,
+        "r": 7,
+        "t": [
+          "mountain",
+          "minor_river"
+        ],
+        "k": "zorn"
+      },
+      {
+        "c": 20,
+        "r": 8,
+        "t": "clear"
+      },
+      {
+        "c": 20,
+        "r": 9,
+        "t": "clear"
+      },
+      {
+        "c": 20,
+        "r": 10,
+        "t": "seashore",
+        "k": "muetar"
+      },
+      {
+        "c": 20,
+        "r": 11,
+        "t": "clear",
+        "k": "muetar"
+      },
+      {
+        "c": 20,
+        "r": 12,
+        "t": "clear",
+        "k": "muetar"
+      },
+      {
+        "c": 20,
+        "r": 13,
+        "t": [
+          "forest",
+          "major_river"
+        ],
+        "k": "muetar"
+      },
+      {
+        "c": 20,
+        "r": 14,
+        "t": "major_river",
+        "k": "muetar"
+      },
+      {
+        "c": 20,
+        "r": 15,
+        "t": "minor_river",
+        "k": "muetar"
+      },
+      {
+        "c": 20,
+        "r": 16,
+        "t": "clear",
+        "k": "muetar"
+      },
+      {
+        "c": 20,
+        "r": 17,
+        "t": "hill",
+        "k": "muetar"
+      },
+      {
+        "c": 20,
+        "r": 18,
+        "t": "castle",
+        "n": "The Keep"
+      },
+      {
+        "c": 20,
+        "r": 19,
+        "t": "forest"
+      },
+      {
+        "c": 20,
+        "r": 20,
+        "t": "clear"
+      },
+      {
+        "c": 20,
+        "r": 21,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 20,
+        "r": 22,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 20,
+        "r": 23,
+        "t": "mountain",
+        "k": "shucassam"
+      },
+      {
+        "c": 20,
+        "r": 24,
+        "t": "mountain",
+        "k": "shucassam"
+      },
+      {
+        "c": 20,
+        "r": 25,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 20,
+        "r": 26,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 20,
+        "r": 27,
+        "t": "seashore"
+      },
+      {
+        "c": 20,
+        "r": 28,
+        "t": "seashore",
+        "k": "rombune"
+      },
+      {
+        "c": 20,
+        "r": 29,
+        "t": "clear"
+      },
+      {
+        "c": 20,
+        "r": 30,
+        "t": "clear"
+      },
+      {
+        "c": 21,
+        "r": 0,
+        "t": "mountain",
+        "k": "zorn"
+      },
+      {
+        "c": 21,
+        "r": 1,
+        "t": "clear",
+        "k": "zorn"
+      },
+      {
+        "c": 21,
+        "r": 2,
+        "t": "forest",
+        "k": "zorn"
+      },
+      {
+        "c": 21,
+        "r": 3,
+        "t": "forest",
+        "k": "zorn"
+      },
+      {
+        "c": 21,
+        "r": 4,
+        "t": "clear",
+        "k": "zorn"
+      },
+      {
+        "c": 21,
+        "r": 5,
+        "t": "mountain",
+        "k": "zorn"
+      },
+      {
+        "c": 21,
+        "r": 6,
+        "t": "mountain",
+        "k": "zorn"
+      },
+      {
+        "c": 21,
+        "r": 7,
+        "t": "mountain",
+        "k": "zorn"
+      },
+      {
+        "c": 21,
+        "r": 8,
+        "t": "minor_river"
+      },
+      {
+        "c": 21,
+        "r": 9,
+        "t": "minor_river",
+        "k": "muetar"
+      },
+      {
+        "c": 21,
+        "r": 10,
+        "t": "minor_river",
+        "k": "muetar"
+      },
+      {
+        "c": 21,
+        "r": 11,
+        "t": "clear",
+        "k": "muetar"
+      },
+      {
+        "c": 21,
+        "r": 12,
+        "t": "clear",
+        "k": "muetar"
+      },
+      {
+        "c": 21,
+        "r": 13,
+        "t": "clear",
+        "k": "muetar"
+      },
+      {
+        "c": 21,
+        "r": 14,
+        "t": "clear",
+        "k": "muetar"
+      },
+      {
+        "c": 21,
+        "r": 15,
+        "t": "minor_river",
+        "k": "muetar"
+      },
+      {
+        "c": 21,
+        "r": 16,
+        "t": "castle",
+        "n": "Beolon",
+        "k": "muetar",
+        "i": 2,
+        "cid": "beolon"
+      },
+      {
+        "c": 21,
+        "r": 17,
+        "t": "clear",
+        "k": "muetar"
+      },
+      {
+        "c": 21,
+        "r": 18,
+        "t": "forest"
+      },
+      {
+        "c": 21,
+        "r": 19,
+        "t": "forest"
+      },
+      {
+        "c": 21,
+        "r": 20,
+        "t": "forest",
+        "k": "shucassam"
+      },
+      {
+        "c": 21,
+        "r": 21,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 21,
+        "r": 22,
+        "t": "hill",
+        "k": "shucassam"
+      },
+      {
+        "c": 21,
+        "r": 23,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 21,
+        "r": 24,
+        "t": "seashore",
+        "k": "shucassam"
+      },
+      {
+        "c": 21,
+        "r": 25,
+        "t": "seashore",
+        "k": "shucassam"
+      },
+      {
+        "c": 21,
+        "r": 26,
+        "t": "seashore",
+        "k": "shucassam"
+      },
+      {
+        "c": 21,
+        "r": 27,
+        "t": "seashore"
+      },
+      {
+        "c": 21,
+        "r": 28,
+        "t": "seashore"
+      },
+      {
+        "c": 21,
+        "r": 29,
+        "t": "clear"
+      },
+      {
+        "c": 21,
+        "r": 30,
+        "t": "clear"
+      },
+      {
+        "c": 22,
+        "r": 0,
+        "t": "mountain",
+        "k": "zorn"
+      },
+      {
+        "c": 22,
+        "r": 1,
+        "t": "clear",
+        "k": "zorn"
+      },
+      {
+        "c": 22,
+        "r": 2,
+        "t": "swamp",
+        "k": "zorn"
+      },
+      {
+        "c": 22,
+        "r": 3,
+        "t": "forest",
+        "k": "zorn"
+      },
+      {
+        "c": 22,
+        "r": 4,
+        "t": "forest",
+        "k": "zorn"
+      },
+      {
+        "c": 22,
+        "r": 5,
+        "t": [
+          "forest",
+          "mountain"
+        ],
+        "k": "zorn"
+      },
+      {
+        "c": 22,
+        "r": 6,
+        "t": [
+          "mountain",
+          "scenic"
+        ],
+        "n": "Ozerg"
+      },
+      {
+        "c": 22,
+        "r": 7,
+        "t": "forest"
+      },
+      {
+        "c": 22,
+        "r": 8,
+        "t": "minor_river"
+      },
+      {
+        "c": 22,
+        "r": 9,
+        "t": "minor_river",
+        "k": "muetar"
+      },
+      {
+        "c": 22,
+        "r": 10,
+        "t": "minor_river",
+        "k": "muetar"
+      },
+      {
+        "c": 22,
+        "r": 11,
+        "t": "forest",
+        "k": "muetar"
+      },
+      {
+        "c": 22,
+        "r": 12,
+        "t": "clear",
+        "k": "muetar"
+      },
+      {
+        "c": 22,
+        "r": 13,
+        "t": "clear",
+        "k": "muetar"
+      },
+      {
+        "c": 22,
+        "r": 14,
+        "t": "clear",
+        "k": "muetar"
+      },
+      {
+        "c": 22,
+        "r": 15,
+        "t": [
+          "forest",
+          "minor_river"
+        ],
+        "k": "muetar"
+      },
+      {
+        "c": 22,
+        "r": 16,
+        "t": "clear",
+        "k": "muetar"
+      },
+      {
+        "c": 22,
+        "r": 17,
+        "t": "clear",
+        "k": "muetar"
+      },
+      {
+        "c": 22,
+        "r": 18,
+        "t": "forest"
+      },
+      {
+        "c": 22,
+        "r": 19,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 22,
+        "r": 20,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 22,
+        "r": 21,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 22,
+        "r": 22,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 22,
+        "r": 23,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 22,
+        "r": 24,
+        "t": "seashore",
+        "k": "shucassam"
+      },
+      {
+        "c": 22,
+        "r": 25,
+        "t": "sea"
+      },
+      {
+        "c": 22,
+        "r": 26,
+        "t": "seashore"
+      },
+      {
+        "c": 22,
+        "r": 27,
+        "t": "clear"
+      },
+      {
+        "c": 22,
+        "r": 28,
+        "t": "clear"
+      },
+      {
+        "c": 22,
+        "r": 29,
+        "t": "scenic",
+        "n": "Eerie Oasis"
+      },
+      {
+        "c": 22,
+        "r": 30,
+        "t": "clear"
+      },
+      {
+        "c": 23,
+        "r": 0,
+        "t": "mountain",
+        "k": "zorn"
+      },
+      {
+        "c": 23,
+        "r": 1,
+        "t": "forest",
+        "k": "zorn"
+      },
+      {
+        "c": 23,
+        "r": 2,
+        "t": [
+          "castle",
+          "royal"
+        ],
+        "n": "The Pits",
+        "k": "zorn",
+        "i": 5,
+        "cid": "the_pits"
+      },
+      {
+        "c": 23,
+        "r": 3,
+        "t": "forest",
+        "k": "zorn"
+      },
+      {
+        "c": 23,
+        "r": 4,
+        "t": "clear",
+        "k": "zorn"
+      },
+      {
+        "c": 23,
+        "r": 5,
+        "t": "forest",
+        "k": "zorn"
+      },
+      {
+        "c": 23,
+        "r": 6,
+        "t": [
+          "forest",
+          "mountain"
+        ],
+        "k": "zorn"
+      },
+      {
+        "c": 23,
+        "r": 7,
+        "t": "forest"
+      },
+      {
+        "c": 23,
+        "r": 8,
+        "t": "minor_river"
+      },
+      {
+        "c": 23,
+        "r": 9,
+        "t": "clear",
+        "k": "muetar"
+      },
+      {
+        "c": 23,
+        "r": 10,
+        "t": [
+          "forest",
+          "minor_river"
+        ],
+        "k": "muetar"
+      },
+      {
+        "c": 23,
+        "r": 11,
+        "t": "forest",
+        "k": "muetar"
+      },
+      {
+        "c": 23,
+        "r": 12,
+        "t": "clear",
+        "k": "muetar"
+      },
+      {
+        "c": 23,
+        "r": 13,
+        "t": "hill",
+        "k": "muetar"
+      },
+      {
+        "c": 23,
+        "r": 14,
+        "t": [
+          "swamp",
+          "minor_river"
+        ],
+        "k": "muetar"
+      },
+      {
+        "c": 23,
+        "r": 15,
+        "t": "castle",
+        "n": "Groat",
+        "k": "muetar",
+        "i": 3,
+        "cid": "groat"
+      },
+      {
+        "c": 23,
+        "r": 16,
+        "t": [
+          "swamp",
+          "minor_river"
+        ],
+        "k": "muetar"
+      },
+      {
+        "c": 23,
+        "r": 17,
+        "t": "clear",
+        "k": "muetar"
+      },
+      {
+        "c": 23,
+        "r": 18,
+        "t": "clear"
+      },
+      {
+        "c": 23,
+        "r": 19,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 23,
+        "r": 20,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 23,
+        "r": 21,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 23,
+        "r": 22,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 23,
+        "r": 23,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 23,
+        "r": 24,
+        "t": "seashore",
+        "k": "shucassam"
+      },
+      {
+        "c": 23,
+        "r": 25,
+        "n": "Bartertown"
+      },
+      {
+        "c": 23,
+        "r": 26,
+        "t": "seashore"
+      },
+      {
+        "c": 23,
+        "r": 27,
+        "t": "clear"
+      },
+      {
+        "c": 23,
+        "r": 28,
+        "t": "clear"
+      },
+      {
+        "c": 23,
+        "r": 29,
+        "t": "clear"
+      },
+      {
+        "c": 23,
+        "r": 30,
+        "t": "clear"
+      },
+      {
+        "c": 24,
+        "r": 0,
+        "t": "hill",
+        "k": "zorn"
+      },
+      {
+        "c": 24,
+        "r": 1,
+        "t": "hill",
+        "k": "zorn"
+      },
+      {
+        "c": 24,
+        "r": 2,
+        "t": "clear",
+        "k": "zorn"
+      },
+      {
+        "c": 24,
+        "r": 3,
+        "t": "mountain",
+        "k": "zorn"
+      },
+      {
+        "c": 24,
+        "r": 4,
+        "t": "forest",
+        "k": "zorn"
+      },
+      {
+        "c": 24,
+        "r": 5,
+        "t": "clear",
+        "k": "zorn"
+      },
+      {
+        "c": 24,
+        "r": 6,
+        "t": "mountain_pass",
+        "n": "Maw Pass",
+        "k": "zorn"
+      },
+      {
+        "c": 24,
+        "r": 7,
+        "t": "mountain"
+      },
+      {
+        "c": 24,
+        "r": 8,
+        "t": "minor_river",
+        "k": "muetar"
+      },
+      {
+        "c": 24,
+        "r": 9,
+        "t": "castle",
+        "n": "Basimar",
+        "k": "muetar",
+        "i": 3,
+        "cid": "basimar"
+      },
+      {
+        "c": 24,
+        "r": 10,
+        "t": "forest",
+        "k": "muetar"
+      },
+      {
+        "c": 24,
+        "r": 11,
+        "t": "forest",
+        "k": "muetar"
+      },
+      {
+        "c": 24,
+        "r": 12,
+        "t": "clear",
+        "k": "muetar"
+      },
+      {
+        "c": 24,
+        "r": 13,
+        "t": "hill",
+        "k": "muetar"
+      },
+      {
+        "c": 24,
+        "r": 14,
+        "t": "swamp",
+        "k": "muetar"
+      },
+      {
+        "c": 24,
+        "r": 15,
+        "t": "swamp",
+        "k": "muetar"
+      },
+      {
+        "c": 24,
+        "r": 16,
+        "t": "swamp",
+        "k": "muetar"
+      },
+      {
+        "c": 24,
+        "r": 17,
+        "t": "hill",
+        "k": "muetar"
+      },
+      {
+        "c": 24,
+        "r": 18,
+        "t": "clear"
+      },
+      {
+        "c": 24,
+        "r": 19,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 24,
+        "r": 20,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 24,
+        "r": 21,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 24,
+        "r": 22,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 24,
+        "r": 23,
+        "t": [
+          "port",
+          "royal"
+        ],
+        "n": "Adeese",
+        "k": "shucassam",
+        "i": 4,
+        "cid": "adeese"
+      },
+      {
+        "c": 24,
+        "r": 24,
+        "t": "sea"
+      },
+      {
+        "c": 24,
+        "r": 25,
+        "t": "seashore"
+      },
+      {
+        "c": 24,
+        "r": 26,
+        "t": "clear"
+      },
+      {
+        "c": 24,
+        "r": 27,
+        "t": "clear"
+      },
+      {
+        "c": 24,
+        "r": 28,
+        "t": "clear"
+      },
+      {
+        "c": 24,
+        "r": 29,
+        "t": "clear"
+      },
+      {
+        "c": 24,
+        "r": 30,
+        "t": "scenic",
+        "n": "Trading Post"
+      },
+      {
+        "c": 25,
+        "r": 0,
+        "t": [
+          "hill",
+          "scenic"
+        ],
+        "n": "Mounds",
+        "k": "zorn"
+      },
+      {
+        "c": 25,
+        "r": 1,
+        "t": "hill",
+        "k": "zorn"
+      },
+      {
+        "c": 25,
+        "r": 2,
+        "t": "mountain",
+        "k": "zorn"
+      },
+      {
+        "c": 25,
+        "r": 3,
+        "t": "forest",
+        "k": "zorn"
+      },
+      {
+        "c": 25,
+        "r": 4,
+        "t": "forest",
+        "k": "zorn"
+      },
+      {
+        "c": 25,
+        "r": 5,
+        "t": "mountain",
+        "k": "zorn"
+      },
+      {
+        "c": 25,
+        "r": 6,
+        "t": "mountain",
+        "k": "zorn"
+      },
+      {
+        "c": 25,
+        "r": 7,
+        "t": "mountain"
+      },
+      {
+        "c": 25,
+        "r": 8,
+        "t": "minor_river",
+        "k": "muetar"
+      },
+      {
+        "c": 25,
+        "r": 9,
+        "t": "clear",
+        "k": "muetar"
+      },
+      {
+        "c": 25,
+        "r": 10,
+        "t": "clear",
+        "k": "muetar"
+      },
+      {
+        "c": 25,
+        "r": 11,
+        "t": "clear",
+        "k": "muetar"
+      },
+      {
+        "c": 25,
+        "r": 12,
+        "t": "hill",
+        "k": "muetar"
+      },
+      {
+        "c": 25,
+        "r": 13,
+        "t": "forest",
+        "k": "pon"
+      },
+      {
+        "c": 25,
+        "r": 14,
+        "t": "forest",
+        "k": "pon"
+      },
+      {
+        "c": 25,
+        "r": 15,
+        "t": "clear",
+        "k": "muetar"
+      },
+      {
+        "c": 25,
+        "r": 16,
+        "t": "hill",
+        "k": "muetar"
+      },
+      {
+        "c": 25,
+        "r": 17,
+        "t": "minor_river",
+        "k": "pon"
+      },
+      {
+        "c": 25,
+        "r": 18,
+        "t": [
+          "minor_river",
+          "scenic"
+        ],
+        "n": "The Falls of Xag"
+      },
+      {
+        "c": 25,
+        "r": 19,
+        "t": "minor_river",
+        "k": "shucassam"
+      },
+      {
+        "c": 25,
+        "r": 20,
+        "t": "minor_river",
+        "k": "shucassam"
+      },
+      {
+        "c": 25,
+        "r": 21,
+        "t": "minor_river",
+        "k": "shucassam"
+      },
+      {
+        "c": 25,
+        "r": 22,
+        "t": "seashore",
+        "k": "shucassam"
+      },
+      {
+        "c": 25,
+        "r": 23,
+        "t": "seashore",
+        "k": "shucassam"
+      },
+      {
+        "c": 25,
+        "r": 24,
+        "t": "sea"
+      },
+      {
+        "c": 25,
+        "r": 25,
+        "t": "sea"
+      },
+      {
+        "c": 25,
+        "r": 26,
+        "t": "seashore"
+      },
+      {
+        "c": 25,
+        "r": 27,
+        "t": "scenic",
+        "n": "Hyyx"
+      },
+      {
+        "c": 25,
+        "r": 28,
+        "t": "clear"
+      },
+      {
+        "c": 25,
+        "r": 29,
+        "t": "clear"
+      },
+      {
+        "c": 25,
+        "r": 30,
+        "t": "clear"
+      },
+      {
+        "c": 26,
+        "r": 0,
+        "t": "hill",
+        "k": "zorn"
+      },
+      {
+        "c": 26,
+        "r": 1,
+        "t": "clear"
+      },
+      {
+        "c": 26,
+        "r": 2,
+        "t": "mountain",
+        "k": "zorn"
+      },
+      {
+        "c": 26,
+        "r": 3,
+        "t": "mountain",
+        "k": "zorn"
+      },
+      {
+        "c": 26,
+        "r": 4,
+        "t": "mountain",
+        "k": "zorn"
+      },
+      {
+        "c": 26,
+        "r": 5,
+        "t": "mountain",
+        "k": "zorn"
+      },
+      {
+        "c": 26,
+        "r": 6,
+        "t": "forest"
+      },
+      {
+        "c": 26,
+        "r": 7,
+        "t": "forest"
+      },
+      {
+        "c": 26,
+        "r": 8,
+        "t": "minor_river",
+        "k": "muetar"
+      },
+      {
+        "c": 26,
+        "r": 9,
+        "t": [
+          "swamp",
+          "minor_river"
+        ],
+        "k": "muetar"
+      },
+      {
+        "c": 26,
+        "r": 10,
+        "t": "clear",
+        "k": "muetar"
+      },
+      {
+        "c": 26,
+        "r": 11,
+        "t": "forest",
+        "k": "pon"
+      },
+      {
+        "c": 26,
+        "r": 12,
+        "t": "forest",
+        "k": "pon"
+      },
+      {
+        "c": 26,
+        "r": 13,
+        "t": "castle",
+        "n": "Crow's Nest",
+        "k": "pon",
+        "i": 4,
+        "cid": "crow_s_nest"
+      },
+      {
+        "c": 26,
+        "r": 14,
+        "t": "forest",
+        "k": "pon"
+      },
+      {
+        "c": 26,
+        "r": 15,
+        "t": [
+          "hill",
+          "minor_river"
+        ],
+        "k": "pon"
+      },
+      {
+        "c": 26,
+        "r": 16,
+        "t": [
+          "hill",
+          "minor_river"
+        ],
+        "k": "pon"
+      },
+      {
+        "c": 26,
+        "r": 17,
+        "t": [
+          "forest",
+          "minor_river"
+        ],
+        "k": "pon"
+      },
+      {
+        "c": 26,
+        "r": 18,
+        "t": "forest",
+        "k": "pon"
+      },
+      {
+        "c": 26,
+        "r": 19,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 26,
+        "r": 20,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 26,
+        "r": 21,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 26,
+        "r": 22,
+        "t": "seashore",
+        "k": "shucassam"
+      },
+      {
+        "c": 26,
+        "r": 23,
+        "t": "sea"
+      },
+      {
+        "c": 26,
+        "r": 24,
+        "t": "sea"
+      },
+      {
+        "c": 26,
+        "r": 25,
+        "t": "seashore",
+        "k": "shucassam"
+      },
+      {
+        "c": 26,
+        "r": 26,
+        "t": "seashore"
+      },
+      {
+        "c": 26,
+        "r": 27,
+        "t": "clear"
+      },
+      {
+        "c": 26,
+        "r": 28,
+        "t": "clear"
+      },
+      {
+        "c": 26,
+        "r": 29,
+        "t": "clear"
+      },
+      {
+        "c": 26,
+        "r": 30,
+        "t": "clear"
+      },
+      {
+        "c": 27,
+        "r": 0,
+        "t": "hill",
+        "k": "zorn"
+      },
+      {
+        "c": 27,
+        "r": 1,
+        "t": "clear"
+      },
+      {
+        "c": 27,
+        "r": 2,
+        "t": "clear",
+        "n": "The Crag",
+        "k": "trolls",
+        "cid": "the_crag"
+      },
+      {
+        "c": 27,
+        "r": 3,
+        "t": "clear"
+      },
+      {
+        "c": 27,
+        "r": 4,
+        "t": "mountain",
+        "k": "zorn"
+      },
+      {
+        "c": 27,
+        "r": 5,
+        "t": [
+          "forest",
+          "scenic"
+        ],
+        "n": "Wolf Den"
+      },
+      {
+        "c": 27,
+        "r": 6,
+        "t": "forest"
+      },
+      {
+        "c": 27,
+        "r": 7,
+        "t": "minor_river",
+        "k": "muetar"
+      },
+      {
+        "c": 27,
+        "r": 8,
+        "t": "minor_river",
+        "k": "muetar"
+      },
+      {
+        "c": 27,
+        "r": 9,
+        "t": [
+          "swamp",
+          "minor_river"
+        ],
+        "k": "muetar"
+      },
+      {
+        "c": 27,
+        "r": 10,
+        "t": "clear",
+        "k": "muetar"
+      },
+      {
+        "c": 27,
+        "r": 11,
+        "t": "forest",
+        "k": "pon"
+      },
+      {
+        "c": 27,
+        "r": 12,
+        "t": "forest",
+        "k": "pon"
+      },
+      {
+        "c": 27,
+        "r": 13,
+        "t": "forest",
+        "k": "pon"
+      },
+      {
+        "c": 27,
+        "r": 14,
+        "t": [
+          "forest",
+          "minor_river"
+        ],
+        "k": "pon"
+      },
+      {
+        "c": 27,
+        "r": 15,
+        "t": "minor_river",
+        "k": "pon"
+      },
+      {
+        "c": 27,
+        "r": 16,
+        "t": "clear",
+        "k": "pon"
+      },
+      {
+        "c": 27,
+        "r": 17,
+        "t": "mountain",
+        "k": "pon"
+      },
+      {
+        "c": 27,
+        "r": 18,
+        "t": "forest",
+        "k": "pon"
+      },
+      {
+        "c": 27,
+        "r": 19,
+        "t": "forest",
+        "k": "pon"
+      },
+      {
+        "c": 27,
+        "r": 20,
+        "t": "clear",
+        "k": "shucassam"
+      },
+      {
+        "c": 27,
+        "r": 21,
+        "t": "seashore",
+        "k": "shucassam"
+      },
+      {
+        "c": 27,
+        "r": 22,
+        "t": "seashore",
+        "k": "shucassam"
+      },
+      {
+        "c": 27,
+        "r": 23,
+        "t": "seashore"
+      },
+      {
+        "c": 27,
+        "r": 24,
+        "t": "seashore",
+        "k": "shucassam"
+      },
+      {
+        "c": 27,
+        "r": 25,
+        "t": "clear",
+        "n": "Lepers",
+        "k": "shucassam",
+        "cid": "lepers"
+      },
+      {
+        "c": 27,
+        "r": 26,
+        "t": "clear"
+      },
+      {
+        "c": 27,
+        "r": 27,
+        "t": "clear"
+      },
+      {
+        "c": 27,
+        "r": 28,
+        "t": "clear"
+      },
+      {
+        "c": 27,
+        "r": 29,
+        "t": "clear"
+      },
+      {
+        "c": 27,
+        "r": 30,
+        "t": "clear"
+      },
+      {
+        "c": 28,
+        "r": 0,
+        "t": "clear"
+      },
+      {
+        "c": 28,
+        "r": 1,
+        "t": "forest"
+      },
+      {
+        "c": 28,
+        "r": 2,
+        "t": "mountain"
+      },
+      {
+        "c": 28,
+        "r": 3,
+        "t": "mountain"
+      },
+      {
+        "c": 28,
+        "r": 4,
+        "t": "forest"
+      },
+      {
+        "c": 28,
+        "r": 5,
+        "t": "forest"
+      },
+      {
+        "c": 28,
+        "r": 6,
+        "t": "forest"
+      },
+      {
+        "c": 28,
+        "r": 7,
+        "t": [
+          "hill",
+          "minor_river"
+        ]
+      },
+      {
+        "c": 28,
+        "r": 8,
+        "t": "minor_river",
+        "k": "muetar"
+      },
+      {
+        "c": 28,
+        "r": 9,
+        "t": "clear",
+        "k": "muetar"
+      },
+      {
+        "c": 28,
+        "r": 10,
+        "t": "minor_river",
+        "k": "muetar"
+      },
+      {
+        "c": 28,
+        "r": 11,
+        "t": "forest",
+        "k": "pon"
+      },
+      {
+        "c": 28,
+        "r": 12,
+        "t": "forest",
+        "k": "pon"
+      },
+      {
+        "c": 28,
+        "r": 13,
+        "t": [
+          "mountain",
+          "minor_river"
+        ],
+        "k": "pon"
+      },
+      {
+        "c": 28,
+        "r": 14,
+        "t": [
+          "mountain",
+          "minor_river"
+        ],
+        "k": "pon"
+      },
+      {
+        "c": 28,
+        "r": 15,
+        "t": [
+          "mountain",
+          "minor_river"
+        ],
+        "k": "pon"
+      },
+      {
+        "c": 28,
+        "r": 16,
+        "t": "mountain_pass",
+        "k": "pon"
+      },
+      {
+        "c": 28,
+        "r": 17,
+        "t": [
+          "castle",
+          "royal"
+        ],
+        "n": "Marzarbol",
+        "k": "pon",
+        "i": 4,
+        "cid": "marzarbol"
+      },
+      {
+        "c": 28,
+        "r": 18,
+        "t": "mountain",
+        "k": "pon"
+      },
+      {
+        "c": 28,
+        "r": 19,
+        "t": "forest",
+        "k": "pon"
+      },
+      {
+        "c": 28,
+        "r": 20,
+        "t": "seashore",
+        "k": "shucassam"
+      },
+      {
+        "c": 28,
+        "r": 21,
+        "t": "seashore"
+      },
+      {
+        "c": 28,
+        "r": 22,
+        "t": "seashore"
+      },
+      {
+        "c": 28,
+        "r": 23,
+        "t": "seashore"
+      },
+      {
+        "c": 28,
+        "r": 24,
+        "t": "clear"
+      },
+      {
+        "c": 28,
+        "r": 25,
+        "t": "clear"
+      },
+      {
+        "c": 28,
+        "r": 26,
+        "t": "clear"
+      },
+      {
+        "c": 28,
+        "r": 27,
+        "t": "clear"
+      },
+      {
+        "c": 28,
+        "r": 28,
+        "t": "clear"
+      },
+      {
+        "c": 28,
+        "r": 29,
+        "t": "clear"
+      },
+      {
+        "c": 28,
+        "r": 30,
+        "t": "clear"
+      },
+      {
+        "c": 29,
+        "r": 0,
+        "t": "clear"
+      },
+      {
+        "c": 29,
+        "r": 1,
+        "t": "forest"
+      },
+      {
+        "c": 29,
+        "r": 2,
+        "t": "mountain"
+      },
+      {
+        "c": 29,
+        "r": 3,
+        "t": "mountain"
+      },
+      {
+        "c": 29,
+        "r": 4,
+        "t": [
+          "mountain",
+          "minor_river"
+        ]
+      },
+      {
+        "c": 29,
+        "r": 5,
+        "t": [
+          "hill",
+          "minor_river"
+        ]
+      },
+      {
+        "c": 29,
+        "r": 6,
+        "t": "minor_river"
+      },
+      {
+        "c": 29,
+        "r": 7,
+        "t": "hill"
+      },
+      {
+        "c": 29,
+        "r": 8,
+        "t": "forest"
+      },
+      {
+        "c": 29,
+        "r": 9,
+        "t": [
+          "hill",
+          "minor_river"
+        ]
+      },
+      {
+        "c": 29,
+        "r": 10,
+        "t": "minor_river",
+        "k": "muetar"
+      },
+      {
+        "c": 29,
+        "r": 11,
+        "t": "mountain"
+      },
+      {
+        "c": 29,
+        "r": 12,
+        "t": "forest",
+        "k": "pon"
+      },
+      {
+        "c": 29,
+        "r": 13,
+        "t": [
+          "mountain",
+          "minor_river"
+        ],
+        "k": "pon"
+      },
+      {
+        "c": 29,
+        "r": 14,
+        "t": [
+          "mountain",
+          "minor_river"
+        ],
+        "k": "pon"
+      },
+      {
+        "c": 29,
+        "r": 15,
+        "t": "forest"
+      },
+      {
+        "c": 29,
+        "r": 16,
+        "t": "mountain",
+        "k": "pon"
+      },
+      {
+        "c": 29,
+        "r": 17,
+        "t": "mountain",
+        "k": "pon"
+      },
+      {
+        "c": 29,
+        "r": 18,
+        "t": "mountain",
+        "k": "pon"
+      },
+      {
+        "c": 29,
+        "r": 19,
+        "t": "mountain",
+        "k": "pon"
+      },
+      {
+        "c": 29,
+        "r": 20,
+        "t": [
+          "mountain",
+          "seashore"
+        ],
+        "k": "pon"
+      },
+      {
+        "c": 29,
+        "r": 21,
+        "t": "seashore",
+        "k": "pon"
+      },
+      {
+        "c": 29,
+        "r": 22,
+        "t": "clear"
+      },
+      {
+        "c": 29,
+        "r": 23,
+        "t": "clear"
+      },
+      {
+        "c": 29,
+        "r": 24,
+        "t": "clear"
+      },
+      {
+        "c": 29,
+        "r": 25,
+        "t": "clear"
+      },
+      {
+        "c": 29,
+        "r": 26,
+        "t": "clear"
+      },
+      {
+        "c": 29,
+        "r": 27,
+        "t": "clear"
+      },
+      {
+        "c": 29,
+        "r": 28,
+        "t": "clear"
+      },
+      {
+        "c": 29,
+        "r": 29,
+        "t": "clear"
+      },
+      {
+        "c": 29,
+        "r": 30,
+        "t": "clear"
+      },
+      {
+        "c": 30,
+        "r": 0,
+        "t": "clear"
+      },
+      {
+        "c": 30,
+        "r": 1,
+        "t": "clear"
+      },
+      {
+        "c": 30,
+        "r": 2,
+        "t": "mountain"
+      },
+      {
+        "c": 30,
+        "r": 3,
+        "t": [
+          "castle",
+          "royal"
+        ],
+        "n": "Tower of Zards",
+        "i": 6
+      },
+      {
+        "c": 30,
+        "r": 4,
+        "t": [
+          "mountain",
+          "minor_river"
+        ]
+      },
+      {
+        "c": 30,
+        "r": 5,
+        "t": "clear"
+      },
+      {
+        "c": 30,
+        "r": 6,
+        "t": "clear"
+      },
+      {
+        "c": 30,
+        "r": 7,
+        "t": "hill"
+      },
+      {
+        "c": 30,
+        "r": 8,
+        "t": [
+          "lakeshore",
+          "scenic"
+        ],
+        "n": "Mystic Lake"
+      },
+      {
+        "c": 30,
+        "r": 9,
+        "t": "hill"
+      },
+      {
+        "c": 30,
+        "r": 10,
+        "t": [
+          "mountain",
+          "minor_river"
+        ]
+      },
+      {
+        "c": 30,
+        "r": 11,
+        "t": "mountain"
+      },
+      {
+        "c": 30,
+        "r": 12,
+        "t": "mountain"
+      },
+      {
+        "c": 30,
+        "r": 13,
+        "t": "clear"
+      },
+      {
+        "c": 30,
+        "r": 14,
+        "t": "clear"
+      },
+      {
+        "c": 30,
+        "r": 15,
+        "t": "forest",
+        "n": "Ghost Wood"
+      },
+      {
+        "c": 30,
+        "r": 16,
+        "t": "mountain",
+        "k": "pon"
+      },
+      {
+        "c": 30,
+        "r": 17,
+        "t": "hill"
+      },
+      {
+        "c": 30,
+        "r": 18,
+        "t": "mountain",
+        "k": "pon"
+      },
+      {
+        "c": 30,
+        "r": 19,
+        "t": "mountain",
+        "k": "pon"
+      },
+      {
+        "c": 30,
+        "r": 20,
+        "t": "port",
+        "n": "Grugongi",
+        "k": "pon",
+        "i": 3,
+        "cid": "grugongi"
+      },
+      {
+        "c": 30,
+        "r": 21,
+        "t": "hill",
+        "k": "pon"
+      },
+      {
+        "c": 30,
+        "r": 22,
+        "t": "clear"
+      },
+      {
+        "c": 30,
+        "r": 23,
+        "t": "clear"
+      },
+      {
+        "c": 30,
+        "r": 24,
+        "t": "clear"
+      },
+      {
+        "c": 30,
+        "r": 25,
+        "t": "ancient_battlefield",
+        "n": "Field of the Laughing Dead"
+      },
+      {
+        "c": 30,
+        "r": 26,
+        "t": "clear"
+      },
+      {
+        "c": 30,
+        "r": 27,
+        "t": "clear"
+      },
+      {
+        "c": 30,
+        "r": 28,
+        "t": "clear"
+      },
+      {
+        "c": 30,
+        "r": 29,
+        "t": "clear"
+      },
+      {
+        "c": 30,
+        "r": 30,
+        "t": "clear"
+      },
+      {
+        "c": 31,
+        "r": 0,
+        "t": "clear"
+      },
+      {
+        "c": 31,
+        "r": 1,
+        "t": "swamp"
+      },
+      {
+        "c": 31,
+        "r": 2,
+        "t": "mountain"
+      },
+      {
+        "c": 31,
+        "r": 3,
+        "t": "mountain"
+      },
+      {
+        "c": 31,
+        "r": 4,
+        "t": "mountain"
+      },
+      {
+        "c": 31,
+        "r": 5,
+        "t": "clear"
+      },
+      {
+        "c": 31,
+        "r": 6,
+        "t": "ancient_battlefield",
+        "n": "The Wasted Dead"
+      },
+      {
+        "c": 31,
+        "r": 7,
+        "t": "hill"
+      },
+      {
+        "c": 31,
+        "r": 8,
+        "t": "forest"
+      },
+      {
+        "c": 31,
+        "r": 9,
+        "t": "mountain",
+        "k": "ghem"
+      },
+      {
+        "c": 31,
+        "r": 10,
+        "t": [
+          "mountain",
+          "minor_river"
+        ],
+        "k": "ghem"
+      },
+      {
+        "c": 31,
+        "r": 11,
+        "t": "mountain",
+        "k": "ghem"
+      },
+      {
+        "c": 31,
+        "r": 12,
+        "t": "clear"
+      },
+      {
+        "c": 31,
+        "r": 13,
+        "t": "forest"
+      },
+      {
+        "c": 31,
+        "r": 14,
+        "t": "clear"
+      },
+      {
+        "c": 31,
+        "r": 15,
+        "t": "clear"
+      },
+      {
+        "c": 31,
+        "r": 16,
+        "t": "clear"
+      },
+      {
+        "c": 31,
+        "r": 17,
+        "t": "clear"
+      },
+      {
+        "c": 31,
+        "r": 18,
+        "t": "clear"
+      },
+      {
+        "c": 31,
+        "r": 19,
+        "t": "mountain",
+        "k": "pon"
+      },
+      {
+        "c": 31,
+        "r": 20,
+        "t": "hill",
+        "k": "pon"
+      },
+      {
+        "c": 31,
+        "r": 21,
+        "t": "clear"
+      },
+      {
+        "c": 31,
+        "r": 22,
+        "t": "clear"
+      },
+      {
+        "c": 31,
+        "r": 23,
+        "t": "clear"
+      },
+      {
+        "c": 31,
+        "r": 24,
+        "t": "clear"
+      },
+      {
+        "c": 31,
+        "r": 25,
+        "t": "clear"
+      },
+      {
+        "c": 31,
+        "r": 26,
+        "t": "clear"
+      },
+      {
+        "c": 31,
+        "r": 27,
+        "t": "clear"
+      },
+      {
+        "c": 31,
+        "r": 28,
+        "t": "hill"
+      },
+      {
+        "c": 31,
+        "r": 29,
+        "t": "hill"
+      },
+      {
+        "c": 31,
+        "r": 30,
+        "t": "hill"
+      },
+      {
+        "c": 32,
+        "r": 0,
+        "t": "clear"
+      },
+      {
+        "c": 32,
+        "r": 1,
+        "t": "swamp"
+      },
+      {
+        "c": 32,
+        "r": 2,
+        "t": "clear"
+      },
+      {
+        "c": 32,
+        "r": 3,
+        "t": "mountain"
+      },
+      {
+        "c": 32,
+        "r": 4,
+        "t": "forest"
+      },
+      {
+        "c": 32,
+        "r": 5,
+        "t": "forest"
+      },
+      {
+        "c": 32,
+        "r": 6,
+        "t": "clear"
+      },
+      {
+        "c": 32,
+        "r": 7,
+        "t": "clear"
+      },
+      {
+        "c": 32,
+        "r": 8,
+        "t": "mountain",
+        "k": "ghem"
+      },
+      {
+        "c": 32,
+        "r": 9,
+        "t": [
+          "castle",
+          "royal"
+        ],
+        "n": "Mines of Rosengg",
+        "k": "ghem",
+        "i": 5,
+        "cid": "mines_of_rosengg"
+      },
+      {
+        "c": 32,
+        "r": 10,
+        "t": "mountain",
+        "k": "ghem"
+      },
+      {
+        "c": 32,
+        "r": 11,
+        "t": "mountain",
+        "k": "ghem"
+      },
+      {
+        "c": 32,
+        "r": 12,
+        "t": "hill"
+      },
+      {
+        "c": 32,
+        "r": 13,
+        "t": "mountain",
+        "k": "ghem"
+      },
+      {
+        "c": 32,
+        "r": 14,
+        "t": "mountain",
+        "k": "ghem"
+      },
+      {
+        "c": 32,
+        "r": 15,
+        "t": "mountain",
+        "k": "ghem"
+      },
+      {
+        "c": 32,
+        "r": 16,
+        "t": "clear"
+      },
+      {
+        "c": 32,
+        "r": 17,
+        "t": "clear"
+      },
+      {
+        "c": 32,
+        "r": 18,
+        "t": "clear"
+      },
+      {
+        "c": 32,
+        "r": 19,
+        "t": "hill"
+      },
+      {
+        "c": 32,
+        "r": 20,
+        "t": "hill",
+        "k": "pon"
+      },
+      {
+        "c": 32,
+        "r": 21,
+        "t": "hill"
+      },
+      {
+        "c": 32,
+        "r": 22,
+        "t": "forest"
+      },
+      {
+        "c": 32,
+        "r": 23,
+        "t": "hill"
+      },
+      {
+        "c": 32,
+        "r": 24,
+        "t": "clear"
+      },
+      {
+        "c": 32,
+        "r": 25,
+        "t": "clear"
+      },
+      {
+        "c": 32,
+        "r": 26,
+        "t": "forest"
+      },
+      {
+        "c": 32,
+        "r": 27,
+        "t": "scenic",
+        "n": "Altars of Greystaff"
+      },
+      {
+        "c": 32,
+        "r": 28,
+        "t": "hill"
+      },
+      {
+        "c": 32,
+        "r": 29,
+        "t": "clear"
+      },
+      {
+        "c": 32,
+        "r": 30,
+        "t": "clear"
+      },
+      {
+        "c": 33,
+        "r": 0,
+        "t": "clear"
+      },
+      {
+        "c": 33,
+        "r": 1,
+        "t": "swamp"
+      },
+      {
+        "c": 33,
+        "r": 2,
+        "t": "swamp"
+      },
+      {
+        "c": 33,
+        "r": 3,
+        "t": "hill"
+      },
+      {
+        "c": 33,
+        "r": 4,
+        "t": "forest"
+      },
+      {
+        "c": 33,
+        "r": 5,
+        "t": "forest"
+      },
+      {
+        "c": 33,
+        "r": 6,
+        "t": "clear"
+      },
+      {
+        "c": 33,
+        "r": 7,
+        "t": "clear"
+      },
+      {
+        "c": 33,
+        "r": 8,
+        "t": "mountain",
+        "k": "ghem"
+      },
+      {
+        "c": 33,
+        "r": 9,
+        "t": "mountain",
+        "k": "ghem"
+      },
+      {
+        "c": 33,
+        "r": 10,
+        "t": "mountain",
+        "k": "ghem"
+      },
+      {
+        "c": 33,
+        "r": 11,
+        "t": "mountain",
+        "k": "ghem"
+      },
+      {
+        "c": 33,
+        "r": 12,
+        "t": "clear"
+      },
+      {
+        "c": 33,
+        "r": 13,
+        "t": "mountain",
+        "k": "ghem"
+      },
+      {
+        "c": 33,
+        "r": 14,
+        "t": "castle",
+        "n": "Alzak",
+        "k": "ghem",
+        "i": 4,
+        "cid": "alzak"
+      },
+      {
+        "c": 33,
+        "r": 15,
+        "t": "hill"
+      },
+      {
+        "c": 33,
+        "r": 16,
+        "t": "mountain",
+        "k": "ghem"
+      },
+      {
+        "c": 33,
+        "r": 17,
+        "t": "hill"
+      },
+      {
+        "c": 33,
+        "r": 18,
+        "t": "scenic",
+        "n": "City of Khos"
+      },
+      {
+        "c": 33,
+        "r": 19,
+        "t": "clear"
+      },
+      {
+        "c": 33,
+        "r": 20,
+        "t": "clear"
+      },
+      {
+        "c": 33,
+        "r": 21,
+        "t": "clear",
+        "n": "The Gathering",
+        "k": "trolls",
+        "cid": "the_gathering"
+      },
+      {
+        "c": 33,
+        "r": 22,
+        "t": "hill"
+      },
+      {
+        "c": 33,
+        "r": 23,
+        "t": "clear"
+      },
+      {
+        "c": 33,
+        "r": 24,
+        "t": "clear"
+      },
+      {
+        "c": 33,
+        "r": 25,
+        "t": "clear"
+      },
+      {
+        "c": 33,
+        "r": 26,
+        "t": "forest"
+      },
+      {
+        "c": 33,
+        "r": 27,
+        "t": "hill"
+      },
+      {
+        "c": 33,
+        "r": 28,
+        "t": "hill"
+      },
+      {
+        "c": 33,
+        "r": 29,
+        "t": "scenic",
+        "n": "Wyrm's Lair"
+      },
+      {
+        "c": 33,
+        "r": 30,
+        "t": "clear"
+      },
+      {
+        "c": 34,
+        "r": 0,
+        "t": "clear",
+        "n": "Witches' Kitchen"
+      },
+      {
+        "c": 34,
+        "r": 2,
+        "t": "swamp"
+      },
+      {
+        "c": 34,
+        "r": 4,
+        "t": "forest"
+      },
+      {
+        "c": 34,
+        "r": 6,
+        "t": "clear"
+      },
+      {
+        "c": 34,
+        "r": 8,
+        "t": "hill"
+      },
+      {
+        "c": 34,
+        "r": 10,
+        "t": "mountain",
+        "k": "ghem"
+      },
+      {
+        "c": 34,
+        "r": 12,
+        "t": "clear"
+      },
+      {
+        "c": 34,
+        "r": 14,
+        "t": "hill"
+      },
+      {
+        "c": 34,
+        "r": 16,
+        "t": "clear"
+      },
+      {
+        "c": 34,
+        "r": 18,
+        "t": "clear"
+      },
+      {
+        "c": 34,
+        "r": 20,
+        "t": "clear"
+      },
+      {
+        "c": 34,
+        "r": 22,
+        "t": "hill"
+      },
+      {
+        "c": 34,
+        "r": 24,
+        "t": "clear"
+      },
+      {
+        "c": 34,
+        "r": 26,
+        "t": "clear"
+      },
+      {
+        "c": 34,
+        "r": 28,
+        "t": "clear"
+      },
+      {
+        "c": 34,
+        "r": 30,
+        "t": "clear"
+      }
+    ]
+  }
+}

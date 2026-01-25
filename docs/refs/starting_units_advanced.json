@@ -1,1 +1,50 @@
-[{"f":"blackhand","u":[{"id":"the_black_hand","n":"The Black Hand","t":"special","c":1,"mp":10,"h":[30,3],"a":["mountaineer","forest_walking","flying"]},{"id":"walking_dead","n":"Walking Dead","t":"special","c":1,"mp":5,"h":[30,3]}]},{"f":"eaters","u":[{"id":"the_eaters_of_wisdom","n":"The Eaters of Wisdom","t":"special","c":1,"mp":8,"h":[12,10]}]}]
+[
+  {
+    "f": "blackhand",
+    "u": [
+      {
+        "id": "the_black_hand",
+        "n": "The Black Hand",
+        "t": "special",
+        "c": 1,
+        "mp": 10,
+        "h": [
+          30,
+          3
+        ],
+        "a": [
+          "mountaineer",
+          "forest_walking",
+          "flying"
+        ]
+      },
+      {
+        "id": "walking_dead",
+        "n": "Walking Dead",
+        "t": "special",
+        "c": 1,
+        "mp": 5,
+        "h": [
+          30,
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "f": "eaters",
+    "u": [
+      {
+        "id": "the_eaters_of_wisdom",
+        "n": "The Eaters of Wisdom",
+        "t": "special",
+        "c": 1,
+        "mp": 8,
+        "h": [
+          12,
+          10
+        ]
+      }
+    ]
+  }
+]
