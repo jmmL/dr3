@@ -1,36 +1,29 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "docs/refs/schema_starting_units.json",
+  "description": "Compact starting_units schema. Keys: f=factionId, u=units, id=unitId, n=name, t=unitType, c=count, mp=movement_points, h=start_hex, cid=cityId, a=abilityIds, mt=movement_type, dep=deployment",
   "type": "array",
   "items": {
     "type": "object",
-    "required": ["faction", "factionId", "units"],
+    "required": ["f", "u"],
     "properties": {
-      "faction": {"type": "string"},
-      "factionId": {"type": "string"},
-      "units": {
+      "f": {"type": "string", "description": "factionId"},
+      "u": {
         "type": "array",
         "items": {
           "type": "object",
-          "required": ["name", "unitId", "unitType", "count", "movement_points", "movement_type"],
+          "required": ["id", "n", "t", "c", "mp"],
           "properties": {
-            "name": {"type": "string"},
-            "unitId": {"type": "string"},
-            "unitType": {"type": "string"},
-            "factionId": {"type": "string"},
-            "count": {"type": "integer"},
-            "start_hex": {
-              "type": ["array", "null"],
-              "items": {"type": "integer"},
-              "minItems": 2,
-              "maxItems": 2
-            },
-            "movement_points": {"type": "number"},
-            "movement_type": {"type": "string"},
-            "abilities": {"type": "array", "items": {"type": "string"}},
-            "abilityIds": {"type": "array", "items": {"type": "string"}},
-            "cityId": {"type": ["string", "null"]},
-            "deployment": {"type": ["object", "null"]}
+            "id": {"type": "string", "description": "unitId"},
+            "n": {"type": "string", "description": "name"},
+            "t": {"type": "string", "description": "unitType"},
+            "c": {"type": "integer", "description": "count"},
+            "mp": {"type": "number", "description": "movement_points"},
+            "h": {"type": "array", "items": {"type": "integer"}, "minItems": 2, "maxItems": 2, "description": "start_hex [col,row]"},
+            "cid": {"type": ["string", "null"], "description": "cityId"},
+            "a": {"type": "array", "items": {"type": "string"}, "description": "abilityIds"},
+            "mt": {"type": "string", "description": "movement_type (omit if 'standard')"},
+            "dep": {"type": "object", "description": "deployment rules for scattered units"}
           }
         }
       }

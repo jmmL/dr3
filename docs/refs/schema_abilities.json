@@ -1,19 +1,20 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "docs/refs/schema_abilities.json",
+  "description": "Compact abilities schema. Keys: v=version, a=abilities, id=abilityId, n=name, refs=ruleRefs",
   "type": "object",
-  "required": ["version", "abilities"],
+  "required": ["v", "a"],
   "properties": {
-    "version": {"type": "string"},
-    "abilities": {
+    "v": {"type": "string", "description": "version"},
+    "a": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["abilityId", "name", "ruleRefs"],
+        "required": ["id", "n"],
         "properties": {
-          "abilityId": {"type": "string"},
-          "name": {"type": "string"},
-          "ruleRefs": {"type": "array", "items": {"type": "string"}}
+          "id": {"type": "string", "description": "abilityId"},
+          "n": {"type": "string", "description": "name"},
+          "refs": {"type": "array", "items": {"type": "string"}, "description": "ruleRefs"}
         }
       }
     }
