@@ -1,12 +1,11 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "docs/refs/schema_factions.json",
-  "description": "Compact factions schema. Keys: v=version, d=exportDate, f=factions, n=name, r=raceId, c=color, coa=coatOfArms, p=position[col,row], a=armies, sf=seaFleet, cap=isCapital, msl=monarchStartLocation",
+  "description": "Compact factions schema. Keys: v=version, f=factions, n=name, r=raceId, c=color, coa=coatOfArms, p=position[col,row], a=armies, sf=seaFleet, cap=isCapital, msl=monarchStartLocation",
   "type": "object",
-  "required": ["v", "d", "f"],
+  "required": ["v", "f"],
   "properties": {
     "v": {"type": "string"},
-    "d": {"type": "string"},
     "f": {
       "type": "array",
       "items": {
