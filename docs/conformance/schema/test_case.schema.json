@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dr3-conformance-test-case",
+  "title": "DR3 Conformance Test Case",
+  "type": "object",
+  "required": ["id", "description", "input", "expected"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+(\\.[0-9]+)?_[a-z_]+$",
+      "description": "Unique identifier: rule_ref + descriptive suffix"
+    },
+    "rule_ref": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+(\\.[0-9]+)?$",
+      "description": "Reference to rule in dr3_rules.min.json"
+    },
+    "rule_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[0-9]+\\.[0-9]+(\\.[0-9]+)?$"
+      },
+      "minItems": 2,
+      "description": "References to multiple rules for integration tests"
+    },
+    "description": {
+      "type": "string",
+      "description": "Human-readable description of what this tests"
+    },
+    "input": {
+      "type": "object",
+      "description": "Minimal context needed to evaluate the rule"
+    },
+    "expected": {
+      "type": "object",
+      "description": "Expected outcome from applying the rule"
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Optional categorization tags (e.g., 'negative', 'boundary', 'happy_path')"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Optional clarifying notes for edge cases"
+    }
+  },
+  "oneOf": [
+    { "required": ["rule_ref"] },
+    { "required": ["rule_refs"] }
+  ]
+}

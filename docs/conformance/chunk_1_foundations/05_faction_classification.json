@@ -1,0 +1,197 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "5_faction_classification",
+  "tests": [
+    {
+      "id": "5.2.1_hothior_is_human",
+      "rule_ref": "5.2.1",
+      "description": "Hothior is classified as human faction",
+      "input": {
+        "faction": "hothior"
+      },
+      "expected": {
+        "classification": "human"
+      }
+    },
+    {
+      "id": "5.2.1_immer_is_human",
+      "rule_ref": "5.2.1",
+      "description": "Immer is classified as human faction",
+      "input": {
+        "faction": "immer"
+      },
+      "expected": {
+        "classification": "human"
+      }
+    },
+    {
+      "id": "5.2.1_mivior_is_human",
+      "rule_ref": "5.2.1",
+      "description": "Mivior is classified as human faction",
+      "input": {
+        "faction": "mivior"
+      },
+      "expected": {
+        "classification": "human"
+      }
+    },
+    {
+      "id": "5.2.1_muetar_is_human",
+      "rule_ref": "5.2.1",
+      "description": "Muetar is classified as human faction",
+      "input": {
+        "faction": "muetar"
+      },
+      "expected": {
+        "classification": "human"
+      }
+    },
+    {
+      "id": "5.2.1_pon_is_human",
+      "rule_ref": "5.2.1",
+      "description": "Pon is classified as human faction",
+      "input": {
+        "faction": "pon"
+      },
+      "expected": {
+        "classification": "human"
+      }
+    },
+    {
+      "id": "5.2.1_rombune_is_human",
+      "rule_ref": "5.2.1",
+      "description": "Rombune is classified as human faction",
+      "input": {
+        "faction": "rombune"
+      },
+      "expected": {
+        "classification": "human"
+      }
+    },
+    {
+      "id": "5.2.1_shucassam_is_human",
+      "rule_ref": "5.2.1",
+      "description": "Shucassam is classified as human faction",
+      "input": {
+        "faction": "shucassam"
+      },
+      "expected": {
+        "classification": "human"
+      }
+    },
+    {
+      "id": "5.2.2_human_retreat_success_rolls",
+      "rule_ref": "5.2.2",
+      "description": "Human factions retreat successfully on rolls 4, 5, or 6",
+      "input": {
+        "classification": "human"
+      },
+      "expected": {
+        "retreat_success_rolls": [4, 5, 6]
+      }
+    },
+    {
+      "id": "5.3.1_neuth_is_non_human",
+      "rule_ref": "5.3.1",
+      "description": "Neuth (Elves) is classified as non-human faction",
+      "input": {
+        "faction": "neuth"
+      },
+      "expected": {
+        "classification": "non_human"
+      }
+    },
+    {
+      "id": "5.3.1_ghem_is_non_human",
+      "rule_ref": "5.3.1",
+      "description": "Ghem (Dwarves) is classified as non-human faction",
+      "input": {
+        "faction": "ghem"
+      },
+      "expected": {
+        "classification": "non_human"
+      }
+    },
+    {
+      "id": "5.3.1_zorn_is_non_human",
+      "rule_ref": "5.3.1",
+      "description": "Zorn (Goblins) is classified as non-human faction",
+      "input": {
+        "faction": "zorn"
+      },
+      "expected": {
+        "classification": "non_human"
+      }
+    },
+    {
+      "id": "5.3.1_trolls_is_non_human",
+      "rule_ref": "5.3.1",
+      "description": "Trolls is classified as non-human faction",
+      "input": {
+        "faction": "trolls"
+      },
+      "expected": {
+        "classification": "non_human"
+      }
+    },
+    {
+      "id": "5.3.2_non_human_retreat_success_rolls",
+      "rule_ref": "5.3.2",
+      "description": "Non-human factions retreat successfully on rolls 3, 4, 5, or 6",
+      "input": {
+        "classification": "non_human"
+      },
+      "expected": {
+        "retreat_success_rolls": [3, 4, 5, 6]
+      }
+    },
+    {
+      "id": "5.4.1_mercenary_classification",
+      "rule_ref": "5.4.1",
+      "description": "Mercenaries are classified as human",
+      "input": {
+        "unit_type": "mercenary"
+      },
+      "expected": {
+        "classification": "human"
+      }
+    },
+    {
+      "id": "5.4.2_mercenary_retreat_success_rolls",
+      "rule_ref": "5.4.2",
+      "description": "Mercenaries retreat successfully on rolls 4, 5, or 6",
+      "input": {
+        "unit_type": "mercenary"
+      },
+      "expected": {
+        "retreat_success_rolls": [4, 5, 6]
+      }
+    },
+    {
+      "id": "5.2.2_human_retreat_fails_on_three",
+      "rule_ref": "5.2.2",
+      "description": "Human factions fail retreat on roll of 3",
+      "tags": ["negative"],
+      "input": {
+        "classification": "human",
+        "retreat_roll": 3
+      },
+      "expected": {
+        "retreat_successful": false
+      }
+    },
+    {
+      "id": "5.3.2_non_human_retreat_fails_on_two",
+      "rule_ref": "5.3.2",
+      "description": "Non-human factions fail retreat on roll of 2",
+      "tags": ["negative"],
+      "input": {
+        "classification": "non_human",
+        "retreat_roll": 2
+      },
+      "expected": {
+        "retreat_successful": false
+      }
+    }
+  ]
+}

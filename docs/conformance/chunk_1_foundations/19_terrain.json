@@ -1,0 +1,391 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "19_terrain",
+  "tests": [
+    {
+      "id": "19.1.1_clear_terrain_cost",
+      "rule_ref": "19.1.1",
+      "description": "Clear terrain costs 1 movement point",
+      "input": {
+        "terrain": "clear"
+      },
+      "expected": {
+        "movement_cost": 1
+      }
+    },
+    {
+      "id": "19.2.1_forest_terrain_cost",
+      "rule_ref": "19.2.1",
+      "description": "Forest terrain costs 2 movement points",
+      "input": {
+        "terrain": "forest"
+      },
+      "expected": {
+        "movement_cost": 2
+      }
+    },
+    {
+      "id": "19.2.2_forest_tree_symbol",
+      "rule_ref": "19.2.2",
+      "description": "Units with tree symbol treat forest as clear (1 MP)",
+      "input": {
+        "terrain": "forest",
+        "unit_has_tree_symbol": true
+      },
+      "expected": {
+        "movement_cost": 1
+      }
+    },
+    {
+      "id": "19.3.1_minor_river_cost",
+      "rule_ref": "19.3.1",
+      "description": "Minor river costs 2 movement points",
+      "input": {
+        "terrain": "minor_river"
+      },
+      "expected": {
+        "movement_cost": 2
+      }
+    },
+    {
+      "id": "19.3.2_minor_river_applies_all_directions",
+      "rule_ref": "19.3.2",
+      "description": "Minor river cost applies when moving into, across, or along",
+      "input": {
+        "terrain": "minor_river",
+        "movement_direction": "into"
+      },
+      "expected": {
+        "movement_cost": 2
+      }
+    },
+    {
+      "id": "19.4.1_major_river_crossing_requirement",
+      "rule_ref": "19.4.1",
+      "description": "Major river crossing requires beginning movement phase in hex",
+      "input": {
+        "terrain": "major_river",
+        "crossing_major_river": true,
+        "began_in_hex": false
+      },
+      "expected": {
+        "crossing_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "19.4.2_major_river_crossing_cost",
+      "rule_ref": "19.4.2",
+      "description": "Major river crossing costs 2 movement points",
+      "input": {
+        "terrain": "major_river",
+        "crossing_major_river": true,
+        "began_in_hex": true
+      },
+      "expected": {
+        "movement_cost": 2,
+        "crossing_allowed": true
+      }
+    },
+    {
+      "id": "19.5.1_hills_terrain_cost",
+      "rule_ref": "19.5.1",
+      "description": "Hills terrain costs 2 movement points",
+      "input": {
+        "terrain": "hills"
+      },
+      "expected": {
+        "movement_cost": 2
+      }
+    },
+    {
+      "id": "19.5.2_hills_mountain_symbol",
+      "rule_ref": "19.5.2",
+      "description": "Units with mountain symbol treat hills as clear (1 MP)",
+      "input": {
+        "terrain": "hills",
+        "unit_has_mountain_symbol": true
+      },
+      "expected": {
+        "movement_cost": 1
+      }
+    },
+    {
+      "id": "19.6.1_mountain_terrain_cost",
+      "rule_ref": "19.6.1",
+      "description": "Mountain terrain costs 3 movement points",
+      "input": {
+        "terrain": "mountain"
+      },
+      "expected": {
+        "movement_cost": 3
+      }
+    },
+    {
+      "id": "19.6.2_mountain_must_stop",
+      "rule_ref": "19.6.2",
+      "description": "Units must stop after entering mountain hex",
+      "input": {
+        "terrain": "mountain",
+        "unit_has_mountain_symbol": false
+      },
+      "expected": {
+        "must_stop": true
+      }
+    },
+    {
+      "id": "19.6.3_mountain_combat_bonus",
+      "rule_ref": "19.6.3",
+      "description": "Mountains provide +1 to defender's combat die roll",
+      "input": {
+        "terrain": "mountain",
+        "combat_role": "defender"
+      },
+      "expected": {
+        "combat_modifier": 1
+      }
+    },
+    {
+      "id": "19.6.4_mountain_symbol_no_stop",
+      "rule_ref": "19.6.4",
+      "description": "Units with mountain symbol need not stop in mountains but still pay 3 MP",
+      "input": {
+        "terrain": "mountain",
+        "unit_has_mountain_symbol": true
+      },
+      "expected": {
+        "movement_cost": 3,
+        "must_stop": false
+      }
+    },
+    {
+      "id": "19.7.1_lakeshore_cost",
+      "rule_ref": "19.7.1",
+      "description": "Lakeshore costs 1 movement point",
+      "input": {
+        "terrain": "lakeshore"
+      },
+      "expected": {
+        "movement_cost": 1
+      }
+    },
+    {
+      "id": "19.7.2_lakeshore_no_crossing",
+      "rule_ref": "19.7.2",
+      "description": "Land units cannot cross all-lake hexsides",
+      "input": {
+        "unit_type": "land",
+        "hexside_type": "all_lake"
+      },
+      "expected": {
+        "crossing_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "19.8.1_seashore_cost",
+      "rule_ref": "19.8.1",
+      "description": "Seashore costs 1 movement point",
+      "input": {
+        "terrain": "seashore"
+      },
+      "expected": {
+        "movement_cost": 1
+      }
+    },
+    {
+      "id": "19.8.2_fleet_no_all_land_crossing",
+      "rule_ref": "19.8.2",
+      "description": "Fleets cannot cross all-land hexsides",
+      "input": {
+        "unit_type": "fleet",
+        "hexside_type": "all_land"
+      },
+      "expected": {
+        "crossing_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "19.8.3_land_no_all_sea_crossing",
+      "rule_ref": "19.8.3",
+      "description": "Land units cannot cross all-sea hexsides",
+      "input": {
+        "unit_type": "land",
+        "hexside_type": "all_sea"
+      },
+      "expected": {
+        "crossing_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "19.9.1_open_sea_cost",
+      "rule_ref": "19.9.1",
+      "description": "Open sea costs 1 movement point",
+      "input": {
+        "terrain": "open_sea"
+      },
+      "expected": {
+        "movement_cost": 1
+      }
+    },
+    {
+      "id": "19.9.2_open_sea_fleets_only",
+      "rule_ref": "19.9.2",
+      "description": "Only fleets may enter open sea (unless transported)",
+      "input": {
+        "terrain": "open_sea",
+        "unit_type": "land",
+        "is_transported": false
+      },
+      "expected": {
+        "entry_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "19.10.1_swamp_cost",
+      "rule_ref": "19.10.1",
+      "description": "Swamp costs 2 movement points",
+      "input": {
+        "terrain": "swamp"
+      },
+      "expected": {
+        "movement_cost": 2
+      }
+    },
+    {
+      "id": "19.11.1_isle_of_fright_cost",
+      "rule_ref": "19.11.1",
+      "description": "Isle of Fright costs 1 movement point",
+      "input": {
+        "terrain": "isle_of_fright"
+      },
+      "expected": {
+        "movement_cost": 1
+      }
+    },
+    {
+      "id": "19.11.2_isle_of_fright_restriction",
+      "rule_ref": "19.11.2",
+      "description": "Fleets may only enter Isle of Fright when effecting rescue",
+      "input": {
+        "terrain": "isle_of_fright",
+        "unit_type": "fleet",
+        "is_rescue_operation": false
+      },
+      "expected": {
+        "entry_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "19.12.1_mountain_pass_cost",
+      "rule_ref": "19.12.1",
+      "description": "Mountain pass costs 2 movement points",
+      "input": {
+        "terrain": "mountain_pass"
+      },
+      "expected": {
+        "movement_cost": 2
+      }
+    },
+    {
+      "id": "19.12.2_mountain_pass_defender_doubled",
+      "rule_ref": "19.12.2",
+      "description": "Defending units in mountain pass have combat value doubled",
+      "input": {
+        "terrain": "mountain_pass",
+        "combat_role": "defender",
+        "base_combat_value": 3
+      },
+      "expected": {
+        "effective_combat_value": 6
+      }
+    },
+    {
+      "id": "19.13.1_castle_enemy_forbidden",
+      "rule_ref": "19.13.1",
+      "description": "Enemy units cannot enter castle hex (see sieges)",
+      "input": {
+        "terrain": "castle",
+        "relationship": "enemy",
+        "castle_intact": true
+      },
+      "expected": {
+        "entry_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "19.13.2_castle_friendly_cost",
+      "rule_ref": "19.13.2",
+      "description": "Friendly castle costs 1 movement point",
+      "input": {
+        "terrain": "castle",
+        "relationship": "friendly"
+      },
+      "expected": {
+        "movement_cost": 1
+      }
+    },
+    {
+      "id": "19.14.2_seaport_cost",
+      "rule_ref": "19.14.2",
+      "description": "Seaport costs 1 movement point",
+      "input": {
+        "terrain": "seaport"
+      },
+      "expected": {
+        "movement_cost": 1
+      }
+    },
+    {
+      "id": "19.14.3_seaport_access",
+      "rule_ref": "19.14.3",
+      "description": "Both fleets and land units may access seaports",
+      "input": {
+        "terrain": "seaport"
+      },
+      "expected": {
+        "fleet_access": true,
+        "land_access": true
+      }
+    },
+    {
+      "id": "19.16.1_scenic_hex_cost",
+      "rule_ref": "19.16.1",
+      "description": "Scenic hexes cost 1 movement point",
+      "input": {
+        "terrain": "scenic_hex"
+      },
+      "expected": {
+        "movement_cost": 1
+      }
+    },
+    {
+      "id": "19.17.1_cumulative_terrain_rule",
+      "rule_ref": "19.17.1",
+      "description": "Terrain effects are cumulative",
+      "input": {
+        "terrain": ["forest", "hills"]
+      },
+      "expected": {
+        "movement_cost": 4
+      }
+    },
+    {
+      "id": "19.17.2_forested_mountain_cost",
+      "rule_ref": "19.17.2",
+      "description": "Forested mountain costs 5 MP (2+3) and requires stop",
+      "input": {
+        "terrain": ["forest", "mountain"]
+      },
+      "expected": {
+        "movement_cost": 5,
+        "must_stop": true
+      }
+    }
+  ]
+}
