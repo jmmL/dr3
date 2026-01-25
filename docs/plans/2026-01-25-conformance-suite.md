@@ -20,6 +20,7 @@
 | Context | Minimal inputs | Focused tests, obvious failures |
 | Randomness | Parameterized roll outcomes | Die result as input, assert effects |
 | Coverage | Complete, chunked delivery | Comprehensive foundation, manageable effort |
+| Completeness | Include negative test cases | Validate what is NOT allowed, not just what is |
 
 ---
 
@@ -38,6 +39,8 @@ Every test case follows this structure:
   "expected": { }
 }
 ```
+
+The `rule_ref` field provides direct lookup into `dr3_rules.min.json` for full rule context and verification.
 
 ### Schema Definition
 
@@ -72,7 +75,7 @@ Every test case follows this structure:
     "tags": {
       "type": "array",
       "items": { "type": "string" },
-      "description": "Optional categorization tags"
+      "description": "Optional categorization tags (e.g., 'negative', 'boundary', 'happy_path')"
     },
     "notes": {
       "type": "string",
@@ -400,8 +403,7 @@ docs/conformance/
   },
   "expected": {
     "modifier": 1
-  },
-  "notes": "15 / (4+3) = 15/7 = 2.14, drop = 2, minus 1 = +1"
+  }
 }
 ```
 
@@ -417,8 +419,7 @@ docs/conformance/
   },
   "expected": {
     "modifier": 0
-  },
-  "notes": "15 / (4+4) = 15/8 = 1.88, drop = 1, minus 1 = 0"
+  }
 }
 ```
 
@@ -630,6 +631,146 @@ docs/conformance/
   "expected": {
     "valid_placement": false,
     "reason": "adjacent_to_existing_goblin"
+  }
+}
+```
+
+---
+
+## Negative Test Cases
+
+Negative tests validate what is NOT allowed. They use the `tags: ["negative"]` field for filtering.
+
+### Invalid Movement (Rule 18.5)
+
+```json
+{
+  "id": "18.5.1_cannot_enter_enemy_hex",
+  "rule_ref": "18.5.1",
+  "description": "Units cannot enter hex containing enemy unit",
+  "tags": ["negative"],
+  "input": {
+    "unit_type": "army",
+    "target_hex_contains": "enemy_unit"
+  },
+  "expected": {
+    "move_allowed": false,
+    "reason": "enemy_occupied"
+  }
+}
+```
+
+```json
+{
+  "id": "18.5.5_land_unit_cannot_cross_sea",
+  "rule_ref": "18.5.5",
+  "description": "Land units cannot cross all-sea hexsides",
+  "tags": ["negative"],
+  "input": {
+    "unit_type": "army",
+    "hexside_type": "all_sea"
+  },
+  "expected": {
+    "move_allowed": false,
+    "reason": "land_unit_sea_boundary"
+  }
+}
+```
+
+### Invalid Siege Declaration (Rule 17.1)
+
+```json
+{
+  "id": "17.1.3_siege_insufficient_force",
+  "rule_ref": "17.1.3",
+  "description": "Cannot declare siege without sufficient force",
+  "tags": ["negative"],
+  "input": {
+    "besieging_units": 3,
+    "intrinsic_defense": 4,
+    "units_inside": 2
+  },
+  "expected": {
+    "siege_allowed": false,
+    "reason": "insufficient_force",
+    "required_minimum": 6
+  }
+}
+```
+
+### Invalid Diplomacy (Rule 12.3.3)
+
+```json
+{
+  "id": "12.3.3.1_assassination_limit",
+  "rule_ref": "12.3.3.1",
+  "description": "Assassination attempt limited to once per game per player",
+  "tags": ["negative"],
+  "input": {
+    "function": "attempted_assassination",
+    "previous_assassination_attempts": 1
+  },
+  "expected": {
+    "action_allowed": false,
+    "reason": "assassination_already_attempted"
+  }
+}
+```
+
+### Invalid Stacking (Rule 24.2)
+
+```json
+{
+  "id": "24.2.2_allied_kingdoms_cannot_stack",
+  "rule_ref": "24.2.2",
+  "description": "Different allied kingdoms cannot end turn in same hex",
+  "tags": ["negative"],
+  "input": {
+    "units": [
+      { "kingdom": "hothior", "type": "army" },
+      { "kingdom": "mivior", "type": "army" }
+    ],
+    "relationship": "allied_to_same_player"
+  },
+  "expected": {
+    "stacking_allowed": false,
+    "reason": "different_allied_kingdoms"
+  }
+}
+```
+
+### Boundary Conditions
+
+```json
+{
+  "id": "25.4_combat_equal_forces_no_modifier",
+  "rule_ref": "25.4.1",
+  "description": "Equal forces: (3/3)-1 = 0, no modifier",
+  "tags": ["boundary"],
+  "input": {
+    "attacker_count": 3,
+    "defender_count": 3
+  },
+  "expected": {
+    "modifier": 0,
+    "applies_to": null
+  }
+}
+```
+
+```json
+{
+  "id": "17.1_minimum_siege_force",
+  "rule_ref": "17.1.3",
+  "description": "Exactly minimum force required: siege allowed",
+  "tags": ["boundary"],
+  "input": {
+    "besieging_units": 6,
+    "intrinsic_defense": 4,
+    "units_inside": 2
+  },
+  "expected": {
+    "siege_allowed": true
   }
 }
 ```
