@@ -10,10 +10,9 @@ A feature or task is **Complete** only when:
 
 ### 2. Good (Definition of Quality)
 Code and assets are considered **Good** when they are:
-* **Clean:** Follows project style guides (linting/formatting) and uses meaningful variable names.
-* **Efficient:** Avoids unnecessary complexity or performance bottlenecks.
-* **Documented:** Includes clear comments for complex logic and updates `README.md` or API docs if architecture changes.
-
+* **Clean:** Follow TDD principles. Keep a separation of concerns and don't repeat yourself. There are useful principles in SOLID that you should follow. Prioritise maintainable code and design. This project utilises reference documents from the physical board game for rules and game pieces; these are thr ultimate source of truth. You must write code that complies with this conformance suite.
+* **Efficient:** Avoids unnecessary complexity or performance bottlenecks. Prefer small patch-style edits to wholesale rewrites.
+* **Documented:** Clear code does not need inline comments and documentation. If code is unclear when you first write it, refactor it to be simpler first. Leave inline comments only for unusual or edge cases. Update relevant documentation when large changes to features or architecture are implemented.
 
 ## First Steps
 TBD
@@ -23,7 +22,18 @@ TBD
 
 ## Key Resources
 - **docs/plans/** - Working plans
-- **docs/refs/** - READ-ONLY source data (in JSON and Markdown) comprising the Rules, information about Factions, the Hexmap and Starting Units. These form the basis of the physical game that is being replicated, and are the ultimate source of truth. They are the basis for the future conformance suite. Never modify these files.
+- **docs/refs/** - Reference data stored in minified format for LLM use:
+
+| Original Files | Minified Files | Description |
+|----------------|----------------|-------------|
+| `hexmap.json` | `hexmap.min.json` | Hex grid map data |
+| `factions.json` | `factions.min.json` | Faction definitions |
+| `starting_units.json` | `starting_units.min.json` | Unit deployment data |
+| `abilities.json` | `abilities.min.json` | Unit ability definitions |
+| `personality_cards.json` | `personality_cards.min.json` | Monarch personality cards |
+| `dr3_rules.json` | `dr3_rules.min.json` | Game rules reference |
+
+Never modify a file in /docs/refs unless given specific permission to do so.
 
 ## Architecture
 TBD
