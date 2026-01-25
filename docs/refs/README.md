@@ -2,6 +2,21 @@ A collection of reference documents that form the basis of the rules, map and ga
 
 This folder should never be written to, unless explicit permission is given.
 
+## Compact JSON Format
+
+All JSON data files use abbreviated keys to reduce token usage (55% smaller than original).
+See [KEY_MAPPING.md](KEY_MAPPING.md) for the complete key mapping reference.
+
+Key conventions:
+- `c`/`r` = col/row coordinates
+- `n` = name
+- `t` = type or terrain
+- `id` = identifier
+- `f` = faction/factionId
+- Positions stored as `[col, row]` arrays
+- Default values omitted (e.g., `movement_type: "standard"`)
+- Empty arrays omitted
+
 ## Advanced mode splits
 
 Advanced-only content is split into companion files with the `_advanced` suffix:

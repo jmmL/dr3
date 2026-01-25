@@ -1,6 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "docs/refs/schema_hexmap.json",
+  "description": "Compact hexmap schema. Keys: c=col, r=row, t=terrain, n=name, k=kingdom, i=intrinsic, cid=cityId",
   "type": "object",
   "required": ["version", "exportDate", "map"],
   "properties": {
@@ -16,18 +17,15 @@
           "type": "array",
           "items": {
             "type": "object",
-            "required": ["col", "row", "terrain", "hexId"],
+            "required": ["c", "r"],
             "properties": {
-              "col": {"type": "integer"},
-              "row": {"type": "integer"},
-              "hexId": {"type": "string"},
-              "terrain": {"type": "object"},
-              "name": {"type": "string"},
-              "nameId": {"type": "string"},
-              "cityId": {"type": "string"},
-              "kingdom": {"type": "string"},
-              "factionId": {"type": "string"},
-              "intrinsic": {"type": "integer"}
+              "c": {"type": "integer", "description": "column"},
+              "r": {"type": "integer", "description": "row"},
+              "t": {"oneOf": [{"type": "string"}, {"type": "array", "items": {"type": "string"}}], "description": "terrain type(s)"},
+              "n": {"type": "string", "description": "name"},
+              "k": {"type": "string", "description": "kingdom/factionId"},
+              "i": {"type": "integer", "description": "intrinsic defense"},
+              "cid": {"type": "string", "description": "cityId"}
             }
           }
         }

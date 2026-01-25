@@ -1,37 +1,38 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "docs/refs/schema_factions.json",
+  "description": "Compact factions schema. Keys: v=version, d=exportDate, f=factions, n=name, r=raceId, c=color, coa=coatOfArms, p=position[col,row], a=armies, sf=seaFleet, cap=isCapital, msl=monarchStartLocation",
   "type": "object",
-  "required": ["version", "exportDate", "factions"],
+  "required": ["v", "d", "f"],
   "properties": {
-    "version": {"type": "string"},
-    "exportDate": {"type": "string"},
-    "factions": {
+    "v": {"type": "string"},
+    "d": {"type": "string"},
+    "f": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "name", "race", "raceId", "capitalName", "capitalId", "cities"],
+        "required": ["id", "n", "r", "cities"],
         "properties": {
           "id": {"type": "string"},
-          "name": {"type": "string"},
-          "race": {"type": "string"},
-          "raceId": {"type": "string"},
-          "capitalName": {"type": "string"},
-          "capitalId": {"type": "string"},
+          "n": {"type": "string", "description": "name"},
+          "r": {"type": "string", "description": "raceId"},
+          "c": {"type": "string", "description": "color"},
+          "coa": {"type": "string", "description": "coatOfArms"},
+          "msl": {"type": "array", "items": {"type": "integer"}, "minItems": 2, "maxItems": 2, "description": "monarchStartLocation [col,row]"},
+          "notes": {"type": "string"},
           "cities": {
             "type": "array",
             "items": {
               "type": "object",
-              "required": ["name", "cityId", "col", "row"],
+              "required": ["n", "id", "p"],
               "properties": {
-                "name": {"type": "string"},
-                "cityId": {"type": "string"},
-                "col": {"type": "integer"},
-                "row": {"type": "integer"},
-                "armies": {"type": ["integer", "null"]},
-                "seaFleet": {"type": ["integer", "null"]},
-                "isCapital": {"type": "boolean"},
-                "intrinsic": {"type": ["integer", "null"]}
+                "n": {"type": "string", "description": "name"},
+                "id": {"type": "string", "description": "cityId"},
+                "p": {"type": "array", "items": {"type": "integer"}, "minItems": 2, "maxItems": 2, "description": "position [col,row]"},
+                "a": {"type": "integer", "description": "armies"},
+                "sf": {"type": "integer", "description": "seaFleet"},
+                "cap": {"type": "boolean", "description": "isCapital"},
+                "i": {"type": "integer", "description": "intrinsic defense"}
               }
             }
           }

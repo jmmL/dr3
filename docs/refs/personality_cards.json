@@ -1,102 +1,102 @@
 [
   {
     "id": 1,
-    "name": "Disciplined",
-    "description": "This monarch takes good care of his or her military forces. The regular units are well fed, well trained, and ably led by competent officers. Whenever the regulars of this monarch make up half or more of the forces engaged in a battle, they may add +1 to the combat (not siege) die roll."
+    "n": "Disciplined",
+    "d": "This monarch takes good care of his or her military forces. The regular units are well fed, well trained, and ably led by competent officers. Whenever the regulars of this monarch make up half or more of the forces engaged in a battle, they may add +1 to the combat (not siege) die roll."
   },
   {
     "id": 2,
-    "name": "Cowardly",
-    "description": "This monarch is noted for an incredible lack of valor. Ambassadors who make Threats may add +1 to their Diplomatic Die Rolls, in addition to any bonus granted by the Diplomacy card that was played. Ambassadors who make Threats and fail are not banished. Furthermore, this poltroon will automatically deactivate any time a monarch in his or her alliance is killed."
+    "n": "Cowardly",
+    "d": "This monarch is noted for an incredible lack of valor. Ambassadors who make Threats may add +1 to their Diplomatic Die Rolls, in addition to any bonus granted by the Diplomacy card that was played. Ambassadors who make Threats and fail are not banished. Furthermore, this poltroon will automatically deactivate any time a monarch in his or her alliance is killed."
   },
   {
     "id": 3,
-    "name": "Gallant",
-    "description": "This gallant monarch champions the underdog. As long as this monarch is non-allied, the alliance with the fewest members may add +1 to Diplomatic Die Rolls here; the largest alliance must subtract -1."
+    "n": "Gallant",
+    "d": "This gallant monarch champions the underdog. As long as this monarch is non-allied, the alliance with the fewest members may add +1 to Diplomatic Die Rolls here; the largest alliance must subtract -1."
   },
   {
     "id": 4,
-    "name": "Indolent",
-    "description": "An indulgent upbringing has made this monarch a lazy wastrel with no taste for campaigning. Ambassadors may add +1 to the Diplomatic Die Roll when attempting to deactivate this monarch."
+    "n": "Indolent",
+    "d": "An indulgent upbringing has made this monarch a lazy wastrel with no taste for campaigning. Ambassadors may add +1 to the Diplomatic Die Roll when attempting to deactivate this monarch."
   },
   {
     "id": 5,
-    "name": "Amorous",
-    "description": "This monarch has an endless appetite for members of the opposite sex. Bigamy notwithstanding, ambassadors who offer diplomatic marriage may add +1 to their Diplomatic Die Rolls, in addition to any bonus granted by the Diplomacy card that was played."
+    "n": "Amorous",
+    "d": "This monarch has an endless appetite for members of the opposite sex. Bigamy notwithstanding, ambassadors who offer diplomatic marriage may add +1 to their Diplomatic Die Rolls, in addition to any bonus granted by the Diplomacy card that was played."
   },
   {
     "id": 6,
-    "name": "Negligent",
-    "description": "This monarch cares little for military matters. The regulars of the kingdom are poorly fed and rarely paid. These regulars perform so badly that whenever they make up half or more of the engaged forces, -1 is subtracted from the combat die roll."
+    "n": "Negligent",
+    "d": "This monarch cares little for military matters. The regulars of the kingdom are poorly fed and rarely paid. These regulars perform so badly that whenever they make up half or more of the engaged forces, -1 is subtracted from the combat die roll."
   },
   {
     "id": 7,
-    "name": "Obstinate",
-    "description": "This mule-headed monarch cannot be influenced by bribes, crass bribes, threats, or offers of marriage. Other Diplomacy cards will work, however."
+    "n": "Obstinate",
+    "d": "This mule-headed monarch cannot be influenced by bribes, crass bribes, threats, or offers of marriage. Other Diplomacy cards will work, however."
   },
   {
     "id": 8,
-    "name": "Gullible",
-    "description": "This monarch is extremely gullible. Any ambassador may add +1 to the Diplomatic Die Roll, in addition to any bonus granted by a Diplomacy card, when working diplomacy with this monarch."
+    "n": "Gullible",
+    "d": "This monarch is extremely gullible. Any ambassador may add +1 to the Diplomatic Die Roll, in addition to any bonus granted by a Diplomacy card, when working diplomacy with this monarch."
   },
   {
     "id": 9,
-    "name": "Irascible",
-    "description": "This monarch is as irascible as a dragon with a sore throat. Any ambassador who fails to make a Diplomatic Die Roll here is banished from the kingdom for two complete turns."
+    "n": "Irascible",
+    "d": "This monarch is as irascible as a dragon with a sore throat. Any ambassador who fails to make a Diplomatic Die Roll here is banished from the kingdom for two complete turns."
   },
   {
     "id": 10,
-    "name": "Incompetent",
-    "description": "This monarch is totally incompetent when it comes to military matters. His or her movement allowance is reduced to the same amount as the regulars of the kingdom. When first mobilizing (activating), no more than two regulars may be placed on the game map per turn."
+    "n": "Incompetent",
+    "d": "This monarch is totally incompetent when it comes to military matters. His or her movement allowance is reduced to the same amount as the regulars of the kingdom. When first mobilizing (activating), no more than two regulars may be placed on the game map per turn."
   },
   {
     "id": 11,
-    "name": "Greedy",
-    "description": "This monarch is a real money grubber. Ambassadors offering bribes or crass bribes may add +1 to their Diplomatic Die Rolls, in addition to any bonus granted by the Diplomacy card that was played. Ambassadors who unsuccessfully offer crass bribes are not banished from the kingdom."
+    "n": "Greedy",
+    "d": "This monarch is a real money grubber. Ambassadors offering bribes or crass bribes may add +1 to their Diplomatic Die Rolls, in addition to any bonus granted by the Diplomacy card that was played. Ambassadors who unsuccessfully offer crass bribes are not banished from the kingdom."
   },
   {
     "id": 12,
-    "name": "Treacherous",
-    "description": "This treacherous monarch doesn't have enough scruples to fill a thimble. He or she will immediately join the alliance of the ambassador who successfully deactivates this kingdom."
+    "n": "Treacherous",
+    "d": "This treacherous monarch doesn't have enough scruples to fill a thimble. He or she will immediately join the alliance of the ambassador who successfully deactivates this kingdom."
   },
   {
     "id": 13,
-    "name": "Cursed",
-    "description": "This unfortunate monarch has been under a curse since birth. The first ambassador to successfully use White Magic on this monarch cures the curse and initially activates the kingdom -- this is the only way to bring this monarch into play first. Once a cure has been worked, any Diplomacy cards may be used, but the curing ambassador receives a permanent bonus of +1 to all subsequent Diplomatic Die Rolls, while all other ambassadors must subtract -1 from their Diplomatic Die Rolls. (Special note: this card will cause the Usurper to deactivate if it is drawn for him.)"
+    "n": "Cursed",
+    "d": "This unfortunate monarch has been under a curse since birth. The first ambassador to successfully use White Magic on this monarch cures the curse and initially activates the kingdom -- this is the only way to bring this monarch into play first. Once a cure has been worked, any Diplomacy cards may be used, but the curing ambassador receives a permanent bonus of +1 to all subsequent Diplomatic Die Rolls, while all other ambassadors must subtract -1 from their Diplomatic Die Rolls. (Special note: this card will cause the Usurper to deactivate if it is drawn for him.)"
   },
   {
     "id": 14,
-    "name": "Mad",
-    "description": "This monarch is as mad as a hatter. When activated, only one half of the regulars may be brought on to the map (round fractions down). The others remain out of play (in revolt). All ambassadors may add +1 to their Diplomatic Die Rolls, in addition to any bonus granted by the Diplomacy card played. However, any ambassador who fails to get the desired result is promptly executed (and will not reappear until two game turns have passed)."
+    "n": "Mad",
+    "d": "This monarch is as mad as a hatter. When activated, only one half of the regulars may be brought on to the map (round fractions down). The others remain out of play (in revolt). All ambassadors may add +1 to their Diplomatic Die Rolls, in addition to any bonus granted by the Diplomacy card played. However, any ambassador who fails to get the desired result is promptly executed (and will not reappear until two game turns have passed)."
   },
   {
     "id": 15,
-    "name": "Loyal",
-    "description": "This monarch is a noble and faithful friend. Once his or her kingdom has joined an alliance, only death can bring about a deactivation."
+    "n": "Loyal",
+    "d": "This monarch is a noble and faithful friend. Once his or her kingdom has joined an alliance, only death can bring about a deactivation."
   },
   {
     "id": 16,
-    "name": "Genius",
-    "description": "A combination of good training and common sense has made this monarch a military genius. Add +1 to the combat die roll (not sieges) whenever he or she leads troops in battle."
+    "n": "Genius",
+    "d": "A combination of good training and common sense has made this monarch a military genius. Add +1 to the combat die roll (not sieges) whenever he or she leads troops in battle."
   },
   {
     "id": 17,
-    "name": "Invalid",
-    "description": "This aged monarch is now an invalid and can no longer leave the royal castle. The regulars of the kingdom may move normally."
+    "n": "Invalid",
+    "d": "This aged monarch is now an invalid and can no longer leave the royal castle. The regulars of the kingdom may move normally."
   },
   {
     "id": 18,
-    "name": "Compromised",
-    "description": "A skeleton in the closet keeps this monarch living in fear. Ambassadors attempting to blackmail this monarch may add +1 to their Diplomatic Die Rolls, in addition to any bonus granted by the Diplomacy card that was played. Once blackmailed into an alliance (no penalty if activated by other means), this monarch is loath to quit. In such a case, subtract -1 from all attempts at deactivation (unless blackmail is again played as a Diplomacy card)."
+    "n": "Compromised",
+    "d": "A skeleton in the closet keeps this monarch living in fear. Ambassadors attempting to blackmail this monarch may add +1 to their Diplomatic Die Rolls, in addition to any bonus granted by the Diplomacy card that was played. Once blackmailed into an alliance (no penalty if activated by other means), this monarch is loath to quit. In such a case, subtract -1 from all attempts at deactivation (unless blackmail is again played as a Diplomacy card)."
   },
   {
     "id": 19,
-    "name": "Bellicose",
-    "description": "This star-eyed monarch craves the glory of war. Once committed to the fray, this monarch is not eager to stay his or her sword. All ambassadors seeking to activate this monarch may add +1 to their Diplomatic Die Rolls, in addition to any bonus granted by a Diplomacy card. All ambassadors seeking to deactivate this monarch must subtract -1 from their Diplomatic Die Rolls."
+    "n": "Bellicose",
+    "d": "This star-eyed monarch craves the glory of war. Once committed to the fray, this monarch is not eager to stay his or her sword. All ambassadors seeking to activate this monarch may add +1 to their Diplomatic Die Rolls, in addition to any bonus granted by a Diplomacy card. All ambassadors seeking to deactivate this monarch must subtract -1 from their Diplomatic Die Rolls."
   },
   {
     "id": 20,
-    "name": "Paranoid",
-    "description": "This monarch is a disgusting paranoid. One half (round fractions down) of the regulars must remain within the boundaries of this kingdom to guard against insurrection. The troops left at home may move and attack normally as long as they do not leave the kingdom."
+    "n": "Paranoid",
+    "d": "This monarch is a disgusting paranoid. One half (round fractions down) of the regulars must remain within the boundaries of this kingdom to guard against insurrection. The troops left at home may move and attack normally as long as they do not leave the kingdom."
   }
 ]

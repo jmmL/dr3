@@ -1,69 +1,49 @@
 [
   {
-    "faction": "The Black Hand",
-    "factionId": "blackhand",
-    "units": [
+    "f": "blackhand",
+    "u": [
       {
-        "name": "The Black Hand",
-        "count": 1,
-        "start_hex": [
+        "id": "the_black_hand",
+        "n": "The Black Hand",
+        "t": "special",
+        "c": 1,
+        "mp": 10,
+        "h": [
           30,
           3
         ],
-        "movement_points": 10,
-        "abilities": [
-          "Mountaineer",
-          "Forestwalking",
-          "Flying"
-        ],
-        "unitId": "the_black_hand",
-        "unitType": "special",
-        "factionId": "blackhand",
-        "cityId": null,
-        "movement_type": "standard",
-        "abilityIds": [
+        "a": [
           "mountaineer",
           "forest_walking",
           "flying"
         ]
       },
       {
-        "name": "Walking Dead",
-        "count": 1,
-        "start_hex": [
+        "id": "walking_dead",
+        "n": "Walking Dead",
+        "t": "special",
+        "c": 1,
+        "mp": 5,
+        "h": [
           30,
           3
-        ],
-        "movement_points": 5,
-        "abilities": [],
-        "unitId": "walking_dead",
-        "unitType": "special",
-        "factionId": "blackhand",
-        "cityId": null,
-        "movement_type": "standard",
-        "abilityIds": []
+        ]
       }
     ]
   },
   {
-    "faction": "The Eaters of Wisdom",
-    "factionId": "eaters",
-    "units": [
+    "f": "eaters",
+    "u": [
       {
-        "name": "The Eaters of Wisdom",
-        "count": 1,
-        "start_hex": [
+        "id": "the_eaters_of_wisdom",
+        "n": "The Eaters of Wisdom",
+        "t": "special",
+        "c": 1,
+        "mp": 8,
+        "h": [
           12,
           10
-        ],
-        "movement_points": 8,
-        "abilities": [],
-        "unitId": "the_eaters_of_wisdom",
-        "unitType": "special",
-        "factionId": "eaters",
-        "cityId": null,
-        "movement_type": "standard",
-        "abilityIds": []
+        ]
       }
     ]
   }

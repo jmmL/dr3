@@ -1,31 +1,30 @@
 {
-  "version": "1.0.0",
-  "abilities": [
+  "v": "1.0.0",
+  "a": [
     {
-      "abilityId": "forest_walking",
-      "name": "Forestwalking",
-      "ruleRefs": [
+      "id": "forest_walking",
+      "n": "Forestwalking",
+      "refs": [
         "6.1_tree_symbol"
       ]
     },
     {
-      "abilityId": "mountaineer",
-      "name": "Mountaineer",
-      "ruleRefs": [
+      "id": "mountaineer",
+      "n": "Mountaineer",
+      "refs": [
         "6.2_mountain_symbol"
       ]
     },
     {
-      "abilityId": "diplomatic",
-      "name": "Diplomatic",
-      "ruleRefs": [
+      "id": "diplomatic",
+      "n": "Diplomatic",
+      "refs": [
         "12_diplomacy"
       ]
     },
     {
-      "abilityId": "flying",
-      "name": "Flying",
-      "ruleRefs": []
+      "id": "flying",
+      "n": "Flying"
     }
   ]
 }
