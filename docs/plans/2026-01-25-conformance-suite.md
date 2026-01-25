@@ -48,7 +48,7 @@ The `rule_ref` field provides direct lookup into `dr3_rules.min.json` for full r
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "required": ["id", "rule_ref", "description", "input", "expected"],
+  "required": ["id", "description", "input", "expected"],
   "properties": {
     "id": {
       "type": "string",
@@ -59,6 +59,15 @@ The `rule_ref` field provides direct lookup into `dr3_rules.min.json` for full r
       "type": "string",
       "pattern": "^[0-9]+\\.[0-9]+(\\.[0-9]+)?$",
       "description": "Reference to rule in dr3_rules.min.json"
+    },
+    "rule_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[0-9]+\\.[0-9]+(\\.[0-9]+)?$"
+      },
+      "minItems": 2,
+      "description": "References to multiple rules for integration tests"
     },
     "description": {
       "type": "string",
@@ -81,7 +90,11 @@ The `rule_ref` field provides direct lookup into `dr3_rules.min.json` for full r
       "type": "string",
       "description": "Optional clarifying notes for edge cases"
     }
-  }
+  },
+  "oneOf": [
+    { "required": ["rule_ref"] },
+    { "required": ["rule_refs"] }
+  ]
 }
 ```
 
@@ -214,6 +227,48 @@ docs/conformance/
 **Total Estimated Tests:** ~450-500
 
 ---
+
+## Canonical Game-State Shape (Minimal, Explicit)
+
+To prevent divergent interpretations of “minimal inputs,” define a shared, minimal game-state
+shape that tests can embed inside `input`. This schema is intentionally small and extensible:
+
+```json
+{
+  "game_state": {
+    "turn": { "number": 1, "phase": "movement" },
+    "factions": [
+      { "id": "hothior", "type": "human", "status": "active" }
+    ],
+    "units": [
+      {
+        "id": "u1",
+        "faction_id": "hothior",
+        "unit_type": "army",
+        "strength": 1,
+        "location": [12, 5],
+        "status": "ready"
+      }
+    ],
+    "locations": [
+      {
+        "hex": [12, 5],
+        "terrain": ["clear"],
+        "kingdom": "hothior",
+        "intrinsic_defense": 4,
+        "is_castle": true,
+        "is_city": false
+      }
+    ],
+    "modifiers": [
+      { "type": "diplomacy_card", "value": 2 }
+    ]
+  }
+}
+```
+
+Use this as the shared baseline for integration tests (and any rule that needs broader context),
+while keeping single-rule tests free to include only the required subset.
 
 ## Example Test Cases by Rule Type
 
@@ -815,6 +870,22 @@ When adding integration tests (Chunk 7), test cases may include:
 
 Note the plural `rule_refs` for multi-rule scenarios.
 
+### Coverage Matrix
+
+Maintain a simple coverage matrix that maps every rule reference in `dr3_rules.min.json` to one
+or more test IDs. This can live as `docs/conformance/coverage_matrix.json` and is updated as
+tests are added.
+
+### Versioning
+
+Add `suite_version` at the file level (or as a shared header object) to make future schema or rule
+adjustments explicit and reproducible. Use semantic-style increments (e.g., `1.0.0`) for the suite.
+
+### Deterministic Randomness
+
+Where a test depends on multiple rolls or chained random effects, include a deterministic roll
+sequence in `input.rolls` (e.g., `[6, 2, 5]`) and specify each consumption point in the description.
+
 ---
 
 ## Task Breakdown
@@ -824,6 +895,12 @@ Note the plural `rule_refs` for multi-rule scenarios.
 #### Task 1.1: Create directory structure and schema
 - Create `docs/conformance/schema/test_case.schema.json`
 - Create chunk directories
+- Add `docs/conformance/coverage_matrix.json` template
+
+#### Task 1.1b: Add validation harness
+- Add `scripts/validate_conformance_suite.py`
+- Validate required fields, `rule_ref`/`rule_refs` patterns, and basic type checks
+- Validate coverage_matrix references exist in test cases
 
 #### Task 1.2: Write 04_unit_types.json (~15 tests)
 - Test combat unit identification
@@ -893,7 +970,7 @@ Note the plural `rule_refs` for multi-rule scenarios.
 The conformance suite is complete when:
 
 1. Every numbered rule in `dr3_rules.min.json` has at least one corresponding test
-2. All test files validate against `test_case.schema.json`
+2. All test files validate against `test_case.schema.json` and the harness checks
 3. Edge cases from rule notes and examples are covered
 4. A reference implementation passes all tests
 
