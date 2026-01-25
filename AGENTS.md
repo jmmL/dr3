@@ -20,6 +20,8 @@ Code and assets are considered **Good** when they are:
 
 **Learning:** Validation harness should enforce schema parity with integration tests.
 
+**Learning:** Rule references must be 2-3 parts (e.g., `25.2` or `25.2.2`), not 4+ parts — group sub-rules under parent.
+
 ## First Steps
 TBD
 

@@ -169,8 +169,8 @@
       }
     },
     {
-      "id": "26.6.1.1_fate_roll_combat_loss",
-      "rule_ref": "26.6.1.1",
+      "id": "26.6.1_fate_roll_combat_loss",
+      "rule_ref": "26.6.1",
       "description": "Fate roll triggered when units in leader's stack lost in combat",
       "input": {
         "leader_in_stack": true,
@@ -181,8 +181,8 @@
       }
     },
     {
-      "id": "26.6.1.2_fate_roll_lone_leader_enemy_pass",
-      "rule_ref": "26.6.1.2",
+      "id": "26.6.1_fate_roll_lone_leader_enemy_pass",
+      "rule_ref": "26.6.1",
       "description": "Fate roll triggered when lone leader passes through enemy stack",
       "input": {
         "leader_alone": true,
@@ -193,8 +193,8 @@
       }
     },
     {
-      "id": "26.6.1.3_fate_roll_enemy_passes_lone_leader",
-      "rule_ref": "26.6.1.3",
+      "id": "26.6.1_fate_roll_enemy_passes_lone_leader",
+      "rule_ref": "26.6.1",
       "description": "Fate roll triggered when enemy stack passes through lone leader's hex",
       "input": {
         "leader_alone": true,
@@ -205,8 +205,8 @@
       }
     },
     {
-      "id": "26.6.1.4_fate_roll_castle_falls",
-      "rule_ref": "26.6.1.4",
+      "id": "26.6.1_fate_roll_castle_falls",
+      "rule_ref": "26.6.1",
       "description": "Fate roll triggered when castle containing leader falls to siege",
       "input": {
         "leader_in_castle": true,
@@ -217,8 +217,8 @@
       }
     },
     {
-      "id": "26.6.1.5_fate_roll_leave_besieged_alone",
-      "rule_ref": "26.6.1.5",
+      "id": "26.6.1_fate_roll_leave_besieged_alone",
+      "rule_ref": "26.6.1",
       "description": "Fate roll triggered when leader attempts to leave besieged castle alone",
       "input": {
         "leader_in_besieged_castle": true,
@@ -229,8 +229,8 @@
       }
     },
     {
-      "id": "26.6.1.6_fate_roll_fleet_lost_at_sea",
-      "rule_ref": "26.6.1.6",
+      "id": "26.6.1_fate_roll_fleet_lost_at_sea",
+      "rule_ref": "26.6.1",
       "description": "Fate roll triggered when fleet containing leader lost at sea",
       "input": {
         "leader_aboard_fleet": true,
@@ -241,8 +241,8 @@
       }
     },
     {
-      "id": "26.6.2.1_fate_roll_one_killed",
-      "rule_ref": "26.6.2.1",
+      "id": "26.6.2_fate_roll_one_killed",
+      "rule_ref": "26.6.2",
       "description": "Leader killed on fate roll of 1",
       "input": {
         "fate_roll": 1
@@ -252,8 +252,8 @@
       }
     },
     {
-      "id": "26.6.2.2_fate_roll_two_to_five_no_effect",
-      "rule_ref": "26.6.2.2",
+      "id": "26.6.2_fate_roll_two_to_five_no_effect",
+      "rule_ref": "26.6.2",
       "description": "No effect on fate roll of 2-5",
       "input": {
         "fate_roll": 3
@@ -263,8 +263,8 @@
       }
     },
     {
-      "id": "26.6.2.3_fate_roll_six_captured",
-      "rule_ref": "26.6.2.3",
+      "id": "26.6.2_fate_roll_six_captured",
+      "rule_ref": "26.6.2",
       "description": "Leader captured on fate roll of 6",
       "input": {
         "fate_roll": 6
@@ -274,8 +274,8 @@
       }
     },
     {
-      "id": "26.6.3.1_fate_roll_once_per_player_turn",
-      "rule_ref": "26.6.3.1",
+      "id": "26.6.3_fate_roll_once_per_player_turn",
+      "rule_ref": "26.6.3",
       "description": "Leader may only roll fate once per player turn",
       "input": {
         "leader_id": "monarch_a",
@@ -287,8 +287,8 @@
       }
     },
     {
-      "id": "26.6.3.2_fate_roll_once_per_enemy_phase",
-      "rule_ref": "26.6.3.2",
+      "id": "26.6.3_fate_roll_once_per_enemy_phase",
+      "rule_ref": "26.6.3",
       "description": "Leader may only roll fate once per enemy movement phase",
       "input": {
         "leader_id": "monarch_a",

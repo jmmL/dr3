@@ -54,8 +54,8 @@
       }
     },
     {
-      "id": "25.2.2.1_human_retreat_success",
-      "rule_ref": "25.2.2.1",
+      "id": "25.2.2_human_retreat_success",
+      "rule_ref": "25.2.2",
       "description": "Human units retreat successfully on rolls of 4, 5, or 6",
       "input": {
         "faction_type": "human",
@@ -66,8 +66,8 @@
       }
     },
     {
-      "id": "25.2.2.1_human_retreat_failure",
-      "rule_ref": "25.2.2.1",
+      "id": "25.2.2_human_retreat_failure",
+      "rule_ref": "25.2.2",
       "description": "Human units fail retreat on rolls of 1, 2, or 3",
       "input": {
         "faction_type": "human",
@@ -79,8 +79,8 @@
       "tags": ["negative"]
     },
     {
-      "id": "25.2.2.2_non_human_retreat_success",
-      "rule_ref": "25.2.2.2",
+      "id": "25.2.2_non_human_retreat_success",
+      "rule_ref": "25.2.2",
       "description": "Non-human units retreat successfully on rolls of 3, 4, 5, or 6",
       "input": {
         "faction_type": "non_human",
@@ -360,8 +360,8 @@
       }
     },
     {
-      "id": "25.7.2.1_siege_attackers_cannot_combat",
-      "rule_ref": "25.7.2.1",
+      "id": "25.7.2_siege_attackers_cannot_combat",
+      "rule_ref": "25.7.2",
       "description": "Units that declared siege attack cannot also make regular attacks",
       "input": {
         "unit_id": "u1",
@@ -373,8 +373,8 @@
       "tags": ["negative"]
     },
     {
-      "id": "25.7.2.2_transported_units_no_combat",
-      "rule_ref": "25.7.2.2",
+      "id": "25.7.2_transported_units_no_combat",
+      "rule_ref": "25.7.2",
       "description": "Land units aboard fleets cannot attack (except siege combat)",
       "input": {
         "unit_id": "u1",
@@ -387,8 +387,8 @@
       "tags": ["negative"]
     },
     {
-      "id": "25.7.2.3_activated_kingdom_no_attack",
-      "rule_ref": "25.7.2.3",
+      "id": "25.7.2_activated_kingdom_no_attack",
+      "rule_ref": "25.7.2",
       "description": "Units of kingdom activated this turn cannot attack",
       "input": {
         "kingdom": "neuth",
@@ -400,8 +400,8 @@
       "tags": ["negative"]
     },
     {
-      "id": "25.7.2.4_deactivated_kingdom_no_attack",
-      "rule_ref": "25.7.2.4",
+      "id": "25.7.2_deactivated_kingdom_no_attack",
+      "rule_ref": "25.7.2",
       "description": "Units of kingdom deactivated this turn cannot attack",
       "input": {
         "kingdom": "neuth",
@@ -514,8 +514,8 @@
       }
     },
     {
-      "id": "25.11.4.1_land_no_attack_across_sea",
-      "rule_ref": "25.11.4.1",
+      "id": "25.11.4_land_no_attack_across_sea",
+      "rule_ref": "25.11.4",
       "description": "Land units cannot attack across all-sea hexsides",
       "input": {
         "unit_type": "land",
@@ -527,8 +527,8 @@
       "tags": ["negative"]
     },
     {
-      "id": "25.11.4.2_fleet_no_attack_across_land",
-      "rule_ref": "25.11.4.2",
+      "id": "25.11.4_fleet_no_attack_across_land",
+      "rule_ref": "25.11.4",
       "description": "Fleets cannot attack across all-land hexsides",
       "input": {
         "unit_type": "fleet",
