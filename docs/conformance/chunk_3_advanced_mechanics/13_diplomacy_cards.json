@@ -1,0 +1,99 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "13_diplomacy_cards",
+  "tests": [
+    {
+      "id": "13.1_total_cards",
+      "rule_ref": "13.1",
+      "description": "Diplomacy deck contains 45 cards",
+      "input": {
+        "deck_type": "diplomacy"
+      },
+      "expected": {
+        "card_total": 45
+      }
+    },
+    {
+      "id": "13.2_basic_game_cards",
+      "rule_ref": "13.2",
+      "description": "Basic game uses 32 diplomacy cards",
+      "input": {
+        "game_mode": "basic"
+      },
+      "expected": {
+        "card_total": 32
+      }
+    },
+    {
+      "id": "13.3.1_diplomatic_ploys_bonus",
+      "rule_ref": "13.3.1",
+      "description": "Diplomatic ploys provide bonuses to the diplomacy die roll",
+      "input": {
+        "card_type": "diplomatic_ploy",
+        "card_modifier": 2
+      },
+      "expected": {
+        "modifier_applies": true
+      }
+    },
+    {
+      "id": "13.3.2_special_mercenary_count",
+      "rule_ref": "13.3.2",
+      "description": "Special mercenary diplomacy cards include 13 units in advanced game",
+      "input": {
+        "game_mode": "advanced"
+      },
+      "expected": {
+        "special_mercenary_cards": 13
+      }
+    },
+    {
+      "id": "13.4_cards_accumulate",
+      "rule_ref": "13.4",
+      "description": "Diplomacy cards may be accumulated",
+      "input": {
+        "cards_in_hand": 3,
+        "cards_drawn": 2
+      },
+      "expected": {
+        "new_hand_size": 5
+      }
+    },
+    {
+      "id": "13.5_cards_not_tradable",
+      "rule_ref": "13.5",
+      "description": "Diplomacy cards may not be traded or exchanged",
+      "input": {
+        "trade_attempt": true
+      },
+      "expected": {
+        "trade_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "13.6_reshuffle_when_exhausted",
+      "rule_ref": "13.6",
+      "description": "Discard pile is shuffled when the diplomacy deck is exhausted",
+      "input": {
+        "deck_empty": true,
+        "discard_pile_count": 10
+      },
+      "expected": {
+        "reshuffle_required": true
+      }
+    },
+    {
+      "id": "13.7_discard_after_use",
+      "rule_ref": "13.7",
+      "description": "Diplomacy cards are discarded after use regardless of success",
+      "input": {
+        "card_played": true,
+        "diplomacy_success": false
+      },
+      "expected": {
+        "card_discarded": true
+      }
+    }
+  ]
+}

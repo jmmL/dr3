@@ -1,0 +1,258 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "08_random_events",
+  "tests": [
+    {
+      "id": "8.1_random_event_roll_two_dice",
+      "rule_ref": "8.1",
+      "description": "Random events are resolved with a 2d6 roll",
+      "input": {
+        "event_triggered": true
+      },
+      "expected": {
+        "dice_count": 2,
+        "die_type": "d6"
+      }
+    },
+    {
+      "id": "8.2.1_roll_two_untimely_death",
+      "rule_ref": "8.2.1",
+      "description": "Roll of 2 results in Untimely Death",
+      "input": {
+        "event_roll": 2
+      },
+      "expected": {
+        "event": "untimely_death"
+      }
+    },
+    {
+      "id": "8.2.2_roll_three_storms",
+      "rule_ref": "8.2.2",
+      "description": "Roll of 3 results in Storms",
+      "input": {
+        "event_roll": 3
+      },
+      "expected": {
+        "event": "storms",
+        "fleet_losses": 1
+      }
+    },
+    {
+      "id": "8.2.3_roll_four_mutiny",
+      "rule_ref": "8.2.3",
+      "description": "Roll of 4 results in Mutiny",
+      "input": {
+        "event_roll": 4
+      },
+      "expected": {
+        "event": "mutiny",
+        "unit_losses": 1
+      }
+    },
+    {
+      "id": "8.2.4_roll_five_bad_omens",
+      "rule_ref": "8.2.4",
+      "description": "Roll of 5 results in Bad Omens",
+      "input": {
+        "event_roll": 5
+      },
+      "expected": {
+        "event": "bad_omens",
+        "kingdom_fight_restricted": true
+      }
+    },
+    {
+      "id": "8.2.5_roll_six_replacements",
+      "rule_ref": "8.2.5",
+      "description": "Roll of 6 results in Replacements",
+      "input": {
+        "event_roll": 6
+      },
+      "expected": {
+        "event": "replacements",
+        "regulars_replaced": 2
+      }
+    },
+    {
+      "id": "8.2.6_roll_seven_no_event",
+      "rule_ref": "8.2.6",
+      "description": "Roll of 7 results in No Event",
+      "input": {
+        "event_roll": 7
+      },
+      "expected": {
+        "event": "no_event"
+      }
+    },
+    {
+      "id": "8.2.7_roll_eight_reinforcements",
+      "rule_ref": "8.2.7",
+      "description": "Roll of 8 results in Reinforcements",
+      "input": {
+        "event_roll": 8
+      },
+      "expected": {
+        "event": "reinforcements",
+        "mercenary_units_gained": 2
+      }
+    },
+    {
+      "id": "8.2.8_roll_nine_plague",
+      "rule_ref": "8.2.8",
+      "description": "Roll of 9 results in Plague",
+      "input": {
+        "event_roll": 9
+      },
+      "expected": {
+        "event": "plague",
+        "unit_losses": 1
+      }
+    },
+    {
+      "id": "8.2.9_roll_ten_replacement",
+      "rule_ref": "8.2.9",
+      "description": "Roll of 10 results in Replacement",
+      "input": {
+        "event_roll": 10
+      },
+      "expected": {
+        "event": "replacement",
+        "units_gained": 1
+      }
+    },
+    {
+      "id": "8.2.10_roll_eleven_desertion",
+      "rule_ref": "8.2.10",
+      "description": "Roll of 11 results in Desertion",
+      "input": {
+        "event_roll": 11
+      },
+      "expected": {
+        "event": "desertion",
+        "mercenary_losses": 1
+      }
+    },
+    {
+      "id": "8.2.11_roll_twelve_help_from_afar",
+      "rule_ref": "8.2.11",
+      "description": "Roll of 12 results in Help From Afar",
+      "input": {
+        "event_roll": 12
+      },
+      "expected": {
+        "event": "help_from_afar",
+        "neutral_ally_activated": true
+      }
+    },
+    {
+      "id": "8.3.1_event_applies_only_to_roller",
+      "rule_ref": "8.3.1",
+      "description": "Random event effects apply only to the rolling player",
+      "input": {
+        "rolling_player": "player_a",
+        "other_player": "player_b"
+      },
+      "expected": {
+        "effect_targets": ["player_a"]
+      }
+    },
+    {
+      "id": "8.3.2_regular_placement_at_counter",
+      "rule_ref": "8.3.2",
+      "description": "Regular replacements are placed at the location named on the counter",
+      "input": {
+        "replacement_unit": "regular",
+        "counter_location": [12, 5]
+      },
+      "expected": {
+        "placement_hex": [12, 5]
+      }
+    },
+    {
+      "id": "8.3.3_blocked_placement_fails",
+      "rule_ref": "8.3.3",
+      "description": "Replacements cannot enter if the placement hex is enemy-occupied or besieged",
+      "input": {
+        "placement_hex_enemy_occupied": true
+      },
+      "expected": {
+        "placement_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "8.3.4_mercenary_placement_friendly",
+      "rule_ref": "8.3.4",
+      "description": "Mercenary reinforcements may be placed at any friendly castle or port",
+      "input": {
+        "available_friendly_locations": ["castle", "port"]
+      },
+      "expected": {
+        "placement_options": ["castle", "port"]
+      }
+    },
+    {
+      "id": "8.3.5_fleet_reinforcement_requires_port",
+      "rule_ref": "8.3.5",
+      "description": "Fleet reinforcements require at least one friendly port",
+      "input": {
+        "friendly_ports": 0,
+        "reinforcement_type": "fleet"
+      },
+      "expected": {
+        "reinforcement_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "8.3.6_regular_limit_respected",
+      "rule_ref": "8.3.6",
+      "description": "Regular replacements cannot exceed identity card limit",
+      "input": {
+        "current_regulars": 4,
+        "identity_card_limit": 4,
+        "replacements_requested": 1
+      },
+      "expected": {
+        "replacement_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "8.3.7_immediate_action_for_replacements",
+      "rule_ref": "8.3.7",
+      "description": "Replacements and reinforcements may move and fight immediately",
+      "input": {
+        "unit_replaced_this_turn": true
+      },
+      "expected": {
+        "may_move": true,
+        "may_fight": true
+      }
+    },
+    {
+      "id": "8.3.8_impossible_event_no_event",
+      "rule_ref": "8.3.8",
+      "description": "If an event is impossible, treat it as No Event",
+      "input": {
+        "event": "reinforcements",
+        "conditions_met": false
+      },
+      "expected": {
+        "event": "no_event"
+      }
+    },
+    {
+      "id": "8.3.9_no_transfer_between_players",
+      "rule_ref": "8.3.9",
+      "description": "Replacements and reinforcements may not be transferred between players",
+      "input": {
+        "transfer_attempt": true
+      },
+      "expected": {
+        "transfer_allowed": false
+      },
+      "tags": ["negative"]
+    }
+  ]
+}

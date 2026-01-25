@@ -1,0 +1,409 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "12_diplomacy",
+  "tests": [
+    {
+      "id": "12.1.1_diplomacy_only_between",
+      "rule_ref": "12.1.1",
+      "description": "Diplomacy only occurs between player monarchs and non-player monarchs/mercenaries/barbarians",
+      "input": {
+        "initiator_type": "player_monarch",
+        "target_type": "non_player_monarch"
+      },
+      "expected": {
+        "diplomacy_allowed": true
+      }
+    },
+    {
+      "id": "12.1.2_player_alliances_not_binding",
+      "rule_ref": "12.1.2",
+      "description": "Player monarch alliances are not binding; all player monarchs are enemies",
+      "input": {
+        "player_a_allied_with_player_b": true
+      },
+      "expected": {
+        "treat_as_enemies": true
+      }
+    },
+    {
+      "id": "12.1.3_ambassador_death_recovery_turns",
+      "rule_ref": "12.1.3",
+      "description": "Ambassador death removes diplomacy for the next two player turns",
+      "input": {
+        "ambassador_death_turn": 3
+      },
+      "expected": {
+        "turns_unavailable": 2
+      }
+    },
+    {
+      "id": "12.1.4_ambassador_teleport_movement",
+      "rule_ref": "12.1.4",
+      "description": "Ambassador teleports to function location then returns to royal castle",
+      "input": {
+        "origin": "royal_castle",
+        "function_location": "neutral_monarch_hex"
+      },
+      "expected": {
+        "teleport_allowed": true,
+        "returns_to_royal_castle": true
+      }
+    },
+    {
+      "id": "12.1.5_ambassador_return_blocked",
+      "rule_ref": "12.1.5",
+      "description": "If royal castle is enemy-occupied or besieged, ambassador returns to player monarch or off map",
+      "input": {
+        "royal_castle_enemy_occupied": true
+      },
+      "expected": {
+        "return_location": "player_monarch_hex_or_off_map"
+      }
+    },
+    {
+      "id": "12.2.1_threshold_comparison",
+      "rule_ref": "12.2.1",
+      "description": "Diplomatic success requires modified roll >= target number",
+      "input": {
+        "modified_roll": 6,
+        "target_number": 6
+      },
+      "expected": {
+        "success": true
+      }
+    },
+    {
+      "id": "12.2.2_card_played_before_roll",
+      "rule_ref": "12.2.2",
+      "description": "Diplomacy card is played before the die roll and modifier applied after",
+      "input": {
+        "card_played": true,
+        "die_roll": 4
+      },
+      "expected": {
+        "card_play_timing": "before_roll",
+        "modifier_application": "after_roll"
+      }
+    },
+    {
+      "id": "12.2.3_modified_result_formula",
+      "rule_ref": "12.2.3",
+      "description": "Modified result adds card and personality modifiers, subtracts diplomatic penalty",
+      "input": {
+        "die_roll": 3,
+        "diplomacy_card_modifier": 2,
+        "personality_modifier": 1,
+        "diplomatic_penalty": 1
+      },
+      "expected": {
+        "modified_roll": 5
+      }
+    },
+    {
+      "id": "12.2.4_automatic_success",
+      "rule_ref": "12.2.4",
+      "description": "If modifiers guarantee success regardless of roll, success is automatic",
+      "input": {
+        "minimum_modified_total": 7,
+        "target_number": 6
+      },
+      "expected": {
+        "automatic_success": true
+      }
+    },
+    {
+      "id": "12.3.1_activate_neutral_threshold",
+      "rule_ref": "12.3.1",
+      "description": "Activation of neutral monarch requires modified roll >= 6",
+      "input": {
+        "die_roll": 4,
+        "diplomacy_card_modifier": 2,
+        "personality_modifier": 0,
+        "diplomatic_penalty": 0
+      },
+      "expected": {
+        "modified_roll": 6,
+        "success": true
+      }
+    },
+    {
+      "id": "12.3.1_activate_neutral_effects",
+      "rule_ref": "12.3.1",
+      "description": "Successful activation allies monarch, places forces, and delays movement",
+      "input": {
+        "activation_success": true
+      },
+      "expected": {
+        "monarch_allied": true,
+        "forces_placed": true,
+        "units_active_next_turn": true
+      }
+    },
+    {
+      "id": "12.3.2_deactivate_threshold",
+      "rule_ref": "12.3.2",
+      "description": "Deactivation of enemy-allied monarch requires modified roll >= 7",
+      "input": {
+        "die_roll": 4,
+        "diplomacy_card_modifier": 2,
+        "personality_modifier": 0,
+        "diplomatic_penalty": 0
+      },
+      "expected": {
+        "modified_roll": 6,
+        "success": false
+      }
+    },
+    {
+      "id": "12.3.2_deactivate_effects",
+      "rule_ref": "12.3.2",
+      "description": "Successful deactivation removes forces after combat and returns cards",
+      "input": {
+        "deactivation_success": true
+      },
+      "expected": {
+        "forces_removed_after_combat": true,
+        "cards_returned": true
+      }
+    },
+    {
+      "id": "12.3.3_assassination_limit_once",
+      "rule_ref": "12.3.3",
+      "description": "Assassination attempt is limited to once per game per player",
+      "input": {
+        "previous_assassination_attempts": 1
+      },
+      "expected": {
+        "action_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "12.3.3_assassination_higher_roll_kills",
+      "rule_ref": "12.3.3",
+      "description": "Assassination succeeds when the initiator rolls higher",
+      "input": {
+        "initiator_roll": 5,
+        "target_roll": 2
+      },
+      "expected": {
+        "target_killed": true
+      }
+    },
+    {
+      "id": "12.3.4_duel_limit_once",
+      "rule_ref": "12.3.4",
+      "description": "Ambassador duels are limited to once per pair of ambassadors",
+      "input": {
+        "previous_duel_between_ambassadors": true
+      },
+      "expected": {
+        "duel_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "12.3.4_duel_tie_kills_both",
+      "rule_ref": "12.3.4",
+      "description": "Ambassador duel ties kill both ambassadors",
+      "input": {
+        "ambassador_a_roll": 4,
+        "ambassador_b_roll": 4
+      },
+      "expected": {
+        "both_ambassadors_die": true
+      }
+    },
+    {
+      "id": "12.4.1_ambassador_death_removal",
+      "rule_ref": "12.4.1",
+      "description": "Ambassador death removes the ambassador for the next two player turns",
+      "input": {
+        "turns_since_death": 1
+      },
+      "expected": {
+        "ambassador_available": false
+      }
+    },
+    {
+      "id": "12.4.3_no_diplomacy_during_death",
+      "rule_ref": "12.4.3",
+      "description": "Players may conduct no diplomacy while ambassador is dead",
+      "input": {
+        "ambassador_dead": true
+      },
+      "expected": {
+        "diplomacy_allowed": false
+      }
+    },
+    {
+      "id": "12.4.4_ambassador_recovery_turn",
+      "rule_ref": "12.4.4",
+      "description": "Successor ambassador becomes available on the third turn after death",
+      "input": {
+        "turns_since_death": 3
+      },
+      "expected": {
+        "ambassador_available": true
+      }
+    },
+    {
+      "id": "12.4.5_penalties_inherited",
+      "rule_ref": "12.4.5",
+      "description": "Diplomatic penalties are inherited by successor ambassadors",
+      "input": {
+        "existing_penalty": 1
+      },
+      "expected": {
+        "penalty_inherited": true
+      }
+    },
+    {
+      "id": "12.4.6_continue_card_draw",
+      "rule_ref": "12.4.6",
+      "description": "Diplomacy card draw continues while ambassador is dead",
+      "input": {
+        "ambassador_dead": true
+      },
+      "expected": {
+        "cards_drawn": true
+      }
+    },
+    {
+      "id": "12.5.1_banishment_triggering_cards",
+      "rule_ref": "12.5.1",
+      "description": "Banishment can be triggered by specific diplomacy cards",
+      "input": {
+        "card_name": "Black Magic"
+      },
+      "expected": {
+        "banishment_possible": true
+      }
+    },
+    {
+      "id": "12.5.2_banishment_on_failed_roll",
+      "rule_ref": "12.5.2",
+      "description": "Banishment occurs when the diplomatic die roll fails",
+      "input": {
+        "diplomatic_attempt_failed": true
+      },
+      "expected": {
+        "banishment_triggered": true
+      }
+    },
+    {
+      "id": "12.5.3_banishment_duration_formula",
+      "rule_ref": "12.5.3",
+      "description": "Banishment duration equals card modifier plus one turn",
+      "input": {
+        "card_modifier": 2
+      },
+      "expected": {
+        "banishment_duration_turns": 3
+      }
+    },
+    {
+      "id": "12.5.4_banishment_effect",
+      "rule_ref": "12.5.4",
+      "description": "Banishment blocks further diplomatic functions with the offended kingdom",
+      "input": {
+        "banishment_active": true
+      },
+      "expected": {
+        "diplomacy_blocked": true
+      }
+    },
+    {
+      "id": "12.5.5_multiple_banishments_add",
+      "rule_ref": "12.5.5",
+      "description": "Multiple banishments add their durations together",
+      "input": {
+        "banishment_terms": [2, 3]
+      },
+      "expected": {
+        "total_banishment_duration": 5
+      }
+    },
+    {
+      "id": "12.5.6_card_discard_before_result",
+      "rule_ref": "12.5.6",
+      "description": "Diplomacy cards are discarded before knowing the die roll result",
+      "input": {
+        "card_played": true,
+        "result_known": false
+      },
+      "expected": {
+        "card_discarded": true
+      }
+    },
+    {
+      "id": "12.6.1_penalty_trigger_border_violation",
+      "rule_ref": "12.6.1",
+      "description": "Crossing into a neutral kingdom triggers a diplomatic penalty",
+      "input": {
+        "border_violation": true,
+        "violated_kingdom_status": "neutral"
+      },
+      "expected": {
+        "diplomatic_penalty_applied": true
+      }
+    },
+    {
+      "id": "12.6.2_penalty_effect_minus_one",
+      "rule_ref": "12.6.2",
+      "description": "Diplomatic penalty applies -1 to future rolls in violated kingdom",
+      "input": {
+        "diplomatic_penalty": 1
+      },
+      "expected": {
+        "roll_modifier": -1
+      }
+    },
+    {
+      "id": "12.6.3_penalty_exceptions",
+      "rule_ref": "12.6.3",
+      "description": "Allied or enemy-allied kingdoms do not incur diplomatic penalties",
+      "input": {
+        "violated_kingdom_status": "allied"
+      },
+      "expected": {
+        "diplomatic_penalty_applied": false
+      }
+    },
+    {
+      "id": "12.6.4_penalty_not_cumulative",
+      "rule_ref": "12.6.4",
+      "description": "Diplomatic penalties are not cumulative",
+      "input": {
+        "existing_penalty": 1,
+        "new_penalty_event": true
+      },
+      "expected": {
+        "penalty_value": 1
+      }
+    },
+    {
+      "id": "12.6.5_deactivation_grace_period",
+      "rule_ref": "12.6.5",
+      "description": "Deactivation grants one movement phase to leave before penalty applies",
+      "input": {
+        "movement_phases_elapsed": 0,
+        "units_still_present": true
+      },
+      "expected": {
+        "diplomatic_penalty_applied": false
+      }
+    },
+    {
+      "id": "12.6.6_voluntary_elimination_avoids_penalty",
+      "rule_ref": "12.6.6",
+      "description": "Units may be voluntarily eliminated to avoid diplomatic penalty",
+      "input": {
+        "units_eliminated_voluntarily": true
+      },
+      "expected": {
+        "diplomatic_penalty_applied": false
+      }
+    }
+  ]
+}

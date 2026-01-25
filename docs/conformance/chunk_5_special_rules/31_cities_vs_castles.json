@@ -1,0 +1,67 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "31_cities_vs_castles",
+  "tests": [
+    {
+      "id": "31.1_cities_vs_castles_distinction",
+      "rule_ref": "31.1",
+      "description": "Units deploy from cities, but only cities with castles provide intrinsic defense",
+      "input": {
+        "city_has_castle": false
+      },
+      "expected": {
+        "deployment_allowed": true,
+        "intrinsic_defense": 0
+      }
+    },
+    {
+      "id": "31.2.1_city_without_castle_example",
+      "rule_ref": "31.2.1",
+      "description": "Listed cities without castles are deployment hexes",
+      "input": {
+        "city_name": "Farnot",
+        "kingdom": "hothior"
+      },
+      "expected": {
+        "deployment_allowed": true,
+        "intrinsic_defense": 0
+      }
+    },
+    {
+      "id": "31.2.2_city_without_castle_no_siege",
+      "rule_ref": "31.2.2",
+      "description": "Cities without castles cannot be besieged",
+      "input": {
+        "city_has_castle": false,
+        "attempt_siege": true
+      },
+      "expected": {
+        "siege_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "31.3.1_castle_identified_in_hexmap",
+      "rule_ref": "31.3.1",
+      "description": "Castle locations are identified by castle markers in the hexmap",
+      "input": {
+        "hex_has_castle_marker": true
+      },
+      "expected": {
+        "is_castle": true
+      }
+    },
+    {
+      "id": "31.3.2_castle_provides_intrinsic_defense",
+      "rule_ref": "31.3.2",
+      "description": "Castles provide intrinsic defense strength for siege rules",
+      "input": {
+        "city_has_castle": true,
+        "intrinsic_defense": 4
+      },
+      "expected": {
+        "defense_strength": 4
+      }
+    }
+  ]
+}
