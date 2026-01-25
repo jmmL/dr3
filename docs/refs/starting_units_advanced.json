@@ -1,1 +1,50 @@
-{"$h":["f","id","n","t","c","mp","h","a"],"_":[["blackhand","the_black_hand","The Black Hand","special",1,10,[30,3],["mountaineer","forest_walking","flying"]],["blackhand","walking_dead","Walking Dead","special",1,5,[30,3]],["eaters","the_eaters_of_wisdom","The Eaters of Wisdom","special",1,8,[12,10]]]}
+[
+  {
+    "f": "blackhand",
+    "u": [
+      {
+        "id": "the_black_hand",
+        "n": "The Black Hand",
+        "t": "special",
+        "c": 1,
+        "mp": 10,
+        "h": [
+          30,
+          3
+        ],
+        "a": [
+          "mountaineer",
+          "forest_walking",
+          "flying"
+        ]
+      },
+      {
+        "id": "walking_dead",
+        "n": "Walking Dead",
+        "t": "special",
+        "c": 1,
+        "mp": 5,
+        "h": [
+          30,
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "f": "eaters",
+    "u": [
+      {
+        "id": "the_eaters_of_wisdom",
+        "n": "The Eaters of Wisdom",
+        "t": "special",
+        "c": 1,
+        "mp": 8,
+        "h": [
+          12,
+          10
+        ]
+      }
+    ]
+  }
+]

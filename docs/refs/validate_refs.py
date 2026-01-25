@@ -1,19 +1,9 @@
 #!/usr/bin/env python3
-"""
-Validate reference data in columnar JSON format.
-
-The minimized JSON format uses:
-- $h: headers (column names for columnar data)
-- $s: string table (interned strings, only for hexmap terrain/kingdom)
-- $i: column indices that use string interning
-- _: data rows (columnar format)
-"""
 from __future__ import annotations
 
 import json
 import re
 from pathlib import Path
-from typing import Any
 
 ROOT = Path(__file__).resolve().parents[2]
 REFS = ROOT / "docs" / "refs"
@@ -31,161 +21,75 @@ def assert_true(condition: bool, message: str):
         raise AssertionError(message)
 
 
-def deref(val: Any, strings: list[str]) -> Any:
-    """Dereference a value - convert string indices back to strings."""
-    if isinstance(val, int) and strings and 0 <= val < len(strings):
-        return strings[val]
-    if isinstance(val, list):
-        return [deref(v, strings) for v in val]
-    return val
+def collect_city_ids(factions: dict) -> set[str]:
+    """Collect city IDs from compact factions format (f=factions array, cities[].id=cityId)."""
+    ids = set()
+    for faction in factions.get("f", []):
+        for city in faction.get("cities", []):
+            ids.add(city["id"])
+    return ids
 
 
-def expand_columnar(data: dict, strings: list[str] | None = None, intern_cols: set[int] | None = None) -> list[dict]:
-    """Convert columnar format back to list of dicts.
-
-    Args:
-        data: Dict with $h (headers) and _ (rows)
-        strings: Optional string table for interned values
-        intern_cols: Set of column indices that use string interning
-    """
-    headers = data.get("$h", [])
-    rows = data.get("_", [])
-    strings = strings or data.get("$s", [])
-    intern_cols = intern_cols or set(data.get("$i", []))
-
-    result = []
-    for row in rows:
-        obj = {}
-        for i, h in enumerate(headers):
-            if i < len(row):
-                val = row[i]
-                if val is not None:
-                    # Only deref if this column uses interning
-                    if i in intern_cols and strings:
-                        obj[h] = deref(val, strings)
-                    else:
-                        obj[h] = val
-        result.append(obj)
-    return result
-
-
-def collect_city_ids(factions_data: dict) -> set[str]:
-    """Collect city IDs from columnar factions format."""
-    cities = expand_columnar(factions_data.get("cities", {}))
-    return {city["id"] for city in cities if "id" in city}
-
-
-def validate_abilities(abilities_data: dict):
-    """Validate columnar abilities format."""
-    abilities = expand_columnar(abilities_data)
-    ability_ids = [a["id"] for a in abilities if "id" in a]
+def validate_abilities(abilities: dict):
+    """Validate compact abilities format (a=abilities array, id=abilityId)."""
+    ability_ids = [ability["id"] for ability in abilities["a"]]
     assert_true(len(ability_ids) == len(set(ability_ids)), "Duplicate abilityId values in abilities.json")
 
 
-def validate_factions(factions_data: dict):
-    """Validate columnar factions format."""
-    factions = expand_columnar(factions_data.get("f", {}))
-    cities = expand_columnar(factions_data.get("cities", {}))
-
-    faction_ids = [f["id"] for f in factions if "id" in f]
-    assert_true(len(faction_ids) == len(set(faction_ids)), "Duplicate faction IDs")
-
-    # Check city IDs are unique per faction
-    fid_to_cities: dict[str, list[str]] = {}
-    for city in cities:
-        fid = city.get("fid")
-        cid = city.get("id")
-        if fid and cid:
-            fid_to_cities.setdefault(fid, []).append(cid)
-
-    for fid, cids in fid_to_cities.items():
-        assert_true(len(cids) == len(set(cids)), f"Duplicate cityId values in faction {fid}")
+def validate_factions(factions: dict):
+    """Validate compact factions format (f=factions array, id=factionId, cities[].id=cityId)."""
+    faction_ids = [faction["id"] for faction in factions.get("f", [])]
+    assert_true(len(faction_ids) == len(set(faction_ids)), "Duplicate faction IDs in factions.json")
+    for faction in factions.get("f", []):
+        city_ids = [city["id"] for city in faction.get("cities", [])]
+        assert_true(len(city_ids) == len(set(city_ids)), f"Duplicate cityId values in faction {faction['id']}")
 
 
-def validate_starting_units(starting_data: dict, abilities_data: dict, city_ids: set[str]):
-    """Validate columnar starting_units format (no string interning)."""
-    units = expand_columnar(starting_data)
-    abilities = expand_columnar(abilities_data)
-    ability_ids = {a["id"] for a in abilities if "id" in a}
+def validate_starting_units(starting: list, abilities: dict, city_ids: set[str]):
+    """Validate compact starting_units format.
 
-    for unit in units:
-        name = unit.get("n", "unknown")
-        mp = unit.get("mp")
-        assert_true(isinstance(mp, (int, float)), f"Non-numeric movement_points for {name}")
-
-        movement_type = unit.get("mt", "standard")
-        if unit.get("t") == "ambassador":
-            assert_true(movement_type == "teleport", f"Ambassador movement_type not teleport: {name}")
-
-        for ability_id in unit.get("a", []):
-            assert_true(ability_id in ability_ids, f"Unknown abilityId {ability_id} on {name}")
-
-        cid = unit.get("cid")
-        if cid:
-            assert_true(cid in city_ids, f"Unknown cityId {cid} on {name}")
+    Compact keys: f=factionId, u=units, n=name, t=unitType, mp=movement_points,
+    mt=movement_type (omit if 'standard'), a=abilityIds, cid=cityId
+    """
+    ability_ids = {ability["id"] for ability in abilities["a"]}
+    for faction in starting:
+        for unit in faction.get("u", []):
+            assert_true(isinstance(unit["mp"], (int, float)), f"Non-numeric movement_points for {unit['n']}")
+            # mt is omitted when 'standard', so check if present
+            movement_type = unit.get("mt", "standard")
+            if unit["t"] == "ambassador":
+                assert_true(movement_type == "teleport", f"Ambassador movement_type not teleport: {unit['n']}")
+            for ability_id in unit.get("a", []):
+                assert_true(ability_id in ability_ids, f"Unknown abilityId {ability_id} on {unit['n']}")
+            if unit.get("cid"):
+                assert_true(unit["cid"] in city_ids, f"Unknown cityId {unit['cid']} on {unit['n']}")
 
 
-def validate_hexmap(hexmap_data: dict, city_ids: set[str], mode: str):
-    """Validate columnar hexmap format with string interning."""
-    strings = hexmap_data.get("$s", [])
-    headers = hexmap_data.get("$h", [])
-    rows = hexmap_data.get("_", [])
-    intern_cols = set(hexmap_data.get("$i", []))
+def validate_hexmap(hexmap: dict, city_ids: set[str], mode: str):
+    """Validate compact hexmap format.
 
-    # Find column indices
-    t_idx = headers.index("t") if "t" in headers else -1
-    k_idx = headers.index("k") if "k" in headers else -1
-    cid_idx = headers.index("cid") if "cid" in headers else -1
-
-    def deref_val(val: Any, col_idx: int) -> Any:
-        """Dereference value if column uses interning."""
-        if col_idx in intern_cols and strings:
-            if isinstance(val, int) and 0 <= val < len(strings):
-                return strings[val]
-            if isinstance(val, list):
-                return [strings[v] if isinstance(v, int) and 0 <= v < len(strings) else v for v in val]
-        return val
-
-    for row in rows:
-        # Validate terrain
-        if t_idx >= 0 and t_idx < len(row):
-            terrain = row[t_idx]
-            if terrain is not None:
-                terrain = deref_val(terrain, t_idx)
-                terrain_list = terrain if isinstance(terrain, list) else [terrain]
-                for t in terrain_list:
-                    t_str = str(t)
-                    assert_true(SNAKE_CASE_RE.match(t_str), f"Terrain key not snake_case: {t_str}")
-
-        # Validate city reference
-        if cid_idx >= 0 and cid_idx < len(row):
-            cid = row[cid_idx]
-            if cid is not None:
-                cid_str = str(deref_val(cid, cid_idx))
-                assert_true(cid_str in city_ids, f"Unknown cityId {cid_str} in hexmap")
-
-        # Check for advanced factions in basic mode
-        if mode == "basic" and k_idx >= 0 and k_idx < len(row):
-            k = row[k_idx]
-            if k is not None:
-                k_str = str(deref_val(k, k_idx))
-                if k_str in ADVANCED_FACTIONS:
-                    raise AssertionError("Advanced faction present in hexmap.json")
+    Compact keys: c=col, r=row, t=terrain (string or array), n=name, k=kingdom, cid=cityId
+    Terrain is now a string (single) or array (multiple) instead of object with boolean values.
+    """
+    for hex_entry in hexmap["map"]["hexes"]:
+        # Terrain is now string or array, not object
+        terrain = hex_entry.get("t")
+        if terrain:
+            terrain_list = terrain if isinstance(terrain, list) else [terrain]
+            for key in terrain_list:
+                assert_true(SNAKE_CASE_RE.match(key), f"Terrain key not snake_case: {key}")
+        if hex_entry.get("cid"):
+            assert_true(hex_entry["cid"] in city_ids, f"Unknown cityId {hex_entry['cid']} in hexmap")
+        if mode == "basic":
+            # k=kingdom in compact format
+            if hex_entry.get("k") in ADVANCED_FACTIONS:
+                raise AssertionError("Advanced faction present in hexmap.json")
 
 
-def validate_mode_split(starting_data: dict, mode: str):
-    """Validate mode split using columnar format (no string interning)."""
-    units = expand_columnar(starting_data)
-
-    # Group by faction
-    factions_seen = set()
-    for unit in units:
-        f = unit.get("f")
-        if f:
-            factions_seen.add(f)
-
-    for faction in factions_seen:
-        is_advanced = faction in ADVANCED_FACTIONS
+def validate_mode_split(starting: list, mode: str):
+    """Validate mode split using compact format (f=factionId)."""
+    for faction in starting:
+        is_advanced = faction["f"] in ADVANCED_FACTIONS
         if mode == "basic" and is_advanced:
             raise AssertionError("Advanced faction present in starting_units.json")
         if mode == "advanced" and not is_advanced:

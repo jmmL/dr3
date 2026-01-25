@@ -1,1 +1,1072 @@
-{"$h":["f","id","n","t","c","mp","h","cid","a","mt","dep"],"_":[["ghem","ghem_monarch","Ghem Monarch","monarch",1,8,[32,9],null,["mountaineer"]],["ghem","ghem_ambassador","Ghem Ambassador","ambassador",1,0,[32,9],null,["diplomatic"],"teleport"],["ghem","rosengg_unit","Rosengg Unit","army",3,6,[32,9],"mines_of_rosengg",["mountaineer"]],["ghem","aws_noir_unit","Aws Noir Unit","army",3,6,[2,1],"aws_noir",["mountaineer"]],["ghem","alzak_unit","Alzak Unit","army",2,6,[33,14],"alzak",["mountaineer"]],["neuth","neuth_monarch","Neuth Monarch","monarch",1,8,[4,5],null,["forest_walking"]],["neuth","neuth_ambassador","Neuth Ambassador","ambassador",1,0,[4,5],null,["diplomatic"],"teleport"],["neuth","ider_bolis_unit","Ider Bolis Unit","army",6,6,[4,5],"ider_bolis",["forest_walking"]],["zorn","zorn_monarch","Zorn Monarch","monarch",1,8,[23,2],null,["mountaineer","forest_walking"]],["zorn","zorn_ambassador","Zorn Ambassador","ambassador",1,0,[23,2],null,["diplomatic"],"teleport"],["zorn","the_pits_unit","The Pits Unit","army",3,6,[23,2],"the_pits",["mountaineer","forest_walking"]],["zorn","nithmere_unit","Nithmere Unit","army",8,6,null,null,["mountaineer","forest_walking"],null,{"type":"scattered","rules":"One per mountain or pass hex within Zorn territory, no two adjacent. Player chooses valid deployment.","example_start_hexes":[[21,7],[20,6],[21,5],[20,4],[18,4],[18,7],[18,0],[19,1]],"note":"The example deployment is one valid option; other configurations meeting the adjacency rules are permitted"}],["hothior","hothior_monarch","Hothior Monarch","monarch",1,7,[9,17]],["hothior","hothior_ambassador","Hothior Ambassador","ambassador",1,0,[9,17],null,["diplomatic"],"teleport"],["hothior","port_lork_unit","Port Lork Unit","army",2,5,[9,17],"port_lork"],["hothior","lapsell_unit","Lapsell Unit","army",2,5,[13,18],"castle_lapspell"],["hothior","tadafat_unit","Tadafat Unit","army",2,5,[10,14],"tadafat"],["hothior","farnot_unit","Farnot Unit","army",1,5,[10,19],"farnot"],["hothior","port_lork_fleet","Port Lork Fleet","fleet",1,8,[9,17],"port_lork"],["hothior","lapsell_fleet","Lapsell Fleet","fleet",1,8,[13,18],"castle_lapspell"],["immer","immer_monarch","Immer Monarch","monarch",1,7,[14,6]],["immer","immer_ambassador","Immer Ambassador","ambassador",1,0,[14,6],null,["diplomatic"],"teleport"],["immer","altarr_unit","Altarr Unit","army",3,5,[14,6],"castle_altarr"],["immer","muscaster_unit","Muscaster Unit","army",2,5,[15,8],"muscaster"],["immer","wirzor_unit","Wirzor Unit","army",2,5,[12,3],"wirzor"],["immer","gap_unit","Gap Unit","army",1,5,[18,5],"gap_castle"],["immer","gorpin_unit","Gorpin Unit","army",1,5,[15,3],"gorpin",["forest_walking"]],["mivior","mivior_monarch","Mivior Monarch","monarch",1,7,[4,21]],["mivior","mivior_ambassador","Mivior Ambassador","ambassador",1,0,[4,21],null,["diplomatic"],"teleport"],["mivior","colist_unit","Colist Unit","army",3,5,[4,21],"colist"],["mivior","addat_unit","Addat Unit","army",3,5,[3,12],"addat"],["mivior","boliske_unit","Boliske Unit","army",2,5,[3,18],"boliske"],["mivior","boran_unit","Boran Unit","army",1,5,[5,16],"boran"],["mivior","colist_fleet","Colist Fleet","fleet",1,8,[4,21],"colist"],["mivior","addat_fleet","Addat Fleet","fleet",1,8,[3,12],"addat"],["mivior","boliske_fleet","Boliske Fleet","fleet",1,8,[3,18],"boliske"],["mivior","boran_fleet","Boran Fleet","fleet",1,8,[5,16],"boran"],["muetar","muetar_monarch","Muetar Monarch","monarch",1,7,[19,11]],["muetar","muetar_ambassador","Muetar Ambassador","ambassador",1,0,[19,11],null,["diplomatic"],"teleport"],["muetar","basimar_unit","Basimar Unit","army",3,5,[24,9],"basimar"],["muetar","pennol_unit","Pennol Unit","army",3,5,[19,11],"pennol"],["muetar","groat_unit","Groat Unit","army",2,5,[23,15],"groat"],["muetar","plibba_unit","Plibba Unit","army",2,5,[17,14],"plibba"],["muetar","beolon_unit","Beolon Unit","army",2,5,[21,16],"beolon"],["muetar","yando_unit","Yando Unit","army",1,5,[19,16],"yando"],["pon","pon_monarch","Pon Monarch","monarch",1,7,[28,17]],["pon","pon_ambassador","Pon Ambassador","ambassador",1,0,[28,17],null,["diplomatic"],"teleport"],["pon","marzarbol_unit","Marzarbol Unit","army",3,5,[28,17],"marzarbol"],["pon","grugongi_unit","Grugongi Unit","army",2,5,[30,20],"grugongi",["mountaineer"]],["pon","grugongi_fleet","Grugongi Fleet","fleet",1,8,[30,20],"grugongi"],["pon","crow_s_nest_unit","Crow's Nest Unit","army",2,5,[26,13],"crow_s_nest",["forest_walking"]],["rombune","rombune_monarch","Rombune Monarch","monarch",1,7,[5,27]],["rombune","rombune_ambassador","Rombune Ambassador","ambassador",1,0,[5,27],null,["diplomatic"],"teleport"],["rombune","golkus_unit","Golkus Unit","army",2,5,[5,27],"the_golkus"],["rombune","parros_unit","Parros Unit","army",2,5,[11,28],"parros"],["rombune","thores_unit","Thores Unit","army",1,5,[2,29],"thores"],["rombune","jipols_unit","Jipols Unit","army",1,5,[19,28],"jipols"],["rombune","golkus_fleet","Golkus Fleet","fleet",1,8,[5,27],"the_golkus"],["rombune","parros_fleet","Parros Fleet","fleet",1,8,[11,28],"parros"],["rombune","thores_fleet","Thores Fleet","fleet",1,8,[2,29],"thores"],["rombune","jipols_fleet","Jipols Fleet","fleet",1,8,[19,28],"jipols"],["shucassam","shucassam_monarch","Shucassam Monarch","monarch",1,7,[24,23]],["shucassam","shucassam_ambassador","Shucassam Ambassador","ambassador",1,0,[24,23],null,["diplomatic"],"teleport"],["shucassam","adeese_unit","Adeese Unit","army",4,5,[24,23],"adeese"],["shucassam","kuzdol_unit","Kuzdol Unit","army",3,5,[19,23],"kuzdol"],["shucassam","zefnar_unit","Zefnar Unit","army",3,5,[11,22],"zefnar"],["shucassam","lepers_unit","Lepers Unit","army",1,5,[27,25],"lepers"],["shucassam","adeese_fleet","Adeese Fleet","fleet",1,8,[24,23],"adeese"],["shucassam","zefnar_fleet","Zefnar Fleet","fleet",2,8,[11,22],"zefnar"],["trolls","trolls_monarch","Trolls Monarch","monarch",1,6,[6,13],null,["mountaineer","forest_walking"]],["trolls","trolls_ambassador","Trolls Ambassador","ambassador",1,0,[6,13],null,["diplomatic"],"teleport"],["trolls","the_crag_unit","The Crag Unit","army",2,4,[27,2],"the_crag",["mountaineer","forest_walking"]],["trolls","shunned_vale_unit","Shunned Vale Unit","army",2,4,[17,28],"the_shunned_vale",["mountaineer","forest_walking"]],["trolls","stone_face_unit","Stone Face Unit","army",2,4,[6,13],"stone_face",["mountaineer","forest_walking"]],["trolls","the_gathering_unit","The Gathering Unit","army",2,4,[33,21],"the_gathering",["mountaineer","forest_walking"]]]}
+[
+  {
+    "f": "ghem",
+    "u": [
+      {
+        "id": "ghem_monarch",
+        "n": "Ghem Monarch",
+        "t": "monarch",
+        "c": 1,
+        "mp": 8,
+        "h": [
+          32,
+          9
+        ],
+        "a": [
+          "mountaineer"
+        ]
+      },
+      {
+        "id": "ghem_ambassador",
+        "n": "Ghem Ambassador",
+        "t": "ambassador",
+        "c": 1,
+        "mp": 0,
+        "h": [
+          32,
+          9
+        ],
+        "a": [
+          "diplomatic"
+        ],
+        "mt": "teleport"
+      },
+      {
+        "id": "rosengg_unit",
+        "n": "Rosengg Unit",
+        "t": "army",
+        "c": 3,
+        "mp": 6,
+        "h": [
+          32,
+          9
+        ],
+        "cid": "mines_of_rosengg",
+        "a": [
+          "mountaineer"
+        ]
+      },
+      {
+        "id": "aws_noir_unit",
+        "n": "Aws Noir Unit",
+        "t": "army",
+        "c": 3,
+        "mp": 6,
+        "h": [
+          2,
+          1
+        ],
+        "cid": "aws_noir",
+        "a": [
+          "mountaineer"
+        ]
+      },
+      {
+        "id": "alzak_unit",
+        "n": "Alzak Unit",
+        "t": "army",
+        "c": 2,
+        "mp": 6,
+        "h": [
+          33,
+          14
+        ],
+        "cid": "alzak",
+        "a": [
+          "mountaineer"
+        ]
+      }
+    ]
+  },
+  {
+    "f": "neuth",
+    "u": [
+      {
+        "id": "neuth_monarch",
+        "n": "Neuth Monarch",
+        "t": "monarch",
+        "c": 1,
+        "mp": 8,
+        "h": [
+          4,
+          5
+        ],
+        "a": [
+          "forest_walking"
+        ]
+      },
+      {
+        "id": "neuth_ambassador",
+        "n": "Neuth Ambassador",
+        "t": "ambassador",
+        "c": 1,
+        "mp": 0,
+        "h": [
+          4,
+          5
+        ],
+        "a": [
+          "diplomatic"
+        ],
+        "mt": "teleport"
+      },
+      {
+        "id": "ider_bolis_unit",
+        "n": "Ider Bolis Unit",
+        "t": "army",
+        "c": 6,
+        "mp": 6,
+        "h": [
+          4,
+          5
+        ],
+        "cid": "ider_bolis",
+        "a": [
+          "forest_walking"
+        ]
+      }
+    ]
+  },
+  {
+    "f": "zorn",
+    "u": [
+      {
+        "id": "zorn_monarch",
+        "n": "Zorn Monarch",
+        "t": "monarch",
+        "c": 1,
+        "mp": 8,
+        "h": [
+          23,
+          2
+        ],
+        "a": [
+          "mountaineer",
+          "forest_walking"
+        ]
+      },
+      {
+        "id": "zorn_ambassador",
+        "n": "Zorn Ambassador",
+        "t": "ambassador",
+        "c": 1,
+        "mp": 0,
+        "h": [
+          23,
+          2
+        ],
+        "a": [
+          "diplomatic"
+        ],
+        "mt": "teleport"
+      },
+      {
+        "id": "the_pits_unit",
+        "n": "The Pits Unit",
+        "t": "army",
+        "c": 3,
+        "mp": 6,
+        "h": [
+          23,
+          2
+        ],
+        "cid": "the_pits",
+        "a": [
+          "mountaineer",
+          "forest_walking"
+        ]
+      },
+      {
+        "id": "nithmere_unit",
+        "n": "Nithmere Unit",
+        "t": "army",
+        "c": 8,
+        "mp": 6,
+        "a": [
+          "mountaineer",
+          "forest_walking"
+        ],
+        "dep": {
+          "type": "scattered",
+          "rules": "One per mountain or pass hex within Zorn territory, no two adjacent. Player chooses valid deployment.",
+          "example_start_hexes": [
+            [
+              21,
+              7
+            ],
+            [
+              20,
+              6
+            ],
+            [
+              21,
+              5
+            ],
+            [
+              20,
+              4
+            ],
+            [
+              18,
+              4
+            ],
+            [
+              18,
+              7
+            ],
+            [
+              18,
+              0
+            ],
+            [
+              19,
+              1
+            ]
+          ],
+          "note": "The example deployment is one valid option; other configurations meeting the adjacency rules are permitted"
+        }
+      }
+    ]
+  },
+  {
+    "f": "hothior",
+    "u": [
+      {
+        "id": "hothior_monarch",
+        "n": "Hothior Monarch",
+        "t": "monarch",
+        "c": 1,
+        "mp": 7,
+        "h": [
+          9,
+          17
+        ]
+      },
+      {
+        "id": "hothior_ambassador",
+        "n": "Hothior Ambassador",
+        "t": "ambassador",
+        "c": 1,
+        "mp": 0,
+        "h": [
+          9,
+          17
+        ],
+        "a": [
+          "diplomatic"
+        ],
+        "mt": "teleport"
+      },
+      {
+        "id": "port_lork_unit",
+        "n": "Port Lork Unit",
+        "t": "army",
+        "c": 2,
+        "mp": 5,
+        "h": [
+          9,
+          17
+        ],
+        "cid": "port_lork"
+      },
+      {
+        "id": "lapsell_unit",
+        "n": "Lapsell Unit",
+        "t": "army",
+        "c": 2,
+        "mp": 5,
+        "h": [
+          13,
+          18
+        ],
+        "cid": "castle_lapspell"
+      },
+      {
+        "id": "tadafat_unit",
+        "n": "Tadafat Unit",
+        "t": "army",
+        "c": 2,
+        "mp": 5,
+        "h": [
+          10,
+          14
+        ],
+        "cid": "tadafat"
+      },
+      {
+        "id": "farnot_unit",
+        "n": "Farnot Unit",
+        "t": "army",
+        "c": 1,
+        "mp": 5,
+        "h": [
+          10,
+          19
+        ],
+        "cid": "farnot"
+      },
+      {
+        "id": "port_lork_fleet",
+        "n": "Port Lork Fleet",
+        "t": "fleet",
+        "c": 1,
+        "mp": 8,
+        "h": [
+          9,
+          17
+        ],
+        "cid": "port_lork"
+      },
+      {
+        "id": "lapsell_fleet",
+        "n": "Lapsell Fleet",
+        "t": "fleet",
+        "c": 1,
+        "mp": 8,
+        "h": [
+          13,
+          18
+        ],
+        "cid": "castle_lapspell"
+      }
+    ]
+  },
+  {
+    "f": "immer",
+    "u": [
+      {
+        "id": "immer_monarch",
+        "n": "Immer Monarch",
+        "t": "monarch",
+        "c": 1,
+        "mp": 7,
+        "h": [
+          14,
+          6
+        ]
+      },
+      {
+        "id": "immer_ambassador",
+        "n": "Immer Ambassador",
+        "t": "ambassador",
+        "c": 1,
+        "mp": 0,
+        "h": [
+          14,
+          6
+        ],
+        "a": [
+          "diplomatic"
+        ],
+        "mt": "teleport"
+      },
+      {
+        "id": "altarr_unit",
+        "n": "Altarr Unit",
+        "t": "army",
+        "c": 3,
+        "mp": 5,
+        "h": [
+          14,
+          6
+        ],
+        "cid": "castle_altarr"
+      },
+      {
+        "id": "muscaster_unit",
+        "n": "Muscaster Unit",
+        "t": "army",
+        "c": 2,
+        "mp": 5,
+        "h": [
+          15,
+          8
+        ],
+        "cid": "muscaster"
+      },
+      {
+        "id": "wirzor_unit",
+        "n": "Wirzor Unit",
+        "t": "army",
+        "c": 2,
+        "mp": 5,
+        "h": [
+          12,
+          3
+        ],
+        "cid": "wirzor"
+      },
+      {
+        "id": "gap_unit",
+        "n": "Gap Unit",
+        "t": "army",
+        "c": 1,
+        "mp": 5,
+        "h": [
+          18,
+          5
+        ],
+        "cid": "gap_castle"
+      },
+      {
+        "id": "gorpin_unit",
+        "n": "Gorpin Unit",
+        "t": "army",
+        "c": 1,
+        "mp": 5,
+        "h": [
+          15,
+          3
+        ],
+        "cid": "gorpin",
+        "a": [
+          "forest_walking"
+        ]
+      }
+    ]
+  },
+  {
+    "f": "mivior",
+    "u": [
+      {
+        "id": "mivior_monarch",
+        "n": "Mivior Monarch",
+        "t": "monarch",
+        "c": 1,
+        "mp": 7,
+        "h": [
+          4,
+          21
+        ]
+      },
+      {
+        "id": "mivior_ambassador",
+        "n": "Mivior Ambassador",
+        "t": "ambassador",
+        "c": 1,
+        "mp": 0,
+        "h": [
+          4,
+          21
+        ],
+        "a": [
+          "diplomatic"
+        ],
+        "mt": "teleport"
+      },
+      {
+        "id": "colist_unit",
+        "n": "Colist Unit",
+        "t": "army",
+        "c": 3,
+        "mp": 5,
+        "h": [
+          4,
+          21
+        ],
+        "cid": "colist"
+      },
+      {
+        "id": "addat_unit",
+        "n": "Addat Unit",
+        "t": "army",
+        "c": 3,
+        "mp": 5,
+        "h": [
+          3,
+          12
+        ],
+        "cid": "addat"
+      },
+      {
+        "id": "boliske_unit",
+        "n": "Boliske Unit",
+        "t": "army",
+        "c": 2,
+        "mp": 5,
+        "h": [
+          3,
+          18
+        ],
+        "cid": "boliske"
+      },
+      {
+        "id": "boran_unit",
+        "n": "Boran Unit",
+        "t": "army",
+        "c": 1,
+        "mp": 5,
+        "h": [
+          5,
+          16
+        ],
+        "cid": "boran"
+      },
+      {
+        "id": "colist_fleet",
+        "n": "Colist Fleet",
+        "t": "fleet",
+        "c": 1,
+        "mp": 8,
+        "h": [
+          4,
+          21
+        ],
+        "cid": "colist"
+      },
+      {
+        "id": "addat_fleet",
+        "n": "Addat Fleet",
+        "t": "fleet",
+        "c": 1,
+        "mp": 8,
+        "h": [
+          3,
+          12
+        ],
+        "cid": "addat"
+      },
+      {
+        "id": "boliske_fleet",
+        "n": "Boliske Fleet",
+        "t": "fleet",
+        "c": 1,
+        "mp": 8,
+        "h": [
+          3,
+          18
+        ],
+        "cid": "boliske"
+      },
+      {
+        "id": "boran_fleet",
+        "n": "Boran Fleet",
+        "t": "fleet",
+        "c": 1,
+        "mp": 8,
+        "h": [
+          5,
+          16
+        ],
+        "cid": "boran"
+      }
+    ]
+  },
+  {
+    "f": "muetar",
+    "u": [
+      {
+        "id": "muetar_monarch",
+        "n": "Muetar Monarch",
+        "t": "monarch",
+        "c": 1,
+        "mp": 7,
+        "h": [
+          19,
+          11
+        ]
+      },
+      {
+        "id": "muetar_ambassador",
+        "n": "Muetar Ambassador",
+        "t": "ambassador",
+        "c": 1,
+        "mp": 0,
+        "h": [
+          19,
+          11
+        ],
+        "a": [
+          "diplomatic"
+        ],
+        "mt": "teleport"
+      },
+      {
+        "id": "basimar_unit",
+        "n": "Basimar Unit",
+        "t": "army",
+        "c": 3,
+        "mp": 5,
+        "h": [
+          24,
+          9
+        ],
+        "cid": "basimar"
+      },
+      {
+        "id": "pennol_unit",
+        "n": "Pennol Unit",
+        "t": "army",
+        "c": 3,
+        "mp": 5,
+        "h": [
+          19,
+          11
+        ],
+        "cid": "pennol"
+      },
+      {
+        "id": "groat_unit",
+        "n": "Groat Unit",
+        "t": "army",
+        "c": 2,
+        "mp": 5,
+        "h": [
+          23,
+          15
+        ],
+        "cid": "groat"
+      },
+      {
+        "id": "plibba_unit",
+        "n": "Plibba Unit",
+        "t": "army",
+        "c": 2,
+        "mp": 5,
+        "h": [
+          17,
+          14
+        ],
+        "cid": "plibba"
+      },
+      {
+        "id": "beolon_unit",
+        "n": "Beolon Unit",
+        "t": "army",
+        "c": 2,
+        "mp": 5,
+        "h": [
+          21,
+          16
+        ],
+        "cid": "beolon"
+      },
+      {
+        "id": "yando_unit",
+        "n": "Yando Unit",
+        "t": "army",
+        "c": 1,
+        "mp": 5,
+        "h": [
+          19,
+          16
+        ],
+        "cid": "yando"
+      }
+    ]
+  },
+  {
+    "f": "pon",
+    "u": [
+      {
+        "id": "pon_monarch",
+        "n": "Pon Monarch",
+        "t": "monarch",
+        "c": 1,
+        "mp": 7,
+        "h": [
+          28,
+          17
+        ]
+      },
+      {
+        "id": "pon_ambassador",
+        "n": "Pon Ambassador",
+        "t": "ambassador",
+        "c": 1,
+        "mp": 0,
+        "h": [
+          28,
+          17
+        ],
+        "a": [
+          "diplomatic"
+        ],
+        "mt": "teleport"
+      },
+      {
+        "id": "marzarbol_unit",
+        "n": "Marzarbol Unit",
+        "t": "army",
+        "c": 3,
+        "mp": 5,
+        "h": [
+          28,
+          17
+        ],
+        "cid": "marzarbol"
+      },
+      {
+        "id": "grugongi_unit",
+        "n": "Grugongi Unit",
+        "t": "army",
+        "c": 2,
+        "mp": 5,
+        "h": [
+          30,
+          20
+        ],
+        "cid": "grugongi",
+        "a": [
+          "mountaineer"
+        ]
+      },
+      {
+        "id": "grugongi_fleet",
+        "n": "Grugongi Fleet",
+        "t": "fleet",
+        "c": 1,
+        "mp": 8,
+        "h": [
+          30,
+          20
+        ],
+        "cid": "grugongi"
+      },
+      {
+        "id": "crow_s_nest_unit",
+        "n": "Crow's Nest Unit",
+        "t": "army",
+        "c": 2,
+        "mp": 5,
+        "h": [
+          26,
+          13
+        ],
+        "cid": "crow_s_nest",
+        "a": [
+          "forest_walking"
+        ]
+      }
+    ]
+  },
+  {
+    "f": "rombune",
+    "u": [
+      {
+        "id": "rombune_monarch",
+        "n": "Rombune Monarch",
+        "t": "monarch",
+        "c": 1,
+        "mp": 7,
+        "h": [
+          5,
+          27
+        ]
+      },
+      {
+        "id": "rombune_ambassador",
+        "n": "Rombune Ambassador",
+        "t": "ambassador",
+        "c": 1,
+        "mp": 0,
+        "h": [
+          5,
+          27
+        ],
+        "a": [
+          "diplomatic"
+        ],
+        "mt": "teleport"
+      },
+      {
+        "id": "golkus_unit",
+        "n": "Golkus Unit",
+        "t": "army",
+        "c": 2,
+        "mp": 5,
+        "h": [
+          5,
+          27
+        ],
+        "cid": "the_golkus"
+      },
+      {
+        "id": "parros_unit",
+        "n": "Parros Unit",
+        "t": "army",
+        "c": 2,
+        "mp": 5,
+        "h": [
+          11,
+          28
+        ],
+        "cid": "parros"
+      },
+      {
+        "id": "thores_unit",
+        "n": "Thores Unit",
+        "t": "army",
+        "c": 1,
+        "mp": 5,
+        "h": [
+          2,
+          29
+        ],
+        "cid": "thores"
+      },
+      {
+        "id": "jipols_unit",
+        "n": "Jipols Unit",
+        "t": "army",
+        "c": 1,
+        "mp": 5,
+        "h": [
+          19,
+          28
+        ],
+        "cid": "jipols"
+      },
+      {
+        "id": "golkus_fleet",
+        "n": "Golkus Fleet",
+        "t": "fleet",
+        "c": 1,
+        "mp": 8,
+        "h": [
+          5,
+          27
+        ],
+        "cid": "the_golkus"
+      },
+      {
+        "id": "parros_fleet",
+        "n": "Parros Fleet",
+        "t": "fleet",
+        "c": 1,
+        "mp": 8,
+        "h": [
+          11,
+          28
+        ],
+        "cid": "parros"
+      },
+      {
+        "id": "thores_fleet",
+        "n": "Thores Fleet",
+        "t": "fleet",
+        "c": 1,
+        "mp": 8,
+        "h": [
+          2,
+          29
+        ],
+        "cid": "thores"
+      },
+      {
+        "id": "jipols_fleet",
+        "n": "Jipols Fleet",
+        "t": "fleet",
+        "c": 1,
+        "mp": 8,
+        "h": [
+          19,
+          28
+        ],
+        "cid": "jipols"
+      }
+    ]
+  },
+  {
+    "f": "shucassam",
+    "u": [
+      {
+        "id": "shucassam_monarch",
+        "n": "Shucassam Monarch",
+        "t": "monarch",
+        "c": 1,
+        "mp": 7,
+        "h": [
+          24,
+          23
+        ]
+      },
+      {
+        "id": "shucassam_ambassador",
+        "n": "Shucassam Ambassador",
+        "t": "ambassador",
+        "c": 1,
+        "mp": 0,
+        "h": [
+          24,
+          23
+        ],
+        "a": [
+          "diplomatic"
+        ],
+        "mt": "teleport"
+      },
+      {
+        "id": "adeese_unit",
+        "n": "Adeese Unit",
+        "t": "army",
+        "c": 4,
+        "mp": 5,
+        "h": [
+          24,
+          23
+        ],
+        "cid": "adeese"
+      },
+      {
+        "id": "kuzdol_unit",
+        "n": "Kuzdol Unit",
+        "t": "army",
+        "c": 3,
+        "mp": 5,
+        "h": [
+          19,
+          23
+        ],
+        "cid": "kuzdol"
+      },
+      {
+        "id": "zefnar_unit",
+        "n": "Zefnar Unit",
+        "t": "army",
+        "c": 3,
+        "mp": 5,
+        "h": [
+          11,
+          22
+        ],
+        "cid": "zefnar"
+      },
+      {
+        "id": "lepers_unit",
+        "n": "Lepers Unit",
+        "t": "army",
+        "c": 1,
+        "mp": 5,
+        "h": [
+          27,
+          25
+        ],
+        "cid": "lepers"
+      },
+      {
+        "id": "adeese_fleet",
+        "n": "Adeese Fleet",
+        "t": "fleet",
+        "c": 1,
+        "mp": 8,
+        "h": [
+          24,
+          23
+        ],
+        "cid": "adeese"
+      },
+      {
+        "id": "zefnar_fleet",
+        "n": "Zefnar Fleet",
+        "t": "fleet",
+        "c": 2,
+        "mp": 8,
+        "h": [
+          11,
+          22
+        ],
+        "cid": "zefnar"
+      }
+    ]
+  },
+  {
+    "f": "trolls",
+    "u": [
+      {
+        "id": "trolls_monarch",
+        "n": "Trolls Monarch",
+        "t": "monarch",
+        "c": 1,
+        "mp": 6,
+        "h": [
+          6,
+          13
+        ],
+        "a": [
+          "mountaineer",
+          "forest_walking"
+        ]
+      },
+      {
+        "id": "trolls_ambassador",
+        "n": "Trolls Ambassador",
+        "t": "ambassador",
+        "c": 1,
+        "mp": 0,
+        "h": [
+          6,
+          13
+        ],
+        "a": [
+          "diplomatic"
+        ],
+        "mt": "teleport"
+      },
+      {
+        "id": "the_crag_unit",
+        "n": "The Crag Unit",
+        "t": "army",
+        "c": 2,
+        "mp": 4,
+        "h": [
+          27,
+          2
+        ],
+        "cid": "the_crag",
+        "a": [
+          "mountaineer",
+          "forest_walking"
+        ]
+      },
+      {
+        "id": "shunned_vale_unit",
+        "n": "Shunned Vale Unit",
+        "t": "army",
+        "c": 2,
+        "mp": 4,
+        "h": [
+          17,
+          28
+        ],
+        "cid": "the_shunned_vale",
+        "a": [
+          "mountaineer",
+          "forest_walking"
+        ]
+      },
+      {
+        "id": "stone_face_unit",
+        "n": "Stone Face Unit",
+        "t": "army",
+        "c": 2,
+        "mp": 4,
+        "h": [
+          6,
+          13
+        ],
+        "cid": "stone_face",
+        "a": [
+          "mountaineer",
+          "forest_walking"
+        ]
+      },
+      {
+        "id": "the_gathering_unit",
+        "n": "The Gathering Unit",
+        "t": "army",
+        "c": 2,
+        "mp": 4,
+        "h": [
+          33,
+          21
+        ],
+        "cid": "the_gathering",
+        "a": [
+          "mountaineer",
+          "forest_walking"
+        ]
+      }
+    ]
+  }
+]

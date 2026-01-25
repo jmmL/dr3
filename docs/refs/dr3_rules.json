@@ -1,1 +1,1045 @@
-{"1_game":{"1.1_name":"Divine Right","1.2_version":"Basic Game","1.3_publisher":"Pungo Games","1.4_year":2024,"1.5_designer":"Glenn Rahman","1.6_players":{"1.6.1_min":2,"1.6.2_max":6},"1.7_game_length_turns":20,"1.8_game_length_note":"The game is always exactly 20 turns; no effect extends the game beyond turn 20"},"2_components":{"2.1_rulebook":1,"2.2_counter_sheets":2,"2.3_gameboard":1,"2.4_identity_cards":14,"2.5_personality_cards":20,"2.6_diplomacy_cards":45,"2.7_dice":2,"2.8_player_aids":6,"2.9_counter_tray":1,"2.10_mercenary_armies":14,"2.11_mercenary_fleets":6,"2.12_mercenary_army_symbol":"swords & moneybags","2.13_mercenary_fleet_symbol":"fleets & moneybags"},"3_setup":{"3.1_basic_game_exclusions":{"3.1.1_identity_cards_removed":["The Eaters of Wisdom","The Usurper","The Black Hand"],"3.1.2_diplomacy_cards_removed":"All Special Mercenary cards","3.1.3_castle_counters_not_used":["Zards","In-/Visible School","Enchanted Castle","Stubstaff Keep"],"3.1.4_territory_treated_as_unclaimed":["Magicians territory","Wetlands","Banished Lands","Wastes of Vah-Ka-Ka","The Withering","Blasted Heath","Shards of Lor","Wild Reaches"]},"3.2_procedure":{"3.2.1":"Lay gameboard on table with space for cards","3.2.2":"Remove excluded identity cards","3.2.3":"Remove Special Mercenary diplomacy cards","3.2.4":"Shuffle remaining diplomacy cards, place face down","3.2.5":"Shuffle remaining 11 identity cards","3.2.6":"Each player draws one identity card (becomes home kingdom)","3.2.7":"Players punch out matching unit counters for their kingdom","3.2.8":"Remaining identity cards become non-player monarchs","3.2.9":"Shuffle personality cards","3.2.10":"Place one personality card face down under each non-player identity card","3.2.11":"Set aside unused personality cards face down","3.2.12":"Punch out all non-player kingdom counters","3.2.13":"Punch out 14 mercenary armies (swords & moneybags) and 6 mercenary fleets (fleets & moneybags)","3.2.14":"Place turn record indicator on turn 1","3.2.15":"Place one randomizer chit per player in opaque container","3.2.16":"Place castle counters on map (excluding basic game exclusions)","3.2.17":"Place armies and fleets according to starting locations on counters","3.2.18":"Monarch and ambassador start in royal castle"}},"4_unit_types":{"4.1_monarch":{"4.1.1_description":"Leader unit representing the ruler","4.1.2_is_combat_unit":false,"4.1.3_is_leader":true,"4.1.4_identifiers":["coat_of_arms","crown_symbol","movement_allowance"],"4.1.5_player_monarch_death_effect":"Player eliminated from game","4.1.6_non_player_monarch_death_effect":"Kingdom enters confusion"},"4.2_ambassador":{"4.2.1_description":"Diplomatic unit","4.2.2_is_combat_unit":false,"4.2.3_movement":"Teleports to diplomatic function location","4.2.4_death_recovery_turns":2},"4.3_regular_army":{"4.3.1_description":"National army unit","4.3.2_is_combat_unit":true,"4.3.3_combat_strength":1,"4.3.4_identifiers":["coat_of_arms","starting_castle","movement_allowance"]},"4.4_regular_fleet":{"4.4.1_description":"National naval unit","4.4.2_is_combat_unit":true,"4.4.3_combat_strength":1,"4.4.4_identifiers":["coat_of_arms","ship_symbol","movement_allowance","starting_point"],"4.4.5_transport_capacity":1},"4.5_mercenary_army":{"4.5.1_description":"Hired army unit","4.5.2_is_combat_unit":true,"4.5.3_combat_strength":1,"4.5.4_symbol":"swords & moneybags","4.5.5_count":14},"4.6_mercenary_fleet":{"4.6.1_description":"Hired naval unit","4.6.2_is_combat_unit":true,"4.6.3_combat_strength":1,"4.6.4_count":6,"4.6.5_transport_capacity":1,"4.6.6_symbol":"fleets & moneybags"},"4.7_castle_counter":{"4.7.1_description":"Represents castle defense and hit points","4.7.2_intrinsic_defense_strength":"Number on counter","4.7.3_crown_icon":"Indicates royal castle","4.7.4_anchor_icon":"Indicates port"}},"5_faction_classification":{"5.1_description":"Factions are classified as Human or Non-Human for retreat before combat purposes","5.2_human_factions":{"5.2.1_list":["Hothior","Immer","Mivior","Muetar","Pon","Rombune","Shucassam"],"5.2.2_retreat_before_combat_success":[4,5,6]},"5.3_non_human_factions":{"5.3.1_list":["Neuth (Elves)","Ghem (Dwarves)","Zorn (Goblins)","Trolls"],"5.3.2_retreat_before_combat_success":[3,4,5,6]},"5.4_mercenaries":{"5.4.1_classification":"Human","5.4.2_retreat_before_combat_success":[4,5,6]}},"6_special_terrain_capabilities":{"6.1_tree_symbol":{"6.1.1_effect":"Treat forests as clear terrain"},"6.2_mountain_symbol":{"6.2.1_effect":"Treat hills as clear terrain","6.2.2_mountain_effect":"Need not stop in mountain hexes (still pay 3 MP)"},"6.3_home_kingdom_bonus":{"6.3.1_applies_to":["monarchs","regulars"],"6.3.2_effect":"Possess both forest and mountain terrain bonuses within home country"}},"7_sequence_of_play":{"7.1_phase_1_player_order_determination":{"7.1.1_description":"Randomly determine turn order","7.1.2_procedure":{"7.1.2.1":"Drop randomizer chits into cup","7.1.2.2":"Each player draws one without looking","7.1.2.3":"Numbers indicate turn order (1 goes first)","7.1.2.4":"Reveal numbers simultaneously","7.1.2.5":"Keep chits visible during turn","7.1.2.6":"Return to cup before next game turn"}},"7.2_phase_2_player_turns":{"7.2.1_description":"Each player takes turn in determined order","7.2.2_step_A_roll_for_events":{"7.2.2.1_procedure":"Roll 2 dice, consult Random Events Table"},"7.2.3_step_B_draw_diplomacy_card":{"7.2.3.1_procedure":"Draw top card from diplomacy deck","7.2.3.2_usage":"May use immediately or save for later"},"7.2.4_step_C_conduct_diplomacy":{"7.2.4.1_description":"Ambassador performs one diplomatic function","7.2.4.2_options":["activate_neutral_monarch","deactivate_enemy_allied_monarch","assassinate_enemy_allied_monarch","duel_enemy_ambassador"]},"7.2.5_step_D_resolve_sieges":{"7.2.5.1_procedure":"Resolve sieges conducted by player"},"7.2.6_step_E_movement":{"7.2.6.1_procedure":"Move any/all friendly units"},"7.2.7_step_F_resolve_combat":{"7.2.7.1_procedure":"Resolve all declared attacks"}},"7.3_phase_3_end_of_turn":{"7.3.1_procedure":"Move turn record indicator forward one space"}},"8_random_events":{"8.1_dice_roll":"2d6","8.2_results":{"8.2.1_roll_2":{"8.2.1.1_name":"Untimely Death","8.2.1.2_effect":"Randomly determine which of your friendly non-player monarchs (if any) dies"},"8.2.2_roll_3":{"8.2.2.1_name":"Storms","8.2.2.2_effect":"Choose and eliminate one of your fleets (if any)"},"8.2.3_roll_4":{"8.2.3.1_name":"Mutiny","8.2.3.2_effect":"Choose and eliminate one of your regular or mercenary units"},"8.2.4_roll_5":{"8.2.4.1_name":"Bad Omens","8.2.4.2_effect":"Regulars of one kingdom won't fight or siege this turn (movement unaffected)","8.2.4.3_determination":"Random from all player kingdoms and allies"},"8.2.5_roll_6":{"8.2.5.1_name":"Replacements","8.2.5.2_effect":"Bring 2 eliminated regular units back into play","8.2.5.3_restriction":"Player monarch or allied kingdoms only"},"8.2.6_roll_7":{"8.2.6.1_name":"No Event","8.2.6.2_effect":"Nothing happens"},"8.2.7_roll_8":{"8.2.7.1_name":"Reinforcements","8.2.7.2_effect":"Bring 2 mercenary units (armies or fleets) into play","8.2.7.3_placement":"Any friendly castle or port"},"8.2.8_roll_9":{"8.2.8.1_name":"Plague","8.2.8.2_effect":"Choose and eliminate one of your regular or mercenary units"},"8.2.9_roll_10":{"8.2.9.1_name":"Replacement","8.2.9.2_effect":"Bring 1 regular or mercenary unit into play"},"8.2.10_roll_11":{"8.2.10.1_name":"Desertion","8.2.10.2_effect":"Choose and eliminate one of your mercenary units (if any)"},"8.2.11_roll_12":{"8.2.11.1_name":"Help From Afar","8.2.11.2_effect":"Randomly determine which neutral non-player kingdom (if any) becomes immediate ally"}},"8.3_rules":{"8.3.1_applies_only_to":"Rolling player","8.3.2_regular_placement":"At location named on counter","8.3.3_blocked_placement":"If hex enemy-occupied or under siege, unit cannot enter","8.3.4_mercenary_placement":"Any friendly castle or port","8.3.5_fleet_reinforcement_requires":"At least one friendly port","8.3.6_regular_limit":"Cannot exceed number on identity card","8.3.7_immediate_action":"All replacements, reinforcements, and monarchs and combat units of kingdoms activated via Help From Afar may move and fight on the same player turn that they appear","8.3.8_impossible_event":"Treat as No Event","8.3.9_no_transfer":"Replacements and reinforcements may not be given to, nor losses taken from, another player except where otherwise indicated (e.g. stealing mercenary units when its pool is depleted)"}},"9_mercenary_units":{"9.1_description":"Mercenary combat units brought into play by Random Events Table","9.2_placement":"Any friendly castle or castles (except those currently besieged)","9.3_stacking":"May stack with any friendly units - player monarch's own units, allied non-player kingdom units, or Special Mercenary units","9.4_stealing_mercenaries":{"9.4.1_type_unavailable":"If you cannot deploy a mercenary of the remaining type (e.g., only fleets remain in pool and you control no ports), you may declare that mercenaries of the type you want are defecting to your side","9.4.2_procedure":"Steal mercenary units of the type missing from the recruitment pool directly from an opponent's forces, taking them from their stacks and deploying them into your own valid deployment hexes","9.4.3_pool_depleted":"If you are due to receive a mercenary unit and all mercenaries are already in play, you may steal units of any type from opponents","9.4.4_transport_protection":"You cannot steal units from fleets that are transporting enemy troops or characters; having armies in transport protects the mercenary fleet itself from seizure"}},"10_friendly_location_definition":{"10.1_friendly_castle_or_port_conditions":{"10.1.1":"Castle/port inside player monarch's kingdom","10.1.2":"Castle/port inside allied kingdom","10.1.3":"Plundered castle/port occupied by at least one friendly combat unit"}},"11_random_determination":{"11.1_method":"When rules call for random determination, roll a die with faces equal to the number of distinct valid options (effectively an n-sided die where n is the number of options)","11.2_examples":{"11.2.1":"Randomly select from 3 allied monarchs = roll 1d3 (or 1d6 with 1-2=first, 3-4=second, 5-6=third)","11.2.2":"Randomly select from available neutral kingdoms = roll die matching count of neutral kingdoms"}},"12_diplomacy":{"12.1_general_rules":{"12.1.1_only_between":"Player monarchs and non-player monarchs/special mercenaries/barbarians","12.1.2_player_alliances":"Not binding - all player monarchs are enemies","12.1.3_ambassador_death_recovery":2,"12.1.4_ambassador_movement":"Teleports to function location, returns to royal castle after","12.1.5_ambassador_return_blocked":"If royal castle enemy-occupied or under siege, returns to player monarch hex or held off map"},"12.2_diplomatic_die_roll":{"12.2.1_threshold_comparison":"Success requires modified roll >= target number (greater than or equal to)","12.2.2_modification_timing":"Diplomacy card played before die roll; modifier applied after roll","12.2.3_modified_result":"Final result = die roll + card modifier + personality card modifier - diplomatic penalty (if any)","12.2.4_automatic_success":"If modifiers guarantee meeting threshold regardless of roll, success is automatic"},"12.3_functions":{"12.3.1_activate_neutral_monarch":{"12.3.1.1_ambassador_placement":"Royal castle of neutral non-player monarch","12.3.1.2_procedure":{"12.3.1.2.1":"Read personality card aloud","12.3.1.2.2":"Optionally play one diplomacy card (card is discarded regardless of outcome)","12.3.1.2.3":"Roll diplomatic die roll (1d6)","12.3.1.2.4":"Apply modifiers from personality and diplomacy cards"},"12.3.1.3_success_threshold":6,"12.3.1.4_success_comparison":">=","12.3.1.5_success_effect":{"12.3.1.5.1":"Monarch and kingdom become allied","12.3.1.5.2":"Place forces on map at starting locations","12.3.1.5.3":"Forces cannot move or attack until next game turn"}},"12.3.2_deactivate_enemy_allied_monarch":{"12.3.2.1_ambassador_placement":"On enemy-allied monarch (wherever located)","12.3.2.2_procedure":{"12.3.2.2.1":"Read personality card aloud","12.3.2.2.2":"Optionally play one diplomacy card (card is discarded regardless of outcome)","12.3.2.2.3":"Roll diplomatic die roll (1d6)","12.3.2.2.4":"Apply modifiers"},"12.3.2.3_success_threshold":7,"12.3.2.4_success_comparison":">=","12.3.2.5_success_effect":{"12.3.2.5.1":"Monarch drops out of enemy alliance","12.3.2.5.2":"Forces removed from map after combat portion of current turn","12.3.2.5.3":"Units defend and retreat normally until removed","12.3.2.5.4":"Cards returned to neutral pool","12.3.2.5.5":"Eliminated regulars remain eliminated"},"12.3.2.6_mercenary_note":"Mercenaries stacked with deactivating forces remain under original owner"},"12.3.3_attempted_assassination":{"12.3.3.1_limit":"Once per game per player monarch","12.3.3.2_ambassador_placement":"On intended victim","12.3.3.3_diplomacy_cards":"May not be played","12.3.3.4_procedure":{"12.3.3.4.1":"Both players roll 1d6","12.3.3.4.2":"Higher roll kills the other","12.3.3.4.3":"Tie has no effect"},"12.3.3.5_success_effect":"Deactivates monarch and forces (no victory points)","12.3.3.6_failure_effect":"Ambassador permanently banished from kingdom until monarch dies by other means"},"12.3.4_duel_enemy_ambassador":{"12.3.4.1_limit":"Once per game between each pair of ambassadors","12.3.4.2_ambassador_placement":"In enemy's royal castle where the target ambassador resides","12.3.4.3_diplomacy_cards":"May not be played","12.3.4.4_procedure":{"12.3.4.4.1":"Both players roll 1d6","12.3.4.4.2":"Lower roll dies","12.3.4.4.3":"Tie kills both"},"12.3.4.5_cannot_refuse":true}},"12.4_ambassador_death":{"12.4.1_effect":"Ambassador removed for player's next 2 player turns","12.4.2_placement":"Counter placed 3 turns ahead on Time Record Track","12.4.3_during_death":"Player may conduct no diplomacy","12.4.4_recovery":"Successor becomes available on 3rd game turn after death","12.4.5_penalties_inherited":true,"12.4.6_card_draw":"Player continues drawing diplomacy cards"},"12.5_banishment":{"12.5.1_triggering_cards":["Black Magic","Threats","Blackmail","Crass Bribes"],"12.5.2_trigger_condition":"Diplomatic die roll fails","12.5.3_duration_formula":"Card modifier number + 1 turns","12.5.4_effect":"Ambassador may not attempt diplomatic functions on offended monarch/kingdom","12.5.5_multiple_banishments":"Terms are added together","12.5.6_card_discard_timing":"Card is discarded before learning result of die roll; banishment is a consequence of failure, not of card play"},"12.6_diplomatic_penalty":{"12.6.1_trigger":"Units (except ambassadors) cross border into neutral kingdom","12.6.2_effect":"-1 to subsequent diplomatic die rolls in violated kingdom","12.6.3_exceptions":{"12.6.3.1":"Allied kingdoms (no penalty)","12.6.3.2":"Enemy-allied kingdoms (no penalty)","12.6.3.3":"Unclaimed territories (no penalty)"},"12.6.4_cumulative":false,"12.6.5_deactivation_grace_period":"One movement phase to leave or incur penalty","12.6.6_voluntary_elimination":"Units may be voluntarily eliminated to avoid penalty"}},"13_diplomacy_cards":{"13.1_total":45,"13.2_basic_game_cards":32,"13.3_types":{"13.3.1_diplomatic_ploys":{"13.3.1.1_description":"Grant bonuses to diplomatic die roll","13.3.1.2_long_orations_plus_1":3,"13.3.1.3_long_orations_plus_2":2,"13.3.1.4_bribes_plus_1":3,"13.3.1.5_bribes_plus_2":2,"13.3.1.6_crass_bribes_plus_2":3,"13.3.1.7_threats_plus_1":2,"13.3.1.8_threats_plus_2":2,"13.3.1.9_marriages_plus_1":3,"13.3.1.10_marriage_plus_2":1,"13.3.1.11_blackmail_plus_2":2,"13.3.1.12_blackmail_plus_3":1,"13.3.1.13_white_magic_plus_1":2,"13.3.1.14_white_magic_plus_2":2,"13.3.1.15_black_magic_plus_2":3,"13.3.1.16_black_magic_plus_3":1},"13.3.2_special_mercenary":{"13.3.2.1_description":"Bring special mercenary units into service (Advanced Game only)","13.3.2.2_count":13}},"13.4_accumulation":"May be accumulated","13.5_trading":"May not be traded or exchanged","13.6_reshuffle":"When deck exhausted, shuffle discard pile","13.7_discard_timing":"Cards are discarded when used in diplomacy, regardless of success or failure of the diplomatic attempt"},"14_personality_cards":{"14.1_total":20,"14.2_assignment":"One per non-player monarch (face down)","14.3_reveal":"Read aloud when ambassador visits monarch","14.4_effects":"Bonuses or penalties to diplomatic ploys, movement, combat"},"15_activating_violated_kingdom":{"15.1_condition":"Placement hexes occupied by enemy combat units","15.2_procedure":"Ambassador placed anywhere in kingdom","15.3_unit_placement":"Normally and/or adjacent to occupied placement hexes","15.4_siege_on_neutral_castle":{"15.4.1_effect":"Kingdom immediately joins alliance of any other player monarch","15.4.2_determination":"Random","15.4.3_aftermath":"Refigure siege conditions"}},"16_allied_forces":{"16.1_movement":"Allied forces are moved by the owning player monarch","16.2_stacking_restriction":"May not stack with forces of any other kingdom","16.3_coordination":"May conduct sieges, move, and attack at the same time (or in conjunction with) other friendly allied forces and/or forces of the player monarch","16.4_allied_castle_entry":"Combat units may enter and defend castles of allied kingdoms if the castles are unoccupied by combat units of allied kingdoms","16.5_mercenary_stacking":"Mercenaries may be stacked with any friendly forces"},"17_sieges":{"17.1_requirements":{"17.1.1_surrounded":"Castle surrounded by besieging units or Zones of Siege","17.1.2_no_outside_defenders":"No defending units 'outside' the castle","17.1.3_sufficient_force":"Besieging combat units >= defending combat units + intrinsic defense strength"},"17.2_cooperation_rule":"Different players may not combine strengths; separate sieges on same castle possible","17.3_zone_of_siege":{"17.3.1_extends":"One hex around castle in either direction from adjacent combat unit","17.3.2_fleet_restriction":"Only extends to all-sea or seashore hexes","17.3.3_land_unit_restriction":"Only extends to all-land and seashore hexes","17.3.4_not_negated_by":"Friendly units to besieged castle"},"17.4_units_inside_outside":{"17.4.1_tracking":"Invert units inside castle","17.4.2_outside_units_must_be":"Eliminated or forced to retreat before siege declared","17.4.3_attack_timing":"Outside units attacked during combat-resolution phase","17.4.4_retreat_into_castle":"Units may retreat before combat into castle","17.4.5_leader_inside_restriction":"Cannot add combat bonus to units outside castle","17.4.6_movement_cost":"No cost to move in/out of castle","17.4.7_movement_timing":"Only during owning player's movement phase or retreat/advance"},"17.5_intrinsic_defense_strength":{"17.5.1_location":"Number printed on castle hex","17.5.2_use":"Defense against sieges only (cannot attack)","17.5.3_intact_castle_effect":"Enemy units cannot enter (except ambassadors)","17.5.4_plundered_castle_effect":"Defense strength lost"},"17.6_declaring_siege":{"17.6.1_timing":"Instant three conditions are met","17.6.2_any_player_may_declare":true,"17.6.3_retreat_before_combat_units":"Cannot count as besieging until after next movement phase"},"17.7_effects_of_siege":{"17.7.1_reinforcements_blocked":"Cannot enter besieged castle","17.7.2_leaving_siege":{"17.7.2.1_requirement":"Must attack all besieging units first","17.7.2.2_timing":"During siege-resolution phase","17.7.2.3_outcome":"Win or lose, survivors may move out through Zone of Siege","17.7.2.4_movement_after":"Full movement allowance, no further attacks","17.7.2.5_surrounded_castle":"Must clear a hex before leaving"},"17.7.3_attack_from_siege":{"17.7.3.1_alternative_timing":"Combat phase instead of siege-resolution","17.7.3.2_advance_limit":"One hex only if all units in hex eliminated","17.7.3.3_outside_support":"Additional friendly forces outside may join attack","17.7.3.4_remain_outside":"Attacking units may remain outside, breaking siege"}},"17.8_resolving_siege":{"17.8.1_timing":"Besieging player's siege resolution phase","17.8.2_procedure":"Roll 1d6 (siege die roll)","17.8.3_result_1_to_5":"Nothing happens, siege continues","17.8.4_result_6":{"17.8.4.1_castle_taken":true,"17.8.4.2_units_inside_eliminated":true,"17.8.4.3_leaders_fate_roll":true,"17.8.4.4_castle_marker_removed":true,"17.8.4.5_victory_points":"Awarded to winner","17.8.4.6_advance":"Some, all, or none may advance into castle hex"},"17.8.5_post_siege_restrictions":"Units making siege attack cannot otherwise move or attack"},"17.9_siege_die_roll_modifier":{"17.9.1_formula":"(attacking_units / (defending_units + intrinsic_defense)) - 1","17.9.2_fractions":"Drop","17.9.3_add_to":"Attacker's siege die roll","17.9.4_example_1":"15 attackers vs 4 defense + 3 inside = 15 / 7 = 2.14, drop fraction = 2, subtract 1 = +1 modifier","17.9.5_example_2":"15 attackers vs 4 defense + 4 inside = 15 / 8 = 1.88, drop fraction = 1, subtract 1 = +0 modifier","17.9.6_example_3":"15 attackers vs 4 defense + 1 inside = 15 / 5 = 3, subtract 1 = +2 modifier"},"17.10_plundered_castle":{"17.10.1_treated_as":"Nonexistent for siege/combat","17.10.2_retains":"Function as placement hex","17.10.3_royal_castle_note":"May continue as diplomacy location if not enemy occupied","17.10.4_occupation_effect":"Makes castle friendly for mercenary deployment","17.10.5_permanent":true},"17.11_fleets_at_sieges":{"17.11.1_participation":"May contribute to attack and defense","17.11.2_restriction":"Cannot attack all-land hexes","17.11.3_port_siege_requirement":"At least one besieging fleet required","17.11.4_zone_coverage":"All adjacent all-sea hexes must be covered","17.11.5_seaborne_land_units":{"17.11.5.1_counting":"Counted in siege along with fleets","17.11.5.2_zone_of_siege":"Do not exhibit (fleet still does)","17.11.5.3_participation":"Only in siege combat with besieged forces","17.11.5.4_attack_timing":"Only during besieged player's siege phase","17.11.5.5_regular_combat":"Not counted during regular combat phase"}},"17.12_relieving_forces":{"17.12.1_procedure":{"17.12.1.1":"Move adjacent to besieged castle","17.12.1.2":"Attack any one hex of besieging units","17.12.1.3":"Win or lose, may advance into castle hex"},"17.12.2_surrounded_castle":{"17.12.2.1_requirement":"Must clear a hex first","17.12.2.2_advance_exception":"May advance two hexes (into vacated hex, then castle hex)"},"17.12.3_post_relief":"Forces may remain outside or go inside"},"17.13_forced_peace":{"17.13.1_trigger":"Allied royal castle plundered and occupied","17.13.2_roll_timing":"Occupying player's diplomacy phase","17.13.3_roll_type":"Special forced peace die roll","17.13.4_ambassador_action":"May conduct diplomacy elsewhere normally","17.13.5_success_roll":[5,6],"17.13.6_contested_modifier":"If dispossessed alliance attacked occupying forces last turn, only 6 succeeds","17.13.7_modifiers_not_applicable":["Diplomacy cards","Diplomatic Penalty"],"17.13.8_alternative":"May use normal diplomacy to deactivate instead (no forced peace roll)","17.13.9_effects":{"17.13.9.1_duration_roll":"1d6 game turns","17.13.9.2_during_forced_peace":"No ambassadors may work diplomacy in kingdom","17.13.9.3_unit_removal":"Remove all units at end of current player turn","17.13.9.4_card_return":"Identity and Personality cards returned to neutral pool","17.13.9.5_monarch_availability":"Place counter on time record track for availability turn"},"17.13.10_violation_effect":{"17.13.10.1_diplomatic_penalty":true,"17.13.10.2_forced_peace_ends":true,"17.13.10.3_kingdom_available":"Immediately"},"17.13.11_unit_status":"Only regulars alive at deactivation will set up if reactivated","17.13.12_plundered_castles":"Remain plundered","17.13.13_player_monarchs":"Never subject to Forced Peace"}},"18_movement":{"18.1_general_rules":{"18.1.1_who_moves":"Only player whose turn it is","18.1.2_direction":"Any direction or combination","18.1.3_movement_points":"Cannot be saved or transferred","18.1.4_minimum_movement":"Any unit may always move at least one hex"},"18.2_which_units_may_move":{"18.2.1":"Player monarch's units","18.2.2":"Friendly mercenaries","18.2.3":"Allied kingdom units"},"18.3_which_units_may_not_move":{"18.3.1":"Units under siege","18.3.2":"Units of kingdom that just activated","18.3.3":"Units of kingdom that just deactivated"},"18.4_stack_movement":{"18.4.1_speed":"Slowest unit in stack","18.4.2_leaving_stack":"Units may be left behind","18.4.3_rejoining":"Units may continue independently"},"18.5_restrictions":{"18.5.1_enemy_hex":"Cannot enter hex with enemy unit","18.5.2_allied_stacking":"Cannot end turn in same hex as different allied kingdom","18.5.3_exceed_allowance":"Cannot exceed movement allowance","18.5.4_terrain_cost_exceeded":"Cannot enter hex if terrain cost exceeds remaining MP","18.5.5_land_sea_boundaries":"Land units cannot cross all-sea hexsides; fleets cannot cross all-land hexsides","18.5.6_off_map":"Cannot voluntarily move off map; forced off = eliminated"}},"19_terrain":{"19.1_clear":{"19.1.1_movement_cost":1},"19.2_forest":{"19.2.1_movement_cost":2,"19.2.2_special_movement":"Units with tree symbol treat as clear"},"19.3_minor_river":{"19.3.1_movement_cost":2,"19.3.2_applies_to":"Moving into, across, or along"},"19.4_major_river":{"19.4.1_crossing_requirement":"Must begin movement phase in hex","19.4.2_crossing_cost":2,"19.4.3_crossing_definition":"A land unit crossing of a major river is defined as moving from one major river hex to another major river hex, without a common neighbour that is neither a major river, sea, or lake"},"19.5_hills":{"19.5.1_movement_cost":2,"19.5.2_special_movement":"Units with mountain symbol treat as clear"},"19.6_mountains":{"19.6.1_movement_cost":3,"19.6.2_must_stop":true,"19.6.3_combat_bonus":"+1 to defender's combat die roll","19.6.4_special_movement":"Units with mountain symbol need not stop (still pay 3 MP)"},"19.7_lakeshore":{"19.7.1_movement_cost":1,"19.7.2_restriction":"Cannot cross all-lake hexsides","19.7.3_lakeshore_crossing_exception":"A land unit does not cross the lakeshore if it moves from one lakeshore hex to another lakeshore hex, and both lakeshore hexes have a mutual neighbour that is neither a sea, major river or a lake"},"19.8_seashore":{"19.8.1_movement_cost":1,"19.8.2_fleet_restriction":"Cannot cross all-land hexsides","19.8.3_land_restriction":"Cannot cross all-sea hexsides","19.8.4_seashore_crossing_exception":"A land unit does not cross the seashore if it moves from one seashore hex to another seashore hex, and both seashore hexes have a mutual neighbour that is neither a sea, major river or a lake"},"19.9_open_sea":{"19.9.1_movement_cost":1,"19.9.2_unit_restriction":"Fleets only (unless transported)"},"19.10_swamp":{"19.10.1_movement_cost":2},"19.11_isle_of_fright":{"19.11.1_movement_cost":1,"19.11.2_restriction":"Fleets may only enter if effecting rescue"},"19.12_mountain_pass":{"19.12.1_movement_cost":2,"19.12.2_combat_effect":"Defending units doubled in combat value"},"19.13_castle":{"19.13.1_enemy_restriction":"Forbidden to enemy units (see sieges)","19.13.2_friendly_cost":1,"19.13.3_crown_symbol":"Indicates royal castle"},"19.14_seaport":{"19.14.1_anchor_icon":true,"19.14.2_movement_cost":1,"19.14.3_access":"Both fleets and land units"},"19.15_ancient_battlefield":{"19.15.1_type":"Scenic hex","19.15.2_movement_cost":1},"19.16_scenic_hex":{"19.16.1_movement_cost":1,"19.16.2_exceptions":["Serpent Bay (open sea)","Stubstaff Keep (castle)"],"19.16.3_terrain_icons":"Where terrain icons are included, apply those terrain effects (e.g., Willowik <L19> contains both forest and hills)","19.16.4_basic_game_access":"Units may end movement in scenic hexes"},"19.17_cumulative_terrain":{"19.17.1_rule":"Terrain effects are cumulative","19.17.2_example":"Forested mountain = 5 MP, must stop"}},"20_ports":{"20.1_definition":"Seashore hexes enterable by both vessels and land units","20.2_castle_ports":{"20.2.1_identifier":"Castle with anchor icon","20.2.2_applies_rules":["Castle rules","Port rules"],"20.2.3_plundered_status":"Still functions as port","20.2.4_storm_protection":"Unlimited fleets","20.2.5_ownership_when_unoccupied":"Friendly to original owner","20.2.6_ownership_when_occupied":"Friendly to occupier","20.2.7_example":"Groat is just a castle, not a castle-port; Adeese (Shucassam's palace) is a castle-port"},"20.3_non_castle_ports":{"20.3.1_examples":["Bartertown","Freeport","Abandoned Village"],"20.3.2_movement_cost":1,"20.3.3_storm_protection":"Single fleet only"},"20.4_mercenary_fleet_deployment":"May deploy at friendly non-castle port"},"21_fleet_movement":{"21.1_terrain_types":["All-sea","Seashore","Friendly ports"],"21.2_cost":1,"21.3_restrictions":{"21.3.1_enemy_fleet_hex":"Cannot enter","21.3.2_allied_fleet_stacking":"Cannot end movement in same hex","21.3.3_seashore_with_enemy_land":"May move through, cannot end there","21.3.4_lone_monarch_seashore":"No leader fate die roll when passing through"}},"22_sea_transport":{"22.1_capacity_per_fleet":{"22.1.1_combat_units":1,"22.1.2_leaders":"Unlimited","22.1.3_devices":"Unlimited"},"22.2_embark_cost":0,"22.3_debark_cost":0,"22.4_debark_locations":["Friendly port","Seashore hex without mountains"],"22.5_transported_unit_movement":"Cannot otherwise move that turn","22.6_fleet_continuation":"May continue moving, embarking, debarking until MP spent"},"23_zones_of_control":{"23.1_existence":false,"23.2_note":"Units control only hex occupied","23.3_adjacent_movement":"No penalty or delay"},"24_stacking":{"24.1_same_kingdom_plus_mercenaries":{"24.1.1_limit":"Unlimited","24.1.2_hex_sharing":true},"24.2_different_allied_kingdoms":{"24.2.1_pass_through":true,"24.2.2_end_turn_together":false},"24.3_mercenaries":{"24.3.1_stack_with":"Any friendly units","24.3.2_movement_between_stacks":"No penalty"},"24.4_fleets":{"24.4.1_same_rules":true},"24.5_allied_castle_entry":{"24.5.1_condition":"Castle unoccupied by combat units of allied kingdoms","24.5.2_may_enter_and_defend":true,"24.5.3_may_stack_with_ally_units":false},"24.6_examination":"Any player may examine opponent's stacks at any time"},"25_combat":{"25.1_initiation":{"25.1.1_who_attacks":"Player whose turn it is (attacker)","25.1.2_requirement":"Adjacent opposing units","25.1.3_optional":true},"25.2_retreat_before_combat":{"25.2.1_timing":"After attack declared, before dice rolled","25.2.2_success_by_unit_type":{"25.2.2.1_human":[4,5,6],"25.2.2.2_non_human":[3,4,5,6]},"25.2.3_stack_test_order":"Test unit with least chance first; success allows all to retreat","25.2.4_retreat_destination":"Adjacent hex not occupied by enemy","25.2.5_same_hex_retreat":"All units must retreat to same hex","25.2.6_displacement":"May displace friendly allied units if only option","25.2.7_displaced_unit_requirement":"Must have unoccupied adjacent hex","25.2.8_no_place_swap":"Two stacks may not simply trade places","25.2.9_no_retreat_if":"Completely surrounded by enemy combat units","25.2.10_second_retreat":"Not allowed if still adjacent to attacking units","25.2.11_attacker_advance":"May advance into vacated hex, no further attacks"},"25.3_resolution":{"25.3.1_each_side_rolls":"1d6 (combat die roll)","25.3.2_winner":"Higher modified roll","25.3.3_loser_losses":"Difference between modified rolls","25.3.4_tie_losses":"Both sides lose units equal to the tied die result","25.3.5_loss_selection":"Owning player chooses which units eliminated"},"25.4_combat_die_roll_modifier":{"25.4.1_formula":"(larger_force / smaller_force) - 1","25.4.2_fractions":"Drop","25.4.3_add_to":"Larger force's die roll","25.4.4_minimum_defender_bonus":"+1 is the minimum (floor) when defenders outnumber attackers; the formula result is used if higher than +1"},"25.5_attack_declaration":{"25.5.1_timing":"All attacks stated before any resolved","25.5.2_resolution_order":"Attacker's choice","25.5.3_results_immediate":true},"25.6_seaborne_units":{"25.6.1_aboard_eliminated_fleet":"Also eliminated"},"25.7_which_units_may_attack":{"25.7.1_may_attack":{"25.7.1.1":"Units of player whose turn it is","25.7.1.2":"Replacements and reinforcements entered this turn"},"25.7.2_may_not_attack":{"25.7.2.1":"Units that declared/made siege attack this turn","25.7.2.2":"Land units aboard fleets (except siege combat)","25.7.2.3":"Units of kingdom activated this turn","25.7.2.4":"Units of kingdom deactivated this turn"}},"25.8_target_restrictions":{"25.8.1_may_attack":"Any adjacent enemy units except those inside castles","25.8.2_adjacency_required":true},"25.9_combined_attacks":{"25.9.1_multiple_hexes_attacking_one":"Combine strengths","25.9.2_friendly_allied_combination":true},"25.10_attack_limits":{"25.10.1_unit_attack_limit":"Once per player turn","25.10.2_hex_attack_limit":"Once per player turn by each player","25.10.3_multiple_player_attacks":"Same hex may be attacked by different players on their turns"},"25.11_terrain_effects":{"25.11.1_mountains":"+1 to defender's combat die roll","25.11.2_mountain_pass":"Defender's combat strength doubled","25.11.3_defensive_only":true,"25.11.4_cross_boundary_restrictions":{"25.11.4.1_land_vs_all_sea":"Cannot attack","25.11.4.2_fleet_vs_all_land":"Cannot attack"}},"25.12_multiple_unit_combat":{"25.12.1_stack_attack_rule":"If any unit attacks, all must attack","25.12.2_split_attacks":"Units in stack may attack different adjacent hexes","25.12.3_all_defenders_attacked":"All units in hex attacked as single total"},"25.13_advance_after_combat":{"25.13.1_trigger":"All defenders retreat or eliminated","25.13.2_units_advancing":"Some, all, or none of attacking units","25.13.3_hex_limit":1,"25.13.4_exception":"Relieving siege may advance 2 hexes"}},"26_leaders":{"26.1_types":["Monarchs (player and non-player)"],"26.2_combat_strength":0,"26.3_leader_movement_bonus":{"26.3.1_applies_to":"One stack containing own regulars and/or mercenaries","26.3.2_effect":"Stack uses leader's movement allowance and terrain bonuses","26.3.3_requirement":"Units must begin and end turn stacked with leader","26.3.4_partial_movement":"Units may be added/left behind during move","26.3.5_independent_movement":"Units using leader-assisted movement cannot move independently","26.3.6_terrain_transfer":"Unit terrain bonuses do not transfer to leader"},"26.4_leader_combat_bonus":{"26.4.1_source":"Personality cards with combat bonus","26.4.2_stacking_bonuses":"Multiple leader bonuses may be combined","26.4.3_siege_applicability":false},"26.5_leader_alone":{"26.5.1_pass_through_enemy":true,"26.5.2_requires_fate_roll":true},"26.6_leader_fate_die_roll":{"26.6.1_triggers":{"26.6.1.1":"Units in leader's stack lost in combat","26.6.1.2":"Lone leader passes through enemy stack","26.6.1.3":"Enemy stack passes through lone leader's hex","26.6.1.4":"Castle containing leader falls to siege","26.6.1.5":"Leader attempts to leave besieged castle alone","26.6.1.6":"Fleet containing leader lost at sea"},"26.6.2_results":{"26.6.2.1_roll_1":"Leader Killed","26.6.2.2_roll_2_to_5":"No Effect","26.6.2.3_roll_6":"Leader Captured"},"26.6.3_frequency_limit":{"26.6.3.1_per_player_turn":1,"26.6.3.2_per_enemy_movement_phase":1},"26.6.4_exceptions":{"26.6.4.1_advance_on_eliminated_stack":"Only one roll (not additional for advance)","26.6.4.2_exit_besieged_through_unit":"Only one roll"},"26.6.5_enemy_forcing_roll":"Any non-fleet unit may enter lone leader's hex"},"26.7_lone_leader_rule":"Cannot be attacked (only fate rolls and assassination)"},"27_leader_adrift_at_sea":{"27.1_trigger":"Leader without fleet on open sea (combat or events)","27.2_fate_roll_modifier":{"27.2.1_death":1,"27.2.2_capture":6,"27.2.3_no_effect":[2,3,4,5]},"27.3_no_enemy_fleet_present":"Immediately placed on Isle of Fright","27.4_while_on_isle":"-1 on all combat and siege rolls for monarch's troops","27.5_rescue":"Friendly fleet moves into hex","27.6_enemy_capture":"Not possible at Isle of Fright","27.7_combat_unit_unload":"Not possible (reefs)","27.8_fleet_entry_restriction":"Only for rescue","27.9_diplomacy":"Ambassadors may work on castaway monarch"},"28_death_and_capture_of_monarchs":{"28.1_non_player_monarch_death":{"28.1.1_immediate_effect":"Kingdom enters confusion","28.1.2_confusion_duration":"1d6 turns","28.1.3_during_confusion":{"28.1.3.1_regulars_behavior":"Defend normally, cannot move/siege/initiate combat","28.1.3.2_duration":"Remainder of current player turn","28.1.3.3_at_turn_end":"Remove all units from map, place on identity card","28.1.3.4_monarch_counter":"Place on Time Record Track for availability turn","28.1.3.5_diplomacy":"No ambassador may work in kingdom"},"28.1.4_end_of_confusion":{"28.1.4.1_new_monarch":"Draw new personality card (face down under identity)","28.1.4.2_old_personality":"Discarded"},"28.1.5_border_violation_during_confusion":{"28.1.5.1_diplomatic_penalty":true,"28.1.5.2_new_monarch_crowned":"Immediately (new personality card)","28.1.5.3_kingdom_available":"Immediately"},"28.1.6_eliminated_regulars":"Remain eliminated (only replaced via Random Events)"},"28.2_player_monarch_death_or_capture":{"28.2.1_effect":"Player out of game","28.2.2_allies":"All deactivate","28.2.3_kingdom":"Enters confusion","28.2.4_after_confusion":{"28.2.4.1_personality_card":"Drawn for new non-player monarch","28.2.4.2_kingdom_available":"For diplomacy to other players"},"28.2.5_victory_points":"Player keeps previously earned points","28.2.6_potential_win":"Eliminated player can win if highest points","28.2.7_reentry_option":{"28.2.7.1_timing":"Turn after elimination (if there is one)","28.2.7.2_cost":"Relinquish all accumulated victory points","28.2.7.3_selection":"Randomly from available non-player kingdoms (not in confusion)","28.2.7.4_approval":"All other players must approve"}},"28.3_non_player_monarch_capture":{"28.3.1_prison_placement":"Nearest unbesieged castle controlled by captor","28.3.2_no_castle_options":["Execute immediately","Set free"],"28.3.3_victory_points":"Awarded for capture regardless","28.3.4_prisoner_status":{"28.3.4.1_transfer":"Cannot be transferred","28.3.4.2_actions":"Incapable of offensive or defensive action","28.3.4.3_garrison":"Castle intrinsic defense serves as garrison"},"28.3.5_release_conditions":{"28.3.5.1":"Successful siege of prison castle by prisoner's own/allied troops","28.3.5.2":"Captor's kingdom deactivates"},"28.3.6_release_placement":"Nearest unplundered, unbesieged friendly castle (or nearest friendly unit)"},"28.4_executing_prisoner":{"28.4.1_timing":"Immediately upon capture or any subsequent diplomacy phase","28.4.2_victory_points":"None for execution (capture points already awarded)","28.4.3_penalty":"Permanent diplomatic penalty in slain monarch's kingdom"},"28.5_forcing_peace_on_prisoner":{"28.5.1_timing":"Each turn during jailer's diplomacy phase","28.5.2_in_addition_to":"Normal diplomacy elsewhere","28.5.3_success_roll":[5,6],"28.5.4_siege_modifier":"If prison castle besieged by prisoner's forces/allies, only 6 succeeds","28.5.5_modifiers_not_applicable":["Diplomacy cards","Diplomatic Penalty"],"28.5.6_alternative":"Normal diplomacy on captive (uses ambassador, cards apply)","28.5.7_occupied_royal_castle":"Only jailer may make forced peace roll","28.5.8_success_effect":"See 17.13 forced_peace rules"}},"29_victory_conditions":{"29.1_determination":"Victory is determined by a system of Victory Points","29.2_timed_victory":"The player who amasses the most points after 20 turns is the winner, the player with the second highest total comes in second, and so on","29.3_victory_points_table":{"29.3.1_plunder_enemy_castle":"5 × intrinsic defense strength","29.3.2_plunder_enemy_royal_castle":"10 × intrinsic defense strength","29.3.3_capture_enemy_allied_monarch":30,"29.3.4_kill_enemy_allied_monarch":40,"29.3.5_capture_or_kill_enemy_player_monarch":70},"29.4_scoring_notes":{"29.4.1_assassination_kill":"No victory points","29.4.2_execute_prisoner":"No victory points","29.4.3_castle_plunder":"Once per game per castle","29.4.4_plundered_status":"Permanent","29.4.5_capture_escape_recapture":"Points awarded each time","29.4.6_posthumous_victory":"Eliminated player can win if highest points"}},"30_special_kingdom_rules":{"30.1_trolls":{"30.1.1_setup":"Four separate locations: Stone Face (capital), The Gathering, The Crag, The Shunned Vale","30.1.2_no_castles":"Troll locations are cities without castles. They have no intrinsic defense strength and cannot be besieged in the traditional sense. Enemy units may freely enter Troll locations.","30.1.3_monarch_start":"The Troll monarch starts at Stone Face (col 6, row 13)","30.1.4_regeneration":{"30.1.4.1_timing":"Beginning of each turn","30.1.4.2_effect":"Replace one eliminated regular unit","30.1.4.3_in_addition_to":"Random Events replacements","30.1.4.4_placement_blocked":"If hex enemy occupied, cannot regenerate that turn","30.1.4.5_same_turn_loss":"Regular lost through Random Events cannot regenerate same turn"}},"30.2_goblins":{"30.2.1_nithmere_mountains_deployment":{"30.2.1.1_units":"Goblins labeled 'Nithmere Mts.'","30.2.1.2_location":"Mountain and pass hexes of Zorn territory","30.2.1.3_limit":"One per hex","30.2.1.4_adjacency":"No two may be adjacent","30.2.1.5_applies_to":["Setup","Replacements"],"30.2.1.6_total_units":8,"30.2.1.7_example_deployment":{"30.2.1.7.1_note":"This is one valid deployment; other configurations meeting the rules are permitted","30.2.1.7.2_hexes":[[21,7],[20,6],[21,5],[20,4],[18,4],[18,7],[18,0],[19,1]]}}},"30.3_dwarves":{"30.3.1_setup":"Three separate locations","30.3.2_locations":["Aws Noir","Alzak","Rosengg"],"30.3.3_unity":"All related, fight for common cause"}},"31_cities_vs_castles":{"31.1_distinction":"Not all faction cities are castles. Units always deploy from cities, but only cities with castle markers provide intrinsic defense.","31.2_cities_without_castles":{"31.2.1_examples":["Farnot (Hothior)","Yando (Muetar)","Lepers (Shucassam)","Gorpin (Immer)","All Troll locations"],"31.2.2_effect":"These locations serve as deployment hexes but have no intrinsic defense and cannot be besieged"},"31.3_castle_locations":{"31.3.1_identification":"Hexes with 'castle: true' terrain marker in hexmap","31.3.2_defense":"Provide intrinsic defense strength for siege rules"}}}
+{
+  "1_game": {
+    "1.1_name": "Divine Right",
+    "1.2_version": "Basic Game",
+    "1.3_publisher": "Pungo Games",
+    "1.4_year": 2024,
+    "1.5_designer": "Glenn Rahman",
+    "1.6_players": {
+      "1.6.1_min": 2,
+      "1.6.2_max": 6
+    },
+    "1.7_game_length_turns": 20,
+    "1.8_game_length_note": "The game is always exactly 20 turns; no effect extends the game beyond turn 20"
+  },
+
+  "2_components": {
+    "2.1_rulebook": 1,
+    "2.2_counter_sheets": 2,
+    "2.3_gameboard": 1,
+    "2.4_identity_cards": 14,
+    "2.5_personality_cards": 20,
+    "2.6_diplomacy_cards": 45,
+    "2.7_dice": 2,
+    "2.8_player_aids": 6,
+    "2.9_counter_tray": 1,
+    "2.10_mercenary_armies": 14,
+    "2.11_mercenary_fleets": 6,
+    "2.12_mercenary_army_symbol": "swords & moneybags",
+    "2.13_mercenary_fleet_symbol": "fleets & moneybags"
+  },
+
+  "3_setup": {
+    "3.1_basic_game_exclusions": {
+      "3.1.1_identity_cards_removed": ["The Eaters of Wisdom", "The Usurper", "The Black Hand"],
+      "3.1.2_diplomacy_cards_removed": "All Special Mercenary cards",
+      "3.1.3_castle_counters_not_used": ["Zards", "In-/Visible School", "Enchanted Castle", "Stubstaff Keep"],
+      "3.1.4_territory_treated_as_unclaimed": ["Magicians territory", "Wetlands", "Banished Lands", "Wastes of Vah-Ka-Ka", "The Withering", "Blasted Heath", "Shards of Lor", "Wild Reaches"]
+    },
+    "3.2_procedure": {
+      "3.2.1": "Lay gameboard on table with space for cards",
+      "3.2.2": "Remove excluded identity cards",
+      "3.2.3": "Remove Special Mercenary diplomacy cards",
+      "3.2.4": "Shuffle remaining diplomacy cards, place face down",
+      "3.2.5": "Shuffle remaining 11 identity cards",
+      "3.2.6": "Each player draws one identity card (becomes home kingdom)",
+      "3.2.7": "Players punch out matching unit counters for their kingdom",
+      "3.2.8": "Remaining identity cards become non-player monarchs",
+      "3.2.9": "Shuffle personality cards",
+      "3.2.10": "Place one personality card face down under each non-player identity card",
+      "3.2.11": "Set aside unused personality cards face down",
+      "3.2.12": "Punch out all non-player kingdom counters",
+      "3.2.13": "Punch out 14 mercenary armies (swords & moneybags) and 6 mercenary fleets (fleets & moneybags)",
+      "3.2.14": "Place turn record indicator on turn 1",
+      "3.2.15": "Place one randomizer chit per player in opaque container",
+      "3.2.16": "Place castle counters on map (excluding basic game exclusions)",
+      "3.2.17": "Place armies and fleets according to starting locations on counters",
+      "3.2.18": "Monarch and ambassador start in royal castle"
+    }
+  },
+
+  "4_unit_types": {
+    "4.1_monarch": {
+      "4.1.1_description": "Leader unit representing the ruler",
+      "4.1.2_is_combat_unit": false,
+      "4.1.3_is_leader": true,
+      "4.1.4_identifiers": ["coat_of_arms", "crown_symbol", "movement_allowance"],
+      "4.1.5_player_monarch_death_effect": "Player eliminated from game",
+      "4.1.6_non_player_monarch_death_effect": "Kingdom enters confusion"
+    },
+    "4.2_ambassador": {
+      "4.2.1_description": "Diplomatic unit",
+      "4.2.2_is_combat_unit": false,
+      "4.2.3_movement": "Teleports to diplomatic function location",
+      "4.2.4_death_recovery_turns": 2
+    },
+    "4.3_regular_army": {
+      "4.3.1_description": "National army unit",
+      "4.3.2_is_combat_unit": true,
+      "4.3.3_combat_strength": 1,
+      "4.3.4_identifiers": ["coat_of_arms", "starting_castle", "movement_allowance"]
+    },
+    "4.4_regular_fleet": {
+      "4.4.1_description": "National naval unit",
+      "4.4.2_is_combat_unit": true,
+      "4.4.3_combat_strength": 1,
+      "4.4.4_identifiers": ["coat_of_arms", "ship_symbol", "movement_allowance", "starting_point"],
+      "4.4.5_transport_capacity": 1
+    },
+    "4.5_mercenary_army": {
+      "4.5.1_description": "Hired army unit",
+      "4.5.2_is_combat_unit": true,
+      "4.5.3_combat_strength": 1,
+      "4.5.4_symbol": "swords & moneybags",
+      "4.5.5_count": 14
+    },
+    "4.6_mercenary_fleet": {
+      "4.6.1_description": "Hired naval unit",
+      "4.6.2_is_combat_unit": true,
+      "4.6.3_combat_strength": 1,
+      "4.6.4_count": 6,
+      "4.6.5_transport_capacity": 1,
+      "4.6.6_symbol": "fleets & moneybags"
+    },
+    "4.7_castle_counter": {
+      "4.7.1_description": "Represents castle defense and hit points",
+      "4.7.2_intrinsic_defense_strength": "Number on counter",
+      "4.7.3_crown_icon": "Indicates royal castle",
+      "4.7.4_anchor_icon": "Indicates port"
+    }
+  },
+
+  "5_faction_classification": {
+    "5.1_description": "Factions are classified as Human or Non-Human for retreat before combat purposes",
+    "5.2_human_factions": {
+      "5.2.1_list": ["Hothior", "Immer", "Mivior", "Muetar", "Pon", "Rombune", "Shucassam"],
+      "5.2.2_retreat_before_combat_success": [4, 5, 6]
+    },
+    "5.3_non_human_factions": {
+      "5.3.1_list": ["Neuth (Elves)", "Ghem (Dwarves)", "Zorn (Goblins)", "Trolls"],
+      "5.3.2_retreat_before_combat_success": [3, 4, 5, 6]
+    },
+    "5.4_mercenaries": {
+      "5.4.1_classification": "Human",
+      "5.4.2_retreat_before_combat_success": [4, 5, 6]
+    }
+  },
+
+  "6_special_terrain_capabilities": {
+    "6.1_tree_symbol": {
+      "6.1.1_effect": "Treat forests as clear terrain"
+    },
+    "6.2_mountain_symbol": {
+      "6.2.1_effect": "Treat hills as clear terrain",
+      "6.2.2_mountain_effect": "Need not stop in mountain hexes (still pay 3 MP)"
+    },
+    "6.3_home_kingdom_bonus": {
+      "6.3.1_applies_to": ["monarchs", "regulars"],
+      "6.3.2_effect": "Possess both forest and mountain terrain bonuses within home country"
+    }
+  },
+
+  "7_sequence_of_play": {
+    "7.1_phase_1_player_order_determination": {
+      "7.1.1_description": "Randomly determine turn order",
+      "7.1.2_procedure": {
+        "7.1.2.1": "Drop randomizer chits into cup",
+        "7.1.2.2": "Each player draws one without looking",
+        "7.1.2.3": "Numbers indicate turn order (1 goes first)",
+        "7.1.2.4": "Reveal numbers simultaneously",
+        "7.1.2.5": "Keep chits visible during turn",
+        "7.1.2.6": "Return to cup before next game turn"
+      }
+    },
+    "7.2_phase_2_player_turns": {
+      "7.2.1_description": "Each player takes turn in determined order",
+      "7.2.2_step_A_roll_for_events": {
+        "7.2.2.1_procedure": "Roll 2 dice, consult Random Events Table"
+      },
+      "7.2.3_step_B_draw_diplomacy_card": {
+        "7.2.3.1_procedure": "Draw top card from diplomacy deck",
+        "7.2.3.2_usage": "May use immediately or save for later"
+      },
+      "7.2.4_step_C_conduct_diplomacy": {
+        "7.2.4.1_description": "Ambassador performs one diplomatic function",
+        "7.2.4.2_options": [
+          "activate_neutral_monarch",
+          "deactivate_enemy_allied_monarch",
+          "assassinate_enemy_allied_monarch",
+          "duel_enemy_ambassador"
+        ]
+      },
+      "7.2.5_step_D_resolve_sieges": {
+        "7.2.5.1_procedure": "Resolve sieges conducted by player"
+      },
+      "7.2.6_step_E_movement": {
+        "7.2.6.1_procedure": "Move any/all friendly units"
+      },
+      "7.2.7_step_F_resolve_combat": {
+        "7.2.7.1_procedure": "Resolve all declared attacks"
+      }
+    },
+    "7.3_phase_3_end_of_turn": {
+      "7.3.1_procedure": "Move turn record indicator forward one space"
+    }
+  },
+
+  "8_random_events": {
+    "8.1_dice_roll": "2d6",
+    "8.2_results": {
+      "8.2.1_roll_2": {
+        "8.2.1.1_name": "Untimely Death",
+        "8.2.1.2_effect": "Randomly determine which of your friendly non-player monarchs (if any) dies"
+      },
+      "8.2.2_roll_3": {
+        "8.2.2.1_name": "Storms",
+        "8.2.2.2_effect": "Choose and eliminate one of your fleets (if any)"
+      },
+      "8.2.3_roll_4": {
+        "8.2.3.1_name": "Mutiny",
+        "8.2.3.2_effect": "Choose and eliminate one of your regular or mercenary units"
+      },
+      "8.2.4_roll_5": {
+        "8.2.4.1_name": "Bad Omens",
+        "8.2.4.2_effect": "Regulars of one kingdom won't fight or siege this turn (movement unaffected)",
+        "8.2.4.3_determination": "Random from all player kingdoms and allies"
+      },
+      "8.2.5_roll_6": {
+        "8.2.5.1_name": "Replacements",
+        "8.2.5.2_effect": "Bring 2 eliminated regular units back into play",
+        "8.2.5.3_restriction": "Player monarch or allied kingdoms only"
+      },
+      "8.2.6_roll_7": {
+        "8.2.6.1_name": "No Event",
+        "8.2.6.2_effect": "Nothing happens"
+      },
+      "8.2.7_roll_8": {
+        "8.2.7.1_name": "Reinforcements",
+        "8.2.7.2_effect": "Bring 2 mercenary units (armies or fleets) into play",
+        "8.2.7.3_placement": "Any friendly castle or port"
+      },
+      "8.2.8_roll_9": {
+        "8.2.8.1_name": "Plague",
+        "8.2.8.2_effect": "Choose and eliminate one of your regular or mercenary units"
+      },
+      "8.2.9_roll_10": {
+        "8.2.9.1_name": "Replacement",
+        "8.2.9.2_effect": "Bring 1 regular or mercenary unit into play"
+      },
+      "8.2.10_roll_11": {
+        "8.2.10.1_name": "Desertion",
+        "8.2.10.2_effect": "Choose and eliminate one of your mercenary units (if any)"
+      },
+      "8.2.11_roll_12": {
+        "8.2.11.1_name": "Help From Afar",
+        "8.2.11.2_effect": "Randomly determine which neutral non-player kingdom (if any) becomes immediate ally"
+      }
+    },
+    "8.3_rules": {
+      "8.3.1_applies_only_to": "Rolling player",
+      "8.3.2_regular_placement": "At location named on counter",
+      "8.3.3_blocked_placement": "If hex enemy-occupied or under siege, unit cannot enter",
+      "8.3.4_mercenary_placement": "Any friendly castle or port",
+      "8.3.5_fleet_reinforcement_requires": "At least one friendly port",
+      "8.3.6_regular_limit": "Cannot exceed number on identity card",
+      "8.3.7_immediate_action": "All replacements, reinforcements, and monarchs and combat units of kingdoms activated via Help From Afar may move and fight on the same player turn that they appear",
+      "8.3.8_impossible_event": "Treat as No Event",
+      "8.3.9_no_transfer": "Replacements and reinforcements may not be given to, nor losses taken from, another player except where otherwise indicated (e.g. stealing mercenary units when its pool is depleted)"
+    }
+  },
+
+  "9_mercenary_units": {
+    "9.1_description": "Mercenary combat units brought into play by Random Events Table",
+    "9.2_placement": "Any friendly castle or castles (except those currently besieged)",
+    "9.3_stacking": "May stack with any friendly units - player monarch's own units, allied non-player kingdom units, or Special Mercenary units",
+    "9.4_stealing_mercenaries": {
+      "9.4.1_type_unavailable": "If you cannot deploy a mercenary of the remaining type (e.g., only fleets remain in pool and you control no ports), you may declare that mercenaries of the type you want are defecting to your side",
+      "9.4.2_procedure": "Steal mercenary units of the type missing from the recruitment pool directly from an opponent's forces, taking them from their stacks and deploying them into your own valid deployment hexes",
+      "9.4.3_pool_depleted": "If you are due to receive a mercenary unit and all mercenaries are already in play, you may steal units of any type from opponents",
+      "9.4.4_transport_protection": "You cannot steal units from fleets that are transporting enemy troops or characters; having armies in transport protects the mercenary fleet itself from seizure"
+    }
+  },
+
+  "10_friendly_location_definition": {
+    "10.1_friendly_castle_or_port_conditions": {
+      "10.1.1": "Castle/port inside player monarch's kingdom",
+      "10.1.2": "Castle/port inside allied kingdom",
+      "10.1.3": "Plundered castle/port occupied by at least one friendly combat unit"
+    }
+  },
+
+  "11_random_determination": {
+    "11.1_method": "When rules call for random determination, roll a die with faces equal to the number of distinct valid options (effectively an n-sided die where n is the number of options)",
+    "11.2_examples": {
+      "11.2.1": "Randomly select from 3 allied monarchs = roll 1d3 (or 1d6 with 1-2=first, 3-4=second, 5-6=third)",
+      "11.2.2": "Randomly select from available neutral kingdoms = roll die matching count of neutral kingdoms"
+    }
+  },
+
+  "12_diplomacy": {
+    "12.1_general_rules": {
+      "12.1.1_only_between": "Player monarchs and non-player monarchs/special mercenaries/barbarians",
+      "12.1.2_player_alliances": "Not binding - all player monarchs are enemies",
+      "12.1.3_ambassador_death_recovery": 2,
+      "12.1.4_ambassador_movement": "Teleports to function location, returns to royal castle after",
+      "12.1.5_ambassador_return_blocked": "If royal castle enemy-occupied or under siege, returns to player monarch hex or held off map"
+    },
+    "12.2_diplomatic_die_roll": {
+      "12.2.1_threshold_comparison": "Success requires modified roll >= target number (greater than or equal to)",
+      "12.2.2_modification_timing": "Diplomacy card played before die roll; modifier applied after roll",
+      "12.2.3_modified_result": "Final result = die roll + card modifier + personality card modifier - diplomatic penalty (if any)",
+      "12.2.4_automatic_success": "If modifiers guarantee meeting threshold regardless of roll, success is automatic"
+    },
+    "12.3_functions": {
+      "12.3.1_activate_neutral_monarch": {
+        "12.3.1.1_ambassador_placement": "Royal castle of neutral non-player monarch",
+        "12.3.1.2_procedure": {
+          "12.3.1.2.1": "Read personality card aloud",
+          "12.3.1.2.2": "Optionally play one diplomacy card (card is discarded regardless of outcome)",
+          "12.3.1.2.3": "Roll diplomatic die roll (1d6)",
+          "12.3.1.2.4": "Apply modifiers from personality and diplomacy cards"
+        },
+        "12.3.1.3_success_threshold": 6,
+        "12.3.1.4_success_comparison": ">=",
+        "12.3.1.5_success_effect": {
+          "12.3.1.5.1": "Monarch and kingdom become allied",
+          "12.3.1.5.2": "Place forces on map at starting locations",
+          "12.3.1.5.3": "Forces cannot move or attack until next game turn"
+        }
+      },
+      "12.3.2_deactivate_enemy_allied_monarch": {
+        "12.3.2.1_ambassador_placement": "On enemy-allied monarch (wherever located)",
+        "12.3.2.2_procedure": {
+          "12.3.2.2.1": "Read personality card aloud",
+          "12.3.2.2.2": "Optionally play one diplomacy card (card is discarded regardless of outcome)",
+          "12.3.2.2.3": "Roll diplomatic die roll (1d6)",
+          "12.3.2.2.4": "Apply modifiers"
+        },
+        "12.3.2.3_success_threshold": 7,
+        "12.3.2.4_success_comparison": ">=",
+        "12.3.2.5_success_effect": {
+          "12.3.2.5.1": "Monarch drops out of enemy alliance",
+          "12.3.2.5.2": "Forces removed from map after combat portion of current turn",
+          "12.3.2.5.3": "Units defend and retreat normally until removed",
+          "12.3.2.5.4": "Cards returned to neutral pool",
+          "12.3.2.5.5": "Eliminated regulars remain eliminated"
+        },
+        "12.3.2.6_mercenary_note": "Mercenaries stacked with deactivating forces remain under original owner"
+      },
+      "12.3.3_attempted_assassination": {
+        "12.3.3.1_limit": "Once per game per player monarch",
+        "12.3.3.2_ambassador_placement": "On intended victim",
+        "12.3.3.3_diplomacy_cards": "May not be played",
+        "12.3.3.4_procedure": {
+          "12.3.3.4.1": "Both players roll 1d6",
+          "12.3.3.4.2": "Higher roll kills the other",
+          "12.3.3.4.3": "Tie has no effect"
+        },
+        "12.3.3.5_success_effect": "Deactivates monarch and forces (no victory points)",
+        "12.3.3.6_failure_effect": "Ambassador permanently banished from kingdom until monarch dies by other means"
+      },
+      "12.3.4_duel_enemy_ambassador": {
+        "12.3.4.1_limit": "Once per game between each pair of ambassadors",
+        "12.3.4.2_ambassador_placement": "In enemy's royal castle where the target ambassador resides",
+        "12.3.4.3_diplomacy_cards": "May not be played",
+        "12.3.4.4_procedure": {
+          "12.3.4.4.1": "Both players roll 1d6",
+          "12.3.4.4.2": "Lower roll dies",
+          "12.3.4.4.3": "Tie kills both"
+        },
+        "12.3.4.5_cannot_refuse": true
+      }
+    },
+    "12.4_ambassador_death": {
+      "12.4.1_effect": "Ambassador removed for player's next 2 player turns",
+      "12.4.2_placement": "Counter placed 3 turns ahead on Time Record Track",
+      "12.4.3_during_death": "Player may conduct no diplomacy",
+      "12.4.4_recovery": "Successor becomes available on 3rd game turn after death",
+      "12.4.5_penalties_inherited": true,
+      "12.4.6_card_draw": "Player continues drawing diplomacy cards"
+    },
+    "12.5_banishment": {
+      "12.5.1_triggering_cards": ["Black Magic", "Threats", "Blackmail", "Crass Bribes"],
+      "12.5.2_trigger_condition": "Diplomatic die roll fails",
+      "12.5.3_duration_formula": "Card modifier number + 1 turns",
+      "12.5.4_effect": "Ambassador may not attempt diplomatic functions on offended monarch/kingdom",
+      "12.5.5_multiple_banishments": "Terms are added together",
+      "12.5.6_card_discard_timing": "Card is discarded before learning result of die roll; banishment is a consequence of failure, not of card play"
+    },
+    "12.6_diplomatic_penalty": {
+      "12.6.1_trigger": "Units (except ambassadors) cross border into neutral kingdom",
+      "12.6.2_effect": "-1 to subsequent diplomatic die rolls in violated kingdom",
+      "12.6.3_exceptions": {
+        "12.6.3.1": "Allied kingdoms (no penalty)",
+        "12.6.3.2": "Enemy-allied kingdoms (no penalty)",
+        "12.6.3.3": "Unclaimed territories (no penalty)"
+      },
+      "12.6.4_cumulative": false,
+      "12.6.5_deactivation_grace_period": "One movement phase to leave or incur penalty",
+      "12.6.6_voluntary_elimination": "Units may be voluntarily eliminated to avoid penalty"
+    }
+  },
+
+  "13_diplomacy_cards": {
+    "13.1_total": 45,
+    "13.2_basic_game_cards": 32,
+    "13.3_types": {
+      "13.3.1_diplomatic_ploys": {
+        "13.3.1.1_description": "Grant bonuses to diplomatic die roll",
+        "13.3.1.2_long_orations_plus_1": 3,
+        "13.3.1.3_long_orations_plus_2": 2,
+        "13.3.1.4_bribes_plus_1": 3,
+        "13.3.1.5_bribes_plus_2": 2,
+        "13.3.1.6_crass_bribes_plus_2": 3,
+        "13.3.1.7_threats_plus_1": 2,
+        "13.3.1.8_threats_plus_2": 2,
+        "13.3.1.9_marriages_plus_1": 3,
+        "13.3.1.10_marriage_plus_2": 1,
+        "13.3.1.11_blackmail_plus_2": 2,
+        "13.3.1.12_blackmail_plus_3": 1,
+        "13.3.1.13_white_magic_plus_1": 2,
+        "13.3.1.14_white_magic_plus_2": 2,
+        "13.3.1.15_black_magic_plus_2": 3,
+        "13.3.1.16_black_magic_plus_3": 1
+      },
+      "13.3.2_special_mercenary": {
+        "13.3.2.1_description": "Bring special mercenary units into service (Advanced Game only)",
+        "13.3.2.2_count": 13
+      }
+    },
+    "13.4_accumulation": "May be accumulated",
+    "13.5_trading": "May not be traded or exchanged",
+    "13.6_reshuffle": "When deck exhausted, shuffle discard pile",
+    "13.7_discard_timing": "Cards are discarded when used in diplomacy, regardless of success or failure of the diplomatic attempt"
+  },
+
+  "14_personality_cards": {
+    "14.1_total": 20,
+    "14.2_assignment": "One per non-player monarch (face down)",
+    "14.3_reveal": "Read aloud when ambassador visits monarch",
+    "14.4_effects": "Bonuses or penalties to diplomatic ploys, movement, combat"
+  },
+
+  "15_activating_violated_kingdom": {
+    "15.1_condition": "Placement hexes occupied by enemy combat units",
+    "15.2_procedure": "Ambassador placed anywhere in kingdom",
+    "15.3_unit_placement": "Normally and/or adjacent to occupied placement hexes",
+    "15.4_siege_on_neutral_castle": {
+      "15.4.1_effect": "Kingdom immediately joins alliance of any other player monarch",
+      "15.4.2_determination": "Random",
+      "15.4.3_aftermath": "Refigure siege conditions"
+    }
+  },
+
+  "16_allied_forces": {
+    "16.1_movement": "Allied forces are moved by the owning player monarch",
+    "16.2_stacking_restriction": "May not stack with forces of any other kingdom",
+    "16.3_coordination": "May conduct sieges, move, and attack at the same time (or in conjunction with) other friendly allied forces and/or forces of the player monarch",
+    "16.4_allied_castle_entry": "Combat units may enter and defend castles of allied kingdoms if the castles are unoccupied by combat units of allied kingdoms",
+    "16.5_mercenary_stacking": "Mercenaries may be stacked with any friendly forces"
+  },
+
+  "17_sieges": {
+    "17.1_requirements": {
+      "17.1.1_surrounded": "Castle surrounded by besieging units or Zones of Siege",
+      "17.1.2_no_outside_defenders": "No defending units 'outside' the castle",
+      "17.1.3_sufficient_force": "Besieging combat units >= defending combat units + intrinsic defense strength"
+    },
+    "17.2_cooperation_rule": "Different players may not combine strengths; separate sieges on same castle possible",
+    "17.3_zone_of_siege": {
+      "17.3.1_extends": "One hex around castle in either direction from adjacent combat unit",
+      "17.3.2_fleet_restriction": "Only extends to all-sea or seashore hexes",
+      "17.3.3_land_unit_restriction": "Only extends to all-land and seashore hexes",
+      "17.3.4_not_negated_by": "Friendly units to besieged castle"
+    },
+    "17.4_units_inside_outside": {
+      "17.4.1_tracking": "Invert units inside castle",
+      "17.4.2_outside_units_must_be": "Eliminated or forced to retreat before siege declared",
+      "17.4.3_attack_timing": "Outside units attacked during combat-resolution phase",
+      "17.4.4_retreat_into_castle": "Units may retreat before combat into castle",
+      "17.4.5_leader_inside_restriction": "Cannot add combat bonus to units outside castle",
+      "17.4.6_movement_cost": "No cost to move in/out of castle",
+      "17.4.7_movement_timing": "Only during owning player's movement phase or retreat/advance"
+    },
+    "17.5_intrinsic_defense_strength": {
+      "17.5.1_location": "Number printed on castle hex",
+      "17.5.2_use": "Defense against sieges only (cannot attack)",
+      "17.5.3_intact_castle_effect": "Enemy units cannot enter (except ambassadors)",
+      "17.5.4_plundered_castle_effect": "Defense strength lost"
+    },
+    "17.6_declaring_siege": {
+      "17.6.1_timing": "Instant three conditions are met",
+      "17.6.2_any_player_may_declare": true,
+      "17.6.3_retreat_before_combat_units": "Cannot count as besieging until after next movement phase"
+    },
+    "17.7_effects_of_siege": {
+      "17.7.1_reinforcements_blocked": "Cannot enter besieged castle",
+      "17.7.2_leaving_siege": {
+        "17.7.2.1_requirement": "Must attack all besieging units first",
+        "17.7.2.2_timing": "During siege-resolution phase",
+        "17.7.2.3_outcome": "Win or lose, survivors may move out through Zone of Siege",
+        "17.7.2.4_movement_after": "Full movement allowance, no further attacks",
+        "17.7.2.5_surrounded_castle": "Must clear a hex before leaving"
+      },
+      "17.7.3_attack_from_siege": {
+        "17.7.3.1_alternative_timing": "Combat phase instead of siege-resolution",
+        "17.7.3.2_advance_limit": "One hex only if all units in hex eliminated",
+        "17.7.3.3_outside_support": "Additional friendly forces outside may join attack",
+        "17.7.3.4_remain_outside": "Attacking units may remain outside, breaking siege"
+      }
+    },
+    "17.8_resolving_siege": {
+      "17.8.1_timing": "Besieging player's siege resolution phase",
+      "17.8.2_procedure": "Roll 1d6 (siege die roll)",
+      "17.8.3_result_1_to_5": "Nothing happens, siege continues",
+      "17.8.4_result_6": {
+        "17.8.4.1_castle_taken": true,
+        "17.8.4.2_units_inside_eliminated": true,
+        "17.8.4.3_leaders_fate_roll": true,
+        "17.8.4.4_castle_marker_removed": true,
+        "17.8.4.5_victory_points": "Awarded to winner",
+        "17.8.4.6_advance": "Some, all, or none may advance into castle hex"
+      },
+      "17.8.5_post_siege_restrictions": "Units making siege attack cannot otherwise move or attack"
+    },
+    "17.9_siege_die_roll_modifier": {
+      "17.9.1_formula": "(attacking_units / (defending_units + intrinsic_defense)) - 1",
+      "17.9.2_fractions": "Drop",
+      "17.9.3_add_to": "Attacker's siege die roll",
+      "17.9.4_example_1": "15 attackers vs 4 defense + 3 inside = 15 / 7 = 2.14, drop fraction = 2, subtract 1 = +1 modifier",
+      "17.9.5_example_2": "15 attackers vs 4 defense + 4 inside = 15 / 8 = 1.88, drop fraction = 1, subtract 1 = +0 modifier",
+      "17.9.6_example_3": "15 attackers vs 4 defense + 1 inside = 15 / 5 = 3, subtract 1 = +2 modifier"
+    },
+    "17.10_plundered_castle": {
+      "17.10.1_treated_as": "Nonexistent for siege/combat",
+      "17.10.2_retains": "Function as placement hex",
+      "17.10.3_royal_castle_note": "May continue as diplomacy location if not enemy occupied",
+      "17.10.4_occupation_effect": "Makes castle friendly for mercenary deployment",
+      "17.10.5_permanent": true
+    },
+    "17.11_fleets_at_sieges": {
+      "17.11.1_participation": "May contribute to attack and defense",
+      "17.11.2_restriction": "Cannot attack all-land hexes",
+      "17.11.3_port_siege_requirement": "At least one besieging fleet required",
+      "17.11.4_zone_coverage": "All adjacent all-sea hexes must be covered",
+      "17.11.5_seaborne_land_units": {
+        "17.11.5.1_counting": "Counted in siege along with fleets",
+        "17.11.5.2_zone_of_siege": "Do not exhibit (fleet still does)",
+        "17.11.5.3_participation": "Only in siege combat with besieged forces",
+        "17.11.5.4_attack_timing": "Only during besieged player's siege phase",
+        "17.11.5.5_regular_combat": "Not counted during regular combat phase"
+      }
+    },
+    "17.12_relieving_forces": {
+      "17.12.1_procedure": {
+        "17.12.1.1": "Move adjacent to besieged castle",
+        "17.12.1.2": "Attack any one hex of besieging units",
+        "17.12.1.3": "Win or lose, may advance into castle hex"
+      },
+      "17.12.2_surrounded_castle": {
+        "17.12.2.1_requirement": "Must clear a hex first",
+        "17.12.2.2_advance_exception": "May advance two hexes (into vacated hex, then castle hex)"
+      },
+      "17.12.3_post_relief": "Forces may remain outside or go inside"
+    },
+    "17.13_forced_peace": {
+      "17.13.1_trigger": "Allied royal castle plundered and occupied",
+      "17.13.2_roll_timing": "Occupying player's diplomacy phase",
+      "17.13.3_roll_type": "Special forced peace die roll",
+      "17.13.4_ambassador_action": "May conduct diplomacy elsewhere normally",
+      "17.13.5_success_roll": [5, 6],
+      "17.13.6_contested_modifier": "If dispossessed alliance attacked occupying forces last turn, only 6 succeeds",
+      "17.13.7_modifiers_not_applicable": ["Diplomacy cards", "Diplomatic Penalty"],
+      "17.13.8_alternative": "May use normal diplomacy to deactivate instead (no forced peace roll)",
+      "17.13.9_effects": {
+        "17.13.9.1_duration_roll": "1d6 game turns",
+        "17.13.9.2_during_forced_peace": "No ambassadors may work diplomacy in kingdom",
+        "17.13.9.3_unit_removal": "Remove all units at end of current player turn",
+        "17.13.9.4_card_return": "Identity and Personality cards returned to neutral pool",
+        "17.13.9.5_monarch_availability": "Place counter on time record track for availability turn"
+      },
+      "17.13.10_violation_effect": {
+        "17.13.10.1_diplomatic_penalty": true,
+        "17.13.10.2_forced_peace_ends": true,
+        "17.13.10.3_kingdom_available": "Immediately"
+      },
+      "17.13.11_unit_status": "Only regulars alive at deactivation will set up if reactivated",
+      "17.13.12_plundered_castles": "Remain plundered",
+      "17.13.13_player_monarchs": "Never subject to Forced Peace"
+    }
+  },
+
+  "18_movement": {
+    "18.1_general_rules": {
+      "18.1.1_who_moves": "Only player whose turn it is",
+      "18.1.2_direction": "Any direction or combination",
+      "18.1.3_movement_points": "Cannot be saved or transferred",
+      "18.1.4_minimum_movement": "Any unit may always move at least one hex"
+    },
+    "18.2_which_units_may_move": {
+      "18.2.1": "Player monarch's units",
+      "18.2.2": "Friendly mercenaries",
+      "18.2.3": "Allied kingdom units"
+    },
+    "18.3_which_units_may_not_move": {
+      "18.3.1": "Units under siege",
+      "18.3.2": "Units of kingdom that just activated",
+      "18.3.3": "Units of kingdom that just deactivated"
+    },
+    "18.4_stack_movement": {
+      "18.4.1_speed": "Slowest unit in stack",
+      "18.4.2_leaving_stack": "Units may be left behind",
+      "18.4.3_rejoining": "Units may continue independently"
+    },
+    "18.5_restrictions": {
+      "18.5.1_enemy_hex": "Cannot enter hex with enemy unit",
+      "18.5.2_allied_stacking": "Cannot end turn in same hex as different allied kingdom",
+      "18.5.3_exceed_allowance": "Cannot exceed movement allowance",
+      "18.5.4_terrain_cost_exceeded": "Cannot enter hex if terrain cost exceeds remaining MP",
+      "18.5.5_land_sea_boundaries": "Land units cannot cross all-sea hexsides; fleets cannot cross all-land hexsides",
+      "18.5.6_off_map": "Cannot voluntarily move off map; forced off = eliminated"
+    }
+  },
+
+  "19_terrain": {
+    "19.1_clear": {
+      "19.1.1_movement_cost": 1
+    },
+    "19.2_forest": {
+      "19.2.1_movement_cost": 2,
+      "19.2.2_special_movement": "Units with tree symbol treat as clear"
+    },
+    "19.3_minor_river": {
+      "19.3.1_movement_cost": 2,
+      "19.3.2_applies_to": "Moving into, across, or along"
+    },
+    "19.4_major_river": {
+      "19.4.1_crossing_requirement": "Must begin movement phase in hex",
+      "19.4.2_crossing_cost": 2,
+      "19.4.3_crossing_definition": "A land unit crossing of a major river is defined as moving from one major river hex to another major river hex, without a common neighbour that is neither a major river, sea, or lake"
+    },
+    "19.5_hills": {
+      "19.5.1_movement_cost": 2,
+      "19.5.2_special_movement": "Units with mountain symbol treat as clear"
+    },
+    "19.6_mountains": {
+      "19.6.1_movement_cost": 3,
+      "19.6.2_must_stop": true,
+      "19.6.3_combat_bonus": "+1 to defender's combat die roll",
+      "19.6.4_special_movement": "Units with mountain symbol need not stop (still pay 3 MP)"
+    },
+    "19.7_lakeshore": {
+      "19.7.1_movement_cost": 1,
+      "19.7.2_restriction": "Cannot cross all-lake hexsides",
+      "19.7.3_lakeshore_crossing_exception": "A land unit does not cross the lakeshore if it moves from one lakeshore hex to another lakeshore hex, and both lakeshore hexes have a mutual neighbour that is neither a sea, major river or a lake"
+    },
+    "19.8_seashore": {
+      "19.8.1_movement_cost": 1,
+      "19.8.2_fleet_restriction": "Cannot cross all-land hexsides",
+      "19.8.3_land_restriction": "Cannot cross all-sea hexsides",
+      "19.8.4_seashore_crossing_exception": "A land unit does not cross the seashore if it moves from one seashore hex to another seashore hex, and both seashore hexes have a mutual neighbour that is neither a sea, major river or a lake"
+    },
+    "19.9_open_sea": {
+      "19.9.1_movement_cost": 1,
+      "19.9.2_unit_restriction": "Fleets only (unless transported)"
+    },
+    "19.10_swamp": {
+      "19.10.1_movement_cost": 2
+    },
+    "19.11_isle_of_fright": {
+      "19.11.1_movement_cost": 1,
+      "19.11.2_restriction": "Fleets may only enter if effecting rescue"
+    },
+    "19.12_mountain_pass": {
+      "19.12.1_movement_cost": 2,
+      "19.12.2_combat_effect": "Defending units doubled in combat value"
+    },
+    "19.13_castle": {
+      "19.13.1_enemy_restriction": "Forbidden to enemy units (see sieges)",
+      "19.13.2_friendly_cost": 1,
+      "19.13.3_crown_symbol": "Indicates royal castle"
+    },
+    "19.14_seaport": {
+      "19.14.1_anchor_icon": true,
+      "19.14.2_movement_cost": 1,
+      "19.14.3_access": "Both fleets and land units"
+    },
+    "19.15_ancient_battlefield": {
+      "19.15.1_type": "Scenic hex",
+      "19.15.2_movement_cost": 1
+    },
+    "19.16_scenic_hex": {
+      "19.16.1_movement_cost": 1,
+      "19.16.2_exceptions": ["Serpent Bay (open sea)", "Stubstaff Keep (castle)"],
+      "19.16.3_terrain_icons": "Where terrain icons are included, apply those terrain effects (e.g., Willowik <L19> contains both forest and hills)",
+      "19.16.4_basic_game_access": "Units may end movement in scenic hexes"
+    },
+    "19.17_cumulative_terrain": {
+      "19.17.1_rule": "Terrain effects are cumulative",
+      "19.17.2_example": "Forested mountain = 5 MP, must stop"
+    }
+  },
+
+  "20_ports": {
+    "20.1_definition": "Seashore hexes enterable by both vessels and land units",
+    "20.2_castle_ports": {
+      "20.2.1_identifier": "Castle with anchor icon",
+      "20.2.2_applies_rules": ["Castle rules", "Port rules"],
+      "20.2.3_plundered_status": "Still functions as port",
+      "20.2.4_storm_protection": "Unlimited fleets",
+      "20.2.5_ownership_when_unoccupied": "Friendly to original owner",
+      "20.2.6_ownership_when_occupied": "Friendly to occupier",
+      "20.2.7_example": "Groat is just a castle, not a castle-port; Adeese (Shucassam's palace) is a castle-port"
+    },
+    "20.3_non_castle_ports": {
+      "20.3.1_examples": ["Bartertown", "Freeport", "Abandoned Village"],
+      "20.3.2_movement_cost": 1,
+      "20.3.3_storm_protection": "Single fleet only"
+    },
+    "20.4_mercenary_fleet_deployment": "May deploy at friendly non-castle port"
+  },
+
+  "21_fleet_movement": {
+    "21.1_terrain_types": ["All-sea", "Seashore", "Friendly ports"],
+    "21.2_cost": 1,
+    "21.3_restrictions": {
+      "21.3.1_enemy_fleet_hex": "Cannot enter",
+      "21.3.2_allied_fleet_stacking": "Cannot end movement in same hex",
+      "21.3.3_seashore_with_enemy_land": "May move through, cannot end there",
+      "21.3.4_lone_monarch_seashore": "No leader fate die roll when passing through"
+    }
+  },
+
+  "22_sea_transport": {
+    "22.1_capacity_per_fleet": {
+      "22.1.1_combat_units": 1,
+      "22.1.2_leaders": "Unlimited",
+      "22.1.3_devices": "Unlimited"
+    },
+    "22.2_embark_cost": 0,
+    "22.3_debark_cost": 0,
+    "22.4_debark_locations": ["Friendly port", "Seashore hex without mountains"],
+    "22.5_transported_unit_movement": "Cannot otherwise move that turn",
+    "22.6_fleet_continuation": "May continue moving, embarking, debarking until MP spent"
+  },
+
+  "23_zones_of_control": {
+    "23.1_existence": false,
+    "23.2_note": "Units control only hex occupied",
+    "23.3_adjacent_movement": "No penalty or delay"
+  },
+
+  "24_stacking": {
+    "24.1_same_kingdom_plus_mercenaries": {
+      "24.1.1_limit": "Unlimited",
+      "24.1.2_hex_sharing": true
+    },
+    "24.2_different_allied_kingdoms": {
+      "24.2.1_pass_through": true,
+      "24.2.2_end_turn_together": false
+    },
+    "24.3_mercenaries": {
+      "24.3.1_stack_with": "Any friendly units",
+      "24.3.2_movement_between_stacks": "No penalty"
+    },
+    "24.4_fleets": {
+      "24.4.1_same_rules": true
+    },
+    "24.5_allied_castle_entry": {
+      "24.5.1_condition": "Castle unoccupied by combat units of allied kingdoms",
+      "24.5.2_may_enter_and_defend": true,
+      "24.5.3_may_stack_with_ally_units": false
+    },
+    "24.6_examination": "Any player may examine opponent's stacks at any time"
+  },
+
+  "25_combat": {
+    "25.1_initiation": {
+      "25.1.1_who_attacks": "Player whose turn it is (attacker)",
+      "25.1.2_requirement": "Adjacent opposing units",
+      "25.1.3_optional": true
+    },
+    "25.2_retreat_before_combat": {
+      "25.2.1_timing": "After attack declared, before dice rolled",
+      "25.2.2_success_by_unit_type": {
+        "25.2.2.1_human": [4, 5, 6],
+        "25.2.2.2_non_human": [3, 4, 5, 6]
+      },
+      "25.2.3_stack_test_order": "Test unit with least chance first; success allows all to retreat",
+      "25.2.4_retreat_destination": "Adjacent hex not occupied by enemy",
+      "25.2.5_same_hex_retreat": "All units must retreat to same hex",
+      "25.2.6_displacement": "May displace friendly allied units if only option",
+      "25.2.7_displaced_unit_requirement": "Must have unoccupied adjacent hex",
+      "25.2.8_no_place_swap": "Two stacks may not simply trade places",
+      "25.2.9_no_retreat_if": "Completely surrounded by enemy combat units",
+      "25.2.10_second_retreat": "Not allowed if still adjacent to attacking units",
+      "25.2.11_attacker_advance": "May advance into vacated hex, no further attacks"
+    },
+    "25.3_resolution": {
+      "25.3.1_each_side_rolls": "1d6 (combat die roll)",
+      "25.3.2_winner": "Higher modified roll",
+      "25.3.3_loser_losses": "Difference between modified rolls",
+      "25.3.4_tie_losses": "Both sides lose units equal to the tied die result",
+      "25.3.5_loss_selection": "Owning player chooses which units eliminated"
+    },
+    "25.4_combat_die_roll_modifier": {
+      "25.4.1_formula": "(larger_force / smaller_force) - 1",
+      "25.4.2_fractions": "Drop",
+      "25.4.3_add_to": "Larger force's die roll",
+      "25.4.4_minimum_defender_bonus": "+1 is the minimum (floor) when defenders outnumber attackers; the formula result is used if higher than +1"
+    },
+    "25.5_attack_declaration": {
+      "25.5.1_timing": "All attacks stated before any resolved",
+      "25.5.2_resolution_order": "Attacker's choice",
+      "25.5.3_results_immediate": true
+    },
+    "25.6_seaborne_units": {
+      "25.6.1_aboard_eliminated_fleet": "Also eliminated"
+    },
+    "25.7_which_units_may_attack": {
+      "25.7.1_may_attack": {
+        "25.7.1.1": "Units of player whose turn it is",
+        "25.7.1.2": "Replacements and reinforcements entered this turn"
+      },
+      "25.7.2_may_not_attack": {
+        "25.7.2.1": "Units that declared/made siege attack this turn",
+        "25.7.2.2": "Land units aboard fleets (except siege combat)",
+        "25.7.2.3": "Units of kingdom activated this turn",
+        "25.7.2.4": "Units of kingdom deactivated this turn"
+      }
+    },
+    "25.8_target_restrictions": {
+      "25.8.1_may_attack": "Any adjacent enemy units except those inside castles",
+      "25.8.2_adjacency_required": true
+    },
+    "25.9_combined_attacks": {
+      "25.9.1_multiple_hexes_attacking_one": "Combine strengths",
+      "25.9.2_friendly_allied_combination": true
+    },
+    "25.10_attack_limits": {
+      "25.10.1_unit_attack_limit": "Once per player turn",
+      "25.10.2_hex_attack_limit": "Once per player turn by each player",
+      "25.10.3_multiple_player_attacks": "Same hex may be attacked by different players on their turns"
+    },
+    "25.11_terrain_effects": {
+      "25.11.1_mountains": "+1 to defender's combat die roll",
+      "25.11.2_mountain_pass": "Defender's combat strength doubled",
+      "25.11.3_defensive_only": true,
+      "25.11.4_cross_boundary_restrictions": {
+        "25.11.4.1_land_vs_all_sea": "Cannot attack",
+        "25.11.4.2_fleet_vs_all_land": "Cannot attack"
+      }
+    },
+    "25.12_multiple_unit_combat": {
+      "25.12.1_stack_attack_rule": "If any unit attacks, all must attack",
+      "25.12.2_split_attacks": "Units in stack may attack different adjacent hexes",
+      "25.12.3_all_defenders_attacked": "All units in hex attacked as single total"
+    },
+    "25.13_advance_after_combat": {
+      "25.13.1_trigger": "All defenders retreat or eliminated",
+      "25.13.2_units_advancing": "Some, all, or none of attacking units",
+      "25.13.3_hex_limit": 1,
+      "25.13.4_exception": "Relieving siege may advance 2 hexes"
+    }
+  },
+
+  "26_leaders": {
+    "26.1_types": ["Monarchs (player and non-player)"],
+    "26.2_combat_strength": 0,
+    "26.3_leader_movement_bonus": {
+      "26.3.1_applies_to": "One stack containing own regulars and/or mercenaries",
+      "26.3.2_effect": "Stack uses leader's movement allowance and terrain bonuses",
+      "26.3.3_requirement": "Units must begin and end turn stacked with leader",
+      "26.3.4_partial_movement": "Units may be added/left behind during move",
+      "26.3.5_independent_movement": "Units using leader-assisted movement cannot move independently",
+      "26.3.6_terrain_transfer": "Unit terrain bonuses do not transfer to leader"
+    },
+    "26.4_leader_combat_bonus": {
+      "26.4.1_source": "Personality cards with combat bonus",
+      "26.4.2_stacking_bonuses": "Multiple leader bonuses may be combined",
+      "26.4.3_siege_applicability": false
+    },
+    "26.5_leader_alone": {
+      "26.5.1_pass_through_enemy": true,
+      "26.5.2_requires_fate_roll": true
+    },
+    "26.6_leader_fate_die_roll": {
+      "26.6.1_triggers": {
+        "26.6.1.1": "Units in leader's stack lost in combat",
+        "26.6.1.2": "Lone leader passes through enemy stack",
+        "26.6.1.3": "Enemy stack passes through lone leader's hex",
+        "26.6.1.4": "Castle containing leader falls to siege",
+        "26.6.1.5": "Leader attempts to leave besieged castle alone",
+        "26.6.1.6": "Fleet containing leader lost at sea"
+      },
+      "26.6.2_results": {
+        "26.6.2.1_roll_1": "Leader Killed",
+        "26.6.2.2_roll_2_to_5": "No Effect",
+        "26.6.2.3_roll_6": "Leader Captured"
+      },
+      "26.6.3_frequency_limit": {
+        "26.6.3.1_per_player_turn": 1,
+        "26.6.3.2_per_enemy_movement_phase": 1
+      },
+      "26.6.4_exceptions": {
+        "26.6.4.1_advance_on_eliminated_stack": "Only one roll (not additional for advance)",
+        "26.6.4.2_exit_besieged_through_unit": "Only one roll"
+      },
+      "26.6.5_enemy_forcing_roll": "Any non-fleet unit may enter lone leader's hex"
+    },
+    "26.7_lone_leader_rule": "Cannot be attacked (only fate rolls and assassination)"
+  },
+
+  "27_leader_adrift_at_sea": {
+    "27.1_trigger": "Leader without fleet on open sea (combat or events)",
+    "27.2_fate_roll_modifier": {
+      "27.2.1_death": 1,
+      "27.2.2_capture": 6,
+      "27.2.3_no_effect": [2, 3, 4, 5]
+    },
+    "27.3_no_enemy_fleet_present": "Immediately placed on Isle of Fright",
+    "27.4_while_on_isle": "-1 on all combat and siege rolls for monarch's troops",
+    "27.5_rescue": "Friendly fleet moves into hex",
+    "27.6_enemy_capture": "Not possible at Isle of Fright",
+    "27.7_combat_unit_unload": "Not possible (reefs)",
+    "27.8_fleet_entry_restriction": "Only for rescue",
+    "27.9_diplomacy": "Ambassadors may work on castaway monarch"
+  },
+
+  "28_death_and_capture_of_monarchs": {
+    "28.1_non_player_monarch_death": {
+      "28.1.1_immediate_effect": "Kingdom enters confusion",
+      "28.1.2_confusion_duration": "1d6 turns",
+      "28.1.3_during_confusion": {
+        "28.1.3.1_regulars_behavior": "Defend normally, cannot move/siege/initiate combat",
+        "28.1.3.2_duration": "Remainder of current player turn",
+        "28.1.3.3_at_turn_end": "Remove all units from map, place on identity card",
+        "28.1.3.4_monarch_counter": "Place on Time Record Track for availability turn",
+        "28.1.3.5_diplomacy": "No ambassador may work in kingdom"
+      },
+      "28.1.4_end_of_confusion": {
+        "28.1.4.1_new_monarch": "Draw new personality card (face down under identity)",
+        "28.1.4.2_old_personality": "Discarded"
+      },
+      "28.1.5_border_violation_during_confusion": {
+        "28.1.5.1_diplomatic_penalty": true,
+        "28.1.5.2_new_monarch_crowned": "Immediately (new personality card)",
+        "28.1.5.3_kingdom_available": "Immediately"
+      },
+      "28.1.6_eliminated_regulars": "Remain eliminated (only replaced via Random Events)"
+    },
+    "28.2_player_monarch_death_or_capture": {
+      "28.2.1_effect": "Player out of game",
+      "28.2.2_allies": "All deactivate",
+      "28.2.3_kingdom": "Enters confusion",
+      "28.2.4_after_confusion": {
+        "28.2.4.1_personality_card": "Drawn for new non-player monarch",
+        "28.2.4.2_kingdom_available": "For diplomacy to other players"
+      },
+      "28.2.5_victory_points": "Player keeps previously earned points",
+      "28.2.6_potential_win": "Eliminated player can win if highest points",
+      "28.2.7_reentry_option": {
+        "28.2.7.1_timing": "Turn after elimination (if there is one)",
+        "28.2.7.2_cost": "Relinquish all accumulated victory points",
+        "28.2.7.3_selection": "Randomly from available non-player kingdoms (not in confusion)",
+        "28.2.7.4_approval": "All other players must approve"
+      }
+    },
+    "28.3_non_player_monarch_capture": {
+      "28.3.1_prison_placement": "Nearest unbesieged castle controlled by captor",
+      "28.3.2_no_castle_options": ["Execute immediately", "Set free"],
+      "28.3.3_victory_points": "Awarded for capture regardless",
+      "28.3.4_prisoner_status": {
+        "28.3.4.1_transfer": "Cannot be transferred",
+        "28.3.4.2_actions": "Incapable of offensive or defensive action",
+        "28.3.4.3_garrison": "Castle intrinsic defense serves as garrison"
+      },
+      "28.3.5_release_conditions": {
+        "28.3.5.1": "Successful siege of prison castle by prisoner's own/allied troops",
+        "28.3.5.2": "Captor's kingdom deactivates"
+      },
+      "28.3.6_release_placement": "Nearest unplundered, unbesieged friendly castle (or nearest friendly unit)"
+    },
+    "28.4_executing_prisoner": {
+      "28.4.1_timing": "Immediately upon capture or any subsequent diplomacy phase",
+      "28.4.2_victory_points": "None for execution (capture points already awarded)",
+      "28.4.3_penalty": "Permanent diplomatic penalty in slain monarch's kingdom"
+    },
+    "28.5_forcing_peace_on_prisoner": {
+      "28.5.1_timing": "Each turn during jailer's diplomacy phase",
+      "28.5.2_in_addition_to": "Normal diplomacy elsewhere",
+      "28.5.3_success_roll": [5, 6],
+      "28.5.4_siege_modifier": "If prison castle besieged by prisoner's forces/allies, only 6 succeeds",
+      "28.5.5_modifiers_not_applicable": ["Diplomacy cards", "Diplomatic Penalty"],
+      "28.5.6_alternative": "Normal diplomacy on captive (uses ambassador, cards apply)",
+      "28.5.7_occupied_royal_castle": "Only jailer may make forced peace roll",
+      "28.5.8_success_effect": "See 17.13 forced_peace rules"
+    }
+  },
+
+  "29_victory_conditions": {
+    "29.1_determination": "Victory is determined by a system of Victory Points",
+    "29.2_timed_victory": "The player who amasses the most points after 20 turns is the winner, the player with the second highest total comes in second, and so on",
+    "29.3_victory_points_table": {
+      "29.3.1_plunder_enemy_castle": "5 × intrinsic defense strength",
+      "29.3.2_plunder_enemy_royal_castle": "10 × intrinsic defense strength",
+      "29.3.3_capture_enemy_allied_monarch": 30,
+      "29.3.4_kill_enemy_allied_monarch": 40,
+      "29.3.5_capture_or_kill_enemy_player_monarch": 70
+    },
+    "29.4_scoring_notes": {
+      "29.4.1_assassination_kill": "No victory points",
+      "29.4.2_execute_prisoner": "No victory points",
+      "29.4.3_castle_plunder": "Once per game per castle",
+      "29.4.4_plundered_status": "Permanent",
+      "29.4.5_capture_escape_recapture": "Points awarded each time",
+      "29.4.6_posthumous_victory": "Eliminated player can win if highest points"
+    }
+  },
+
+  "30_special_kingdom_rules": {
+    "30.1_trolls": {
+      "30.1.1_setup": "Four separate locations: Stone Face (capital), The Gathering, The Crag, The Shunned Vale",
+      "30.1.2_no_castles": "Troll locations are cities without castles. They have no intrinsic defense strength and cannot be besieged in the traditional sense. Enemy units may freely enter Troll locations.",
+      "30.1.3_monarch_start": "The Troll monarch starts at Stone Face (col 6, row 13)",
+      "30.1.4_regeneration": {
+        "30.1.4.1_timing": "Beginning of each turn",
+        "30.1.4.2_effect": "Replace one eliminated regular unit",
+        "30.1.4.3_in_addition_to": "Random Events replacements",
+        "30.1.4.4_placement_blocked": "If hex enemy occupied, cannot regenerate that turn",
+        "30.1.4.5_same_turn_loss": "Regular lost through Random Events cannot regenerate same turn"
+      }
+    },
+    "30.2_goblins": {
+      "30.2.1_nithmere_mountains_deployment": {
+        "30.2.1.1_units": "Goblins labeled 'Nithmere Mts.'",
+        "30.2.1.2_location": "Mountain and pass hexes of Zorn territory",
+        "30.2.1.3_limit": "One per hex",
+        "30.2.1.4_adjacency": "No two may be adjacent",
+        "30.2.1.5_applies_to": ["Setup", "Replacements"],
+        "30.2.1.6_total_units": 8,
+        "30.2.1.7_example_deployment": {
+          "30.2.1.7.1_note": "This is one valid deployment; other configurations meeting the rules are permitted",
+          "30.2.1.7.2_hexes": [[21, 7], [20, 6], [21, 5], [20, 4], [18, 4], [18, 7], [18, 0], [19, 1]]
+        }
+      }
+    },
+    "30.3_dwarves": {
+      "30.3.1_setup": "Three separate locations",
+      "30.3.2_locations": ["Aws Noir", "Alzak", "Rosengg"],
+      "30.3.3_unity": "All related, fight for common cause"
+    }
+  },
+
+  "31_cities_vs_castles": {
+    "31.1_distinction": "Not all faction cities are castles. Units always deploy from cities, but only cities with castle markers provide intrinsic defense.",
+    "31.2_cities_without_castles": {
+      "31.2.1_examples": ["Farnot (Hothior)", "Yando (Muetar)", "Lepers (Shucassam)", "Gorpin (Immer)", "All Troll locations"],
+      "31.2.2_effect": "These locations serve as deployment hexes but have no intrinsic defense and cannot be besieged"
+    },
+    "31.3_castle_locations": {
+      "31.3.1_identification": "Hexes with 'castle: true' terrain marker in hexmap",
+      "31.3.2_defense": "Provide intrinsic defense strength for siege rules"
+    }
+  }
+}

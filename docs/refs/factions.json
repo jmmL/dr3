@@ -1,1 +1,486 @@
-{"v":"1.0.0","f":{"$h":["id","n","r","c","coa","notes","msl"],"_":[["hothior","Hothior","human","#FE0000","🦅"],["mivior","Mivior","human","#F8A0D2","🦁"],["muetar","Muetar","human","#FFFF19","🐺"],["shucassam","Shucassam","human","#F4AC48","🐍"],["immer","Immer","human","#BD9FF7","🐉"],["pon","Pon","human","#1EA5FF","🦂"],["rombune","Rombune","human","#E52E96","🦇"],["neuth","Neuth","elves","#30C44C","🧝"],["zorn","Zorn","goblins","#7AB5A1","👺","Total includes 8 Nithmere Mountain units deployed separately per rule 30.2"],["ghem","Ghem","dwarves","#ACACAC","⛏️"],["trolls","Trolls","trolls","#A86051","🧌","Trolls have no castles; their locations are open terrain. See rule 30.1 for special rules.",[6,13]]]},"cities":{"$h":["fid","id","n","p","a","sf","cap"],"_":[["hothior","port_lork","Port Lork",[9,17],2,1,true],["hothior","farnot","Farnot",[10,19],1],["hothior","castle_lapspell","Castle Lapspell",[13,18],2,1],["hothior","tadafat","Tadafat",[10,14],2],["mivior","colist","Colist",[4,21],3,1,true],["mivior","addat","Addat",[3,12],3,1],["mivior","boliske","Boliske",[3,18],2,1],["mivior","boran","Boran",[5,16],1,1],["muetar","pennol","Pennol",[19,11],3,null,true],["muetar","plibba","Plibba",[17,14],2],["muetar","beolon","Beolon",[21,16],2],["muetar","basimar","Basimar",[24,9],3],["muetar","groat","Groat",[23,15],2],["muetar","yando","Yando",[19,16],1],["shucassam","adeese","Adeese",[24,23],4,1,true],["shucassam","kuzdol","Kuzdol",[19,23],3],["shucassam","lepers","Lepers",[27,25],1],["shucassam","zefnar","Zefnar",[11,22],3,2],["immer","castle_altarr","Castle Altarr",[14,6],3,null,true],["immer","gap_castle","Gap Castle",[18,5],1],["immer","gorpin","Gorpin",[15,3],1],["immer","muscaster","Muscaster",[15,8],2],["immer","wirzor","Wirzor",[12,3],2],["pon","marzarbol","Marzarbol",[28,17],3,null,true],["pon","crow_s_nest","Crow's Nest",[26,13],2],["pon","grugongi","Grugongi",[30,20],2,1],["rombune","the_golkus","The Golkus",[5,27],2,1,true],["rombune","parros","Parros",[11,28],2,1],["rombune","thores","Thores",[2,29],1,1],["rombune","jipols","Jipols",[19,28],1,1],["neuth","ider_bolis","Ider Bolis",[4,5],6,null,true],["zorn","the_pits","The Pits",[23,2],3,null,true],["ghem","mines_of_rosengg","Mines of Rosengg",[32,9],3,null,true],["ghem","aws_noir","Aws Noir",[2,1],3],["ghem","alzak","Alzak",[33,14],2],["trolls","stone_face","Stone Face",[6,13],2,null,true],["trolls","the_gathering","The Gathering",[33,21],2],["trolls","the_crag","The Crag",[27,2],2],["trolls","the_shunned_vale","The Shunned Vale",[17,28],2]]}}
+{
+  "v": "1.0.0",
+  "d": "2026-01-24T12:10:39.975Z",
+  "f": [
+    {
+      "id": "hothior",
+      "n": "Hothior",
+      "r": "human",
+      "c": "#FE0000",
+      "coa": "🦅",
+      "cities": [
+        {
+          "n": "Port Lork",
+          "id": "port_lork",
+          "p": [
+            9,
+            17
+          ],
+          "a": 2,
+          "sf": 1,
+          "cap": true
+        },
+        {
+          "n": "Farnot",
+          "id": "farnot",
+          "p": [
+            10,
+            19
+          ],
+          "a": 1
+        },
+        {
+          "n": "Castle Lapspell",
+          "id": "castle_lapspell",
+          "p": [
+            13,
+            18
+          ],
+          "a": 2,
+          "sf": 1
+        },
+        {
+          "n": "Tadafat",
+          "id": "tadafat",
+          "p": [
+            10,
+            14
+          ],
+          "a": 2
+        }
+      ]
+    },
+    {
+      "id": "mivior",
+      "n": "Mivior",
+      "r": "human",
+      "c": "#F8A0D2",
+      "coa": "🦁",
+      "cities": [
+        {
+          "n": "Colist",
+          "id": "colist",
+          "p": [
+            4,
+            21
+          ],
+          "a": 3,
+          "sf": 1,
+          "cap": true
+        },
+        {
+          "n": "Addat",
+          "id": "addat",
+          "p": [
+            3,
+            12
+          ],
+          "a": 3,
+          "sf": 1
+        },
+        {
+          "n": "Boliske",
+          "id": "boliske",
+          "p": [
+            3,
+            18
+          ],
+          "a": 2,
+          "sf": 1
+        },
+        {
+          "n": "Boran",
+          "id": "boran",
+          "p": [
+            5,
+            16
+          ],
+          "a": 1,
+          "sf": 1
+        }
+      ]
+    },
+    {
+      "id": "muetar",
+      "n": "Muetar",
+      "r": "human",
+      "c": "#FFFF19",
+      "coa": "🐺",
+      "cities": [
+        {
+          "n": "Pennol",
+          "id": "pennol",
+          "p": [
+            19,
+            11
+          ],
+          "a": 3,
+          "cap": true
+        },
+        {
+          "n": "Plibba",
+          "id": "plibba",
+          "p": [
+            17,
+            14
+          ],
+          "a": 2
+        },
+        {
+          "n": "Beolon",
+          "id": "beolon",
+          "p": [
+            21,
+            16
+          ],
+          "a": 2
+        },
+        {
+          "n": "Basimar",
+          "id": "basimar",
+          "p": [
+            24,
+            9
+          ],
+          "a": 3
+        },
+        {
+          "n": "Groat",
+          "id": "groat",
+          "p": [
+            23,
+            15
+          ],
+          "a": 2
+        },
+        {
+          "n": "Yando",
+          "id": "yando",
+          "p": [
+            19,
+            16
+          ],
+          "a": 1
+        }
+      ]
+    },
+    {
+      "id": "shucassam",
+      "n": "Shucassam",
+      "r": "human",
+      "c": "#F4AC48",
+      "coa": "🐍",
+      "cities": [
+        {
+          "n": "Adeese",
+          "id": "adeese",
+          "p": [
+            24,
+            23
+          ],
+          "a": 4,
+          "sf": 1,
+          "cap": true
+        },
+        {
+          "n": "Kuzdol",
+          "id": "kuzdol",
+          "p": [
+            19,
+            23
+          ],
+          "a": 3
+        },
+        {
+          "n": "Lepers",
+          "id": "lepers",
+          "p": [
+            27,
+            25
+          ],
+          "a": 1
+        },
+        {
+          "n": "Zefnar",
+          "id": "zefnar",
+          "p": [
+            11,
+            22
+          ],
+          "a": 3,
+          "sf": 2
+        }
+      ]
+    },
+    {
+      "id": "immer",
+      "n": "Immer",
+      "r": "human",
+      "c": "#BD9FF7",
+      "coa": "🐉",
+      "cities": [
+        {
+          "n": "Castle Altarr",
+          "id": "castle_altarr",
+          "p": [
+            14,
+            6
+          ],
+          "a": 3,
+          "cap": true
+        },
+        {
+          "n": "Gap Castle",
+          "id": "gap_castle",
+          "p": [
+            18,
+            5
+          ],
+          "a": 1
+        },
+        {
+          "n": "Gorpin",
+          "id": "gorpin",
+          "p": [
+            15,
+            3
+          ],
+          "a": 1
+        },
+        {
+          "n": "Muscaster",
+          "id": "muscaster",
+          "p": [
+            15,
+            8
+          ],
+          "a": 2
+        },
+        {
+          "n": "Wirzor",
+          "id": "wirzor",
+          "p": [
+            12,
+            3
+          ],
+          "a": 2
+        }
+      ]
+    },
+    {
+      "id": "pon",
+      "n": "Pon",
+      "r": "human",
+      "c": "#1EA5FF",
+      "coa": "🦂",
+      "cities": [
+        {
+          "n": "Marzarbol",
+          "id": "marzarbol",
+          "p": [
+            28,
+            17
+          ],
+          "a": 3,
+          "cap": true
+        },
+        {
+          "n": "Crow's Nest",
+          "id": "crow_s_nest",
+          "p": [
+            26,
+            13
+          ],
+          "a": 2
+        },
+        {
+          "n": "Grugongi",
+          "id": "grugongi",
+          "p": [
+            30,
+            20
+          ],
+          "a": 2,
+          "sf": 1
+        }
+      ]
+    },
+    {
+      "id": "rombune",
+      "n": "Rombune",
+      "r": "human",
+      "c": "#E52E96",
+      "coa": "🦇",
+      "cities": [
+        {
+          "n": "The Golkus",
+          "id": "the_golkus",
+          "p": [
+            5,
+            27
+          ],
+          "a": 2,
+          "sf": 1,
+          "cap": true
+        },
+        {
+          "n": "Parros",
+          "id": "parros",
+          "p": [
+            11,
+            28
+          ],
+          "a": 2,
+          "sf": 1
+        },
+        {
+          "n": "Thores",
+          "id": "thores",
+          "p": [
+            2,
+            29
+          ],
+          "a": 1,
+          "sf": 1
+        },
+        {
+          "n": "Jipols",
+          "id": "jipols",
+          "p": [
+            19,
+            28
+          ],
+          "a": 1,
+          "sf": 1
+        }
+      ]
+    },
+    {
+      "id": "neuth",
+      "n": "Neuth",
+      "r": "elves",
+      "c": "#30C44C",
+      "coa": "🧝",
+      "cities": [
+        {
+          "n": "Ider Bolis",
+          "id": "ider_bolis",
+          "p": [
+            4,
+            5
+          ],
+          "a": 6,
+          "cap": true
+        }
+      ]
+    },
+    {
+      "id": "zorn",
+      "n": "Zorn",
+      "r": "goblins",
+      "c": "#7AB5A1",
+      "coa": "👺",
+      "cities": [
+        {
+          "n": "The Pits",
+          "id": "the_pits",
+          "p": [
+            23,
+            2
+          ],
+          "a": 3,
+          "cap": true
+        }
+      ],
+      "notes": "Total includes 8 Nithmere Mountain units deployed separately per rule 30.2"
+    },
+    {
+      "id": "ghem",
+      "n": "Ghem",
+      "r": "dwarves",
+      "c": "#ACACAC",
+      "coa": "⛏️",
+      "cities": [
+        {
+          "n": "Mines of Rosengg",
+          "id": "mines_of_rosengg",
+          "p": [
+            32,
+            9
+          ],
+          "a": 3,
+          "cap": true
+        },
+        {
+          "n": "Aws Noir",
+          "id": "aws_noir",
+          "p": [
+            2,
+            1
+          ],
+          "a": 3
+        },
+        {
+          "n": "Alzak",
+          "id": "alzak",
+          "p": [
+            33,
+            14
+          ],
+          "a": 2
+        }
+      ]
+    },
+    {
+      "id": "trolls",
+      "n": "Trolls",
+      "r": "trolls",
+      "c": "#A86051",
+      "coa": "🧌",
+      "cities": [
+        {
+          "n": "Stone Face",
+          "id": "stone_face",
+          "p": [
+            6,
+            13
+          ],
+          "a": 2,
+          "cap": true
+        },
+        {
+          "n": "The Gathering",
+          "id": "the_gathering",
+          "p": [
+            33,
+            21
+          ],
+          "a": 2
+        },
+        {
+          "n": "The Crag",
+          "id": "the_crag",
+          "p": [
+            27,
+            2
+          ],
+          "a": 2
+        },
+        {
+          "n": "The Shunned Vale",
+          "id": "the_shunned_vale",
+          "p": [
+            17,
+            28
+          ],
+          "a": 2
+        }
+      ],
+      "msl": [
+        6,
+        13
+      ],
+      "notes": "Trolls have no castles; their locations are open terrain. See rule 30.1 for special rules."
+    }
+  ]
+}
