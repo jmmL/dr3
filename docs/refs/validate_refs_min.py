@@ -20,6 +20,39 @@ REFS = ROOT / "docs" / "refs"
 
 ADVANCED_FACTIONS = {"blackhand", "eaters"}
 SNAKE_CASE_RE = re.compile(r"^[a-z0-9]+(?:_[a-z0-9]+)*$")
+RULE_SECTION_KEYS = {
+    "1_game",
+    "2_components",
+    "3_setup",
+    "4_unit_types",
+    "5_faction_classification",
+    "6_special_terrain_capabilities",
+    "7_sequence_of_play",
+    "8_random_events",
+    "9_mercenary_units",
+    "10_friendly_location_definition",
+    "11_random_determination",
+    "12_diplomacy",
+    "13_diplomacy_cards",
+    "14_personality_cards",
+    "15_activating_violated_kingdom",
+    "16_allied_forces",
+    "17_sieges",
+    "18_movement",
+    "19_terrain",
+    "20_ports",
+    "21_fleet_movement",
+    "22_sea_transport",
+    "23_zones_of_control",
+    "24_stacking",
+    "25_combat",
+    "26_leaders",
+    "27_leader_adrift_at_sea",
+    "28_death_and_capture_of_monarchs",
+    "29_victory_conditions",
+    "30_special_kingdom_rules",
+    "31_cities_vs_castles",
+}
 
 
 def load(path: Path):
@@ -87,6 +120,29 @@ def validate_abilities(abilities_data: dict):
         len(ability_ids) == len(set(ability_ids)),
         "Duplicate abilityId values in abilities.min.json"
     )
+
+
+def validate_personality_cards(cards_data: dict):
+    """Validate columnar personality_cards format."""
+    cards = expand_columnar(cards_data)
+    card_ids = [card["id"] for card in cards if "id" in card]
+    assert_true(
+        len(card_ids) == len(set(card_ids)),
+        "Duplicate personality card id values in personality_cards.min.json"
+    )
+    for card in cards:
+        assert_true(
+            isinstance(card.get("id"), int),
+            "Non-integer personality card id in personality_cards.min.json"
+        )
+        assert_true(
+            isinstance(card.get("n"), str) and card.get("n"),
+            "Missing personality card name in personality_cards.min.json"
+        )
+        assert_true(
+            isinstance(card.get("d"), str) and card.get("d"),
+            "Missing personality card description in personality_cards.min.json"
+        )
 
 
 def validate_factions(factions_data: dict):
@@ -202,6 +258,19 @@ def validate_hexmap(hexmap_data: dict, city_ids: set[str], mode: str):
                     raise AssertionError("Advanced faction present in hexmap.min.json")
 
 
+def validate_rules(rules_data: dict):
+    """Validate dr3_rules minified format."""
+    assert_true(
+        isinstance(rules_data, dict),
+        "dr3_rules.min.json must be a JSON object"
+    )
+    missing_sections = RULE_SECTION_KEYS - set(rules_data.keys())
+    assert_true(
+        not missing_sections,
+        f"dr3_rules.min.json missing sections: {sorted(missing_sections)}"
+    )
+
+
 def validate_mode_split(starting_data: dict, mode: str):
     """Validate mode split using columnar format (no string interning)."""
     units = expand_columnar(starting_data)
@@ -231,8 +300,12 @@ def main():
     starting_units_advanced = load(REFS / "starting_units_advanced.min.json")
     hexmap = load(REFS / "hexmap.min.json")
     hexmap_advanced = load(REFS / "hexmap_advanced.min.json")
+    personality_cards = load(REFS / "personality_cards.min.json")
+    rules = load(REFS / "dr3_rules.min.json")
 
     validate_abilities(abilities)
+    validate_personality_cards(personality_cards)
+    validate_rules(rules)
     validate_factions(factions)
     validate_factions(factions_advanced)
 
