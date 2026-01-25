@@ -158,7 +158,8 @@
       "8.3.6_regular_limit_respected"
     ],
     "8.3.7": [
-      "8.3.7_immediate_action_for_replacements"
+      "8.3.7_immediate_action_for_replacements",
+      "8.3.7_random_event_during_siege"
     ],
     "8.3.8": [
       "8.3.8_impossible_event_no_event"
@@ -166,8 +167,50 @@
     "8.3.9": [
       "8.3.9_no_transfer_between_players"
     ],
+    "9.1": [
+      "9.1_mercenaries_from_random_events"
+    ],
+    "9.2": [
+      "9.2_placement_friendly_castle",
+      "9.2_placement_besieged_castle_denied"
+    ],
+    "9.3": [
+      "9.3_stacking_with_friendly_units"
+    ],
+    "9.4.1": [
+      "9.4.1_type_unavailable_defection"
+    ],
+    "9.4.2": [
+      "9.4.2_steal_and_redeploy"
+    ],
+    "9.4.3": [
+      "9.4.3_pool_depleted_steal_any"
+    ],
+    "9.4.4": [
+      "9.4.4_transporting_fleet_protected"
+    ],
+    "10.1.1": [
+      "10.1.1_friendly_location_own_kingdom"
+    ],
+    "10.1.2": [
+      "10.1.2_friendly_location_allied_kingdom"
+    ],
+    "10.1.3": [
+      "10.1.3_plundered_castle_with_friendly_unit",
+      "10.1.3_plundered_castle_without_friendly_unit"
+    ],
+    "11.1": [
+      "11.1_random_die_faces_match_options"
+    ],
+    "11.2.1": [
+      "11.2.1_random_selection_three_allies"
+    ],
+    "11.2.2": [
+      "11.2.2_random_neutral_kingdoms"
+    ],
     "12.1.1": [
-      "12.1.1_diplomacy_only_between"
+      "12.1.1_diplomacy_only_between",
+      "12.1.1_diplomacy_with_captured_monarch"
     ],
     "12.1.2": [
       "12.1.2_player_alliances_not_binding"
@@ -199,7 +242,8 @@
     ],
     "12.3.2": [
       "12.3.2_deactivate_threshold",
-      "12.3.2_deactivate_effects"
+      "12.3.2_deactivate_effects",
+      "12.3.2_deactivation_breaks_siege_coordination"
     ],
     "12.3.3": [
       "12.3.3_assassination_limit_once",
@@ -296,6 +340,22 @@
     "14.4": [
       "14.4_personality_effects_apply"
     ],
+    "16.1": [
+      "16.1_allied_forces_moved_by_owner"
+    ],
+    "16.2": [
+      "16.2_allied_stacking_restricted"
+    ],
+    "16.3": [
+      "16.3_allied_forces_coordinate_actions"
+    ],
+    "16.4": [
+      "16.4_allied_castle_entry_allowed",
+      "16.4_allied_castle_entry_blocked"
+    ],
+    "16.5": [
+      "16.5_mercenary_stacking_with_friendly"
+    ],
     "17.1.1": [
       "17.1.1_castle_surrounded_required"
     ],
@@ -354,7 +414,8 @@
       "17.5.4_plundered_castle_no_defense"
     ],
     "17.6.1": [
-      "17.6.1_siege_declared_when_conditions_met"
+      "17.6.1_siege_declared_when_conditions_met",
+      "12.3.2_deactivation_breaks_siege_coordination"
     ],
     "17.6.2": [
       "17.6.2_any_player_may_declare"
@@ -376,7 +437,8 @@
       "17.7.3_attack_from_siege_breaks_siege"
     ],
     "17.8.1": [
-      "17.8.1_resolution_in_siege_phase"
+      "17.8.1_resolution_in_siege_phase",
+      "8.3.7_random_event_during_siege"
     ],
     "17.8.2": [
       "17.8.2_siege_roll_single_die"
@@ -439,7 +501,8 @@
       "17.11.5_seaborne_units_count_in_siege"
     ],
     "17.12.1": [
-      "17.12.1_relief_force_procedure"
+      "17.12.1_relief_force_procedure",
+      "17.12.1_relief_force_advances_two"
     ],
     "17.12.2": [
       "17.12.2_relief_force_two_hex_advance"
@@ -638,6 +701,129 @@
     "19.17.2": [
       "19.17.2_forested_mountain_cost"
     ],
+    "20.1": [
+      "20.1_port_definition"
+    ],
+    "20.2.1": [
+      "20.2.1_castle_port_anchor_icon"
+    ],
+    "20.2.2": [
+      "20.2.2_castle_port_applies_rules"
+    ],
+    "20.2.3": [
+      "20.2.3_plundered_castle_port_still_port"
+    ],
+    "20.2.4": [
+      "20.2.4_castle_port_storm_protection"
+    ],
+    "20.2.5": [
+      "20.2.5_castle_port_unoccupied_ownership"
+    ],
+    "20.2.6": [
+      "20.2.6_castle_port_occupied_ownership"
+    ],
+    "20.2.7": [
+      "20.2.7_castle_port_examples"
+    ],
+    "20.3.1": [
+      "20.3.1_non_castle_port_examples"
+    ],
+    "20.3.2": [
+      "20.3.2_non_castle_port_cost"
+    ],
+    "20.3.3": [
+      "20.3.3_non_castle_port_storm_protection"
+    ],
+    "20.4": [
+      "20.4_mercenary_fleet_deploy_non_castle_port"
+    ],
+    "21.1": [
+      "21.1_fleet_terrain_types"
+    ],
+    "21.2": [
+      "21.2_fleet_movement_cost"
+    ],
+    "21.3.1": [
+      "21.3.1_enemy_fleet_hex_blocked"
+    ],
+    "21.3.2": [
+      "21.3.2_allied_fleet_stacking_denied"
+    ],
+    "21.3.3": [
+      "21.3.3_seashore_enemy_land_pass_through"
+    ],
+    "21.3.4": [
+      "21.3.4_lone_monarch_seashore_no_fate"
+    ],
+    "22.1.1": [
+      "22.1.1_transport_capacity_combat"
+    ],
+    "22.1.2": [
+      "22.1.2_transport_capacity_leaders"
+    ],
+    "22.1.3": [
+      "22.1.3_transport_capacity_devices"
+    ],
+    "22.2": [
+      "22.2_embark_cost_zero"
+    ],
+    "22.3": [
+      "22.3_debark_cost_zero"
+    ],
+    "22.4": [
+      "22.4_debark_friendly_port",
+      "22.4_debark_seashore_no_mountains",
+      "22.4_debark_seashore_mountains_denied"
+    ],
+    "22.5": [
+      "22.5_transported_units_no_other_move",
+      "22.5_transported_units_eliminated_in_combat"
+    ],
+    "22.6": [
+      "22.6_fleet_continue_moving"
+    ],
+    "23.1": [
+      "23.1_zoc_not_used"
+    ],
+    "23.2": [
+      "23.2_units_control_only_hex"
+    ],
+    "23.3": [
+      "23.3_adjacent_movement_no_penalty"
+    ],
+    "24.1.1": [
+      "24.1.1_same_kingdom_unlimited"
+    ],
+    "24.1.2": [
+      "24.1.2_same_kingdom_hex_sharing"
+    ],
+    "24.2.1": [
+      "24.2.1_allied_pass_through"
+    ],
+    "24.2.2": [
+      "24.2.2_allied_end_turn_denied"
+    ],
+    "24.3.1": [
+      "24.3.1_mercenary_stack_with_friendly"
+    ],
+    "24.3.2": [
+      "24.3.2_mercenary_move_between_stacks"
+    ],
+    "24.4.1": [
+      "24.4.1_fleet_stacking_same_rules"
+    ],
+    "24.5.1": [
+      "24.5.1_allied_castle_entry_condition"
+    ],
+    "24.5.2": [
+      "24.5.2_allied_castle_entry_defense"
+    ],
+    "24.5.3": [
+      "24.5.3_allied_castle_no_stacking"
+    ],
+    "24.6": [
+      "24.6_stack_examination_allowed"
+    ],
     "25.1.1": [
       "25.1.1_only_active_player_attacks"
     ],
@@ -764,7 +950,8 @@
       "25.13.3_advance_one_hex_only"
     ],
     "25.13.4": [
-      "25.13.4_siege_relief_advance_two"
+      "25.13.4_siege_relief_advance_two",
+      "17.12.1_relief_force_advances_two"
     ],
     "26.1": [
       "26.1.1_monarchs_are_leaders"
@@ -828,6 +1015,39 @@
     "26.7": [
       "26.7.1_lone_leader_cannot_be_attacked"
     ],
+    "27.1": [
+      "27.1_leader_adrift_trigger"
+    ],
+    "27.2.1": [
+      "27.2.1_adrift_fate_roll_death"
+    ],
+    "27.2.2": [
+      "27.2.2_adrift_fate_roll_capture"
+    ],
+    "27.2.3": [
+      "27.2.3_adrift_fate_roll_no_effect"
+    ],
+    "27.3": [
+      "27.3_no_enemy_fleet_isle_of_fright"
+    ],
+    "27.4": [
+      "27.4_isle_of_fright_penalty"
+    ],
+    "27.5": [
+      "27.5_rescue_by_friendly_fleet"
+    ],
+    "27.6": [
+      "27.6_enemy_capture_not_possible"
+    ],
+    "27.7": [
+      "27.7_no_combat_unit_unload"
+    ],
+    "27.8": [
+      "27.8_fleet_entry_rescue_only"
+    ],
+    "27.9": [
+      "27.9_diplomacy_allowed_with_castaway"
+    ],
     "28.1.1": [
       "28.1.1_non_player_death_confusion"
     ],
@@ -877,7 +1097,8 @@
       "28.3.3_capture_awards_points"
     ],
     "28.3.4": [
-      "28.3.4_prisoner_cannot_act"
+      "28.3.4_prisoner_cannot_act",
+      "12.1.1_diplomacy_with_captured_monarch"
     ],
     "28.3.5": [
       "28.3.5_release_conditions"
