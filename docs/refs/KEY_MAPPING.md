@@ -4,14 +4,18 @@ This document describes the abbreviated keys used in the compact JSON reference 
 
 ## Total Size Reduction
 
-| File | Before | After | Reduction |
-|------|--------|-------|-----------|
-| hexmap.json | 194KB | 42KB | **78%** |
-| starting_units.json | 32KB | 8KB | **74%** |
-| factions.json | 10KB | 3KB | **67%** |
-| abilities.json | 0.5KB | 0.3KB | **53%** |
-| personality_cards.json | 6.6KB | 5.9KB | **11%** |
-| **TOTAL** | **243KB** | **60KB** | **75%** |
+Files use compact keys with 2-space indentation for readability.
+
+| File | Original | Compact (formatted) | Reduction |
+|------|----------|---------------------|-----------|
+| hexmap.json | 194KB | 100KB | **48%** |
+| starting_units.json | 32KB | 18KB | **44%** |
+| factions.json | 10KB | 8KB | **20%** |
+| abilities.json | 0.5KB | 0.4KB | **20%** |
+| personality_cards.json | 6.6KB | 6.4KB | **3%** |
+| **TOTAL** | **243KB** | **136KB** | **55%** |
+
+Note: Minified versions would be 75% smaller, but formatted versions improve human readability.
 
 ## Key Mappings
 

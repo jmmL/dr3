@@ -22,53 +22,74 @@ def assert_true(condition: bool, message: str):
 
 
 def collect_city_ids(factions: dict) -> set[str]:
+    """Collect city IDs from compact factions format (f=factions array, cities[].id=cityId)."""
     ids = set()
-    for faction in factions.get("factions", []):
+    for faction in factions.get("f", []):
         for city in faction.get("cities", []):
-            ids.add(city["cityId"])
+            ids.add(city["id"])
     return ids
 
 
 def validate_abilities(abilities: dict):
-    ability_ids = [ability["abilityId"] for ability in abilities["abilities"]]
+    """Validate compact abilities format (a=abilities array, id=abilityId)."""
+    ability_ids = [ability["id"] for ability in abilities["a"]]
     assert_true(len(ability_ids) == len(set(ability_ids)), "Duplicate abilityId values in abilities.json")
 
 
 def validate_factions(factions: dict):
-    faction_ids = [faction["id"] for faction in factions.get("factions", [])]
+    """Validate compact factions format (f=factions array, id=factionId, cities[].id=cityId)."""
+    faction_ids = [faction["id"] for faction in factions.get("f", [])]
     assert_true(len(faction_ids) == len(set(faction_ids)), "Duplicate faction IDs in factions.json")
-    for faction in factions.get("factions", []):
-        city_ids = [city["cityId"] for city in faction.get("cities", [])]
+    for faction in factions.get("f", []):
+        city_ids = [city["id"] for city in faction.get("cities", [])]
         assert_true(len(city_ids) == len(set(city_ids)), f"Duplicate cityId values in faction {faction['id']}")
 
 
 def validate_starting_units(starting: list, abilities: dict, city_ids: set[str]):
-    ability_ids = {ability["abilityId"] for ability in abilities["abilities"]}
+    """Validate compact starting_units format.
+
+    Compact keys: f=factionId, u=units, n=name, t=unitType, mp=movement_points,
+    mt=movement_type (omit if 'standard'), a=abilityIds, cid=cityId
+    """
+    ability_ids = {ability["id"] for ability in abilities["a"]}
     for faction in starting:
-        for unit in faction.get("units", []):
-            assert_true(isinstance(unit["movement_points"], (int, float)), f"Non-numeric movement_points for {unit['name']}")
-            if unit["unitType"] == "ambassador":
-                assert_true(unit["movement_type"] == "teleport", f"Ambassador movement_type not teleport: {unit['name']}")
-            for ability_id in unit.get("abilityIds", []):
-                assert_true(ability_id in ability_ids, f"Unknown abilityId {ability_id} on {unit['name']}")
-            if unit.get("cityId"):
-                assert_true(unit["cityId"] in city_ids, f"Unknown cityId {unit['cityId']} on {unit['name']}")
+        for unit in faction.get("u", []):
+            assert_true(isinstance(unit["mp"], (int, float)), f"Non-numeric movement_points for {unit['n']}")
+            # mt is omitted when 'standard', so check if present
+            movement_type = unit.get("mt", "standard")
+            if unit["t"] == "ambassador":
+                assert_true(movement_type == "teleport", f"Ambassador movement_type not teleport: {unit['n']}")
+            for ability_id in unit.get("a", []):
+                assert_true(ability_id in ability_ids, f"Unknown abilityId {ability_id} on {unit['n']}")
+            if unit.get("cid"):
+                assert_true(unit["cid"] in city_ids, f"Unknown cityId {unit['cid']} on {unit['n']}")
 
 
 def validate_hexmap(hexmap: dict, city_ids: set[str], mode: str):
+    """Validate compact hexmap format.
+
+    Compact keys: c=col, r=row, t=terrain (string or array), n=name, k=kingdom, cid=cityId
+    Terrain is now a string (single) or array (multiple) instead of object with boolean values.
+    """
     for hex_entry in hexmap["map"]["hexes"]:
-        for key in hex_entry["terrain"].keys():
-            assert_true(SNAKE_CASE_RE.match(key), f"Terrain key not snake_case: {key}")
-        if hex_entry.get("cityId"):
-            assert_true(hex_entry["cityId"] in city_ids, f"Unknown cityId {hex_entry['cityId']} in hexmap")
+        # Terrain is now string or array, not object
+        terrain = hex_entry.get("t")
+        if terrain:
+            terrain_list = terrain if isinstance(terrain, list) else [terrain]
+            for key in terrain_list:
+                assert_true(SNAKE_CASE_RE.match(key), f"Terrain key not snake_case: {key}")
+        if hex_entry.get("cid"):
+            assert_true(hex_entry["cid"] in city_ids, f"Unknown cityId {hex_entry['cid']} in hexmap")
         if mode == "basic":
-            if hex_entry.get("kingdom") in ADVANCED_FACTIONS or hex_entry.get("factionId") in ADVANCED_FACTIONS:
+            # k=kingdom in compact format
+            if hex_entry.get("k") in ADVANCED_FACTIONS:
                 raise AssertionError("Advanced faction present in hexmap.json")
 
 
 def validate_mode_split(starting: list, mode: str):
+    """Validate mode split using compact format (f=factionId)."""
     for faction in starting:
-        is_advanced = faction["factionId"] in ADVANCED_FACTIONS
+        is_advanced = faction["f"] in ADVANCED_FACTIONS
         if mode == "basic" and is_advanced:
             raise AssertionError("Advanced faction present in starting_units.json")
         if mode == "advanced" and not is_advanced:
