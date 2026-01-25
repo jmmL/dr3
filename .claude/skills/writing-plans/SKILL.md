@@ -33,7 +33,7 @@ Assume they are a skilled developer, but know almost nothing about our toolset o
 ```markdown
 # [Feature Name] Implementation Plan
 
-> **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.
+> **For Claude:** REQUIRED SUB-SKILL: Use executing-plans to implement this plan task-by-task.
 
 **Goal:** [One sentence describing what this builds]
 
@@ -103,7 +103,7 @@ After saving the plan:
 **Ready to implement? I can execute this plan task-by-task using the executing-plans skill, with code review checkpoints after each batch."**
 
 **If ready to proceed:**
-- **REQUIRED SUB-SKILL:** Use superpowers:executing-plans
+- **REQUIRED SUB-SKILL:** Use executing-plans
 - Execute in batches (3 tasks at a time)
 - Review code after each batch
 - Fix issues before continuing
