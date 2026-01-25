@@ -1,0 +1,804 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "17_sieges",
+  "tests": [
+    {
+      "id": "17.1.1_castle_surrounded_required",
+      "rule_ref": "17.1.1",
+      "description": "Castle must be fully surrounded by besieging units or zones of siege",
+      "input": {
+        "castle_surrounded": false
+      },
+      "expected": {
+        "siege_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "17.1.2_no_outside_defenders",
+      "rule_ref": "17.1.2",
+      "description": "Siege cannot be declared while defending units remain outside the castle",
+      "input": {
+        "outside_defenders_present": true
+      },
+      "expected": {
+        "siege_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "17.1.3_sufficient_force",
+      "rule_ref": "17.1.3",
+      "description": "Besieging units must be at least defending units plus intrinsic defense",
+      "input": {
+        "besieging_units": 5,
+        "defending_units": 2,
+        "intrinsic_defense": 4
+      },
+      "expected": {
+        "siege_allowed": false,
+        "required_minimum": 6
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "17.2_cooperation_rule_no_combined_strength",
+      "rule_ref": "17.2",
+      "description": "Different players may not combine strengths for a single siege",
+      "input": {
+        "besieging_players": ["player_a", "player_b"],
+        "castle_hex": [10, 10]
+      },
+      "expected": {
+        "combined_strength_allowed": false
+      }
+    },
+    {
+      "id": "17.3.1_zone_extends_adjacent",
+      "rule_ref": "17.3.1",
+      "description": "Zone of siege extends one hex beyond adjacent besieging unit",
+      "input": {
+        "castle_hex": [10, 10],
+        "besieging_unit_hex": [10, 11]
+      },
+      "expected": {
+        "zone_extension_hexes": [[10, 12]]
+      }
+    },
+    {
+      "id": "17.3.2_zone_all_sea_only",
+      "rule_ref": "17.3.2",
+      "description": "Fleet siege zones extend only to all-sea or seashore hexes",
+      "input": {
+        "unit_type": "fleet",
+        "adjacent_hex_type": "all_land"
+      },
+      "expected": {
+        "zone_of_siege_extends": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "17.3.3_zone_all_land_only",
+      "rule_ref": "17.3.3",
+      "description": "Land units extend siege zones only to all-land and seashore hexes",
+      "input": {
+        "unit_type": "land",
+        "adjacent_hex_type": "all_sea"
+      },
+      "expected": {
+        "zone_of_siege_extends": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "17.3.4_zone_not_negated_by_friendly_units",
+      "rule_ref": "17.3.4",
+      "description": "Friendly units do not negate an existing zone of siege",
+      "input": {
+        "zone_of_siege_active": true,
+        "friendly_units_present": true
+      },
+      "expected": {
+        "zone_of_siege_active": true
+      }
+    },
+    {
+      "id": "17.4.1_units_inside_tracked",
+      "rule_ref": "17.4.1",
+      "description": "Units inside a castle are tracked separately during a siege",
+      "input": {
+        "units_inside": ["u1", "u2"]
+      },
+      "expected": {
+        "inside_units_recorded": true
+      }
+    },
+    {
+      "id": "17.4.2_outside_units_must_be_eliminated",
+      "rule_ref": "17.4.2",
+      "description": "Outside defenders must be eliminated or forced to retreat before siege",
+      "input": {
+        "outside_defenders_present": true
+      },
+      "expected": {
+        "siege_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "17.4.3_outside_units_attacked_in_combat_phase",
+      "rule_ref": "17.4.3",
+      "description": "Outside defenders are attacked during the combat-resolution phase",
+      "input": {
+        "phase": "combat_resolution",
+        "outside_defenders_present": true
+      },
+      "expected": {
+        "outside_units_attackable": true
+      }
+    },
+    {
+      "id": "17.4.4_retreat_into_castle_before_combat",
+      "rule_ref": "17.4.4",
+      "description": "Defenders may retreat into castle before combat to join siege defense",
+      "input": {
+        "retreat_before_combat": true,
+        "destination": "inside_castle"
+      },
+      "expected": {
+        "retreat_allowed": true
+      }
+    },
+    {
+      "id": "17.4.5_leader_bonus_not_outside",
+      "rule_ref": "17.4.5",
+      "description": "Leaders inside the castle cannot apply bonuses to outside defenders",
+      "input": {
+        "leader_inside_castle": true,
+        "outside_defenders_present": true
+      },
+      "expected": {
+        "leader_bonus_applies": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "17.4.6_move_in_out_no_cost",
+      "rule_ref": "17.4.6",
+      "description": "Moving in or out of a castle hex during a siege costs no movement points",
+      "input": {
+        "movement_through_castle": true
+      },
+      "expected": {
+        "movement_cost": 0
+      }
+    },
+    {
+      "id": "17.4.7_move_only_during_movement_phase",
+      "rule_ref": "17.4.7",
+      "description": "Moving into or out of a castle is only allowed during movement or retreat",
+      "input": {
+        "phase": "combat",
+        "attempt_move_outside": true
+      },
+      "expected": {
+        "movement_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "17.5.1_intrinsic_defense_from_hex",
+      "rule_ref": "17.5.1",
+      "description": "Intrinsic defense strength comes from the castle hex value",
+      "input": {
+        "castle_hex": [5, 5],
+        "intrinsic_defense": 4
+      },
+      "expected": {
+        "defense_strength": 4
+      }
+    },
+    {
+      "id": "17.5.2_intrinsic_defense_only_for_siege",
+      "rule_ref": "17.5.2",
+      "description": "Intrinsic defense is used only for siege resolution",
+      "input": {
+        "combat_type": "regular",
+        "intrinsic_defense": 4
+      },
+      "expected": {
+        "defense_applies": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "17.5.3_intact_castle_blocks_entry",
+      "rule_ref": "17.5.3",
+      "description": "Enemy units cannot enter an intact castle hex",
+      "input": {
+        "castle_plundered": false,
+        "enemy_unit_attempts_entry": true
+      },
+      "expected": {
+        "entry_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "17.5.4_plundered_castle_no_defense",
+      "rule_ref": "17.5.4",
+      "description": "Plundered castles have no intrinsic defense strength",
+      "input": {
+        "castle_plundered": true,
+        "intrinsic_defense": 4
+      },
+      "expected": {
+        "defense_strength": 0
+      }
+    },
+    {
+      "id": "17.6.1_siege_declared_when_conditions_met",
+      "rule_ref": "17.6.1",
+      "description": "Siege is declared immediately when all conditions are satisfied",
+      "input": {
+        "requirements_met": true
+      },
+      "expected": {
+        "siege_declared": true
+      }
+    },
+    {
+      "id": "17.6.2_any_player_may_declare",
+      "rule_ref": "17.6.2",
+      "description": "Any player may declare siege when conditions are met",
+      "input": {
+        "declaring_player": "player_b",
+        "besieging_forces_owner": "player_a"
+      },
+      "expected": {
+        "siege_declaration_allowed": true
+      }
+    },
+    {
+      "id": "17.6.3_retreat_before_combat_not_besieging",
+      "rule_ref": "17.6.3",
+      "description": "Units that retreated before combat do not count as besieging until next movement phase",
+      "input": {
+        "retreat_before_combat": true
+      },
+      "expected": {
+        "counts_as_besieging": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "17.7.1_reinforcements_blocked",
+      "rule_ref": "17.7.1",
+      "description": "Reinforcements cannot enter a besieged castle",
+      "input": {
+        "castle_besieged": true,
+        "attempt_entry": true
+      },
+      "expected": {
+        "entry_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "17.7.2_must_attack_besiegers_first",
+      "rule_ref": "17.7.2",
+      "description": "Units leaving a siege must first attack all besieging units",
+      "input": {
+        "attempt_leave_siege": true,
+        "besiegers_remaining": true
+      },
+      "expected": {
+        "must_attack_besiegers": true
+      }
+    },
+    {
+      "id": "17.7.2_leave_siege_after_resolution",
+      "rule_ref": "17.7.2",
+      "description": "Leaving a siege occurs during the siege-resolution phase",
+      "input": {
+        "phase": "siege_resolution",
+        "attack_resolved": true
+      },
+      "expected": {
+        "may_exit_zone": true
+      }
+    },
+    {
+      "id": "17.7.3_attack_from_siege_combat_phase",
+      "rule_ref": "17.7.3",
+      "description": "Besieged units may attack during combat phase instead of siege resolution",
+      "input": {
+        "attack_from_siege": true,
+        "phase": "combat"
+      },
+      "expected": {
+        "attack_allowed": true
+      }
+    },
+    {
+      "id": "17.7.3_attack_from_siege_advance_limit",
+      "rule_ref": "17.7.3",
+      "description": "Attack from siege allows advance only one hex if all defenders eliminated",
+      "input": {
+        "attack_from_siege": true,
+        "defenders_eliminated": true
+      },
+      "expected": {
+        "advance_limit_hexes": 1
+      }
+    },
+    {
+      "id": "17.7.3_outside_forces_join",
+      "rule_ref": "17.7.3",
+      "description": "Outside friendly forces may join siege attack from outside",
+      "input": {
+        "outside_forces_present": true,
+        "attack_from_siege": true
+      },
+      "expected": {
+        "outside_forces_may_join": true
+      }
+    },
+    {
+      "id": "17.7.3_attack_from_siege_breaks_siege",
+      "rule_ref": "17.7.3",
+      "description": "Units that remain outside after attacking from siege break the siege",
+      "input": {
+        "attack_from_siege": true,
+        "attackers_remain_outside": true
+      },
+      "expected": {
+        "siege_broken": true
+      }
+    },
+    {
+      "id": "17.8.1_resolution_in_siege_phase",
+      "rule_ref": "17.8.1",
+      "description": "Siege resolution happens in the besieger's siege resolution phase",
+      "input": {
+        "phase": "siege_resolution"
+      },
+      "expected": {
+        "resolution_allowed": true
+      }
+    },
+    {
+      "id": "17.8.2_siege_roll_single_die",
+      "rule_ref": "17.8.2",
+      "description": "Siege resolution uses a single d6 roll",
+      "input": {
+        "siege_resolution": true
+      },
+      "expected": {
+        "die_type": "d6",
+        "dice_count": 1
+      }
+    },
+    {
+      "id": "17.8.3_siege_roll_one_to_five_no_effect",
+      "rule_ref": "17.8.3",
+      "description": "Siege continues on modified roll of 1-5",
+      "input": {
+        "siege_roll": 5,
+        "siege_modifier": 0
+      },
+      "expected": {
+        "modified_roll": 5,
+        "castle_taken": false,
+        "siege_continues": true
+      }
+    },
+    {
+      "id": "17.8.4_siege_roll_six_taken",
+      "rule_ref": "17.8.4",
+      "description": "Siege succeeds on modified roll of 6+",
+      "input": {
+        "siege_roll": 5,
+        "siege_modifier": 1
+      },
+      "expected": {
+        "modified_roll": 6,
+        "castle_taken": true,
+        "leaders_require_fate_roll": true
+      }
+    },
+    {
+      "id": "17.8.5_siege_attackers_no_move_after",
+      "rule_ref": "17.8.5",
+      "description": "Units making a siege attack cannot move or attack again",
+      "input": {
+        "siege_attack_made": true
+      },
+      "expected": {
+        "further_actions_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "17.9.1_siege_modifier_formula",
+      "rule_ref": "17.9.1",
+      "description": "Siege modifier uses (attacking / (defending + intrinsic)) - 1",
+      "input": {
+        "attacking_units": 10,
+        "defending_units": 4,
+        "intrinsic_defense": 2
+      },
+      "expected": {
+        "siege_modifier": 0
+      }
+    },
+    {
+      "id": "17.9.2_siege_modifier_drop_fraction",
+      "rule_ref": "17.9.2",
+      "description": "Siege modifier drops fractional results",
+      "input": {
+        "attacking_units": 15,
+        "defending_units": 4,
+        "intrinsic_defense": 3
+      },
+      "expected": {
+        "raw_ratio": 2.14,
+        "ratio_after_drop": 2
+      }
+    },
+    {
+      "id": "17.9.3_siege_modifier_applies_to_attacker",
+      "rule_ref": "17.9.3",
+      "description": "Siege modifier is added to the attacker's siege roll",
+      "input": {
+        "attacker_roll": 4,
+        "siege_modifier": 1
+      },
+      "expected": {
+        "modified_roll": 5
+      }
+    },
+    {
+      "id": "17.9.4_siege_modifier_example_one",
+      "rule_ref": "17.9.4",
+      "description": "15 attackers vs 4 defense + 3 inside yields +1 modifier",
+      "input": {
+        "attacking_units": 15,
+        "defending_units": 3,
+        "intrinsic_defense": 4
+      },
+      "expected": {
+        "siege_modifier": 1
+      }
+    },
+    {
+      "id": "17.9.5_siege_modifier_example_two",
+      "rule_ref": "17.9.5",
+      "description": "15 attackers vs 4 defense + 4 inside yields +0 modifier",
+      "input": {
+        "attacking_units": 15,
+        "defending_units": 4,
+        "intrinsic_defense": 4
+      },
+      "expected": {
+        "siege_modifier": 0
+      }
+    },
+    {
+      "id": "17.9.6_siege_modifier_example_three",
+      "rule_ref": "17.9.6",
+      "description": "15 attackers vs 4 defense + 1 inside yields +2 modifier",
+      "input": {
+        "attacking_units": 15,
+        "defending_units": 1,
+        "intrinsic_defense": 4
+      },
+      "expected": {
+        "siege_modifier": 2
+      }
+    },
+    {
+      "id": "17.10.1_plundered_castle_nonexistent",
+      "rule_ref": "17.10.1",
+      "description": "Plundered castles are treated as nonexistent for siege/combat",
+      "input": {
+        "castle_plundered": true
+      },
+      "expected": {
+        "castle_counts_for_siege": false
+      }
+    },
+    {
+      "id": "17.10.2_plundered_castle_placement_hex",
+      "rule_ref": "17.10.2",
+      "description": "Plundered castles still function as placement hexes",
+      "input": {
+        "castle_plundered": true
+      },
+      "expected": {
+        "placement_allowed": true
+      }
+    },
+    {
+      "id": "17.10.3_plundered_royal_castle_diplomacy",
+      "rule_ref": "17.10.3",
+      "description": "Plundered royal castles may still serve diplomacy if not enemy occupied",
+      "input": {
+        "castle_plundered": true,
+        "enemy_occupied": false
+      },
+      "expected": {
+        "diplomacy_location_available": true
+      }
+    },
+    {
+      "id": "17.10.4_plundered_castle_makes_friendly",
+      "rule_ref": "17.10.4",
+      "description": "Occupation of plundered castle makes it friendly for mercenary deployment",
+      "input": {
+        "castle_plundered": true,
+        "occupied_by_player": "player_a"
+      },
+      "expected": {
+        "counts_as_friendly_for_mercenaries": true
+      }
+    },
+    {
+      "id": "17.10.5_plundered_castle_permanent",
+      "rule_ref": "17.10.5",
+      "description": "Plundered castle status is permanent",
+      "input": {
+        "castle_plundered": true,
+        "turns_elapsed": 3
+      },
+      "expected": {
+        "plundered_status_persists": true
+      }
+    },
+    {
+      "id": "17.11.1_fleets_participate_in_siege",
+      "rule_ref": "17.11.1",
+      "description": "Fleets may contribute to siege attack and defense",
+      "input": {
+        "fleet_present": true
+      },
+      "expected": {
+        "fleet_counts_in_siege": true
+      }
+    },
+    {
+      "id": "17.11.2_fleet_cannot_attack_all_land",
+      "rule_ref": "17.11.2",
+      "description": "Fleets cannot attack all-land hexes during sieges",
+      "input": {
+        "fleet_attacking_hex_type": "all_land"
+      },
+      "expected": {
+        "fleet_attack_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "17.11.3_port_siege_requires_fleet",
+      "rule_ref": "17.11.3",
+      "description": "Siege of port requires at least one besieging fleet",
+      "input": {
+        "castle_is_port": true,
+        "besieging_fleets": 0
+      },
+      "expected": {
+        "siege_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "17.11.4_port_siege_zone_coverage",
+      "rule_ref": "17.11.4",
+      "description": "All adjacent all-sea hexes must be covered to besiege a port",
+      "input": {
+        "adjacent_all_sea_hexes": 2,
+        "covered_all_sea_hexes": 1
+      },
+      "expected": {
+        "siege_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "17.11.5_seaborne_units_count_in_siege",
+      "rule_ref": "17.11.5",
+      "description": "Seaborne land units count in siege strength and fight only in siege combat",
+      "input": {
+        "seaborne_units": 2,
+        "siege_combat": true
+      },
+      "expected": {
+        "seaborne_units_count": true,
+        "regular_combat_allowed": false
+      }
+    },
+    {
+      "id": "17.12.1_relief_force_procedure",
+      "rule_ref": "17.12.1",
+      "description": "Relieving force moves adjacent, attacks besiegers, may advance into castle",
+      "input": {
+        "relief_force_adjacent": true,
+        "attack_besiegers": true,
+        "combat_won": true
+      },
+      "expected": {
+        "advance_into_castle_allowed": true
+      }
+    },
+    {
+      "id": "17.12.2_relief_force_two_hex_advance",
+      "rule_ref": "17.12.2",
+      "description": "Relief force may advance two hexes when castle is surrounded",
+      "input": {
+        "castle_surrounded": true,
+        "cleared_hex": [10, 9],
+        "castle_hex": [10, 10]
+      },
+      "expected": {
+        "advance_allowed_hexes": 2
+      }
+    },
+    {
+      "id": "17.12.3_relief_force_post_options",
+      "rule_ref": "17.12.3",
+      "description": "Relieving forces may remain outside or enter the castle",
+      "input": {
+        "relief_force_broke_siege": true
+      },
+      "expected": {
+        "post_relief_options": ["remain_outside", "enter_castle"]
+      }
+    },
+    {
+      "id": "17.13.1_forced_peace_trigger",
+      "rule_ref": "17.13.1",
+      "description": "Forced peace triggers when allied royal castle is plundered and occupied",
+      "input": {
+        "royal_castle_plundered": true,
+        "occupied_by_enemy": true
+      },
+      "expected": {
+        "forced_peace_roll_required": true
+      }
+    },
+    {
+      "id": "17.13.2_forced_peace_roll_timing",
+      "rule_ref": "17.13.2",
+      "description": "Forced peace roll occurs during occupying player's diplomacy phase",
+      "input": {
+        "phase": "diplomacy",
+        "occupying_player": true
+      },
+      "expected": {
+        "forced_peace_roll_allowed": true
+      }
+    },
+    {
+      "id": "17.13.3_forced_peace_special_roll",
+      "rule_ref": "17.13.3",
+      "description": "Forced peace uses a special die roll separate from diplomacy cards",
+      "input": {
+        "forced_peace_roll": 5,
+        "diplomacy_card_modifier": 2
+      },
+      "expected": {
+        "card_modifiers_apply": false
+      }
+    },
+    {
+      "id": "17.13.5_forced_peace_success_rolls",
+      "rule_ref": "17.13.5",
+      "description": "Forced peace succeeds on rolls of 5 or 6",
+      "input": {
+        "forced_peace_roll": 5
+      },
+      "expected": {
+        "forced_peace_success": true
+      }
+    },
+    {
+      "id": "17.13.6_forced_peace_contested_modifier",
+      "rule_ref": "17.13.6",
+      "description": "If contested, only a 6 succeeds for forced peace",
+      "input": {
+        "forced_peace_roll": 5,
+        "contested_last_turn": true
+      },
+      "expected": {
+        "forced_peace_success": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "17.13.7_forced_peace_no_modifiers",
+      "rule_ref": "17.13.7",
+      "description": "Diplomacy cards and penalties do not apply to forced peace",
+      "input": {
+        "forced_peace_roll": 6,
+        "diplomacy_card_modifier": 2,
+        "diplomatic_penalty": 1
+      },
+      "expected": {
+        "modified_roll": 6
+      }
+    },
+    {
+      "id": "17.13.8_forced_peace_alternative_normal_diplomacy",
+      "rule_ref": "17.13.8",
+      "description": "Normal diplomacy may be used instead of forced peace roll",
+      "input": {
+        "choose_normal_diplomacy": true
+      },
+      "expected": {
+        "forced_peace_roll_required": false
+      }
+    },
+    {
+      "id": "17.13.9_forced_peace_effects",
+      "rule_ref": "17.13.9",
+      "description": "Forced peace removes units and returns cards to neutral pool",
+      "input": {
+        "forced_peace_success": true
+      },
+      "expected": {
+        "units_removed": true,
+        "cards_returned": true
+      }
+    },
+    {
+      "id": "17.13.10_forced_peace_violation_effect",
+      "rule_ref": "17.13.10",
+      "description": "Violating forced peace ends it and applies diplomatic penalty",
+      "input": {
+        "forced_peace_active": true,
+        "border_violation": true
+      },
+      "expected": {
+        "forced_peace_ends": true,
+        "diplomatic_penalty_applied": true
+      }
+    },
+    {
+      "id": "17.13.11_forced_peace_unit_status",
+      "rule_ref": "17.13.11",
+      "description": "Only regulars alive at deactivation set up if reactivated",
+      "input": {
+        "regulars_alive_at_deactivation": 2,
+        "regulars_eliminated": 1
+      },
+      "expected": {
+        "regulars_available_on_reactivation": 2
+      }
+    },
+    {
+      "id": "17.13.12_plundered_castles_remain",
+      "rule_ref": "17.13.12",
+      "description": "Plundered castles remain plundered after forced peace",
+      "input": {
+        "forced_peace_success": true,
+        "plundered_castle": true
+      },
+      "expected": {
+        "plundered_status_persists": true
+      }
+    },
+    {
+      "id": "17.13.13_player_monarchs_not_subject",
+      "rule_ref": "17.13.13",
+      "description": "Player monarchs are never subject to forced peace",
+      "input": {
+        "monarch_type": "player",
+        "forced_peace_trigger": true
+      },
+      "expected": {
+        "forced_peace_applicable": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "14_personality_cards",
+  "tests": [
+    {
+      "id": "14.1_total_personality_cards",
+      "rule_ref": "14.1",
+      "description": "There are 20 personality cards",
+      "input": {
+        "deck_type": "personality"
+      },
+      "expected": {
+        "card_total": 20
+      }
+    },
+    {
+      "id": "14.2_assignment_one_per_monarch",
+      "rule_ref": "14.2",
+      "description": "One personality card is assigned face-down to each non-player monarch",
+      "input": {
+        "non_player_monarchs": 5
+      },
+      "expected": {
+        "cards_assigned": 5,
+        "face_down": true
+      }
+    },
+    {
+      "id": "14.3_reveal_on_ambassador_visit",
+      "rule_ref": "14.3",
+      "description": "Personality card is read aloud when ambassador visits the monarch",
+      "input": {
+        "ambassador_visits_monarch": true
+      },
+      "expected": {
+        "card_revealed": true
+      }
+    },
+    {
+      "id": "14.4_personality_effects_apply",
+      "rule_ref": "14.4",
+      "description": "Personality cards modify diplomacy, movement, or combat as specified",
+      "input": {
+        "personality_modifier": 1
+      },
+      "expected": {
+        "modifier_applies": true
+      }
+    }
+  ]
+}

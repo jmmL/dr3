@@ -2,142 +2,999 @@
   "suite_version": "1.0.0",
   "description": "Maps rule references to test case IDs for coverage tracking",
   "rules": {
-    "4.1.2": ["4.1.2_monarch_not_combat_unit"],
-    "4.1.3": ["4.1.3_monarch_is_leader"],
-    "4.1.5": ["4.1.5_player_monarch_death_eliminates"],
-    "4.1.6": ["4.1.6_non_player_monarch_death_confusion"],
-    "4.2.2": ["4.2.2_ambassador_not_combat_unit"],
-    "4.2.3": ["4.2.3_ambassador_teleports"],
-    "4.2.4": ["4.2.4_ambassador_death_recovery"],
-    "4.3.2": ["4.3.2_regular_army_is_combat_unit"],
-    "4.3.3": ["4.3.3_regular_army_strength"],
-    "4.4.2": ["4.4.2_regular_fleet_is_combat_unit"],
-    "4.4.3": ["4.4.3_regular_fleet_strength"],
-    "4.4.5": ["4.4.5_regular_fleet_transport"],
-    "4.5.2": ["4.5.2_mercenary_army_is_combat_unit"],
-    "4.5.3": ["4.5.3_mercenary_army_strength"],
-    "4.6.2": ["4.6.2_mercenary_fleet_is_combat_unit"],
-    "4.6.3": ["4.6.3_mercenary_fleet_strength"],
-    "4.6.5": ["4.6.5_mercenary_fleet_transport"],
-    "5.2.1": ["5.2.1_hothior_is_human", "5.2.1_immer_is_human", "5.2.1_mivior_is_human", "5.2.1_muetar_is_human", "5.2.1_pon_is_human", "5.2.1_rombune_is_human", "5.2.1_shucassam_is_human"],
-    "5.2.2": ["5.2.2_human_retreat_success_rolls", "5.2.2_human_retreat_fails_on_three"],
-    "5.3.1": ["5.3.1_neuth_is_non_human", "5.3.1_ghem_is_non_human", "5.3.1_zorn_is_non_human", "5.3.1_trolls_is_non_human"],
-    "5.3.2": ["5.3.2_non_human_retreat_success_rolls", "5.3.2_non_human_retreat_fails_on_two"],
-    "5.4.1": ["5.4.1_mercenary_classification"],
-    "5.4.2": ["5.4.2_mercenary_retreat_success_rolls"],
-    "6.1.1": ["6.1.1_tree_symbol_forest_as_clear", "6.1.1_no_tree_symbol_forest_cost"],
-    "6.2.1": ["6.2.1_mountain_symbol_hills_as_clear", "6.2.1_no_mountain_symbol_hills_cost"],
-    "6.2.2": ["6.2.2_mountain_symbol_no_stop", "6.2.2_no_mountain_symbol_must_stop"],
-    "6.3.1": ["6.3.1_home_kingdom_bonus_applies_monarch", "6.3.1_home_kingdom_bonus_applies_regulars", "6.3.1_no_home_bonus_outside_kingdom", "6.3.1_no_home_bonus_mercenaries"],
-    "6.3.2": ["6.3.2_home_kingdom_both_bonuses"],
-    "19.1.1": ["19.1.1_clear_terrain_cost"],
-    "19.2.1": ["19.2.1_forest_terrain_cost"],
-    "19.2.2": ["19.2.2_forest_tree_symbol"],
-    "19.3.1": ["19.3.1_minor_river_cost"],
-    "19.3.2": ["19.3.2_minor_river_applies_all_directions"],
-    "19.4.1": ["19.4.1_major_river_crossing_requirement"],
-    "19.4.2": ["19.4.2_major_river_crossing_cost"],
-    "19.5.1": ["19.5.1_hills_terrain_cost"],
-    "19.5.2": ["19.5.2_hills_mountain_symbol"],
-    "19.6.1": ["19.6.1_mountain_terrain_cost"],
-    "19.6.2": ["19.6.2_mountain_must_stop"],
-    "19.6.3": ["19.6.3_mountain_combat_bonus"],
-    "19.6.4": ["19.6.4_mountain_symbol_no_stop"],
-    "19.7.1": ["19.7.1_lakeshore_cost"],
-    "19.7.2": ["19.7.2_lakeshore_no_crossing"],
-    "19.8.1": ["19.8.1_seashore_cost"],
-    "19.8.2": ["19.8.2_fleet_no_all_land_crossing"],
-    "19.8.3": ["19.8.3_land_no_all_sea_crossing"],
-    "19.9.1": ["19.9.1_open_sea_cost"],
-    "19.9.2": ["19.9.2_open_sea_fleets_only"],
-    "19.10.1": ["19.10.1_swamp_cost"],
-    "19.11.1": ["19.11.1_isle_of_fright_cost"],
-    "19.11.2": ["19.11.2_isle_of_fright_restriction"],
-    "19.12.1": ["19.12.1_mountain_pass_cost"],
-    "19.12.2": ["19.12.2_mountain_pass_defender_doubled"],
-    "19.13.1": ["19.13.1_castle_enemy_forbidden"],
-    "19.13.2": ["19.13.2_castle_friendly_cost"],
-    "19.14.2": ["19.14.2_seaport_cost"],
-    "19.14.3": ["19.14.3_seaport_access"],
-    "19.16.1": ["19.16.1_scenic_hex_cost"],
-    "19.17.1": ["19.17.1_cumulative_terrain_rule"],
-    "19.17.2": ["19.17.2_forested_mountain_cost"],
-    "18.1.1": ["18.1.1_only_active_player_moves"],
-    "18.1.2": ["18.1.2_any_direction_movement"],
-    "18.1.3": ["18.1.3_movement_points_not_saved"],
-    "18.1.4": ["18.1.4_minimum_movement_one_hex"],
-    "18.2.1": ["18.2.1_player_monarch_units_may_move"],
-    "18.2.2": ["18.2.2_friendly_mercenaries_may_move"],
-    "18.2.3": ["18.2.3_allied_kingdom_units_may_move"],
-    "18.3.1": ["18.3.1_besieged_units_cannot_move"],
-    "18.3.2": ["18.3.2_just_activated_cannot_move"],
-    "18.3.3": ["18.3.3_just_deactivated_cannot_move"],
-    "18.4.1": ["18.4.1_stack_uses_slowest_speed"],
-    "18.4.2": ["18.4.2_units_may_leave_stack"],
-    "18.4.3": ["18.4.3_units_may_continue_independently"],
-    "18.5.1": ["18.5.1_cannot_enter_enemy_hex"],
-    "18.5.2": ["18.5.2_allied_stacking_end_turn"],
-    "18.5.3": ["18.5.3_cannot_exceed_allowance"],
-    "18.5.4": ["18.5.4_terrain_cost_exceeds_remaining"],
-    "18.5.5": ["18.5.5_land_cannot_cross_all_sea", "18.5.5_fleet_cannot_cross_all_land"],
-    "18.5.6": ["18.5.6_off_map_eliminates", "18.5.6_voluntary_off_map_forbidden"],
-    "25.1.1": ["25.1.1_only_active_player_attacks"],
-    "25.1.2": ["25.1.2_adjacency_required"],
-    "25.1.3": ["25.1.3_attack_is_optional"],
-    "25.2.1": ["25.2.1_retreat_timing"],
-    "25.2.2": ["25.2.2_human_retreat_success", "25.2.2_human_retreat_failure", "25.2.2_non_human_retreat_success"],
-    "25.2.3": ["25.2.3_stack_test_order"],
-    "25.2.4": ["25.2.4_retreat_destination"],
-    "25.2.5": ["25.2.5_same_hex_retreat"],
-    "25.2.9": ["25.2.9_no_retreat_if_surrounded"],
-    "25.2.10": ["25.2.10_no_second_retreat"],
-    "25.2.11": ["25.2.11_attacker_advance_after_retreat"],
-    "25.3.1": ["25.3.1_both_sides_roll"],
-    "25.3.2": ["25.3.2_higher_roll_wins"],
-    "25.3.3": ["25.3.3_loser_losses"],
-    "25.3.4": ["25.3.4_tie_both_lose"],
-    "25.3.5": ["25.3.5_loss_selection"],
-    "25.4.1": ["25.4.1_combat_modifier_attacker_advantage", "25.4.1_equal_forces_no_modifier"],
-    "25.4.2": ["25.4.2_combat_modifier_fractions_dropped"],
-    "25.4.4": ["25.4.4_defender_minimum_bonus", "25.4.4_defender_formula_exceeds_minimum"],
-    "25.5.1": ["25.5.1_all_attacks_declared_first"],
-    "25.5.2": ["25.5.2_attacker_chooses_resolution_order"],
-    "25.5.3": ["25.5.3_results_immediate"],
-    "25.6.1": ["25.6.1_seaborne_units_eliminated"],
-    "25.7.2": ["25.7.2_siege_attackers_cannot_combat", "25.7.2_transported_units_no_combat", "25.7.2_activated_kingdom_no_attack", "25.7.2_deactivated_kingdom_no_attack"],
-    "25.8.1": ["25.8.1_cannot_attack_inside_castle"],
-    "25.8.2": ["25.8.2_adjacency_required_for_attack"],
-    "25.9.1": ["25.9.1_multiple_hexes_combine"],
-    "25.9.2": ["25.9.2_allied_forces_combine"],
-    "25.10.1": ["25.10.1_unit_attack_limit"],
-    "25.10.2": ["25.10.2_hex_attack_limit"],
-    "25.11.1": ["25.11.1_mountain_defender_bonus"],
-    "25.11.2": ["25.11.2_mountain_pass_doubles_defender"],
-    "25.11.4": ["25.11.4_land_no_attack_across_sea", "25.11.4_fleet_no_attack_across_land"],
-    "25.12.1": ["25.12.1_stack_attack_rule"],
-    "25.12.2": ["25.12.2_stack_split_attacks"],
-    "25.12.3": ["25.12.3_all_defenders_attacked"],
-    "25.13.1": ["25.13.1_advance_trigger"],
-    "25.13.2": ["25.13.2_advance_units_choice"],
-    "25.13.3": ["25.13.3_advance_one_hex_only"],
-    "25.13.4": ["25.13.4_siege_relief_advance_two"],
-    "26.1": ["26.1.1_monarchs_are_leaders"],
-    "26.2": ["26.2.1_leader_combat_strength_zero"],
-    "26.3.1": ["26.3.1_leader_movement_bonus_scope"],
-    "26.3.2": ["26.3.2_stack_uses_leader_ma"],
-    "26.3.3": ["26.3.3_begin_end_stacked"],
-    "26.3.4": ["26.3.4_units_may_be_left_behind"],
-    "26.3.5": ["26.3.5_no_independent_movement_with_leader"],
-    "26.3.6": ["26.3.6_unit_terrain_no_transfer"],
-    "26.4.1": ["26.4.1_leader_combat_bonus_source"],
-    "26.4.2": ["26.4.2_multiple_leader_bonuses_stack"],
-    "26.4.3": ["26.4.3_no_leader_bonus_in_siege"],
-    "26.5.1": ["26.5.1_lone_leader_pass_through_enemy"],
-    "26.5.2": ["26.5.2_lone_leader_requires_fate_roll"],
-    "26.6.1": ["26.6.1_fate_roll_combat_loss", "26.6.1_fate_roll_lone_leader_enemy_pass", "26.6.1_fate_roll_enemy_passes_lone_leader", "26.6.1_fate_roll_castle_falls", "26.6.1_fate_roll_leave_besieged_alone", "26.6.1_fate_roll_fleet_lost_at_sea"],
-    "26.6.2": ["26.6.2_fate_roll_one_killed", "26.6.2_fate_roll_two_to_five_no_effect", "26.6.2_fate_roll_six_captured"],
-    "26.6.3": ["26.6.3_fate_roll_once_per_player_turn", "26.6.3_fate_roll_once_per_enemy_phase"],
-    "26.6.5": ["26.6.5_any_unit_may_force_fate_roll"],
-    "26.7": ["26.7.1_lone_leader_cannot_be_attacked"]
+    "4.1.2": [
+      "4.1.2_monarch_not_combat_unit"
+    ],
+    "4.1.3": [
+      "4.1.3_monarch_is_leader"
+    ],
+    "4.1.5": [
+      "4.1.5_player_monarch_death_eliminates"
+    ],
+    "4.1.6": [
+      "4.1.6_non_player_monarch_death_confusion"
+    ],
+    "4.2.2": [
+      "4.2.2_ambassador_not_combat_unit"
+    ],
+    "4.2.3": [
+      "4.2.3_ambassador_teleports"
+    ],
+    "4.2.4": [
+      "4.2.4_ambassador_death_recovery"
+    ],
+    "4.3.2": [
+      "4.3.2_regular_army_is_combat_unit"
+    ],
+    "4.3.3": [
+      "4.3.3_regular_army_strength"
+    ],
+    "4.4.2": [
+      "4.4.2_regular_fleet_is_combat_unit"
+    ],
+    "4.4.3": [
+      "4.4.3_regular_fleet_strength"
+    ],
+    "4.4.5": [
+      "4.4.5_regular_fleet_transport"
+    ],
+    "4.5.2": [
+      "4.5.2_mercenary_army_is_combat_unit"
+    ],
+    "4.5.3": [
+      "4.5.3_mercenary_army_strength"
+    ],
+    "4.6.2": [
+      "4.6.2_mercenary_fleet_is_combat_unit"
+    ],
+    "4.6.3": [
+      "4.6.3_mercenary_fleet_strength"
+    ],
+    "4.6.5": [
+      "4.6.5_mercenary_fleet_transport"
+    ],
+    "5.2.1": [
+      "5.2.1_hothior_is_human",
+      "5.2.1_immer_is_human",
+      "5.2.1_mivior_is_human",
+      "5.2.1_muetar_is_human",
+      "5.2.1_pon_is_human",
+      "5.2.1_rombune_is_human",
+      "5.2.1_shucassam_is_human"
+    ],
+    "5.2.2": [
+      "5.2.2_human_retreat_success_rolls",
+      "5.2.2_human_retreat_fails_on_three"
+    ],
+    "5.3.1": [
+      "5.3.1_neuth_is_non_human",
+      "5.3.1_ghem_is_non_human",
+      "5.3.1_zorn_is_non_human",
+      "5.3.1_trolls_is_non_human"
+    ],
+    "5.3.2": [
+      "5.3.2_non_human_retreat_success_rolls",
+      "5.3.2_non_human_retreat_fails_on_two"
+    ],
+    "5.4.1": [
+      "5.4.1_mercenary_classification"
+    ],
+    "5.4.2": [
+      "5.4.2_mercenary_retreat_success_rolls"
+    ],
+    "6.1.1": [
+      "6.1.1_tree_symbol_forest_as_clear",
+      "6.1.1_no_tree_symbol_forest_cost"
+    ],
+    "6.2.1": [
+      "6.2.1_mountain_symbol_hills_as_clear",
+      "6.2.1_no_mountain_symbol_hills_cost"
+    ],
+    "6.2.2": [
+      "6.2.2_mountain_symbol_no_stop",
+      "6.2.2_no_mountain_symbol_must_stop"
+    ],
+    "6.3.1": [
+      "6.3.1_home_kingdom_bonus_applies_monarch",
+      "6.3.1_home_kingdom_bonus_applies_regulars",
+      "6.3.1_no_home_bonus_outside_kingdom",
+      "6.3.1_no_home_bonus_mercenaries"
+    ],
+    "6.3.2": [
+      "6.3.2_home_kingdom_both_bonuses"
+    ],
+    "8.1": [
+      "8.1_random_event_roll_two_dice"
+    ],
+    "8.2.1": [
+      "8.2.1_roll_two_untimely_death"
+    ],
+    "8.2.2": [
+      "8.2.2_roll_three_storms"
+    ],
+    "8.2.3": [
+      "8.2.3_roll_four_mutiny"
+    ],
+    "8.2.4": [
+      "8.2.4_roll_five_bad_omens"
+    ],
+    "8.2.5": [
+      "8.2.5_roll_six_replacements"
+    ],
+    "8.2.6": [
+      "8.2.6_roll_seven_no_event"
+    ],
+    "8.2.7": [
+      "8.2.7_roll_eight_reinforcements"
+    ],
+    "8.2.8": [
+      "8.2.8_roll_nine_plague"
+    ],
+    "8.2.9": [
+      "8.2.9_roll_ten_replacement"
+    ],
+    "8.2.10": [
+      "8.2.10_roll_eleven_desertion"
+    ],
+    "8.2.11": [
+      "8.2.11_roll_twelve_help_from_afar"
+    ],
+    "8.3.1": [
+      "8.3.1_event_applies_only_to_roller"
+    ],
+    "8.3.2": [
+      "8.3.2_regular_placement_at_counter"
+    ],
+    "8.3.3": [
+      "8.3.3_blocked_placement_fails"
+    ],
+    "8.3.4": [
+      "8.3.4_mercenary_placement_friendly"
+    ],
+    "8.3.5": [
+      "8.3.5_fleet_reinforcement_requires_port"
+    ],
+    "8.3.6": [
+      "8.3.6_regular_limit_respected"
+    ],
+    "8.3.7": [
+      "8.3.7_immediate_action_for_replacements"
+    ],
+    "8.3.8": [
+      "8.3.8_impossible_event_no_event"
+    ],
+    "8.3.9": [
+      "8.3.9_no_transfer_between_players"
+    ],
+    "12.1.1": [
+      "12.1.1_diplomacy_only_between"
+    ],
+    "12.1.2": [
+      "12.1.2_player_alliances_not_binding"
+    ],
+    "12.1.3": [
+      "12.1.3_ambassador_death_recovery_turns"
+    ],
+    "12.1.4": [
+      "12.1.4_ambassador_teleport_movement"
+    ],
+    "12.1.5": [
+      "12.1.5_ambassador_return_blocked"
+    ],
+    "12.2.1": [
+      "12.2.1_threshold_comparison"
+    ],
+    "12.2.2": [
+      "12.2.2_card_played_before_roll"
+    ],
+    "12.2.3": [
+      "12.2.3_modified_result_formula"
+    ],
+    "12.2.4": [
+      "12.2.4_automatic_success"
+    ],
+    "12.3.1": [
+      "12.3.1_activate_neutral_threshold",
+      "12.3.1_activate_neutral_effects"
+    ],
+    "12.3.2": [
+      "12.3.2_deactivate_threshold",
+      "12.3.2_deactivate_effects"
+    ],
+    "12.3.3": [
+      "12.3.3_assassination_limit_once",
+      "12.3.3_assassination_higher_roll_kills"
+    ],
+    "12.3.4": [
+      "12.3.4_duel_limit_once",
+      "12.3.4_duel_tie_kills_both"
+    ],
+    "12.4.1": [
+      "12.4.1_ambassador_death_removal"
+    ],
+    "12.4.3": [
+      "12.4.3_no_diplomacy_during_death"
+    ],
+    "12.4.4": [
+      "12.4.4_ambassador_recovery_turn"
+    ],
+    "12.4.5": [
+      "12.4.5_penalties_inherited"
+    ],
+    "12.4.6": [
+      "12.4.6_continue_card_draw"
+    ],
+    "12.5.1": [
+      "12.5.1_banishment_triggering_cards"
+    ],
+    "12.5.2": [
+      "12.5.2_banishment_on_failed_roll"
+    ],
+    "12.5.3": [
+      "12.5.3_banishment_duration_formula"
+    ],
+    "12.5.4": [
+      "12.5.4_banishment_effect"
+    ],
+    "12.5.5": [
+      "12.5.5_multiple_banishments_add"
+    ],
+    "12.5.6": [
+      "12.5.6_card_discard_before_result"
+    ],
+    "12.6.1": [
+      "12.6.1_penalty_trigger_border_violation"
+    ],
+    "12.6.2": [
+      "12.6.2_penalty_effect_minus_one"
+    ],
+    "12.6.3": [
+      "12.6.3_penalty_exceptions"
+    ],
+    "12.6.4": [
+      "12.6.4_penalty_not_cumulative"
+    ],
+    "12.6.5": [
+      "12.6.5_deactivation_grace_period"
+    ],
+    "12.6.6": [
+      "12.6.6_voluntary_elimination_avoids_penalty"
+    ],
+    "13.1": [
+      "13.1_total_cards"
+    ],
+    "13.2": [
+      "13.2_basic_game_cards"
+    ],
+    "13.3.1": [
+      "13.3.1_diplomatic_ploys_bonus"
+    ],
+    "13.3.2": [
+      "13.3.2_special_mercenary_count"
+    ],
+    "13.4": [
+      "13.4_cards_accumulate"
+    ],
+    "13.5": [
+      "13.5_cards_not_tradable"
+    ],
+    "13.6": [
+      "13.6_reshuffle_when_exhausted"
+    ],
+    "13.7": [
+      "13.7_discard_after_use"
+    ],
+    "14.1": [
+      "14.1_total_personality_cards"
+    ],
+    "14.2": [
+      "14.2_assignment_one_per_monarch"
+    ],
+    "14.3": [
+      "14.3_reveal_on_ambassador_visit"
+    ],
+    "14.4": [
+      "14.4_personality_effects_apply"
+    ],
+    "17.1.1": [
+      "17.1.1_castle_surrounded_required"
+    ],
+    "17.1.2": [
+      "17.1.2_no_outside_defenders"
+    ],
+    "17.1.3": [
+      "17.1.3_sufficient_force"
+    ],
+    "17.2": [
+      "17.2_cooperation_rule_no_combined_strength"
+    ],
+    "17.3.1": [
+      "17.3.1_zone_extends_adjacent"
+    ],
+    "17.3.2": [
+      "17.3.2_zone_all_sea_only"
+    ],
+    "17.3.3": [
+      "17.3.3_zone_all_land_only"
+    ],
+    "17.3.4": [
+      "17.3.4_zone_not_negated_by_friendly_units"
+    ],
+    "17.4.1": [
+      "17.4.1_units_inside_tracked"
+    ],
+    "17.4.2": [
+      "17.4.2_outside_units_must_be_eliminated"
+    ],
+    "17.4.3": [
+      "17.4.3_outside_units_attacked_in_combat_phase"
+    ],
+    "17.4.4": [
+      "17.4.4_retreat_into_castle_before_combat"
+    ],
+    "17.4.5": [
+      "17.4.5_leader_bonus_not_outside"
+    ],
+    "17.4.6": [
+      "17.4.6_move_in_out_no_cost"
+    ],
+    "17.4.7": [
+      "17.4.7_move_only_during_movement_phase"
+    ],
+    "17.5.1": [
+      "17.5.1_intrinsic_defense_from_hex"
+    ],
+    "17.5.2": [
+      "17.5.2_intrinsic_defense_only_for_siege"
+    ],
+    "17.5.3": [
+      "17.5.3_intact_castle_blocks_entry"
+    ],
+    "17.5.4": [
+      "17.5.4_plundered_castle_no_defense"
+    ],
+    "17.6.1": [
+      "17.6.1_siege_declared_when_conditions_met"
+    ],
+    "17.6.2": [
+      "17.6.2_any_player_may_declare"
+    ],
+    "17.6.3": [
+      "17.6.3_retreat_before_combat_not_besieging"
+    ],
+    "17.7.1": [
+      "17.7.1_reinforcements_blocked"
+    ],
+    "17.7.2": [
+      "17.7.2_must_attack_besiegers_first",
+      "17.7.2_leave_siege_after_resolution"
+    ],
+    "17.7.3": [
+      "17.7.3_attack_from_siege_combat_phase",
+      "17.7.3_attack_from_siege_advance_limit",
+      "17.7.3_outside_forces_join",
+      "17.7.3_attack_from_siege_breaks_siege"
+    ],
+    "17.8.1": [
+      "17.8.1_resolution_in_siege_phase"
+    ],
+    "17.8.2": [
+      "17.8.2_siege_roll_single_die"
+    ],
+    "17.8.3": [
+      "17.8.3_siege_roll_one_to_five_no_effect"
+    ],
+    "17.8.4": [
+      "17.8.4_siege_roll_six_taken"
+    ],
+    "17.8.5": [
+      "17.8.5_siege_attackers_no_move_after"
+    ],
+    "17.9.1": [
+      "17.9.1_siege_modifier_formula"
+    ],
+    "17.9.2": [
+      "17.9.2_siege_modifier_drop_fraction"
+    ],
+    "17.9.3": [
+      "17.9.3_siege_modifier_applies_to_attacker"
+    ],
+    "17.9.4": [
+      "17.9.4_siege_modifier_example_one"
+    ],
+    "17.9.5": [
+      "17.9.5_siege_modifier_example_two"
+    ],
+    "17.9.6": [
+      "17.9.6_siege_modifier_example_three"
+    ],
+    "17.10.1": [
+      "17.10.1_plundered_castle_nonexistent"
+    ],
+    "17.10.2": [
+      "17.10.2_plundered_castle_placement_hex"
+    ],
+    "17.10.3": [
+      "17.10.3_plundered_royal_castle_diplomacy"
+    ],
+    "17.10.4": [
+      "17.10.4_plundered_castle_makes_friendly"
+    ],
+    "17.10.5": [
+      "17.10.5_plundered_castle_permanent"
+    ],
+    "17.11.1": [
+      "17.11.1_fleets_participate_in_siege"
+    ],
+    "17.11.2": [
+      "17.11.2_fleet_cannot_attack_all_land"
+    ],
+    "17.11.3": [
+      "17.11.3_port_siege_requires_fleet"
+    ],
+    "17.11.4": [
+      "17.11.4_port_siege_zone_coverage"
+    ],
+    "17.11.5": [
+      "17.11.5_seaborne_units_count_in_siege"
+    ],
+    "17.12.1": [
+      "17.12.1_relief_force_procedure"
+    ],
+    "17.12.2": [
+      "17.12.2_relief_force_two_hex_advance"
+    ],
+    "17.12.3": [
+      "17.12.3_relief_force_post_options"
+    ],
+    "17.13.1": [
+      "17.13.1_forced_peace_trigger"
+    ],
+    "17.13.2": [
+      "17.13.2_forced_peace_roll_timing"
+    ],
+    "17.13.3": [
+      "17.13.3_forced_peace_special_roll"
+    ],
+    "17.13.5": [
+      "17.13.5_forced_peace_success_rolls"
+    ],
+    "17.13.6": [
+      "17.13.6_forced_peace_contested_modifier"
+    ],
+    "17.13.7": [
+      "17.13.7_forced_peace_no_modifiers"
+    ],
+    "17.13.8": [
+      "17.13.8_forced_peace_alternative_normal_diplomacy"
+    ],
+    "17.13.9": [
+      "17.13.9_forced_peace_effects"
+    ],
+    "17.13.10": [
+      "17.13.10_forced_peace_violation_effect"
+    ],
+    "17.13.11": [
+      "17.13.11_forced_peace_unit_status"
+    ],
+    "17.13.12": [
+      "17.13.12_plundered_castles_remain"
+    ],
+    "17.13.13": [
+      "17.13.13_player_monarchs_not_subject"
+    ],
+    "18.1.1": [
+      "18.1.1_only_active_player_moves"
+    ],
+    "18.1.2": [
+      "18.1.2_any_direction_movement"
+    ],
+    "18.1.3": [
+      "18.1.3_movement_points_not_saved"
+    ],
+    "18.1.4": [
+      "18.1.4_minimum_movement_one_hex"
+    ],
+    "18.2.1": [
+      "18.2.1_player_monarch_units_may_move"
+    ],
+    "18.2.2": [
+      "18.2.2_friendly_mercenaries_may_move"
+    ],
+    "18.2.3": [
+      "18.2.3_allied_kingdom_units_may_move"
+    ],
+    "18.3.1": [
+      "18.3.1_besieged_units_cannot_move"
+    ],
+    "18.3.2": [
+      "18.3.2_just_activated_cannot_move"
+    ],
+    "18.3.3": [
+      "18.3.3_just_deactivated_cannot_move"
+    ],
+    "18.4.1": [
+      "18.4.1_stack_uses_slowest_speed"
+    ],
+    "18.4.2": [
+      "18.4.2_units_may_leave_stack"
+    ],
+    "18.4.3": [
+      "18.4.3_units_may_continue_independently"
+    ],
+    "18.5.1": [
+      "18.5.1_cannot_enter_enemy_hex"
+    ],
+    "18.5.2": [
+      "18.5.2_allied_stacking_end_turn"
+    ],
+    "18.5.3": [
+      "18.5.3_cannot_exceed_allowance"
+    ],
+    "18.5.4": [
+      "18.5.4_terrain_cost_exceeds_remaining"
+    ],
+    "18.5.5": [
+      "18.5.5_land_cannot_cross_all_sea",
+      "18.5.5_fleet_cannot_cross_all_land"
+    ],
+    "18.5.6": [
+      "18.5.6_off_map_eliminates",
+      "18.5.6_voluntary_off_map_forbidden"
+    ],
+    "19.1.1": [
+      "19.1.1_clear_terrain_cost"
+    ],
+    "19.2.1": [
+      "19.2.1_forest_terrain_cost"
+    ],
+    "19.2.2": [
+      "19.2.2_forest_tree_symbol"
+    ],
+    "19.3.1": [
+      "19.3.1_minor_river_cost"
+    ],
+    "19.3.2": [
+      "19.3.2_minor_river_applies_all_directions"
+    ],
+    "19.4.1": [
+      "19.4.1_major_river_crossing_requirement"
+    ],
+    "19.4.2": [
+      "19.4.2_major_river_crossing_cost"
+    ],
+    "19.5.1": [
+      "19.5.1_hills_terrain_cost"
+    ],
+    "19.5.2": [
+      "19.5.2_hills_mountain_symbol"
+    ],
+    "19.6.1": [
+      "19.6.1_mountain_terrain_cost"
+    ],
+    "19.6.2": [
+      "19.6.2_mountain_must_stop"
+    ],
+    "19.6.3": [
+      "19.6.3_mountain_combat_bonus"
+    ],
+    "19.6.4": [
+      "19.6.4_mountain_symbol_no_stop"
+    ],
+    "19.7.1": [
+      "19.7.1_lakeshore_cost"
+    ],
+    "19.7.2": [
+      "19.7.2_lakeshore_no_crossing"
+    ],
+    "19.8.1": [
+      "19.8.1_seashore_cost"
+    ],
+    "19.8.2": [
+      "19.8.2_fleet_no_all_land_crossing"
+    ],
+    "19.8.3": [
+      "19.8.3_land_no_all_sea_crossing"
+    ],
+    "19.9.1": [
+      "19.9.1_open_sea_cost"
+    ],
+    "19.9.2": [
+      "19.9.2_open_sea_fleets_only"
+    ],
+    "19.10.1": [
+      "19.10.1_swamp_cost"
+    ],
+    "19.11.1": [
+      "19.11.1_isle_of_fright_cost"
+    ],
+    "19.11.2": [
+      "19.11.2_isle_of_fright_restriction"
+    ],
+    "19.12.1": [
+      "19.12.1_mountain_pass_cost"
+    ],
+    "19.12.2": [
+      "19.12.2_mountain_pass_defender_doubled"
+    ],
+    "19.13.1": [
+      "19.13.1_castle_enemy_forbidden"
+    ],
+    "19.13.2": [
+      "19.13.2_castle_friendly_cost"
+    ],
+    "19.14.2": [
+      "19.14.2_seaport_cost"
+    ],
+    "19.14.3": [
+      "19.14.3_seaport_access"
+    ],
+    "19.16.1": [
+      "19.16.1_scenic_hex_cost"
+    ],
+    "19.17.1": [
+      "19.17.1_cumulative_terrain_rule"
+    ],
+    "19.17.2": [
+      "19.17.2_forested_mountain_cost"
+    ],
+    "25.1.1": [
+      "25.1.1_only_active_player_attacks"
+    ],
+    "25.1.2": [
+      "25.1.2_adjacency_required"
+    ],
+    "25.1.3": [
+      "25.1.3_attack_is_optional"
+    ],
+    "25.2.1": [
+      "25.2.1_retreat_timing"
+    ],
+    "25.2.2": [
+      "25.2.2_human_retreat_success",
+      "25.2.2_human_retreat_failure",
+      "25.2.2_non_human_retreat_success"
+    ],
+    "25.2.3": [
+      "25.2.3_stack_test_order"
+    ],
+    "25.2.4": [
+      "25.2.4_retreat_destination"
+    ],
+    "25.2.5": [
+      "25.2.5_same_hex_retreat"
+    ],
+    "25.2.9": [
+      "25.2.9_no_retreat_if_surrounded"
+    ],
+    "25.2.10": [
+      "25.2.10_no_second_retreat"
+    ],
+    "25.2.11": [
+      "25.2.11_attacker_advance_after_retreat"
+    ],
+    "25.3.1": [
+      "25.3.1_both_sides_roll"
+    ],
+    "25.3.2": [
+      "25.3.2_higher_roll_wins"
+    ],
+    "25.3.3": [
+      "25.3.3_loser_losses"
+    ],
+    "25.3.4": [
+      "25.3.4_tie_both_lose"
+    ],
+    "25.3.5": [
+      "25.3.5_loss_selection"
+    ],
+    "25.4.1": [
+      "25.4.1_combat_modifier_attacker_advantage",
+      "25.4.1_equal_forces_no_modifier"
+    ],
+    "25.4.2": [
+      "25.4.2_combat_modifier_fractions_dropped"
+    ],
+    "25.4.4": [
+      "25.4.4_defender_minimum_bonus",
+      "25.4.4_defender_formula_exceeds_minimum"
+    ],
+    "25.5.1": [
+      "25.5.1_all_attacks_declared_first"
+    ],
+    "25.5.2": [
+      "25.5.2_attacker_chooses_resolution_order"
+    ],
+    "25.5.3": [
+      "25.5.3_results_immediate"
+    ],
+    "25.6.1": [
+      "25.6.1_seaborne_units_eliminated"
+    ],
+    "25.7.2": [
+      "25.7.2_siege_attackers_cannot_combat",
+      "25.7.2_transported_units_no_combat",
+      "25.7.2_activated_kingdom_no_attack",
+      "25.7.2_deactivated_kingdom_no_attack"
+    ],
+    "25.8.1": [
+      "25.8.1_cannot_attack_inside_castle"
+    ],
+    "25.8.2": [
+      "25.8.2_adjacency_required_for_attack"
+    ],
+    "25.9.1": [
+      "25.9.1_multiple_hexes_combine"
+    ],
+    "25.9.2": [
+      "25.9.2_allied_forces_combine"
+    ],
+    "25.10.1": [
+      "25.10.1_unit_attack_limit"
+    ],
+    "25.10.2": [
+      "25.10.2_hex_attack_limit"
+    ],
+    "25.11.1": [
+      "25.11.1_mountain_defender_bonus"
+    ],
+    "25.11.2": [
+      "25.11.2_mountain_pass_doubles_defender"
+    ],
+    "25.11.4": [
+      "25.11.4_land_no_attack_across_sea",
+      "25.11.4_fleet_no_attack_across_land"
+    ],
+    "25.12.1": [
+      "25.12.1_stack_attack_rule"
+    ],
+    "25.12.2": [
+      "25.12.2_stack_split_attacks"
+    ],
+    "25.12.3": [
+      "25.12.3_all_defenders_attacked"
+    ],
+    "25.13.1": [
+      "25.13.1_advance_trigger"
+    ],
+    "25.13.2": [
+      "25.13.2_advance_units_choice"
+    ],
+    "25.13.3": [
+      "25.13.3_advance_one_hex_only"
+    ],
+    "25.13.4": [
+      "25.13.4_siege_relief_advance_two"
+    ],
+    "26.1": [
+      "26.1.1_monarchs_are_leaders"
+    ],
+    "26.2": [
+      "26.2.1_leader_combat_strength_zero"
+    ],
+    "26.3.1": [
+      "26.3.1_leader_movement_bonus_scope"
+    ],
+    "26.3.2": [
+      "26.3.2_stack_uses_leader_ma"
+    ],
+    "26.3.3": [
+      "26.3.3_begin_end_stacked"
+    ],
+    "26.3.4": [
+      "26.3.4_units_may_be_left_behind"
+    ],
+    "26.3.5": [
+      "26.3.5_no_independent_movement_with_leader"
+    ],
+    "26.3.6": [
+      "26.3.6_unit_terrain_no_transfer"
+    ],
+    "26.4.1": [
+      "26.4.1_leader_combat_bonus_source"
+    ],
+    "26.4.2": [
+      "26.4.2_multiple_leader_bonuses_stack"
+    ],
+    "26.4.3": [
+      "26.4.3_no_leader_bonus_in_siege"
+    ],
+    "26.5.1": [
+      "26.5.1_lone_leader_pass_through_enemy"
+    ],
+    "26.5.2": [
+      "26.5.2_lone_leader_requires_fate_roll"
+    ],
+    "26.6.1": [
+      "26.6.1_fate_roll_combat_loss",
+      "26.6.1_fate_roll_lone_leader_enemy_pass",
+      "26.6.1_fate_roll_enemy_passes_lone_leader",
+      "26.6.1_fate_roll_castle_falls",
+      "26.6.1_fate_roll_leave_besieged_alone",
+      "26.6.1_fate_roll_fleet_lost_at_sea"
+    ],
+    "26.6.2": [
+      "26.6.2_fate_roll_one_killed",
+      "26.6.2_fate_roll_two_to_five_no_effect",
+      "26.6.2_fate_roll_six_captured"
+    ],
+    "26.6.3": [
+      "26.6.3_fate_roll_once_per_player_turn",
+      "26.6.3_fate_roll_once_per_enemy_phase"
+    ],
+    "26.6.5": [
+      "26.6.5_any_unit_may_force_fate_roll"
+    ],
+    "26.7": [
+      "26.7.1_lone_leader_cannot_be_attacked"
+    ],
+    "28.1.1": [
+      "28.1.1_non_player_death_confusion"
+    ],
+    "28.1.2": [
+      "28.1.2_confusion_duration_roll"
+    ],
+    "28.1.3": [
+      "28.1.3_confusion_restricts_regulars"
+    ],
+    "28.1.4": [
+      "28.1.4_confusion_end_new_personality"
+    ],
+    "28.1.5": [
+      "28.1.5_border_violation_ends_confusion"
+    ],
+    "28.1.6": [
+      "28.1.6_eliminated_regulars_remain"
+    ],
+    "28.2.1": [
+      "28.2.1_player_monarch_death_eliminates_player"
+    ],
+    "28.2.2": [
+      "28.2.2_allies_deactivate"
+    ],
+    "28.2.3": [
+      "28.2.3_player_kingdom_confusion"
+    ],
+    "28.2.4": [
+      "28.2.4_after_confusion_new_monarch"
+    ],
+    "28.2.5": [
+      "28.2.5_player_keeps_victory_points"
+    ],
+    "28.2.6": [
+      "28.2.6_eliminated_player_can_win"
+    ],
+    "28.2.7": [
+      "28.2.7_reentry_requires_approval"
+    ],
+    "28.3.1": [
+      "28.3.1_prisoner_placed_nearest_castle"
+    ],
+    "28.3.2": [
+      "28.3.2_no_castle_options"
+    ],
+    "28.3.3": [
+      "28.3.3_capture_awards_points"
+    ],
+    "28.3.4": [
+      "28.3.4_prisoner_cannot_act"
+    ],
+    "28.3.5": [
+      "28.3.5_release_conditions"
+    ],
+    "28.3.6": [
+      "28.3.6_release_placement"
+    ],
+    "28.4.1": [
+      "28.4.1_execute_prisoner_timing"
+    ],
+    "28.4.2": [
+      "28.4.2_execute_prisoner_no_points"
+    ],
+    "28.4.3": [
+      "28.4.3_execute_prisoner_penalty"
+    ],
+    "28.5.1": [
+      "28.5.1_forced_peace_timing"
+    ],
+    "28.5.3": [
+      "28.5.3_forced_peace_success_rolls"
+    ],
+    "28.5.4": [
+      "28.5.4_forced_peace_siege_modifier"
+    ],
+    "28.5.5": [
+      "28.5.5_forced_peace_no_modifiers"
+    ],
+    "28.5.6": [
+      "28.5.6_forced_peace_alternative_diplomacy"
+    ],
+    "28.5.7": [
+      "28.5.7_forced_peace_only_jailer"
+    ],
+    "28.5.8": [
+      "28.5.8_forced_peace_effects_reference"
+    ],
+    "29.1": [
+      "29.1_victory_points_determine_winner"
+    ],
+    "29.2": [
+      "29.2_timed_victory_after_twenty_turns"
+    ],
+    "29.3.1": [
+      "29.3.1_plunder_castle_points"
+    ],
+    "29.3.2": [
+      "29.3.2_plunder_royal_castle_points"
+    ],
+    "29.3.3": [
+      "29.3.3_capture_enemy_allied_monarch"
+    ],
+    "29.3.4": [
+      "29.3.4_kill_enemy_allied_monarch"
+    ],
+    "29.3.5": [
+      "29.3.5_capture_or_kill_player_monarch"
+    ],
+    "29.4.1": [
+      "29.4.1_assassination_kill_no_points"
+    ],
+    "29.4.2": [
+      "29.4.2_execute_prisoner_no_points"
+    ],
+    "29.4.3": [
+      "29.4.3_plunder_once_per_castle"
+    ],
+    "29.4.4": [
+      "29.4.4_plundered_status_permanent"
+    ],
+    "29.4.5": [
+      "29.4.5_capture_escape_recapture_points"
+    ],
+    "29.4.6": [
+      "29.4.6_posthumous_victory"
+    ],
+    "30.1.1": [
+      "30.1.1_troll_setup_locations"
+    ],
+    "30.1.2": [
+      "30.1.2_troll_locations_no_castles"
+    ],
+    "30.1.3": [
+      "30.1.3_troll_monarch_start"
+    ],
+    "30.1.4": [
+      "30.1.4_troll_regeneration",
+      "30.1.4_troll_regeneration_blocked"
+    ],
+    "30.2.1": [
+      "30.2.1_goblin_deploy_mountain_pass_only",
+      "30.2.1_goblin_one_per_hex",
+      "30.2.1_goblin_no_adjacency"
+    ],
+    "30.3.1": [
+      "30.3.1_dwarf_setup_locations"
+    ],
+    "30.3.2": [
+      "30.3.2_dwarf_locations_listed"
+    ],
+    "30.3.3": [
+      "30.3.3_dwarf_unity_common_cause"
+    ],
+    "31.1": [
+      "31.1_cities_vs_castles_distinction"
+    ],
+    "31.2.1": [
+      "31.2.1_city_without_castle_example"
+    ],
+    "31.2.2": [
+      "31.2.2_city_without_castle_no_siege"
+    ],
+    "31.3.1": [
+      "31.3.1_castle_identified_in_hexmap"
+    ],
+    "31.3.2": [
+      "31.3.2_castle_provides_intrinsic_defense"
+    ]
   }
 }
