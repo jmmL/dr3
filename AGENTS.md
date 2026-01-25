@@ -18,6 +18,8 @@ Code and assets are considered **Good** when they are:
 
 **Conformance Suite Design:** Declarative JSON test specs are specification-first, not TDD. Include negative test cases (what's NOT allowed), not just happy paths. Use rule references to existing JSON for traceability — avoid duplicating rule text in test cases.
 
+**Learning:** Validation harness should enforce schema parity with integration tests.
+
 ## First Steps
 TBD
 
