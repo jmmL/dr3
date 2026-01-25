@@ -2,18 +2,42 @@ A collection of reference documents that form the basis of the rules, map and ga
 
 This folder should never be written to, unless explicit permission is given.
 
-## Columnar JSON Format
+## File Structure
 
-All JSON data files use a columnar format optimized for minimal token usage (~61% smaller).
-This format is designed for efficient LLM ingestion while remaining machine-readable.
+Reference data exists in two formats:
 
-### Format Structure
+| Original Files | Minified Files | Description |
+|----------------|----------------|-------------|
+| `hexmap.json` | `hexmap.min.json` | Hex grid map data |
+| `factions.json` | `factions.min.json` | Faction definitions |
+| `starting_units.json` | `starting_units.min.json` | Unit deployment data |
+| `abilities.json` | `abilities.min.json` | Unit ability definitions |
+| `personality_cards.json` | `personality_cards.min.json` | Monarch personality cards |
+| `dr3_rules.json` | `dr3_rules.min.json` | Game rules reference |
+
+Advanced-mode variants follow the same pattern (e.g., `hexmap_advanced.min.json`).
+
+## Original Format
+
+The original `.json` files use abbreviated keys for readability:
+
+- `c`/`r` = col/row coordinates
+- `n` = name
+- `t` = type or terrain
+- `id` = identifier
+- `f` = faction/factionId
+- `cid` = cityId
+- Positions stored as `[col, row]` arrays
+
+## Minified Format (~61% smaller)
+
+The `.min.json` files use a columnar format optimized for LLM token usage:
 
 ```json
 {
   "$h": ["col1", "col2", ...],  // Column headers
-  "$s": ["str0", "str1", ...],  // String table (only for hexmap)
-  "$i": [2, 3],                 // Column indices using string interning
+  "$s": ["str0", "str1", ...],  // String table (hexmap only)
+  "$i": [2, 3],                 // Columns using string interning
   "_": [                        // Data rows
     [val1, val2, ...],
     [val1, val2, ...]
@@ -21,14 +45,7 @@ This format is designed for efficient LLM ingestion while remaining machine-read
 }
 ```
 
-### Special Keys
-
-- `$h` - Headers: array of column names
-- `$s` - String table: interned strings referenced by index (hexmap only)
-- `$i` - Intern columns: indices into $h for columns using string interning
-- `_` - Rows: array of data rows (trailing nulls trimmed)
-
-### Reading the Format
+### Reading the Minified Format
 
 ```python
 def expand_columnar(data):
@@ -51,20 +68,7 @@ def expand_columnar(data):
     return result
 ```
 
-### Key Abbreviations
-
-- `c`/`r` = col/row coordinates
-- `n` = name
-- `t` = type or terrain
-- `id` = identifier
-- `f` = faction/factionId
-- `cid` = cityId
-- `k` = kingdom (faction controlling hex)
-- Positions stored as `[col, row]` arrays
-- Default values omitted (e.g., `movement_type: "standard"`)
-- Empty arrays omitted
-
-## Regenerating Minimized JSON
+## Regenerating Minified Files
 
 Run the minimization script from the project root:
 
@@ -72,23 +76,21 @@ Run the minimization script from the project root:
 python scripts/minimize_json.py
 ```
 
-This deterministically regenerates all minimized JSON files from source data.
+This deterministically regenerates all `.min.json` files from the original sources.
 
 ## Advanced Mode Splits
 
 Advanced-only content is split into companion files with the `_advanced` suffix:
 
-- `factions_advanced.json`
-- `starting_units_advanced.json`
-- `hexmap_advanced.json`
-- `abilities.json` (shared ability IDs used by starting units)
+- `factions_advanced.json` / `factions_advanced.min.json`
+- `starting_units_advanced.json` / `starting_units_advanced.min.json`
+- `hexmap_advanced.json` / `hexmap_advanced.min.json`
 
-The base files (`factions.json`, `starting_units.json`, `hexmap.json`) include only basic-mode
-factions and metadata.
+The base files include only basic-mode factions and metadata.
 
 ## Schemas
 
-Schema definitions live alongside the data:
+Schema definitions for the original format:
 
 - `schema_abilities.json`
 - `schema_factions.json`
@@ -97,8 +99,12 @@ Schema definitions live alongside the data:
 
 ## Validation
 
-Run the validation script after edits:
-
+Validate original files:
 ```bash
 python docs/refs/validate_refs.py
+```
+
+Validate minified files:
+```bash
+python docs/refs/validate_refs_min.py
 ```

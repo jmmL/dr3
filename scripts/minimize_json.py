@@ -249,18 +249,23 @@ def minimize_rules(data: dict) -> dict:
     return data
 
 
-def process_file(name: str, minimize_fn) -> tuple[int, int]:
-    """Process a single file and return (original_size, new_size)."""
+def process_file(name: str, minimize_fn) -> tuple[int, int, str]:
+    """Process a single file and return (original_size, new_size, output_name)."""
     path = REFS / name
     if not path.exists():
-        return 0, 0
+        return 0, 0, ""
+
+    # Output to .min.json file (e.g., hexmap.json -> hexmap.min.json)
+    base = name.rsplit(".", 1)[0]
+    out_name = f"{base}.min.json"
+    out_path = REFS / out_name
 
     original_size = path.stat().st_size
     data = load(path)
     minimized = minimize_fn(data)
-    new_size = save(path, minimized)
+    new_size = save(out_path, minimized)
 
-    return original_size, new_size
+    return original_size, new_size, out_name
 
 
 def main():
@@ -283,18 +288,18 @@ def main():
     total_new = 0
 
     for name, fn in files:
-        orig, new = process_file(name, fn)
+        orig, new, out_name = process_file(name, fn)
         if orig > 0:
             reduction = (1 - new / orig) * 100
-            print(f"{name:35} {orig:>8} -> {new:>8} ({reduction:>5.1f}% smaller)")
+            print(f"{name:30} -> {out_name:35} {orig:>8} -> {new:>8} ({reduction:>5.1f}%)")
             total_original += orig
             total_new += new
 
     print("=" * 60)
     reduction = (1 - total_new / total_original) * 100
-    print(f"{'TOTAL':35} {total_original:>8} -> {total_new:>8} ({reduction:>5.1f}% smaller)")
+    print(f"{'TOTAL':68} {total_original:>8} -> {total_new:>8} ({reduction:>5.1f}%)")
 
-    print("\nDone! Files have been minimized in place.")
+    print("\nDone! Minified files created with .min.json suffix.")
     return 0
 
 
