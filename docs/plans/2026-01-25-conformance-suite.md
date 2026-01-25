@@ -1,6 +1,6 @@
 # Conformance Suite Implementation Plan
 
-> **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.
+> **For Claude:** REQUIRED SUB-SKILL: Use executing-plans to implement this plan task-by-task.
 
 **Goal:** Create a declarative, implementation-agnostic conformance suite that validates game logic against the DR3 rules.
 
