@@ -1,0 +1,328 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "26_leaders",
+  "tests": [
+    {
+      "id": "26.1.1_monarchs_are_leaders",
+      "rule_ref": "26.1",
+      "description": "Monarchs (player and non-player) are leader units",
+      "input": {
+        "unit_type": "monarch"
+      },
+      "expected": {
+        "is_leader": true
+      }
+    },
+    {
+      "id": "26.2.1_leader_combat_strength_zero",
+      "rule_ref": "26.2",
+      "description": "Leaders have combat strength of 0",
+      "input": {
+        "unit_type": "monarch"
+      },
+      "expected": {
+        "combat_strength": 0
+      }
+    },
+    {
+      "id": "26.3.1_leader_movement_bonus_scope",
+      "rule_ref": "26.3.1",
+      "description": "Leader movement bonus applies to one stack containing own regulars and/or mercenaries",
+      "input": {
+        "leader_id": "monarch_hothior",
+        "stack_contains": ["regular_army", "mercenary_army"]
+      },
+      "expected": {
+        "movement_bonus_applies": true
+      }
+    },
+    {
+      "id": "26.3.2_stack_uses_leader_ma",
+      "rule_ref": "26.3.2",
+      "description": "Stack uses leader's movement allowance and terrain bonuses",
+      "input": {
+        "leader_movement_allowance": 6,
+        "unit_movement_allowance": 4,
+        "stacked_with_leader": true
+      },
+      "expected": {
+        "effective_movement_allowance": 6
+      }
+    },
+    {
+      "id": "26.3.3_begin_end_stacked",
+      "rule_ref": "26.3.3",
+      "description": "Units must begin and end turn stacked with leader to use bonus",
+      "input": {
+        "unit_id": "u1",
+        "began_turn_with_leader": true,
+        "ended_turn_with_leader": false
+      },
+      "expected": {
+        "used_leader_bonus": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "26.3.4_units_may_be_left_behind",
+      "rule_ref": "26.3.4",
+      "description": "Units may be added or left behind during leader's move",
+      "input": {
+        "leader_id": "monarch_hothior",
+        "units_left_behind": ["u1"],
+        "mid_movement": true
+      },
+      "expected": {
+        "leave_behind_allowed": true
+      }
+    },
+    {
+      "id": "26.3.5_no_independent_movement_with_leader",
+      "rule_ref": "26.3.5",
+      "description": "Units using leader-assisted movement cannot move independently",
+      "input": {
+        "unit_id": "u1",
+        "used_leader_movement": true
+      },
+      "expected": {
+        "independent_movement_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "26.3.6_unit_terrain_no_transfer",
+      "rule_ref": "26.3.6",
+      "description": "Unit terrain bonuses do not transfer to leader",
+      "input": {
+        "unit_has_tree_symbol": true,
+        "leader_has_tree_symbol": false,
+        "stacked_together": true
+      },
+      "expected": {
+        "leader_gains_tree_symbol": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "26.4.1_leader_combat_bonus_source",
+      "rule_ref": "26.4.1",
+      "description": "Leader combat bonus comes from personality cards with combat bonus",
+      "input": {
+        "leader_id": "monarch_neuth",
+        "personality_card_combat_bonus": 2
+      },
+      "expected": {
+        "combat_bonus": 2
+      }
+    },
+    {
+      "id": "26.4.2_multiple_leader_bonuses_stack",
+      "rule_ref": "26.4.2",
+      "description": "Multiple leader bonuses may be combined",
+      "input": {
+        "leaders_in_combat": [
+          { "id": "monarch_a", "combat_bonus": 1 },
+          { "id": "monarch_b", "combat_bonus": 2 }
+        ]
+      },
+      "expected": {
+        "total_combat_bonus": 3
+      }
+    },
+    {
+      "id": "26.4.3_no_leader_bonus_in_siege",
+      "rule_ref": "26.4.3",
+      "description": "Leader combat bonus does not apply to siege combat",
+      "input": {
+        "combat_type": "siege",
+        "leader_combat_bonus": 2
+      },
+      "expected": {
+        "bonus_applied": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "26.5.1_lone_leader_pass_through_enemy",
+      "rule_ref": "26.5.1",
+      "description": "Lone leader may pass through enemy stack",
+      "input": {
+        "unit_type": "monarch",
+        "is_alone": true,
+        "target_hex_contains": "enemy_stack"
+      },
+      "expected": {
+        "pass_through_allowed": true
+      }
+    },
+    {
+      "id": "26.5.2_lone_leader_requires_fate_roll",
+      "rule_ref": "26.5.2",
+      "description": "Lone leader passing through enemy requires fate roll",
+      "input": {
+        "unit_type": "monarch",
+        "is_alone": true,
+        "passed_through_enemy": true
+      },
+      "expected": {
+        "fate_roll_required": true
+      }
+    },
+    {
+      "id": "26.6.1_fate_roll_combat_loss",
+      "rule_ref": "26.6.1",
+      "description": "Fate roll triggered when units in leader's stack lost in combat",
+      "input": {
+        "leader_in_stack": true,
+        "stack_lost_combat_units": true
+      },
+      "expected": {
+        "fate_roll_required": true
+      }
+    },
+    {
+      "id": "26.6.1_fate_roll_lone_leader_enemy_pass",
+      "rule_ref": "26.6.1",
+      "description": "Fate roll triggered when lone leader passes through enemy stack",
+      "input": {
+        "leader_alone": true,
+        "passed_through_enemy": true
+      },
+      "expected": {
+        "fate_roll_required": true
+      }
+    },
+    {
+      "id": "26.6.1_fate_roll_enemy_passes_lone_leader",
+      "rule_ref": "26.6.1",
+      "description": "Fate roll triggered when enemy stack passes through lone leader's hex",
+      "input": {
+        "leader_alone": true,
+        "enemy_passed_through": true
+      },
+      "expected": {
+        "fate_roll_required": true
+      }
+    },
+    {
+      "id": "26.6.1_fate_roll_castle_falls",
+      "rule_ref": "26.6.1",
+      "description": "Fate roll triggered when castle containing leader falls to siege",
+      "input": {
+        "leader_in_castle": true,
+        "castle_taken_by_siege": true
+      },
+      "expected": {
+        "fate_roll_required": true
+      }
+    },
+    {
+      "id": "26.6.1_fate_roll_leave_besieged_alone",
+      "rule_ref": "26.6.1",
+      "description": "Fate roll triggered when leader attempts to leave besieged castle alone",
+      "input": {
+        "leader_in_besieged_castle": true,
+        "leaving_alone": true
+      },
+      "expected": {
+        "fate_roll_required": true
+      }
+    },
+    {
+      "id": "26.6.1_fate_roll_fleet_lost_at_sea",
+      "rule_ref": "26.6.1",
+      "description": "Fate roll triggered when fleet containing leader lost at sea",
+      "input": {
+        "leader_aboard_fleet": true,
+        "fleet_lost_at_sea": true
+      },
+      "expected": {
+        "fate_roll_required": true
+      }
+    },
+    {
+      "id": "26.6.2_fate_roll_one_killed",
+      "rule_ref": "26.6.2",
+      "description": "Leader killed on fate roll of 1",
+      "input": {
+        "fate_roll": 1
+      },
+      "expected": {
+        "outcome": "killed"
+      }
+    },
+    {
+      "id": "26.6.2_fate_roll_two_to_five_no_effect",
+      "rule_ref": "26.6.2",
+      "description": "No effect on fate roll of 2-5",
+      "input": {
+        "fate_roll": 3
+      },
+      "expected": {
+        "outcome": "no_effect"
+      }
+    },
+    {
+      "id": "26.6.2_fate_roll_six_captured",
+      "rule_ref": "26.6.2",
+      "description": "Leader captured on fate roll of 6",
+      "input": {
+        "fate_roll": 6
+      },
+      "expected": {
+        "outcome": "captured"
+      }
+    },
+    {
+      "id": "26.6.3_fate_roll_once_per_player_turn",
+      "rule_ref": "26.6.3",
+      "description": "Leader may only roll fate once per player turn",
+      "input": {
+        "leader_id": "monarch_a",
+        "fate_rolls_this_player_turn": 1,
+        "additional_trigger": true
+      },
+      "expected": {
+        "additional_roll_required": false
+      }
+    },
+    {
+      "id": "26.6.3_fate_roll_once_per_enemy_phase",
+      "rule_ref": "26.6.3",
+      "description": "Leader may only roll fate once per enemy movement phase",
+      "input": {
+        "leader_id": "monarch_a",
+        "fate_rolls_this_enemy_phase": 1,
+        "additional_trigger": true
+      },
+      "expected": {
+        "additional_roll_required": false
+      }
+    },
+    {
+      "id": "26.6.5_any_unit_may_force_fate_roll",
+      "rule_ref": "26.6.5",
+      "description": "Any non-fleet unit may enter lone leader's hex to force fate roll",
+      "input": {
+        "lone_leader_hex": [10, 5],
+        "entering_unit_type": "army"
+      },
+      "expected": {
+        "entry_allowed": true,
+        "fate_roll_triggered": true
+      }
+    },
+    {
+      "id": "26.7.1_lone_leader_cannot_be_attacked",
+      "rule_ref": "26.7",
+      "description": "Lone leader cannot be attacked (only fate rolls and assassination)",
+      "input": {
+        "target_type": "lone_leader"
+      },
+      "expected": {
+        "combat_attack_allowed": false
+      },
+      "tags": ["negative"]
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "18_movement",
+  "tests": [
+    {
+      "id": "18.1.1_only_active_player_moves",
+      "rule_ref": "18.1.1",
+      "description": "Only the player whose turn it is may move units",
+      "input": {
+        "active_player": "player_a",
+        "moving_player": "player_b"
+      },
+      "expected": {
+        "movement_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "18.1.2_any_direction_movement",
+      "rule_ref": "18.1.2",
+      "description": "Units may move in any direction or combination of directions",
+      "input": {
+        "unit_id": "u1",
+        "movement_directions": ["north", "east", "southeast"]
+      },
+      "expected": {
+        "movement_allowed": true
+      }
+    },
+    {
+      "id": "18.1.3_movement_points_not_saved",
+      "rule_ref": "18.1.3",
+      "description": "Movement points cannot be saved or transferred between turns",
+      "input": {
+        "unit_id": "u1",
+        "movement_allowance": 6,
+        "movement_used": 4,
+        "next_turn_bonus": 2
+      },
+      "expected": {
+        "bonus_applied": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "18.1.4_minimum_movement_one_hex",
+      "rule_ref": "18.1.4",
+      "description": "Any unit may always move at least one hex regardless of terrain cost",
+      "input": {
+        "unit_id": "u1",
+        "movement_allowance": 2,
+        "terrain_cost": 3
+      },
+      "expected": {
+        "can_enter_hex": true,
+        "minimum_movement_applies": true
+      }
+    },
+    {
+      "id": "18.2.1_player_monarch_units_may_move",
+      "rule_ref": "18.2.1",
+      "description": "Player monarch's own units may move",
+      "input": {
+        "unit_owner": "player_monarch",
+        "is_active_player": true
+      },
+      "expected": {
+        "movement_allowed": true
+      }
+    },
+    {
+      "id": "18.2.2_friendly_mercenaries_may_move",
+      "rule_ref": "18.2.2",
+      "description": "Friendly mercenaries may move",
+      "input": {
+        "unit_type": "mercenary",
+        "controlled_by_active_player": true
+      },
+      "expected": {
+        "movement_allowed": true
+      }
+    },
+    {
+      "id": "18.2.3_allied_kingdom_units_may_move",
+      "rule_ref": "18.2.3",
+      "description": "Allied kingdom units may move",
+      "input": {
+        "unit_owner": "allied_kingdom",
+        "is_active_player": true
+      },
+      "expected": {
+        "movement_allowed": true
+      }
+    },
+    {
+      "id": "18.3.1_besieged_units_cannot_move",
+      "rule_ref": "18.3.1",
+      "description": "Units under siege cannot move during normal movement",
+      "input": {
+        "unit_id": "u1",
+        "is_under_siege": true
+      },
+      "expected": {
+        "movement_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "18.3.2_just_activated_cannot_move",
+      "rule_ref": "18.3.2",
+      "description": "Units of kingdom that just activated cannot move",
+      "input": {
+        "kingdom": "neuth",
+        "activated_this_turn": true
+      },
+      "expected": {
+        "movement_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "18.3.3_just_deactivated_cannot_move",
+      "rule_ref": "18.3.3",
+      "description": "Units of kingdom that just deactivated cannot move",
+      "input": {
+        "kingdom": "neuth",
+        "deactivated_this_turn": true
+      },
+      "expected": {
+        "movement_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "18.4.1_stack_uses_slowest_speed",
+      "rule_ref": "18.4.1",
+      "description": "Stack moves at speed of slowest unit",
+      "input": {
+        "stack_units": [
+          { "id": "u1", "movement_allowance": 6 },
+          { "id": "u2", "movement_allowance": 4 }
+        ]
+      },
+      "expected": {
+        "stack_movement_allowance": 4
+      }
+    },
+    {
+      "id": "18.4.2_units_may_leave_stack",
+      "rule_ref": "18.4.2",
+      "description": "Units may be left behind during stack movement",
+      "input": {
+        "stack_units": ["u1", "u2"],
+        "units_to_leave": ["u2"],
+        "leave_hex": [10, 5]
+      },
+      "expected": {
+        "leave_allowed": true
+      }
+    },
+    {
+      "id": "18.4.3_units_may_continue_independently",
+      "rule_ref": "18.4.3",
+      "description": "Units left behind may continue moving independently",
+      "input": {
+        "unit_id": "u2",
+        "left_stack_at_hex": [10, 5],
+        "remaining_mp": 2
+      },
+      "expected": {
+        "independent_movement_allowed": true
+      }
+    },
+    {
+      "id": "18.5.1_cannot_enter_enemy_hex",
+      "rule_ref": "18.5.1",
+      "description": "Units cannot enter hex containing enemy unit",
+      "input": {
+        "target_hex": [12, 5],
+        "target_hex_contains": "enemy_unit"
+      },
+      "expected": {
+        "entry_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "18.5.2_allied_stacking_end_turn",
+      "rule_ref": "18.5.2",
+      "description": "Cannot end turn in same hex as different allied kingdom",
+      "input": {
+        "unit_kingdom": "hothior",
+        "hex_contains_kingdom": "mivior",
+        "relationship": "allied_to_same_player",
+        "phase": "end_of_turn"
+      },
+      "expected": {
+        "position_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "18.5.3_cannot_exceed_allowance",
+      "rule_ref": "18.5.3",
+      "description": "Cannot exceed movement allowance",
+      "input": {
+        "movement_allowance": 4,
+        "movement_spent": 5
+      },
+      "expected": {
+        "movement_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "18.5.4_terrain_cost_exceeds_remaining",
+      "rule_ref": "18.5.4",
+      "description": "Cannot enter hex if terrain cost exceeds remaining MP (except minimum movement)",
+      "input": {
+        "remaining_mp": 1,
+        "terrain_cost": 3,
+        "hexes_moved_this_turn": 2
+      },
+      "expected": {
+        "entry_allowed": false,
+        "minimum_movement_applies": false
+      },
+      "tags": ["negative"],
+      "notes": "Minimum movement only applies if unit hasn't moved yet"
+    },
+    {
+      "id": "18.5.5_land_cannot_cross_all_sea",
+      "rule_ref": "18.5.5",
+      "description": "Land units cannot cross all-sea hexsides",
+      "input": {
+        "unit_type": "land",
+        "hexside_type": "all_sea"
+      },
+      "expected": {
+        "crossing_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "18.5.5_fleet_cannot_cross_all_land",
+      "rule_ref": "18.5.5",
+      "description": "Fleets cannot cross all-land hexsides",
+      "input": {
+        "unit_type": "fleet",
+        "hexside_type": "all_land"
+      },
+      "expected": {
+        "crossing_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "18.5.6_off_map_eliminates",
+      "rule_ref": "18.5.6",
+      "description": "Units forced off map are eliminated",
+      "input": {
+        "unit_id": "u1",
+        "forced_off_map": true
+      },
+      "expected": {
+        "unit_eliminated": true
+      }
+    },
+    {
+      "id": "18.5.6_voluntary_off_map_forbidden",
+      "rule_ref": "18.5.6",
+      "description": "Units cannot voluntarily move off map",
+      "input": {
+        "unit_id": "u1",
+        "target_hex": "off_map",
+        "voluntary": true
+      },
+      "expected": {
+        "movement_allowed": false
+      },
+      "tags": ["negative"]
+    }
+  ]
+}

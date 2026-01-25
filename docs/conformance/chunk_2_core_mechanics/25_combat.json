@@ -1,0 +1,632 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "25_combat",
+  "tests": [
+    {
+      "id": "25.1.1_only_active_player_attacks",
+      "rule_ref": "25.1.1",
+      "description": "Only the player whose turn it is may initiate attacks",
+      "input": {
+        "active_player": "player_a",
+        "attacking_player": "player_b"
+      },
+      "expected": {
+        "attack_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "25.1.2_adjacency_required",
+      "rule_ref": "25.1.2",
+      "description": "Attack requires adjacent opposing units",
+      "input": {
+        "attacker_hex": [10, 5],
+        "defender_hex": [10, 7],
+        "hexes_adjacent": false
+      },
+      "expected": {
+        "attack_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "25.1.3_attack_is_optional",
+      "rule_ref": "25.1.3",
+      "description": "Attack is optional; player may choose not to attack",
+      "input": {
+        "adjacent_enemy": true,
+        "player_chooses_attack": false
+      },
+      "expected": {
+        "attack_required": false
+      }
+    },
+    {
+      "id": "25.2.1_retreat_timing",
+      "rule_ref": "25.2.1",
+      "description": "Retreat before combat occurs after attack declared, before dice rolled",
+      "input": {
+        "attack_declared": true,
+        "dice_rolled": false
+      },
+      "expected": {
+        "retreat_attempt_allowed": true
+      }
+    },
+    {
+      "id": "25.2.2_human_retreat_success",
+      "rule_ref": "25.2.2",
+      "description": "Human units retreat successfully on rolls of 4, 5, or 6",
+      "input": {
+        "faction_type": "human",
+        "retreat_roll": 4
+      },
+      "expected": {
+        "retreat_successful": true
+      }
+    },
+    {
+      "id": "25.2.2_human_retreat_failure",
+      "rule_ref": "25.2.2",
+      "description": "Human units fail retreat on rolls of 1, 2, or 3",
+      "input": {
+        "faction_type": "human",
+        "retreat_roll": 3
+      },
+      "expected": {
+        "retreat_successful": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "25.2.2_non_human_retreat_success",
+      "rule_ref": "25.2.2",
+      "description": "Non-human units retreat successfully on rolls of 3, 4, 5, or 6",
+      "input": {
+        "faction_type": "non_human",
+        "retreat_roll": 3
+      },
+      "expected": {
+        "retreat_successful": true
+      }
+    },
+    {
+      "id": "25.2.3_stack_test_order",
+      "rule_ref": "25.2.3",
+      "description": "Test unit with least chance of success first; success allows all to retreat",
+      "input": {
+        "stack_units": [
+          { "type": "human", "retreat_chance": 0.5 },
+          { "type": "non_human", "retreat_chance": 0.67 }
+        ],
+        "first_roll_result": 4
+      },
+      "expected": {
+        "test_order": ["human", "non_human"],
+        "all_retreat_on_first_success": true
+      }
+    },
+    {
+      "id": "25.2.4_retreat_destination",
+      "rule_ref": "25.2.4",
+      "description": "Retreating units must move to adjacent hex not occupied by enemy",
+      "input": {
+        "retreating_from": [10, 5],
+        "adjacent_hexes": [[10, 4], [11, 5], [10, 6]],
+        "enemy_occupied": [[10, 4]]
+      },
+      "expected": {
+        "valid_retreat_destinations": [[11, 5], [10, 6]]
+      }
+    },
+    {
+      "id": "25.2.5_same_hex_retreat",
+      "rule_ref": "25.2.5",
+      "description": "All units in stack must retreat to same hex",
+      "input": {
+        "stack_units": ["u1", "u2", "u3"],
+        "retreat_hex": [11, 5]
+      },
+      "expected": {
+        "all_units_same_destination": true
+      }
+    },
+    {
+      "id": "25.2.9_no_retreat_if_surrounded",
+      "rule_ref": "25.2.9",
+      "description": "Cannot retreat if completely surrounded by enemy combat units",
+      "input": {
+        "unit_hex": [10, 5],
+        "all_adjacent_hexes_enemy_occupied": true
+      },
+      "expected": {
+        "retreat_possible": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "25.2.10_no_second_retreat",
+      "rule_ref": "25.2.10",
+      "description": "Cannot retreat a second time if still adjacent to attacking units",
+      "input": {
+        "retreated_once": true,
+        "still_adjacent_to_attacker": true
+      },
+      "expected": {
+        "second_retreat_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "25.2.11_attacker_advance_after_retreat",
+      "rule_ref": "25.2.11",
+      "description": "Attacker may advance into vacated hex after successful retreat",
+      "input": {
+        "defender_retreated": true,
+        "vacated_hex": [10, 5]
+      },
+      "expected": {
+        "attacker_advance_allowed": true,
+        "further_attacks_allowed": false
+      }
+    },
+    {
+      "id": "25.3.1_both_sides_roll",
+      "rule_ref": "25.3.1",
+      "description": "Each side rolls 1d6 for combat",
+      "input": {
+        "combat_initiated": true
+      },
+      "expected": {
+        "attacker_rolls": 1,
+        "defender_rolls": 1,
+        "die_type": "d6"
+      }
+    },
+    {
+      "id": "25.3.2_higher_roll_wins",
+      "rule_ref": "25.3.2",
+      "description": "Higher modified roll wins combat",
+      "input": {
+        "attacker_roll": 4,
+        "attacker_modifier": 2,
+        "defender_roll": 3,
+        "defender_modifier": 0
+      },
+      "expected": {
+        "attacker_modified_total": 6,
+        "defender_modified_total": 3,
+        "winner": "attacker"
+      }
+    },
+    {
+      "id": "25.3.3_loser_losses",
+      "rule_ref": "25.3.3",
+      "description": "Loser loses units equal to difference between modified rolls",
+      "input": {
+        "attacker_modified_total": 6,
+        "defender_modified_total": 3
+      },
+      "expected": {
+        "defender_losses": 3
+      }
+    },
+    {
+      "id": "25.3.4_tie_both_lose",
+      "rule_ref": "25.3.4",
+      "description": "Tied rolls cause both sides to lose units equal to the tied result",
+      "input": {
+        "attacker_roll": 4,
+        "attacker_modifier": 0,
+        "defender_roll": 4,
+        "defender_modifier": 0
+      },
+      "expected": {
+        "attacker_modified_total": 4,
+        "defender_modified_total": 4,
+        "winner": "tie",
+        "attacker_losses": 4,
+        "defender_losses": 4
+      }
+    },
+    {
+      "id": "25.3.5_loss_selection",
+      "rule_ref": "25.3.5",
+      "description": "Owning player chooses which units are eliminated",
+      "input": {
+        "losing_player": "player_a",
+        "units_to_lose": 2,
+        "available_units": ["u1", "u2", "u3"]
+      },
+      "expected": {
+        "selection_by": "player_a"
+      }
+    },
+    {
+      "id": "25.4.1_combat_modifier_attacker_advantage",
+      "rule_ref": "25.4.1",
+      "description": "6 attackers vs 2 defenders: modifier = (6/2)-1 = +2 to attacker",
+      "input": {
+        "attacker_count": 6,
+        "defender_count": 2
+      },
+      "expected": {
+        "modifier": 2,
+        "applies_to": "attacker"
+      }
+    },
+    {
+      "id": "25.4.2_combat_modifier_fractions_dropped",
+      "rule_ref": "25.4.2",
+      "description": "5 attackers vs 2 defenders: (5/2)=2.5, drop to 2, minus 1 = +1",
+      "input": {
+        "attacker_count": 5,
+        "defender_count": 2
+      },
+      "expected": {
+        "modifier": 1,
+        "applies_to": "attacker"
+      }
+    },
+    {
+      "id": "25.4.1_equal_forces_no_modifier",
+      "rule_ref": "25.4.1",
+      "description": "Equal forces: (3/3)-1 = 0, no modifier",
+      "input": {
+        "attacker_count": 3,
+        "defender_count": 3
+      },
+      "expected": {
+        "modifier": 0,
+        "applies_to": null
+      },
+      "tags": ["boundary"]
+    },
+    {
+      "id": "25.4.4_defender_minimum_bonus",
+      "rule_ref": "25.4.4",
+      "description": "3 defenders vs 2 attackers: formula gives (3/2)-1=0.5->0, but minimum +1 applies",
+      "input": {
+        "attacker_count": 2,
+        "defender_count": 3
+      },
+      "expected": {
+        "modifier": 1,
+        "applies_to": "defender"
+      }
+    },
+    {
+      "id": "25.4.4_defender_formula_exceeds_minimum",
+      "rule_ref": "25.4.4",
+      "description": "6 defenders vs 2 attackers: (6/2)-1=2 exceeds minimum +1",
+      "input": {
+        "attacker_count": 2,
+        "defender_count": 6
+      },
+      "expected": {
+        "modifier": 2,
+        "applies_to": "defender"
+      }
+    },
+    {
+      "id": "25.5.1_all_attacks_declared_first",
+      "rule_ref": "25.5.1",
+      "description": "All attacks must be stated before any are resolved",
+      "input": {
+        "attacks": [
+          { "from": [10, 5], "to": [10, 6] },
+          { "from": [12, 5], "to": [12, 6] }
+        ]
+      },
+      "expected": {
+        "declaration_phase_required": true,
+        "resolution_after_all_declared": true
+      }
+    },
+    {
+      "id": "25.5.2_attacker_chooses_resolution_order",
+      "rule_ref": "25.5.2",
+      "description": "Attacker chooses order of attack resolution",
+      "input": {
+        "attacks_declared": 3,
+        "resolving_player": "attacker"
+      },
+      "expected": {
+        "resolution_order_chosen_by": "attacker"
+      }
+    },
+    {
+      "id": "25.5.3_results_immediate",
+      "rule_ref": "25.5.3",
+      "description": "Combat results take effect immediately",
+      "input": {
+        "combat_resolved": true,
+        "units_eliminated": ["u1", "u2"]
+      },
+      "expected": {
+        "elimination_immediate": true
+      }
+    },
+    {
+      "id": "25.6.1_seaborne_units_eliminated",
+      "rule_ref": "25.6.1",
+      "description": "Units aboard eliminated fleet are also eliminated",
+      "input": {
+        "fleet_eliminated": true,
+        "units_aboard": ["u1", "u2"]
+      },
+      "expected": {
+        "units_also_eliminated": ["u1", "u2"]
+      }
+    },
+    {
+      "id": "25.7.2_siege_attackers_cannot_combat",
+      "rule_ref": "25.7.2",
+      "description": "Units that declared siege attack cannot also make regular attacks",
+      "input": {
+        "unit_id": "u1",
+        "declared_siege_attack": true
+      },
+      "expected": {
+        "combat_attack_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "25.7.2_transported_units_no_combat",
+      "rule_ref": "25.7.2",
+      "description": "Land units aboard fleets cannot attack (except siege combat)",
+      "input": {
+        "unit_id": "u1",
+        "unit_type": "land",
+        "aboard_fleet": true
+      },
+      "expected": {
+        "combat_attack_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "25.7.2_activated_kingdom_no_attack",
+      "rule_ref": "25.7.2",
+      "description": "Units of kingdom activated this turn cannot attack",
+      "input": {
+        "kingdom": "neuth",
+        "activated_this_turn": true
+      },
+      "expected": {
+        "attack_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "25.7.2_deactivated_kingdom_no_attack",
+      "rule_ref": "25.7.2",
+      "description": "Units of kingdom deactivated this turn cannot attack",
+      "input": {
+        "kingdom": "neuth",
+        "deactivated_this_turn": true
+      },
+      "expected": {
+        "attack_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "25.8.1_cannot_attack_inside_castle",
+      "rule_ref": "25.8.1",
+      "description": "Cannot attack enemy units inside castles with regular combat",
+      "input": {
+        "defender_location": "inside_castle"
+      },
+      "expected": {
+        "attack_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "25.8.2_adjacency_required_for_attack",
+      "rule_ref": "25.8.2",
+      "description": "Adjacency required to attack",
+      "input": {
+        "attacker_hex": [10, 5],
+        "defender_hex": [10, 6],
+        "hexes_adjacent": true
+      },
+      "expected": {
+        "attack_allowed": true
+      }
+    },
+    {
+      "id": "25.9.1_multiple_hexes_combine",
+      "rule_ref": "25.9.1",
+      "description": "Multiple hexes attacking one defender combine strengths",
+      "input": {
+        "attacking_hexes": [
+          { "hex": [10, 4], "units": 3 },
+          { "hex": [11, 5], "units": 2 }
+        ],
+        "defender_hex": [10, 5]
+      },
+      "expected": {
+        "total_attacker_strength": 5
+      }
+    },
+    {
+      "id": "25.9.2_allied_forces_combine",
+      "rule_ref": "25.9.2",
+      "description": "Friendly allied forces may combine in attacks",
+      "input": {
+        "attacker_kingdoms": ["hothior", "mivior"],
+        "relationship": "allied_to_same_player"
+      },
+      "expected": {
+        "combined_attack_allowed": true
+      }
+    },
+    {
+      "id": "25.10.1_unit_attack_limit",
+      "rule_ref": "25.10.1",
+      "description": "Each unit may only attack once per player turn",
+      "input": {
+        "unit_id": "u1",
+        "attacks_made_this_turn": 1
+      },
+      "expected": {
+        "additional_attack_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "25.10.2_hex_attack_limit",
+      "rule_ref": "25.10.2",
+      "description": "Each hex may only be attacked once per player turn by each player",
+      "input": {
+        "defender_hex": [10, 5],
+        "attacks_this_turn_by_player": 1
+      },
+      "expected": {
+        "additional_attack_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "25.11.1_mountain_defender_bonus",
+      "rule_ref": "25.11.1",
+      "description": "Mountains give +1 to defender's combat die roll",
+      "input": {
+        "defender_terrain": "mountain"
+      },
+      "expected": {
+        "defender_terrain_bonus": 1
+      }
+    },
+    {
+      "id": "25.11.2_mountain_pass_doubles_defender",
+      "rule_ref": "25.11.2",
+      "description": "Mountain pass doubles defender's combat strength",
+      "input": {
+        "defender_terrain": "mountain_pass",
+        "defender_strength": 3
+      },
+      "expected": {
+        "effective_defender_strength": 6
+      }
+    },
+    {
+      "id": "25.11.4_land_no_attack_across_sea",
+      "rule_ref": "25.11.4",
+      "description": "Land units cannot attack across all-sea hexsides",
+      "input": {
+        "unit_type": "land",
+        "hexside_type": "all_sea"
+      },
+      "expected": {
+        "attack_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "25.11.4_fleet_no_attack_across_land",
+      "rule_ref": "25.11.4",
+      "description": "Fleets cannot attack across all-land hexsides",
+      "input": {
+        "unit_type": "fleet",
+        "hexside_type": "all_land"
+      },
+      "expected": {
+        "attack_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "25.12.1_stack_attack_rule",
+      "rule_ref": "25.12.1",
+      "description": "If any unit in stack attacks, all must attack",
+      "input": {
+        "stack_units": ["u1", "u2", "u3"],
+        "attacking_units": ["u1"]
+      },
+      "expected": {
+        "all_must_attack": true
+      }
+    },
+    {
+      "id": "25.12.2_stack_split_attacks",
+      "rule_ref": "25.12.2",
+      "description": "Units in stack may attack different adjacent hexes",
+      "input": {
+        "stack_hex": [10, 5],
+        "stack_units": ["u1", "u2"],
+        "attack_targets": {
+          "u1": [10, 4],
+          "u2": [11, 5]
+        }
+      },
+      "expected": {
+        "split_attack_allowed": true
+      }
+    },
+    {
+      "id": "25.12.3_all_defenders_attacked",
+      "rule_ref": "25.12.3",
+      "description": "All units in defender hex attacked as single total",
+      "input": {
+        "defender_hex": [10, 5],
+        "defender_units": ["d1", "d2", "d3"]
+      },
+      "expected": {
+        "attacked_as_single_force": true
+      }
+    },
+    {
+      "id": "25.13.1_advance_trigger",
+      "rule_ref": "25.13.1",
+      "description": "Advance allowed when all defenders retreat or are eliminated",
+      "input": {
+        "defender_hex": [10, 5],
+        "defenders_remaining": 0
+      },
+      "expected": {
+        "advance_allowed": true
+      }
+    },
+    {
+      "id": "25.13.2_advance_units_choice",
+      "rule_ref": "25.13.2",
+      "description": "Attacker chooses some, all, or none of attacking units to advance",
+      "input": {
+        "attacking_units": ["u1", "u2", "u3"],
+        "advance_allowed": true
+      },
+      "expected": {
+        "advance_choice_options": ["none", "some", "all"]
+      }
+    },
+    {
+      "id": "25.13.3_advance_one_hex_only",
+      "rule_ref": "25.13.3",
+      "description": "Advance limited to one hex",
+      "input": {
+        "vacated_hex": [10, 5],
+        "advance_distance_requested": 2
+      },
+      "expected": {
+        "advance_allowed_hexes": 1
+      }
+    },
+    {
+      "id": "25.13.4_siege_relief_advance_two",
+      "rule_ref": "25.13.4",
+      "description": "Relieving siege may advance two hexes into castle",
+      "input": {
+        "is_siege_relief": true,
+        "cleared_hex": [10, 5],
+        "castle_hex": [10, 6]
+      },
+      "expected": {
+        "advance_allowed_hexes": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "6_special_terrain_capabilities",
+  "tests": [
+    {
+      "id": "6.1.1_tree_symbol_forest_as_clear",
+      "rule_ref": "6.1.1",
+      "description": "Units with tree symbol treat forests as clear terrain (1 MP)",
+      "input": {
+        "unit_has_tree_symbol": true,
+        "terrain": "forest"
+      },
+      "expected": {
+        "effective_terrain": "clear",
+        "movement_cost": 1
+      }
+    },
+    {
+      "id": "6.1.1_no_tree_symbol_forest_cost",
+      "rule_ref": "6.1.1",
+      "description": "Units without tree symbol pay normal forest cost (2 MP)",
+      "tags": ["negative"],
+      "input": {
+        "unit_has_tree_symbol": false,
+        "terrain": "forest"
+      },
+      "expected": {
+        "effective_terrain": "forest",
+        "movement_cost": 2
+      }
+    },
+    {
+      "id": "6.2.1_mountain_symbol_hills_as_clear",
+      "rule_ref": "6.2.1",
+      "description": "Units with mountain symbol treat hills as clear terrain (1 MP)",
+      "input": {
+        "unit_has_mountain_symbol": true,
+        "terrain": "hills"
+      },
+      "expected": {
+        "effective_terrain": "clear",
+        "movement_cost": 1
+      }
+    },
+    {
+      "id": "6.2.1_no_mountain_symbol_hills_cost",
+      "rule_ref": "6.2.1",
+      "description": "Units without mountain symbol pay normal hills cost (2 MP)",
+      "tags": ["negative"],
+      "input": {
+        "unit_has_mountain_symbol": false,
+        "terrain": "hills"
+      },
+      "expected": {
+        "effective_terrain": "hills",
+        "movement_cost": 2
+      }
+    },
+    {
+      "id": "6.2.2_mountain_symbol_no_stop",
+      "rule_ref": "6.2.2",
+      "description": "Units with mountain symbol need not stop in mountain hexes",
+      "input": {
+        "unit_has_mountain_symbol": true,
+        "terrain": "mountain"
+      },
+      "expected": {
+        "must_stop": false,
+        "movement_cost": 3
+      }
+    },
+    {
+      "id": "6.2.2_no_mountain_symbol_must_stop",
+      "rule_ref": "6.2.2",
+      "description": "Units without mountain symbol must stop in mountain hexes",
+      "tags": ["negative"],
+      "input": {
+        "unit_has_mountain_symbol": false,
+        "terrain": "mountain"
+      },
+      "expected": {
+        "must_stop": true,
+        "movement_cost": 3
+      }
+    },
+    {
+      "id": "6.3.1_home_kingdom_bonus_applies_monarch",
+      "rule_ref": "6.3.1",
+      "description": "Home kingdom bonus applies to monarchs",
+      "input": {
+        "unit_type": "monarch",
+        "in_home_kingdom": true
+      },
+      "expected": {
+        "has_home_kingdom_bonus": true
+      }
+    },
+    {
+      "id": "6.3.1_home_kingdom_bonus_applies_regulars",
+      "rule_ref": "6.3.1",
+      "description": "Home kingdom bonus applies to regular units",
+      "input": {
+        "unit_type": "regular",
+        "in_home_kingdom": true
+      },
+      "expected": {
+        "has_home_kingdom_bonus": true
+      }
+    },
+    {
+      "id": "6.3.2_home_kingdom_both_bonuses",
+      "rule_ref": "6.3.2",
+      "description": "Home kingdom bonus provides both forest and mountain terrain bonuses",
+      "input": {
+        "unit_type": "regular",
+        "in_home_kingdom": true
+      },
+      "expected": {
+        "effective_tree_symbol": true,
+        "effective_mountain_symbol": true
+      }
+    },
+    {
+      "id": "6.3.1_no_home_bonus_outside_kingdom",
+      "rule_ref": "6.3.1",
+      "description": "Units outside home kingdom do not receive home kingdom bonus",
+      "tags": ["negative"],
+      "input": {
+        "unit_type": "regular",
+        "in_home_kingdom": false
+      },
+      "expected": {
+        "has_home_kingdom_bonus": false
+      }
+    },
+    {
+      "id": "6.3.1_no_home_bonus_mercenaries",
+      "rule_ref": "6.3.1",
+      "description": "Mercenaries do not receive home kingdom bonus",
+      "tags": ["negative"],
+      "input": {
+        "unit_type": "mercenary",
+        "in_home_kingdom": true
+      },
+      "expected": {
+        "has_home_kingdom_bonus": false
+      },
+      "notes": "Home kingdom bonus only applies to monarchs and regulars per rule 6.3.1"
+    }
+  ]
+}
