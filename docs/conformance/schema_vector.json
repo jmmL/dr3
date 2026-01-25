@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "docs/conformance/schema_vector.json",
+  "title": "Divine Right Test Vector Schema",
+  "type": "object",
+  "required": ["suite", "version", "tests"],
+  "properties": {
+    "suite": {
+      "type": "string",
+      "description": "Name of the test suite (e.g., 'movement', 'combat')"
+    },
+    "version": {
+      "type": "string",
+      "description": "Version of the test vector format"
+    },
+    "tests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "description", "setup", "action", "expected"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the test case"
+          },
+          "description": {
+            "type": "string",
+            "description": "Human-readable description of the test"
+          },
+          "rule_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of rule IDs from dr3_rules.json relevant to this test"
+          },
+          "setup": {
+            "type": "object",
+            "description": "Initial state configuration"
+          },
+          "action": {
+            "type": "object",
+            "description": "The operation to perform"
+          },
+          "expected": {
+            "type": "object",
+            "description": "Expected outcome properties"
+          }
+        }
+      }
+    }
+  }
+}

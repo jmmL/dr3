@@ -1,0 +1,56 @@
+{
+  "suite": "combat",
+  "version": "1.0",
+  "tests": [
+    {
+      "id": "combat_ratio_2_to_1",
+      "description": "Calculate combat ratio for 10 attackers vs 5 defenders",
+      "rule_refs": ["25.4_combat_die_roll_modifier"],
+      "setup": {
+        "attacker": { "strength": 10 },
+        "defender": { "strength": 5, "terrain": "clear" }
+      },
+      "action": {
+        "type": "calculate_modifier"
+      },
+      "expected": {
+        "ratio": "2:1",
+        "modifier": 1,
+        "calculation": "(10 / 5) - 1"
+      }
+    },
+    {
+      "id": "combat_ratio_3_to_2_round_down",
+      "description": "Calculate combat ratio for 3 attackers vs 2 defenders (rounds down to 1:1)",
+      "rule_refs": ["25.4_combat_die_roll_modifier"],
+      "setup": {
+        "attacker": { "strength": 3 },
+        "defender": { "strength": 2, "terrain": "clear" }
+      },
+      "action": {
+        "type": "calculate_modifier"
+      },
+      "expected": {
+        "ratio": "1:1",
+        "modifier": 0,
+        "calculation": "floor(3 / 2) - 1"
+      }
+    },
+    {
+      "id": "combat_mountain_defense",
+      "description": "Mountain terrain gives +1 to defender roll",
+      "rule_refs": ["19.6.3_combat_bonus", "25.11.1_mountains"],
+      "setup": {
+        "attacker": { "strength": 4 },
+        "defender": { "strength": 4, "terrain": "mountain" }
+      },
+      "action": {
+        "type": "calculate_bonuses"
+      },
+      "expected": {
+        "attacker_modifier": 0,
+        "defender_modifier": 1
+      }
+    }
+  ]
+}

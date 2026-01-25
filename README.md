@@ -1,6 +1,10 @@
 # dr3
 An implementation of Divine Right (3rd edition) for fun
 
+## Conformance Suite
+
+A set of "Test Vectors" and schemas to verify that any implementation of the Divine Right rules matches the official logic. See [docs/conformance/README.md](docs/conformance/README.md) for details.
+
 ## Reference Documentation
 
 A collection of reference documents that form the basis of the rules, map and game pieces.

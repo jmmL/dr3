@@ -1,0 +1,79 @@
+{
+  "suite": "movement",
+  "version": "1.0",
+  "tests": [
+    {
+      "id": "move_clear_1",
+      "description": "Regular army moves into clear terrain hex",
+      "rule_refs": ["19.1_clear", "18.1_general_rules"],
+      "setup": {
+        "hexmap_subset": [
+          { "c": 10, "r": 10, "t": "clear" },
+          { "c": 10, "r": 11, "t": "clear" }
+        ],
+        "units": [
+          { "id": "u1", "type": "regular", "owner": "hothior", "hex": [10, 10], "mp": 3 }
+        ]
+      },
+      "action": {
+        "type": "move",
+        "unitId": "u1",
+        "path": [[10, 11]]
+      },
+      "expected": {
+        "success": true,
+        "cost": 1,
+        "remaining_mp": 2,
+        "final_hex": [10, 11]
+      }
+    },
+    {
+      "id": "move_forest_1",
+      "description": "Regular army moves into forest terrain hex",
+      "rule_refs": ["19.2_forest"],
+      "setup": {
+        "hexmap_subset": [
+          { "c": 10, "r": 10, "t": "clear" },
+          { "c": 10, "r": 11, "t": "forest" }
+        ],
+        "units": [
+          { "id": "u1", "type": "regular", "owner": "hothior", "hex": [10, 10], "mp": 3 }
+        ]
+      },
+      "action": {
+        "type": "move",
+        "unitId": "u1",
+        "path": [[10, 11]]
+      },
+      "expected": {
+        "success": true,
+        "cost": 2,
+        "remaining_mp": 1,
+        "final_hex": [10, 11]
+      }
+    },
+    {
+      "id": "move_insufficient_mp",
+      "description": "Unit tries to enter forest with only 1 MP",
+      "rule_refs": ["18.5.4_terrain_cost_exceeded", "19.2_forest"],
+      "setup": {
+        "hexmap_subset": [
+          { "c": 10, "r": 10, "t": "clear" },
+          { "c": 10, "r": 11, "t": "forest" }
+        ],
+        "units": [
+          { "id": "u1", "type": "regular", "owner": "hothior", "hex": [10, 10], "mp": 1 }
+        ]
+      },
+      "action": {
+        "type": "move",
+        "unitId": "u1",
+        "path": [[10, 11]]
+      },
+      "expected": {
+        "success": false,
+        "error": "insufficient_movement_points"
+      }
+    }
+  ]
+}

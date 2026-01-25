@@ -3,7 +3,7 @@
 ## Definition of Complete & Good
 ### 1. Complete (Definition of Done)
 A feature or task is **Complete** only when:
-* **Business Logic:** Implements the required logic as verified by passing the full **Conformance Suite** (once this exists).
+* **Business Logic:** Implements the required logic as verified by passing the full **Conformance Suite** (see `docs/conformance/`).
 * **Testing:** Passes all relevant **Unit Tests** and **End-to-End (E2E) Tests** with no regressions.
 * **Full Stack:** Both Frontend and Backend components are implemented and integrated (unless explicitly scoped to a single layer).
 * **Pipeline:** All changes successfully pass the **CI/CD** pipeline.
@@ -21,6 +21,7 @@ TBD
 TBD
 
 ## Key Resources
+- **docs/conformance/** - Test vectors for verifying implementation logic
 - **docs/plans/** - Working plans
 - **docs/refs/** - Reference data stored in minified format for LLM use:
 
