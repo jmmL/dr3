@@ -1,0 +1,136 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "27_leader_adrift",
+  "tests": [
+    {
+      "id": "27.1_leader_adrift_trigger",
+      "rule_ref": "27.1",
+      "description": "Leader without a fleet on open sea is adrift",
+      "input": {
+        "leader_on_open_sea": true,
+        "fleet_present": false
+      },
+      "expected": {
+        "leader_adrift": true
+      }
+    },
+    {
+      "id": "27.2.1_adrift_fate_roll_death",
+      "rule_ref": "27.2.1",
+      "description": "Adrift fate roll of 1 results in death",
+      "input": {
+        "fate_roll": 1
+      },
+      "expected": {
+        "result": "death"
+      }
+    },
+    {
+      "id": "27.2.2_adrift_fate_roll_capture",
+      "rule_ref": "27.2.2",
+      "description": "Adrift fate roll of 6 results in capture",
+      "input": {
+        "fate_roll": 6
+      },
+      "expected": {
+        "result": "capture"
+      }
+    },
+    {
+      "id": "27.2.3_adrift_fate_roll_no_effect",
+      "rule_ref": "27.2.3",
+      "description": "Adrift fate rolls of 2-5 have no effect",
+      "input": {
+        "fate_roll": 3
+      },
+      "expected": {
+        "result": "no_effect"
+      }
+    },
+    {
+      "id": "27.3_no_enemy_fleet_isle_of_fright",
+      "rule_ref": "27.3",
+      "description": "If no enemy fleet is present, the leader is placed on Isle of Fright",
+      "input": {
+        "enemy_fleet_present": false
+      },
+      "expected": {
+        "placement": "isle_of_fright"
+      }
+    },
+    {
+      "id": "27.4_isle_of_fright_penalty",
+      "rule_ref": "27.4",
+      "description": "While on Isle of Fright, the monarch's troops suffer -1 on combat and siege rolls",
+      "input": {
+        "monarch_on_isle_of_fright": true
+      },
+      "expected": {
+        "combat_roll_modifier": -1,
+        "siege_roll_modifier": -1
+      }
+    },
+    {
+      "id": "27.5_rescue_by_friendly_fleet",
+      "rule_ref": "27.5",
+      "description": "A friendly fleet may rescue the leader by moving into the hex",
+      "input": {
+        "friendly_fleet_enters_hex": true
+      },
+      "expected": {
+        "rescue_successful": true
+      }
+    },
+    {
+      "id": "27.6_enemy_capture_not_possible",
+      "rule_ref": "27.6",
+      "description": "Enemy capture is not possible while on Isle of Fright",
+      "input": {
+        "monarch_on_isle_of_fright": true,
+        "enemy_fleet_present": true
+      },
+      "expected": {
+        "capture_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "27.7_no_combat_unit_unload",
+      "rule_ref": "27.7",
+      "description": "Combat units cannot unload on Isle of Fright",
+      "input": {
+        "destination": "isle_of_fright",
+        "unit_type": "army"
+      },
+      "expected": {
+        "unload_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "27.8_fleet_entry_rescue_only",
+      "rule_ref": "27.8",
+      "description": "Fleets may enter Isle of Fright only to rescue the leader",
+      "input": {
+        "destination": "isle_of_fright",
+        "fleet_entry_reason": "combat"
+      },
+      "expected": {
+        "entry_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "27.9_diplomacy_allowed_with_castaway",
+      "rule_ref": "27.9",
+      "description": "Ambassadors may conduct diplomacy with a castaway monarch",
+      "input": {
+        "castaway_monarch": true,
+        "ambassador_action": "diplomacy"
+      },
+      "expected": {
+        "diplomacy_allowed": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "20_ports",
+  "tests": [
+    {
+      "id": "20.1_port_definition",
+      "rule_ref": "20.1",
+      "description": "Ports are seashore hexes enterable by vessels and land units",
+      "input": {
+        "hex_type": "seashore_port"
+      },
+      "expected": {
+        "enterable_by": ["land", "fleet"]
+      }
+    },
+    {
+      "id": "20.2.1_castle_port_anchor_icon",
+      "rule_ref": "20.2.1",
+      "description": "Castle-ports are castles with an anchor icon",
+      "input": {
+        "castle_has_anchor_icon": true
+      },
+      "expected": {
+        "is_castle_port": true
+      }
+    },
+    {
+      "id": "20.2.2_castle_port_applies_rules",
+      "rule_ref": "20.2.2",
+      "description": "Castle-ports apply both castle and port rules",
+      "input": {
+        "location_type": "castle_port"
+      },
+      "expected": {
+        "castle_rules_apply": true,
+        "port_rules_apply": true
+      }
+    },
+    {
+      "id": "20.2.3_plundered_castle_port_still_port",
+      "rule_ref": "20.2.3",
+      "description": "Plundered castle-ports still function as ports",
+      "input": {
+        "location_type": "castle_port",
+        "plundered": true
+      },
+      "expected": {
+        "functions_as_port": true
+      }
+    },
+    {
+      "id": "20.2.4_castle_port_storm_protection",
+      "rule_ref": "20.2.4",
+      "description": "Castle-ports protect unlimited fleets from storms",
+      "input": {
+        "location_type": "castle_port"
+      },
+      "expected": {
+        "storm_protection_fleet_limit": "unlimited"
+      }
+    },
+    {
+      "id": "20.2.5_castle_port_unoccupied_ownership",
+      "rule_ref": "20.2.5",
+      "description": "Unoccupied castle-ports are friendly to the original owner",
+      "input": {
+        "location_type": "castle_port",
+        "occupied": false
+      },
+      "expected": {
+        "friendly_to": "original_owner"
+      }
+    },
+    {
+      "id": "20.2.6_castle_port_occupied_ownership",
+      "rule_ref": "20.2.6",
+      "description": "Occupied castle-ports are friendly to the occupier",
+      "input": {
+        "location_type": "castle_port",
+        "occupied": true,
+        "occupier": "mivior"
+      },
+      "expected": {
+        "friendly_to": "mivior"
+      }
+    },
+    {
+      "id": "20.2.7_castle_port_examples",
+      "rule_ref": "20.2.7",
+      "description": "Groat is not a castle-port, Adeese is a castle-port",
+      "input": {
+        "locations": {
+          "Groat": {"castle": true, "anchor_icon": false},
+          "Adeese": {"castle": true, "anchor_icon": true}
+        }
+      },
+      "expected": {
+        "Groat": "castle_only",
+        "Adeese": "castle_port"
+      }
+    },
+    {
+      "id": "20.3.1_non_castle_port_examples",
+      "rule_ref": "20.3.1",
+      "description": "Examples of non-castle ports include Bartertown, Freeport, and Abandoned Village",
+      "input": {
+        "non_castle_ports": ["Bartertown", "Freeport", "Abandoned Village"]
+      },
+      "expected": {
+        "example_count": 3
+      }
+    },
+    {
+      "id": "20.3.2_non_castle_port_cost",
+      "rule_ref": "20.3.2",
+      "description": "Non-castle ports cost 1 movement point to enter",
+      "input": {
+        "location_type": "non_castle_port"
+      },
+      "expected": {
+        "movement_cost": 1
+      }
+    },
+    {
+      "id": "20.3.3_non_castle_port_storm_protection",
+      "rule_ref": "20.3.3",
+      "description": "Non-castle ports protect a single fleet from storms",
+      "input": {
+        "location_type": "non_castle_port"
+      },
+      "expected": {
+        "storm_protection_fleet_limit": 1
+      }
+    },
+    {
+      "id": "20.4_mercenary_fleet_deploy_non_castle_port",
+      "rule_ref": "20.4",
+      "description": "Mercenary fleets may deploy at friendly non-castle ports",
+      "input": {
+        "unit_type": "mercenary_fleet",
+        "location_type": "non_castle_port",
+        "friendly": true
+      },
+      "expected": {
+        "deployment_allowed": true
+      }
+    }
+  ]
+}

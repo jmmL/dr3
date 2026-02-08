@@ -1,0 +1,71 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "rule_interactions",
+  "tests": [
+    {
+      "id": "22.5_transported_units_eliminated_in_combat",
+      "rule_refs": ["22.5", "25.6.1"],
+      "description": "Transported combat units do not move independently and are eliminated if their transport is destroyed",
+      "input": {
+        "transported_unit": "army",
+        "fleet_in_combat": true,
+        "fleet_destroyed": true
+      },
+      "expected": {
+        "transported_unit_movement_allowed": false,
+        "transported_unit_survives": false
+      }
+    },
+    {
+      "id": "17.12.1_relief_force_advances_two",
+      "rule_refs": ["17.12.1", "25.13.4"],
+      "description": "Relief force procedure allows advancing two hexes after combat",
+      "input": {
+        "relief_force_declared": true,
+        "combat_won": true
+      },
+      "expected": {
+        "advance_hexes": 2
+      }
+    },
+    {
+      "id": "12.1.1_diplomacy_with_captured_monarch",
+      "rule_refs": ["12.1.1", "28.3.4"],
+      "description": "Captured monarchs remain valid diplomacy targets but cannot act while imprisoned",
+      "input": {
+        "captured_monarch": true,
+        "diplomacy_attempt": true
+      },
+      "expected": {
+        "diplomacy_allowed": true,
+        "captured_monarch_actions": "none"
+      }
+    },
+    {
+      "id": "12.3.2_deactivation_breaks_siege_coordination",
+      "rule_refs": ["12.3.2", "17.6.1"],
+      "description": "Deactivation of an allied monarch halts their participation in an ongoing siege",
+      "input": {
+        "siege_active": true,
+        "ally_deactivated": true
+      },
+      "expected": {
+        "ally_participation": "removed",
+        "siege_status": "continues_without_ally"
+      }
+    },
+    {
+      "id": "8.3.7_random_event_during_siege",
+      "rule_refs": ["8.3.7", "17.8.1"],
+      "description": "Replacement events resolve immediately even if a siege will resolve later in the siege phase",
+      "input": {
+        "random_event": "replacements",
+        "siege_pending": true
+      },
+      "expected": {
+        "replacement_resolved": true,
+        "siege_resolution_phase": "siege_phase"
+      }
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "21_fleet_movement",
+  "tests": [
+    {
+      "id": "21.1_fleet_terrain_types",
+      "rule_ref": "21.1",
+      "description": "Fleets may move through all-sea, seashore, and friendly ports",
+      "input": {
+        "allowed_terrain": ["all_sea", "seashore", "friendly_port"]
+      },
+      "expected": {
+        "movement_allowed": true
+      }
+    },
+    {
+      "id": "21.2_fleet_movement_cost",
+      "rule_ref": "21.2",
+      "description": "Fleet movement cost is 1 per hex",
+      "input": {
+        "terrain": "all_sea"
+      },
+      "expected": {
+        "movement_cost": 1
+      }
+    },
+    {
+      "id": "21.3.1_enemy_fleet_hex_blocked",
+      "rule_ref": "21.3.1",
+      "description": "Fleets cannot enter hexes occupied by enemy fleets",
+      "input": {
+        "destination_has_enemy_fleet": true
+      },
+      "expected": {
+        "entry_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "21.3.2_allied_fleet_stacking_denied",
+      "rule_ref": "21.3.2",
+      "description": "Fleets cannot end movement in the same hex as an allied fleet",
+      "input": {
+        "destination_has_allied_fleet": true,
+        "ending_movement": true
+      },
+      "expected": {
+        "end_hex_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "21.3.3_seashore_enemy_land_pass_through",
+      "rule_ref": "21.3.3",
+      "description": "Fleets may pass through seashore hexes with enemy land units but may not end there",
+      "input": {
+        "seashore_hex": true,
+        "enemy_land_units_present": true
+      },
+      "expected": {
+        "may_pass_through": true,
+        "may_end_movement": false
+      }
+    },
+    {
+      "id": "21.3.4_lone_monarch_seashore_no_fate",
+      "rule_ref": "21.3.4",
+      "description": "No leader fate roll is required when passing through seashore with a lone monarch",
+      "input": {
+        "lone_monarch_on_seashore": true,
+        "fleet_passes_through": true
+      },
+      "expected": {
+        "fate_roll_required": false
+      }
+    }
+  ]
+}

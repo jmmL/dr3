@@ -1,0 +1,111 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "09_mercenary_units",
+  "tests": [
+    {
+      "id": "9.1_mercenaries_from_random_events",
+      "rule_ref": "9.1",
+      "description": "Mercenary combat units enter play through random events",
+      "input": {
+        "random_event": "mercenary_reinforcements"
+      },
+      "expected": {
+        "unit_source": "random_events_table",
+        "unit_class": "mercenary_combat"
+      }
+    },
+    {
+      "id": "9.2_placement_friendly_castle",
+      "rule_ref": "9.2",
+      "description": "Mercenaries may be placed at any friendly castle not under siege",
+      "input": {
+        "placement_hex": "Iron Keep",
+        "location_type": "castle",
+        "friendly": true,
+        "besieged": false
+      },
+      "expected": {
+        "placement_allowed": true
+      }
+    },
+    {
+      "id": "9.2_placement_besieged_castle_denied",
+      "rule_ref": "9.2",
+      "description": "Mercenaries may not be placed at besieged friendly castles",
+      "input": {
+        "placement_hex": "Iron Keep",
+        "location_type": "castle",
+        "friendly": true,
+        "besieged": true
+      },
+      "expected": {
+        "placement_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "9.3_stacking_with_friendly_units",
+      "rule_ref": "9.3",
+      "description": "Mercenary units may stack with any friendly units",
+      "input": {
+        "mercenary_unit": true,
+        "friendly_units_present": ["player_monarch", "allied_kingdom", "special_mercenary"]
+      },
+      "expected": {
+        "stacking_allowed": true
+      }
+    },
+    {
+      "id": "9.4.1_type_unavailable_defection",
+      "rule_ref": "9.4.1",
+      "description": "If remaining mercenary type cannot be deployed, desired type may defect",
+      "input": {
+        "requested_type": "army",
+        "remaining_pool_type": "fleet",
+        "can_deploy_remaining": false
+      },
+      "expected": {
+        "defection_allowed": true,
+        "defected_type": "army"
+      }
+    },
+    {
+      "id": "9.4.2_steal_and_redeploy",
+      "rule_ref": "9.4.2",
+      "description": "Stolen mercenary units are removed from opponent and deployed to a valid hex",
+      "input": {
+        "requested_type": "fleet",
+        "opponent_stack": ["mercenary_fleet"],
+        "valid_deployment_hexes": ["Freeport"]
+      },
+      "expected": {
+        "stolen_units": 1,
+        "deployment_hex": "Freeport"
+      }
+    },
+    {
+      "id": "9.4.3_pool_depleted_steal_any",
+      "rule_ref": "9.4.3",
+      "description": "When all mercenaries are in play, any type may be stolen",
+      "input": {
+        "mercenary_pool_empty": true
+      },
+      "expected": {
+        "allowed_types": "any"
+      }
+    },
+    {
+      "id": "9.4.4_transporting_fleet_protected",
+      "rule_ref": "9.4.4",
+      "description": "Mercenary fleets transporting enemy units cannot be stolen",
+      "input": {
+        "target_unit": "mercenary_fleet",
+        "transporting_enemy_units": true
+      },
+      "expected": {
+        "steal_allowed": false
+      },
+      "tags": ["negative"]
+    }
+  ]
+}
