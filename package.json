@@ -7,7 +7,11 @@
     "dev": "vite --host 0.0.0.0 --port 5173",
     "build": "vite build",
     "preview": "vite preview --host 0.0.0.0 --port 5173",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test:unit": "vitest run --dir tests/unit",
+    "test:integration": "vitest run --dir tests/integration",
+    "test:conformance": "vitest run --dir tests/conformance",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -24,6 +28,11 @@
     "vite": "^6.1.1",
     "@eslint/js": "^8.57.0",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
-    "@typescript-eslint/parser": "^7.18.0"
+    "@typescript-eslint/parser": "^7.18.0",
+    "@playwright/test": "^1.50.1",
+    "@testing-library/jest-dom": "^6.4.8",
+    "@testing-library/react": "^15.0.7",
+    "jsdom": "^24.0.0",
+    "vitest": "^2.1.8"
   }
 }
