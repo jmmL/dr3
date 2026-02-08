@@ -26,7 +26,10 @@ Code and assets are considered **Good** when they are:
 TBD
 
 ## Verify Changes
-TBD
+Before pushing to a remote branch and creating a PR, run:
+- `npm run test:unit`
+- `npm run test:integration`
+- `npm run test:conformance`
 
 ## Key Resources
 - **docs/plans/** - Working plans
