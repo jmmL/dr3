@@ -886,6 +886,48 @@ adjustments explicit and reproducible. Use semantic-style increments (e.g., `1.0
 Where a test depends on multiple rolls or chained random effects, include a deterministic roll
 sequence in `input.rolls` (e.g., `[6, 2, 5]`) and specify each consumption point in the description.
 
+### Recommended Input Vocabulary
+
+Use these field names consistently across test cases to reduce harness complexity. Not every test needs all fields — include only what's relevant.
+
+**Entities:**
+| Field | Type | Values | Used In |
+|-------|------|--------|---------|
+| `unit_type` | string | `"monarch"`, `"ambassador"`, `"regular_army"`, `"regular_fleet"`, `"mercenary_army"`, `"mercenary_fleet"` | Unit property tests |
+| `faction` | string | `"hothior"`, `"immer"`, `"mivior"`, `"muetar"`, `"pon"`, `"rombune"`, `"shucassam"`, `"neuth"`, `"ghem"`, `"zorn"`, `"trolls"` | Faction-specific tests |
+| `faction_type` | string | `"human"`, `"non_human"` | Retreat, classification |
+| `terrain` | string or array | `"clear"`, `"forest"`, `"mountain"`, `"hills"`, `"swamp"`, `"open_sea"`, `"seashore"`, `"lakeshore"`, `"mountain_pass"`, `"minor_river"`, `"major_river"`, `"scenic"` | Movement, terrain tests |
+| `hex` | `[col, row]` | Coordinates from hexmap | Positional tests |
+
+**Game State:**
+| Field | Type | Description |
+|-------|------|-------------|
+| `active_player` | string | Player whose turn it is |
+| `game_phase` | string | `"movement"`, `"combat"`, `"siege"`, `"diplomacy"`, `"random_event"` |
+| `kingdom_status` | string | `"neutral"`, `"active"`, `"allied"`, `"confused"` |
+
+**Dice & Modifiers:**
+| Field | Type | Description |
+|-------|------|-------------|
+| `roll` / `retreat_roll` / `fate_roll` / `siege_roll` | integer | 1-6 single die result |
+| `event_roll` | integer | 2-12 (2d6) |
+| `modifier` | integer | Applied modifier value |
+
+**Counts & Quantities:**
+| Field | Type | Description |
+|-------|------|-------------|
+| `attacker_count` / `defender_count` | integer | Combat unit counts |
+| `besieging_units` / `units_inside` | integer | Siege force counts |
+| `intrinsic_defense` | integer | Castle defense value |
+| `stack_size` | integer | Units in stack |
+
+**Boolean Flags:**
+| Field | Type | Description |
+|-------|------|-------------|
+| `is_combat_unit` / `is_leader` | boolean | Unit classification |
+| `must_stop` | boolean | Terrain stopping rule |
+| `move_allowed` / `attack_allowed` | boolean | Action permission |
+
 ---
 
 ## Task Breakdown

@@ -66,6 +66,240 @@
         "replacement_resolved": true,
         "siege_resolution_phase": "siege_phase"
       }
+    },
+    {
+      "id": "26.3_leader_terrain_no_transfer_to_stack",
+      "rule_refs": ["26.3.2", "26.3.6"],
+      "description": "Stack uses leader's movement allowance but unit terrain bonuses do not transfer to the leader or other units",
+      "input": {
+        "leader_has_mountain_symbol": false,
+        "stack_unit_has_mountain_symbol": true,
+        "terrain": "mountain"
+      },
+      "expected": {
+        "stack_uses_leader_ma": true,
+        "stack_must_stop_in_mountain": true
+      },
+      "notes": "Unit terrain bonuses are per-unit, not shared via leader"
+    },
+    {
+      "id": "25.2_retreat_into_allied_hex_stacking",
+      "rule_refs": ["25.2.4", "24.2.2"],
+      "description": "Units retreating before combat cannot end in a hex with units from a different allied kingdom",
+      "input": {
+        "retreating_faction": "hothior",
+        "retreat_hex_occupant_faction": "mivior",
+        "factions_allied": true,
+        "other_adjacent_hexes_available": true
+      },
+      "expected": {
+        "retreat_to_allied_hex_allowed": false,
+        "must_retreat_to_empty_or_own_hex": true
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "8.2_untimely_death_during_siege",
+      "rule_refs": ["8.2.1", "28.1.1", "17.6.1"],
+      "description": "Untimely death of a besieging allied monarch triggers confusion: their forces cannot continue siege participation",
+      "input": {
+        "random_event": "untimely_death",
+        "dead_monarch": "non_player_allied",
+        "monarch_forces_besieging": true
+      },
+      "expected": {
+        "kingdom_enters_confusion": true,
+        "regulars_defend_only": true,
+        "siege_contribution_removed": true,
+        "siege_conditions_refigured": true
+      }
+    },
+    {
+      "id": "22.4_debark_mountain_seashore_denied",
+      "rule_refs": ["22.4", "19.6.2"],
+      "description": "Units cannot debark at a seashore hex that is also a mountain hex; mountain stopping rules compound the restriction",
+      "input": {
+        "fleet_hex": "seashore",
+        "debark_target_terrain": "mountain_seashore",
+        "debark_target_has_port": false
+      },
+      "expected": {
+        "debark_allowed": false
+      },
+      "tags": ["negative"],
+      "notes": "Rule 22.4 explicitly excludes mountain seashore hexes from valid debark locations; 19.6.2 must-stop rule reinforces this"
+    },
+    {
+      "id": "26.6_leader_fate_fleet_transport_destroyed",
+      "rule_refs": ["26.6.1", "22.5"],
+      "description": "Leader aboard a fleet that is destroyed in combat triggers a fate roll; transported army is eliminated",
+      "input": {
+        "leader_transported": true,
+        "army_transported": true,
+        "fleet_destroyed_in_combat": true,
+        "fate_roll": 3
+      },
+      "expected": {
+        "fate_roll_triggered": true,
+        "army_eliminated": true,
+        "leader_fate_result": "no_effect"
+      }
+    },
+    {
+      "id": "18.3_activated_kingdom_no_move_or_attack",
+      "rule_refs": ["18.3.2", "25.7.2"],
+      "description": "Units of a just-activated kingdom cannot move or initiate attacks on the turn of activation",
+      "input": {
+        "kingdom_activated_this_turn": true,
+        "unit_attempts_move": true,
+        "unit_attempts_attack": true
+      },
+      "expected": {
+        "move_allowed": false,
+        "attack_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "17.13_forced_peace_plunder_permanent",
+      "rule_refs": ["17.13.9", "17.13.12"],
+      "description": "When forced peace deactivates a kingdom, plundered castles remain plundered even after the kingdom becomes available again",
+      "input": {
+        "forced_peace_applied": true,
+        "castle_was_plundered": true,
+        "forced_peace_expired": true
+      },
+      "expected": {
+        "castle_still_plundered": true,
+        "kingdom_available_for_diplomacy": true
+      }
+    },
+    {
+      "id": "30.1_troll_regeneration_blocked_by_enemy",
+      "rule_refs": ["30.1.4", "18.5.1"],
+      "description": "Troll regeneration is blocked if the placement hex is occupied by enemy combat units",
+      "input": {
+        "faction": "trolls",
+        "eliminated_regular_count": 1,
+        "placement_hex_enemy_occupied": true
+      },
+      "expected": {
+        "regeneration_occurs": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "25.13_advance_into_castle_siege_break",
+      "rule_refs": ["25.13.1", "17.7.3"],
+      "description": "Units inside a besieged castle attack out during combat phase; if all besiegers eliminated, units may advance one hex and siege breaks",
+      "input": {
+        "units_inside_castle": 3,
+        "besieging_units_in_target_hex": 2,
+        "combat_result": "all_defenders_eliminated",
+        "attack_phase": "combat"
+      },
+      "expected": {
+        "advance_allowed": true,
+        "advance_limit_hexes": 1,
+        "siege_broken": true
+      }
+    },
+    {
+      "id": "12.3_assassination_kills_ambassador",
+      "rule_refs": ["12.3.3", "12.4.1"],
+      "description": "Failed assassination attempt permanently banishes the ambassador; ambassador treated as dead for recovery purposes",
+      "input": {
+        "assassination_attempted": true,
+        "attacker_roll": 2,
+        "defender_roll": 5
+      },
+      "expected": {
+        "assassination_success": false,
+        "ambassador_status": "permanently_banished",
+        "ambassador_recovery_possible": false
+      }
+    },
+    {
+      "id": "28.2_player_death_deactivates_allies",
+      "rule_refs": ["28.2.1", "28.2.2", "12.3.2"],
+      "description": "Player monarch death eliminates the player and immediately deactivates all allied kingdoms",
+      "input": {
+        "player_monarch_killed": true,
+        "allied_kingdoms": ["neuth", "mivior"]
+      },
+      "expected": {
+        "player_eliminated": true,
+        "allied_kingdoms_deactivated": true,
+        "allied_forces_removed_after_combat": true
+      }
+    },
+    {
+      "id": "6.2_mountain_symbol_leader_stack_movement",
+      "rule_refs": ["6.2.2", "26.3.2"],
+      "description": "Leader with mountain symbol moves a stack through mountains without stopping; stack still pays 3 MP per mountain hex",
+      "input": {
+        "leader_has_mountain_symbol": true,
+        "stack_size": 3,
+        "terrain": "mountain",
+        "leader_movement_allowance": 8
+      },
+      "expected": {
+        "must_stop": false,
+        "movement_cost": 3,
+        "stack_uses_leader_ma": true
+      },
+      "notes": "Mountain symbol on leader allows the stack to pass through without stopping"
+    },
+    {
+      "id": "17.7_leave_siege_full_movement",
+      "rule_refs": ["17.7.2", "18.1.3"],
+      "description": "Units leaving a besieged castle after attacking besiegers get full movement allowance but cannot attack further",
+      "input": {
+        "units_in_castle": 4,
+        "attack_on_besiegers_resolved": true,
+        "combat_result": "attacker_wins"
+      },
+      "expected": {
+        "survivors_may_leave": true,
+        "movement_allowance": "full",
+        "further_attacks_allowed": false
+      }
+    },
+    {
+      "id": "28.1_confusion_border_violation_crowns_new_monarch",
+      "rule_refs": ["28.1.5", "15.1"],
+      "description": "Entering a confused kingdom's territory triggers immediate crowning of a new monarch and diplomatic penalty",
+      "input": {
+        "target_kingdom_in_confusion": true,
+        "enemy_enters_kingdom_hex": true
+      },
+      "expected": {
+        "diplomatic_penalty_applies": true,
+        "new_monarch_crowned_immediately": true,
+        "kingdom_available_immediately": true,
+        "confusion_ends": true
+      }
+    },
+    {
+      "id": "25.9_multi_hex_allied_combined_attack",
+      "rule_refs": ["25.9.1", "25.9.2"],
+      "description": "Units from multiple hexes and different allied kingdoms may combine strength when attacking the same defender hex",
+      "input": {
+        "attacker_hexes": [
+          { "hex": [10, 5], "units": 3, "faction": "hothior" },
+          { "hex": [11, 5], "units": 2, "faction": "mivior" }
+        ],
+        "defender_hex": [10, 6],
+        "defender_units": 4,
+        "factions_allied": true
+      },
+      "expected": {
+        "combined_attack_allowed": true,
+        "total_attacker_strength": 5,
+        "combat_modifier_applies_to": "attacker",
+        "combat_modifier": 0
+      },
+      "notes": "5/4 = 1.25, drop fraction = 1, minus 1 = 0 modifier"
     }
   ]
 }

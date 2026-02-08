@@ -50,6 +50,10 @@ def validate_test_case(test_case, path: Path, index: int):
         raise ValidationError(
             f"{path} test[{index}] missing 'rule_ref' or 'rule_refs'"
         )
+    if rule_ref is not None and rule_refs is not None:
+        raise ValidationError(
+            f"{path} test[{index}] has both 'rule_ref' and 'rule_refs' (must be one or the other)"
+        )
 
     if rule_ref is not None:
         if not isinstance(rule_ref, str) or not RULE_PATTERN.match(rule_ref):
@@ -109,6 +113,7 @@ def validate_coverage_matrix(test_ids):
     if not isinstance(rules, dict):
         raise ValidationError("coverage_matrix.json 'rules' must be an object")
 
+    matrix_test_ids = set()
     for rule_ref, ids in rules.items():
         if not RULE_PATTERN.match(rule_ref):
             raise ValidationError(f"Invalid rule key in coverage matrix: {rule_ref}")
@@ -119,6 +124,13 @@ def validate_coverage_matrix(test_ids):
                 raise ValidationError(
                     f"Coverage matrix references missing test id '{test_id}'"
                 )
+            matrix_test_ids.add(test_id)
+
+    orphaned = test_ids - matrix_test_ids
+    if orphaned:
+        raise ValidationError(
+            f"Tests not tracked in coverage matrix: {sorted(orphaned)}"
+        )
 
 
 def main():

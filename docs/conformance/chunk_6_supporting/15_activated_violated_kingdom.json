@@ -1,0 +1,106 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "15_activated_violated_kingdom",
+  "tests": [
+    {
+      "id": "15.1_placement_hex_occupied_triggers_activation",
+      "rule_ref": "15.1",
+      "description": "A neutral kingdom's placement hexes being occupied by enemy combat units triggers the activation procedure",
+      "input": {
+        "kingdom": "neuth",
+        "kingdom_status": "neutral",
+        "placement_hex_occupied_by_enemy": true,
+        "occupying_unit_type": "regular_army"
+      },
+      "expected": {
+        "activation_triggered": true
+      }
+    },
+    {
+      "id": "15.1_non_combat_unit_no_trigger",
+      "rule_ref": "15.1",
+      "description": "A non-combat unit (ambassador) occupying a placement hex does not trigger kingdom activation",
+      "input": {
+        "kingdom": "neuth",
+        "kingdom_status": "neutral",
+        "placement_hex_occupied_by_enemy": true,
+        "occupying_unit_type": "ambassador"
+      },
+      "expected": {
+        "activation_triggered": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "15.2_ambassador_placed_anywhere_in_kingdom",
+      "rule_ref": "15.2",
+      "description": "When a kingdom is activated via violation, the ambassador may be placed anywhere in the kingdom territory",
+      "input": {
+        "activation_type": "violation",
+        "kingdom": "neuth",
+        "ambassador_placement": "any_kingdom_hex"
+      },
+      "expected": {
+        "ambassador_placement_valid": true
+      },
+      "notes": "Unlike normal activation which requires placement at the royal castle"
+    },
+    {
+      "id": "15.3_units_placed_normally_and_adjacent",
+      "rule_ref": "15.3",
+      "description": "Units are placed at normal starting locations and/or adjacent to occupied placement hexes",
+      "input": {
+        "kingdom": "neuth",
+        "occupied_placement_hexes": [[8, 10]],
+        "normal_placement_hexes_available": true
+      },
+      "expected": {
+        "placement_at_normal_locations": true,
+        "placement_adjacent_to_occupied": true
+      }
+    },
+    {
+      "id": "15.4.1_siege_on_neutral_triggers_alliance",
+      "rule_ref": "15.4",
+      "description": "Siege declared on a neutral kingdom's castle causes the kingdom to immediately join an alliance with another player monarch",
+      "input": {
+        "kingdom": "ghem",
+        "kingdom_status": "neutral",
+        "siege_declared_on_castle": true
+      },
+      "expected": {
+        "kingdom_joins_alliance": true,
+        "alliance_partner": "another_player_monarch"
+      }
+    },
+    {
+      "id": "15.4_alliance_partner_random",
+      "rule_ref": "15.4",
+      "description": "The alliance partner for a violated kingdom is determined randomly from eligible player monarchs",
+      "input": {
+        "kingdom": "ghem",
+        "siege_declared_on_castle": true,
+        "eligible_player_monarchs": ["player_a", "player_b"],
+        "violating_player": "player_a"
+      },
+      "expected": {
+        "alliance_determination": "random",
+        "violating_player_eligible": false
+      },
+      "notes": "The player who caused the violation cannot be the alliance partner"
+    },
+    {
+      "id": "15.4_siege_conditions_refigured",
+      "rule_ref": "15.4",
+      "description": "After a violated kingdom is activated and forces placed, siege conditions must be recalculated",
+      "input": {
+        "siege_active": true,
+        "kingdom_activated_via_violation": true,
+        "new_forces_placed": true
+      },
+      "expected": {
+        "siege_conditions_refigured": true
+      }
+    }
+  ]
+}

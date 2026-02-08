@@ -1,7 +1,8 @@
 # Prototype Execution Strategy: Harness & Rendering
 
 **Date:** January 2026
-**Status:** Planned
+**Updated:** February 2026
+**Status:** Ready to Execute
 **Goal:** mitigate critical technical risks (Integration Complexity, Mobile Performance) identified in the Architecture Review.
 
 ---
@@ -26,13 +27,11 @@ Implement a "Vertical Slice" of the testing pipeline for a single, complex rule:
 
 #### 1.2 Schema-First Type Generation (Explicit State Mapping)
 *Recommendation Applied: Explicit State Mapping*
-- **Action:** Define the JSON Schema for the Combat Test Case first.
+- **Status:** Schema exists at `docs/conformance/schema/test_case.schema.json` (includes `action` field for transition-based testing).
 - **Tooling:** Configure `json-schema-to-typescript`.
-- **Pipeline:**
-  1.  Create `docs/conformance/schema/test_case.schema.json`.
-  2.  Run generator script.
-  3.  Output `src/types/conformance.d.ts`.
-  4.  **Constraint:** The Game Engine's `G` state must `implement` or `extend` this generated type to ensure alignment.
+- **Remaining:**
+  1.  Run generator script to output `src/types/conformance.d.ts`.
+  2.  **Constraint:** The Game Engine's `G` state must `implement` or `extend` this generated type to ensure alignment.
 
 #### 1.3 The Harness (Test Runner)
 *Recommendation Applied: Action-Based Testing*
@@ -128,5 +127,8 @@ Build a "Throwaway" prototype that renders the maximum theoretical load and meas
 | **Decision**| **Commit to Tech Stack** | Results of above | |
 
 ## 4. Immediate Next Steps
-1. Initialize the repository with `package.json` and dependencies (`boardgame.io`, `vitest`, `vite`).
-2. Create the `docs/conformance/schema/` directory.
+1. Initialize the repository with `package.json` and dependencies (`boardgame.io`, `vitest`, `vite`, `json-schema-to-typescript`).
+2. ~~Create the `docs/conformance/schema/` directory.~~ **Done** — schema exists with 463 validated tests across 7 chunks.
+3. Run type generator: `json-schema-to-typescript` against `test_case.schema.json` → `src/types/conformance.d.ts`.
+4. Implement `runConformanceTest()` harness utility targeting Rule 25.3 combat tests.
+5. Build rendering stress test (SVG candidate first).
