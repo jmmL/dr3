@@ -12,6 +12,9 @@ on:
       - 'docs/conformance/**'
       - 'scripts/validate_conformance_suite.py'
 
+permissions:
+  contents: read
+
 jobs:
   validate:
     name: Validate Conformance Suite
