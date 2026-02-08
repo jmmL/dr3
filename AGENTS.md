@@ -48,4 +48,3 @@ TBD
 
 ## Skills
 You have skills in `.claude/skills/` - use them for debugging, TDD, planning, code review, etc.
-Never attempt to launch sub-agents, as you are running in web sandbox, and are unable to do so within your current sandbox. 
