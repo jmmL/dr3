@@ -116,8 +116,8 @@
     },
     {
       "id": "22.4_debark_mountain_seashore_denied",
-      "rule_refs": ["22.4", "19.6.1"],
-      "description": "Units cannot debark at a seashore hex that is also a mountain hex",
+      "rule_refs": ["22.4", "19.6.2"],
+      "description": "Units cannot debark at a seashore hex that is also a mountain hex; mountain stopping rules compound the restriction",
       "input": {
         "fleet_hex": "seashore",
         "debark_target_terrain": "mountain_seashore",
@@ -126,7 +126,8 @@
       "expected": {
         "debark_allowed": false
       },
-      "tags": ["negative"]
+      "tags": ["negative"],
+      "notes": "Rule 22.4 explicitly excludes mountain seashore hexes from valid debark locations; 19.6.2 must-stop rule reinforces this"
     },
     {
       "id": "26.6_leader_fate_fleet_transport_destroyed",
