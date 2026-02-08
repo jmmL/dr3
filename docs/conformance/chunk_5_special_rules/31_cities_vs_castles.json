@@ -3,28 +3,97 @@
   "rule_section": "31_cities_vs_castles",
   "tests": [
     {
-      "id": "31.1_cities_vs_castles_distinction",
+      "id": "31.1_city_castle_distinction",
       "rule_ref": "31.1",
-      "description": "Units deploy from cities, but only cities with castles provide intrinsic defense",
+      "description": "Not all faction cities are castles; units deploy from cities but only castles provide defense",
       "input": {
-        "city_has_castle": false
+        "location_type": "city"
       },
       "expected": {
-        "deployment_allowed": true,
+        "deployment_hex": true,
+        "defense_guaranteed": false
+      }
+    },
+    {
+      "id": "31.2.1_farnot_no_castle",
+      "rule_ref": "31.2.1",
+      "description": "Farnot (Hothior) is a city without a castle",
+      "input": {
+        "location": "Farnot",
+        "kingdom": "hothior"
+      },
+      "expected": {
+        "is_city": true,
+        "is_castle": false,
         "intrinsic_defense": 0
       }
     },
     {
-      "id": "31.2.1_city_without_castle_example",
+      "id": "31.2.1_yando_no_castle",
       "rule_ref": "31.2.1",
-      "description": "Listed cities without castles are deployment hexes",
+      "description": "Yando (Muetar) is a city without a castle",
       "input": {
-        "city_name": "Farnot",
-        "kingdom": "hothior"
+        "location": "Yando",
+        "kingdom": "muetar"
       },
       "expected": {
-        "deployment_allowed": true,
+        "is_city": true,
+        "is_castle": false,
         "intrinsic_defense": 0
+      }
+    },
+    {
+      "id": "31.2.1_lepers_no_castle",
+      "rule_ref": "31.2.1",
+      "description": "Lepers (Shucassam) is a city without a castle",
+      "input": {
+        "location": "Lepers",
+        "kingdom": "shucassam"
+      },
+      "expected": {
+        "is_city": true,
+        "is_castle": false,
+        "intrinsic_defense": 0
+      }
+    },
+    {
+      "id": "31.2.1_gorpin_no_castle",
+      "rule_ref": "31.2.1",
+      "description": "Gorpin (Immer) is a city without a castle",
+      "input": {
+        "location": "Gorpin",
+        "kingdom": "immer"
+      },
+      "expected": {
+        "is_city": true,
+        "is_castle": false,
+        "intrinsic_defense": 0
+      }
+    },
+    {
+      "id": "31.2.1_troll_locations_no_castle",
+      "rule_ref": "31.2.1",
+      "description": "All Troll locations are cities without castles",
+      "input": {
+        "kingdom": "trolls",
+        "locations": ["Stone Face", "The Gathering", "The Crag", "The Shunned Vale"]
+      },
+      "expected": {
+        "all_are_cities": true,
+        "all_are_castles": false
+      }
+    },
+    {
+      "id": "31.2.2_city_without_castle_deployment",
+      "rule_ref": "31.2.2",
+      "description": "Cities without castles serve as deployment hexes",
+      "input": {
+        "location": "Farnot",
+        "is_castle": false,
+        "unit_to_deploy": "regular_army"
+      },
+      "expected": {
+        "deployment_allowed": true
       }
     },
     {
@@ -32,8 +101,9 @@
       "rule_ref": "31.2.2",
       "description": "Cities without castles cannot be besieged",
       "input": {
-        "city_has_castle": false,
-        "attempt_siege": true
+        "location": "Yando",
+        "is_castle": false,
+        "siege_attempt": true
       },
       "expected": {
         "siege_allowed": false
@@ -41,25 +111,26 @@
       "tags": ["negative"]
     },
     {
-      "id": "31.3.1_castle_identified_in_hexmap",
+      "id": "31.3.1_castle_identification",
       "rule_ref": "31.3.1",
-      "description": "Castle locations are identified by castle markers in the hexmap",
+      "description": "Castle locations identified by castle terrain marker in hexmap",
       "input": {
-        "hex_has_castle_marker": true
+        "hex_terrain": ["castle"]
       },
       "expected": {
         "is_castle": true
       }
     },
     {
-      "id": "31.3.2_castle_provides_intrinsic_defense",
+      "id": "31.3.2_castle_provides_defense",
       "rule_ref": "31.3.2",
-      "description": "Castles provide intrinsic defense strength for siege rules",
+      "description": "Castle locations provide intrinsic defense strength for siege rules",
       "input": {
-        "city_has_castle": true,
+        "location_type": "castle",
         "intrinsic_defense": 4
       },
       "expected": {
+        "siege_rules_apply": true,
         "defense_strength": 4
       }
     }
