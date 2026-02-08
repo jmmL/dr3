@@ -1,0 +1,209 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "29_victory_conditions",
+  "tests": [
+    {
+      "id": "29.1_victory_by_points",
+      "rule_ref": "29.1",
+      "description": "Victory determined by system of Victory Points",
+      "input": {
+        "game_end": true
+      },
+      "expected": {
+        "victory_determination": "victory_points"
+      }
+    },
+    {
+      "id": "29.2_highest_points_wins",
+      "rule_ref": "29.2",
+      "description": "Player with most points after 20 turns wins",
+      "input": {
+        "turn": 20,
+        "player_points": {"player_a": 100, "player_b": 80, "player_c": 60}
+      },
+      "expected": {
+        "winner": "player_a",
+        "second_place": "player_b",
+        "third_place": "player_c"
+      }
+    },
+    {
+      "id": "29.3.1_plunder_castle_points",
+      "rule_ref": "29.3.1",
+      "description": "Plundering enemy castle awards 5 × intrinsic defense",
+      "input": {
+        "action": "plunder_castle",
+        "intrinsic_defense": 4,
+        "is_royal_castle": false
+      },
+      "expected": {
+        "victory_points": 20
+      }
+    },
+    {
+      "id": "29.3.1_plunder_castle_defense_three",
+      "rule_ref": "29.3.1",
+      "description": "Plundering castle with defense 3 awards 15 points",
+      "input": {
+        "action": "plunder_castle",
+        "intrinsic_defense": 3,
+        "is_royal_castle": false
+      },
+      "expected": {
+        "victory_points": 15
+      }
+    },
+    {
+      "id": "29.3.2_plunder_royal_castle_points",
+      "rule_ref": "29.3.2",
+      "description": "Plundering enemy royal castle awards 10 × intrinsic defense",
+      "input": {
+        "action": "plunder_castle",
+        "intrinsic_defense": 4,
+        "is_royal_castle": true
+      },
+      "expected": {
+        "victory_points": 40
+      }
+    },
+    {
+      "id": "29.3.2_plunder_royal_castle_defense_five",
+      "rule_ref": "29.3.2",
+      "description": "Plundering royal castle with defense 5 awards 50 points",
+      "input": {
+        "action": "plunder_castle",
+        "intrinsic_defense": 5,
+        "is_royal_castle": true
+      },
+      "expected": {
+        "victory_points": 50
+      }
+    },
+    {
+      "id": "29.3.3_capture_allied_monarch_points",
+      "rule_ref": "29.3.3",
+      "description": "Capturing enemy-allied monarch awards 30 points",
+      "input": {
+        "action": "capture_monarch",
+        "monarch_type": "enemy_allied"
+      },
+      "expected": {
+        "victory_points": 30
+      }
+    },
+    {
+      "id": "29.3.4_kill_allied_monarch_points",
+      "rule_ref": "29.3.4",
+      "description": "Killing enemy-allied monarch awards 40 points",
+      "input": {
+        "action": "kill_monarch",
+        "monarch_type": "enemy_allied"
+      },
+      "expected": {
+        "victory_points": 40
+      }
+    },
+    {
+      "id": "29.3.5_capture_player_monarch_points",
+      "rule_ref": "29.3.5",
+      "description": "Capturing or killing enemy player monarch awards 70 points",
+      "input": {
+        "action": "capture_monarch",
+        "monarch_type": "enemy_player"
+      },
+      "expected": {
+        "victory_points": 70
+      }
+    },
+    {
+      "id": "29.3.5_kill_player_monarch_points",
+      "rule_ref": "29.3.5",
+      "description": "Killing enemy player monarch awards 70 points",
+      "input": {
+        "action": "kill_monarch",
+        "monarch_type": "enemy_player"
+      },
+      "expected": {
+        "victory_points": 70
+      }
+    },
+    {
+      "id": "29.4.1_assassination_no_points",
+      "rule_ref": "29.4.1",
+      "description": "Assassination kill awards no victory points",
+      "input": {
+        "action": "assassination",
+        "success": true
+      },
+      "expected": {
+        "victory_points": 0
+      }
+    },
+    {
+      "id": "29.4.2_execute_prisoner_no_points",
+      "rule_ref": "29.4.2",
+      "description": "Executing prisoner awards no victory points",
+      "input": {
+        "action": "execute_prisoner"
+      },
+      "expected": {
+        "victory_points": 0
+      }
+    },
+    {
+      "id": "29.4.3_castle_plunder_once_per_game",
+      "rule_ref": "29.4.3",
+      "description": "Castle can only be plundered for points once per game",
+      "input": {
+        "castle": [10, 5],
+        "previously_plundered": true,
+        "action": "siege_successful"
+      },
+      "expected": {
+        "victory_points": 0,
+        "reason": "already_plundered"
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "29.4.4_plundered_status_permanent",
+      "rule_ref": "29.4.4",
+      "description": "Plundered status is permanent",
+      "input": {
+        "castle": [10, 5],
+        "plundered": true,
+        "turns_passed": 15
+      },
+      "expected": {
+        "status": "plundered",
+        "status_changed": false
+      }
+    },
+    {
+      "id": "29.4.5_capture_escape_recapture_points",
+      "rule_ref": "29.4.5",
+      "description": "Points awarded each time monarch captured (if escape and recapture)",
+      "input": {
+        "monarch": "neuth",
+        "times_captured": 2
+      },
+      "expected": {
+        "total_capture_points": 60
+      },
+      "notes": "30 points per capture"
+    },
+    {
+      "id": "29.4.6_posthumous_victory",
+      "rule_ref": "29.4.6",
+      "description": "Eliminated player can win if they have highest points",
+      "input": {
+        "player_eliminated": true,
+        "player_points": 120,
+        "active_player_highest": 100
+      },
+      "expected": {
+        "winner": "eliminated_player"
+      }
+    }
+  ]
+}

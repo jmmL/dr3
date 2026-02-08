@@ -1,0 +1,265 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "30_special_kingdom_rules",
+  "tests": [
+    {
+      "id": "30.1.1_troll_four_locations",
+      "rule_ref": "30.1.1",
+      "description": "Trolls have four separate locations",
+      "input": {
+        "kingdom": "trolls"
+      },
+      "expected": {
+        "locations": ["Stone Face", "The Gathering", "The Crag", "The Shunned Vale"],
+        "location_count": 4
+      }
+    },
+    {
+      "id": "30.1.2_troll_locations_no_castles",
+      "rule_ref": "30.1.2",
+      "description": "Troll locations are cities without castles; no intrinsic defense",
+      "input": {
+        "kingdom": "trolls",
+        "location": "Stone Face"
+      },
+      "expected": {
+        "is_castle": false,
+        "intrinsic_defense": 0,
+        "can_be_besieged": false
+      }
+    },
+    {
+      "id": "30.1.2_troll_locations_free_entry",
+      "rule_ref": "30.1.2",
+      "description": "Enemy units may freely enter Troll locations",
+      "input": {
+        "kingdom": "trolls",
+        "location": "The Gathering",
+        "entering_unit": "enemy_army"
+      },
+      "expected": {
+        "entry_allowed": true
+      }
+    },
+    {
+      "id": "30.1.3_troll_monarch_start_location",
+      "rule_ref": "30.1.3",
+      "description": "Troll monarch starts at Stone Face (col 6, row 13)",
+      "input": {
+        "kingdom": "trolls",
+        "setup": true
+      },
+      "expected": {
+        "monarch_start_hex": [6, 13],
+        "monarch_start_location": "Stone Face"
+      }
+    },
+    {
+      "id": "30.1.4_troll_regeneration_timing",
+      "rule_ref": "30.1.4",
+      "description": "Troll regeneration occurs at beginning of each turn",
+      "input": {
+        "kingdom": "trolls",
+        "turn_phase": "start_of_turn"
+      },
+      "expected": {
+        "regeneration_eligible": true
+      }
+    },
+    {
+      "id": "30.1.4_troll_regeneration_one_unit",
+      "rule_ref": "30.1.4",
+      "description": "Trolls regenerate one eliminated regular unit per turn",
+      "input": {
+        "kingdom": "trolls",
+        "eliminated_regulars": 3,
+        "turn_phase": "start_of_turn"
+      },
+      "expected": {
+        "units_regenerated": 1,
+        "eliminated_regulars_after": 2
+      }
+    },
+    {
+      "id": "30.1.4_troll_regeneration_in_addition",
+      "rule_ref": "30.1.4",
+      "description": "Troll regeneration is in addition to Random Events replacements",
+      "input": {
+        "kingdom": "trolls",
+        "regeneration_this_turn": 1,
+        "random_event_replacements": 2
+      },
+      "expected": {
+        "total_units_returned": 3
+      }
+    },
+    {
+      "id": "30.1.4_troll_regeneration_blocked",
+      "rule_ref": "30.1.4",
+      "description": "Cannot regenerate if placement hex enemy occupied",
+      "input": {
+        "kingdom": "trolls",
+        "placement_hex": [6, 13],
+        "hex_status": "enemy_occupied"
+      },
+      "expected": {
+        "regeneration_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "30.1.4_troll_same_turn_loss_no_regen",
+      "rule_ref": "30.1.4",
+      "description": "Regular lost through Random Events cannot regenerate same turn",
+      "input": {
+        "kingdom": "trolls",
+        "regular_lost_this_turn_via_event": true
+      },
+      "expected": {
+        "lost_unit_can_regenerate": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "30.1.4_troll_no_eliminated_no_regen",
+      "rule_ref": "30.1.4",
+      "description": "No regeneration if no eliminated regulars",
+      "input": {
+        "kingdom": "trolls",
+        "eliminated_regulars": 0
+      },
+      "expected": {
+        "units_regenerated": 0
+      }
+    },
+    {
+      "id": "30.2.1_goblin_nithmere_units",
+      "rule_ref": "30.2.1",
+      "description": "Goblins labeled 'Nithmere Mts.' have special deployment",
+      "input": {
+        "unit_label": "Nithmere Mts.",
+        "kingdom": "zorn"
+      },
+      "expected": {
+        "special_deployment_rules": true
+      }
+    },
+    {
+      "id": "30.2.1_goblin_nithmere_location",
+      "rule_ref": "30.2.1",
+      "description": "Nithmere goblins deploy in mountain and pass hexes of Zorn territory",
+      "input": {
+        "unit_type": "goblin_nithmere",
+        "proposed_hex_terrain": "mountain",
+        "hex_in_zorn": true
+      },
+      "expected": {
+        "valid_placement": true
+      }
+    },
+    {
+      "id": "30.2.1_goblin_nithmere_one_per_hex",
+      "rule_ref": "30.2.1",
+      "description": "Only one Nithmere goblin per hex",
+      "input": {
+        "unit_type": "goblin_nithmere",
+        "proposed_hex": [20, 5],
+        "existing_goblin_in_hex": true
+      },
+      "expected": {
+        "valid_placement": false,
+        "reason": "one_per_hex_limit"
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "30.2.1_goblin_nithmere_no_adjacency",
+      "rule_ref": "30.2.1",
+      "description": "Nithmere goblins may not be deployed adjacent to each other",
+      "input": {
+        "unit_type": "goblin_nithmere",
+        "proposed_hex": [20, 5],
+        "adjacent_goblin_hexes": [[20, 6]]
+      },
+      "expected": {
+        "valid_placement": false,
+        "reason": "adjacent_to_existing_goblin"
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "30.2.1_goblin_nithmere_valid_placement",
+      "rule_ref": "30.2.1",
+      "description": "Nithmere goblin placement valid when not adjacent to other goblins",
+      "input": {
+        "unit_type": "goblin_nithmere",
+        "proposed_hex": [20, 5],
+        "adjacent_goblin_hexes": []
+      },
+      "expected": {
+        "valid_placement": true
+      }
+    },
+    {
+      "id": "30.2.1_goblin_nithmere_applies_setup",
+      "rule_ref": "30.2.1",
+      "description": "Nithmere deployment rules apply at setup",
+      "input": {
+        "phase": "setup",
+        "unit_type": "goblin_nithmere"
+      },
+      "expected": {
+        "deployment_rules_apply": true
+      }
+    },
+    {
+      "id": "30.2.1_goblin_nithmere_applies_replacement",
+      "rule_ref": "30.2.1",
+      "description": "Nithmere deployment rules apply to replacements",
+      "input": {
+        "phase": "replacement",
+        "unit_type": "goblin_nithmere"
+      },
+      "expected": {
+        "deployment_rules_apply": true
+      }
+    },
+    {
+      "id": "30.2.1_goblin_nithmere_total_units",
+      "rule_ref": "30.2.1",
+      "description": "Total Nithmere goblin units is 8",
+      "input": {
+        "kingdom": "zorn",
+        "unit_type": "goblin_nithmere"
+      },
+      "expected": {
+        "total_units": 8
+      }
+    },
+    {
+      "id": "30.3.1_dwarves_three_locations",
+      "rule_ref": "30.3.1",
+      "description": "Dwarves have three separate locations",
+      "input": {
+        "kingdom": "ghem"
+      },
+      "expected": {
+        "locations": ["Aws Noir", "Alzak", "Rosengg"],
+        "location_count": 3
+      }
+    },
+    {
+      "id": "30.3.3_dwarves_common_cause",
+      "rule_ref": "30.3.3",
+      "description": "All dwarf locations fight for common cause",
+      "input": {
+        "kingdom": "ghem",
+        "locations": ["Aws Noir", "Alzak", "Rosengg"]
+      },
+      "expected": {
+        "unified_kingdom": true,
+        "all_locations_same_alliance": true
+      }
+    }
+  ]
+}

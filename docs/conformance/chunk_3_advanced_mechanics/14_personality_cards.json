@@ -1,0 +1,136 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "14_personality_cards",
+  "tests": [
+    {
+      "id": "14.1_total_personality_cards",
+      "rule_ref": "14.1",
+      "description": "Total personality cards is 20",
+      "input": {
+        "game_setup": true
+      },
+      "expected": {
+        "total_cards": 20
+      }
+    },
+    {
+      "id": "14.2_one_per_non_player_monarch",
+      "rule_ref": "14.2",
+      "description": "One personality card assigned per non-player monarch (face down)",
+      "input": {
+        "non_player_monarchs": 5
+      },
+      "expected": {
+        "personality_cards_assigned": 5,
+        "card_facing": "face_down"
+      }
+    },
+    {
+      "id": "14.3_reveal_when_ambassador_visits",
+      "rule_ref": "14.3",
+      "description": "Personality card read aloud when ambassador visits monarch",
+      "input": {
+        "ambassador_visits": "neutral_monarch",
+        "personality_card_status": "face_down"
+      },
+      "expected": {
+        "card_revealed": true,
+        "read_aloud": true
+      }
+    },
+    {
+      "id": "14.4_personality_diplomacy_bonus",
+      "rule_ref": "14.4",
+      "description": "Personality card may grant bonus to diplomatic die roll",
+      "input": {
+        "personality_effect": "diplomacy_bonus",
+        "bonus_value": 1,
+        "base_roll": 4
+      },
+      "expected": {
+        "modified_roll": 5
+      }
+    },
+    {
+      "id": "14.4_personality_diplomacy_penalty",
+      "rule_ref": "14.4",
+      "description": "Personality card may impose penalty to diplomatic die roll",
+      "input": {
+        "personality_effect": "diplomacy_penalty",
+        "penalty_value": -1,
+        "base_roll": 4
+      },
+      "expected": {
+        "modified_roll": 3
+      }
+    },
+    {
+      "id": "14.4_personality_movement_bonus",
+      "rule_ref": "14.4",
+      "description": "Personality card may grant movement bonus",
+      "input": {
+        "personality_effect": "movement_bonus",
+        "bonus_value": 1,
+        "base_movement": 6
+      },
+      "expected": {
+        "modified_movement": 7
+      }
+    },
+    {
+      "id": "14.4_personality_combat_bonus",
+      "rule_ref": "14.4",
+      "description": "Personality card may grant combat bonus",
+      "input": {
+        "personality_effect": "combat_bonus",
+        "bonus_value": 1,
+        "leader_present": true
+      },
+      "expected": {
+        "combat_modifier": 1
+      }
+    },
+    {
+      "id": "14.4_personality_multiple_effects",
+      "rule_ref": "14.4",
+      "description": "Personality card may have multiple effects",
+      "input": {
+        "personality_effects": ["diplomacy_bonus", "combat_bonus"],
+        "diplomacy_bonus": 1,
+        "combat_bonus": 1
+      },
+      "expected": {
+        "diplomacy_modifier": 1,
+        "combat_modifier": 1
+      }
+    },
+    {
+      "id": "14.4_personality_applies_to_specific_ploys",
+      "rule_ref": "14.4",
+      "description": "Some personality effects apply only to specific diplomatic ploys",
+      "input": {
+        "personality_effect": "bonus_to_bribes",
+        "bonus_value": 1,
+        "card_played": "bribes"
+      },
+      "expected": {
+        "modifier_applies": true,
+        "total_modifier": 1
+      }
+    },
+    {
+      "id": "14.4_personality_no_apply_wrong_ploy",
+      "rule_ref": "14.4",
+      "description": "Ploy-specific personality bonus does not apply to other ploys",
+      "input": {
+        "personality_effect": "bonus_to_bribes",
+        "bonus_value": 1,
+        "card_played": "threats"
+      },
+      "expected": {
+        "modifier_applies": false
+      },
+      "tags": ["negative"]
+    }
+  ]
+}

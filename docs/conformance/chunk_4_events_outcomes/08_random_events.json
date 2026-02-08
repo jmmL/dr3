@@ -1,0 +1,342 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "08_random_events",
+  "tests": [
+    {
+      "id": "8.1_random_events_dice_roll",
+      "rule_ref": "8.1",
+      "description": "Random events determined by rolling 2d6",
+      "input": {
+        "event_phase": true
+      },
+      "expected": {
+        "dice_type": "d6",
+        "dice_count": 2
+      }
+    },
+    {
+      "id": "8.2.1_roll_two_untimely_death",
+      "rule_ref": "8.2.1",
+      "description": "Roll of 2 causes untimely death of random friendly non-player monarch",
+      "input": {
+        "event_roll": 2,
+        "friendly_non_player_monarchs": ["neuth", "ghem"]
+      },
+      "expected": {
+        "event": "untimely_death",
+        "target_selection": "random",
+        "target_pool": "friendly_non_player_monarchs"
+      }
+    },
+    {
+      "id": "8.2.2_roll_three_storms",
+      "rule_ref": "8.2.2",
+      "description": "Roll of 3 eliminates one of player's fleets",
+      "input": {
+        "event_roll": 3,
+        "player_fleets": ["fleet_1", "fleet_2"]
+      },
+      "expected": {
+        "event": "storms",
+        "fleets_eliminated": 1,
+        "selection": "player_choice"
+      }
+    },
+    {
+      "id": "8.2.3_roll_four_mutiny",
+      "rule_ref": "8.2.3",
+      "description": "Roll of 4 eliminates one regular or mercenary unit",
+      "input": {
+        "event_roll": 4
+      },
+      "expected": {
+        "event": "mutiny",
+        "units_eliminated": 1,
+        "valid_targets": ["regular", "mercenary"],
+        "selection": "player_choice"
+      }
+    },
+    {
+      "id": "8.2.4_roll_five_bad_omens",
+      "rule_ref": "8.2.4",
+      "description": "Roll of 5 prevents one kingdom's regulars from fighting or sieging",
+      "input": {
+        "event_roll": 5,
+        "player_kingdoms": ["hothior"],
+        "allied_kingdoms": ["neuth"]
+      },
+      "expected": {
+        "event": "bad_omens",
+        "affected_kingdom_selection": "random",
+        "affected_kingdom_pool": ["hothior", "neuth"],
+        "movement_affected": false,
+        "combat_allowed": false,
+        "siege_allowed": false
+      }
+    },
+    {
+      "id": "8.2.5_roll_six_replacements",
+      "rule_ref": "8.2.5",
+      "description": "Roll of 6 brings 2 eliminated regular units back into play",
+      "input": {
+        "event_roll": 6,
+        "eliminated_regulars": 3
+      },
+      "expected": {
+        "event": "replacements",
+        "units_returned": 2,
+        "unit_type": "regular",
+        "source": "eliminated_pool"
+      }
+    },
+    {
+      "id": "8.2.6_roll_seven_no_event",
+      "rule_ref": "8.2.6",
+      "description": "Roll of 7 results in no event",
+      "input": {
+        "event_roll": 7
+      },
+      "expected": {
+        "event": "no_event",
+        "effect": null
+      }
+    },
+    {
+      "id": "8.2.7_roll_eight_reinforcements",
+      "rule_ref": "8.2.7",
+      "description": "Roll of 8 brings 2 mercenary units into play",
+      "input": {
+        "event_roll": 8
+      },
+      "expected": {
+        "event": "reinforcements",
+        "mercenary_units_gained": 2,
+        "placement": "any_friendly_castle_or_port"
+      }
+    },
+    {
+      "id": "8.2.8_roll_nine_plague",
+      "rule_ref": "8.2.8",
+      "description": "Roll of 9 eliminates one regular or mercenary unit",
+      "input": {
+        "event_roll": 9
+      },
+      "expected": {
+        "event": "plague",
+        "units_eliminated": 1,
+        "valid_targets": ["regular", "mercenary"],
+        "selection": "player_choice"
+      }
+    },
+    {
+      "id": "8.2.9_roll_ten_replacement",
+      "rule_ref": "8.2.9",
+      "description": "Roll of 10 brings 1 regular or mercenary unit into play",
+      "input": {
+        "event_roll": 10
+      },
+      "expected": {
+        "event": "replacement",
+        "units_gained": 1,
+        "valid_types": ["regular", "mercenary"]
+      }
+    },
+    {
+      "id": "8.2.10_roll_eleven_desertion",
+      "rule_ref": "8.2.10",
+      "description": "Roll of 11 eliminates one mercenary unit",
+      "input": {
+        "event_roll": 11,
+        "player_mercenaries": ["merc_1"]
+      },
+      "expected": {
+        "event": "desertion",
+        "units_eliminated": 1,
+        "valid_targets": ["mercenary"],
+        "selection": "player_choice"
+      }
+    },
+    {
+      "id": "8.2.11_roll_twelve_help_from_afar",
+      "rule_ref": "8.2.11",
+      "description": "Roll of 12 activates random neutral non-player kingdom as immediate ally",
+      "input": {
+        "event_roll": 12,
+        "neutral_kingdoms": ["neuth", "ghem", "zorn"]
+      },
+      "expected": {
+        "event": "help_from_afar",
+        "kingdom_selection": "random",
+        "kingdom_status_after": "allied"
+      }
+    },
+    {
+      "id": "8.3.1_applies_only_to_rolling_player",
+      "rule_ref": "8.3.1",
+      "description": "Random event effects apply only to the rolling player",
+      "input": {
+        "rolling_player": "player_a",
+        "event": "replacements"
+      },
+      "expected": {
+        "affected_player": "player_a",
+        "other_players_affected": false
+      }
+    },
+    {
+      "id": "8.3.2_regular_placement_at_counter_location",
+      "rule_ref": "8.3.2",
+      "description": "Regular unit replacements placed at location named on counter",
+      "input": {
+        "unit_type": "regular",
+        "counter_location": [10, 5]
+      },
+      "expected": {
+        "placement_location": [10, 5]
+      }
+    },
+    {
+      "id": "8.3.3_blocked_placement_no_entry",
+      "rule_ref": "8.3.3",
+      "description": "If placement hex enemy-occupied or under siege, unit cannot enter",
+      "input": {
+        "placement_hex": [10, 5],
+        "hex_status": "enemy_occupied"
+      },
+      "expected": {
+        "placement_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "8.3.4_mercenary_placement_friendly_castle",
+      "rule_ref": "8.3.4",
+      "description": "Mercenary reinforcements placed at any friendly castle or port",
+      "input": {
+        "unit_type": "mercenary",
+        "friendly_castles": [[10, 5], [15, 8]]
+      },
+      "expected": {
+        "valid_placement_hexes": [[10, 5], [15, 8]]
+      }
+    },
+    {
+      "id": "8.3.5_fleet_reinforcement_requires_port",
+      "rule_ref": "8.3.5",
+      "description": "Fleet reinforcement requires at least one friendly port",
+      "input": {
+        "unit_type": "mercenary_fleet",
+        "friendly_ports": 0
+      },
+      "expected": {
+        "placement_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "8.3.6_regular_limit_identity_card",
+      "rule_ref": "8.3.6",
+      "description": "Regular replacements cannot exceed number on identity card",
+      "input": {
+        "kingdom": "hothior",
+        "identity_card_limit": 8,
+        "current_regulars": 8,
+        "replacement_event": true
+      },
+      "expected": {
+        "replacement_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "8.3.7_immediate_action_allowed",
+      "rule_ref": "8.3.7",
+      "description": "Replacements, reinforcements, and Help From Afar units may move and fight same turn",
+      "input": {
+        "event": "help_from_afar",
+        "units_placed": ["army_1", "army_2"]
+      },
+      "expected": {
+        "may_move_this_turn": true,
+        "may_attack_this_turn": true
+      }
+    },
+    {
+      "id": "8.3.8_impossible_event_no_event",
+      "rule_ref": "8.3.8",
+      "description": "Impossible events treated as No Event",
+      "input": {
+        "event_roll": 2,
+        "friendly_non_player_monarchs": []
+      },
+      "expected": {
+        "event_result": "no_event"
+      }
+    },
+    {
+      "id": "8.3.8_no_fleets_storms_no_event",
+      "rule_ref": "8.3.8",
+      "description": "Storms with no fleets treated as No Event",
+      "input": {
+        "event_roll": 3,
+        "player_fleets": []
+      },
+      "expected": {
+        "event_result": "no_event"
+      }
+    },
+    {
+      "id": "8.3.8_no_mercenaries_desertion_no_event",
+      "rule_ref": "8.3.8",
+      "description": "Desertion with no mercenaries treated as No Event",
+      "input": {
+        "event_roll": 11,
+        "player_mercenaries": []
+      },
+      "expected": {
+        "event_result": "no_event"
+      }
+    },
+    {
+      "id": "8.3.9_no_transfer_between_players",
+      "rule_ref": "8.3.9",
+      "description": "Replacements and reinforcements may not be transferred to other players",
+      "input": {
+        "event": "reinforcements",
+        "transfer_to_ally": true
+      },
+      "expected": {
+        "transfer_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "8.3.3_besieged_hex_blocked",
+      "rule_ref": "8.3.3",
+      "description": "Placement blocked if hex under siege",
+      "input": {
+        "placement_hex": [10, 5],
+        "hex_status": "under_siege"
+      },
+      "expected": {
+        "placement_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "8.2.5_replacement_player_or_allied_only",
+      "rule_ref": "8.2.5",
+      "description": "Replacements only for player monarch's kingdom or allied kingdoms",
+      "input": {
+        "event_roll": 6,
+        "player_kingdom": "hothior",
+        "allied_kingdoms": ["neuth"],
+        "eliminated_regulars_hothior": 1,
+        "eliminated_regulars_neuth": 1
+      },
+      "expected": {
+        "valid_replacement_kingdoms": ["hothior", "neuth"]
+      }
+    }
+  ]
+}
