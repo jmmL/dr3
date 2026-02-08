@@ -3,14 +3,14 @@
   "rule_section": "13_diplomacy_cards",
   "tests": [
     {
-      "id": "13.1_total_cards",
+      "id": "13.1_total_diplomacy_cards",
       "rule_ref": "13.1",
-      "description": "Diplomacy deck contains 45 cards",
+      "description": "Total diplomacy cards in full game is 45",
       "input": {
-        "deck_type": "diplomacy"
+        "game_type": "full"
       },
       "expected": {
-        "card_total": 45
+        "total_cards": 45
       }
     },
     {
@@ -18,53 +18,139 @@
       "rule_ref": "13.2",
       "description": "Basic game uses 32 diplomacy cards",
       "input": {
-        "game_mode": "basic"
+        "game_type": "basic"
       },
       "expected": {
-        "card_total": 32
+        "total_cards": 32
       }
     },
     {
-      "id": "13.3.1_diplomatic_ploys_bonus",
+      "id": "13.3.1_diplomatic_ploys_grant_bonus",
       "rule_ref": "13.3.1",
-      "description": "Diplomatic ploys provide bonuses to the diplomacy die roll",
+      "description": "Diplomatic ploy cards grant bonuses to diplomatic die roll",
       "input": {
         "card_type": "diplomatic_ploy",
-        "card_modifier": 2
+        "card_name": "long_orations",
+        "modifier": 1
       },
       "expected": {
-        "modifier_applies": true
+        "die_roll_modifier": 1
       }
     },
     {
-      "id": "13.3.2_special_mercenary_count",
-      "rule_ref": "13.3.2",
-      "description": "Special mercenary diplomacy cards include 13 units in advanced game",
+      "id": "13.3.1_bribes_plus_two",
+      "rule_ref": "13.3.1",
+      "description": "Bribes +2 card grants +2 modifier",
       "input": {
-        "game_mode": "advanced"
+        "card_name": "bribes",
+        "card_value": 2
       },
       "expected": {
-        "special_mercenary_cards": 13
+        "die_roll_modifier": 2
       }
     },
     {
-      "id": "13.4_cards_accumulate",
+      "id": "13.3.1_black_magic_plus_three",
+      "rule_ref": "13.3.1",
+      "description": "Black Magic +3 card grants +3 modifier",
+      "input": {
+        "card_name": "black_magic",
+        "card_value": 3
+      },
+      "expected": {
+        "die_roll_modifier": 3
+      }
+    },
+    {
+      "id": "13.3.1_crass_bribes_banishment_risk",
+      "rule_ref": "13.3.1",
+      "description": "Crass Bribes grants +2 but risks banishment on failure",
+      "input": {
+        "card_name": "crass_bribes",
+        "card_value": 2,
+        "diplomacy_failed": true
+      },
+      "expected": {
+        "die_roll_modifier": 2,
+        "banishment_triggered": true
+      }
+    },
+    {
+      "id": "13.3.1_threats_banishment_risk",
+      "rule_ref": "13.3.1",
+      "description": "Threats grants modifier but risks banishment on failure",
+      "input": {
+        "card_name": "threats",
+        "card_value": 2,
+        "diplomacy_failed": true
+      },
+      "expected": {
+        "die_roll_modifier": 2,
+        "banishment_triggered": true
+      }
+    },
+    {
+      "id": "13.3.1_blackmail_banishment_risk",
+      "rule_ref": "13.3.1",
+      "description": "Blackmail grants modifier but risks banishment on failure",
+      "input": {
+        "card_name": "blackmail",
+        "card_value": 3,
+        "diplomacy_failed": true
+      },
+      "expected": {
+        "die_roll_modifier": 3,
+        "banishment_triggered": true
+      }
+    },
+    {
+      "id": "13.3.1_white_magic_safe",
+      "rule_ref": "13.3.1",
+      "description": "White Magic grants modifier with no banishment risk",
+      "input": {
+        "card_name": "white_magic",
+        "card_value": 2,
+        "diplomacy_failed": true
+      },
+      "expected": {
+        "die_roll_modifier": 2,
+        "banishment_triggered": false
+      }
+    },
+    {
+      "id": "13.3.1_marriages_safe",
+      "rule_ref": "13.3.1",
+      "description": "Marriages grants modifier with no banishment risk",
+      "input": {
+        "card_name": "marriages",
+        "card_value": 2,
+        "diplomacy_failed": true
+      },
+      "expected": {
+        "die_roll_modifier": 2,
+        "banishment_triggered": false
+      }
+    },
+    {
+      "id": "13.4_cards_may_accumulate",
       "rule_ref": "13.4",
-      "description": "Diplomacy cards may be accumulated",
+      "description": "Diplomacy cards may be accumulated in hand",
       "input": {
-        "cards_in_hand": 3,
-        "cards_drawn": 2
+        "cards_in_hand": 5,
+        "draw_new_card": true
       },
       "expected": {
-        "new_hand_size": 5
+        "cards_in_hand_after": 6,
+        "accumulation_allowed": true
       }
     },
     {
-      "id": "13.5_cards_not_tradable",
+      "id": "13.5_cards_no_trading",
       "rule_ref": "13.5",
-      "description": "Diplomacy cards may not be traded or exchanged",
+      "description": "Diplomacy cards may not be traded or exchanged between players",
       "input": {
-        "trade_attempt": true
+        "player_a_offers_card": true,
+        "player_b_accepts": true
       },
       "expected": {
         "trade_allowed": false
@@ -74,22 +160,35 @@
     {
       "id": "13.6_reshuffle_when_exhausted",
       "rule_ref": "13.6",
-      "description": "Discard pile is shuffled when the diplomacy deck is exhausted",
+      "description": "When deck exhausted, shuffle discard pile to form new deck",
       "input": {
-        "deck_empty": true,
-        "discard_pile_count": 10
+        "deck_size": 0,
+        "discard_pile_size": 15
       },
       "expected": {
-        "reshuffle_required": true
+        "reshuffle_triggered": true,
+        "new_deck_size": 15
       }
     },
     {
-      "id": "13.7_discard_after_use",
+      "id": "13.7_card_discarded_regardless_of_outcome",
       "rule_ref": "13.7",
-      "description": "Diplomacy cards are discarded after use regardless of success",
+      "description": "Cards discarded when used, regardless of success or failure",
       "input": {
-        "card_played": true,
-        "diplomacy_success": false
+        "card_played": "bribes",
+        "diplomacy_result": "success"
+      },
+      "expected": {
+        "card_discarded": true
+      }
+    },
+    {
+      "id": "13.7_card_discarded_on_failure",
+      "rule_ref": "13.7",
+      "description": "Cards discarded even when diplomacy fails",
+      "input": {
+        "card_played": "long_orations",
+        "diplomacy_result": "failure"
       },
       "expected": {
         "card_discarded": true
