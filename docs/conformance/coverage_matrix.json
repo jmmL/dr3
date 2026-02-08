@@ -92,7 +92,8 @@
     ],
     "6.2.2": [
       "6.2.2_mountain_symbol_no_stop",
-      "6.2.2_no_mountain_symbol_must_stop"
+      "6.2.2_no_mountain_symbol_must_stop",
+      "6.2_mountain_symbol_leader_stack_movement"
     ],
     "6.3.1": [
       "6.3.1_home_kingdom_bonus_applies_monarch",
@@ -107,7 +108,8 @@
       "8.1_random_event_roll_two_dice"
     ],
     "8.2.1": [
-      "8.2.1_roll_two_untimely_death"
+      "8.2.1_roll_two_untimely_death",
+      "8.2_untimely_death_during_siege"
     ],
     "8.2.2": [
       "8.2.2_roll_three_storms"
@@ -243,18 +245,21 @@
     "12.3.2": [
       "12.3.2_deactivate_threshold",
       "12.3.2_deactivate_effects",
-      "12.3.2_deactivation_breaks_siege_coordination"
+      "12.3.2_deactivation_breaks_siege_coordination",
+      "28.2_player_death_deactivates_allies"
     ],
     "12.3.3": [
       "12.3.3_assassination_limit_once",
-      "12.3.3_assassination_higher_roll_kills"
+      "12.3.3_assassination_higher_roll_kills",
+      "12.3_assassination_kills_ambassador"
     ],
     "12.3.4": [
       "12.3.4_duel_limit_once",
       "12.3.4_duel_tie_kills_both"
     ],
     "12.4.1": [
-      "12.4.1_ambassador_death_removal"
+      "12.4.1_ambassador_death_removal",
+      "12.3_assassination_kills_ambassador"
     ],
     "12.4.3": [
       "12.4.3_no_diplomacy_during_death"
@@ -340,6 +345,22 @@
     "14.4": [
       "14.4_personality_effects_apply"
     ],
+    "15.1": [
+      "15.1_placement_hex_occupied_triggers_activation",
+      "15.1_non_combat_unit_no_trigger",
+      "28.1_confusion_border_violation_crowns_new_monarch"
+    ],
+    "15.2": [
+      "15.2_ambassador_placed_anywhere_in_kingdom"
+    ],
+    "15.3": [
+      "15.3_units_placed_normally_and_adjacent"
+    ],
+    "15.4": [
+      "15.4.1_siege_on_neutral_triggers_alliance",
+      "15.4_alliance_partner_random",
+      "15.4_siege_conditions_refigured"
+    ],
     "16.1": [
       "16.1_allied_forces_moved_by_owner"
     ],
@@ -415,7 +436,8 @@
     ],
     "17.6.1": [
       "17.6.1_siege_declared_when_conditions_met",
-      "12.3.2_deactivation_breaks_siege_coordination"
+      "12.3.2_deactivation_breaks_siege_coordination",
+      "8.2_untimely_death_during_siege"
     ],
     "17.6.2": [
       "17.6.2_any_player_may_declare"
@@ -428,13 +450,15 @@
     ],
     "17.7.2": [
       "17.7.2_must_attack_besiegers_first",
-      "17.7.2_leave_siege_after_resolution"
+      "17.7.2_leave_siege_after_resolution",
+      "17.7_leave_siege_full_movement"
     ],
     "17.7.3": [
       "17.7.3_attack_from_siege_combat_phase",
       "17.7.3_attack_from_siege_advance_limit",
       "17.7.3_outside_forces_join",
-      "17.7.3_attack_from_siege_breaks_siege"
+      "17.7.3_attack_from_siege_breaks_siege",
+      "25.13_advance_into_castle_siege_break"
     ],
     "17.8.1": [
       "17.8.1_resolution_in_siege_phase",
@@ -532,7 +556,8 @@
       "17.13.8_forced_peace_alternative_normal_diplomacy"
     ],
     "17.13.9": [
-      "17.13.9_forced_peace_effects"
+      "17.13.9_forced_peace_effects",
+      "17.13_forced_peace_plunder_permanent"
     ],
     "17.13.10": [
       "17.13.10_forced_peace_violation_effect"
@@ -541,7 +566,8 @@
       "17.13.11_forced_peace_unit_status"
     ],
     "17.13.12": [
-      "17.13.12_plundered_castles_remain"
+      "17.13.12_plundered_castles_remain",
+      "17.13_forced_peace_plunder_permanent"
     ],
     "17.13.13": [
       "17.13.13_player_monarchs_not_subject"
@@ -553,7 +579,8 @@
       "18.1.2_any_direction_movement"
     ],
     "18.1.3": [
-      "18.1.3_movement_points_not_saved"
+      "18.1.3_movement_points_not_saved",
+      "17.7_leave_siege_full_movement"
     ],
     "18.1.4": [
       "18.1.4_minimum_movement_one_hex"
@@ -571,7 +598,8 @@
       "18.3.1_besieged_units_cannot_move"
     ],
     "18.3.2": [
-      "18.3.2_just_activated_cannot_move"
+      "18.3.2_just_activated_cannot_move",
+      "18.3_activated_kingdom_no_move_or_attack"
     ],
     "18.3.3": [
       "18.3.3_just_deactivated_cannot_move"
@@ -586,7 +614,8 @@
       "18.4.3_units_may_continue_independently"
     ],
     "18.5.1": [
-      "18.5.1_cannot_enter_enemy_hex"
+      "18.5.1_cannot_enter_enemy_hex",
+      "30.1_troll_regeneration_blocked_by_enemy"
     ],
     "18.5.2": [
       "18.5.2_allied_stacking_end_turn"
@@ -633,7 +662,8 @@
       "19.5.2_hills_mountain_symbol"
     ],
     "19.6.1": [
-      "19.6.1_mountain_terrain_cost"
+      "19.6.1_mountain_terrain_cost",
+      "22.4_debark_mountain_seashore_denied"
     ],
     "19.6.2": [
       "19.6.2_mountain_must_stop"
@@ -773,11 +803,13 @@
     "22.4": [
       "22.4_debark_friendly_port",
       "22.4_debark_seashore_no_mountains",
-      "22.4_debark_seashore_mountains_denied"
+      "22.4_debark_seashore_mountains_denied",
+      "22.4_debark_mountain_seashore_denied"
     ],
     "22.5": [
       "22.5_transported_units_no_other_move",
-      "22.5_transported_units_eliminated_in_combat"
+      "22.5_transported_units_eliminated_in_combat",
+      "26.6_leader_fate_fleet_transport_destroyed"
     ],
     "22.6": [
       "22.6_fleet_continue_moving"
@@ -801,7 +833,8 @@
       "24.2.1_allied_pass_through"
     ],
     "24.2.2": [
-      "24.2.2_allied_end_turn_denied"
+      "24.2.2_allied_end_turn_denied",
+      "25.2_retreat_into_allied_hex_stacking"
     ],
     "24.3.1": [
       "24.3.1_mercenary_stack_with_friendly"
@@ -845,7 +878,8 @@
       "25.2.3_stack_test_order"
     ],
     "25.2.4": [
-      "25.2.4_retreat_destination"
+      "25.2.4_retreat_destination",
+      "25.2_retreat_into_allied_hex_stacking"
     ],
     "25.2.5": [
       "25.2.5_same_hex_retreat"
@@ -901,7 +935,8 @@
       "25.7.2_siege_attackers_cannot_combat",
       "25.7.2_transported_units_no_combat",
       "25.7.2_activated_kingdom_no_attack",
-      "25.7.2_deactivated_kingdom_no_attack"
+      "25.7.2_deactivated_kingdom_no_attack",
+      "18.3_activated_kingdom_no_move_or_attack"
     ],
     "25.8.1": [
       "25.8.1_cannot_attack_inside_castle"
@@ -910,10 +945,12 @@
       "25.8.2_adjacency_required_for_attack"
     ],
     "25.9.1": [
-      "25.9.1_multiple_hexes_combine"
+      "25.9.1_multiple_hexes_combine",
+      "25.9_multi_hex_allied_combined_attack"
     ],
     "25.9.2": [
-      "25.9.2_allied_forces_combine"
+      "25.9.2_allied_forces_combine",
+      "25.9_multi_hex_allied_combined_attack"
     ],
     "25.10.1": [
       "25.10.1_unit_attack_limit"
@@ -941,7 +978,8 @@
       "25.12.3_all_defenders_attacked"
     ],
     "25.13.1": [
-      "25.13.1_advance_trigger"
+      "25.13.1_advance_trigger",
+      "25.13_advance_into_castle_siege_break"
     ],
     "25.13.2": [
       "25.13.2_advance_units_choice"
@@ -963,7 +1001,9 @@
       "26.3.1_leader_movement_bonus_scope"
     ],
     "26.3.2": [
-      "26.3.2_stack_uses_leader_ma"
+      "26.3.2_stack_uses_leader_ma",
+      "26.3_leader_terrain_no_transfer_to_stack",
+      "6.2_mountain_symbol_leader_stack_movement"
     ],
     "26.3.3": [
       "26.3.3_begin_end_stacked"
@@ -975,7 +1015,8 @@
       "26.3.5_no_independent_movement_with_leader"
     ],
     "26.3.6": [
-      "26.3.6_unit_terrain_no_transfer"
+      "26.3.6_unit_terrain_no_transfer",
+      "26.3_leader_terrain_no_transfer_to_stack"
     ],
     "26.4.1": [
       "26.4.1_leader_combat_bonus_source"
@@ -998,7 +1039,8 @@
       "26.6.1_fate_roll_enemy_passes_lone_leader",
       "26.6.1_fate_roll_castle_falls",
       "26.6.1_fate_roll_leave_besieged_alone",
-      "26.6.1_fate_roll_fleet_lost_at_sea"
+      "26.6.1_fate_roll_fleet_lost_at_sea",
+      "26.6_leader_fate_fleet_transport_destroyed"
     ],
     "26.6.2": [
       "26.6.2_fate_roll_one_killed",
@@ -1049,7 +1091,8 @@
       "27.9_diplomacy_allowed_with_castaway"
     ],
     "28.1.1": [
-      "28.1.1_non_player_death_confusion"
+      "28.1.1_non_player_death_confusion",
+      "8.2_untimely_death_during_siege"
     ],
     "28.1.2": [
       "28.1.2_confusion_duration_roll"
@@ -1061,16 +1104,19 @@
       "28.1.4_confusion_end_new_personality"
     ],
     "28.1.5": [
-      "28.1.5_border_violation_ends_confusion"
+      "28.1.5_border_violation_ends_confusion",
+      "28.1_confusion_border_violation_crowns_new_monarch"
     ],
     "28.1.6": [
       "28.1.6_eliminated_regulars_remain"
     ],
     "28.2.1": [
-      "28.2.1_player_monarch_death_eliminates_player"
+      "28.2.1_player_monarch_death_eliminates_player",
+      "28.2_player_death_deactivates_allies"
     ],
     "28.2.2": [
-      "28.2.2_allies_deactivate"
+      "28.2.2_allies_deactivate",
+      "28.2_player_death_deactivates_allies"
     ],
     "28.2.3": [
       "28.2.3_player_kingdom_confusion"
@@ -1186,7 +1232,8 @@
     ],
     "30.1.4": [
       "30.1.4_troll_regeneration",
-      "30.1.4_troll_regeneration_blocked"
+      "30.1.4_troll_regeneration_blocked",
+      "30.1_troll_regeneration_blocked_by_enemy"
     ],
     "30.2.1": [
       "30.2.1_goblin_deploy_mountain_pass_only",

@@ -36,6 +36,21 @@
       "type": "object",
       "description": "Expected outcome from applying the rule"
     },
+    "action": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The boardgame.io move name to dispatch (e.g., 'RESOLVE_COMBAT', 'MOVE_UNIT')"
+        },
+        "args": {
+          "type": "object",
+          "description": "Arguments passed to the move function"
+        }
+      },
+      "required": ["type"],
+      "description": "Optional: boardgame.io move to dispatch, enabling transition-based testing"
+    },
     "tags": {
       "type": "array",
       "items": { "type": "string" },

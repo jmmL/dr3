@@ -1,0 +1,29 @@
+name: Conformance Suite Validation
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'docs/conformance/**'
+      - 'scripts/validate_conformance_suite.py'
+  pull_request:
+    branches: [ "main" ]
+    paths:
+      - 'docs/conformance/**'
+      - 'scripts/validate_conformance_suite.py'
+
+jobs:
+  validate:
+    name: Validate Conformance Suite
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate conformance tests and coverage matrix
+        run: python3 scripts/validate_conformance_suite.py
