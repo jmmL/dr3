@@ -20,8 +20,6 @@ import {
 runConformanceSuite(
   'chunk_2_core_mechanics/18_movement.json',
   (input, expected) => {
-    const testId = Object.keys(expected).join(',');
-
     // 18.1.1 - Active player check
     if ('active_player' in input && 'moving_player' in input && 'movement_allowed' in expected) {
       expect(

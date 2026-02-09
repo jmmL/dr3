@@ -11,13 +11,6 @@ function findCity(name: string, kingdom: string) {
   return faction?.cities.find((c) => c.name === name);
 }
 
-function hasIntrinsicDefense(cityName: string, kingdom: string): boolean {
-  const city = findCity(cityName, kingdom);
-  if (!city) return false;
-  const hex = hexMap.hexes.get(`${city.position.col},${city.position.row}`);
-  return hex?.intrinsicDefense != null && hex.intrinsicDefense > 0;
-}
-
 function isCastleHex(cityName: string, kingdom: string): boolean {
   const city = findCity(cityName, kingdom);
   if (!city) return false;

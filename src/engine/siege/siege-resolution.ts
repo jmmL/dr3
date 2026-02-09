@@ -7,7 +7,7 @@
  */
 export function canResolveSiege(
   currentPhase: string,
-  activePlayer: string,
+  _activePlayer: string,
   _besieger: string,
 ): boolean {
   return currentPhase === 'siege_resolution';
