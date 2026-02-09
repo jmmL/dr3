@@ -12,6 +12,7 @@ interface HexBoardProps {
   hexes: Array<{ col: number; row: number; terrain: string[] }>;
   currentPlayerId: string;
   selectedUnitId: string | null;
+  legalDestinationKeys: Set<string>;
   onSelectUnit: (unitId: string) => void;
   onSelectHex: (col: number, row: number) => void;
 }
@@ -28,6 +29,7 @@ export default function HexBoard({
   hexes,
   currentPlayerId,
   selectedUnitId,
+  legalDestinationKeys,
   onSelectUnit,
   onSelectHex,
 }: HexBoardProps) {
@@ -67,7 +69,9 @@ export default function HexBoard({
   }
 
   function handleWheel(event: WheelEvent<HTMLDivElement>): void {
-    event.preventDefault();
+    if (event.cancelable) {
+      event.preventDefault();
+    }
     const rect = event.currentTarget.getBoundingClientRect();
     const cursorX = event.clientX - rect.left;
     const cursorY = event.clientY - rect.top;
@@ -107,13 +111,16 @@ export default function HexBoard({
   return (
     <div className="board-shell" data-testid="board-shell">
       <div className="board-toolbar">
-        <span className="board-zoom">Zoom {Math.round(zoom * 100)}%</span>
+        <span className="board-zoom" data-testid="board-zoom">
+          Zoom {Math.round(zoom * 100)}%
+        </span>
         <button type="button" onClick={resetView} className="board-reset">
           Reset View
         </button>
       </div>
       <div
         className={`board-viewport${isDragging ? ' is-dragging' : ''}`}
+        data-testid="board-viewport"
         onWheel={handleWheel}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
@@ -122,6 +129,7 @@ export default function HexBoard({
       >
         <svg
           className="board-svg board-svg-map"
+          data-testid="board-svg"
           viewBox={`0 0 ${MINARIA_MAP_CALIBRATION.imageWidth} ${MINARIA_MAP_CALIBRATION.imageHeight}`}
           role="img"
           aria-label="DR3 board"
@@ -144,7 +152,8 @@ export default function HexBoard({
               <polygon
                 key={key}
                 points={mapHexPolygonPoints(hex.col, hex.row)}
-                className="hex"
+                className={`hex${legalDestinationKeys.has(key) ? ' is-legal-destination' : ''}`}
+                data-legal-destination={legalDestinationKeys.has(key) ? 'true' : 'false'}
                 onClick={() => onSelectHex(hex.col, hex.row)}
               />
             );

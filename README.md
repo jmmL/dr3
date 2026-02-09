@@ -1,6 +1,36 @@
 # dr3
 An implementation of Divine Right (3rd edition) for fun
 
+## Local Testing Loop
+
+Use this loop before considering a task complete:
+
+```bash
+npm run test:local:gate
+```
+
+This gate runs lint, unit tests, board contract tests, and board visual regression checks.
+
+Board-focused commands:
+
+```bash
+npm run test:e2e:board:contract
+npm run test:e2e:board:visual
+npm run test:e2e:board:visual:update
+npm run test:e2e:board:loop
+```
+
+- `test:e2e:board:contract` validates map image loading, regular hex geometry, interactions, and runtime errors.
+- `test:e2e:board:visual` compares board screenshots against a baseline snapshot.
+- `test:e2e:board:visual:update` refreshes the baseline snapshot intentionally.
+- `test:e2e:board:loop` repeats board contracts to catch flaky regressions locally.
+
+For MCP-driven interaction debugging, start Playwright MCP and drive the app through scripted/manual browser actions:
+
+```bash
+npm run mcp:playwright
+```
+
 ## Reference Documentation
 
 A collection of reference documents that form the basis of the rules, map and game pieces.

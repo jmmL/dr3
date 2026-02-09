@@ -115,4 +115,18 @@ describe('DR3Game', () => {
     expect(resolved).toBeTruthy();
     expect(resolved?.G.log.length).toBeGreaterThan(0);
   });
+
+  it('restores a saved snapshot stage via restoreSnapshot move', () => {
+    const client = createClient();
+    runToMovement(client);
+    const movementState = client.getState();
+    expect(movementState?.G.stage).toBe('movement');
+    if (!movementState) return;
+
+    client.moves.toCombatPhase?.();
+    expect(client.getState()?.G.stage).toBe('combat');
+
+    client.moves.restoreSnapshot?.(movementState.G);
+    expect(client.getState()?.G.stage).toBe('movement');
+  });
 });
