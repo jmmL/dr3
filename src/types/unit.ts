@@ -1,6 +1,14 @@
 import type { HexCoord } from './hex';
 
-export type UnitType = 'monarch' | 'ambassador' | 'army' | 'fleet';
+export type UnitType =
+  | 'monarch'
+  | 'ambassador'
+  | 'army'
+  | 'fleet'
+  | 'regular_army'
+  | 'regular_fleet'
+  | 'mercenary_army'
+  | 'mercenary_fleet';
 
 export type MovementType = 'standard' | 'teleport' | 'naval';
 

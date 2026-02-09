@@ -1,5 +1,12 @@
 export type EventType =
   | 'no_event'
+  | 'untimely_death'
+  | 'storms'
+  | 'mutiny'
+  | 'bad_omens'
+  | 'replacements'
+  | 'desertion'
+  | 'help_from_afar'
   | 'plague'
   | 'famine'
   | 'rebellion'

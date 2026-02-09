@@ -11,7 +11,10 @@
     "format": "prettier --write src/",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "test:e2e:chromium": "playwright test --project=chromium",
+    "test:e2e:ios": "playwright test --project=ios-safari",
+    "mcp:playwright": "npx -y @playwright/mcp@latest"
   },
   "dependencies": {
     "boardgame.io": "^0.50.2",
