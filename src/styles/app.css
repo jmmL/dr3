@@ -50,54 +50,111 @@ body {
 }
 
 .board-shell {
-  overflow: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--border);
   border-radius: 12px;
-  background: #122028;
+  background: #0f1720;
   min-height: 70vh;
+}
+
+.board-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.65rem;
+  border-bottom: 1px solid rgb(54 86 104 / 60%);
+  background: linear-gradient(180deg, #111b24, #0f1820);
+}
+
+.board-zoom {
+  font-size: 0.8rem;
+  color: #dbe8ea;
+}
+
+.board-reset {
+  padding: 0.3rem 0.55rem;
+  font-size: 0.76rem;
+}
+
+.board-viewport {
+  position: relative;
+  min-height: 68vh;
+  overflow: hidden;
+  touch-action: none;
+  cursor: grab;
+}
+
+.board-viewport.is-dragging {
+  cursor: grabbing;
 }
 
 .board-svg {
   width: 100%;
-  min-width: 840px;
+  min-width: 980px;
+  min-height: 68vh;
   display: block;
+  transform-origin: 0 0;
 }
 
-.board-backdrop {
-  fill: #0f1a22;
+.board-image {
+  pointer-events: none;
 }
 
 .hex {
-  stroke: rgb(12 18 22 / 70%);
-  stroke-width: 1;
+  fill: rgb(223 199 141 / 5%);
+  stroke: rgb(24 32 38 / 40%);
+  stroke-width: 1.2;
   cursor: pointer;
-  transition: fill 120ms ease;
+  transition: fill 120ms ease, stroke 120ms ease;
 }
 
 .hex:hover {
-  fill: #d2843a;
+  fill: rgb(250 224 163 / 14%);
+  stroke: rgb(18 26 32 / 75%);
 }
 
 .unit-stack {
   cursor: pointer;
 }
 
-.unit-friendly {
-  fill: var(--accent-2);
-  stroke: #0d332f;
-  stroke-width: 2;
+.unit-stack.is-selected .unit-badge-halo {
+  fill: rgb(255 226 161 / 78%);
+  stroke: #f4c56d;
 }
 
-.unit-hostile {
+.unit-badge-halo {
+  fill: rgb(10 15 19 / 76%);
+  stroke: rgb(239 245 246 / 78%);
+  stroke-width: 1.3;
+}
+
+.unit-badge-friendly {
+  fill: #4bb0a7;
+  stroke: #0b2e2a;
+  stroke-width: 2.2;
+}
+
+.unit-badge-hostile {
   fill: var(--danger);
   stroke: #2f1010;
-  stroke-width: 2;
+  stroke-width: 2.2;
 }
 
-.unit-label {
-  fill: #fff;
-  font-size: 8px;
+.unit-count-badge {
+  fill: #f4f7f8;
+  stroke: #162026;
+  stroke-width: 1.3;
+}
+
+.unit-count-label {
+  fill: #152127;
+  font-size: 9px;
+  font-weight: 700;
   text-anchor: middle;
+  dominant-baseline: middle;
   user-select: none;
   pointer-events: none;
 }
