@@ -23,10 +23,18 @@ Code and assets are considered **Good** when they are:
 **Learning:** Rule references must be 2-3 parts (e.g., `25.2` or `25.2.2`), not 4+ parts — group sub-rules under parent.
 
 ## First Steps
-TBD
+- Review the active plan in `docs/plans/` relevant to the task.
+- Confirm no changes are made under `docs/refs/` unless explicitly authorized.
+- Prefer small, patch-style edits and keep behavior aligned to conformance fixtures.
 
 ## Verify Changes
-TBD
+- Run the full local gate before completion:
+  - `npm run test:local:gate`
+- If a task is map/board focused, also run:
+  - `npm run test:e2e:board:contract`
+  - `npm run test:e2e:board:visual`
+- Only when intentionally changing board visuals, refresh baseline with:
+  - `npm run test:e2e:board:visual:update`
 
 ## Key Resources
 - **docs/plans/** - Working plans
