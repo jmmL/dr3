@@ -1,0 +1,120 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "7_sequence_of_play",
+  "tests": [
+    {
+      "id": "7.1.1_turn_order_random",
+      "rule_ref": "7.1.1",
+      "description": "Turn order is randomly determined",
+      "input": {
+        "phase": "turn_order"
+      },
+      "expected": {
+        "order_determination": "random"
+      }
+    },
+    {
+      "id": "7.1.2_turn_order_procedure",
+      "rule_ref": "7.1.2",
+      "description": "Turn order uses randomizer chits drawn from a cup",
+      "input": {
+        "phase": "turn_order",
+        "players": 4
+      },
+      "expected": {
+        "randomizer_chits_drawn": 4,
+        "chits_revealed_simultaneously": true,
+        "chits_returned_after_turn": true
+      }
+    },
+    {
+      "id": "7.2.1_player_turns_in_order",
+      "rule_ref": "7.2.1",
+      "description": "Players take turns in the determined order",
+      "input": {
+        "turn_order": [1, 2, 3]
+      },
+      "expected": {
+        "turn_sequence": [1, 2, 3]
+      }
+    },
+    {
+      "id": "7.2.2_step_a_random_events",
+      "rule_ref": "7.2.2",
+      "description": "Step A is rolling for random events",
+      "input": {
+        "step": "A"
+      },
+      "expected": {
+        "action": "roll_random_events"
+      }
+    },
+    {
+      "id": "7.2.3_step_b_draw_diplomacy_card",
+      "rule_ref": "7.2.3",
+      "description": "Step B is drawing a diplomacy card",
+      "input": {
+        "step": "B"
+      },
+      "expected": {
+        "action": "draw_diplomacy_card"
+      }
+    },
+    {
+      "id": "7.2.4_step_c_conduct_diplomacy",
+      "rule_ref": "7.2.4",
+      "description": "Step C is conducting diplomacy",
+      "input": {
+        "step": "C"
+      },
+      "expected": {
+        "action": "conduct_diplomacy"
+      }
+    },
+    {
+      "id": "7.2.5_step_d_resolve_sieges",
+      "rule_ref": "7.2.5",
+      "description": "Step D is resolving sieges",
+      "input": {
+        "step": "D"
+      },
+      "expected": {
+        "action": "resolve_sieges"
+      }
+    },
+    {
+      "id": "7.2.6_step_e_movement",
+      "rule_ref": "7.2.6",
+      "description": "Step E is movement",
+      "input": {
+        "step": "E"
+      },
+      "expected": {
+        "action": "movement"
+      }
+    },
+    {
+      "id": "7.2.7_step_f_resolve_combat",
+      "rule_ref": "7.2.7",
+      "description": "Step F is resolving combat",
+      "input": {
+        "step": "F"
+      },
+      "expected": {
+        "action": "resolve_combat"
+      }
+    },
+    {
+      "id": "7.3.1_end_of_turn_advance",
+      "rule_ref": "7.3.1",
+      "description": "End of turn advances the turn record indicator",
+      "input": {
+        "phase": "end_of_turn",
+        "current_turn": 5
+      },
+      "expected": {
+        "next_turn": 6
+      }
+    }
+  ]
+}

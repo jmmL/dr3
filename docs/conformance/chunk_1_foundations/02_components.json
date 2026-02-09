@@ -1,0 +1,149 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "2_components",
+  "tests": [
+    {
+      "id": "2.1_rulebook_count",
+      "rule_ref": "2.1",
+      "description": "Game includes one rulebook",
+      "input": {
+        "component": "rulebook"
+      },
+      "expected": {
+        "count": 1
+      }
+    },
+    {
+      "id": "2.2_counter_sheets_count",
+      "rule_ref": "2.2",
+      "description": "Game includes two counter sheets",
+      "input": {
+        "component": "counter_sheets"
+      },
+      "expected": {
+        "count": 2
+      }
+    },
+    {
+      "id": "2.3_gameboard_count",
+      "rule_ref": "2.3",
+      "description": "Game includes one gameboard",
+      "input": {
+        "component": "gameboard"
+      },
+      "expected": {
+        "count": 1
+      }
+    },
+    {
+      "id": "2.4_identity_cards_count",
+      "rule_ref": "2.4",
+      "description": "Game includes 14 identity cards",
+      "input": {
+        "component": "identity_cards"
+      },
+      "expected": {
+        "count": 14
+      }
+    },
+    {
+      "id": "2.5_personality_cards_count",
+      "rule_ref": "2.5",
+      "description": "Game includes 20 personality cards",
+      "input": {
+        "component": "personality_cards"
+      },
+      "expected": {
+        "count": 20
+      }
+    },
+    {
+      "id": "2.6_diplomacy_cards_count",
+      "rule_ref": "2.6",
+      "description": "Game includes 45 diplomacy cards",
+      "input": {
+        "component": "diplomacy_cards"
+      },
+      "expected": {
+        "count": 45
+      }
+    },
+    {
+      "id": "2.7_dice_count",
+      "rule_ref": "2.7",
+      "description": "Game includes two dice",
+      "input": {
+        "component": "dice"
+      },
+      "expected": {
+        "count": 2
+      }
+    },
+    {
+      "id": "2.8_player_aids_count",
+      "rule_ref": "2.8",
+      "description": "Game includes six player aids",
+      "input": {
+        "component": "player_aids"
+      },
+      "expected": {
+        "count": 6
+      }
+    },
+    {
+      "id": "2.9_counter_tray_count",
+      "rule_ref": "2.9",
+      "description": "Game includes one counter tray",
+      "input": {
+        "component": "counter_tray"
+      },
+      "expected": {
+        "count": 1
+      }
+    },
+    {
+      "id": "2.10_mercenary_armies_count",
+      "rule_ref": "2.10",
+      "description": "Game includes 14 mercenary armies",
+      "input": {
+        "component": "mercenary_armies"
+      },
+      "expected": {
+        "count": 14
+      }
+    },
+    {
+      "id": "2.11_mercenary_fleets_count",
+      "rule_ref": "2.11",
+      "description": "Game includes 6 mercenary fleets",
+      "input": {
+        "component": "mercenary_fleets"
+      },
+      "expected": {
+        "count": 6
+      }
+    },
+    {
+      "id": "2.12_mercenary_army_symbol",
+      "rule_ref": "2.12",
+      "description": "Mercenary armies use swords & moneybags symbol",
+      "input": {
+        "component": "mercenary_armies"
+      },
+      "expected": {
+        "symbol": "swords & moneybags"
+      }
+    },
+    {
+      "id": "2.13_mercenary_fleet_symbol",
+      "rule_ref": "2.13",
+      "description": "Mercenary fleets use fleets & moneybags symbol",
+      "input": {
+        "component": "mercenary_fleets"
+      },
+      "expected": {
+        "symbol": "fleets & moneybags"
+      }
+    }
+  ]
+}

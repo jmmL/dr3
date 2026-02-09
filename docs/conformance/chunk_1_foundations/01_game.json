@@ -1,0 +1,97 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "1_game",
+  "tests": [
+    {
+      "id": "1.1_game_name",
+      "rule_ref": "1.1",
+      "description": "Game name is Divine Right",
+      "input": {
+        "field": "name"
+      },
+      "expected": {
+        "value": "Divine Right"
+      }
+    },
+    {
+      "id": "1.2_game_version",
+      "rule_ref": "1.2",
+      "description": "Ruleset version is Basic Game",
+      "input": {
+        "field": "version"
+      },
+      "expected": {
+        "value": "Basic Game"
+      }
+    },
+    {
+      "id": "1.3_game_publisher",
+      "rule_ref": "1.3",
+      "description": "Publisher is Pungo Games",
+      "input": {
+        "field": "publisher"
+      },
+      "expected": {
+        "value": "Pungo Games"
+      }
+    },
+    {
+      "id": "1.4_game_year",
+      "rule_ref": "1.4",
+      "description": "Release year is 2024",
+      "input": {
+        "field": "year"
+      },
+      "expected": {
+        "value": 2024
+      }
+    },
+    {
+      "id": "1.5_game_designer",
+      "rule_ref": "1.5",
+      "description": "Designer is Glenn Rahman",
+      "input": {
+        "field": "designer"
+      },
+      "expected": {
+        "value": "Glenn Rahman"
+      }
+    },
+    {
+      "id": "1.6_player_count_range",
+      "rule_ref": "1.6",
+      "description": "Player count ranges from 2 to 6",
+      "input": {
+        "field": "players"
+      },
+      "expected": {
+        "min": 2,
+        "max": 6
+      }
+    },
+    {
+      "id": "1.7_game_length_turns",
+      "rule_ref": "1.7",
+      "description": "Game length is 20 turns",
+      "input": {
+        "field": "turns"
+      },
+      "expected": {
+        "turns": 20
+      }
+    },
+    {
+      "id": "1.8_game_length_fixed",
+      "rule_ref": "1.8",
+      "description": "Game length is fixed at 20 turns",
+      "input": {
+        "turns": 20,
+        "attempted_extension": true
+      },
+      "expected": {
+        "extension_allowed": false
+      },
+      "tags": ["negative"]
+    }
+  ]
+}

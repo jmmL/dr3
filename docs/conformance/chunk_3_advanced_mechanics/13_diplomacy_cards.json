@@ -132,6 +132,18 @@
       }
     },
     {
+      "id": "13.3.2_special_mercenary_cards",
+      "rule_ref": "13.3.2",
+      "description": "Special Mercenary cards bring special mercenary units into service in advanced game",
+      "input": {
+        "game_type": "advanced",
+        "card_type": "special_mercenary"
+      },
+      "expected": {
+        "special_mercenary_units_deployable": true
+      }
+    },
+    {
       "id": "13.4_cards_may_accumulate",
       "rule_ref": "13.4",
       "description": "Diplomacy cards may be accumulated in hand",
