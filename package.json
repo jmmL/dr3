@@ -18,7 +18,7 @@
     "test:e2e:board:visual": "playwright test src/test/e2e/board.visual.spec.ts --project=chromium --project=ios-safari",
     "test:e2e:board:visual:update": "playwright test src/test/e2e/board.visual.spec.ts --project=chromium --project=ios-safari --update-snapshots",
     "test:e2e:board:loop": "playwright test src/test/e2e/board.contract.spec.ts --project=chromium --repeat-each=5",
-    "test:local:gate": "npm run lint && npm test && npm run test:e2e:board:contract && npm run test:e2e:board:visual",
+    "test:local:gate": "npm run lint && npm test && npm run build && npm run test:e2e:board:contract && npm run test:e2e:board:visual",
     "mcp:playwright": "npx -y @playwright/mcp@latest"
   },
   "dependencies": {

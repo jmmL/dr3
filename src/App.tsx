@@ -111,6 +111,12 @@ export default function App() {
 
   useEffect(() => {
     const automationWindow = window as AutomationWindow;
+    if (!runtimeState || !clientState) {
+      delete automationWindow.render_game_to_text;
+      delete automationWindow.advanceTime;
+      return;
+    }
+
     const renderGameToText = (): string => {
       const aliveUnits = Object.values(runtimeState.units)
         .filter((unit) => unit.isAlive)
@@ -159,8 +165,8 @@ export default function App() {
   }, [
     runtimeState,
     stage,
-    clientState.ctx.phase,
-    clientState.ctx.turn,
+    clientState?.ctx.phase,
+    clientState?.ctx.turn,
     currentPlayerId,
     selectedUnitId,
     legalDestinationKeys,

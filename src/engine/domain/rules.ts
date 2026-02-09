@@ -255,10 +255,11 @@ export function moveUnitForPlayer(
 
   const unit = G.units[unitId];
   if (!unit || !unit.isAlive) return fail('unknown_or_dead_unit');
+  const terrainCost = legalMove.terrainCost ?? 0;
   unit.position = destination;
   unit.movementRemaining = legalMove.minimumMovementApplies
     ? 0
-    : Math.max(0, unit.movementRemaining - legalMove.terrainCost);
+    : Math.max(0, unit.movementRemaining - terrainCost);
   G.log.push(`P${playerID} moved ${unitId} to ${destination.col},${destination.row}.`);
 
   return { ok: true };

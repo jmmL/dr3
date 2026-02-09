@@ -48,17 +48,19 @@ describe('cpu-bot', () => {
         if (G.pendingCombats.length > 0) return [{ move: 'resolveCombat' }];
         return [{ move: 'declareCombat' }, { move: 'endTurn' }];
       });
-    const scriptedBot: cpuBot.CpuBotLike = {
-      play: vi.fn(async () => ({
+    const scriptedPlay = vi.fn(async () => ({
         action: {
-          type: 'MAKE_MOVE',
+          type: 'MAKE_MOVE' as const,
           payload: {
             type: 'declareCombat',
             args: [1, 1, 1, 2],
             playerID: '0',
           },
         },
-      })),
+        metadata: {} as never,
+      })) as unknown as cpuBot.CpuBotLike['play'];
+    const scriptedBot: cpuBot.CpuBotLike = {
+      play: scriptedPlay,
     };
 
     try {
@@ -102,7 +104,7 @@ describe('cpu-bot', () => {
       await cpuBot.runCpuTurn(client, '0', 1, scriptedBot);
       expect(counters.declared).toBe(1);
       expect(counters.resolved).toBe(1);
-      expect(scriptedBot.play).toHaveBeenCalledTimes(1);
+      expect(scriptedPlay).toHaveBeenCalledTimes(1);
     } finally {
       enumerateSpy.mockRestore();
     }

@@ -32,6 +32,7 @@ Code and assets are considered **Good** when they are:
 ## Verify Changes
 - Run the full local gate before completion:
   - `npm run test:local:gate`
+  - This gate must include lint, unit tests, TypeScript+Vite build, and board E2E checks.
 - If a task is map/board focused, also run:
   - `npm run test:e2e:board:contract`
   - `npm run test:e2e:board:visual`
@@ -40,8 +41,10 @@ Code and assets are considered **Good** when they are:
 
 ## Workflow Reminder
 - At the end of each completed task, always:
-  1. Commit the changes.
-  2. Open a PR with those committed changes.
+  1. Run `npm run test:local:gate` before committing.
+  2. Confirm the gate passed without skips.
+  3. Commit the changes.
+  4. Open a PR with those committed changes.
 - For each new feature or significant work package:
   1. Create a new branch before making changes.
   2. Push that branch to `origin`.

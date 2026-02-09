@@ -41,7 +41,9 @@ function restoreSnapshotMove(
 ) {
   if (!snapshot || typeof snapshot !== 'object') return INVALID_MOVE;
   Object.assign(G, structuredClone(snapshot));
-  events.setPhase?.(snapshot.stage);
+  if (snapshot.stage) {
+    events.setPhase?.(snapshot.stage);
+  }
 }
 
 export const DR3Game: Game<RuntimeGameState, Record<string, unknown>, DR3SetupData> = {
