@@ -28,6 +28,11 @@ TBD
 ## Verify Changes
 TBD
 
+## Workflow Reminder
+- At the end of each completed task, always:
+  1. Commit the changes.
+  2. Open a PR with those committed changes.
+
 ## Key Resources
 - **docs/plans/** - Working plans
 - **docs/refs/** - Reference data stored in minified format for LLM use:
