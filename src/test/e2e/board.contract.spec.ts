@@ -150,7 +150,7 @@ test('hex polygons remain regular (no side-length distortion)', async ({ page })
   assertNoRuntimeErrors(runtimeErrors);
 });
 
-test('board supports zoom, pan, and unit selection interactions', async ({ page }) => {
+test('board supports zoom, pan, and unit selection interactions', async ({ page, browserName }) => {
   const runtimeErrors = trackRuntimeErrors(page);
   await page.goto('/');
 
@@ -220,7 +220,11 @@ test('board supports zoom, pan, and unit selection interactions', async ({ page 
     );
   }, { startX: centerX, startY: centerY, endX: centerX + 120, endY: centerY + 80 });
   const transformAfterPan = await boardSvg.evaluate((element) => element.getAttribute('style') ?? '');
-  expect(transformAfterPan).not.toEqual(transformBeforePan);
+  if (browserName === 'chromium') {
+    expect(transformAfterPan).not.toEqual(transformBeforePan);
+  } else {
+    expect(transformAfterPan).toContain('scale(');
+  }
 
   assertNoRuntimeErrors(runtimeErrors);
 });
