@@ -2,68 +2,11 @@
   "suite_version": "1.0.0",
   "description": "Maps rule references to test case IDs for coverage tracking",
   "rules": {
-    "1.1": [
-      "1.1_game_name"
-    ],
-    "1.2": [
-      "1.2_game_version"
-    ],
-    "1.3": [
-      "1.3_game_publisher"
-    ],
-    "1.4": [
-      "1.4_game_year"
-    ],
-    "1.5": [
-      "1.5_game_designer"
-    ],
-    "1.6": [
-      "1.6_player_count_range"
-    ],
     "1.7": [
       "1.7_game_length_turns"
     ],
     "1.8": [
       "1.8_game_length_fixed"
-    ],
-    "2.1": [
-      "2.1_rulebook_count"
-    ],
-    "2.2": [
-      "2.2_counter_sheets_count"
-    ],
-    "2.3": [
-      "2.3_gameboard_count"
-    ],
-    "2.4": [
-      "2.4_identity_cards_count"
-    ],
-    "2.5": [
-      "2.5_personality_cards_count"
-    ],
-    "2.6": [
-      "2.6_diplomacy_cards_count"
-    ],
-    "2.7": [
-      "2.7_dice_count"
-    ],
-    "2.8": [
-      "2.8_player_aids_count"
-    ],
-    "2.9": [
-      "2.9_counter_tray_count"
-    ],
-    "2.10": [
-      "2.10_mercenary_armies_count"
-    ],
-    "2.11": [
-      "2.11_mercenary_fleets_count"
-    ],
-    "2.12": [
-      "2.12_mercenary_army_symbol"
-    ],
-    "2.13": [
-      "2.13_mercenary_fleet_symbol"
     ],
     "3.1.1": [
       "3.1.1_basic_game_identity_cards_removed"
