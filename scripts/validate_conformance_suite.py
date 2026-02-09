@@ -11,6 +11,7 @@ from pathlib import Path
 CONFORMANCE_DIR = Path("docs/conformance")
 CHUNK_GLOB = "chunk_*/*.json"
 COVERAGE_MATRIX = CONFORMANCE_DIR / "coverage_matrix.json"
+RULES_REF = Path("docs/refs/dr3_rules.min.json")
 
 ID_PATTERN = re.compile(r"^[0-9]+\.[0-9]+(\.[0-9]+)?_[a-z_]+$")
 RULE_PATTERN = re.compile(r"^[0-9]+\.[0-9]+(\.[0-9]+)?$")
@@ -25,6 +26,40 @@ def load_json(path: Path):
         return json.load(handle)
 
 
+def extract_rule_refs(value):
+    refs = set()
+    pattern = re.compile(r"[0-9]+\.[0-9]+(\.[0-9]+)?")
+
+    def add_ref(token: str):
+        parts = token.split(".")
+        if len(parts) == 2:
+            refs.add(token)
+        elif len(parts) >= 3:
+            refs.add(".".join(parts[:3]))
+
+    def walk(node):
+        if isinstance(node, dict):
+            for key, child in node.items():
+                for match in pattern.finditer(key):
+                    add_ref(match.group(0))
+                walk(child)
+        elif isinstance(node, list):
+            for item in node:
+                walk(item)
+
+    walk(value)
+    return refs
+
+
+def load_rule_refs():
+    if not RULES_REF.exists():
+        raise ValidationError("docs/refs/dr3_rules.min.json does not exist")
+    data = load_json(RULES_REF)
+    if not isinstance(data, dict):
+        raise ValidationError("dr3_rules.min.json must be an object")
+    return extract_rule_refs(data)
+
+
 def iter_test_cases(data, path: Path):
     if isinstance(data, list):
         return data
@@ -35,7 +70,7 @@ def iter_test_cases(data, path: Path):
     )
 
 
-def validate_test_case(test_case, path: Path, index: int):
+def validate_test_case(test_case, path: Path, index: int, rule_refs_set):
     if not isinstance(test_case, dict):
         raise ValidationError(f"{path} test[{index}] must be an object")
 
@@ -58,6 +93,10 @@ def validate_test_case(test_case, path: Path, index: int):
     if rule_ref is not None:
         if not isinstance(rule_ref, str) or not RULE_PATTERN.match(rule_ref):
             raise ValidationError(f"{path} test[{index}] invalid rule_ref")
+        if rule_ref not in rule_refs_set:
+            raise ValidationError(
+                f"{path} test[{index}] rule_ref '{rule_ref}' not found in refs"
+            )
 
     if rule_refs is not None:
         if not isinstance(rule_refs, list) or len(rule_refs) < 2:
@@ -68,6 +107,10 @@ def validate_test_case(test_case, path: Path, index: int):
             if not isinstance(ref, str) or not RULE_PATTERN.match(ref):
                 raise ValidationError(
                     f"{path} test[{index}] invalid rule_refs entry '{ref}'"
+                )
+            if ref not in rule_refs_set:
+                raise ValidationError(
+                    f"{path} test[{index}] rule_refs entry '{ref}' not found in refs"
                 )
 
     test_id = test_case["id"]
@@ -82,7 +125,7 @@ def validate_test_case(test_case, path: Path, index: int):
         raise ValidationError(f"{path} test[{index}] expected must be object")
 
 
-def collect_tests():
+def collect_tests(rule_refs):
     if not CONFORMANCE_DIR.exists():
         raise ValidationError("docs/conformance does not exist")
 
@@ -94,12 +137,12 @@ def collect_tests():
     for path in paths:
         data = load_json(path)
         for index, test_case in enumerate(iter_test_cases(data, path)):
-            validate_test_case(test_case, path, index)
+            validate_test_case(test_case, path, index, rule_refs)
             tests.append(test_case)
     return tests
 
 
-def validate_coverage_matrix(test_ids):
+def validate_coverage_matrix(test_ids, rule_refs):
     if not COVERAGE_MATRIX.exists():
         return
 
@@ -117,6 +160,10 @@ def validate_coverage_matrix(test_ids):
     for rule_ref, ids in rules.items():
         if not RULE_PATTERN.match(rule_ref):
             raise ValidationError(f"Invalid rule key in coverage matrix: {rule_ref}")
+        if rule_ref not in rule_refs:
+            raise ValidationError(
+                f"Coverage matrix rule_ref '{rule_ref}' not found in refs"
+            )
         if not isinstance(ids, list):
             raise ValidationError(f"Coverage entry for {rule_ref} must be a list")
         for test_id in ids:
@@ -135,9 +182,10 @@ def validate_coverage_matrix(test_ids):
 
 def main():
     try:
-        tests = collect_tests()
+        rule_refs = load_rule_refs()
+        tests = collect_tests(rule_refs)
         test_ids = {test_case["id"] for test_case in tests}
-        validate_coverage_matrix(test_ids)
+        validate_coverage_matrix(test_ids, rule_refs)
     except ValidationError as exc:
         print(f"Validation error: {exc}")
         return 1
