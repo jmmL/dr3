@@ -5,7 +5,7 @@
 **Scope:**
 - `docs/architecture/app-architecture.md`
 - `docs/prd/divine-right-prd.md`
-- `docs/plans/2026-01-25-conformance-suite.md`
+- `docs/plans/archive/2026-01-25-conformance-suite.md`
 
 ---
 
@@ -28,7 +28,7 @@ The proposed plan for the Divine Right 3 (DR3) web application is robust, modern
 - **Phased Delivery:** The "Core -> Expanded -> Polish" roadmap is realistic and allows for shipping a playable MVP sooner.
 - **Measurable Success:** Defining "100% conformance pass rate" gives the engineering team a binary, objective target for "Done."
 
-### Conformance Suite Plan (`2026-01-25-conformance-suite.md`)
+### Conformance Suite Plan (`docs/plans/archive/2026-01-25-conformance-suite.md`)
 - **Implementation Agnosticism:** Designing the suite as pure JSON allows it to outlive the specific game engine. If the UI moves from React to Unity in 5 years, the logic tests remain valid.
 - **Granularity:** Mapping tests to specific Rule IDs (`17.9.4`) ensures no rule is left behind and provides instant traceability for bugs.
 - **Chunking:** Breaking the massive rulebook into 7 delivery chunks makes the project psychologically and managerially approachable.
