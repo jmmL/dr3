@@ -1,134 +1,114 @@
-# DR3 Web App Architecture (Single-Player on GitHub Pages)
+# DR3 Web App Architecture (As Built)
 
-## Goals
-- Ship a single-player, browser-based experience hosted on GitHub Pages.
-- Reuse mature frameworks and avoid NIH: rely on proven game engines and UI tooling.
-- Keep a clear path to future multiplayer server migration without re-architecting core logic.
-- Treat the conformance suite as the source of truth for game logic correctness.
-- Mobile browser-first delivery (especially iOS Safari).
+## Scope
 
-## Architecture Options (Reuse-First)
-### Option A: boardgame.io (Recommended)
-- **boardgame.io** as the rules engine and state container.
-  - Client-only mode for GitHub Pages hosting (no server required).
-  - Natural migration path to a boardgame.io server for future multiplayer.
-- **TypeScript** for strict typing and consistency with the JSON conformance suite.
+Single-player DR3 implementation running as a static web app with deterministic rules and CI-gated conformance fixtures. The PRD in `docs/prd/divine-right-prd.md` remains the intent document; this file describes the current implementation.
 
-### Option B: Phaser 3 + Custom Rules Core
-- **Phaser 3** for rendering + input, especially if you need a game-loop mindset.
-- Requires a bespoke rules engine layer and serialization of state for tests.
-- Pros: high-performance canvas rendering; Cons: more custom work to align with conformance suite.
+## Technology Stack
 
-### Option C: PixiJS + XState (Statecharts)
-- **PixiJS** for rendering, **XState** for turn/phase logic.
-- Pros: explicit state machine for phases; Cons: higher integration overhead, more custom harness work.
+- Runtime framework: `boardgame.io` (`src/game/dr3-game.ts`)
+- UI framework: React + Vite (`src/App.tsx`, `src/ui/HexBoard.tsx`)
+- Language: TypeScript
+- Unit/integration/conformance tests: Vitest
+- End-to-end tests: Playwright
+- Hosting/deploy target: GitHub Pages (`.github/workflows/deploy-pages.yml`)
 
-### Option D: React + Zustand/Redux + Pure Rules
-- Use a state store and implement rules as pure functions invoked by UI.
-- Pros: minimal dependencies; Cons: more NIH risk and less built-in multiplayer migration.
+## System Overview
 
-### UI + Rendering
-- **React** for UI and board rendering.
-- **react-hexgrid** (SVG) for hex map rendering.
-  - Prefer SVG for clarity and accessibility; mobile-first layouts are simpler.
-  - Switch to pixi.js if performance becomes a bottleneck (large maps, many units).
-
-### Build + Tooling
-- **Vite** for bundling and fast local iteration.
-- **Vitest** for unit/integration testing (fast, Vite-native).
-- **Playwright** for E2E UI testing (GitHub Actions friendly).
-- **eslint + prettier** for linting and formatting.
-
-## Architecture Overview (Option A)
-```
-UI (React) ───────────────┐
-                          │
-Game Client (boardgame.io)│
-                          │
-Rules + Moves (TypeScript)│
-                          │
-Conformance Harness ──────┘
+```text
+React UI (App + HexBoard)
+        |
+boardgame.io client + DR3Game wrapper
+        |
+Domain services (rules/setup/rng + engine helpers)
+        |
+Reference datasets (docs/refs/*.json)
 ```
 
-### Modules
-1. **Game Logic (Rules Layer)**
-   - Implemented as boardgame.io `moves`, `events`, and `phases`.
-   - Sole source of truth for game state transitions.
-   - Must pass the JSON conformance suite as a hard gate.
+## Module Boundaries
 
-2. **State Models (Shared Types)**
-   - Shared TypeScript types used by logic, UI, and tests.
-   - Keep aligned with the canonical game-state shape in the conformance plan.
+### Game Wrapper
 
-3. **UI Layer**
-   - Responsible for rendering board state and interactions.
-   - No game rules or validation in UI; all rules enforced in the engine.
+- `src/game/dr3-game.ts` owns turn stages, move wiring, and translation between runtime state and domain state.
+- Runtime state type omits static map payload from `G` for efficiency and reconstructs domain state as needed.
 
-4. **CPU Opponent Layer**
-   - Start with a simple policy-based bot using boardgame.io bot hooks.
-   - Upgrade to MCTS or heuristic search without touching UI.
+### Domain And Rules
 
-5. **Persistence Layer**
-   - Use `localStorage` for save/load in single-player.
-   - Abstract behind a small interface to allow server-backed persistence later.
+- `src/engine/domain/setup.ts` builds deterministic initial state.
+- `src/engine/domain/rng.ts` provides seeded randomness helpers.
+- `src/engine/domain/rules.ts` handles stage progression and core actions:
+  - random events
+  - diplomacy
+  - siege resolution
+  - movement
+  - combat declaration and resolution
+  - score helpers
 
-## GitHub Pages Hosting
-- Use a static build with client-only boardgame.io transport.
-- Save game state to `localStorage` keyed by game version and scenario.
-- Optional: support exporting/importing JSON saves.
+### Engine Helpers
 
-## Future Migration Path (Multiplayer)
-- Swap the boardgame.io client to server transport.
-- Add a boardgame.io server (Node) with persistence (Postgres + Redis).
-- UI and rules remain unchanged; only transport and auth layers are added.
+- `src/engine/combat/`, `src/engine/movement/`, `src/engine/siege/`, `src/engine/map/`, `src/engine/units/`, `src/engine/leaders/` provide rule-focused pure helpers used by domain services and conformance adapters.
 
-## Conformance Suite Integration
-### Test Strategy
-- **Conformance Suite** is mandatory and runs in CI for any rule changes.
-- Build a test runner that loads JSON fixtures and executes rule logic directly.
-- Map suite test cases to boardgame.io move invocations and assertions.
+### Data Loading
 
-### Validation Layers
-1. **Schema Validation**
-   - Validate conformance JSON against the schema in `docs/conformance/schema/`.
-2. **Engine Conformance Tests**
-   - Execute each fixture against the rules engine.
-3. **Regression Tests**
-   - For any bugfix, add a regression test fixture before code changes.
+- `src/data/load-refs.ts` loads canonical reference JSON from `docs/refs/*.json` and maps compact keys to typed runtime structures.
 
-## Testing Matrix (Recommended)
-| Layer | Tooling | Purpose |
-|-------|---------|---------|
-| Schema Validation | JSON Schema + custom harness | Ensure suite data integrity |
-| Unit | Vitest | Pure logic helpers and calculations |
-| Conformance | Vitest + fixture runner | Rules compliance |
-| Integration | Vitest | Multi-rule interactions |
-| E2E | Playwright | UI flows, save/load, CPU turns |
-| Lint/Format | eslint/prettier | Quality and consistency |
+### UI Layer
 
-## Best-Practice Patterns
-- Treat JSON conformance suite as the spec, not an afterthought.
-- Keep UI passive: all legality checks must happen in the rules engine.
-- Use deterministic randomness by injecting RNG sequences in tests.
-- Build a minimal `GameState` shape shared between suite, engine, and UI.
+- `src/App.tsx` is the shell for stage actions, status text, save/load/import/export controls, and CPU trigger.
+- `src/ui/HexBoard.tsx` renders the board as custom SVG polygons and unit stacks.
+- UI does not enforce game legality; it dispatches actions and renders engine state.
 
-## Agentic Development (Web Sandbox Harness, Jan 2026)
-- Apply good practice for **leading models** in a web sandbox:
-  - Keep tasks small and verifiable (conformance suite first, UI second).
-  - Prefer deterministic tests over manual steps.
-  - Use explicit data fixtures and avoid hidden state.
-- Be mindful of sandbox limitations (January 2026):
-  - Limited long-running servers; use static builds or short-lived dev servers.
-  - File system and network access may be constrained in CI environments.
-  - Browser automation is available but can be flaky for heavy canvas renders.
-  - Avoid sub-agent orchestration within the sandbox.
-- Maintain a lightweight “definition of done” checklist:
-  - Conformance suite updated.
-  - Unit tests updated.
-  - E2E coverage added (if UI flow changed).
-  - Documentation updated for architecture/PRD changes.
+### Persistence
 
-## Open Questions
-- Confirm SVG hex rendering requirements for iOS Safari performance.
-- Decide CPU difficulty levels and acceptable response time per turn.
-- Determine minimum viable UX for rule explanations and tooltips.
+- `src/persistence/save-load.ts` provides local storage slot save/load, import/export payload validation, and metadata listing.
+
+### CPU
+
+- `src/ai/cpu-bot.ts` integrates boardgame.io bot APIs for baseline CPU turns.
+
+## Turn Flow (Current)
+
+Current stage sequence is reflected in both code and e2e tests:
+
+1. `rollEvents`
+2. `drawCard`
+3. `diplomacy`
+4. `siegeResolution`
+5. `movement`
+6. `combat`
+
+Reference test: `src/test/e2e/app.spec.ts`.
+
+## Testing And Quality Gates
+
+### Local Validation Commands
+
+1. `npm run lint`
+2. `npm test`
+3. `python3 scripts/validate_conformance_suite.py`
+4. `npm run test:e2e:chromium`
+5. `npm run test:e2e:ios`
+6. `npm run build`
+
+### CI Enforcement
+
+`/.github/workflows/ci.yml` runs:
+
+- lint
+- unit + conformance adapter tests
+- conformance fixture validation
+- Playwright e2e
+- production build
+
+## Deployment
+
+- Static bundle is built with Vite and deployed via GitHub Pages workflow in `.github/workflows/deploy-pages.yml`.
+- Deployment path uses `dist/` artifact upload.
+
+## Known Gaps (Execution Backlog)
+
+- Expand move legality and phase behavior toward full PRD coverage.
+- Increase runtime move-level assertions against more conformance chunks.
+- Improve map interaction depth (zoom/pan/filter/accessibility enhancements).
+- Improve CPU quality and bounded response times.
+- Add explicit coverage thresholds for critical rule modules.

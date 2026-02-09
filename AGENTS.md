@@ -36,6 +36,15 @@ Code and assets are considered **Good** when they are:
 - Only when intentionally changing board visuals, refresh baseline with:
   - `npm run test:e2e:board:visual:update`
 
+## Workflow Reminder
+- At the end of each completed task, always:
+  1. Commit the changes.
+  2. Open a PR with those committed changes.
+- For each new feature or significant work package:
+  1. Create a new branch before making changes.
+  2. Push that branch to `origin`.
+  3. Open a PR from that branch.
+
 ## Key Resources
 - **docs/plans/** - Working plans
 - **docs/refs/** - Reference data stored in minified format for LLM use:
