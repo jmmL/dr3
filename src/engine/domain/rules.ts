@@ -1,5 +1,6 @@
 import { calculateCombatModifier, resolveCombat } from '@/engine/combat/combat-resolution';
 import { getNeighborCoords } from '@/engine/map/hex-grid';
+import { findReachableHexes } from '@/engine/map/pathfinding';
 import { calculateCumulativeTerrainCost } from '@/engine/map/terrain';
 import { canEnterHexByMp } from '@/engine/movement/movement';
 import { getCombatStrength, isCombatUnit } from '@/engine/units/unit-helpers';
@@ -317,12 +318,27 @@ export function findFirstLegalMovement(
   );
 
   for (const unit of units) {
-    const neighbors = getNeighborCoords(G.hexMap, unit.position.col, unit.position.row);
-    for (const neighbor of neighbors) {
-      const check = getLegalMovementCost(G, playerID, unit, neighbor);
-      if (check.ok) {
-        return { unitId: unit.id, destination: neighbor };
-      }
+    const reachable = findReachableHexes({
+      map: G.hexMap,
+      start: unit.position,
+      maxCost: unit.movementRemaining,
+      allowFirstStepOverMaxCost: unit.movementRemaining === unit.movementPoints,
+      policy: {
+        getNeighbors: (coord) => getNeighborCoords(G.hexMap, coord.col, coord.row),
+        getStepCost: ({ to }) => {
+          const destinationHex = G.hexMap.hexes.get(hexKeyFromCoord(to));
+          if (!destinationHex) return Infinity;
+          return calculateCumulativeTerrainCost(
+            destinationHex.terrain,
+            getTerrainAbilityFlags(unit),
+          );
+        },
+        canTraverse: ({ to }) => !hasEnemyCombatUnitAtHex(G, to, unit.factionId),
+      },
+    });
+    const destination = reachable.reachable.find((entry) => entry.steps === 1)?.coord;
+    if (destination) {
+      return { unitId: unit.id, destination };
     }
   }
 

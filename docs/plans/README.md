@@ -8,6 +8,7 @@
 ## Active
 
 - `docs/plans/2026-02-09-prd-execution-plan.md` - current milestone tracker aligned with the PRD.
+- `docs/plans/2026-02-09-hex-pathfinding-plan.md` - standalone scoped plan for in-house pathfinding utilities and movement traversal integration.
 
 ## Archived
 
