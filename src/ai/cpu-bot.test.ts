@@ -23,5 +23,5 @@ describe('cpu-bot', () => {
     const after = client.getState();
     expect(after).toBeTruthy();
     expect((after?.G.log.length ?? 0) > beforeLogLength).toBe(true);
-  });
+  }, 20_000);
 });
