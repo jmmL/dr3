@@ -22,6 +22,8 @@ Code and assets are considered **Good** when they are:
 
 **Learning:** Rule references must be 2-3 parts (e.g., `25.2` or `25.2.2`), not 4+ parts — group sub-rules under parent.
 
+**Learning:** Mobile-first CI requires local `ios-safari` board contract/visual checks and project-scoped Playwright snapshots.
+
 ## First Steps
 - Review the active plan in `docs/plans/` relevant to the task.
 - Confirm no changes are made under `docs/refs/` unless explicitly authorized.

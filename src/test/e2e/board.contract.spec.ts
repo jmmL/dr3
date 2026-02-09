@@ -96,16 +96,22 @@ test('hex polygons remain regular (no side-length distortion)', async ({ page })
     for (const polygon of polygons) {
       const points = polygon
         .getAttribute('points')
-        ?.trim()
-        .split(/\s+/)
-        .map((pair) => pair.split(',').map(Number))
-        .filter((pair) => pair.length === 2 && Number.isFinite(pair[0]) && Number.isFinite(pair[1]));
-      if (!points || points.length !== 6) continue;
+        ?.trim();
+      const numbers = points?.match(/-?\d*\.?\d+(?:e[+-]?\d+)?/gi)?.map(Number) ?? [];
+      const vertices: Array<[number, number]> = [];
+      for (let index = 0; index + 1 < numbers.length; index += 2) {
+        const x = numbers[index];
+        const y = numbers[index + 1];
+        if (x === undefined || y === undefined) continue;
+        if (!Number.isFinite(x) || !Number.isFinite(y)) continue;
+        vertices.push([x, y]);
+      }
+      if (vertices.length !== 6) continue;
 
       const sideLengths: number[] = [];
-      for (let index = 0; index < points.length; index += 1) {
-        const from = points[index];
-        const to = points[(index + 1) % points.length];
+      for (let index = 0; index < vertices.length; index += 1) {
+        const from = vertices[index];
+        const to = vertices[(index + 1) % vertices.length];
         if (!from || !to) continue;
         const fromX = from[0];
         const fromY = from[1];
@@ -166,17 +172,53 @@ test('board supports zoom, pan, and unit selection interactions', async ({ page 
   const centerX = box.x + box.width / 2;
   const centerY = box.y + box.height / 2;
 
-  await page.mouse.move(centerX, centerY);
-  await page.mouse.wheel(0, -600);
+  await viewport.evaluate((element) => {
+    const rect = element.getBoundingClientRect();
+    element.dispatchEvent(
+      new WheelEvent('wheel', {
+        deltaY: -600,
+        clientX: rect.left + rect.width / 2,
+        clientY: rect.top + rect.height / 2,
+        bubbles: true,
+        cancelable: true,
+      }),
+    );
+  });
   await expect(zoomLabel).not.toHaveText(initialZoomText ?? 'Zoom 100%');
 
   const transformBeforePan = await boardSvg.evaluate(
     (element) => element.getAttribute('style') ?? '',
   );
-  await page.mouse.move(centerX, centerY);
-  await page.mouse.down();
-  await page.mouse.move(centerX + 120, centerY + 80, { steps: 6 });
-  await page.mouse.up();
+  await viewport.evaluate((element, drag) => {
+    const startX = drag.startX;
+    const startY = drag.startY;
+    const endX = drag.endX;
+    const endY = drag.endY;
+    element.dispatchEvent(
+      new MouseEvent('mousedown', {
+        button: 0,
+        clientX: startX,
+        clientY: startY,
+        bubbles: true,
+      }),
+    );
+    element.dispatchEvent(
+      new MouseEvent('mousemove', {
+        buttons: 1,
+        clientX: endX,
+        clientY: endY,
+        bubbles: true,
+      }),
+    );
+    element.dispatchEvent(
+      new MouseEvent('mouseup', {
+        button: 0,
+        clientX: endX,
+        clientY: endY,
+        bubbles: true,
+      }),
+    );
+  }, { startX: centerX, startY: centerY, endX: centerX + 120, endY: centerY + 80 });
   const transformAfterPan = await boardSvg.evaluate((element) => element.getAttribute('style') ?? '');
   expect(transformAfterPan).not.toEqual(transformBeforePan);
 

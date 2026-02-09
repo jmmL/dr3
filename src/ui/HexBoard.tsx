@@ -69,9 +69,6 @@ export default function HexBoard({
   }
 
   function handleWheel(event: WheelEvent<HTMLDivElement>): void {
-    if (event.cancelable) {
-      event.preventDefault();
-    }
     const rect = event.currentTarget.getBoundingClientRect();
     const cursorX = event.clientX - rect.left;
     const cursorY = event.clientY - rect.top;
