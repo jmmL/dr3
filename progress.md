@@ -19,3 +19,4 @@ Original prompt: We're going to massively improve the UI. Use this image as the 
 
 - Fine-tune `MINARIA_MAP_CALIBRATION` constants by visual calibration pass against target landmarks for tighter edge alignment.
 - Add touch pinch-zoom support for mobile beyond drag + wheel baseline.
+- PR opened: `https://github.com/jmmL/dr3/pull/33`.
