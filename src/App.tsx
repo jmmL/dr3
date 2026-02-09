@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState, type ChangeEvent } from 'react';
 import { Client } from 'boardgame.io/client';
 import { loadHexMap } from '@/data/load-refs';
 import { runCpuTurn } from '@/ai/cpu-bot';
-import { DR3Game, toDomainState, type RuntimeGameState } from '@/game/dr3-game';
+import { DR3Game, toDomainState } from '@/game/dr3-game';
 import {
   findAllLegalMovements,
   listLegalDestinationsForUnit,
