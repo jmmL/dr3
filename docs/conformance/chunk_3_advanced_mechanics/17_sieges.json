@@ -682,6 +682,18 @@
       }
     },
     {
+      "id": "17.13.2_forced_peace_roll_timing",
+      "rule_ref": "17.13.2",
+      "description": "Forced peace roll occurs during occupying player's diplomacy phase",
+      "input": {
+        "phase": "diplomacy",
+        "occupying_player": true
+      },
+      "expected": {
+        "forced_peace_roll_allowed": true
+      }
+    },
+    {
       "id": "17.13.3_forced_peace_roll_type",
       "rule_ref": "17.13.3",
       "description": "Forced peace uses special forced peace die roll",
@@ -691,6 +703,18 @@
       "expected": {
         "roll_type": "forced_peace_die_roll",
         "die": "1d6"
+      }
+    },
+    {
+      "id": "17.13.4_forced_peace_allows_other_diplomacy",
+      "rule_ref": "17.13.4",
+      "description": "Forced peace does not block diplomacy elsewhere",
+      "input": {
+        "forced_peace_attempted": true,
+        "other_kingdom_diplomacy": true
+      },
+      "expected": {
+        "other_diplomacy_allowed": true
       }
     },
     {
@@ -733,6 +757,19 @@
       "tags": ["negative"]
     },
     {
+      "id": "17.13.8_forced_peace_alternative_normal_diplomacy",
+      "rule_ref": "17.13.8",
+      "description": "Occupying player may use normal diplomacy instead of forced peace",
+      "input": {
+        "forced_peace_eligible": true,
+        "uses_normal_diplomacy": true
+      },
+      "expected": {
+        "forced_peace_roll_used": false,
+        "normal_diplomacy_allowed": true
+      }
+    },
+    {
       "id": "17.13.9_forced_peace_duration_roll",
       "rule_ref": "17.13.9",
       "description": "Forced peace duration is 1d6 game turns",
@@ -769,6 +806,22 @@
         "diplomatic_penalty_incurred": true,
         "forced_peace_ends": true,
         "kingdom_available_immediately": true
+      }
+    },
+    {
+      "id": "17.13.11_forced_peace_unit_status",
+      "rule_ref": "17.13.11",
+      "description": "Only regulars alive at deactivation set up if reactivated",
+      "input": {
+        "deactivation_units": {
+          "regulars": 3,
+          "mercenaries": 2
+        },
+        "reactivation": true
+      },
+      "expected": {
+        "setup_regulars": 3,
+        "setup_mercenaries": 0
       }
     },
     {

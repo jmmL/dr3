@@ -300,6 +300,18 @@
       }
     },
     {
+      "id": "26.6.4_fate_roll_exception_advance",
+      "rule_ref": "26.6.4",
+      "description": "Advancing into eliminated stack does not add another fate roll",
+      "input": {
+        "fate_roll_already_resolved": true,
+        "advance_into_eliminated_stack": true
+      },
+      "expected": {
+        "additional_roll_required": false
+      }
+    },
+    {
       "id": "26.6.5_any_unit_may_force_fate_roll",
       "rule_ref": "26.6.5",
       "description": "Any non-fleet unit may enter lone leader's hex to force fate roll",

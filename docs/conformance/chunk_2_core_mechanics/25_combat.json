@@ -360,6 +360,18 @@
       }
     },
     {
+      "id": "25.7.1_units_may_attack",
+      "rule_ref": "25.7.1",
+      "description": "Units of active player and eligible reinforcements may attack",
+      "input": {
+        "active_player_units": true,
+        "reinforcements_entered_this_turn": true
+      },
+      "expected": {
+        "attack_allowed": true
+      }
+    },
+    {
       "id": "25.7.2_siege_attackers_cannot_combat",
       "rule_ref": "25.7.2",
       "description": "Units that declared siege attack cannot also make regular attacks",
@@ -489,6 +501,19 @@
         "additional_attack_allowed": false
       },
       "tags": ["negative"]
+    },
+    {
+      "id": "25.10.3_multiple_player_attacks",
+      "rule_ref": "25.10.3",
+      "description": "Same hex may be attacked by different players on their turns",
+      "input": {
+        "defender_hex": [10, 5],
+        "previous_attacker": "player_a",
+        "current_attacker": "player_b"
+      },
+      "expected": {
+        "attack_allowed": true
+      }
     },
     {
       "id": "25.11.1_mountain_defender_bonus",

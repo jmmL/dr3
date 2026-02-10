@@ -1,0 +1,30 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "1_game",
+  "tests": [
+    {
+      "id": "1.7_game_length_turns",
+      "rule_ref": "1.7",
+      "description": "Game length is 20 turns",
+      "input": {
+        "field": "turns"
+      },
+      "expected": {
+        "turns": 20
+      }
+    },
+    {
+      "id": "1.8_game_length_fixed",
+      "rule_ref": "1.8",
+      "description": "Game length is fixed at 20 turns",
+      "input": {
+        "turns": 20,
+        "attempted_extension": true
+      },
+      "expected": {
+        "extension_allowed": false
+      },
+      "tags": ["negative"]
+    }
+  ]
+}

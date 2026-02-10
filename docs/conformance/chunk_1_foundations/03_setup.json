@@ -1,0 +1,280 @@
+{
+  "suite_version": "1.0.0",
+  "rule_section": "3_setup",
+  "tests": [
+    {
+      "id": "3.1.1_basic_game_identity_cards_removed",
+      "rule_ref": "3.1.1",
+      "description": "Basic game removes specific identity cards",
+      "input": {
+        "game_type": "basic"
+      },
+      "expected": {
+        "identity_cards_removed": [
+          "The Eaters of Wisdom",
+          "The Usurper",
+          "The Black Hand"
+        ]
+      }
+    },
+    {
+      "id": "3.1.2_basic_game_diplomacy_cards_removed",
+      "rule_ref": "3.1.2",
+      "description": "Basic game removes special mercenary diplomacy cards",
+      "input": {
+        "game_type": "basic"
+      },
+      "expected": {
+        "diplomacy_cards_removed": "All Special Mercenary cards"
+      }
+    },
+    {
+      "id": "3.1.3_basic_game_castle_counters_removed",
+      "rule_ref": "3.1.3",
+      "description": "Basic game excludes specific castle counters",
+      "input": {
+        "game_type": "basic"
+      },
+      "expected": {
+        "castle_counters_removed": [
+          "Zards",
+          "In-/Visible School",
+          "Enchanted Castle",
+          "Stubstaff Keep"
+        ]
+      }
+    },
+    {
+      "id": "3.1.4_basic_game_territory_unclaimed",
+      "rule_ref": "3.1.4",
+      "description": "Basic game treats listed territories as unclaimed",
+      "input": {
+        "game_type": "basic"
+      },
+      "expected": {
+        "unclaimed_territories": [
+          "Magicians territory",
+          "Wetlands",
+          "Banished Lands",
+          "Wastes of Vah-Ka-Ka",
+          "The Withering",
+          "Blasted Heath",
+          "Shards of Lor",
+          "Wild Reaches"
+        ]
+      }
+    },
+    {
+      "id": "3.2.1_setup_board",
+      "rule_ref": "3.2.1",
+      "description": "Lay gameboard on table with space for cards",
+      "input": {
+        "step": "board_setup"
+      },
+      "expected": {
+        "board_placed": true,
+        "space_for_cards": true
+      }
+    },
+    {
+      "id": "3.2.2_setup_remove_identity_cards",
+      "rule_ref": "3.2.2",
+      "description": "Remove excluded identity cards",
+      "input": {
+        "step": "remove_identity_cards"
+      },
+      "expected": {
+        "excluded_identity_cards_removed": true
+      }
+    },
+    {
+      "id": "3.2.3_setup_remove_special_mercenary_cards",
+      "rule_ref": "3.2.3",
+      "description": "Remove special mercenary diplomacy cards",
+      "input": {
+        "step": "remove_special_mercenary_cards"
+      },
+      "expected": {
+        "special_mercenary_cards_removed": true
+      }
+    },
+    {
+      "id": "3.2.4_setup_shuffle_diplomacy_deck",
+      "rule_ref": "3.2.4",
+      "description": "Shuffle remaining diplomacy cards and place face down",
+      "input": {
+        "step": "shuffle_diplomacy_deck"
+      },
+      "expected": {
+        "diplomacy_deck_shuffled": true,
+        "diplomacy_deck_face_down": true
+      }
+    },
+    {
+      "id": "3.2.5_setup_shuffle_identity_cards",
+      "rule_ref": "3.2.5",
+      "description": "Shuffle remaining identity cards",
+      "input": {
+        "step": "shuffle_identity_cards"
+      },
+      "expected": {
+        "identity_cards_shuffled": true
+      }
+    },
+    {
+      "id": "3.2.6_setup_players_draw_identity",
+      "rule_ref": "3.2.6",
+      "description": "Each player draws one identity card for home kingdom",
+      "input": {
+        "step": "draw_identity_cards",
+        "players": 3
+      },
+      "expected": {
+        "identity_cards_drawn": 3,
+        "home_kingdom_assigned": true
+      }
+    },
+    {
+      "id": "3.2.7_setup_punch_player_counters",
+      "rule_ref": "3.2.7",
+      "description": "Players punch out matching unit counters",
+      "input": {
+        "step": "punch_player_counters"
+      },
+      "expected": {
+        "player_counters_ready": true
+      }
+    },
+    {
+      "id": "3.2.8_setup_remaining_identity_cards",
+      "rule_ref": "3.2.8",
+      "description": "Remaining identity cards become non-player monarchs",
+      "input": {
+        "step": "assign_non_player_monarchs",
+        "remaining_identity_cards": 8
+      },
+      "expected": {
+        "non_player_monarchs": 8
+      }
+    },
+    {
+      "id": "3.2.9_setup_shuffle_personality_cards",
+      "rule_ref": "3.2.9",
+      "description": "Shuffle personality cards",
+      "input": {
+        "step": "shuffle_personality_cards"
+      },
+      "expected": {
+        "personality_cards_shuffled": true
+      }
+    },
+    {
+      "id": "3.2.10_setup_assign_personality_cards",
+      "rule_ref": "3.2.10",
+      "description": "Place personality cards under each non-player identity card",
+      "input": {
+        "step": "assign_personality_cards",
+        "non_player_monarchs": 8
+      },
+      "expected": {
+        "personality_cards_assigned": 8,
+        "face_down": true
+      }
+    },
+    {
+      "id": "3.2.11_setup_set_aside_unused_personality",
+      "rule_ref": "3.2.11",
+      "description": "Set aside unused personality cards face down",
+      "input": {
+        "step": "set_aside_personality_cards",
+        "unused_personality_cards": 3
+      },
+      "expected": {
+        "unused_personality_cards_set_aside": 3,
+        "face_down": true
+      }
+    },
+    {
+      "id": "3.2.12_setup_punch_non_player_counters",
+      "rule_ref": "3.2.12",
+      "description": "Punch out all non-player kingdom counters",
+      "input": {
+        "step": "punch_non_player_counters"
+      },
+      "expected": {
+        "non_player_counters_ready": true
+      }
+    },
+    {
+      "id": "3.2.13_setup_punch_mercenary_counters",
+      "rule_ref": "3.2.13",
+      "description": "Punch out mercenary armies and fleets",
+      "input": {
+        "step": "punch_mercenaries"
+      },
+      "expected": {
+        "mercenary_armies": 14,
+        "mercenary_fleets": 6
+      }
+    },
+    {
+      "id": "3.2.14_setup_turn_record",
+      "rule_ref": "3.2.14",
+      "description": "Place turn record indicator on turn 1",
+      "input": {
+        "step": "place_turn_record"
+      },
+      "expected": {
+        "turn_record_position": 1
+      }
+    },
+    {
+      "id": "3.2.15_setup_randomizer_chits",
+      "rule_ref": "3.2.15",
+      "description": "Place one randomizer chit per player in container",
+      "input": {
+        "step": "place_randomizer_chits",
+        "players": 4
+      },
+      "expected": {
+        "randomizer_chits": 4
+      }
+    },
+    {
+      "id": "3.2.16_setup_castle_counters",
+      "rule_ref": "3.2.16",
+      "description": "Place castle counters on map (excluding basic game exclusions)",
+      "input": {
+        "step": "place_castle_counters",
+        "game_type": "basic"
+      },
+      "expected": {
+        "castle_counters_placed": true,
+        "excluded_castles_skipped": true
+      }
+    },
+    {
+      "id": "3.2.17_setup_starting_units",
+      "rule_ref": "3.2.17",
+      "description": "Place armies and fleets according to starting locations",
+      "input": {
+        "step": "place_starting_units"
+      },
+      "expected": {
+        "starting_units_placed": true
+      }
+    },
+    {
+      "id": "3.2.18_setup_monarch_ambassador_start",
+      "rule_ref": "3.2.18",
+      "description": "Monarch and ambassador start in royal castle",
+      "input": {
+        "step": "place_monarch_ambassador"
+      },
+      "expected": {
+        "monarch_start": "royal_castle",
+        "ambassador_start": "royal_castle"
+      }
+    }
+  ]
+}
