@@ -1,6 +1,5 @@
 import { calculateCombatModifier, resolveCombat } from '@/engine/combat/combat-resolution';
 import { getNeighborCoords } from '@/engine/map/hex-grid';
-import { findReachableHexes } from '@/engine/map/pathfinding';
 import { calculateCumulativeTerrainCost } from '@/engine/map/terrain';
 import { canEnterHexByMp } from '@/engine/movement/movement';
 import { getCombatStrength, isCombatUnit } from '@/engine/units/unit-helpers';
@@ -23,6 +22,11 @@ export interface CombatResolutionResult extends DomainResult {
   attackerLosses?: number;
   defenderLosses?: number;
   winner?: 'attacker' | 'defender' | 'tie';
+}
+
+export interface MovementValidationResult extends DomainResult {
+  terrainCost?: number;
+  minimumMovementApplies?: boolean;
 }
 
 function fail(reason: string): DomainResult {
@@ -49,7 +53,11 @@ function getCombatUnitsAtHex(G: GameState, coord: HexCoord): UnitState[] {
   return getUnitsAtHex(G, coord).filter((unit) => isCombatUnit(unit.unitType));
 }
 
-function canControlUnit(G: GameState, playerID: string, unit: UnitState): boolean {
+export function canControlUnitForPlayer(
+  G: GameState,
+  playerID: string,
+  unit: UnitState,
+): boolean {
   const player = G.players[playerID];
   if (!player) return false;
   if (unit.factionId === player.homeFactionId) return true;
@@ -242,19 +250,16 @@ export function moveUnitForPlayer(
   unitId: string,
   destination: HexCoord,
 ): DomainResult {
-  if (getStageForPlayer(G, playerID) !== 'movement') {
-    return fail('wrong_stage');
-  }
+  const legalMove = validateMoveUnitForPlayer(G, playerID, unitId, destination);
+  if (!legalMove.ok) return fail(legalMove.reason ?? 'illegal_move');
 
   const unit = G.units[unitId];
   if (!unit || !unit.isAlive) return fail('unknown_or_dead_unit');
-  const legalMove = getLegalMovementCost(G, playerID, unit, destination);
-  if (!legalMove.ok) return fail(legalMove.reason ?? 'illegal_move');
-
+  const terrainCost = legalMove.terrainCost ?? 0;
   unit.position = destination;
   unit.movementRemaining = legalMove.minimumMovementApplies
     ? 0
-    : Math.max(0, unit.movementRemaining - legalMove.terrainCost);
+    : Math.max(0, unit.movementRemaining - terrainCost);
   G.log.push(`P${playerID} moved ${unitId} to ${destination.col},${destination.row}.`);
 
   return { ok: true };
@@ -271,7 +276,7 @@ function getLegalMovementCost(
   terrainCost: number;
   minimumMovementApplies: boolean;
 } {
-  if (!canControlUnit(G, playerID, unit)) {
+  if (!canControlUnitForPlayer(G, playerID, unit)) {
     return { ok: false, reason: 'not_controllable', terrainCost: 0, minimumMovementApplies: false };
   }
   if (!isAdjacent(G, unit.position, destination)) {
@@ -306,43 +311,66 @@ function getLegalMovementCost(
   };
 }
 
-export function findFirstLegalMovement(
+export function validateMoveUnitForPlayer(
   G: GameState,
   playerID: string,
-): { unitId: string; destination: HexCoord } | null {
+  unitId: string,
+  destination: HexCoord,
+): MovementValidationResult {
+  if (getStageForPlayer(G, playerID) !== 'movement') {
+    return fail('wrong_stage');
+  }
+  const unit = G.units[unitId];
+  if (!unit || !unit.isAlive) return fail('unknown_or_dead_unit');
+  const legalMove = getLegalMovementCost(G, playerID, unit, destination);
+  if (!legalMove.ok) return fail(legalMove.reason ?? 'illegal_move');
+  return {
+    ok: true,
+    terrainCost: legalMove.terrainCost,
+    minimumMovementApplies: legalMove.minimumMovementApplies,
+  };
+}
+
+export function listLegalDestinationsForUnit(
+  G: GameState,
+  playerID: string,
+  unitId: string,
+): HexCoord[] {
+  const unit = G.units[unitId];
+  if (!unit || !unit.isAlive) return [];
+  if (!canControlUnitForPlayer(G, playerID, unit)) return [];
+
+  const neighbors = getNeighborCoords(G.hexMap, unit.position.col, unit.position.row);
+  return neighbors.filter((neighbor) => getLegalMovementCost(G, playerID, unit, neighbor).ok);
+}
+
+export function findAllLegalMovements(
+  G: GameState,
+  playerID: string,
+): Array<{ unitId: string; destination: HexCoord }> {
   const units = Object.values(G.units).filter(
     (unit) =>
       unit.isAlive &&
       unit.movementRemaining > 0 &&
-      canControlUnit(G, playerID, unit),
+      canControlUnitForPlayer(G, playerID, unit),
   );
+  const moves: Array<{ unitId: string; destination: HexCoord }> = [];
 
   for (const unit of units) {
-    const reachable = findReachableHexes({
-      map: G.hexMap,
-      start: unit.position,
-      maxCost: unit.movementRemaining,
-      allowFirstStepOverMaxCost: unit.movementRemaining === unit.movementPoints,
-      policy: {
-        getNeighbors: (coord) => getNeighborCoords(G.hexMap, coord.col, coord.row),
-        getStepCost: ({ to }) => {
-          const destinationHex = G.hexMap.hexes.get(hexKeyFromCoord(to));
-          if (!destinationHex) return Infinity;
-          return calculateCumulativeTerrainCost(
-            destinationHex.terrain,
-            getTerrainAbilityFlags(unit),
-          );
-        },
-        canTraverse: ({ to }) => !hasEnemyCombatUnitAtHex(G, to, unit.factionId),
-      },
-    });
-    const destination = reachable.reachable.find((entry) => entry.steps === 1)?.coord;
-    if (destination) {
-      return { unitId: unit.id, destination };
+    const destinations = listLegalDestinationsForUnit(G, playerID, unit.id);
+    for (const destination of destinations) {
+      moves.push({ unitId: unit.id, destination });
     }
   }
 
-  return null;
+  return moves;
+}
+
+export function findFirstLegalMovement(
+  G: GameState,
+  playerID: string,
+): { unitId: string; destination: HexCoord } | null {
+  return findAllLegalMovements(G, playerID)[0] ?? null;
 }
 
 export function findFirstCombatPair(
@@ -350,7 +378,10 @@ export function findFirstCombatPair(
   playerID: string,
 ): { attacker: HexCoord; defender: HexCoord } | null {
   const controlled = Object.values(G.units).filter(
-    (unit) => unit.isAlive && canControlUnit(G, playerID, unit) && isCombatUnit(unit.unitType),
+    (unit) =>
+      unit.isAlive &&
+      canControlUnitForPlayer(G, playerID, unit) &&
+      isCombatUnit(unit.unitType),
   );
 
   for (const attacker of controlled) {
@@ -384,7 +415,7 @@ export function declareCombatForPlayer(
   if (!isAdjacent(G, attackerHex, defenderHex)) return fail('not_adjacent');
 
   const attackerUnits = getCombatUnitsAtHex(G, attackerHex).filter((unit) =>
-    canControlUnit(G, playerID, unit),
+    canControlUnitForPlayer(G, playerID, unit),
   );
   if (attackerUnits.length === 0) return fail('no_attacker_units');
 
@@ -411,7 +442,7 @@ export function resolveNextCombatForPlayer(
   if (!pending) return { ok: false, reason: 'no_pending_combat' };
 
   const attackerUnits = getCombatUnitsAtHex(G, pending.attackerHex).filter((unit) =>
-    canControlUnit(G, playerID, unit),
+    canControlUnitForPlayer(G, playerID, unit),
   );
   const defenderUnits = getCombatUnitsAtHex(G, pending.defenderHex).filter(
     (unit) => unit.factionId !== attackerUnits[0]?.factionId,
@@ -469,7 +500,7 @@ export function startTurnForPlayer(G: GameState, playerID: string, turn: number)
   if (G.activePlayerIndex < 0) G.activePlayerIndex = 0;
 
   for (const unit of Object.values(G.units)) {
-    if (unit.isAlive && canControlUnit(G, playerID, unit)) {
+    if (unit.isAlive && canControlUnitForPlayer(G, playerID, unit)) {
       unit.movementRemaining = unit.movementPoints;
     }
   }

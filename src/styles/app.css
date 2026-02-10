@@ -116,6 +116,17 @@ body {
   stroke: rgb(18 26 32 / 75%);
 }
 
+.hex.is-legal-destination {
+  fill: rgb(75 176 167 / 24%);
+  stroke: rgb(76 212 198 / 92%);
+  stroke-width: 1.4;
+}
+
+.hex.is-legal-destination:hover {
+  fill: rgb(75 176 167 / 36%);
+  stroke: rgb(126 248 235 / 95%);
+}
+
 .unit-stack {
   cursor: pointer;
 }

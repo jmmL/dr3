@@ -4,11 +4,12 @@ import type { GameState, TurnStage } from '@/types';
 import { loadHexMap } from '@/data/load-refs';
 import { buildInitialGameState, type SetupOptions } from '@/engine/domain/setup';
 import {
+  canControlUnitForPlayer,
   conductDiplomacyForPlayer,
   declareCombatForPlayer,
   drawDiplomacyCardForPlayer,
+  findAllLegalMovements,
   findFirstCombatPair,
-  findFirstLegalMovement,
   hasAnyPendingCombats,
   moveUnitForPlayer,
   resolveNextCombatForPlayer,
@@ -34,6 +35,17 @@ function ensureStage(G: RuntimeGameState, stage: TurnStage): boolean {
   return G.stage === stage;
 }
 
+function restoreSnapshotMove(
+  { G, events }: { G: RuntimeGameState; events: { setPhase?: (phase: TurnStage) => void } },
+  snapshot: RuntimeGameState,
+) {
+  if (!snapshot || typeof snapshot !== 'object') return INVALID_MOVE;
+  Object.assign(G, structuredClone(snapshot));
+  if (snapshot.stage) {
+    events.setPhase?.(snapshot.stage);
+  }
+}
+
 export const DR3Game: Game<RuntimeGameState, Record<string, unknown>, DR3SetupData> = {
   name: 'dr3',
   setup: (_context, setupData) => {
@@ -44,66 +56,137 @@ export const DR3Game: Game<RuntimeGameState, Record<string, unknown>, DR3SetupDa
     return runtime;
   },
   disableUndo: false,
-  moves: {
-    rollRandomEvent: ({ G, playerID }) => {
-      if (!ensureStage(G, 'rollEvents')) return INVALID_MOVE;
-      const result = rollRandomEventForPlayer(toDomainState(G), playerID);
-      if (!result.ok) return INVALID_MOVE;
-      transitionStage(G, 'drawCard');
+  phases: {
+    rollEvents: {
+      start: true,
+      turn: {
+        order: TurnOrder.CONTINUE,
+      },
+      onBegin: ({ G }) => {
+        transitionStage(G, 'rollEvents');
+      },
+      moves: {
+        restoreSnapshot: restoreSnapshotMove,
+        rollRandomEvent: ({ G, playerID, events }) => {
+          if (!ensureStage(G, 'rollEvents')) return INVALID_MOVE;
+          const result = rollRandomEventForPlayer(toDomainState(G), playerID);
+          if (!result.ok) return INVALID_MOVE;
+          transitionStage(G, 'drawCard');
+          events.setPhase?.('drawCard');
+        },
+      },
     },
-    drawDiplomacyCard: ({ G, playerID }) => {
-      if (!ensureStage(G, 'drawCard')) return INVALID_MOVE;
-      const result = drawDiplomacyCardForPlayer(toDomainState(G), playerID);
-      if (!result.ok) return INVALID_MOVE;
-      transitionStage(G, 'diplomacy');
+    drawCard: {
+      turn: {
+        order: TurnOrder.CONTINUE,
+      },
+      onBegin: ({ G }) => {
+        transitionStage(G, 'drawCard');
+      },
+      moves: {
+        restoreSnapshot: restoreSnapshotMove,
+        drawDiplomacyCard: ({ G, playerID, events }) => {
+          if (!ensureStage(G, 'drawCard')) return INVALID_MOVE;
+          const result = drawDiplomacyCardForPlayer(toDomainState(G), playerID);
+          if (!result.ok) return INVALID_MOVE;
+          transitionStage(G, 'diplomacy');
+          events.setPhase?.('diplomacy');
+        },
+      },
     },
-    conductDiplomacy: ({ G, playerID }, factionId: string, action: 'activate' | 'deactivate' = 'activate') => {
-      if (!ensureStage(G, 'diplomacy')) return INVALID_MOVE;
-      const result = conductDiplomacyForPlayer(
-        toDomainState(G),
-        playerID,
-        factionId,
-        action,
-      );
-      if (!result.ok) return INVALID_MOVE;
-      transitionStage(G, 'siegeResolution');
+    diplomacy: {
+      turn: {
+        order: TurnOrder.CONTINUE,
+      },
+      onBegin: ({ G }) => {
+        transitionStage(G, 'diplomacy');
+      },
+      moves: {
+        restoreSnapshot: restoreSnapshotMove,
+        conductDiplomacy: ({ G, playerID, events }, factionId: string, action: 'activate' | 'deactivate' = 'activate') => {
+          if (!ensureStage(G, 'diplomacy')) return INVALID_MOVE;
+          const result = conductDiplomacyForPlayer(
+            toDomainState(G),
+            playerID,
+            factionId,
+            action,
+          );
+          if (!result.ok) return INVALID_MOVE;
+          transitionStage(G, 'siegeResolution');
+          events.setPhase?.('siegeResolution');
+        },
+      },
     },
-    resolveSieges: ({ G, playerID }) => {
-      if (!ensureStage(G, 'siegeResolution')) return INVALID_MOVE;
-      const result = resolveSiegesForPlayer(toDomainState(G), playerID);
-      if (!result.ok) return INVALID_MOVE;
-      transitionStage(G, 'movement');
+    siegeResolution: {
+      turn: {
+        order: TurnOrder.CONTINUE,
+      },
+      onBegin: ({ G }) => {
+        transitionStage(G, 'siegeResolution');
+      },
+      moves: {
+        restoreSnapshot: restoreSnapshotMove,
+        resolveSieges: ({ G, playerID, events }) => {
+          if (!ensureStage(G, 'siegeResolution')) return INVALID_MOVE;
+          const result = resolveSiegesForPlayer(toDomainState(G), playerID);
+          if (!result.ok) return INVALID_MOVE;
+          transitionStage(G, 'movement');
+          events.setPhase?.('movement');
+        },
+      },
     },
-    moveUnit: ({ G, playerID }, unitId: string, col: number, row: number) => {
-      if (!ensureStage(G, 'movement')) return INVALID_MOVE;
-      const result = moveUnitForPlayer(toDomainState(G), playerID, unitId, { col, row });
-      if (!result.ok) return INVALID_MOVE;
+    movement: {
+      turn: {
+        order: TurnOrder.CONTINUE,
+      },
+      onBegin: ({ G }) => {
+        transitionStage(G, 'movement');
+      },
+      moves: {
+        restoreSnapshot: restoreSnapshotMove,
+        moveUnit: ({ G, playerID }, unitId: string, col: number, row: number) => {
+          if (!ensureStage(G, 'movement')) return INVALID_MOVE;
+          const result = moveUnitForPlayer(toDomainState(G), playerID, unitId, { col, row });
+          if (!result.ok) return INVALID_MOVE;
+        },
+        toCombatPhase: ({ G, events }) => {
+          if (!ensureStage(G, 'movement')) return INVALID_MOVE;
+          transitionStage(G, 'combat');
+          events.setPhase?.('combat');
+        },
+      },
     },
-    toCombatPhase: ({ G }) => {
-      if (!ensureStage(G, 'movement')) return INVALID_MOVE;
-      transitionStage(G, 'combat');
-    },
-    declareCombat: ({ G, playerID }, attackerCol: number, attackerRow: number, defenderCol: number, defenderRow: number) => {
-      if (!ensureStage(G, 'combat')) return INVALID_MOVE;
-      const result = declareCombatForPlayer(
-        toDomainState(G),
-        playerID,
-        { col: attackerCol, row: attackerRow },
-        { col: defenderCol, row: defenderRow },
-      );
-      if (!result.ok) return INVALID_MOVE;
-    },
-    resolveCombat: ({ G, playerID }) => {
-      if (!ensureStage(G, 'combat')) return INVALID_MOVE;
-      const result = resolveNextCombatForPlayer(toDomainState(G), playerID);
-      if (!result.ok) return INVALID_MOVE;
-    },
-    endTurn: ({ G, ctx }) => {
-      if (!ensureStage(G, 'combat')) return INVALID_MOVE;
-      const ctxEvents = (ctx as typeof ctx & { events?: { endTurn?: () => void } }).events;
-      if (ctxEvents?.endTurn) {
-        ctxEvents.endTurn();
-      }
+    combat: {
+      turn: {
+        order: TurnOrder.CONTINUE,
+      },
+      onBegin: ({ G }) => {
+        transitionStage(G, 'combat');
+      },
+      moves: {
+        restoreSnapshot: restoreSnapshotMove,
+        declareCombat: ({ G, playerID }, attackerCol: number, attackerRow: number, defenderCol: number, defenderRow: number) => {
+          if (!ensureStage(G, 'combat')) return INVALID_MOVE;
+          const result = declareCombatForPlayer(
+            toDomainState(G),
+            playerID,
+            { col: attackerCol, row: attackerRow },
+            { col: defenderCol, row: defenderRow },
+          );
+          if (!result.ok) return INVALID_MOVE;
+        },
+        resolveCombat: ({ G, playerID }) => {
+          if (!ensureStage(G, 'combat')) return INVALID_MOVE;
+          const result = resolveNextCombatForPlayer(toDomainState(G), playerID);
+          if (!result.ok) return INVALID_MOVE;
+        },
+        endTurn: ({ G, events }) => {
+          if (!ensureStage(G, 'combat')) return INVALID_MOVE;
+          if (G.pendingCombats.length > 0) return INVALID_MOVE;
+          events.setPhase?.('rollEvents');
+          events.endTurn?.();
+        },
+      },
     },
   },
   turn: {
@@ -111,11 +194,12 @@ export const DR3Game: Game<RuntimeGameState, Record<string, unknown>, DR3SetupDa
     onBegin: ({ G, ctx }) => {
       G.currentTurn = ctx.turn;
       G.phase = 'playerTurn';
-      G.stage = 'rollEvents';
       G.activePlayerIndex = G.turnOrder.indexOf(ctx.currentPlayer);
       if (G.activePlayerIndex < 0) G.activePlayerIndex = 0;
+
+      const domainState = toDomainState(G);
       for (const unit of Object.values(G.units)) {
-        if (unit.isAlive) {
+        if (unit.isAlive && canControlUnitForPlayer(domainState, ctx.currentPlayer, unit)) {
           unit.movementRemaining = unit.movementPoints;
         }
       }
@@ -129,11 +213,13 @@ export const DR3Game: Game<RuntimeGameState, Record<string, unknown>, DR3SetupDa
   },
   events: {
     endTurn: true,
+    endPhase: true,
+    setPhase: true,
   },
   ai: {
     enumerate: (G, ctx, playerID) => {
       if (ctx.currentPlayer !== playerID) return [];
-      const stage = G.stage;
+      const stage = (ctx.phase as TurnStage | null) ?? G.stage;
       const domainState = toDomainState(G);
 
       if (stage === 'rollEvents') return [{ move: 'rollRandomEvent' }];
@@ -147,20 +233,20 @@ export const DR3Game: Game<RuntimeGameState, Record<string, unknown>, DR3SetupDa
       }
       if (stage === 'siegeResolution') return [{ move: 'resolveSieges' }];
       if (stage === 'movement') {
-        const movement = findFirstLegalMovement(domainState, playerID);
-        if (movement) {
+        const legalMovements = findAllLegalMovements(domainState, playerID);
+        if (legalMovements.length > 0) {
           return [
-            {
+            ...legalMovements.map((movement) => ({
               move: 'moveUnit',
               args: [movement.unitId, movement.destination.col, movement.destination.row],
-            },
+            })),
             { move: 'toCombatPhase' },
           ];
         }
         return [{ move: 'toCombatPhase' }];
       }
       if (stage === 'combat') {
-        if (hasAnyPendingCombats(domainState)) return [{ move: 'resolveCombat' }, { move: 'endTurn' }];
+        if (hasAnyPendingCombats(domainState)) return [{ move: 'resolveCombat' }];
         const pair = findFirstCombatPair(domainState, playerID);
         if (pair) {
           return [
@@ -168,6 +254,7 @@ export const DR3Game: Game<RuntimeGameState, Record<string, unknown>, DR3SetupDa
               move: 'declareCombat',
               args: [pair.attacker.col, pair.attacker.row, pair.defender.col, pair.defender.row],
             },
+            { move: 'resolveCombat' },
             { move: 'endTurn' },
           ];
         }

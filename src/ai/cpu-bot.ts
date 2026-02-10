@@ -1,6 +1,7 @@
 import { MCTSBot } from 'boardgame.io/ai';
 import type { State } from 'boardgame.io';
-import { DR3Game, type RuntimeGameState } from '@/game/dr3-game';
+import { DR3Game, toDomainState, type RuntimeGameState } from '@/game/dr3-game';
+import { findAllLegalMovements } from '@/engine/domain/rules';
 
 type CpuAction =
   | {
@@ -34,12 +35,15 @@ function isMoveAction(action: CpuAction): action is Extract<CpuAction, { type: '
   return action.type === 'MAKE_MOVE';
 }
 
+export type CpuBotLike = Pick<MCTSBot, 'play'>;
+
 function runFallbackStep(
   client: CpuClientLike,
   state: State<RuntimeGameState>,
 ): boolean {
   const currentPlayer = state.ctx.currentPlayer;
-  switch (state.G.stage) {
+  const phase = state.ctx.phase ?? state.G.stage;
+  switch (phase) {
     case 'rollEvents':
       client.moves.rollRandomEvent?.();
       return true;
@@ -57,9 +61,20 @@ function runFallbackStep(
     case 'siegeResolution':
       client.moves.resolveSieges?.();
       return true;
-    case 'movement':
-      client.moves.toCombatPhase?.();
+    case 'movement': {
+      const legalMoves = findAllLegalMovements(toDomainState(state.G), currentPlayer);
+      const fallbackMove = legalMoves[0];
+      if (fallbackMove) {
+        client.moves.moveUnit?.(
+          fallbackMove.unitId,
+          fallbackMove.destination.col,
+          fallbackMove.destination.row,
+        );
+      } else {
+        client.moves.toCombatPhase?.();
+      }
       return true;
+    }
     case 'combat':
       if (state.G.pendingCombats.length > 0) {
         client.moves.resolveCombat?.();
@@ -76,19 +91,19 @@ export async function runCpuTurn(
   client: CpuClientLike,
   playerID: string,
   maxSteps: number = 20,
+  botOverride?: CpuBotLike,
 ): Promise<number> {
-  const bot = createCpuBot();
+  const bot = botOverride ?? createCpuBot();
   let steps = 0;
 
   while (steps < maxSteps) {
     const state = client.getState();
     if (!state) break;
     if (state.ctx.currentPlayer !== playerID) break;
-    const stageBefore = state.G.stage;
+    const phaseBefore = state.ctx.phase ?? state.G.stage;
 
     const played = await bot.play(state, playerID);
     const action = played.action as CpuAction;
-    const fallbackActions = DR3Game.ai?.enumerate(state.G, state.ctx, playerID) ?? [];
 
     if (isMoveAction(action)) {
       const moveDispatch = client.moves[action.payload.type];
@@ -102,13 +117,17 @@ export async function runCpuTurn(
       steps += 1;
       continue;
     }
+    const phaseAfterBot = stateAfterBot.ctx.phase ?? stateAfterBot.G.stage;
 
-    if (stateAfterBot.G.stage === stageBefore) {
+    if (phaseAfterBot === phaseBefore) {
+      const fallbackActions =
+        DR3Game.ai?.enumerate(stateAfterBot.G, stateAfterBot.ctx, playerID) ?? [];
       const preferredFallback = fallbackActions.find(
         (candidate) =>
           'move' in candidate &&
-          ((stageBefore === 'movement' && candidate.move === 'toCombatPhase') ||
-            (stageBefore === 'combat' && candidate.move === 'endTurn')),
+          ((phaseBefore === 'movement' && candidate.move === 'moveUnit') ||
+            (phaseBefore === 'combat' &&
+              (candidate.move === 'resolveCombat' || candidate.move === 'declareCombat'))),
       );
       const fallback = preferredFallback ?? fallbackActions[0];
       if (fallback && 'move' in fallback) {
