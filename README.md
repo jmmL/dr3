@@ -4,31 +4,33 @@ Browser-based implementation of Divine Right (3rd edition), focused on determini
 
 ## Current Status
 
-- Core runtime, UI shell, persistence, CPU baseline, and CI pipelines are implemented.
-- Conformance fixtures and adapters are in place and validated in CI.
-- The active execution tracker is `docs/plans/2026-02-09-prd-execution-plan.md`.
+- The repo is now explicitly rebaselined as a prototype with a trusted slice, not a near-complete rules implementation.
+- Trusted slice: movement, combat declaration/resolution, persistence, portable Chromium E2E, and runtime coverage for the movement/combat conformance chunks.
+- Scaffolded or adapter-only areas remain incomplete: diplomacy/cards, random events, sieges, victory conditions, and many unwired conformance chunks.
+- The active recovery tracker is `docs/plans/2026-03-17-recovery-plan.md`.
 
 ## Quick Start
 
 ```bash
-npm ci
+nvm use
+npm run bootstrap
 npm run dev
 ```
 
 ## Verification Commands
 
 ```bash
-npm run lint
-npm test
-python3 scripts/validate_conformance_suite.py
-npm run test:e2e:chromium
-npm run test:e2e:ios
-npm run build
+npm run verify:base
+npm run test:e2e:portable
+npm run test:local:visual
 ```
 
 Notes:
-- E2E requires Playwright browsers: `npx playwright install --with-deps`.
-- In restricted local environments, Playwright can fail to spawn a browser process even when CI passes.
+- Supported toolchain baseline: Node `24.x`, npm `11.x` (`.nvmrc` and `package.json#engines` are the source of truth).
+- `npm run verify:base` runs lint, coverage-gated unit tests, conformance fixture validation, the conformance wiring report, and production build.
+- `npm run test:e2e:portable` is the reliable local browser lane.
+- `npm run test:local:visual` is intentionally separate from the main local gate.
+- `npm run test:conformance:report` prints each conformance chunk as `runtime-covered`, `adapter-only`, or `unwired`.
 
 ## Documentation Index
 
@@ -37,6 +39,7 @@ Notes:
 - `docs/architecture/app-architecture.md` - as-built architecture and module boundaries.
 - `docs/plans/README.md` - active vs archived plans.
 - `docs/tooling/mcp-playwright.md` - local MCP Playwright setup notes.
+- `docs/tooling/dependency-audit.md` - current npm audit triage and accepted risk notes.
 - `docs/refs/README.md` - reference dataset format and validation details.
 
 ## Repository Layout

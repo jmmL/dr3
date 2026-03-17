@@ -5,3 +5,4 @@ test-results/
 *.tsbuildinfo
 /logs/
 /playwright-report/
+coverage/

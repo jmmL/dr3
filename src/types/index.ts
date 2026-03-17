@@ -41,8 +41,8 @@ export type {
 } from './events';
 
 export type {
-  GamePhase,
   TurnStage,
   PlayerState,
   GameState,
+  RuntimeGameState,
 } from './game-state';

@@ -7,11 +7,12 @@
 
 ## Active
 
-- `docs/plans/2026-02-09-prd-execution-plan.md` - current milestone tracker aligned with the PRD.
-- `docs/plans/2026-02-09-hex-pathfinding-plan.md` - standalone scoped plan for in-house pathfinding utilities and movement traversal integration.
+- `docs/plans/2026-03-17-recovery-plan.md` - current recovery tracker and trusted-slice roadmap.
 
 ## Archived
 
+- `docs/plans/2026-02-09-prd-execution-plan.md` - earlier milestone tracker that overstated runtime completeness.
+- `docs/plans/2026-02-09-hex-pathfinding-plan.md` - scoped pathfinding plan retained for later follow-up.
 - `docs/plans/archive/2026-01-25-conformance-suite.md` - original conformance suite build-out plan.
 - `docs/plans/archive/prototype_execution_strategy.md` - early harness/rendering risk mitigation strategy.
 - `docs/plans/archive/architecture_review.md` - architecture and planning critique from the pre-implementation phase.

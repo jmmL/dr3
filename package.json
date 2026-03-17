@@ -3,22 +3,34 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": "24.x",
+    "npm": "11.x"
+  },
   "scripts": {
+    "bootstrap": "npm ci && npx playwright install --with-deps",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint src/",
     "format": "prettier --write src/",
     "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
+    "test:e2e:portable": "playwright test src/test/e2e/app.spec.ts src/test/e2e/board.contract.spec.ts --project=chromium",
     "test:e2e:chromium": "playwright test --project=chromium",
     "test:e2e:ios": "playwright test --project=ios-safari",
     "test:e2e:board:contract": "playwright test src/test/e2e/board.contract.spec.ts --project=chromium --project=ios-safari",
     "test:e2e:board:visual": "playwright test src/test/e2e/board.visual.spec.ts --project=chromium --project=ios-safari",
+    "test:e2e:visual": "playwright test src/test/e2e/board.visual.spec.ts --project=chromium --project=ios-safari",
     "test:e2e:board:visual:update": "playwright test src/test/e2e/board.visual.spec.ts --project=chromium --project=ios-safari --update-snapshots",
     "test:e2e:board:loop": "playwright test src/test/e2e/board.contract.spec.ts --project=chromium --repeat-each=5",
-    "test:local:gate": "npm run lint && npm test && npm run build && npm run test:e2e:board:contract && npm run test:e2e:board:visual",
+    "test:conformance:report": "python3 scripts/report_conformance_coverage.py",
+    "verify:base": "npm run lint && npm run test:coverage && python3 scripts/validate_conformance_suite.py && npm run test:conformance:report && npm run build",
+    "test:local:gate": "npm run verify:base && npm run test:e2e:portable",
+    "test:local:visual": "npm run test:e2e:visual",
+    "audit:json": "npm audit --json",
     "mcp:playwright": "npx -y @playwright/mcp@latest"
   },
   "dependencies": {
@@ -47,6 +59,7 @@
     "typescript": "^5.6.3",
     "typescript-eslint": "^8.14.0",
     "vite": "^6.0.0",
+    "@vitest/coverage-v8": "^4.0.18",
     "vitest": "^4.0.18"
   }
 }

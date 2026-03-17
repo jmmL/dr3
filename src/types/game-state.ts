@@ -1,14 +1,8 @@
 import type { HexMap, HexCoord } from './hex';
-import type { UnitState, UnitDefinition } from './unit';
-import type { FactionState, FactionData } from './faction';
+import type { UnitState } from './unit';
+import type { FactionState } from './faction';
 import type { DiplomacyDeckState } from './cards';
 import type { SiegeState } from './siege';
-
-export type GamePhase =
-  | 'setup'
-  | 'playerOrder'
-  | 'playerTurn'
-  | 'endOfTurn';
 
 export type TurnStage =
   | 'rollEvents'
@@ -22,15 +16,12 @@ export interface PlayerState {
   id: string;
   homeFactionId: string;
   isHuman: boolean;
-  hand: string[];
 }
 
 export interface GameState {
   hexMap: HexMap;
   units: Record<string, UnitState>;
-  unitDefinitions: Record<string, UnitDefinition>;
   factions: Record<string, FactionState>;
-  factionData: Record<string, FactionData>;
   players: Record<string, PlayerState>;
   diplomacyDeck: DiplomacyDeckState;
   sieges: SiegeState[];
@@ -38,13 +29,15 @@ export interface GameState {
   maxTurns: number;
   turnOrder: string[];
   activePlayerIndex: number;
-  phase: GamePhase;
-  stage: TurnStage | null;
+  stage: TurnStage;
   pendingCombats: Array<{
     attackerHex: HexCoord;
     defenderHex: HexCoord;
+    declaredByPlayerId: string;
   }>;
   log: string[];
   seed: string;
   rngState: number[];
 }
+
+export type RuntimeGameState = Omit<GameState, 'hexMap'>;

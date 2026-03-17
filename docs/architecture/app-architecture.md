@@ -1,8 +1,8 @@
-# DR3 Web App Architecture (As Built)
+# DR3 Web App Architecture (Recovery Baseline)
 
 ## Scope
 
-Single-player DR3 implementation running as a static web app with deterministic rules and CI-gated conformance fixtures. The PRD in `docs/prd/divine-right-prd.md` remains the intent document; this file describes the current implementation.
+Single-player DR3 prototype running as a static web app with deterministic rules helpers, a trusted movement/combat slice, and explicit conformance coverage classification. The PRD remains the intent document; this file describes the currently trusted implementation rather than aspirational completeness.
 
 ## Technology Stack
 
@@ -20,7 +20,9 @@ React UI (App + HexBoard)
         |
 boardgame.io client + DR3Game wrapper
         |
-Domain services (rules/setup/rng + engine helpers)
+Trusted runtime slice (movement/combat/persistence)
+        |
+Rule helpers + conformance adapters
         |
 Reference datasets (docs/refs/*.json)
 ```
@@ -30,19 +32,18 @@ Reference datasets (docs/refs/*.json)
 ### Game Wrapper
 
 - `src/game/dr3-game.ts` owns turn stages, move wiring, and translation between runtime state and domain state.
-- Runtime state type omits static map payload from `G` for efficiency and reconstructs domain state as needed.
+- Runtime state omits static reference data from saves/snapshots where possible; `hexMap` is reconstructed from refs.
+- `stage` is kept in `G` because save/restore snapshots do not include `ctx.phase`; this is the only intentional boardgame.io flow mirror.
 
 ### Domain And Rules
 
 - `src/engine/domain/setup.ts` builds deterministic initial state.
 - `src/engine/domain/rng.ts` provides seeded randomness helpers.
-- `src/engine/domain/rules.ts` handles stage progression and core actions:
-  - random events
-  - diplomacy
-  - siege resolution
-  - movement
+- `src/engine/domain/rules.ts` handles the trusted gameplay slice:
+  - movement legality
   - combat declaration and resolution
-  - score helpers
+  - player-control semantics for controlled factions
+- Earlier/later phases still exist in the wrapper, but they are not considered fully trusted game logic yet.
 
 ### Engine Helpers
 
@@ -51,12 +52,13 @@ Reference datasets (docs/refs/*.json)
 ### Data Loading
 
 - `src/data/load-refs.ts` loads canonical reference JSON from `docs/refs/*.json` and maps compact keys to typed runtime structures.
+- The PRD still targets `.min.json` as the long-term authoritative runtime source; that migration has not been completed.
 
 ### UI Layer
 
-- `src/App.tsx` is the shell for stage actions, status text, save/load/import/export controls, and CPU trigger.
+- `src/App.tsx` is the shell for stage actions, status text, trusted-slice messaging, save/load/import/export controls, and CPU trigger.
 - `src/ui/HexBoard.tsx` renders the board as custom SVG polygons and unit stacks.
-- UI does not enforce game legality; it dispatches actions and renders engine state.
+- UI now exposes movement and combat declaration/resolution for the trusted slice. Legality still lives in the engine.
 
 ### Persistence
 
@@ -68,7 +70,7 @@ Reference datasets (docs/refs/*.json)
 
 ## Turn Flow (Current)
 
-Current stage sequence is reflected in both code and e2e tests:
+Current stage sequence remains:
 
 1. `rollEvents`
 2. `drawCard`
@@ -77,22 +79,21 @@ Current stage sequence is reflected in both code and e2e tests:
 5. `movement`
 6. `combat`
 
-Reference test: `src/test/e2e/app.spec.ts`.
+Trusted UI slice tests:
+- `src/test/e2e/app.spec.ts`
+- `src/test/e2e/board.contract.spec.ts`
 
 ## Testing And Quality Gates
 
 ### Local Validation Commands
 
-1. `npm run lint`
-2. `npm test`
-3. `python3 scripts/validate_conformance_suite.py`
-4. `npm run test:e2e:chromium`
-5. `npm run test:e2e:ios`
-6. `npm run build`
+1. `npm run verify:base`
+2. `npm run test:e2e:portable`
+3. `npm run test:local:visual`
 
 ### CI Enforcement
 
-`/.github/workflows/ci.yml` runs:
+`/.github/workflows/ci.yml` still runs the unified verification pipeline, while local work should treat `verify:base` + `test:e2e:portable` as the practical recovery gate.
 
 - lint
 - unit + conformance adapter tests
@@ -105,10 +106,9 @@ Reference test: `src/test/e2e/app.spec.ts`.
 - Static bundle is built with Vite and deployed via GitHub Pages workflow in `.github/workflows/deploy-pages.yml`.
 - Deployment path uses `dist/` artifact upload.
 
-## Known Gaps (Execution Backlog)
+## Known Gaps
 
-- Expand move legality and phase behavior toward full PRD coverage.
-- Increase runtime move-level assertions against more conformance chunks.
-- Improve map interaction depth (zoom/pan/filter/accessibility enhancements).
-- Improve CPU quality and bounded response times.
-- Add explicit coverage thresholds for critical rule modules.
+- Diplomacy/cards, random events, sieges, and victory conditions are not yet trusted runtime systems.
+- 16 conformance chunks are currently unwired, and 10 are adapter-only.
+- CPU quality remains baseline only.
+- Mobile/iOS browser coverage remains a separate lane from the portable local gate.

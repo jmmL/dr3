@@ -29,6 +29,11 @@ export interface MovementValidationResult extends DomainResult {
   minimumMovementApplies?: boolean;
 }
 
+export interface CombatDeclarationValidationResult extends DomainResult {
+  attackerHex?: HexCoord;
+  defenderHex?: HexCoord;
+}
+
 function fail(reason: string): DomainResult {
   return { ok: false, reason };
 }
@@ -53,6 +58,26 @@ function getCombatUnitsAtHex(G: GameState, coord: HexCoord): UnitState[] {
   return getUnitsAtHex(G, coord).filter((unit) => isCombatUnit(unit.unitType));
 }
 
+function getControlledCombatUnitsAtHex(
+  G: GameState,
+  coord: HexCoord,
+  playerID: string,
+): UnitState[] {
+  return getCombatUnitsAtHex(G, coord).filter((unit) =>
+    canControlUnitForPlayer(G, playerID, unit),
+  );
+}
+
+function getHostileCombatUnitsAtHex(
+  G: GameState,
+  coord: HexCoord,
+  playerID: string,
+): UnitState[] {
+  return getCombatUnitsAtHex(G, coord).filter((unit) =>
+    isUnitHostileToPlayer(G, playerID, unit),
+  );
+}
+
 export function canControlUnitForPlayer(
   G: GameState,
   playerID: string,
@@ -68,12 +93,22 @@ export function canControlUnitForPlayer(
   return unit.isMercenary;
 }
 
+function isUnitHostileToPlayer(
+  G: GameState,
+  playerID: string,
+  unit: UnitState,
+): boolean {
+  return !canControlUnitForPlayer(G, playerID, unit);
+}
+
 function hasEnemyCombatUnitAtHex(
   G: GameState,
   coord: HexCoord,
-  factionId: string,
+  playerID: string,
 ): boolean {
-  return getCombatUnitsAtHex(G, coord).some((unit) => unit.factionId !== factionId);
+  return getCombatUnitsAtHex(G, coord).some((unit) =>
+    isUnitHostileToPlayer(G, playerID, unit),
+  );
 }
 
 function getTerrainAbilityFlags(unit: UnitState): {
@@ -287,7 +322,7 @@ function getLegalMovementCost(
   if (!destinationHex) {
     return { ok: false, reason: 'invalid_destination', terrainCost: 0, minimumMovementApplies: false };
   }
-  if (hasEnemyCombatUnitAtHex(G, destination, unit.factionId)) {
+  if (hasEnemyCombatUnitAtHex(G, destination, playerID)) {
     return { ok: false, reason: 'enemy_hex', terrainCost: 0, minimumMovementApplies: false };
   }
 
@@ -391,9 +426,7 @@ export function findFirstCombatPair(
       attacker.position.row,
     );
     for (const neighbor of neighbors) {
-      const defenders = getCombatUnitsAtHex(G, neighbor).filter(
-        (unit) => unit.factionId !== attacker.factionId,
-      );
+      const defenders = getHostileCombatUnitsAtHex(G, neighbor, playerID);
       if (defenders.length > 0) {
         return { attacker: attacker.position, defender: neighbor };
       }
@@ -403,28 +436,62 @@ export function findFirstCombatPair(
   return null;
 }
 
+export function listCombatTargetsForHex(
+  G: GameState,
+  playerID: string,
+  attackerHex: HexCoord,
+): HexCoord[] {
+  if (getStageForPlayer(G, playerID) !== 'combat') {
+    return [];
+  }
+  const attackerUnits = getControlledCombatUnitsAtHex(G, attackerHex, playerID);
+  if (attackerUnits.length === 0) {
+    return [];
+  }
+
+  const neighbors = getNeighborCoords(G.hexMap, attackerHex.col, attackerHex.row);
+  return neighbors.filter(
+    (neighbor) => getHostileCombatUnitsAtHex(G, neighbor, playerID).length > 0,
+  );
+}
+
+export function validateCombatDeclarationForPlayer(
+  G: GameState,
+  playerID: string,
+  attackerHex: HexCoord,
+  defenderHex: HexCoord,
+): CombatDeclarationValidationResult {
+  if (getStageForPlayer(G, playerID) !== 'combat') {
+    return fail('wrong_stage');
+  }
+  if (!isAdjacent(G, attackerHex, defenderHex)) return fail('not_adjacent');
+
+  const attackerUnits = getControlledCombatUnitsAtHex(G, attackerHex, playerID);
+  if (attackerUnits.length === 0) return fail('no_attacker_units');
+
+  const defenderUnits = getHostileCombatUnitsAtHex(G, defenderHex, playerID);
+  if (defenderUnits.length === 0) return fail('no_defender_units');
+
+  return { ok: true, attackerHex, defenderHex };
+}
+
 export function declareCombatForPlayer(
   G: GameState,
   playerID: string,
   attackerHex: HexCoord,
   defenderHex: HexCoord,
 ): DomainResult {
-  if (getStageForPlayer(G, playerID) !== 'combat') {
-    return fail('wrong_stage');
+  const validation = validateCombatDeclarationForPlayer(
+    G,
+    playerID,
+    attackerHex,
+    defenderHex,
+  );
+  if (!validation.ok) {
+    return validation;
   }
-  if (!isAdjacent(G, attackerHex, defenderHex)) return fail('not_adjacent');
 
-  const attackerUnits = getCombatUnitsAtHex(G, attackerHex).filter((unit) =>
-    canControlUnitForPlayer(G, playerID, unit),
-  );
-  if (attackerUnits.length === 0) return fail('no_attacker_units');
-
-  const defenderUnits = getCombatUnitsAtHex(G, defenderHex).filter(
-    (unit) => unit.factionId !== attackerUnits[0]?.factionId,
-  );
-  if (defenderUnits.length === 0) return fail('no_defender_units');
-
-  G.pendingCombats.push({ attackerHex, defenderHex });
+  G.pendingCombats.push({ attackerHex, defenderHex, declaredByPlayerId: playerID });
   G.log.push(
     `P${playerID} declared combat ${attackerHex.col},${attackerHex.row} -> ${defenderHex.col},${defenderHex.row}.`,
   );
@@ -440,12 +507,15 @@ export function resolveNextCombatForPlayer(
   }
   const pending = G.pendingCombats.shift();
   if (!pending) return { ok: false, reason: 'no_pending_combat' };
+  if (pending.declaredByPlayerId !== playerID) {
+    return { ok: false, reason: 'wrong_player' };
+  }
 
   const attackerUnits = getCombatUnitsAtHex(G, pending.attackerHex).filter((unit) =>
     canControlUnitForPlayer(G, playerID, unit),
   );
   const defenderUnits = getCombatUnitsAtHex(G, pending.defenderHex).filter(
-    (unit) => unit.factionId !== attackerUnits[0]?.factionId,
+    (unit) => isUnitHostileToPlayer(G, playerID, unit),
   );
   if (attackerUnits.length === 0 || defenderUnits.length === 0) {
     return { ok: false, reason: 'combatants_missing' };
@@ -494,7 +564,6 @@ export function resolveNextCombatForPlayer(
 
 export function startTurnForPlayer(G: GameState, playerID: string, turn: number): void {
   G.currentTurn = turn;
-  G.phase = 'playerTurn';
   G.stage = 'rollEvents';
   G.activePlayerIndex = G.turnOrder.indexOf(playerID);
   if (G.activePlayerIndex < 0) G.activePlayerIndex = 0;

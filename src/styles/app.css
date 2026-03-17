@@ -43,6 +43,15 @@ body {
   color: var(--ink-muted);
 }
 
+.prototype-banner {
+  max-width: 60rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid rgb(210 132 58 / 36%);
+  border-radius: 10px;
+  background: rgb(210 132 58 / 10%);
+  color: #f8ddb8;
+}
+
 .layout {
   display: grid;
   gap: 1rem;
@@ -125,6 +134,18 @@ body {
 .hex.is-legal-destination:hover {
   fill: rgb(75 176 167 / 36%);
   stroke: rgb(126 248 235 / 95%);
+}
+
+.hex.is-combat-attacker {
+  fill: rgb(210 132 58 / 22%);
+  stroke: rgb(243 182 116 / 96%);
+  stroke-width: 1.5;
+}
+
+.hex.is-combat-target {
+  fill: rgb(195 90 70 / 20%);
+  stroke: rgb(227 121 99 / 94%);
+  stroke-width: 1.5;
 }
 
 .unit-stack {

@@ -33,18 +33,9 @@ function buildPlayerStates(playerSlots: SetupPlayer[]): Record<string, PlayerSta
       id: slot.id,
       homeFactionId: slot.homeFactionId,
       isHuman: slot.isHuman,
-      hand: [],
     };
   }
   return players;
-}
-
-function buildFactionDataRecord(factions: FactionData[]): Record<string, FactionData> {
-  const record: Record<string, FactionData> = {};
-  for (const faction of factions) {
-    record[faction.id] = faction;
-  }
-  return record;
 }
 
 function buildFactionStateRecord(factions: FactionData[]): Record<string, FactionState> {
@@ -64,14 +55,6 @@ function buildFactionStateRecord(factions: FactionData[]): Record<string, Factio
     };
   }
   return states;
-}
-
-function buildUnitDefinitionRecord(units: UnitDefinition[]): Record<string, UnitDefinition> {
-  const record: Record<string, UnitDefinition> = {};
-  for (const definition of units) {
-    record[definition.id] = definition;
-  }
-  return record;
 }
 
 function toUnitState(definition: UnitDefinition): UnitState | null {
@@ -124,9 +107,7 @@ export function buildInitialGameState(options: SetupOptions = {}): GameState {
   const gameState: GameState = {
     hexMap,
     units: buildUnitStateRecord(unitDefinitions),
-    unitDefinitions: buildUnitDefinitionRecord(unitDefinitions),
     factions: buildFactionStateRecord(factions),
-    factionData: buildFactionDataRecord(factions),
     players: buildPlayerStates(playerSlots),
     diplomacyDeck: {
       drawPile: personalityCards.map((card) => `diplomacy-${card.id}`),
@@ -140,7 +121,6 @@ export function buildInitialGameState(options: SetupOptions = {}): GameState {
     maxTurns: options.maxTurns ?? 20,
     turnOrder: playerSlots.map((slot) => slot.id),
     activePlayerIndex: 0,
-    phase: 'playerTurn',
     stage: 'rollEvents',
     pendingCombats: [],
     log: [`Game initialized with seed "${seed}"`],

@@ -13,6 +13,8 @@ interface HexBoardProps {
   currentPlayerId: string;
   selectedUnitId: string | null;
   legalDestinationKeys: Set<string>;
+  selectedCombatAttackerKey: string | null;
+  combatTargetKeys: Set<string>;
   onSelectUnit: (unitId: string) => void;
   onSelectHex: (col: number, row: number) => void;
 }
@@ -30,6 +32,8 @@ export default function HexBoard({
   currentPlayerId,
   selectedUnitId,
   legalDestinationKeys,
+  selectedCombatAttackerKey,
+  combatTargetKeys,
   onSelectUnit,
   onSelectHex,
 }: HexBoardProps) {
@@ -149,8 +153,10 @@ export default function HexBoard({
               <polygon
                 key={key}
                 points={mapHexPolygonPoints(hex.col, hex.row)}
-                className={`hex${legalDestinationKeys.has(key) ? ' is-legal-destination' : ''}`}
+                className={`hex${legalDestinationKeys.has(key) ? ' is-legal-destination' : ''}${selectedCombatAttackerKey === key ? ' is-combat-attacker' : ''}${combatTargetKeys.has(key) ? ' is-combat-target' : ''}`}
                 data-legal-destination={legalDestinationKeys.has(key) ? 'true' : 'false'}
+                data-combat-target={combatTargetKeys.has(key) ? 'true' : 'false'}
+                data-hex-key={key}
                 onClick={() => onSelectHex(hex.col, hex.row)}
               />
             );
@@ -166,6 +172,7 @@ export default function HexBoard({
               <g
                 key={`unit-${key}`}
                 className={`unit-stack${selected ? ' is-selected' : ''}`}
+                data-hex-key={key}
                 onClick={() => {
                   if (primaryUnitId) onSelectUnit(primaryUnitId);
                 }}

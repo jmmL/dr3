@@ -21,6 +21,7 @@
 ## Tooling
 
 - `docs/tooling/mcp-playwright.md` - MCP Playwright setup notes.
+- `docs/tooling/dependency-audit.md` - current dependency audit triage.
 
 ## Reference Data
 

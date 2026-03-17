@@ -1,6 +1,9 @@
 # DR3 PRD Execution Plan (2026-02-09)
 
-This is the active implementation tracker against `docs/prd/divine-right-prd.md`.
+> Historical note: this tracker has been superseded by `docs/plans/2026-03-17-recovery-plan.md`.
+> It remains for context, but it no longer reflects the trusted runtime baseline.
+
+This was the implementation tracker against `docs/prd/divine-right-prd.md` before the recovery rebaseline.
 Older working plans and review docs are archived under `docs/plans/archive/`.
 
 ## Current status

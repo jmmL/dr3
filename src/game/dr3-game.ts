@@ -1,8 +1,9 @@
 import type { Game } from 'boardgame.io';
 import { INVALID_MOVE, TurnOrder } from 'boardgame.io/core';
-import type { GameState, TurnStage } from '@/types';
+import type { GameState, RuntimeGameState, TurnStage } from '@/types';
 import { loadHexMap } from '@/data/load-refs';
 import { buildInitialGameState, type SetupOptions } from '@/engine/domain/setup';
+import { assertValidRuntimeGameState } from './runtime-state';
 import {
   canControlUnitForPlayer,
   conductDiplomacyForPlayer,
@@ -19,7 +20,7 @@ import {
 } from '@/engine/domain/rules';
 
 export type DR3SetupData = SetupOptions;
-export type RuntimeGameState = Omit<GameState, 'hexMap'>;
+export type { RuntimeGameState } from '@/types';
 
 const STATIC_HEX_MAP = loadHexMap();
 
@@ -39,7 +40,11 @@ function restoreSnapshotMove(
   { G, events }: { G: RuntimeGameState; events: { setPhase?: (phase: TurnStage) => void } },
   snapshot: RuntimeGameState,
 ) {
-  if (!snapshot || typeof snapshot !== 'object') return INVALID_MOVE;
+  try {
+    assertValidRuntimeGameState(snapshot);
+  } catch {
+    return INVALID_MOVE;
+  }
   Object.assign(G, structuredClone(snapshot));
   if (snapshot.stage) {
     events.setPhase?.(snapshot.stage);
@@ -193,7 +198,6 @@ export const DR3Game: Game<RuntimeGameState, Record<string, unknown>, DR3SetupDa
     order: TurnOrder.DEFAULT,
     onBegin: ({ G, ctx }) => {
       G.currentTurn = ctx.turn;
-      G.phase = 'playerTurn';
       G.activePlayerIndex = G.turnOrder.indexOf(ctx.currentPlayer);
       if (G.activePlayerIndex < 0) G.activePlayerIndex = 0;
 
