@@ -1,71 +1,52 @@
 # DR3 - Divine Right Webapp
 
-## Definition of Complete & Good
-### 1. Complete (Definition of Done)
-A feature or task is **Complete** only when:
-* **Business Logic:** Implements the required logic as verified by passing the full **Conformance Suite** (once this exists).
-* **Testing:** Passes all relevant **Unit Tests** and **End-to-End (E2E) Tests** with no regressions.
-* **Integrated Runtime:** Both UI and gameplay runtime components are implemented and integrated (unless explicitly scoped to a single layer).
-* **Pipeline:** All changes successfully pass the **CI/CD** pipeline.
+## Current Baseline
 
-### 2. Good (Definition of Quality)
-Code and assets are considered **Good** when they are:
-* **Clean:** Follow TDD principles. Keep a separation of concerns and don't repeat yourself. There are useful principles in SOLID that you should follow. Prioritise maintainable code and design. This project utilises reference documents from the physical board game for rules and game pieces; these are thr ultimate source of truth. You must write code that complies with this conformance suite.
-* **Efficient:** Avoids unnecessary complexity or performance bottlenecks. Prefer small patch-style edits to wholesale rewrites.
-* **Documented:** Clear code does not need inline comments and documentation. If code is unclear when you first write it, refactor it to be simpler first. Leave inline comments only for unusual or edge cases. Update relevant documentation when large changes to features or architecture are implemented.
-
-## Learnings
-
-**Conformance Suite Design:** Declarative JSON test specs are specification-first, not TDD. Include negative test cases (what's NOT allowed), not just happy paths. Use rule references to existing JSON for traceability — avoid duplicating rule text in test cases.
-
-**Learning:** Validation harness should enforce schema parity with integration tests.
-
-**Learning:** Rule references must be 2-3 parts (e.g., `25.2` or `25.2.2`), not 4+ parts — group sub-rules under parent.
-
-**Learning:** Mobile-first CI requires local `ios-safari` board contract/visual checks and project-scoped Playwright snapshots.
+- Treat the repo as a recovery-phase prototype, not a rules-complete game.
+- Trusted slice only:
+  - movement legality
+  - combat declaration and resolution
+  - save/load/import/export validation
+  - portable Chromium E2E
+  - runtime conformance coverage for the movement/combat chunks
+- Still incomplete or scaffolded:
+  - diplomacy/cards
+  - random events
+  - sieges
+  - victory conditions
+  - CPU quality
+  - many conformance chunks outside the trusted slice
 
 ## First Steps
-- Review the active plan in `docs/plans/` relevant to the task. The current recovery tracker is `docs/plans/2026-03-17-recovery-plan.md`.
-- Confirm no changes are made under `docs/refs/` unless explicitly authorized.
-- Prefer small, patch-style edits and keep behavior aligned to conformance fixtures.
 
-## Verify Changes
-- Run the full local gate before completion:
-  - `npm run test:local:gate`
-  - This gate must include lint, coverage-gated unit tests, conformance validation/reporting, build, and the portable Chromium E2E lane.
-- If a task is board-visual focused, also run:
-  - `npm run test:local:visual`
-- Only when intentionally changing board visuals, refresh baseline with:
-  - `npm run test:e2e:board:visual:update`
+- Review the active tracker: `docs/plans/2026-03-17-recovery-plan.md`.
+- Review the current architecture baseline: `docs/architecture/app-architecture.md`.
+- Do not modify anything under `docs/refs/` unless explicitly authorized.
 
-## Workflow Reminder
-- At the end of each completed task, always:
-  1. Run `npm run test:local:gate` before committing.
-  2. Confirm the gate passed without skips.
-  3. Commit the changes.
-  4. Open a PR with those committed changes.
-- For each new feature or significant work package:
-  1. Create a new branch before making changes.
-  2. Push that branch to `origin`.
-  3. Open a PR from that branch.
+## Working Rules
 
-## Key Resources
-- **docs/plans/** - Working plans
-- **docs/refs/** - Reference data stored in minified format for LLM use:
+- Prefer small patch-style edits over broad rewrites.
+- Keep behavior aligned to conformance fixtures and runtime state invariants.
+- Do not reintroduce duplicated runtime state or mirrored boardgame.io flow state; `stage` is the only intentional persisted flow mirror.
+- New rules work should improve the trusted slice and move chunks toward `runtime-covered`, not just add adapter-only helpers.
 
-| Original Files | Minified Files | Description |
-|----------------|----------------|-------------|
-| `hexmap.json` | `hexmap.min.json` | Hex grid map data |
-| `factions.json` | `factions.min.json` | Faction definitions |
-| `starting_units.json` | `starting_units.min.json` | Unit deployment data |
-| `abilities.json` | `abilities.min.json` | Unit ability definitions |
-| `personality_cards.json` | `personality_cards.min.json` | Monarch personality cards |
-| `dr3_rules.json` | `dr3_rules.min.json` | Game rules reference |
+## Toolchain
 
-Never modify a file in /docs/refs unless given specific permission to do so.
+- Node `24.x`
+- npm `11.x`
+- Bootstrap with `npm run bootstrap`
 
-## Architecture
-See `docs/architecture/app-architecture.md`.
+## Verification
 
-## Skills
-You have skills in `.claude/skills/` - use them for debugging, TDD, planning, code review, etc.
+- Required local gate before completion: `npm run test:local:gate`
+- Base recovery gate: `npm run verify:base`
+- Run `npm run test:local:visual` when changing board visuals or snapshots.
+- Only refresh visual baselines intentionally: `npm run test:e2e:board:visual:update`
+
+## Workflow
+
+1. Create a `codex/...` branch before significant work.
+2. Run the required verification commands.
+3. Commit locally.
+4. Push the branch to `origin`.
+5. Open a PR.
