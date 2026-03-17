@@ -5,7 +5,7 @@
 A feature or task is **Complete** only when:
 * **Business Logic:** Implements the required logic as verified by passing the full **Conformance Suite** (once this exists).
 * **Testing:** Passes all relevant **Unit Tests** and **End-to-End (E2E) Tests** with no regressions.
-* **Full Stack:** Both Frontend and Backend components are implemented and integrated (unless explicitly scoped to a single layer).
+* **Integrated Runtime:** Both UI and gameplay runtime components are implemented and integrated (unless explicitly scoped to a single layer).
 * **Pipeline:** All changes successfully pass the **CI/CD** pipeline.
 
 ### 2. Good (Definition of Quality)
@@ -25,17 +25,16 @@ Code and assets are considered **Good** when they are:
 **Learning:** Mobile-first CI requires local `ios-safari` board contract/visual checks and project-scoped Playwright snapshots.
 
 ## First Steps
-- Review the active plan in `docs/plans/` relevant to the task.
+- Review the active plan in `docs/plans/` relevant to the task. The current recovery tracker is `docs/plans/2026-03-17-recovery-plan.md`.
 - Confirm no changes are made under `docs/refs/` unless explicitly authorized.
 - Prefer small, patch-style edits and keep behavior aligned to conformance fixtures.
 
 ## Verify Changes
 - Run the full local gate before completion:
   - `npm run test:local:gate`
-  - This gate must include lint, unit tests, TypeScript+Vite build, and board E2E checks.
-- If a task is map/board focused, also run:
-  - `npm run test:e2e:board:contract`
-  - `npm run test:e2e:board:visual`
+  - This gate must include lint, coverage-gated unit tests, conformance validation/reporting, build, and the portable Chromium E2E lane.
+- If a task is board-visual focused, also run:
+  - `npm run test:local:visual`
 - Only when intentionally changing board visuals, refresh baseline with:
   - `npm run test:e2e:board:visual:update`
 
@@ -66,7 +65,7 @@ Code and assets are considered **Good** when they are:
 Never modify a file in /docs/refs unless given specific permission to do so.
 
 ## Architecture
-TBD
+See `docs/architecture/app-architecture.md`.
 
 ## Skills
 You have skills in `.claude/skills/` - use them for debugging, TDD, planning, code review, etc.

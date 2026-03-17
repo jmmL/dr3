@@ -1,6 +1,7 @@
-import type { RuntimeGameState } from '@/game/dr3-game';
+import type { RuntimeGameState } from '@/types';
+import { assertValidRuntimeGameState } from '@/game/runtime-state';
 
-export const SAVE_SCHEMA_VERSION = 1;
+export const SAVE_SCHEMA_VERSION = 2;
 const SAVE_KEY_PREFIX = 'dr3:save:';
 
 export interface SaveMetadata {
@@ -38,13 +39,15 @@ function assertValidSaveObject(value: unknown): asserts value is SavedGame {
   if (typeof candidate.savedAtIso !== 'string' || !candidate.state) {
     throw new Error('Malformed save payload.');
   }
+  assertValidRuntimeGameState(candidate.state);
 }
 
 export function createSaveSnapshot(state: RuntimeGameState): SavedGame {
+  assertValidRuntimeGameState(state);
   return {
     schemaVersion: SAVE_SCHEMA_VERSION,
     savedAtIso: new Date().toISOString(),
-    state,
+    state: structuredClone(state),
   };
 }
 
@@ -67,7 +70,7 @@ export function loadGame(
 
   const parsed = JSON.parse(raw) as unknown;
   assertValidSaveObject(parsed);
-  return parsed;
+  return structuredClone(parsed);
 }
 
 export function deleteSave(slotId: string, storage: StorageLike = localStorage): void {
@@ -81,7 +84,7 @@ export function exportSave(snapshot: SavedGame): string {
 export function importSave(payload: string): SavedGame {
   const parsed = JSON.parse(payload) as unknown;
   assertValidSaveObject(parsed);
-  return parsed;
+  return structuredClone(parsed);
 }
 
 export function listSaveMetadata(

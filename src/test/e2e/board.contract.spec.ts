@@ -63,6 +63,7 @@ test('board loads map image and exposes automation hooks', async ({ page }) => {
       typeof globalThis & {
         render_game_to_text?: unknown;
         advanceTime?: unknown;
+        seedCombatSkirmish?: unknown;
       };
     return {
       href: image.getAttribute('href'),
@@ -71,6 +72,7 @@ test('board loads map image and exposes automation hooks', async ({ page }) => {
       hookTypes: {
         render_game_to_text: typeof hookWindow.render_game_to_text,
         advanceTime: typeof hookWindow.advanceTime,
+        seedCombatSkirmish: typeof hookWindow.seedCombatSkirmish,
       },
     };
   });
@@ -81,6 +83,7 @@ test('board loads map image and exposes automation hooks', async ({ page }) => {
   expect(metrics?.height ?? 0).toBeGreaterThan(1000);
   expect(metrics?.hookTypes.render_game_to_text).toBe('function');
   expect(metrics?.hookTypes.advanceTime).toBe('function');
+  expect(metrics?.hookTypes.seedCombatSkirmish).toBe('function');
 
   assertNoRuntimeErrors(runtimeErrors);
 });

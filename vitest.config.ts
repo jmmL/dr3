@@ -10,5 +10,20 @@ export default defineConfig({
   test: {
     globals: true,
     include: ['src/**/*.test.ts'],
+    coverage: {
+      provider: 'v8',
+      reporter: ['text', 'html'],
+      include: [
+        'src/engine/domain/rules.ts',
+        'src/game/dr3-game.ts',
+        'src/persistence/save-load.ts',
+      ],
+      thresholds: {
+        branches: 55,
+        functions: 70,
+        lines: 70,
+        statements: 70,
+      },
+    },
   },
 });

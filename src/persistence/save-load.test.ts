@@ -1,7 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { buildInitialGameState } from '@/engine/domain/setup';
-import type { RuntimeGameState } from '@/game/dr3-game';
+import type { RuntimeGameState } from '@/types';
 import {
+  SAVE_SCHEMA_VERSION,
   deleteSave,
   exportSave,
   importSave,
@@ -49,7 +50,7 @@ describe('save-load', () => {
   it('exports and imports a save payload', () => {
     const state = toRuntimeState();
     const saved = {
-      schemaVersion: 1,
+      schemaVersion: SAVE_SCHEMA_VERSION,
       savedAtIso: new Date().toISOString(),
       state,
     };
@@ -70,5 +71,18 @@ describe('save-load', () => {
     const metadata = listSaveMetadata(['slot-a', 'slot-b'], storage);
     expect(metadata).toHaveLength(1);
     expect(metadata[0]?.slotId).toBe('slot-a');
+  });
+
+  it('rejects malformed runtime state on import', () => {
+    const invalidPayload = JSON.stringify({
+      schemaVersion: SAVE_SCHEMA_VERSION,
+      savedAtIso: new Date().toISOString(),
+      state: {
+        stage: 'movement',
+        log: [],
+      },
+    });
+
+    expect(() => importSave(invalidPayload)).toThrow(/state\.units/i);
   });
 });

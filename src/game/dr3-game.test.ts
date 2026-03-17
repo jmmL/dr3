@@ -129,4 +129,17 @@ describe('DR3Game', () => {
     client.moves.restoreSnapshot?.(movementState.G);
     expect(client.getState()?.G.stage).toBe('movement');
   });
+
+  it('rejects invalid restoreSnapshot payloads', () => {
+    const client = createClient();
+    const before = client.getState();
+    expect(before?.G.stage).toBe('rollEvents');
+
+    client.moves.restoreSnapshot?.({
+      stage: 'invalid-stage',
+      log: [],
+    } as never);
+
+    expect(client.getState()?.G.stage).toBe('rollEvents');
+  });
 });

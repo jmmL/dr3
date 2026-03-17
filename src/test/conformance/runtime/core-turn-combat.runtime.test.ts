@@ -7,6 +7,8 @@ import {
   declareCombatForPlayer,
   findAllLegalMovements,
   findFirstCombatPair,
+  listCombatTargetsForHex,
+  moveUnitForPlayer,
   resolveNextCombatForPlayer,
   validateMoveUnitForPlayer,
 } from '@/engine/domain/rules';
@@ -96,6 +98,18 @@ function injectAdjacentEnemy(client: Dr3Client): void {
       },
     },
   };
+  clientWithOverride.overrideGameState({ ...state, G: nextG });
+}
+
+function overrideGameState(
+  client: Dr3Client,
+  transform: (state: RuntimeGameState) => RuntimeGameState,
+): void {
+  const state = expectState(client);
+  const clientWithOverride = client as unknown as {
+    overrideGameState: (nextState: unknown) => void;
+  };
+  const nextG = transform(structuredClone(state.G) as RuntimeGameState);
   clientWithOverride.overrideGameState({ ...state, G: nextG });
 }
 
@@ -193,6 +207,73 @@ describe('Runtime conformance: core turn + combat', () => {
     expect(unitAfter.movementRemaining).toBeLessThanOrEqual(unitBefore.movementRemaining);
   });
 
+  it('movement trusted slice lets the active player move a controlled allied unit', () => {
+    const client = createClient('0');
+    runToMovement(client);
+    const state = expectState(client);
+    const currentPlayer = state.ctx.currentPlayer;
+    const anchorMove = findAllLegalMovements(toDomainState(state.G), currentPlayer)[0];
+    expect(anchorMove).toBeTruthy();
+    if (!anchorMove) return;
+
+    const anchorUnit = state.G.units[anchorMove.unitId];
+    expect(anchorUnit).toBeTruthy();
+    if (!anchorUnit) return;
+
+    const alliedUnit = Object.values(state.G.units).find(
+      (unit) =>
+        unit.id !== anchorUnit.id &&
+        unit.factionId !== anchorUnit.factionId &&
+        unit.isAlive,
+    );
+    expect(alliedUnit).toBeTruthy();
+    if (!alliedUnit) return;
+
+    overrideGameState(client, (nextG) => {
+      const alliedFaction = nextG.factions[alliedUnit.factionId];
+      const alliedState = nextG.units[alliedUnit.id];
+      expect(alliedFaction).toBeTruthy();
+      expect(alliedState).toBeTruthy();
+      if (!alliedFaction || !alliedState) return nextG;
+      nextG.factions[alliedUnit.factionId] = {
+        ...alliedFaction,
+        activationStatus: 'activated',
+        controllingPlayerId: currentPlayer,
+      };
+      nextG.units[alliedUnit.id] = {
+        ...alliedState,
+        position: { ...anchorUnit.position },
+        movementPoints: anchorUnit.movementPoints,
+        movementRemaining: anchorUnit.movementRemaining,
+        movementType: anchorUnit.movementType,
+        abilities: [...anchorUnit.abilities],
+      };
+      return nextG;
+    });
+
+    const alliedState = expectState(client);
+    expect(alliedState.G.units[alliedUnit.id]?.position).toEqual(anchorUnit.position);
+    const alliedCheck = validateMoveUnitForPlayer(
+      toDomainState(alliedState.G),
+      currentPlayer,
+      alliedUnit.id,
+      anchorMove.destination,
+    );
+    expect(alliedCheck.ok).toBe(true);
+
+    const alliedDomainState = toDomainState(
+      structuredClone(alliedState.G) as RuntimeGameState,
+    );
+    const moved = moveUnitForPlayer(
+      alliedDomainState,
+      currentPlayer,
+      alliedUnit.id,
+      anchorMove.destination,
+    );
+    expect(moved.ok).toBe(true);
+    expect(alliedDomainState.units[alliedUnit.id]?.position).toEqual(anchorMove.destination);
+  });
+
   it('25.1.1_only_active_player_attacks: runtime combat declaration requires active player context', () => {
     expect(combatSuite.tests.some((test) => test.id === '25.1.1_only_active_player_attacks')).toBe(
       true,
@@ -257,5 +338,85 @@ describe('Runtime conformance: core turn + combat', () => {
     const resolution = resolveNextCombatForPlayer(domainState, state.ctx.currentPlayer);
     expect(resolution.ok).toBe(true);
     expect(domainState.pendingCombats.length).toBe(0);
+  });
+
+  it('combat trusted slice does not treat controlled allied stacks as hostile defenders', () => {
+    const client = createClient('0');
+    runToMovement(client);
+    client.moves.toCombatPhase?.();
+    const state = expectState(client);
+    const currentPlayer = state.ctx.currentPlayer;
+    const domainState = toDomainState(state.G);
+
+    const attacker = Object.values(state.G.units).find(
+      (unit) =>
+        unit.isAlive &&
+        unit.count > 0 &&
+        isCombatUnit(unit.unitType) &&
+        canControlUnitForPlayer(domainState, currentPlayer, unit),
+    );
+    expect(attacker).toBeTruthy();
+    if (!attacker) return;
+
+    const alliedDefender = Object.values(state.G.units).find(
+      (unit) =>
+        unit.isAlive &&
+        unit.count > 0 &&
+        isCombatUnit(unit.unitType) &&
+        unit.factionId !== attacker.factionId,
+    );
+    expect(alliedDefender).toBeTruthy();
+    if (!alliedDefender) return;
+
+    const adjacent = getNeighborCoords(
+      domainState.hexMap,
+      attacker.position.col,
+      attacker.position.row,
+    ).find((coord) =>
+      !Object.values(state.G.units).some(
+        (candidate) =>
+          candidate.isAlive &&
+          candidate.position.col === coord.col &&
+          candidate.position.row === coord.row &&
+          canControlUnitForPlayer(domainState, currentPlayer, candidate),
+      ),
+    );
+    expect(adjacent).toBeTruthy();
+    if (!adjacent) return;
+
+    overrideGameState(client, (nextG) => {
+      const alliedFaction = nextG.factions[alliedDefender.factionId];
+      const alliedUnitState = nextG.units[alliedDefender.id];
+      expect(alliedFaction).toBeTruthy();
+      expect(alliedUnitState).toBeTruthy();
+      if (!alliedFaction || !alliedUnitState) return nextG;
+      nextG.factions[alliedDefender.factionId] = {
+        ...alliedFaction,
+        activationStatus: 'activated',
+        controllingPlayerId: currentPlayer,
+      };
+      nextG.units[alliedDefender.id] = {
+        ...alliedUnitState,
+        position: { col: adjacent.col, row: adjacent.row },
+      };
+      return nextG;
+    });
+
+    const alliedState = expectState(client);
+    const combatTargets = listCombatTargetsForHex(
+      toDomainState(alliedState.G),
+      currentPlayer,
+      attacker.position,
+    );
+    expect(combatTargets).toEqual([]);
+
+    client.moves.declareCombat?.(
+      attacker.position.col,
+      attacker.position.row,
+      adjacent.col,
+      adjacent.row,
+    );
+    const after = expectState(client);
+    expect(after.G.pendingCombats).toHaveLength(0);
   });
 });
