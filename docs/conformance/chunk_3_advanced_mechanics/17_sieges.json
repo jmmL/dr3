@@ -783,6 +783,206 @@
         "forced_peace_applicable": false
       },
       "tags": ["negative"]
+    },
+    {
+      "id": "17.10.3_plunder_regular_castle_vp",
+      "rule_ref": "17.10.3",
+      "description": "Plundering a regular castle awards VP equal to 5 times the castle defense value",
+      "input": {
+        "castle_type": "regular",
+        "castle_defense_value": 4,
+        "action": "plunder"
+      },
+      "expected": {
+        "victory_points_awarded": 20
+      }
+    },
+    {
+      "id": "17.10.3_plunder_royal_castle_vp",
+      "rule_ref": "17.10.3",
+      "description": "Plundering a royal castle awards VP equal to 10 times the castle defense value",
+      "input": {
+        "castle_type": "royal",
+        "castle_defense_value": 5,
+        "action": "plunder"
+      },
+      "expected": {
+        "victory_points_awarded": 50
+      }
+    },
+    {
+      "id": "17.10.3_capture_no_plunder_no_vp",
+      "rule_ref": "17.10.3",
+      "description": "Capturing a castle without plundering awards no victory points",
+      "input": {
+        "castle_type": "regular",
+        "castle_defense_value": 4,
+        "action": "capture"
+      },
+      "expected": {
+        "victory_points_awarded": 0
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "17.7.2_breakout_requires_combat_units",
+      "rule_ref": "17.7.2",
+      "description": "Breakout attempt requires combat units inside the castle",
+      "input": {
+        "units_inside": [],
+        "non_combat_units_inside": ["ambassador"],
+        "attempt_breakout": true
+      },
+      "expected": {
+        "breakout_allowed": false,
+        "reason": "no_combat_units_inside"
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "17.7.2_breakout_fights_all_besiegers",
+      "rule_ref": "17.7.2",
+      "description": "Breakout forces must fight all besieging units simultaneously",
+      "input": {
+        "units_inside": ["u1", "u2", "u3"],
+        "besieging_units": ["b1", "b2", "b3", "b4"],
+        "attempt_breakout": true
+      },
+      "expected": {
+        "breakout_allowed": true,
+        "must_fight_all_besiegers": true,
+        "combat_type": "simultaneous"
+      }
+    },
+    {
+      "id": "17.7.2_breakout_cleared_hexes_become_move_options",
+      "rule_ref": "17.7.2",
+      "description": "Hexes cleared during breakout become available movement destinations for survivors",
+      "input": {
+        "breakout_result": "partial_win",
+        "cleared_adjacent_hexes": [[10, 4], [11, 5]],
+        "survivors": ["u1", "u2"]
+      },
+      "expected": {
+        "movement_options_include": [[10, 4], [11, 5]],
+        "survivors_may_move": true
+      }
+    },
+    {
+      "id": "17.7.3_sortie_targets_adjacent_hex",
+      "rule_ref": "17.7.3",
+      "description": "Besieged units may sortie against enemies in an adjacent hex during combat phase",
+      "input": {
+        "castle_hex": [10, 5],
+        "target_hex": [10, 4],
+        "enemies_in_target_hex": true,
+        "besieged_units_attacking": true,
+        "current_phase": "combat_phase"
+      },
+      "expected": {
+        "sortie_allowed": true,
+        "target_must_be_adjacent": true
+      }
+    },
+    {
+      "id": "17.7.3_sortie_no_advance_if_defenders_remain",
+      "rule_ref": "17.7.3",
+      "description": "Sortie units cannot advance if any defenders remain in the target hex",
+      "input": {
+        "attacking_from_siege": true,
+        "defender_hex_cleared": false,
+        "remaining_defenders": 1
+      },
+      "expected": {
+        "advance_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "17.7.3_sortie_advance_only_one_hex",
+      "rule_ref": "17.7.3",
+      "description": "Sortie advance is limited to exactly one hex even with remaining movement",
+      "input": {
+        "attacking_from_siege": true,
+        "defender_hex_cleared": true,
+        "unit_remaining_movement": 4
+      },
+      "expected": {
+        "advance_limit_hexes": 1,
+        "excess_movement_forfeited": true
+      }
+    },
+    {
+      "id": "17.6_siege_invalid_when_besiegers_move_away",
+      "rule_ref": "17.6",
+      "description": "Siege becomes invalid when besieging units move away and conditions are no longer met",
+      "input": {
+        "castle_hex": [10, 5],
+        "siege_active": true,
+        "adjacent_hexes_covered": 4,
+        "total_adjacent_hexes": 6
+      },
+      "expected": {
+        "siege_valid": false,
+        "siege_ends": true,
+        "reason": "surrounding_condition_lost"
+      }
+    },
+    {
+      "id": "17.6_siege_invalid_insufficient_force_after_losses",
+      "rule_ref": "17.6",
+      "description": "Siege becomes invalid if besieging force drops below required minimum after casualties",
+      "input": {
+        "siege_active": true,
+        "besieging_units": 4,
+        "intrinsic_defense": 4,
+        "units_inside": 2,
+        "required_minimum": 6
+      },
+      "expected": {
+        "siege_valid": false,
+        "siege_ends": true,
+        "reason": "insufficient_force"
+      }
+    },
+    {
+      "id": "17.1.3_only_friendly_armies_count_as_besieging",
+      "rule_ref": "17.1.3",
+      "description": "Only friendly armies in adjacent hexes count toward besieging strength; enemy armies are excluded",
+      "input": {
+        "adjacent_units": [
+          {"owner": "besieger", "strength": 4},
+          {"owner": "besieger", "strength": 3},
+          {"owner": "enemy", "strength": 5}
+        ],
+        "intrinsic_defense": 4,
+        "units_inside": 2
+      },
+      "expected": {
+        "besieging_strength": 7,
+        "enemy_strength_excluded": 5,
+        "siege_allowed": true
+      }
+    },
+    {
+      "id": "17.1.3_enemy_adjacent_not_counted",
+      "rule_ref": "17.1.3",
+      "description": "Enemy armies adjacent to castle do not contribute to besieging player's siege strength",
+      "input": {
+        "adjacent_units": [
+          {"owner": "besieger", "strength": 3},
+          {"owner": "enemy", "strength": 8}
+        ],
+        "intrinsic_defense": 4,
+        "units_inside": 2,
+        "required_minimum": 6
+      },
+      "expected": {
+        "besieging_strength": 3,
+        "siege_allowed": false,
+        "reason": "insufficient_force"
+      },
+      "tags": ["negative"]
     }
   ]
 }

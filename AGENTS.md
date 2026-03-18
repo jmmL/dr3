@@ -14,6 +14,12 @@ Code and assets are considered **Good** when they are:
 * **Efficient:** Avoids unnecessary complexity or performance bottlenecks. Prefer small patch-style edits to wholesale rewrites.
 * **Documented:** Clear code does not need inline comments and documentation. If code is unclear when you first write it, refactor it to be simpler first. Leave inline comments only for unusual or edge cases. Update relevant documentation when large changes to features or architecture are implemented.
 
+## Conventions
+
+**Rule validation pattern:** Rule validation functions return `DomainResult` (`{ ok: boolean, reason?: string }`) — never throw for rule violations. This pattern is used consistently in `src/engine/domain/rules.ts` and all engine helpers. Throwing is reserved for programmer errors (missing data, invalid state), not rule-based rejections.
+
+**AI testability:** AI behavior must have conformance test coverage before promotion to trusted slice. AI decisions should be testable through the same conformance framework as rules.
+
 ## Learnings
 
 **Conformance Suite Design:** Declarative JSON test specs are specification-first, not TDD. Include negative test cases (what's NOT allowed), not just happy paths. Use rule references to existing JSON for traceability — avoid duplicating rule text in test cases.
@@ -23,6 +29,12 @@ Code and assets are considered **Good** when they are:
 **Learning:** Rule references must be 2-3 parts (e.g., `25.2` or `25.2.2`), not 4+ parts — group sub-rules under parent.
 
 **Learning:** Mobile-first CI requires local `ios-safari` board contract/visual checks and project-scoped Playwright snapshots.
+
+**Learning:** `coverage_matrix.json` must stay in sync with conformance spec files — every new test ID needs a corresponding entry. The conformance validation script catches drift.
+
+**Learning:** New conformance test inputs must match existing adapter signatures. Adding a test case without wiring its adapter is incomplete work.
+
+**Learning:** Pathfinding hot paths (priority queues) should use O(log n) structures (binary heap), not O(n) linear scans. Port proven optimisations rather than reinventing.
 
 ## First Steps
 - Review the active plan in `docs/plans/` relevant to the task. The current recovery tracker is `docs/plans/2026-03-17-recovery-plan.md`.
@@ -42,8 +54,9 @@ Code and assets are considered **Good** when they are:
 - At the end of each completed task, always:
   1. Run `npm run test:local:gate` before committing.
   2. Confirm the gate passed without skips.
-  3. Commit the changes.
-  4. Open a PR with those committed changes.
+  3. **Self-improve:** Review the diff for regressions, drift from plan, and new learnings. Update this file's Learnings section with anything discovered. This loop closes every implementation task.
+  4. Commit the changes.
+  5. Open a PR with those committed changes.
 - For each new feature or significant work package:
   1. Create a new branch before making changes.
   2. Push that branch to `origin`.
