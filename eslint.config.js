@@ -17,4 +17,11 @@ export default tseslint.config(
       ],
     },
   },
+  {
+    files: ['src/**/*.tsx'],
+    ignores: ['src/test/**'],
+    rules: {
+      'max-lines': ['warn', { max: 400, skipBlankLines: true, skipComments: true }],
+    },
+  },
 );

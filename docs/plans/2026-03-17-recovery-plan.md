@@ -47,3 +47,4 @@ This is the active implementation tracker for the recovery phase.
 3. Implement siege declaration and state transitions before keeping siege resolution in the turn flow.
 4. Implement victory scoring with runtime tests and end-game assertions.
 5. Promote unwired chunks one subsystem at a time from `unwired` -> `adapter-only` -> `runtime-covered`.
+6. AI behavior must have conformance test coverage before promotion to trusted slice.

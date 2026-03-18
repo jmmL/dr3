@@ -908,6 +908,12 @@
     "25.2.10": [
       "25.2.10_no_second_retreat"
     ],
+    "25.2.6": [
+      "25.2.6_retreat_sets_movement_to_zero"
+    ],
+    "25.2.7": [
+      "25.2.7_retreat_marks_unit_as_retreated"
+    ],
     "25.2.11": [
       "25.2.11_attacker_advance_after_retreat",
       "25.2.11_continuation_after_retreat_still_adjacent",

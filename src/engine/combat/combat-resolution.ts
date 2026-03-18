@@ -125,6 +125,7 @@ export function getMovementAfterRetreat(): number {
 
 /**
  * Retreating unit is marked as retreated (rule 25.2.7).
+ * A retreated unit cannot attempt retreat again this turn.
  */
 export function isMarkedAsRetreated(hasRetreated: boolean): boolean {
   return hasRetreated;
