@@ -635,7 +635,8 @@
       "input": {
         "unit_type": "monarch",
         "unit_strength": 0,
-        "role": "leader"
+        "role": "leader",
+        "is_combat_unit": false
       },
       "expected": {
         "attack_allowed": false
@@ -697,11 +698,11 @@
       "description": "A unit that has already attacked this turn cannot attack again",
       "input": {
         "unit_id": "u1",
-        "has_attacked_this_turn": true,
+        "attacks_made_this_turn": 1,
         "target_hex": [10, 6]
       },
       "expected": {
-        "attack_allowed": false
+        "additional_attack_allowed": false
       },
       "tags": ["negative"]
     },
@@ -712,8 +713,7 @@
       "input": {
         "defender_retreated": true,
         "retreat_destination": [11, 5],
-        "attacker_hex": [10, 5],
-        "retreat_destination_adjacent_to_attacker": true
+        "attacker_hex": [10, 5]
       },
       "expected": {
         "continuation_attack_allowed": true
@@ -726,8 +726,7 @@
       "input": {
         "defender_retreated": true,
         "retreat_destination": [12, 7],
-        "attacker_hex": [10, 5],
-        "retreat_destination_adjacent_to_attacker": false
+        "attacker_hex": [10, 5]
       },
       "expected": {
         "continuation_attack_allowed": false
@@ -753,7 +752,8 @@
       "description": "Retreating unit is marked as having retreated and cannot retreat again",
       "input": {
         "unit_id": "u1",
-        "retreat_successful": true
+        "retreat_successful": true,
+        "still_adjacent_to_attacker": true
       },
       "expected": {
         "has_retreated": true,

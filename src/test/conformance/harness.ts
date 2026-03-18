@@ -23,7 +23,7 @@ export interface ConformanceSuite {
 export type AdapterFn = (
   input: Record<string, unknown>,
   expected: Record<string, unknown>,
-) => void;
+) => boolean;
 
 /**
  * Load a conformance test suite from a JSON file.
@@ -57,7 +57,11 @@ export function runConformanceSuite(
       }
 
       it(`${test.id}: ${test.description}`, () => {
-        adapter(test.input, test.expected);
+        expect.hasAssertions();
+        const handled = adapter(test.input, test.expected);
+        if (!handled) {
+          throw new Error(`Unhandled conformance case: ${test.id}`);
+        }
       });
     }
   });

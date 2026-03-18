@@ -28,19 +28,19 @@ runConformanceSuite(
           input.moving_player as string,
         ),
       ).toBe(expected.movement_allowed);
-      return;
+      return true;
     }
 
     // 18.1.2 - Any direction
     if ('movement_directions' in input) {
       expect(canMoveAnyDirection()).toBe(expected.movement_allowed);
-      return;
+      return true;
     }
 
     // 18.1.3 - No saving MP
     if ('next_turn_bonus' in input) {
       expect(canSaveMovementPoints()).toBe(expected.bonus_applied);
-      return;
+      return true;
     }
 
     // 18.1.4 - Minimum movement
@@ -53,7 +53,7 @@ runConformanceSuite(
       expect(result.minimumMovementApplies).toBe(
         expected.minimum_movement_applies,
       );
-      return;
+      return true;
     }
 
     // 18.2.x / 18.3.x - Unit movement eligibility
@@ -79,7 +79,7 @@ runConformanceSuite(
             | undefined,
         }),
       ).toBe(expected.movement_allowed);
-      return;
+      return true;
     }
 
     // 18.4.1 - Stack speed
@@ -90,13 +90,13 @@ runConformanceSuite(
       expect(getStackMovementAllowance(units)).toBe(
         expected.stack_movement_allowance,
       );
-      return;
+      return true;
     }
 
     // 18.4.2 - Leave stack
     if ('leave_allowed' in expected) {
       expect(canLeaveStack()).toBe(expected.leave_allowed);
-      return;
+      return true;
     }
 
     // 18.4.3 - Independent movement after leaving
@@ -104,19 +104,19 @@ runConformanceSuite(
       expect(canContinueIndependently(input.remaining_mp as number)).toBe(
         expected.independent_movement_allowed,
       );
-      return;
+      return true;
     }
 
     // 18.5.1 - Cannot enter enemy hex
     if ('entry_allowed' in expected && 'target_hex_contains' in input) {
       expect(canEnterEnemyOccupiedHex()).toBe(expected.entry_allowed);
-      return;
+      return true;
     }
 
     // 18.5.2 - Allied stacking end of turn
     if ('position_allowed' in expected) {
       expect(canEndTurnWithAlliedKingdom()).toBe(expected.position_allowed);
-      return;
+      return true;
     }
 
     // 18.5.3 - Exceeding allowance
@@ -127,7 +127,7 @@ runConformanceSuite(
           input.movement_spent as number,
         ),
       ).toBe(expected.movement_allowed);
-      return;
+      return true;
     }
 
     // 18.5.4 - Terrain cost vs remaining
@@ -143,7 +143,7 @@ runConformanceSuite(
           expected.minimum_movement_applies,
         );
       }
-      return;
+      return true;
     }
 
     // 18.5.5 - Hexside crossing
@@ -154,7 +154,7 @@ runConformanceSuite(
           input.hexside_type as string,
         ),
       ).toBe(expected.crossing_allowed);
-      return;
+      return true;
     }
 
     // 18.5.6 - Off-map
@@ -168,7 +168,9 @@ runConformanceSuite(
       if ('movement_allowed' in expected) {
         expect(result.movementAllowed).toBe(expected.movement_allowed);
       }
-      return;
+      return true;
     }
+
+    return false;
   },
 );

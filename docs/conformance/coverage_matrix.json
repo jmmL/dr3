@@ -896,6 +896,12 @@
     "25.2.5": [
       "25.2.5_same_hex_retreat"
     ],
+    "25.2.6": [
+      "25.2.6_retreat_sets_movement_to_zero"
+    ],
+    "25.2.7": [
+      "25.2.7_retreat_marks_unit_as_retreated"
+    ],
     "25.2.9": [
       "25.2.9_no_retreat_if_surrounded"
     ],

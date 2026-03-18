@@ -2,6 +2,7 @@
  * Leader rules — pure functions (rule 26).
  */
 
+import { rollDie, seedToState } from '@/engine/domain/rng';
 import { isLeader, getCombatStrength } from '@/engine/units/unit-helpers';
 
 /**
@@ -90,6 +91,17 @@ export function getLeaderCombatBonus(personalityCardCombatBonus: number): number
 }
 
 /**
+ * Apply leader combat bonus during combat resolution (rule 26.4.1).
+ */
+export function getLeaderAdjustedCombatValue(
+  baseStrength: number,
+  combatRoll: number,
+  combatBonus: number,
+): number {
+  return baseStrength + combatRoll + combatBonus;
+}
+
+/**
  * Multiple leader bonuses stack (rule 26.4.2).
  */
 export function getTotalLeaderCombatBonus(
@@ -161,7 +173,7 @@ export function resolveFateRoll(
 }
 
 /**
- * Get fate outcome effects (rule 26.6.2).
+ * Fate outcome effects (rule 26.6.2).
  */
 export function getFateOutcomeEffect(
   outcome: 'killed' | 'no_effect' | 'captured',
@@ -198,6 +210,20 @@ export function getFateOutcomeEffect(
         remainsInPlace: true,
       };
   }
+}
+
+/**
+ * Deterministic seeded fate roll for conformance coverage.
+ */
+export function rollLeaderFateWithSeed(
+  seed: string | number,
+): { roll: number; outcome: 'killed' | 'no_effect' | 'captured' } {
+  const state = seedToState(String(seed));
+  const result = rollDie(state);
+  return {
+    roll: result.value,
+    outcome: resolveFateRoll(result.value),
+  };
 }
 
 /**

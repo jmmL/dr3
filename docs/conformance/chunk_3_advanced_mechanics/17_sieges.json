@@ -920,7 +920,10 @@
         "castle_hex": [10, 5],
         "siege_active": true,
         "adjacent_hexes_covered": 4,
-        "total_adjacent_hexes": 6
+        "total_adjacent_hexes": 6,
+        "besieging_units": 6,
+        "intrinsic_defense": 4,
+        "units_inside": 2
       },
       "expected": {
         "siege_valid": false,
@@ -934,6 +937,8 @@
       "description": "Siege becomes invalid if besieging force drops below required minimum after casualties",
       "input": {
         "siege_active": true,
+        "adjacent_hexes_covered": 6,
+        "total_adjacent_hexes": 6,
         "besieging_units": 4,
         "intrinsic_defense": 4,
         "units_inside": 2,
@@ -979,8 +984,8 @@
       },
       "expected": {
         "besieging_strength": 3,
-        "siege_allowed": false,
-        "reason": "insufficient_force"
+        "enemy_strength_excluded": 8,
+        "siege_allowed": false
       },
       "tags": ["negative"]
     }

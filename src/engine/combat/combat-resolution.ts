@@ -132,7 +132,7 @@ export function isMarkedAsRetreated(hasRetreated: boolean): boolean {
 }
 
 /**
- * Post-retreat continuation: attacker may continue if still adjacent (rule 25.2.11).
+ * Attacker may continue only while still adjacent after retreat (rule 25.2.11).
  */
 export function canContinueAttackAfterRetreat(
   retreatDestination: number[],
@@ -151,19 +151,19 @@ export function getUnitCombatStrength(unitType: string): number {
 }
 
 /**
- * Calculate combined stack combat strength (rule 25.4.3).
+ * Combined stack combat strength (rule 25.4.3).
  */
 export function getStackCombatStrength(unitTypes: string[]): number {
-  return unitTypes.reduce((sum, type) => sum + getUnitCombatStrength(type), 0);
+  return unitTypes.reduce((sum, unitType) => {
+    return sum + getUnitCombatStrength(unitType);
+  }, 0);
 }
 
 /**
- * Check if unit type can initiate attacks (rule 25.7.1).
+ * Unit-type attack eligibility (rule 25.7.1).
  */
 export function canUnitTypeInitiateAttack(unitType: string): boolean {
-  if (unitType === 'monarch') return false;
-  if (unitType === 'ambassador') return false;
-  return true;
+  return unitType !== 'monarch' && unitType !== 'ambassador';
 }
 
 /**
