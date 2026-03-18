@@ -161,6 +161,46 @@ export function resolveFateRoll(
 }
 
 /**
+ * Get fate outcome effects (rule 26.6.2).
+ */
+export function getFateOutcomeEffect(
+  outcome: 'killed' | 'no_effect' | 'captured',
+): {
+  removedFromGame: boolean;
+  removedFromMap: boolean;
+  heldByCaptor: boolean;
+  ransomEligible: boolean;
+  remainsInPlace: boolean;
+} {
+  switch (outcome) {
+    case 'killed':
+      return {
+        removedFromGame: true,
+        removedFromMap: true,
+        heldByCaptor: false,
+        ransomEligible: false,
+        remainsInPlace: false,
+      };
+    case 'captured':
+      return {
+        removedFromGame: false,
+        removedFromMap: true,
+        heldByCaptor: true,
+        ransomEligible: true,
+        remainsInPlace: false,
+      };
+    case 'no_effect':
+      return {
+        removedFromGame: false,
+        removedFromMap: false,
+        heldByCaptor: false,
+        ransomEligible: false,
+        remainsInPlace: true,
+      };
+  }
+}
+
+/**
  * Check if additional fate roll is needed (rule 26.6.3).
  * Only one fate roll per player turn / per enemy phase.
  */

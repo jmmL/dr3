@@ -106,6 +106,25 @@ Trusted UI slice tests:
 - Static bundle is built with Vite and deployed via GitHub Pages workflow in `.github/workflows/deploy-pages.yml`.
 - Deployment path uses `dist/` artifact upload.
 
+## Architectural Decision Records (from dr3-old)
+
+These decisions were reinforced by analysis of the prior `dr3-old` implementation (307 commits, React 19 + Zustand + Vite).
+
+### ADR-1: Conformance suite over code-only tests
+dr3-old encoded rules only in TypeScript test files with no declarative spec. When tests failed it was unclear whether the test or the rule was wrong. DR3 uses declarative JSON conformance specs (`docs/conformance/`) with rule references for traceability — the spec is the source of truth, adapters verify code matches it.
+
+### ADR-2: Reference data as JSON, not TypeScript
+dr3-old had an 8,600-line `mapData.ts` that was impossible to diff, validate, or share with other tools. DR3 uses `docs/refs/*.min.json` loaded at runtime, keeping data separate from logic.
+
+### ADR-3: Persistence as first-class concern
+dr3-old added persistence as a 46-line afterthought with no schema versioning. DR3 treats save/load as a trusted-slice system with schema-versioned snapshots and shape validation on import.
+
+### ADR-4: Component size limit (400 lines)
+dr3-old's `GameControls.tsx` grew to 1,913 lines handling 5+ concerns with fragile hook dependencies. ESLint `max-lines` rule enforces a 400-line warning for `src/**/*.tsx` to prevent recurrence.
+
+### ADR-5: boardgame.io trade-offs
+Chosen for turn/phase management, multiplayer readiness, and deterministic RNG seeding. Accept framework constraints (e.g. `ctx.phase` not persisted in snapshots) rather than fighting them.
+
 ## Known Gaps
 
 - Diplomacy/cards, random events, sieges, and victory conditions are not yet trusted runtime systems.

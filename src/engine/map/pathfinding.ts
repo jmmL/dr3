@@ -23,37 +23,63 @@ function compareCoords(a: HexCoord, b: HexCoord): number {
   return a.row - b.row;
 }
 
-function popBestNode(frontier: FrontierNode[]): FrontierNode | undefined {
-  if (frontier.length === 0) return undefined;
-  let bestIndex = 0;
-  for (let i = 1; i < frontier.length; i += 1) {
-    const current = frontier[i]!;
-    const best = frontier[bestIndex]!;
-    if (current.priority < best.priority) {
-      bestIndex = i;
-      continue;
-    }
-    if (current.priority > best.priority) continue;
+/** Compare two frontier nodes for heap ordering (negative = a is better). */
+function compareNodes(a: FrontierNode, b: FrontierNode): number {
+  if (a.priority !== b.priority) return a.priority - b.priority;
+  if (a.cost !== b.cost) return a.cost - b.cost;
+  if (a.steps !== b.steps) return a.steps - b.steps;
+  return compareCoords(a.coord, b.coord);
+}
 
-    if (current.cost < best.cost) {
-      bestIndex = i;
-      continue;
-    }
-    if (current.cost > best.cost) continue;
+/** Binary min-heap for O(log n) push/pop on frontier nodes. */
+class MinHeap {
+  private heap: FrontierNode[] = [];
 
-    if (current.steps < best.steps) {
-      bestIndex = i;
-      continue;
-    }
-    if (current.steps > best.steps) continue;
+  get length(): number {
+    return this.heap.length;
+  }
 
-    if (compareCoords(current.coord, best.coord) < 0) {
-      bestIndex = i;
+  push(node: FrontierNode): void {
+    this.heap.push(node);
+    this.bubbleUp(this.heap.length - 1);
+  }
+
+  pop(): FrontierNode | undefined {
+    const heap = this.heap;
+    if (heap.length === 0) return undefined;
+    const top = heap[0]!;
+    const last = heap.pop()!;
+    if (heap.length > 0) {
+      heap[0] = last;
+      this.sinkDown(0);
+    }
+    return top;
+  }
+
+  private bubbleUp(i: number): void {
+    const heap = this.heap;
+    while (i > 0) {
+      const parent = (i - 1) >> 1;
+      if (compareNodes(heap[i]!, heap[parent]!) >= 0) break;
+      [heap[i], heap[parent]] = [heap[parent]!, heap[i]!];
+      i = parent;
     }
   }
 
-  const [node] = frontier.splice(bestIndex, 1);
-  return node;
+  private sinkDown(i: number): void {
+    const heap = this.heap;
+    const n = heap.length;
+    while (true) {
+      let smallest = i;
+      const left = 2 * i + 1;
+      const right = 2 * i + 2;
+      if (left < n && compareNodes(heap[left]!, heap[smallest]!) < 0) smallest = left;
+      if (right < n && compareNodes(heap[right]!, heap[smallest]!) < 0) smallest = right;
+      if (smallest === i) break;
+      [heap[i], heap[smallest]] = [heap[smallest]!, heap[i]!];
+      i = smallest;
+    }
+  }
 }
 
 function sortCoords(coords: HexCoord[]): HexCoord[] {
@@ -128,13 +154,12 @@ export function findReachableHexes(input: FindReachableInput): ReachableResult {
   const bestCost = new Map<string, number>([[startKey, 0]]);
   const bestSteps = new Map<string, number>([[startKey, 0]]);
   const coordByKey = new Map<string, HexCoord>([[startKey, start]]);
-  const frontier: FrontierNode[] = [
-    { coord: start, cost: 0, steps: 0, priority: 0 },
-  ];
+  const frontier = new MinHeap();
+  frontier.push({ coord: start, cost: 0, steps: 0, priority: 0 });
   let visited = 0;
 
   while (frontier.length > 0) {
-    const current = popBestNode(frontier);
+    const current = frontier.pop();
     if (!current) break;
     const currentKey = hexKeyFromCoord(current.coord);
     const storedCost = bestCost.get(currentKey);
@@ -264,18 +289,17 @@ export function findPath(input: FindPathInput): PathResult {
     [startKey, start],
     [goalKey, goal],
   ]);
-  const frontier: FrontierNode[] = [
-    {
-      coord: start,
-      cost: 0,
-      steps: 0,
-      priority: heuristic(start, goal),
-    },
-  ];
+  const frontier = new MinHeap();
+  frontier.push({
+    coord: start,
+    cost: 0,
+    steps: 0,
+    priority: heuristic(start, goal),
+  });
   let visited = 0;
 
   while (frontier.length > 0) {
-    const current = popBestNode(frontier);
+    const current = frontier.pop();
     if (!current) break;
     const currentKey = hexKeyFromCoord(current.coord);
     const storedCost = bestCost.get(currentKey);

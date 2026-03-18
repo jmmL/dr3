@@ -117,6 +117,56 @@ export function canAdvanceAfterRetreat(defenderRetreated: boolean): {
 }
 
 /**
+ * Retreat sets movement to zero (rule 25.2.6).
+ */
+export function getMovementAfterRetreat(): number {
+  return 0;
+}
+
+/**
+ * Retreating unit is marked as retreated (rule 25.2.7).
+ * A retreated unit cannot attempt retreat again this turn.
+ */
+export function isMarkedAsRetreated(hasRetreated: boolean): boolean {
+  return hasRetreated;
+}
+
+/**
+ * Post-retreat continuation: attacker may continue if still adjacent (rule 25.2.11).
+ */
+export function canContinueAttackAfterRetreat(
+  retreatDestination: number[],
+  attackerHexes: number[][],
+  adjacencyCheck: (a: number[], b: number[]) => boolean,
+): boolean {
+  return attackerHexes.some((hex) => adjacencyCheck(hex, retreatDestination));
+}
+
+/**
+ * Combat strength per unit type (rule 25.4.3).
+ */
+export function getUnitCombatStrength(unitType: string): number {
+  if (unitType === 'monarch' || unitType === 'ambassador') return 0;
+  return 1;
+}
+
+/**
+ * Calculate combined stack combat strength (rule 25.4.3).
+ */
+export function getStackCombatStrength(unitTypes: string[]): number {
+  return unitTypes.reduce((sum, type) => sum + getUnitCombatStrength(type), 0);
+}
+
+/**
+ * Check if unit type can initiate attacks (rule 25.7.1).
+ */
+export function canUnitTypeInitiateAttack(unitType: string): boolean {
+  if (unitType === 'monarch') return false;
+  if (unitType === 'ambassador') return false;
+  return true;
+}
+
+/**
  * Both sides roll (rule 25.3.1).
  */
 export function getCombatDice(): {

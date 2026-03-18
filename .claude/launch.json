@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "dr3-dev",
+      "runtimeExecutable": "/opt/homebrew/opt/node@22/bin/node",
+      "runtimeArgs": ["node_modules/vite/bin/vite.js"],
+      "port": 4173
+    },
+    {
+      "name": "dr3-preview",
+      "runtimeExecutable": "/opt/homebrew/opt/node@22/bin/node",
+      "runtimeArgs": ["node_modules/vite/bin/vite.js", "preview"],
+      "port": 4173
+    }
+  ]
+}
