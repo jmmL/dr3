@@ -2,6 +2,7 @@
  * Leader rules — pure functions (rule 26).
  */
 
+import { rollDie, seedToState } from '@/engine/domain/rng';
 import { isLeader, getCombatStrength } from '@/engine/units/unit-helpers';
 
 /**
@@ -90,6 +91,17 @@ export function getLeaderCombatBonus(personalityCardCombatBonus: number): number
 }
 
 /**
+ * Apply leader combat bonus during combat resolution (rule 26.4.1).
+ */
+export function getLeaderAdjustedCombatValue(
+  baseStrength: number,
+  combatRoll: number,
+  combatBonus: number,
+): number {
+  return baseStrength + combatRoll + combatBonus;
+}
+
+/**
  * Multiple leader bonuses stack (rule 26.4.2).
  */
 export function getTotalLeaderCombatBonus(
@@ -158,6 +170,60 @@ export function resolveFateRoll(
   if (roll === 1) return 'killed';
   if (roll === 6) return 'captured';
   return 'no_effect';
+}
+
+/**
+ * Fate outcome effects (rule 26.6.2).
+ */
+export function getFateOutcomeEffect(
+  outcome: 'killed' | 'no_effect' | 'captured',
+): {
+  removedFromGame: boolean;
+  removedFromMap: boolean;
+  heldByCaptor: boolean;
+  ransomEligible: boolean;
+  remainsInPlace: boolean;
+} {
+  switch (outcome) {
+    case 'killed':
+      return {
+        removedFromGame: true,
+        removedFromMap: true,
+        heldByCaptor: false,
+        ransomEligible: false,
+        remainsInPlace: false,
+      };
+    case 'captured':
+      return {
+        removedFromGame: false,
+        removedFromMap: true,
+        heldByCaptor: true,
+        ransomEligible: true,
+        remainsInPlace: false,
+      };
+    case 'no_effect':
+      return {
+        removedFromGame: false,
+        removedFromMap: false,
+        heldByCaptor: false,
+        ransomEligible: false,
+        remainsInPlace: true,
+      };
+  }
+}
+
+/**
+ * Deterministic seeded fate roll for conformance coverage.
+ */
+export function rollLeaderFateWithSeed(
+  seed: string | number,
+): { roll: number; outcome: 'killed' | 'no_effect' | 'captured' } {
+  const state = seedToState(String(seed));
+  const result = rollDie(state);
+  return {
+    roll: result.value,
+    outcome: resolveFateRoll(result.value),
+  };
 }
 
 /**

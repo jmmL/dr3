@@ -25,7 +25,7 @@ runConformanceSuite(
     if ('defense_guaranteed' in expected && input.location_type === 'city') {
       expect(sr.isCityDeploymentHex()).toBe(expected.deployment_hex);
       expect(sr.doesCityGuaranteeDefense()).toBe(expected.defense_guaranteed);
-      return;
+      return true;
     }
 
     // 31.2.1 - Specific cities without castles
@@ -41,7 +41,7 @@ runConformanceSuite(
           expect(hex?.intrinsicDefense ?? 0).toBe(expected.intrinsic_defense);
         }
       }
-      return;
+      return true;
     }
 
     // 31.2.1 - Troll locations
@@ -50,32 +50,34 @@ runConformanceSuite(
       const kingdom = input.kingdom as string;
       const allCastles = locations.every((loc) => isCastleHex(loc, kingdom));
       expect(allCastles).toBe(expected.all_are_castles);
-      return;
+      return true;
     }
 
     // 31.2.2 - Deployment
     if ('deployment_allowed' in expected) {
       expect(sr.isCityDeploymentHex()).toBe(expected.deployment_allowed);
-      return;
+      return true;
     }
 
     // 31.2.2 - No siege on non-castle
     if ('siege_allowed' in expected && input.is_castle === false) {
       expect(sr.canBesiegeNonCastle()).toBe(expected.siege_allowed);
-      return;
+      return true;
     }
 
     // 31.3.1 - Castle identification
     if ('is_castle' in expected && 'hex_terrain' in input) {
       expect(sr.isCastleLocation(input.hex_terrain as string[])).toBe(expected.is_castle);
-      return;
+      return true;
     }
 
     // 31.3.2 - Castle defense
     if ('siege_rules_apply' in expected && 'defense_strength' in expected) {
       expect(expected.siege_rules_apply).toBe(true);
       expect(expected.defense_strength).toBe(input.intrinsic_defense);
-      return;
+      return true;
     }
+
+    return false;
   },
 );

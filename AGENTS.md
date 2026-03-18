@@ -24,6 +24,10 @@ Code and assets are considered **Good** when they are:
 
 **Learning:** Mobile-first CI requires local `ios-safari` board contract/visual checks and project-scoped Playwright snapshots.
 
+**Learning:** `coverage_matrix.json` sync is necessary but not sufficient. Every new conformance case must be exercised by a matching adapter or runtime assertion in the same change.
+
+**Learning:** `runConformanceSuite` adapters must fail closed. If a new JSON case falls through an adapter without assertions, the suite should fail immediately rather than silently passing.
+
 ## First Steps
 - Review the active plan in `docs/plans/` relevant to the task. The current recovery tracker is `docs/plans/2026-03-17-recovery-plan.md`.
 - Confirm no changes are made under `docs/refs/` unless explicitly authorized.
@@ -42,8 +46,10 @@ Code and assets are considered **Good** when they are:
 - At the end of each completed task, always:
   1. Run `npm run test:local:gate` before committing.
   2. Confirm the gate passed without skips.
-  3. Commit the changes.
-  4. Open a PR with those committed changes.
+  3. For conformance work, verify every new test ID is wired to a real helper/runtime assertion, not just fixture JSON plus `coverage_matrix.json`.
+  4. Do not land JSON-only conformance additions for unsupported rules. If the adapter/runtime path is not implemented in the same change, defer the fixture.
+  5. Commit the changes.
+  6. Open a PR with those committed changes.
 - For each new feature or significant work package:
   1. Create a new branch before making changes.
   2. Push that branch to `origin`.

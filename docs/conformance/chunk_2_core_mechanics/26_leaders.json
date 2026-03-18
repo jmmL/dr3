@@ -323,6 +323,95 @@
         "combat_attack_allowed": false
       },
       "tags": ["negative"]
+    },
+    {
+      "id": "26.6.2_killed_outcome_effect",
+      "rule_ref": "26.6.2",
+      "description": "Leader killed by fate roll is permanently removed from the game",
+      "input": {
+        "leader_id": "monarch_hothior",
+        "fate_roll": 1,
+        "outcome": "killed"
+      },
+      "expected": {
+        "leader_removed_from_map": true,
+        "leader_permanently_eliminated": true,
+        "leader_available_for_play": false
+      }
+    },
+    {
+      "id": "26.6.2_captured_outcome_effect",
+      "rule_ref": "26.6.2",
+      "description": "Leader captured by fate roll is removed from map, held by capturing player, and eligible for ransom",
+      "input": {
+        "leader_id": "monarch_muetar",
+        "fate_roll": 6,
+        "outcome": "captured",
+        "capturing_player": "hothior"
+      },
+      "expected": {
+        "leader_removed_from_map": true,
+        "leader_held_by": "hothior",
+        "ransom_eligible": true
+      }
+    },
+    {
+      "id": "26.6.2_no_effect_outcome_leader_remains",
+      "rule_ref": "26.6.2",
+      "description": "Leader survives fate roll of 2-5 and remains in place on the map",
+      "input": {
+        "leader_id": "monarch_hothior",
+        "leader_hex": [10, 5],
+        "fate_roll": 4,
+        "outcome": "no_effect"
+      },
+      "expected": {
+        "leader_removed_from_map": false,
+        "leader_hex": [10, 5],
+        "leader_status": "active"
+      }
+    },
+    {
+      "id": "26.6_fate_roll_determinism",
+      "rule_ref": "26.6",
+      "description": "Same RNG seed produces the same fate roll result for testability",
+      "input": {
+        "leader_id": "monarch_hothior",
+        "rng_seed": 42,
+        "fate_trigger": "combat_loss"
+      },
+      "expected": {
+        "deterministic": true,
+        "roll_result_consistent_across_runs": true
+      }
+    },
+    {
+      "id": "26.4.1_leader_combat_bonus_applied_to_resolution",
+      "rule_ref": "26.4.1",
+      "description": "Leader's personality card combat bonus is added to the stack's combat roll during resolution",
+      "input": {
+        "leader_id": "monarch_neuth",
+        "personality_card_combat_bonus": 2,
+        "stack_combat_roll": 5,
+        "stack_base_strength": 8
+      },
+      "expected": {
+        "total_combat_value": 15,
+        "bonus_included_in_roll": true
+      }
+    },
+    {
+      "id": "26.6.3_multiple_triggers_single_roll",
+      "rule_ref": "26.6.3",
+      "description": "Multiple fate triggers in the same phase result in only a single fate roll for the leader",
+      "input": {
+        "leader_id": "monarch_hothior",
+        "fate_rolls_this_player_turn": 1,
+        "additional_trigger": true
+      },
+      "expected": {
+        "additional_roll_required": false
+      }
     }
   ]
 }

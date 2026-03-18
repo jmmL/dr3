@@ -11,7 +11,10 @@ import {
 runConformanceSuite(
   'chunk_6_supporting/16_allied_forces.json',
   (input, expected) => {
+    let handled = false;
+
     if ('movement_control' in expected) {
+      handled = true;
       const owner = input.allied_force_owner as string;
       expect(getAlliedForceMovementControl(owner)).toBe(
         expected.movement_control,
@@ -19,6 +22,7 @@ runConformanceSuite(
     }
 
     if ('stacking_allowed' in expected && 'allied_kingdom' in input) {
+      handled = true;
       const k1 = input.allied_kingdom as string;
       const k2 = input.other_kingdom as string;
       expect(canAlliedForcesStackEndTurn(k1, k2)).toBe(
@@ -27,10 +31,12 @@ runConformanceSuite(
     }
 
     if ('coordination_allowed' in expected) {
+      handled = true;
       expect(canAlliedForcesCoordinate()).toBe(expected.coordination_allowed);
     }
 
     if ('entry_allowed' in expected && 'castle_owner' in input) {
+      handled = true;
       const present = input.allied_combat_units_present as number;
       const result = canEnterAlliedCastleForces(present);
       expect(result.entryAllowed).toBe(expected.entry_allowed);
@@ -40,9 +46,12 @@ runConformanceSuite(
     }
 
     if ('stacking_allowed' in expected && 'mercenary_unit' in input) {
+      handled = true;
       expect(canMercenaryStackWithFriendlyForces()).toBe(
         expected.stacking_allowed,
       );
     }
+
+    return handled;
   },
 );

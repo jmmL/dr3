@@ -90,6 +90,15 @@ export function isPlunderPermanent(): boolean {
   return true;
 }
 
+export function getPlunderVictoryPoints(
+  castleType: 'regular' | 'royal',
+  castleDefenseValue: number,
+  action: 'plunder' | 'capture',
+): number {
+  if (action !== 'plunder') return 0;
+  return castleDefenseValue * (castleType === 'royal' ? 10 : 5);
+}
+
 /**
  * Fleet siege rules (rule 17.11.x).
  */

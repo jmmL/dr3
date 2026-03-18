@@ -10,12 +10,15 @@ import {
   canMoveIndependentlyAfterLeaderMove,
   doTerrainBonusesTransferToLeader,
   getLeaderCombatBonus,
+  getLeaderAdjustedCombatValue,
   getTotalLeaderCombatBonus,
   doesLeaderBonusApplyToSiege,
   canLoneLeaderPassThroughEnemy,
   doesPassThroughRequireFateRoll,
   isFateRollRequired,
   resolveFateRoll,
+  getFateOutcomeEffect,
+  rollLeaderFateWithSeed,
   isAdditionalFateRollRequired,
   canEnterLoneLeaderHex,
   canAttackLoneLeader,
@@ -29,7 +32,7 @@ runConformanceSuite(
       expect(isLeaderUnit(input.unit_type as string)).toBe(
         expected.is_leader,
       );
-      return;
+      return true;
     }
 
     // 26.2 - Leader combat strength
@@ -37,7 +40,7 @@ runConformanceSuite(
       expect(getLeaderCombatStrength(input.unit_type as string)).toBe(
         expected.combat_strength,
       );
-      return;
+      return true;
     }
 
     // 26.3.1 - Leader bonus scope
@@ -45,7 +48,7 @@ runConformanceSuite(
       expect(
         doesLeaderBonusApply(input.stack_contains as string[]),
       ).toBe(expected.movement_bonus_applies);
-      return;
+      return true;
     }
 
     // 26.3.2 - Stack uses leader MA
@@ -57,7 +60,7 @@ runConformanceSuite(
           input.stacked_with_leader as boolean,
         ),
       ).toBe(expected.effective_movement_allowance);
-      return;
+      return true;
     }
 
     // 26.3.3 - Must begin and end with leader
@@ -68,7 +71,7 @@ runConformanceSuite(
           input.ended_turn_with_leader as boolean,
         ),
       ).toBe(expected.used_leader_bonus);
-      return;
+      return true;
     }
 
     // 26.3.4 - Leave behind
@@ -76,7 +79,7 @@ runConformanceSuite(
       expect(canLeaveBehindDuringLeaderMove()).toBe(
         expected.leave_behind_allowed,
       );
-      return;
+      return true;
     }
 
     // 26.3.5 - No independent movement after leader move
@@ -89,7 +92,7 @@ runConformanceSuite(
           input.used_leader_movement as boolean,
         ),
       ).toBe(expected.independent_movement_allowed);
-      return;
+      return true;
     }
 
     // 26.3.6 - Terrain bonuses don't transfer
@@ -97,7 +100,23 @@ runConformanceSuite(
       expect(doTerrainBonusesTransferToLeader()).toBe(
         expected.leader_gains_tree_symbol,
       );
-      return;
+      return true;
+    }
+
+    // 26.4.1 - Bonus applied to resolution
+    if ('total_combat_value' in expected) {
+      const result = getLeaderAdjustedCombatValue(
+        input.stack_base_strength as number,
+        input.stack_combat_roll as number,
+        input.personality_card_combat_bonus as number,
+      );
+      expect(result).toBe(expected.total_combat_value);
+      expect(
+        result !==
+          (input.stack_base_strength as number) +
+            (input.stack_combat_roll as number),
+      ).toBe(expected.bonus_included_in_roll);
+      return true;
     }
 
     // 26.4.1 - Leader combat bonus
@@ -107,7 +126,7 @@ runConformanceSuite(
           input.personality_card_combat_bonus as number,
         ),
       ).toBe(expected.combat_bonus);
-      return;
+      return true;
     }
 
     // 26.4.2 - Multiple bonuses stack
@@ -118,13 +137,13 @@ runConformanceSuite(
       expect(getTotalLeaderCombatBonus(leaders)).toBe(
         expected.total_combat_bonus,
       );
-      return;
+      return true;
     }
 
     // 26.4.3 - No bonus in siege
     if ('bonus_applied' in expected && input.combat_type === 'siege') {
       expect(doesLeaderBonusApplyToSiege()).toBe(expected.bonus_applied);
-      return;
+      return true;
     }
 
     // 26.5.1 - Lone leader pass through
@@ -132,7 +151,7 @@ runConformanceSuite(
       expect(
         canLoneLeaderPassThroughEnemy(input.is_alone as boolean),
       ).toBe(expected.pass_through_allowed);
-      return;
+      return true;
     }
 
     // 26.5.2 - Pass through requires fate roll
@@ -147,7 +166,7 @@ runConformanceSuite(
           input.passed_through_enemy as boolean,
         ),
       ).toBe(expected.fate_roll_required);
-      return;
+      return true;
     }
 
     // 26.6.1 - Fate roll required (various triggers)
@@ -179,7 +198,39 @@ runConformanceSuite(
           fleetLostAtSea: input.fleet_lost_at_sea as boolean | undefined,
         }),
       ).toBe(expected.fate_roll_required);
-      return;
+      return true;
+    }
+
+    // 26.6 - Deterministic seeded fate
+    if ('deterministic' in expected) {
+      const first = rollLeaderFateWithSeed(input.rng_seed as string | number);
+      const second = rollLeaderFateWithSeed(input.rng_seed as string | number);
+      const consistent = first.roll === second.roll && first.outcome === second.outcome;
+      expect(consistent).toBe(expected.roll_result_consistent_across_runs);
+      expect(consistent).toBe(expected.deterministic);
+      return true;
+    }
+
+    // 26.6.2 - Fate outcome effects
+    if ('leader_removed_from_map' in expected) {
+      const effect = getFateOutcomeEffect(input.outcome as 'killed' | 'no_effect' | 'captured');
+      expect(effect.removedFromMap).toBe(expected.leader_removed_from_map);
+      if ('leader_permanently_eliminated' in expected) {
+        expect(effect.removedFromGame).toBe(expected.leader_permanently_eliminated);
+        expect(!effect.removedFromGame).toBe(expected.leader_available_for_play);
+      }
+      if ('leader_held_by' in expected) {
+        expect(
+          effect.heldByCaptor ? input.capturing_player : null,
+        ).toBe(expected.leader_held_by);
+        expect(effect.ransomEligible).toBe(expected.ransom_eligible);
+      }
+      if ('leader_hex' in expected) {
+        expect(effect.remainsInPlace).toBe(true);
+        expect(input.leader_hex).toEqual(expected.leader_hex);
+        expect(expected.leader_status).toBe('active');
+      }
+      return true;
     }
 
     // 26.6.2 - Fate roll outcomes
@@ -187,7 +238,7 @@ runConformanceSuite(
       expect(resolveFateRoll(input.fate_roll as number)).toBe(
         expected.outcome,
       );
-      return;
+      return true;
     }
 
     // 26.6.3 - Once per phase
@@ -199,7 +250,7 @@ runConformanceSuite(
       expect(isAdditionalFateRollRequired(rollsThisPhase)).toBe(
         expected.additional_roll_required,
       );
-      return;
+      return true;
     }
 
     // 26.6.5 - Enter lone leader hex
@@ -209,13 +260,15 @@ runConformanceSuite(
       );
       expect(result.entryAllowed).toBe(expected.entry_allowed);
       expect(result.fateRollTriggered).toBe(expected.fate_roll_triggered);
-      return;
+      return true;
     }
 
     // 26.7 - Cannot attack lone leader
     if ('combat_attack_allowed' in expected) {
       expect(canAttackLoneLeader()).toBe(expected.combat_attack_allowed);
-      return;
+      return true;
     }
+
+    return false;
   },
 );

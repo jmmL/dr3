@@ -16,6 +16,9 @@ runConformanceSuite(
           | undefined,
       });
       expect(result).toBe(expected.friendly);
+      return true;
     }
+
+    return false;
   },
 );

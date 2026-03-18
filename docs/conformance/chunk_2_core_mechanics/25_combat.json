@@ -627,6 +627,178 @@
       "expected": {
         "advance_allowed_hexes": 2
       }
+    },
+    {
+      "id": "25.7.1_monarch_cannot_initiate_attack",
+      "rule_ref": "25.7.1",
+      "description": "Monarchs cannot initiate attacks; strength 0, leader only",
+      "input": {
+        "unit_type": "monarch",
+        "unit_strength": 0,
+        "role": "leader",
+        "is_combat_unit": false
+      },
+      "expected": {
+        "attack_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "25.7.1_ambassador_cannot_initiate_attack",
+      "rule_ref": "25.7.1",
+      "description": "Ambassadors cannot initiate attacks; non-combat unit",
+      "input": {
+        "unit_type": "ambassador",
+        "is_combat_unit": false
+      },
+      "expected": {
+        "attack_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "25.7.1_army_can_attack",
+      "rule_ref": "25.7.1",
+      "description": "Army units can initiate attacks",
+      "input": {
+        "unit_type": "army",
+        "is_combat_unit": true
+      },
+      "expected": {
+        "attack_allowed": true
+      }
+    },
+    {
+      "id": "25.7.1_mercenary_army_can_attack",
+      "rule_ref": "25.7.1",
+      "description": "Mercenary army units can initiate attacks",
+      "input": {
+        "unit_type": "mercenary_army",
+        "is_combat_unit": true
+      },
+      "expected": {
+        "attack_allowed": true
+      }
+    },
+    {
+      "id": "25.7.1_fleet_can_attack",
+      "rule_ref": "25.7.1",
+      "description": "Fleet units can initiate attacks",
+      "input": {
+        "unit_type": "fleet",
+        "is_combat_unit": true
+      },
+      "expected": {
+        "attack_allowed": true
+      }
+    },
+    {
+      "id": "25.10.1_unit_already_attacked_cannot_attack_again",
+      "rule_ref": "25.10.1",
+      "description": "A unit that has already attacked this turn cannot attack again",
+      "input": {
+        "unit_id": "u1",
+        "attacks_made_this_turn": 1,
+        "target_hex": [10, 6]
+      },
+      "expected": {
+        "additional_attack_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "25.2.11_continuation_after_retreat_still_adjacent",
+      "rule_ref": "25.2.11",
+      "description": "When defender retreats to hex still adjacent to attacker, attacker may continue attack at new position",
+      "input": {
+        "defender_retreated": true,
+        "retreat_destination": [11, 5],
+        "attacker_hex": [10, 5]
+      },
+      "expected": {
+        "continuation_attack_allowed": true
+      }
+    },
+    {
+      "id": "25.2.11_no_continuation_when_retreated_away",
+      "rule_ref": "25.2.11",
+      "description": "When defender retreats away from all attackers, no continuation attack allowed",
+      "input": {
+        "defender_retreated": true,
+        "retreat_destination": [12, 7],
+        "attacker_hex": [10, 5]
+      },
+      "expected": {
+        "continuation_attack_allowed": false
+      },
+      "tags": ["negative"]
+    },
+    {
+      "id": "25.2.6_retreat_sets_movement_to_zero",
+      "rule_ref": "25.2.6",
+      "description": "Retreating unit has movement remaining set to 0",
+      "input": {
+        "unit_id": "u1",
+        "retreat_successful": true,
+        "movement_remaining_before_retreat": 3
+      },
+      "expected": {
+        "movement_remaining": 0
+      }
+    },
+    {
+      "id": "25.2.7_retreat_marks_unit_as_retreated",
+      "rule_ref": "25.2.7",
+      "description": "Retreating unit is marked as having retreated and cannot retreat again",
+      "input": {
+        "unit_id": "u1",
+        "retreat_successful": true,
+        "still_adjacent_to_attacker": true
+      },
+      "expected": {
+        "has_retreated": true,
+        "can_retreat_again": false
+      }
+    },
+    {
+      "id": "25.4.3_army_counts_as_one_strength",
+      "rule_ref": "25.4.3",
+      "description": "Each army unit counts as 1 combat strength",
+      "input": {
+        "unit_type": "army",
+        "unit_count": 1
+      },
+      "expected": {
+        "combat_strength": 1
+      }
+    },
+    {
+      "id": "25.4.3_monarch_counts_as_zero_strength",
+      "rule_ref": "25.4.3",
+      "description": "Monarch counts as 0 combat strength (modifier only)",
+      "input": {
+        "unit_type": "monarch",
+        "unit_count": 1
+      },
+      "expected": {
+        "combat_strength": 0
+      }
+    },
+    {
+      "id": "25.4.3_combined_stack_strength",
+      "rule_ref": "25.4.3",
+      "description": "Combined stack strength is the sum of individual unit strengths",
+      "input": {
+        "stack_units": [
+          { "type": "army", "strength": 1 },
+          { "type": "army", "strength": 1 },
+          { "type": "army", "strength": 1 },
+          { "type": "monarch", "strength": 0 }
+        ]
+      },
+      "expected": {
+        "total_combat_strength": 3
+      }
     }
   ]
 }

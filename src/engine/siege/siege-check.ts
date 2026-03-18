@@ -2,6 +2,11 @@
  * Siege declaration and zone of siege engine — pure functions (rule 17).
  */
 
+export interface AdjacentSiegeUnit {
+  owner: string;
+  strength: number;
+}
+
 /**
  * Check if castle is sufficiently surrounded (rule 17.1.1).
  */
@@ -29,6 +34,18 @@ export function hasSufficientForce(
 ): { sufficient: boolean; requiredMinimum: number } {
   const required = unitsInside + intrinsicDefense;
   return { sufficient: besiegingUnits >= required, requiredMinimum: required };
+}
+
+/**
+ * Only friendly adjacent forces count toward siege strength (rule 17.1.3).
+ */
+export function getBesiegingStrength(
+  adjacentUnits: AdjacentSiegeUnit[],
+  besiegerOwner: string,
+): number {
+  return adjacentUnits
+    .filter((unit) => unit.owner === besiegerOwner)
+    .reduce((sum, unit) => sum + unit.strength, 0);
 }
 
 /**
@@ -150,6 +167,45 @@ export function canAnyPlayerDeclare(): boolean {
 }
 
 /**
+ * Active siege remains valid only while surrounding and force minimum hold.
+ */
+export function isSiegeStillValid(input: {
+  siegeActive: boolean;
+  adjacentHexesCovered: number;
+  totalAdjacentHexes: number;
+  besiegingUnits: number;
+  intrinsicDefense: number;
+  unitsInside: number;
+}): { siegeValid: boolean; siegeEnds: boolean; reason?: string } {
+  if (!input.siegeActive) {
+    return { siegeValid: false, siegeEnds: false };
+  }
+
+  if (!isCastleSurrounded(input.adjacentHexesCovered, input.totalAdjacentHexes)) {
+    return {
+      siegeValid: false,
+      siegeEnds: true,
+      reason: 'surrounding_condition_lost',
+    };
+  }
+
+  const force = hasSufficientForce(
+    input.besiegingUnits,
+    input.intrinsicDefense,
+    input.unitsInside,
+  );
+  if (!force.sufficient) {
+    return {
+      siegeValid: false,
+      siegeEnds: true,
+      reason: 'insufficient_force',
+    };
+  }
+
+  return { siegeValid: true, siegeEnds: false };
+}
+
+/**
  * Retreated units not besieging (rule 17.6.3).
  */
 export function doesRetreatedUnitCountAsBesieging(): boolean {
@@ -166,6 +222,35 @@ export function canReinforceBesiegedCastle(): boolean {
 /**
  * Leaving siege rules (rule 17.7.2-3).
  */
+export function canAttemptBreakout(
+  combatUnitsInside: number,
+): { breakoutAllowed: boolean; reason?: string } {
+  if (combatUnitsInside <= 0) {
+    return { breakoutAllowed: false, reason: 'no_combat_units_inside' };
+  }
+  return { breakoutAllowed: true };
+}
+
+export function getBreakoutCombatRules(): {
+  mustFightAllBesiegers: boolean;
+  combatType: 'simultaneous';
+} {
+  return {
+    mustFightAllBesiegers: true,
+    combatType: 'simultaneous',
+  };
+}
+
+export function getBreakoutMovementOptions(
+  clearedAdjacentHexes: number[][],
+  survivors: string[],
+): { movementOptionsInclude: number[][]; survivorsMayMove: boolean } {
+  return {
+    movementOptionsInclude: clearedAdjacentHexes,
+    survivorsMayMove: survivors.length > 0 && clearedAdjacentHexes.length > 0,
+  };
+}
+
 export function canLeaveSiegeWithoutAttack(): boolean {
   return false;
 }
@@ -181,6 +266,26 @@ export function canExitAfterAttack(
 
 export function canBesiegedAttackInCombatPhase(): boolean {
   return true;
+}
+
+export function canSortieAttack(
+  targetIsAdjacent: boolean,
+  enemiesInTargetHex: boolean,
+  currentPhase: string,
+  besiegedUnitsAttacking: boolean,
+): { sortieAllowed: boolean; targetMustBeAdjacent: boolean } {
+  return {
+    sortieAllowed:
+      targetIsAdjacent &&
+      enemiesInTargetHex &&
+      currentPhase === 'combat_phase' &&
+      besiegedUnitsAttacking,
+    targetMustBeAdjacent: true,
+  };
+}
+
+export function canAdvanceAfterSortie(defenderHexCleared: boolean): boolean {
+  return defenderHexCleared;
 }
 
 export function getAdvanceLimitFromSiege(): number {
