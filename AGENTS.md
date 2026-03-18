@@ -47,6 +47,8 @@ Code and assets are considered **Good** when they are:
 
 **Learning:** `runConformanceSuite` adapters must fail closed. If a new JSON case falls through an adapter without assertions, the suite should fail immediately rather than silently passing.
 
+**Learning:** After pushing commits or updating a PR, monitor GitHub Actions checks with [$gh-fix-ci](/Users/jamielawler/.codex/skills/gh-fix-ci/SKILL.md) until everything passes. Do not assume the remote branch is healthy just because local verification passed.
+
 ## First Steps
 - Review the active plan in `docs/plans/` relevant to the task. The current recovery tracker is `docs/plans/2026-03-17-recovery-plan.md`.
 - Confirm no changes are made under `docs/refs/` unless explicitly authorized.
@@ -67,6 +69,7 @@ Code and assets are considered **Good** when they are:
   5. **Self-improve:** Review the diff for regressions, drift from plan, and new learnings. Update this file's Learnings section with anything discovered. This loop closes every implementation task.
   6. Commit the changes.
   7. Open a PR with those committed changes.
+  8. After each push or PR update, run [$gh-fix-ci](/Users/jamielawler/.codex/skills/gh-fix-ci/SKILL.md) against the active PR and keep monitoring until all GitHub Actions checks pass.
 - For each new feature or significant work package:
   1. Create a new branch before making changes.
   2. Push that branch to `origin`.
