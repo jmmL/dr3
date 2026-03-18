@@ -1,12 +1,21 @@
 # DR3 - Divine Right Webapp
 
-## Definition of Complete & Good
-### 1. Complete (Definition of Done)
-A feature or task is **Complete** only when:
-* **Business Logic:** Implements the required logic as verified by passing the full **Conformance Suite** (once this exists).
-* **Testing:** Passes all relevant **Unit Tests** and **End-to-End (E2E) Tests** with no regressions.
-* **Integrated Runtime:** Both UI and gameplay runtime components are implemented and integrated (unless explicitly scoped to a single layer).
-* **Pipeline:** All changes successfully pass the **CI/CD** pipeline.
+## Current Baseline
+
+- Treat the repo as a recovery-phase prototype, not a rules-complete game.
+- Trusted slice only:
+  - movement legality
+  - combat declaration and resolution
+  - save/load/import/export validation
+  - portable Chromium E2E
+  - runtime conformance coverage for the movement/combat chunks
+- Still incomplete or scaffolded:
+  - diplomacy/cards
+  - random events
+  - sieges
+  - victory conditions
+  - CPU quality
+  - many conformance chunks outside the trusted slice
 
 ### 2. Good (Definition of Quality)
 Code and assets are considered **Good** when they are:
@@ -27,8 +36,11 @@ Code and assets are considered **Good** when they are:
 **Learning:** Validation harness should enforce schema parity with integration tests.
 
 **Learning:** Rule references must be 2-3 parts (e.g., `25.2` or `25.2.2`), not 4+ parts — group sub-rules under parent.
+## First Steps
 
-**Learning:** Mobile-first CI requires local `ios-safari` board contract/visual checks and project-scoped Playwright snapshots.
+- Review the active tracker: `docs/plans/2026-03-17-recovery-plan.md`.
+- Review the current architecture baseline: `docs/architecture/app-architecture.md`.
+- Do not modify anything under `docs/refs/` unless explicitly authorized.
 
 **Learning:** `coverage_matrix.json` must stay in sync with conformance spec files — every new test ID needs a corresponding entry. The conformance validation script catches drift.
 
@@ -40,15 +52,12 @@ Code and assets are considered **Good** when they are:
 - Review the active plan in `docs/plans/` relevant to the task. The current recovery tracker is `docs/plans/2026-03-17-recovery-plan.md`.
 - Confirm no changes are made under `docs/refs/` unless explicitly authorized.
 - Prefer small, patch-style edits and keep behavior aligned to conformance fixtures.
+## Working Rules
 
-## Verify Changes
-- Run the full local gate before completion:
-  - `npm run test:local:gate`
-  - This gate must include lint, coverage-gated unit tests, conformance validation/reporting, build, and the portable Chromium E2E lane.
-- If a task is board-visual focused, also run:
-  - `npm run test:local:visual`
-- Only when intentionally changing board visuals, refresh baseline with:
-  - `npm run test:e2e:board:visual:update`
+- Prefer small patch-style edits over broad rewrites.
+- Keep behavior aligned to conformance fixtures and runtime state invariants.
+- Do not reintroduce duplicated runtime state or mirrored boardgame.io flow state; `stage` is the only intentional persisted flow mirror.
+- New rules work should improve the trusted slice and move chunks toward `runtime-covered`, not just add adapter-only helpers.
 
 ## Workflow Reminder
 - At the end of each completed task, always:
@@ -61,24 +70,23 @@ Code and assets are considered **Good** when they are:
   1. Create a new branch before making changes.
   2. Push that branch to `origin`.
   3. Open a PR from that branch.
+## Toolchain
 
-## Key Resources
-- **docs/plans/** - Working plans
-- **docs/refs/** - Reference data stored in minified format for LLM use:
+- Node `24.x`
+- npm `11.x`
+- Bootstrap with `npm run bootstrap`
 
-| Original Files | Minified Files | Description |
-|----------------|----------------|-------------|
-| `hexmap.json` | `hexmap.min.json` | Hex grid map data |
-| `factions.json` | `factions.min.json` | Faction definitions |
-| `starting_units.json` | `starting_units.min.json` | Unit deployment data |
-| `abilities.json` | `abilities.min.json` | Unit ability definitions |
-| `personality_cards.json` | `personality_cards.min.json` | Monarch personality cards |
-| `dr3_rules.json` | `dr3_rules.min.json` | Game rules reference |
+## Verification
 
-Never modify a file in /docs/refs unless given specific permission to do so.
+- Required local gate before completion: `npm run test:local:gate`
+- Base recovery gate: `npm run verify:base`
+- Run `npm run test:local:visual` when changing board visuals or snapshots.
+- Only refresh visual baselines intentionally: `npm run test:e2e:board:visual:update`
 
-## Architecture
-See `docs/architecture/app-architecture.md`.
+## Workflow
 
-## Skills
-You have skills in `.claude/skills/` - use them for debugging, TDD, planning, code review, etc.
+1. Create a `codex/...` branch before significant work.
+2. Run the required verification commands.
+3. Commit locally.
+4. Push the branch to `origin`.
+5. Open a PR.
