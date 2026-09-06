@@ -49,8 +49,12 @@ Code and assets are considered **Good** when they are:
 
 **Learning:** After pushing commits or updating a PR, monitor GitHub Actions checks with [$gh-fix-ci](/Users/jamielawler/.codex/skills/gh-fix-ci/SKILL.md) until everything passes. Do not assume the remote branch is healthy just because local verification passed.
 
+**Learning:** A conformance file path appearing in a runtime test does not prove all cases execute through game moves. Verify each claimed case against real reducer state; boardgame.io `overrideGameState` only overrides the client view.
+
+**Learning:** Test complete player handoff and RNG continuation through the boardgame.io client. A shallow domain-state spread can discard top-level replacements, and deterministic dice can still have unreachable outcomes.
+
 ## First Steps
-- Review the active plan in `docs/plans/` relevant to the task. The current recovery tracker is `docs/plans/2026-03-17-recovery-plan.md`.
+- Review the active plan in `docs/plans/` relevant to the task. The current roadmap is `docs/plans/2026-09-06-solo-game-implementation-plan.md`; its first package is `docs/plans/2026-09-06-runtime-foundations-plan.md`. The March recovery tracker is historical.
 - Confirm no changes are made under `docs/refs/` unless explicitly authorized.
 - Prefer small, patch-style edits and keep behavior aligned to conformance fixtures.
 ## Working Rules
