@@ -1,6 +1,6 @@
 # DR3 Recovery Plan (2026-03-17)
 
-This is the active implementation tracker for the recovery phase.
+Historical recovery tracker, superseded by [the solo-game implementation plan](2026-09-06-solo-game-implementation-plan.md). The September review found additional turn/RNG defects in the previously trusted prototype paths; see that review before relying on this baseline.
 
 ## Current baseline
 

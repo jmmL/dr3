@@ -7,7 +7,8 @@ Browser-based implementation of Divine Right (3rd edition), focused on determini
 - The repo is now explicitly rebaselined as a prototype with a trusted slice, not a near-complete rules implementation.
 - Trusted slice: movement, combat declaration/resolution, persistence, portable Chromium E2E, and runtime coverage for the movement/combat conformance chunks.
 - Scaffolded or adapter-only areas remain incomplete: diplomacy/cards, random events, sieges, victory conditions, and many unwired conformance chunks.
-- The active recovery tracker is `docs/plans/2026-03-17-recovery-plan.md`.
+- The September runtime review found player-handoff and RNG defects even though the existing gate passes; the trusted slice describes limited tested paths, not complete movement/combat rules or full-game reliability.
+- The active roadmap is [the solo-game implementation plan](docs/plans/2026-09-06-solo-game-implementation-plan.md), with a [detailed runtime-foundations plan](docs/plans/2026-09-06-runtime-foundations-plan.md) as its first package.
 
 ## Quick Start
 

@@ -11,7 +11,8 @@
 ## Planning
 
 - `docs/plans/README.md` - active and archived plan index.
-- `docs/plans/2026-02-09-prd-execution-plan.md` - active execution tracker.
+- `docs/plans/2026-09-06-solo-game-implementation-plan.md` - current review and roadmap for faithful solo play against a capable CPU.
+- `docs/plans/2026-09-06-runtime-foundations-plan.md` - detailed first implementation package.
 
 ## Conformance Suite
 

@@ -127,6 +127,7 @@ Chosen for turn/phase management, multiplayer readiness, and deterministic RNG s
 
 ## Known Gaps
 
+- The 2026-09-06 [runtime review](../plans/2026-09-06-solo-game-implementation-plan.md) reproduced broken player handoff, lost RNG updates and unreachable dice outcomes despite the existing gate passing. Its proposed architecture is not yet implemented; use the linked review to qualify the trusted-slice claims above.
 - Diplomacy/cards, random events, sieges, and victory conditions are not yet trusted runtime systems.
 - 16 conformance chunks are currently unwired, and 10 are adapter-only.
 - CPU quality remains baseline only.
